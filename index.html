@@ -1,6 +1,10 @@
 <html>
 <head>
 <script type="text/javascript" src="breakfast.js" ></script>
+<script type="text/javascript" src="pint.js" ></script>
+<script type="text/javascript" src="fastfood.js" ></script>
+<script type="text/javascript" src="smoothy.js" ></script>
+<script type="text/javascript" src="milkshake.js" ></script>
 <script type="text/javascript" src="drinks.js" ></script>
 <script type="text/javascript" src="fizzydrinks.js" ></script>
 <script type="text/javascript" src="food.js" ></script>
@@ -76,12 +80,16 @@ function add(i,j) {
 			case "meat": meat(); break;
 			case "lunch": lunch(); break;
 			case "1": page1(); break;
+			case "fastfood": fastfood(); break;
 			case "food": food(); break;
 			case "fruit": fruit(); break;
 			case "drinks": drinks(); break;
 			case "fizzydrinks": fizzydrinks(); break;
-			case "vegetables": vegetables(); break;
 			case "breakfast": breakfast(); break;
+			case "pint": pint(); break;
+			case "vegetables": vegetables(); break;
+			case "smoothy": smoothy(); break;
+			case "milkshake": milkshake(); break;
 			default: alert("I'm afraid that page has not been updated yet :("+keys[i][j]+ " "+ links[i][j]+i+" "+j);
 		}
 	}

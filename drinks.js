@@ -1,9 +1,9 @@
 
 function drinks(){
 	var i,j
-		for(j=0;j<4;j++)
+		for(j=0;j<5;j++)
 		{
-			for(i=0;i<4;i++)
+			for(i=0;i<5;i++)
 			{
 				keys[i][j]="link";
 				links[i][j]="blank";
@@ -23,15 +23,15 @@ function drinks(){
 	keys[4][1]="hot chocolate";
 
 
-	keys[0][2]="Describing drink";
+	links[0][2]="pint";
 	keys[1][2]="milk";
 	keys[2][2]="water";
 	keys[3][2]="";
 	keys[4][2]="";
 
 	keys[0][3]="juice";
-	keys[1][3]="smoothie";
-	keys[2][3]="milkshake";
+	links[1][3]="smoothy";
+	links[2][3]="milkshake";
 	links[3][3]="fizzydrinks";
 	keys[4][3]="alcohol";
 

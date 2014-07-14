@@ -1,8 +1,8 @@
 function lunch(){
 	var i,j
-		for(j=0;j<4;j++)
+		for(j=0;j<5;j++)
 		{
-			for(i=0;i<4;i++)
+			for(i=0;i<5;i++)
 			{
 				keys[i][j]="link";
 				links[i][j]="blank";

@@ -1,18 +1,18 @@
 
 function food(){
 	var i,j
-		for(j=0;j<4;j++)
+		for(j=0;j<5;j++)
 		{
-			for(i=0;i<4;i++)
+			for(i=0;i<5;i++)
 			{
 				keys[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
 	keys[0][0]="yes ";
-	keys[1][0]=" ";
-	keys[2][0]=" ";
-	keys[3][0]="yes ";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
 	keys[4][0]="no";
 
 
@@ -27,7 +27,7 @@ function food(){
 	links[1][2]="vegetables";
 	links[2][2]="fruit";
 	links[3][2]="drinks";
-	keys[4][2]="fast food";
+	links[4][2]="fastfood";
 
 	keys[0][3]="I'm thirsty";
 	keys[1][3]="snacks or pudding";
