@@ -3,9 +3,12 @@
 <script type="text/javascript" src="breakfast.js" ></script>
 <script type="text/javascript" src="kitchenequipment.js" ></script>
 <script type="text/javascript" src="foodchat.js" ></script>
+<script type="text/javascript" src="family.js" ></script>
 <script type="text/javascript" src="describe.js" ></script>
 <script type="text/javascript" src="cookingwords.js" ></script>
 <script type="text/javascript" src="snack.js" ></script>
+<script type="text/javascript" src="job.js" ></script>
+<script type="text/javascript" src="people.js" ></script>
 <script type="text/javascript" src="sauces.js" ></script>
 <script type="text/javascript" src="salad.js" ></script>
 <script type="text/javascript" src="pint.js" ></script>
@@ -60,6 +63,18 @@ function speak(){
 	voice.Speak(document.myform.outputtext.value);
 }
 
+function tweet(){
+	var twtTitle=document.myform.outputtext.value;
+	var maxLength =140;
+	if(twtTitle.length > maxLength)
+	{
+		twtTitle = twtTitle.substr(0, (maxLength -3))+'...';
+	}
+	var twtLink ='http://twitter.com/home?status='+document.myform.outputtext.value.replace(" ","%20");
+	window.open(twtLink);
+
+}
+
 function image(){
 	var temp =document.myform.outputtext.value;
 	temp.replace(' ','+');
@@ -86,10 +101,12 @@ function add(i,j) {
 			case "meals": meals(); break;
 			case "meat": meat(); break;
 			case "snack": snack(); break;
+			case "job": job(); break;
+			case "people": people(); break;
 			case "sauces": sauces(); break;
 			case "cookingwords": cookingwords(); break;
 			case "kitchenequipment": kitchenequipment(); break;
-			case "foodchat": foodchat(); break;
+			case "family": family(); break;
 			case "describe": describe(); break;
 			case "salad": salad(); break;
 			case "lunch": lunch(); break;
@@ -123,6 +140,7 @@ function add(i,j) {
 <button onclick="speak()">Speak</button>
 <button onclick="tube()">Youtube</button>
 <button onclick="image()">Google Images</button>
+<button onclick="tweet()">Tweet</button>
 </td></tr></table>
 
 <img name ="main" src="1.jpg" height=640 width=800 usemap="#voicemap" />

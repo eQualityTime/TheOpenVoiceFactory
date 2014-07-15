@@ -21,7 +21,7 @@ function page1(){
 	links[4][1]="food";
 
 	keys[0][2]="I";
-	keys[1][2]="People";
+	links[1][2]="people";
 	keys[2][2]="Personal care";
 	keys[3][2]="Little words";
 	keys[4][2]="My day";
