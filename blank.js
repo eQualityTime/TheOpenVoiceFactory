@@ -15,13 +15,11 @@ function blank(){
 	keys[3][0]="";
 	keys[4][0]="no";
 
-
 	links[0][1]="1";
 	keys[1][1]="";
 	keys[2][1]="";
 	keys[3][1]="";
 	keys[4][1]="";
-
 
 	keys[0][2]="";
 	keys[1][2]="";

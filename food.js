@@ -31,8 +31,8 @@ function food(){
 
 	keys[0][3]="I'm thirsty";
 	links[1][3]="snack";
-	keys[2][3]="sauces or ingredients";
-	keys[3][3]="salad";
+	links[2][3]="sauces";
+	links[3][3]="salad";
 	keys[4][3]="cookingwords";
 
 	keys[0][4]="some"; 
