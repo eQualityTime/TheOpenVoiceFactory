@@ -38,7 +38,7 @@ function food(){
 	keys[0][4]="some"; 
 	keys[1][4]="with";
 	keys[2][4]="and";
-	keys[3][4]="Food chat";
+	links[3][4]="foodchat";
 	keys[4][4]="favourite food";
 
 	document.main.src="food.jpg";
