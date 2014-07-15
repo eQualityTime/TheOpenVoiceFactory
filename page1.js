@@ -29,7 +29,7 @@ function page1(){
 	keys[0][3]="Go";
 	keys[1][3]="Want";
 	keys[2][3]="Action words";
-	keys[3][3]="Feeling and describe";
+	links[3][3]="describe";
 	keys[4][3]="Things";
 
 	links[0][4]="clear";
