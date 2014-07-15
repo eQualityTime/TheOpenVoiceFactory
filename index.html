@@ -1,6 +1,7 @@
 <html>
 <head>
 <script type="text/javascript" src="breakfast.js" ></script>
+<script type="text/javascript" src="snack.js" ></script>
 <script type="text/javascript" src="pint.js" ></script>
 <script type="text/javascript" src="fastfood.js" ></script>
 <script type="text/javascript" src="smoothy.js" ></script>
@@ -78,6 +79,7 @@ function add(i,j) {
 			case "deleteword": var lastIndex =  document.myform.outputtext.value.lastIndexOf(" ");  document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);break;
 			case "meals": meals(); break;
 			case "meat": meat(); break;
+			case "snack": snack(); break;
 			case "lunch": lunch(); break;
 			case "1": page1(); break;
 			case "fastfood": fastfood(); break;

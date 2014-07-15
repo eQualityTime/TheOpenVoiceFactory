@@ -30,7 +30,7 @@ function food(){
 	links[4][2]="fastfood";
 
 	keys[0][3]="I'm thirsty";
-	keys[1][3]="snacks or pudding";
+	links[1][3]="snack";
 	keys[2][3]="sauces or ingredients";
 	keys[3][3]="salad";
 	keys[4][3]="cookingwords";
