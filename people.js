@@ -17,15 +17,15 @@ function people(){
 
 	links[0][1]="1";
 	keys[1][1]="people";
-	keys[2][1]="friends";
-	keys[3][1]="scwfriends";
-	keys[4][1]="supportstaff";
+	links[2][1]="friends";
+	links[3][1]="scwfriends";
+	links[4][1]="supportstaff";
 
 	keys[0][2]="I'm";
 	keys[1][2]="me";
 	keys[2][2]="my";
 	keys[3][2]="mine";
-	keys[4][2]="educationstaff";
+	links[4][2]="educationstaff";
 
 	keys[0][3]="we";
 	keys[1][3]="they";
