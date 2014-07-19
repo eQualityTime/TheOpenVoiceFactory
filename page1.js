@@ -17,13 +17,13 @@ function page1(){
 	keys[0][1]="hello";
 	keys[1][1]="I want to talk to you";
 	keys[2][1]="Chatting";
-	keys[3][1]="Questions";
+	links[3][1]="questions";
 	links[4][1]="food";
 
 	keys[0][2]="I";
 	links[1][2]="people";
 	keys[2][2]="Personal care";
-	keys[3][2]="Little words";
+	links[3][2]="littlewords";
 	keys[4][2]="My day";
 
 	keys[0][3]="Action words";

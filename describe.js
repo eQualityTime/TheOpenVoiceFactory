@@ -19,7 +19,7 @@ function describe(){
 	keys[1][1]="feelings";
 	keys[2][1]="colours";
 	keys[3][1]="shapes";
-	keys[4][1]="opposites";
+	links[4][1]="opposites";
 
 	keys[0][2]="pretty";
 	keys[1][2]="more";
