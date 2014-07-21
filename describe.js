@@ -16,7 +16,7 @@ function describe(){
 	keys[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="feelings";
+	links[1][1]="feelings";
 	keys[2][1]="colours";
 	keys[3][1]="shapes";
 	links[4][1]="opposites";
