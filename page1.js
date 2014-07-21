@@ -33,8 +33,8 @@ function page1(){
 	keys[4][3]="Things";
 
 	links[0][4]="clear";
-	keys[1][4]="Time";
-	keys[2][4]="Places";
+	links[1][4]="time";
+	links[2][4]="places";
 	keys[3][4]="Leisure";
 	links[4][4]="deleteword";
 
