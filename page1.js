@@ -16,7 +16,7 @@ function page1(){
 
 	keys[0][1]="hello";
 	keys[1][1]="I want to talk to you";
-	keys[2][1]="Chatting";
+	links[2][1]="chatting";
 	links[3][1]="questions";
 	links[4][1]="food";
 
@@ -30,7 +30,7 @@ function page1(){
 	keys[1][3]="Go";
 	keys[2][3]="Want";
 	links[3][3]="describe";
-	keys[4][3]="Things";
+	links[4][3]="things";
 
 	links[0][4]="clear";
 	links[1][4]="time";
