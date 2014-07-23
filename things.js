@@ -30,11 +30,11 @@ function things(){
 	keys[0][3]="money";
 	keys[1][3]="office";
 	keys[2][3]="sports";
-	keys[3][3]="Things that help";
-	keys[4][3]="toiletries";
+	links[3][3]="thingsthathelp";
+	links[4][3]="toiletries";
 
 	keys[0][4]="tools"; 
-	keys[1][4]="transport";
+	links[1][4]="transport";
 	links[2][4]="weather";
 	keys[3][4]="";
 	keys[4][4]="";
