@@ -17,7 +17,7 @@ function time(){
 
 	links[0][1]="1";
 	keys[1][1]="Time";
-	keys[2][1]="day";
+	links[2][1]="days";
 	links[3][1]="months";
 	links[4][1]="specialdays";
 
