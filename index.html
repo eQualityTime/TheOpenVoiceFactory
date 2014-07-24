@@ -124,72 +124,27 @@ function tube(){
 
 }
 
+function reset(){
+	var i,j
+		for(j=0;j<5;j++)
+		{
+			for(i=0;i<5;i++)
+			{
+				keys[i][j]="link";
+				links[i][j]="blank";
+			}
+		}
+}
+
 function add(i,j) {
 	if(keys[i][j]=="link")
 	{
 		switch(links[i][j])
 		{
-			//very strangly it seams that the case higest in the ...wait missing break statemnt! 
 			case "clear":  document.myform.reset();break;
 			case "deleteword": var lastIndex =  document.myform.outputtext.value.lastIndexOf(" ");  document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);break;
-			case "meals": meals(); break;
-			case "meat": meat(); break;
-			case "snack": snack(); break;
-			case "opposites": opposites(); break;
-			case "scwfriends": scwfriends(); break;
-			case "littlewords": littlewords(); break;
-			case "positionwords": positionwords(); break;
-			case "questions": questions(); break;
-			case "computer": computer(); break;
-			case "parts": parts(); break;
-			case "privateparts": privateparts(); break;
-			case "job": job(); break;
-			case "spelling": spelling(); break;
-			case "numbers": numbers(); break;
-			case "myday": myday(); break;
-			case "transport": transport(); break;
-			case "toiletries": toiletries(); break;
-			case "thingsthathelp": thingsthathelp(); break;
-			case "days": days(); break;
-			case "weather": weather(); break;
-			case "things": things(); break;
-			case "wml": wml(); break;
-			case "mystories": mystories(); break;
-			case "aboutme": aboutme(); break;
-			case "chatting": chatting(); break;
-			case "feelings": feelings(); break;
-			case "moreaction": moreaction(); break;
-			case "action": action(); break;
-			case "christmas": christmas(); break;
-			case "specialdays": specialdays(); break;
-			case "months": months(); break;
-			case "time": time(); break;
-			case "shops": shops(); break;
-			case "outside": outside(); break;
-			case "places": places(); break;
-			case "people": people(); break;
-			case "sauces": sauces(); break;
-			case "cookingwords": cookingwords(); break;
-			case "kitchenequipment": kitchenequipment(); break;
-			case "supportstaff": supportstaff(); break;
-			case "family": family(); break;
-			case "describe": describe(); break;
-			case "salad": salad(); break;
-			case "friends": friends(); break;
-			case "educationstaff": educationstaff(); break;
-			case "lunch": lunch(); break;
 			case "1": page1(); break;
-			case "fastfood": fastfood(); break;
-			case "food": food(); break;
-			case "fruit": fruit(); break;
-			case "drinks": drinks(); break;
-			case "fizzydrinks": fizzydrinks(); break;
-			case "breakfast": breakfast(); break;
-			case "pint": pint(); break;
-			case "vegetables": vegetables(); break;
-			case "smoothy": smoothy(); break;
-			case "milkshake": milkshake(); break;
-			default: alert("I'm afraid that page has not been updated yet :("+keys[i][j]+ " "+ links[i][j]+i+" "+j);
+			default: eval(links[i][j]+"()");
 		}
 	}
 	else{
@@ -247,90 +202,89 @@ top:37px;"></textarea>
 </map>
 <div class="hidden">
 	<script type="text/javascript">
-		<!--//--><![CDATA[//><!--
-			var images = new Array()
-			function preload() {
-				for (i = 0; i < preload.arguments.length; i++) {
-					images[i] = new Image()
-					images[i].src = preload.arguments[i]
-				}
-			}
-			preload(
-"breakfast.jpg",
-"drinks.jpg",
-"fizzydrinks.jpg",
-"food.jpg",
-"fruit.jpg",
-"littlewords.png",
-"littlewords.png",
-"vegetables.jpg",
-"aboutme.png",
-"action.png",
-"chatting.png",
-"christmas.png",
-"computer.png",
-"cookingwords.png",
-"days.png",
-"describe.png",
-"educationstaff.png",
-"family.png",
-"fastfood.png",
-"feelings.png",
-"foodchat.png",
-"friends.png",
-"insects.png",
-"job.png",
-"spelling.png",
-"numbers.png",
-"myday.png",
-"transport.png",
-"toiletries.png",
-"thingsthathelp.png",
-"days.png",
-"kitchenequipment.png",
-"littlewords.png",
-"lunch.png",
-"meals.png",
-"meat.png",
-"milkshake.png",
-"months.png",
-"moreaction.png",
-"mystories.png",
-"opposites.png",
-"outside.png",
-"page1.png",
-"parts.png",
-"people.png",
-"pint.png",
-"places.png",
-"positionwords.png",
-"potato.png",
-"privateparts.png",
-"questions.png",
-"salad.png",
-"sauces.png",
-"scwfriends.png",
-"shops.png",
-"smoothy.png",
-"snack.png",
-"specialdays.png",
-"supportstaff.png",
-"things.png",
-"time.png",
-"toys.png",
-"wateranimals.png",
-"weather.png",
-"wml.png")
-	</script>
-</div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+var images = new Array()
+	function preload() {
+		for (i = 0; i < preload.arguments.length; i++) {
+			images[i] = new Image()
+				images[i].src = preload.arguments[i]
+		}
+	}
+preload(
+		"breakfast.jpg",
+		"drinks.jpg",
+		"fizzydrinks.jpg",
+		"food.jpg",
+		"fruit.jpg",
+		"littlewords.png",
+		"littlewords.png",
+		"vegetables.jpg",
+		"aboutme.png",
+		"action.png",
+		"chatting.png",
+		"christmas.png",
+		"computer.png",
+		"cookingwords.png",
+		"days.png",
+		"describe.png",
+		"educationstaff.png",
+		"family.png",
+		"fastfood.png",
+		"feelings.png",
+		"foodchat.png",
+		"friends.png",
+		"insects.png",
+		"job.png",
+		"spelling.png",
+		"numbers.png",
+		"myday.png",
+		"transport.png",
+		"toiletries.png",
+		"thingsthathelp.png",
+		"days.png",
+		"kitchenequipment.png",
+		"littlewords.png",
+		"lunch.png",
+		"meals.png",
+		"meat.png",
+		"milkshake.png",
+		"months.png",
+		"moreaction.png",
+		"mystories.png",
+		"opposites.png",
+		"outside.png",
+		"page1.png",
+		"parts.png",
+		"people.png",
+		"pint.png",
+		"places.png",
+		"positionwords.png",
+		"potato.png",
+		"privateparts.png",
+		"questions.png",
+		"salad.png",
+		"sauces.png",
+		"scwfriends.png",
+		"shops.png",
+		"smoothy.png",
+		"snack.png",
+		"specialdays.png",
+		"supportstaff.png",
+		"things.png",
+		"time.png",
+		"toys.png",
+		"wateranimals.png",
+		"weather.png",
+		"wml.png")
+		</script>
+		</div>
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-43886525-1', 'auto');
-  ga('send', 'pageview');
+ga('create', 'UA-43886525-1', 'auto');
+ga('send', 'pageview');
 
 </script>
 </body>

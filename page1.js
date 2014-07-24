@@ -1,14 +1,7 @@
 
 function page1(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				keys[i][j]="link";
-			}
-		}
-	keys[0][0]="yes ";
+reset();	
+keys[0][0]="yes ";
 	keys[1][0]=" ";
 	keys[2][0]=" ";
 	keys[3][0]="yes ";

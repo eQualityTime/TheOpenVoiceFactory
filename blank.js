@@ -1,14 +1,6 @@
 
 function blank(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				keys[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+reset();
 	keys[0][0]="yes";
 	keys[1][0]="";
 	keys[2][0]="";
