@@ -24,7 +24,7 @@ function page1(){
 	links[1][2]="people";
 	keys[2][2]="Personal care";
 	links[3][2]="littlewords";
-	keys[4][2]="My day";
+	links[4][2]="myday";
 
 	links[0][3]="action";
 	keys[1][3]="Go";
