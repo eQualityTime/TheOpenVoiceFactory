@@ -287,5 +287,26 @@ ga('create', 'UA-43886525-1', 'auto');
 ga('send', 'pageview');
 
 </script>
+ <script type="text/javascript">
+        $(function () {
+        $("form").submit(function () {
+            $.ajaxSetup({
+              timeout: 0,  
+              cache: false
+            });
+            $.getJSON(concat("http://http://www.joereddington.com/testsound/getsound.pl?text=",document.myform.outputtext.value),
+            callback
+            ); 
+            return false;
+        });
+        });
+        function callback(data, status) {
+                $("#player").html("<embed src=http://www.joereddington.com/testsound/hope.wav autostart=true >");
+        }
+    </script>
+<form method="post" action="" class="formevent" id="formevent" name="formevent"> 
+<input type="submit" id="submit" name="submit" value="say it!">
+</form>
+<div id="player"></div> <!some of this code used was deduced from http://www.cstr.ed.ac.uk/projects/festival/onlinedemo.html -->
 </body>
 </html>
