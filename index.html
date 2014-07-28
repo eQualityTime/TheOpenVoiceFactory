@@ -58,7 +58,7 @@
 <script type="text/javascript" src="meat.js" ></script>
 <script type="text/javascript" src="page1.js" ></script>
 <script type="text/javascript" src="vegetables.js" ></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script language="javascript" type="text/javascript">
 keys=new Array(5);
 keys[0]=new Array(5);
@@ -152,13 +152,24 @@ function add(i,j) {
 	}
 }
 
-</script>
+function makeWav(){        
+            $.get(("http://www.joereddington.com/testsound/getsound.pl?text="+document.myform.outputtext.value));
+setTimeout(callback, 1000);
+            return false;
+        }
+function callback(data, status) {
+                $("#player").html("<embed src=http://www.joereddington.com/testsound/hope.wav autostart=true  >");
+        }
+    </script>
 </head>
 
 
 <body onload="page1()">
 <table><tr><td><form name="myform">
-<textarea rows=4 cols=27 name="outputtext" style="font-size: 22pt;position:absolute;
+<textarea name="outputtext" style="font-size: 22pt; height:125px; width:480px ;box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+position:absolute;
 left:169px;
 top:37px;"></textarea>
 </form></td><td>
@@ -287,26 +298,8 @@ ga('create', 'UA-43886525-1', 'auto');
 ga('send', 'pageview');
 
 </script>
- <script type="text/javascript">
-        $(function () {
-        $("form").submit(function () {
-            $.ajaxSetup({
-              timeout: 0,  
-              cache: false
-            });
-            $.getJSON(concat("http://http://www.joereddington.com/testsound/getsound.pl?text=",document.myform.outputtext.value),
-            callback
-            ); 
-            return false;
-        });
-        });
-        function callback(data, status) {
-                $("#player").html("<embed src=http://www.joereddington.com/testsound/hope.wav autostart=true >");
-        }
-    </script>
-<form method="post" action="" class="formevent" id="formevent" name="formevent"> 
-<input type="submit" id="submit" name="submit" value="say it!">
-</form>
+<button onclick="makeWav()">Say it</button>
 <div id="player"></div> <!some of this code used was deduced from http://www.cstr.ed.ac.uk/projects/festival/onlinedemo.html -->
+ <!some of this code used was deduced from http://stackoverflow.com/questions/8082846/form-submit-execute-javascript-best-practice-->
 </body>
 </html>
