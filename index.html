@@ -154,23 +154,25 @@ function add(i,j) {
 
 function makeWav(){        
             $.get(("http://www.joereddington.com/testsound/getsound.pl?text="+document.myform.outputtext.value));
-setTimeout(callback, 1000);
+setTimeout(callback, 500);
             return false;
         }
-function callback(data, status) {
-                $("#player").html("<embed src=http://www.joereddington.com/testsound/hope.wav autostart=true  >");
+function callback() {
+var audio = new Audio('http://www.joereddington.com/testsound/hope.wav');
+audio.play();
+           //     $("#player").html("<embed src=http://www.joereddington.com/testsound/hope.wav autostart=true  >");
         }
     </script>
 </head>
 
 
 <body onload="page1()">
-<table><tr><td><form name="myform">
-<textarea name="outputtext" style="font-size: 22pt; height:125px; width:480px ;box-sizing: border-box;
+<table border=0px><tr><td><form name="myform">
+<textarea name="outputtext" style="font-size: 22pt; height:124px; width:478px ;box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 position:absolute;
-left:169px;
+left:172px;
 top:37px;"></textarea>
 </form></td><td>
 <button onclick="speak()">Speak</button>
