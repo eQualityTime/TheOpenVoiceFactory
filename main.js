@@ -357,6 +357,41 @@ function christmas(){
 	document.main.src="images/christmas.png";
 }
 
+function clothes(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="jeans";
+	keys[2][1]="trousers";
+	keys[3][1]="t-shirt";
+	keys[4][1]="jumper";
+
+	links[0][2]="colours";
+	keys[1][2]="skirt";
+	keys[2][2]="dress";
+	keys[3][2]="swimming things";
+	keys[4][2]="bra";
+
+	keys[0][3]="hat";
+	keys[1][3]="coat";
+	keys[2][3]="shoes";
+	keys[3][3]="socks";
+	keys[4][3]="gloves";
+
+	keys[0][4]="dressing gown"; 
+	keys[1][4]="pjamas";
+	keys[2][4]="slippers";
+	keys[3][4]="boxer shorts";
+	keys[4][4]="pants";
+
+	document.main.src="images/clothes.png";
+}
+
 function colour(){
 reset();
 	keys[0][0]="yes";
@@ -1043,6 +1078,76 @@ function fruit(){
 
 }
 
+function furniture(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="furniture";
+	keys[2][1]="bean bag";
+	keys[3][1]="table ";
+	keys[4][1]="pillow";
+
+	keys[0][2]="wardrobe";
+	keys[1][2]="toilet";
+	keys[2][2]="TV";
+	keys[3][2]="shelf";
+	keys[4][2]="bed";
+
+	keys[0][3]="cupboard";
+	keys[1][3]="sink";
+	keys[2][3]="drawer";
+	keys[3][3]="couch";
+	keys[4][3]="picture";
+
+	keys[0][4]="blanket"; 
+	keys[1][4]="bath";
+	keys[2][4]="lamp";
+	keys[3][4]="chair";
+	keys[4][4]="sheets";
+
+	document.main.src="images/furniture.png";
+}
+
+function gardening(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="gardening";
+	keys[2][1]="flowers";
+	keys[3][1]="grass";
+	keys[4][1]="bud";
+
+	keys[0][2]="lawn mower";
+	keys[1][2]="leaves";
+	keys[2][2]="petal";
+	keys[3][2]="branch";
+	keys[4][2]="tree";
+
+	keys[0][3]="hose";
+	keys[1][3]="seeks";
+	keys[2][3]="hedge cutters";
+	keys[3][3]="plant";
+	keys[4][3]="hedge";
+
+	keys[0][4]="clippers"; 
+	keys[1][4]="shovel";
+	keys[2][4]="pot";
+	keys[3][4]="rake";
+	keys[4][4]="trowel";
+
+	document.main.src="images/gardening.png";
+}
+
 function insects(){
 reset();
 	keys[0][0]="yes";
@@ -1252,6 +1357,41 @@ function lunch(){
 
 }
 
+function materials(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="material";
+	keys[2][1]="wood";
+	keys[3][1]="plastic";
+	keys[4][1]="fabric";
+
+	keys[0][2]="metal";
+	keys[1][2]="sponge";
+	keys[2][2]="glass";
+	keys[3][2]="stone";
+	keys[4][2]="string";
+
+	keys[0][3]="";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="paper";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/materials.png";
+}
+
 function meals(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -1386,6 +1526,41 @@ function milkshake(){
 
 	document.main.src="images/milkshake.png";
 
+}
+
+function money(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="money";
+	keys[2][1]="cheque book";
+	keys[3][1]="wallet";
+	keys[4][1]="purse";
+
+	keys[0][2]="";
+	keys[1][2]="";
+	keys[2][2]="";
+	keys[3][2]="";
+	keys[4][2]="";
+
+	keys[0][3]="";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/money.png";
 }
 
 function months(){
@@ -1601,6 +1776,41 @@ function numbers(){
 	keys[4][4]="";
 
 	document.main.src="images/numbers.png";
+}
+
+function office(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="office";
+	keys[2][1]="chair";
+	keys[3][1]="filing cabinet";
+	keys[4][1]="computer";
+
+	keys[0][2]="photocopier";
+	keys[1][2]="bin";
+	keys[2][2]="desk";
+	keys[3][2]="file";
+	keys[4][2]="fax";
+
+	keys[0][3]="pen";
+	keys[1][3]="pencil";
+	keys[2][3]="scissors";
+	keys[3][3]="envelope";
+	keys[4][3]="paper";
+
+	keys[0][4]="paperclip"; 
+	keys[1][4]="label";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/office.png";
 }
 
 function opposites(){
@@ -2485,6 +2695,41 @@ function spelling(){
 	document.main.src="images/spelling.png";
 }
 
+function sports(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="sports";
+	keys[2][1]="football";
+	keys[3][1]="rugby";
+	keys[4][1]="cycling";
+
+	keys[0][2]="boccia";
+	keys[1][2]="motor sport";
+	keys[2][2]="golf";
+	keys[3][2]="fishig";
+	keys[4][2]="pool";
+
+	keys[0][3]="bowling";
+	keys[1][3]="tennis";
+	keys[2][3]="horse riding";
+	keys[3][3]="skiing";
+	keys[4][3]="dancing";
+
+	keys[0][4]="gymnastics"; 
+	keys[1][4]="athletics";
+	keys[2][4]="outdoor sport";
+	keys[3][4]="judo";
+	keys[4][4]="";
+
+	document.main.src="images/sports.png";
+}
+
 function supportstaff(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -2550,19 +2795,19 @@ function things(){
 	links[3][1]="animals";
 	links[4][1]="parts";
 
-	keys[0][2]="clothes";
+	links[0][2]="clothes";
 	links[1][2]="computer";
-	keys[2][2]="furniture";
-	keys[3][2]="gardening";
-	keys[4][2]="kitchen things";
+	links[2][2]="furniture";
+	links[3][2]="gardening";
+	links[4][2]="kitchenequipment";
 
-	keys[0][3]="money";
-	keys[1][3]="office";
-	keys[2][3]="sports";
+	links[0][3]="money";
+	links[1][3]="office";
+	links[2][3]="sports";
 	links[3][3]="thingsthathelp";
 	links[4][3]="toiletries";
 
-	keys[0][4]="tools"; 
+	links[0][4]="tools"; 
 	links[1][4]="transport";
 	links[2][4]="weather";
 	keys[3][4]="";
@@ -2698,6 +2943,41 @@ function toiletries(){
 	keys[4][4]="hair dye";
 
 	document.main.src="images/toiletries.png";
+}
+
+function tools(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="tools";
+	keys[2][1]="clamp";
+	keys[3][1]="drill";
+	keys[4][1]="torch";
+
+	keys[0][2]="goggles";
+	keys[1][2]="hammer";
+	keys[2][2]="hardhat";
+	keys[3][2]="drill bit";
+	keys[4][2]="pliers";
+
+	keys[0][3]="sandpaper";
+	keys[1][3]="wrench";
+	keys[2][3]="screwdriver";
+	keys[3][3]="chisel";
+	keys[4][3]="extension lead";
+
+	keys[0][4]="screw"; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	links[4][4]="materials";
+
+	document.main.src="images/tools.png";
 }
 
 function transport(){

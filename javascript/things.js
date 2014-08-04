@@ -21,19 +21,19 @@ function things(){
 	links[3][1]="animals";
 	links[4][1]="parts";
 
-	keys[0][2]="clothes";
+	links[0][2]="clothes";
 	links[1][2]="computer";
-	keys[2][2]="furniture";
-	keys[3][2]="gardening";
-	keys[4][2]="kitchen things";
+	links[2][2]="furniture";
+	links[3][2]="gardening";
+	links[4][2]="kitchenequipment";
 
-	keys[0][3]="money";
-	keys[1][3]="office";
-	keys[2][3]="sports";
+	links[0][3]="money";
+	links[1][3]="office";
+	links[2][3]="sports";
 	links[3][3]="thingsthathelp";
 	links[4][3]="toiletries";
 
-	keys[0][4]="tools"; 
+	links[0][4]="tools"; 
 	links[1][4]="transport";
 	links[2][4]="weather";
 	keys[3][4]="";
