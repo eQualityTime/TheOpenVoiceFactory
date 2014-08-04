@@ -39,5 +39,5 @@ function thingsthathelp(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="thingsthathelp.png";
+	document.main.src="images/thingsthathelp.png";
 }

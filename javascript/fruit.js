@@ -41,6 +41,6 @@ function fruit(){
 	keys[3][4]="cherry chat";
 	keys[4][4]="blackberry";
 
-	document.main.src="fruit.jpg";
+	document.main.src="images/fruit.jpg";
 
 }

@@ -41,5 +41,5 @@ function fastfood(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="fastfood.png";
+	document.main.src="images/fastfood.png";
 }

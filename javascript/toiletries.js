@@ -39,5 +39,5 @@ function toiletries(){
 	keys[3][4]="hair spray";
 	keys[4][4]="hair dye";
 
-	document.main.src="toiletries.png";
+	document.main.src="images/toiletries.png";
 }

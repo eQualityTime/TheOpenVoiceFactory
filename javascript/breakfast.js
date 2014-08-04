@@ -41,6 +41,6 @@ function breakfast(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="breakfast.jpg";
+	document.main.src="images/breakfast.jpg";
 
 }

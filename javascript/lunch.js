@@ -40,6 +40,6 @@ function lunch(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="lunch.png";
+	document.main.src="images/lunch.png";
 
 }

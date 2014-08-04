@@ -40,5 +40,5 @@ function meat(){
 	keys[2][4]="";
 	keys[3][4]="";
 	keys[4][4]="";
-	document.main.src="meat.png";
+	document.main.src="images/meat.png";
 }

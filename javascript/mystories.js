@@ -39,5 +39,5 @@ function mystories(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="mystories.png";
+	document.main.src="images/mystories.png";
 }

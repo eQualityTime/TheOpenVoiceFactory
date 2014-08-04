@@ -39,5 +39,5 @@ function transport(){
 	keys[3][4]="underground";
 	keys[4][4]="";
 
-	document.main.src="transport.png";
+	document.main.src="images/transport.png";
 }

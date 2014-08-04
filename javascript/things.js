@@ -17,7 +17,7 @@ function things(){
 
 	links[0][1]="1";
 	keys[1][1]="Things";
-	keys[2][1]="Art things";
+	links[2][1]="artthings";
 	keys[3][1]="animals";
 	links[4][1]="parts";
 
@@ -39,5 +39,5 @@ function things(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="things.png";
+	document.main.src="images/things.png";
 }

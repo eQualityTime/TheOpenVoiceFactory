@@ -39,5 +39,5 @@ function chatting(){
 	keys[3][4]="ouch ";
 	keys[4][4]="so";
 
-	document.main.src="chatting.png";
+	document.main.src="images/chatting.png";
 }

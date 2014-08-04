@@ -39,5 +39,5 @@ function places(){
 	keys[3][4]="cinema";
 	keys[4][4]="";
 
-	document.main.src="places.png";
+	document.main.src="images/places.png";
 }

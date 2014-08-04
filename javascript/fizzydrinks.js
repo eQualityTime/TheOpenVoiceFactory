@@ -41,6 +41,6 @@ function fizzydrinks(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="fizzydrinks.jpg";
+	document.main.src="images/fizzydrinks.jpg";
 
 }

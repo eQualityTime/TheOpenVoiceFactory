@@ -39,5 +39,5 @@ function opposites(){
 	keys[3][4]="clean";
 	keys[4][4]="dirty";
 
-	document.main.src="opposites.png";
+	document.main.src="images/opposites.png";
 }

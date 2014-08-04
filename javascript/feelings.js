@@ -39,5 +39,5 @@ function feelings(){
 	keys[3][4]="scared";
 	keys[4][4]="confused";
 
-	document.main.src="feelings.png";
+	document.main.src="images/feelings.png";
 }

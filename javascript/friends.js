@@ -39,5 +39,5 @@ function friends(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="friends.png";
+	document.main.src="images/friends.png";
 }

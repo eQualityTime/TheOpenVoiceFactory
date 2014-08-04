@@ -39,5 +39,5 @@ function scwfriends(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="scwfriends.png";
+	document.main.src="images/scwfriends.png";
 }

@@ -39,5 +39,5 @@ function shops(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="shops.png";
+	document.main.src="images/shops.png";
 }

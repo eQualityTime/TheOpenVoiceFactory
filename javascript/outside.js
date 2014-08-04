@@ -39,5 +39,5 @@ function outside(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="outside.png";
+	document.main.src="images/outside.png";
 }

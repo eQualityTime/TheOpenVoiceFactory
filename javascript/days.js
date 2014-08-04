@@ -39,5 +39,5 @@ function days(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="days.png";
+	document.main.src="images/days.png";
 }

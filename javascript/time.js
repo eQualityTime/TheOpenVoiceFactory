@@ -39,5 +39,5 @@ function time(){
 	keys[3][4]="before";
 	keys[4][4]="after";
 
-	document.main.src="time.png";
+	document.main.src="images/time.png";
 }

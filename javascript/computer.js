@@ -39,5 +39,5 @@ function computer(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="computer.png";
+	document.main.src="images/computer.png";
 }

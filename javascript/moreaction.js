@@ -39,5 +39,5 @@ function moreaction(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="moreaction.png";
+	document.main.src="images/moreaction.png";
 }

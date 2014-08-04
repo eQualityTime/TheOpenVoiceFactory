@@ -42,6 +42,6 @@ function smoothy(){
 	keys[4][4]="blackberry";
 
 
-	document.main.src="smoothy.png";
+	document.main.src="images/smoothy.png";
 
 }

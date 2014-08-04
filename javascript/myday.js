@@ -39,5 +39,5 @@ function myday(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="myday.png";
+	document.main.src="images/myday.png";
 }

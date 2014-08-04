@@ -39,5 +39,5 @@ function positionwords(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="positionwords.png";
+	document.main.src="images/positionwords.png";
 }

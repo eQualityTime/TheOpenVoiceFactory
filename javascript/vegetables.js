@@ -41,6 +41,6 @@ function vegetables(){
 	keys[3][4]="sweetcorn";
 	keys[4][4]="";
 
-	document.main.src="vegetables.jpg";
+	document.main.src="images/vegetables.jpg";
 
 }

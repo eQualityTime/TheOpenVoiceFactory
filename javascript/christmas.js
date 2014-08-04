@@ -39,5 +39,5 @@ function christmas(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="christmas.png";
+	document.main.src="images/christmas.png";
 }

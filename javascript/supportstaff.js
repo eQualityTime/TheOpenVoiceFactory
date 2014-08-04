@@ -39,5 +39,5 @@ function supportstaff(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="supportstaff.png";
+	document.main.src="images/supportstaff.png";
 }

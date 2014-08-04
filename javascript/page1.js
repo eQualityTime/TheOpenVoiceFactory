@@ -31,6 +31,6 @@ keys[0][0]="yes ";
 	keys[3][4]="Leisure";
 	links[4][4]="deleteword";
 
-	document.main.src="page1.png";
+	document.main.src="images/page1.png";
 
 }

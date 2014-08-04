@@ -39,5 +39,5 @@ function wml(){
 	keys[3][4]="burp!";
 	keys[4][4]="fart!";
 
-	document.main.src="wml.png";
+	document.main.src="images/wml.png";
 }

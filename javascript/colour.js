@@ -31,5 +31,5 @@ reset();
 	keys[3][4]="";
 	keys[4][4]="silver";
 
-	document.main.src="colour.png";
+	document.main.src="images/colour.png";
 }

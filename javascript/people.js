@@ -39,6 +39,6 @@ function people(){
 	keys[3][4]="she";
 	links[4][4]="family";
 
-	document.main.src="people.png";
+	document.main.src="images/people.png";
 }
 

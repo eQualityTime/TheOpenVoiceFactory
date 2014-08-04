@@ -39,5 +39,5 @@ function questions(){
 	keys[3][4]="What's next?";
 	keys[4][4]="What's that?";
 
-	document.main.src="questions.png";
+	document.main.src="images/questions.png";
 }

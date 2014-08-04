@@ -39,5 +39,5 @@ function family(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="family.png";
+	document.main.src="images/family.png";
 }

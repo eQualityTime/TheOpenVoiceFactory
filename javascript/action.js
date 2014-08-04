@@ -39,5 +39,5 @@ function action(){
 	keys[3][4]="close";
 	links[4][4]="moreaction";
 
-	document.main.src="action.png";
+	document.main.src="images/action.png";
 }

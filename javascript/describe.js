@@ -39,5 +39,5 @@ function describe(){
 	keys[3][4]="idea";
 	keys[4][4]="favorite";
 
-	document.main.src="describe.png";
+	document.main.src="images/describe.png";
 }

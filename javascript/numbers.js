@@ -39,5 +39,5 @@ function numbers(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="numbers.png";
+	document.main.src="images/numbers.png";
 }

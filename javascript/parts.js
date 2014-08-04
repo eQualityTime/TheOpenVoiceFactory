@@ -39,5 +39,5 @@ function parts(){
 	keys[3][4]="toes";
 	links[4][4]="privateparts";
 
-	document.main.src="parts.png";
+	document.main.src="images/parts.png";
 }

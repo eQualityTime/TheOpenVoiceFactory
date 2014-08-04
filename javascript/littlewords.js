@@ -39,5 +39,5 @@ function littlewords(){
 	keys[3][4]="";
 	keys[4][4]="";
 
-	document.main.src="littlewords.png";
+	document.main.src="images/littlewords.png";
 }
