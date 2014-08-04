@@ -18,7 +18,7 @@ function things(){
 	links[0][1]="1";
 	keys[1][1]="Things";
 	links[2][1]="artthings";
-	keys[3][1]="animals";
+	links[3][1]="animals";
 	links[4][1]="parts";
 
 	keys[0][2]="clothes";

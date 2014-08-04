@@ -85,6 +85,41 @@ function action(){
 	document.main.src="images/action.png";
 }
 
+function animals(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	links[1][1]="pets";
+	links[2][1]="farmanimals";
+	links[3][1]="wildanimals";
+	links[4][1]="wateranimals";
+
+	keys[0][2]="";
+	links[1][2]="birds";
+	links[2][2]="insects";
+	links[3][2]="petcare";
+	keys[4][2]="";
+
+	keys[0][3]="";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/animals.png";
+}
+
 function artthings(){
 reset();
 	keys[0][0]="yes";
@@ -118,6 +153,41 @@ reset();
 	keys[4][4]="materials";
 
 	document.main.src="images/artthings.png";
+}
+
+function birds(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="bird";
+	keys[2][1]="duck";
+	keys[3][1]="parrot";
+	keys[4][1]="robin";
+
+	keys[0][2]="turkey";
+	keys[1][2]="goose";
+	keys[2][2]="swan";
+	keys[3][2]="peacock";
+	keys[4][2]="owl";
+
+	keys[0][3]="penguin";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/birds.png";
 }
 
 function blank(){
@@ -626,6 +696,41 @@ function family(){
 	document.main.src="images/family.png";
 }
 
+function farmanimals(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="farm animal";
+	keys[2][1]="pig";
+	keys[3][1]="sheep";
+	keys[4][1]="chick";
+
+	keys[0][2]="chicken";
+	keys[1][2]="cow";
+	keys[2][2]="horse";
+	keys[3][2]="";
+	keys[4][2]="";
+
+	keys[0][3]="";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/farmanimals.png";
+}
+
 function fastfood(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -936,6 +1041,41 @@ function fruit(){
 
 	document.main.src="images/fruit.jpg";
 
+}
+
+function insects(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="insect";
+	keys[2][1]="caterpillar";
+	keys[3][1]="slug";
+	keys[4][1]="snail";
+
+	keys[0][2]="bee";
+	keys[1][2]="fly";
+	keys[2][2]="spider";
+	keys[3][2]="";
+	keys[4][2]="";
+
+	keys[0][3]="";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/insects.png";
 }
 
 function job(){
@@ -1672,6 +1812,76 @@ function people(){
 }
 
 
+function petcare(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="pet care";
+	keys[2][1]="dog food";
+	keys[3][1]="cat food";
+	keys[4][1]="fish food";
+
+	keys[0][2]="collar";
+	keys[1][2]="pet comb";
+	keys[2][2]="pet blanket";
+	keys[3][2]="pet bed";
+	keys[4][2]="fish tank";
+
+	keys[0][3]="treat";
+	keys[1][3]="lead";
+	keys[2][3]="kennel";
+	keys[3][3]="pet carrier";
+	keys[4][3]="pet food";
+
+	keys[0][4]="bird feeder"; 
+	keys[1][4]="care for pet";
+	keys[2][4]="feed pet ";
+	keys[3][4]="walk the dog";
+	keys[4][4]="cage";
+
+	document.main.src="images/petcare.png";
+}
+
+function pets(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="pet";
+	keys[2][1]="cat";
+	keys[3][1]="hamster";
+	keys[4][1]="mouse";
+
+	keys[0][2]="guinea pig";
+	keys[1][2]="rabbit";
+	keys[2][2]="horse";
+	keys[3][2]="fish";
+	keys[4][2]="rat";
+
+	keys[0][3]="dog";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/pets.png";
+}
+
 function pint(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -2337,7 +2547,7 @@ function things(){
 	links[0][1]="1";
 	keys[1][1]="Things";
 	links[2][1]="artthings";
-	keys[3][1]="animals";
+	links[3][1]="animals";
 	links[4][1]="parts";
 
 	keys[0][2]="clothes";
@@ -2579,6 +2789,41 @@ function vegetables(){
 
 }
 
+function wateranimals(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="water animals";
+	keys[2][1]="fish";
+	keys[3][1]="whale";
+	keys[4][1]="prawn";
+
+	keys[0][2]="crab";
+	keys[1][2]="dolphin";
+	keys[2][2]="jellyfish";
+	keys[3][2]="tropical fish";
+	keys[4][2]="shark";
+
+	keys[0][3]="";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]=""; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/wateranimals.png";
+}
+
 function weather(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -2620,6 +2865,41 @@ function weather(){
 	keys[4][4]="";
 
 	document.main.src="images/weather.png";
+}
+
+function wildanimals(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="wild animal";
+	keys[2][1]="zebra";
+	keys[3][1]="snake";
+	keys[4][1]="monkey";
+
+	keys[0][2]="bear";
+	keys[1][2]="camel";
+	keys[2][2]="chetah";
+	keys[3][2]="deer";
+	keys[4][2]="elephant";
+
+	keys[0][3]="giraffe";
+	keys[1][3]="gorilla";
+	keys[2][3]="hippo";
+	keys[3][3]="lion";
+	keys[4][3]="tiger";
+
+	keys[0][4]="rhinoceros"; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/wildanimals.png";
 }
 
 function wml(){
