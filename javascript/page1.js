@@ -28,7 +28,7 @@ keys[0][0]="yes ";
 	links[0][4]="clear";
 	links[1][4]="time";
 	links[2][4]="places";
-	keys[3][4]="Leisure";
+	links[3][4]="leisure";
 	links[4][4]="deleteword";
 
 	document.main.src="images/page1.png";

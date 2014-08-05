@@ -645,6 +645,41 @@ function drinks(){
 
 }
 
+function dvd(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="";
+	keys[2][1]="";
+	keys[3][1]="";
+	keys[4][1]="pause/play";
+
+	keys[0][2]="My DVDs";
+	keys[1][2]="";
+	keys[2][2]="";
+	keys[3][2]="";
+	keys[4][2]="";
+
+	keys[0][3]="dvd Volume Up";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]="dvd Volume Down"; 
+	keys[1][4]="mute";
+	keys[2][4]="shuffle";
+	keys[3][4]="previous track";
+	keys[4][4]="next track";
+
+	document.main.src="images/dvd.png";
+}
+
 function educationstaff(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -1269,6 +1304,41 @@ function kitchenequipment(){
 	document.main.src="images/kitchenequipment.png";
 }
 
+function leisure(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	links[1][1]="pictures";
+	links[2][1]="phone";
+	links[3][1]="mp3";
+	keys[4][1]="Computer Control";
+
+	links[0][2]="want";
+	links[1][2]="dvd";
+	links[2][2]="tv";
+	keys[3][2]="";
+	keys[4][2]="volume up";
+
+	links[0][3]="ECU";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="volume down";
+
+	links[0][4]="mystories"; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/leisure.png";
+}
+
 function littlewords(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -1649,6 +1719,41 @@ function moreaction(){
 	document.main.src="images/moreaction.png";
 }
 
+function mp3(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="";
+	keys[2][1]="";
+	keys[3][1]="";
+	keys[4][1]="pause/play";
+
+	keys[0][2]="My Albums";
+	keys[1][2]="";
+	keys[2][2]="";
+	keys[3][2]="";
+	keys[4][2]="";
+
+	keys[0][3]="MP3 Volume Up";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]="MP3 Volume Down"; 
+	keys[1][4]="mute";
+	keys[2][4]="shuffle";
+	keys[3][4]="previous track";
+	keys[4][4]="next track";
+
+	document.main.src="images/mp3.png";
+}
+
 function myday(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -1928,7 +2033,7 @@ keys[0][0]="yes ";
 	links[0][4]="clear";
 	links[1][4]="time";
 	links[2][4]="places";
-	keys[3][4]="Leisure";
+	links[3][4]="leisure";
 	links[4][4]="deleteword";
 
 	document.main.src="images/page1.png";
@@ -3023,6 +3128,41 @@ function transport(){
 	document.main.src="images/transport.png";
 }
 
+function tv(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="1";
+	keys[2][1]="2";
+	keys[3][1]="3";
+	keys[4][1]="TV on/off";
+
+	keys[0][2]="";
+	keys[1][2]="4";
+	keys[2][2]="5";
+	keys[3][2]="6";
+	keys[4][2]="";
+
+	keys[0][3]="TV volume UP";
+	keys[1][3]="7";
+	keys[2][3]="8";
+	keys[3][3]="9";
+	keys[4][3]="";
+
+	keys[0][4]="TV volume Down"; 
+	keys[1][4]="mute";
+	keys[2][4]="0";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/tv.png";
+}
+
 function vegetables(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -3067,6 +3207,41 @@ function vegetables(){
 
 	document.main.src="images/vegetables.jpg";
 
+}
+
+function want(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="to go outside";
+	keys[2][1]="to call someone";
+	keys[3][1]="to sit down";
+	keys[4][1]="to stand up";
+
+	keys[0][2]="to do something else";
+	keys[1][2]="to watch something";
+	keys[2][2]="to go on holiday";
+	keys[3][2]="to have a go";
+	keys[4][2]="";
+
+        keys[0][2]="to play";
+	keys[1][3]="to listen to something";
+	keys[2][3]="to go swimming";
+	keys[3][3]="";
+	keys[4][3]="to cook something";
+
+	links[0][4]="mystories"; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="to go home";
+
+	document.main.src="images/want.png";
 }
 
 function wateranimals(){
