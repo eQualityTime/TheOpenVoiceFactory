@@ -1663,7 +1663,7 @@ function months(){
 
 	keys[0][3]="June";
 	keys[1][3]="July";
-	keys[2][3]="Augst";
+	keys[2][3]="August";
 	keys[3][3]="September";
 	keys[4][3]="October";
 
