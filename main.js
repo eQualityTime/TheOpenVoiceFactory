@@ -2025,8 +2025,8 @@ keys[0][0]="yes ";
 	links[4][2]="myday";
 
 	links[0][3]="action";
-	keys[1][3]="Go";
-	keys[2][3]="Want";
+	keys[1][3]="go";
+	keys[2][3]="want";
 	links[3][3]="describe";
 	links[4][3]="things";
 
