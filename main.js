@@ -297,10 +297,10 @@ function chatting(){
 	keys[1][2]="ok";
 	keys[2][2]="I'm not so good";
 	keys[3][2]="please";
-	keys[4][2]="Thank you";
+	keys[4][2]="thank you";
 
 	keys[0][3]="sorry";
-	keys[1][3]="Execuse me";
+	keys[1][3]="execuse me";
 	keys[2][3]="maybe";
 	keys[3][3]="really";
 	keys[4][3]="I don't know";
