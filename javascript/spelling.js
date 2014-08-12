@@ -27,7 +27,7 @@ function spelling(){
 	keys[3][2]="g";
 	keys[4][2]="h";
 
-	keys[0][3]="N-Z";
+	links[0][3]="spelling2";
 	keys[1][3]="i";
 	keys[2][3]="j";
 	keys[3][3]="k";

@@ -2055,7 +2055,7 @@ keys[0][0]="yes ";
 
 	keys[0][2]="I";
 	links[1][2]="people";
-	keys[2][2]="Personal care";
+	links[2][2]="personalcare";
 	links[3][2]="littlewords";
 	links[4][2]="myday";
 
@@ -2162,6 +2162,41 @@ function people(){
 }
 
 
+function personalcare(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="I need the toilet";
+	keys[2][1]="I need some help";
+	keys[3][1]="I don't feel well";
+	links[4][1]="parts";
+
+	links[0][2]="cloths";
+	keys[1][2]="I want to chill out on my bed";
+	keys[2][2]="I'd like a shave";
+	keys[3][2]="I need my medication";
+	keys[4][2]="Please can you clean my glasses";
+
+	keys[0][3]="Can you do my nails please";
+	keys[1][3]="I'd like a shower";
+	keys[2][3]="I'd love a bath";
+	links[3][3]="thingsthathelp";
+	links[4][3]="toiletries";
+
+	keys[0][4]="I need to get changed"; 
+	keys[1][4]="";
+	keys[2][4]="Can you do my hair please";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/personalcare.png";
+}
+
 function petcare(){
 reset();
 	keys[0][0]="yes";
@@ -2230,6 +2265,76 @@ reset();
 	keys[4][4]="";
 
 	document.main.src="images/pets.png";
+}
+
+function picture(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="";
+	keys[2][1]="";
+	keys[3][1]="";
+	keys[4][1]="";
+
+	keys[0][2]="About this pic";
+	keys[1][2]="";
+	keys[2][2]="";
+	keys[3][2]="";
+	keys[4][2]="";
+
+	keys[0][3]="Previous photo";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="";
+	keys[4][3]="";
+
+	keys[0][4]="Next Photo"; 
+	keys[1][4]="";
+	keys[2][4]="";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/picture.png";
+}
+
+function pictures(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="Would you like to see my photos?";
+	links[2][1]="picture";
+	links[3][1]="picture";
+	links[4][1]="picture";
+
+	links[0][2]="picture";
+	links[1][2]="picture";
+	links[2][2]="picture";
+	links[3][2]="picture";
+	links[4][2]="picture";
+
+	links[0][3]="picture";
+	links[1][3]="picture";
+	links[2][3]="picture";
+	links[3][3]="picture";
+	links[4][3]="picture";
+
+	links[0][4]="picture"; 
+	links[1][4]="picture";
+	links[2][4]="picture";
+	links[3][4]="picture";
+	links[4][4]="picture";
+
+	document.main.src="images/pictures.png";
 }
 
 function pint(){
@@ -2396,11 +2501,11 @@ function privateparts(){
 	keys[3][3]="";
 	keys[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	keys[0][4]="horny"; 
+	keys[1][4]="love";
+	keys[2][4]="shared pleasure";
+	keys[3][4]="self pleasure";
+	keys[4][4]="kiss";
 
 	document.main.src="images/privateparts.png";
 }
@@ -2820,7 +2925,7 @@ function spelling(){
 	keys[3][2]="g";
 	keys[4][2]="h";
 
-	keys[0][3]="N-Z";
+	links[0][3]="spelling2";
 	keys[1][3]="i";
 	keys[2][3]="j";
 	keys[3][3]="k";
@@ -2833,6 +2938,49 @@ function spelling(){
 	keys[4][4]="?";
 
 	document.main.src="images/spelling.png";
+}
+
+function spelling2(){
+	var i,j
+		for(j=0;j<5;j++)
+		{
+			for(i=0;i<5;i++)
+			{
+				keys[i][j]="link";
+				links[i][j]="blank";
+			}
+		}
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="m";
+	keys[2][1]="o";
+	keys[3][1]="p";
+	keys[4][1]="q";
+
+	keys[0][2]="Backspace";
+	keys[1][2]="r";
+	keys[2][2]="s";
+	keys[3][2]="t";
+	keys[4][2]="u";
+
+	links[0][3]="spelling";
+	keys[1][3]="v";
+	keys[2][3]="w";
+	keys[3][3]="x";
+	keys[4][3]="y";
+
+	links[0][4]="clear"; 
+	keys[1][4]="x";
+	keys[2][4]=" ";
+	keys[3][4]="shift";
+	keys[4][4]="!";
+
+	document.main.src="images/spelling2.png";
 }
 
 function sports(){

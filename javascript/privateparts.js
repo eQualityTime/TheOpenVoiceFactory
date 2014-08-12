@@ -33,11 +33,11 @@ function privateparts(){
 	keys[3][3]="";
 	keys[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	keys[0][4]="horny"; 
+	keys[1][4]="love";
+	keys[2][4]="shared pleasure";
+	keys[3][4]="self pleasure";
+	keys[4][4]="kiss";
 
 	document.main.src="images/privateparts.png";
 }

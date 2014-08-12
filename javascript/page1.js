@@ -15,7 +15,7 @@ keys[0][0]="yes ";
 
 	keys[0][2]="I";
 	links[1][2]="people";
-	keys[2][2]="Personal care";
+	links[2][2]="personalcare";
 	links[3][2]="littlewords";
 	links[4][2]="myday";
 
