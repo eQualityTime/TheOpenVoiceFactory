@@ -29,7 +29,7 @@ reset();
 	keys[1][4]="";
 	keys[2][4]="";
 	keys[3][4]="";
-	keys[4][4]="materials";
+	links[4][4]="materials";
 
 	document.main.src="images/artthings.png";
 }
