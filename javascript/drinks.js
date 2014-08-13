@@ -29,11 +29,11 @@ function drinks(){
 	keys[3][2]="";
 	keys[4][2]="";
 
-	keys[0][3]="juice";
+	links[0][3]="juice";
 	links[1][3]="smoothy";
 	links[2][3]="milkshake";
 	links[3][3]="fizzydrinks";
-	keys[4][3]="alcohol";
+	links[4][3]="alcohol";
 
 	keys[0][4]=""; 
 	keys[1][4]="with";
