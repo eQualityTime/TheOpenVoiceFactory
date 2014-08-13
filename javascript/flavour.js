@@ -1,5 +1,5 @@
 
-function smoothy(){
+function flavour(){
 	var i,j
 		for(j=0;j<5;j++)
 		{
@@ -42,6 +42,6 @@ function smoothy(){
 	keys[4][4]="blackberry";
 
 
-	document.main.src="images/smoothy.png";
+	document.main.src="images/flavour.png";
 
 }

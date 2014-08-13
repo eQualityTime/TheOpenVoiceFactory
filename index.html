@@ -80,7 +80,11 @@ function reset(){
 }
 
 function add(i,j) {
-	if(keys[i][j]=="link")
+	if(keys[i][j]!="link")
+	{
+		document.myform.outputtext.value += " "+ keys[i][j];
+	}
+	if(links[i][j]!="blank")
 	{
 		switch(links[i][j])
 		{
@@ -89,9 +93,6 @@ function add(i,j) {
 			case "1": page1(); break;
 			default: eval(links[i][j]+"()");
 		}
-	}
-	else{
-		document.myform.outputtext.value += " "+ keys[i][j];
 	}
 }
 

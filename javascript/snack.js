@@ -20,6 +20,7 @@ function snack(){
 	keys[1][1]="snack";
 	keys[2][1]="raison";
 	keys[3][1]="ice lolly";
+	links[3][1]="flavour";
 	keys[4][1]="cake";
 
 
@@ -27,6 +28,7 @@ function snack(){
 	keys[1][2]="cream";
 	keys[2][2]="custard";
 	keys[3][2]="yoghurt";
+	links[3][2]="flavour";
 	keys[4][2]="crisps";
 
 	keys[0][3]="sweets";
@@ -34,6 +36,7 @@ function snack(){
 	keys[2][3]="pie";
 	keys[3][3]="chocolate";
 	keys[4][3]="ice cream";
+	links[4][3]="flavour";
 
 	keys[0][4]="cup cake"; 
 	keys[1][4]="rice cake";

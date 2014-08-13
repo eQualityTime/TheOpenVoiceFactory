@@ -735,7 +735,8 @@ function drinks(){
 	keys[4][2]="";
 
 	links[0][3]="juice";
-	links[1][3]="smoothy";
+	keys[1][3]="smoothy";
+	links[1][3]="flavour";
 	links[2][3]="milkshake";
 	links[3][3]="fizzydrinks";
 	links[4][3]="alcohol";
@@ -1037,6 +1038,53 @@ function fizzydrinks(){
 	keys[4][4]="";
 
 	document.main.src="images/fizzydrinks.jpg";
+
+}
+
+function flavour(){
+	var i,j
+		for(j=0;j<5;j++)
+		{
+			for(i=0;i<5;i++)
+			{
+				keys[i][j]="link";
+				links[i][j]="blank";
+			}
+		}
+	keys[0][0]="yes"; 
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+	
+	links[0][1]="1";
+	keys[1][1]="flavor";
+	keys[2][1]="raison";
+	keys[3][1]="banana";
+	keys[4][1]="";
+
+
+	keys[0][2]="fruit";
+	keys[1][2]="mint";
+	keys[2][2]="toffee";
+	keys[3][2]="lime";
+	keys[4][2]="lemon";
+
+
+	keys[0][3]="";
+	keys[1][3]="";
+	keys[2][3]="";
+	keys[3][3]="chocolate";
+	keys[4][3]="pineapple";
+
+	keys[0][4]="";
+	keys[1][4]="strawberry";
+	keys[2][4]="";
+	keys[3][4]="cherry";
+	keys[4][4]="blackberry";
+
+
+	document.main.src="images/flavour.png";
 
 }
 
@@ -2867,53 +2915,6 @@ function shops(){
 	document.main.src="images/shops.png";
 }
 
-function smoothy(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				keys[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
-	keys[0][0]="yes"; 
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
-	
-	links[0][1]="1";
-	keys[1][1]="flavor";
-	keys[2][1]="raison";
-	keys[3][1]="banana";
-	keys[4][1]="";
-
-
-	keys[0][2]="fruit";
-	keys[1][2]="mint";
-	keys[2][2]="toffee";
-	keys[3][2]="lime";
-	keys[4][2]="lemon";
-
-
-	keys[0][3]="";
-	keys[1][3]="";
-	keys[2][3]="";
-	keys[3][3]="chocolate";
-	keys[4][3]="pineapple";
-
-	keys[0][4]="";
-	keys[1][4]="strawberry";
-	keys[2][4]="";
-	keys[3][4]="cherry";
-	keys[4][4]="blackberry";
-
-
-	document.main.src="images/smoothy.png";
-
-}
-
 function snack(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -2935,6 +2936,7 @@ function snack(){
 	keys[1][1]="snack";
 	keys[2][1]="raison";
 	keys[3][1]="ice lolly";
+	links[3][1]="flavour";
 	keys[4][1]="cake";
 
 
@@ -2942,6 +2944,7 @@ function snack(){
 	keys[1][2]="cream";
 	keys[2][2]="custard";
 	keys[3][2]="yoghurt";
+	links[3][2]="flavour";
 	keys[4][2]="crisps";
 
 	keys[0][3]="sweets";
@@ -2949,6 +2952,7 @@ function snack(){
 	keys[2][3]="pie";
 	keys[3][3]="chocolate";
 	keys[4][3]="ice cream";
+	links[4][3]="flavour";
 
 	keys[0][4]="cup cake"; 
 	keys[1][4]="rice cake";
