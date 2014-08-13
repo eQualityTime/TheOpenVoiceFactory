@@ -1336,6 +1336,42 @@ reset();
 	document.main.src="images/gardening.png";
 }
 
+function health(){
+reset();
+	keys[0][0]="yes";
+	keys[1][0]="";
+	keys[2][0]="";
+	keys[3][0]="";
+	keys[4][0]="no";
+
+	links[0][1]="1";
+	keys[1][1]="I have pain in my";
+	links[1][1]="parts";
+	keys[2][1]="I feel";
+	keys[3][1]="headache";
+	keys[4][1]="ouch";
+
+	keys[0][2]="chest pain";
+	keys[1][2]="earache";
+	keys[2][2]="";
+	keys[3][2]="sick";
+	keys[4][2]="toothache";
+
+	keys[0][3]="back pain";
+	keys[1][3]="a cold";
+	keys[2][3]="";
+	keys[3][3]="itch";
+	keys[4][3]="";
+
+	keys[0][4]="stomach"; 
+	keys[1][4]="a sore throat";
+	keys[2][4]="cramp";
+	keys[3][4]="";
+	keys[4][4]="";
+
+	document.main.src="images/health.png";
+}
+
 function insects(){
 reset();
 	keys[0][0]="yes";
@@ -2328,6 +2364,7 @@ reset();
 	keys[1][1]="I need the toilet";
 	keys[2][1]="I need some help";
 	keys[3][1]="I don't feel well";
+	links[3][1]="health";
 	links[4][1]="parts";
 
 	links[0][2]="cloths";

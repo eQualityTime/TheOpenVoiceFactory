@@ -11,6 +11,7 @@ reset();
 	keys[1][1]="I need the toilet";
 	keys[2][1]="I need some help";
 	keys[3][1]="I don't feel well";
+	links[3][1]="health";
 	links[4][1]="parts";
 
 	links[0][2]="cloths";
