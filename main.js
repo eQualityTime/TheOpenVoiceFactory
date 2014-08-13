@@ -1012,7 +1012,7 @@ function food(){
 	links[3][4]="foodchat";
 	keys[4][4]="favourite food";
 
-	document.main.src="images/food.jpg";
+	document.main.src="images/food.png";
 
 }
 
