@@ -14,6 +14,7 @@ reset();
 	keys[4][1]="Computer Control";
 
 	links[0][2]="want";
+	keys[0][2]="I want";
 	links[1][2]="dvd";
 	links[2][2]="tv";
 	keys[3][2]="";
