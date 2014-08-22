@@ -1363,7 +1363,7 @@ reset();
 	keys[3][3]="itch";
 	keys[4][3]="";
 
-	keys[0][4]="stomach"; 
+	keys[0][4]="stomach ache"; 
 	keys[1][4]="a sore throat";
 	keys[2][4]="cramp";
 	keys[3][4]="";
