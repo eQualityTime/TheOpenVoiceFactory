@@ -1,35 +1,35 @@
 
 function juice(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="Juice";
-	keys[2][1]="apple juice";
-	keys[3][1]="orange juice";
-	keys[4][1]="blackcurrent juice";
+	utterances[1][1]="Juice";
+	utterances[2][1]="apple juice";
+	utterances[3][1]="orange juice";
+	utterances[4][1]="blackcurrent juice";
 
-	keys[0][2]="pineapple juice";
-	keys[1][2]="grape juice";
-	keys[2][2]="grapefruit juice";
-	keys[3][2]="cranberry juice";
-	keys[4][2]="tomato juice";
+	utterances[0][2]="pineapple juice";
+	utterances[1][2]="grape juice";
+	utterances[2][2]="grapefruit juice";
+	utterances[3][2]="cranberry juice";
+	utterances[4][2]="tomato juice";
 
-	keys[0][3]="";
-	keys[1][3]="";
-	keys[2][3]="";
-	keys[3][3]="";
-	keys[4][3]="";
+	utterances[0][3]="";
+	utterances[1][3]="";
+	utterances[2][3]="";
+	utterances[3][3]="";
+	utterances[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/juice.png";
 }

@@ -5,39 +5,39 @@ function job(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="Job";
-	keys[2][1]="driver";
-	keys[3][1]="PA"
-	keys[4][1]="cleaner";
+	utterances[1][1]="Job";
+	utterances[2][1]="driver";
+	utterances[3][1]="PA"
+	utterances[4][1]="cleaner";
 
-	keys[0][2]="Doctor";
-	keys[1][2]="SLT";
-	keys[2][2]="dentist";
-	keys[3][2]="nurse";
-	keys[4][2]="police officer";
+	utterances[0][2]="Doctor";
+	utterances[1][2]="SLT";
+	utterances[2][2]="dentist";
+	utterances[3][2]="nurse";
+	utterances[4][2]="police officer";
 
-	keys[0][3]="post person";
-	keys[1][3]="pilot";
-	keys[2][3]="handy person";
-	keys[3][3]="OT";
-	keys[4][3]="physio";
+	utterances[0][3]="post person";
+	utterances[1][3]="pilot";
+	utterances[2][3]="handy person";
+	utterances[3][3]="OT";
+	utterances[4][3]="physio";
 
-	keys[0][4]="mechanic"; 
-	keys[1][4]="caretaker";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]="mechanic"; 
+	utterances[1][4]="caretaker";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/job.png";
 }

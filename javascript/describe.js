@@ -5,15 +5,15 @@ function describe(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
 	links[1][1]="feelings";
@@ -21,23 +21,23 @@ function describe(){
 	links[3][1]="shapes";
 	links[4][1]="opposites";
 
-	keys[0][2]="pretty";
-	keys[1][2]="more";
-	keys[2][2]="nice";
-	keys[3][2]="wrong";
-	keys[4][2]="right";
+	utterances[0][2]="pretty";
+	utterances[1][2]="more";
+	utterances[2][2]="nice";
+	utterances[3][2]="wrong";
+	utterances[4][2]="right";
 
-	keys[0][3]="finished";
-	keys[1][3]="all";
-	keys[2][3]="mean";
-	keys[3][3]="different";
-	keys[4][3]="same";
+	utterances[0][3]="finished";
+	utterances[1][3]="all";
+	utterances[2][3]="mean";
+	utterances[3][3]="different";
+	utterances[4][3]="same";
 
-	keys[0][4]="problem"; 
-	keys[1][4]="important";
-	keys[2][4]="because";
-	keys[3][4]="idea";
-	keys[4][4]="favorite";
+	utterances[0][4]="problem"; 
+	utterances[1][4]="important";
+	utterances[2][4]="because";
+	utterances[3][4]="idea";
+	utterances[4][4]="favorite";
 
 	document.main.src="images/describe.png";
 }

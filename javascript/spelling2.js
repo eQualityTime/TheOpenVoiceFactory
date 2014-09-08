@@ -5,39 +5,39 @@ function spelling2(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="m";
-	keys[2][1]="o";
-	keys[3][1]="p";
-	keys[4][1]="q";
+	utterances[1][1]="m";
+	utterances[2][1]="o";
+	utterances[3][1]="p";
+	utterances[4][1]="q";
 
-	keys[0][2]="Backspace";
-	keys[1][2]="r";
-	keys[2][2]="s";
-	keys[3][2]="t";
-	keys[4][2]="u";
+	utterances[0][2]="Backspace";
+	utterances[1][2]="r";
+	utterances[2][2]="s";
+	utterances[3][2]="t";
+	utterances[4][2]="u";
 
 	links[0][3]="spelling";
-	keys[1][3]="v";
-	keys[2][3]="w";
-	keys[3][3]="x";
-	keys[4][3]="y";
+	utterances[1][3]="v";
+	utterances[2][3]="w";
+	utterances[3][3]="x";
+	utterances[4][3]="y";
 
 	links[0][4]="clear"; 
-	keys[1][4]="x";
-	keys[2][4]=" ";
-	keys[3][4]="shift";
-	keys[4][4]="!";
+	utterances[1][4]="x";
+	utterances[2][4]=" ";
+	utterances[3][4]="shift";
+	utterances[4][4]="!";
 
 	document.main.src="images/spelling2.png";
 }

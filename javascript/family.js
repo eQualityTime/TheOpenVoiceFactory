@@ -5,39 +5,39 @@ function family(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="Dad";
-	keys[2][1]="Mum";
-	keys[3][1]="lady";
-	keys[4][1]="man";
+	utterances[1][1]="Dad";
+	utterances[2][1]="Mum";
+	utterances[3][1]="lady";
+	utterances[4][1]="man";
 
-	keys[0][2]="Family";
-	keys[1][2]="brother";
-	keys[2][2]="sister";
-	keys[3][2]="baby";
-	keys[4][2]="child";
+	utterances[0][2]="Family";
+	utterances[1][2]="brother";
+	utterances[2][2]="sister";
+	utterances[3][2]="baby";
+	utterances[4][2]="child";
 
-	keys[0][3]="";
-	keys[1][3]="Grandad";
-	keys[2][3]="Grandma";
-	keys[3][3]="";
-	keys[4][3]="";
+	utterances[0][3]="";
+	utterances[1][3]="Grandad";
+	utterances[2][3]="Grandma";
+	utterances[3][3]="";
+	utterances[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/family.png";
 }

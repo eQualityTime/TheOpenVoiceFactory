@@ -5,15 +5,15 @@ function things(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
 	links[1][1]="commonthings";
@@ -36,8 +36,8 @@ function things(){
 	links[0][4]="tools"; 
 	links[1][4]="transport";
 	links[2][4]="weather";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/things.png";
 }

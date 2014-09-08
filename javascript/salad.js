@@ -5,39 +5,39 @@ function salad(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="salad";
-	keys[2][1]="olives";
-	keys[3][1]="tomato";
-	keys[4][1]="spring onion";
+	utterances[1][1]="salad";
+	utterances[2][1]="olives";
+	utterances[3][1]="tomato";
+	utterances[4][1]="spring onion";
 
-	keys[0][2]="celery";
-	keys[1][2]="cucumber";
-	keys[2][2]="pepper";
-	keys[3][2]="radish";
-	keys[4][2]="lettuce";
+	utterances[0][2]="celery";
+	utterances[1][2]="cucumber";
+	utterances[2][2]="pepper";
+	utterances[3][2]="radish";
+	utterances[4][2]="lettuce";
 
-	keys[0][3]="beetroot";
-	keys[1][3]="secret pepper";
-	keys[2][3]="";
-	keys[3][3]="";
-	keys[4][3]="";
+	utterances[0][3]="beetroot";
+	utterances[1][3]="secret pepper";
+	utterances[2][3]="";
+	utterances[3][3]="";
+	utterances[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/salad.png";
 }

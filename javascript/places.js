@@ -5,39 +5,39 @@ function places(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="place";
-	keys[2][1]="my day places";
+	utterances[1][1]="place";
+	utterances[2][1]="my day places";
 	links[3][1]="shops";
 	links[4][1]="outside";
 
-	keys[0][2]="work";
-	keys[1][2]="school or college";
-	keys[2][2]="town";
-	keys[3][2]="hospital";
-	keys[4][2]="airport";
+	utterances[0][2]="work";
+	utterances[1][2]="school or college";
+	utterances[2][2]="town";
+	utterances[3][2]="hospital";
+	utterances[4][2]="airport";
 
-	keys[0][3]="dentist";
-	keys[1][3]="bank";
-	keys[2][3]="doctors";
-	keys[3][3]="pool";
-	keys[4][3]="restaurant";
+	utterances[0][3]="dentist";
+	utterances[1][3]="bank";
+	utterances[2][3]="doctors";
+	utterances[3][3]="pool";
+	utterances[4][3]="restaurant";
 
-	keys[0][4]="library"; 
-	keys[1][4]="pub";
-	keys[2][4]="post office";
-	keys[3][4]="cinema";
-	keys[4][4]="";
+	utterances[0][4]="library"; 
+	utterances[1][4]="pub";
+	utterances[2][4]="post office";
+	utterances[3][4]="cinema";
+	utterances[4][4]="";
 
 	document.main.src="images/places.png";
 }

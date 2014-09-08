@@ -1,14 +1,14 @@
 
 function pictures(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="Would you like to see my photos?";
+	utterances[1][1]="Would you like to see my photos?";
 	links[2][1]="picture";
 	links[3][1]="picture";
 	links[4][1]="picture";

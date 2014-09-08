@@ -5,39 +5,39 @@ function computer(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="computer";
-	keys[2][1]="mouse";
-	keys[3][1]="keyboard";
-	keys[4][1]="USB stick";
+	utterances[1][1]="computer";
+	utterances[2][1]="mouse";
+	utterances[3][1]="keyboard";
+	utterances[4][1]="USB stick";
 
-	keys[0][2]="printer";
-	keys[1][2]="email";
-	keys[2][2]="iphone";
-	keys[3][2]="monitor";
-	keys[4][2]="website";
+	utterances[0][2]="printer";
+	utterances[1][2]="email";
+	utterances[2][2]="iphone";
+	utterances[3][2]="monitor";
+	utterances[4][2]="website";
 
-	keys[0][3]="ipod";
-	keys[1][3]="speakers";
-	keys[2][3]="joystick";
-	keys[3][3]="touch screen";
-	keys[4][3]="";
+	utterances[0][3]="ipod";
+	utterances[1][3]="speakers";
+	utterances[2][3]="joystick";
+	utterances[3][3]="touch screen";
+	utterances[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/computer.png";
 }

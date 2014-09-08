@@ -5,44 +5,44 @@ function snack(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 
 	links[0][1]="1";
-	keys[1][1]="snack";
-	keys[2][1]="raison";
-	keys[3][1]="ice lolly";
+	utterances[1][1]="snack";
+	utterances[2][1]="raison";
+	utterances[3][1]="ice lolly";
 	links[3][1]="flavour";
-	keys[4][1]="cake";
+	utterances[4][1]="cake";
 
 
-	keys[0][2]="fruit";
-	keys[1][2]="cream";
-	keys[2][2]="custard";
-	keys[3][2]="yoghurt";
+	utterances[0][2]="fruit";
+	utterances[1][2]="cream";
+	utterances[2][2]="custard";
+	utterances[3][2]="yoghurt";
 	links[3][2]="flavour";
-	keys[4][2]="crisps";
+	utterances[4][2]="crisps";
 
-	keys[0][3]="sweets";
-	keys[1][3]="candy floss";
-	keys[2][3]="pie";
-	keys[3][3]="chocolate";
-	keys[4][3]="ice cream";
+	utterances[0][3]="sweets";
+	utterances[1][3]="candy floss";
+	utterances[2][3]="pie";
+	utterances[3][3]="chocolate";
+	utterances[4][3]="ice cream";
 	links[4][3]="flavour";
 
-	keys[0][4]="cup cake"; 
-	keys[1][4]="rice cake";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]="cup cake"; 
+	utterances[1][4]="rice cake";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/snack.png";
 }

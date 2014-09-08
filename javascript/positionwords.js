@@ -5,39 +5,39 @@ function positionwords(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="up";
-	keys[2][1]="down";
-	keys[3][1]="in";
-	keys[4][1]="out";
+	utterances[1][1]="up";
+	utterances[2][1]="down";
+	utterances[3][1]="in";
+	utterances[4][1]="out";
 
-	keys[0][2]="";
-	keys[1][2]="here";
-	keys[2][2]="there";
-	keys[3][2]="on";
-	keys[4][2]="off";
+	utterances[0][2]="";
+	utterances[1][2]="here";
+	utterances[2][2]="there";
+	utterances[3][2]="on";
+	utterances[4][2]="off";
 
-	keys[0][3]="middle";
-	keys[1][3]="top";
-	keys[2][3]="bottom";
-	keys[3][3]="under";
-	keys[4][3]="over";
+	utterances[0][3]="middle";
+	utterances[1][3]="top";
+	utterances[2][3]="bottom";
+	utterances[3][3]="under";
+	utterances[4][3]="over";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/positionwords.png";
 }

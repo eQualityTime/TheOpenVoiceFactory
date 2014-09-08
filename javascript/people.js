@@ -5,38 +5,38 @@ function people(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="people";
+	utterances[1][1]="people";
 	links[2][1]="friends";
 	links[3][1]="scwfriends";
 	links[4][1]="supportstaff";
 
-	keys[0][2]="I'm";
-	keys[1][2]="me";
-	keys[2][2]="my";
-	keys[3][2]="mine";
+	utterances[0][2]="I'm";
+	utterances[1][2]="me";
+	utterances[2][2]="my";
+	utterances[3][2]="mine";
 	links[4][2]="educationstaff";
 
-	keys[0][3]="we";
-	keys[1][3]="they";
-	keys[2][3]="boy";
-	keys[3][3]="girl";
+	utterances[0][3]="we";
+	utterances[1][3]="they";
+	utterances[2][3]="boy";
+	utterances[3][3]="girl";
 	links[4][3]="job";
 
-	keys[0][4]="it"; 
-	keys[1][4]="you";
-	keys[2][4]="he";
-	keys[3][4]="she";
+	utterances[0][4]="it"; 
+	utterances[1][4]="you";
+	utterances[2][4]="he";
+	utterances[3][4]="she";
 	links[4][4]="family";
 
 	document.main.src="images/people.png";

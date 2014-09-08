@@ -1,35 +1,35 @@
 
 function wateranimals(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="water animals";
-	keys[2][1]="fish";
-	keys[3][1]="whale";
-	keys[4][1]="prawn";
+	utterances[1][1]="water animals";
+	utterances[2][1]="fish";
+	utterances[3][1]="whale";
+	utterances[4][1]="prawn";
 
-	keys[0][2]="crab";
-	keys[1][2]="dolphin";
-	keys[2][2]="jellyfish";
-	keys[3][2]="tropical fish";
-	keys[4][2]="shark";
+	utterances[0][2]="crab";
+	utterances[1][2]="dolphin";
+	utterances[2][2]="jellyfish";
+	utterances[3][2]="tropical fish";
+	utterances[4][2]="shark";
 
-	keys[0][3]="";
-	keys[1][3]="";
-	keys[2][3]="";
-	keys[3][3]="";
-	keys[4][3]="";
+	utterances[0][3]="";
+	utterances[1][3]="";
+	utterances[2][3]="";
+	utterances[3][3]="";
+	utterances[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/wateranimals.png";
 }

@@ -4,41 +4,41 @@ function lunch(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 
 	links[0][1]="1";
-	keys[1][1]="lunch";
-	keys[2][1]="sandwich";
-	keys[3][1]="crackers";
-	keys[4][1]="tuna";
+	utterances[1][1]="lunch";
+	utterances[2][1]="sandwich";
+	utterances[3][1]="crackers";
+	utterances[4][1]="tuna";
 
 
-	keys[0][2]="cheese";
-	keys[1][2]="ham";
-	keys[2][2]="chicken";
-	keys[3][2]="cheese on toast";
-	keys[4][2]="beans on toast";
+	utterances[0][2]="cheese";
+	utterances[1][2]="ham";
+	utterances[2][2]="chicken";
+	utterances[3][2]="cheese on toast";
+	utterances[4][2]="beans on toast";
 
-	keys[0][3]="soup";
-	keys[1][3]="chicken soup";
-	keys[2][3]="tomato soup";
-	keys[3][3]="salad";
-	keys[4][3]="";
+	utterances[0][3]="soup";
+	utterances[1][3]="chicken soup";
+	utterances[2][3]="tomato soup";
+	utterances[3][3]="salad";
+	utterances[4][3]="";
 
-	keys[0][4]="carrot soup"; 
-	keys[1][4]="mushroom soup";
-	keys[2][4]="vegetable soup";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]="carrot soup"; 
+	utterances[1][4]="mushroom soup";
+	utterances[2][4]="vegetable soup";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/lunch.png";
 

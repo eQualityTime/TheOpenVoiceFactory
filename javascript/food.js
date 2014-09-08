@@ -5,15 +5,15 @@ function food(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes ";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes ";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 
 	links[0][1]="1";
@@ -23,23 +23,23 @@ function food(){
 	links[4][1]="meat";
 
 
-	keys[0][2]="I'm hungry";
+	utterances[0][2]="I'm hungry";
 	links[1][2]="vegetables";
 	links[2][2]="fruit";
 	links[3][2]="drinks";
 	links[4][2]="fastfood";
 
-	keys[0][3]="I'm thirsty";
+	utterances[0][3]="I'm thirsty";
 	links[1][3]="snack";
 	links[2][3]="sauces";
 	links[3][3]="salad";
 	links[4][3]="cookingwords";
 
-	keys[0][4]="some"; 
-	keys[1][4]="with";
-	keys[2][4]="and";
+	utterances[0][4]="some"; 
+	utterances[1][4]="with";
+	utterances[2][4]="and";
 	links[3][4]="foodchat";
-	keys[4][4]="favourite food";
+	utterances[4][4]="favourite food";
 
 	document.main.src="images/food.png";
 

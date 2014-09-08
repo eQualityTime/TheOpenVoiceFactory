@@ -1,35 +1,35 @@
 
 function tv(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="1";
-	keys[2][1]="2";
-	keys[3][1]="3";
-	keys[4][1]="TV on/off";
+	utterances[1][1]="1";
+	utterances[2][1]="2";
+	utterances[3][1]="3";
+	utterances[4][1]="TV on/off";
 
-	keys[0][2]="";
-	keys[1][2]="4";
-	keys[2][2]="5";
-	keys[3][2]="6";
-	keys[4][2]="";
+	utterances[0][2]="";
+	utterances[1][2]="4";
+	utterances[2][2]="5";
+	utterances[3][2]="6";
+	utterances[4][2]="";
 
-	keys[0][3]="TV volume UP";
-	keys[1][3]="7";
-	keys[2][3]="8";
-	keys[3][3]="9";
-	keys[4][3]="";
+	utterances[0][3]="TV volume UP";
+	utterances[1][3]="7";
+	utterances[2][3]="8";
+	utterances[3][3]="9";
+	utterances[4][3]="";
 
-	keys[0][4]="TV volume Down"; 
-	keys[1][4]="mute";
-	keys[2][4]="0";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]="TV volume Down"; 
+	utterances[1][4]="mute";
+	utterances[2][4]="0";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/tv.png";
 }

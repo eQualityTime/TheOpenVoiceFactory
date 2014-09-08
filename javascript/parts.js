@@ -5,38 +5,38 @@ function parts(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="body";
-	keys[2][1]="hand";
-	keys[3][1]="head";
-	keys[4][1]="finger";
+	utterances[1][1]="body";
+	utterances[2][1]="hand";
+	utterances[3][1]="head";
+	utterances[4][1]="finger";
 
-	keys[0][2]="chest";
-	keys[1][2]="ear";
-	keys[2][2]="face";
-	keys[3][2]="hair";
-	keys[4][2]="mouth";
+	utterances[0][2]="chest";
+	utterances[1][2]="ear";
+	utterances[2][2]="face";
+	utterances[3][2]="hair";
+	utterances[4][2]="mouth";
 
-	keys[0][3]="back";
-	keys[1][3]="nose";
-	keys[2][3]="arm";
-	keys[3][3]="foot";
-	keys[4][3]="eye";
+	utterances[0][3]="back";
+	utterances[1][3]="nose";
+	utterances[2][3]="arm";
+	utterances[3][3]="foot";
+	utterances[4][3]="eye";
 
-	keys[0][4]="stomach"; 
-	keys[1][4]="neck";
-	keys[2][4]="leg";
-	keys[3][4]="toes";
+	utterances[0][4]="stomach"; 
+	utterances[1][4]="neck";
+	utterances[2][4]="leg";
+	utterances[3][4]="toes";
 	links[4][4]="privateparts";
 
 	document.main.src="images/parts.png";

@@ -5,41 +5,41 @@ function meals(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 
 	links[0][1]="1";
-	keys[1][1]="meal";
-	keys[2][1]="pasty";
-	keys[3][1]="spaghetti";
-	keys[4][1]="pasta";
+	utterances[1][1]="meal";
+	utterances[2][1]="pasty";
+	utterances[3][1]="spaghetti";
+	utterances[4][1]="pasta";
 
 
-	keys[0][2]="stew";
-	keys[1][2]="pizza";
-	keys[2][2]="roast dinner";
-	keys[3][2]="chinese food";
-	keys[4][2]="curry";
+	utterances[0][2]="stew";
+	utterances[1][2]="pizza";
+	utterances[2][2]="roast dinner";
+	utterances[3][2]="chinese food";
+	utterances[4][2]="curry";
 
-	keys[0][3]="rice";
-	keys[1][3]="noodles";
-	keys[2][3]="pie";
-	keys[3][3]="lasagna";
-	keys[4][3]="ravioli";
+	utterances[0][3]="rice";
+	utterances[1][3]="noodles";
+	utterances[2][3]="pie";
+	utterances[3][3]="lasagna";
+	utterances[4][3]="ravioli";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="macaroni cheese";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="macaroni cheese";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/meals.png";
 

@@ -1,34 +1,34 @@
 
 function artthings(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="art";
-	keys[2][1]="paint";
-	keys[3][1]="glitter";
-	keys[4][1]="sponge";
+	utterances[1][1]="art";
+	utterances[2][1]="paint";
+	utterances[3][1]="glitter";
+	utterances[4][1]="sponge";
 
-	keys[0][2]="tape";
-	keys[1][2]="eraser";
-	keys[2][2]="glue";
-	keys[3][2]="paintbrush";
-	keys[4][2]="paper";
+	utterances[0][2]="tape";
+	utterances[1][2]="eraser";
+	utterances[2][2]="glue";
+	utterances[3][2]="paintbrush";
+	utterances[4][2]="paper";
 
-	keys[0][3]="pen";
-	keys[1][3]="pencil";
-	keys[2][3]="scissors";
-	keys[3][3]="wrapping paper";
-	keys[4][3]="";
+	utterances[0][3]="pen";
+	utterances[1][3]="pencil";
+	utterances[2][3]="scissors";
+	utterances[3][3]="wrapping paper";
+	utterances[4][3]="";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
 	links[4][4]="materials";
 
 	document.main.src="images/artthings.png";

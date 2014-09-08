@@ -5,39 +5,39 @@ function transport(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="transport";
-	keys[2][1]="car";
-	keys[3][1]="train";
-	keys[4][1]="bus";
+	utterances[1][1]="transport";
+	utterances[2][1]="car";
+	utterances[3][1]="train";
+	utterances[4][1]="bus";
 
-	keys[0][2]="caravan";
-	keys[1][2]="fire engine";
-	keys[2][2]="ambulance";
-	keys[3][2]="ship";
-	keys[4][2]="airplane";
+	utterances[0][2]="caravan";
+	utterances[1][2]="fire engine";
+	utterances[2][2]="ambulance";
+	utterances[3][2]="ship";
+	utterances[4][2]="airplane";
 
-	keys[0][3]="tractor";
-	keys[1][3]="lorry";
-	keys[2][3]="motor home";
-	keys[3][3]="bike";
-	keys[4][3]="police car";
+	utterances[0][3]="tractor";
+	utterances[1][3]="lorry";
+	utterances[2][3]="motor home";
+	utterances[3][3]="bike";
+	utterances[4][3]="police car";
 
-	keys[0][4]="rowing boat"; 
-	keys[1][4]="bin lorry";
-	keys[2][4]="taxi";
-	keys[3][4]="underground";
-	keys[4][4]="";
+	utterances[0][4]="rowing boat"; 
+	utterances[1][4]="bin lorry";
+	utterances[2][4]="taxi";
+	utterances[3][4]="underground";
+	utterances[4][4]="";
 
 	document.main.src="images/transport.png";
 }

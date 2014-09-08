@@ -1,35 +1,35 @@
 
 function office(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="office";
-	keys[2][1]="chair";
-	keys[3][1]="filing cabinet";
-	keys[4][1]="computer";
+	utterances[1][1]="office";
+	utterances[2][1]="chair";
+	utterances[3][1]="filing cabinet";
+	utterances[4][1]="computer";
 
-	keys[0][2]="photocopier";
-	keys[1][2]="bin";
-	keys[2][2]="desk";
-	keys[3][2]="file";
-	keys[4][2]="fax";
+	utterances[0][2]="photocopier";
+	utterances[1][2]="bin";
+	utterances[2][2]="desk";
+	utterances[3][2]="file";
+	utterances[4][2]="fax";
 
-	keys[0][3]="pen";
-	keys[1][3]="pencil";
-	keys[2][3]="scissors";
-	keys[3][3]="envelope";
-	keys[4][3]="paper";
+	utterances[0][3]="pen";
+	utterances[1][3]="pencil";
+	utterances[2][3]="scissors";
+	utterances[3][3]="envelope";
+	utterances[4][3]="paper";
 
-	keys[0][4]="paperclip"; 
-	keys[1][4]="label";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]="paperclip"; 
+	utterances[1][4]="label";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/office.png";
 }

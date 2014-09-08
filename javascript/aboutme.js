@@ -1,35 +1,35 @@
 
 function aboutme(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="Name";
-	keys[2][1]="I live in...";
-	keys[3][1]="Birthday...";
-	keys[4][1]="age...";
+	utterances[1][1]="Name";
+	utterances[2][1]="I live in...";
+	utterances[3][1]="Birthday...";
+	utterances[4][1]="age...";
 
-	keys[0][2]="I live with...";
-	keys[1][2]="pet.. ";
-	keys[2][2]="School college...";
-	keys[3][2]="email..";
-	keys[4][2]="work...";
+	utterances[0][2]="I live with...";
+	utterances[1][2]="pet.. ";
+	utterances[2][2]="School college...";
+	utterances[3][2]="email..";
+	utterances[4][2]="work...";
 
-	keys[0][3]="communication aid..";
-	keys[1][3]="music..";
-	keys[2][3]="film..";
-	keys[3][3]="hobby..";
-	keys[4][3]="tv...";
+	utterances[0][3]="communication aid..";
+	utterances[1][3]="music..";
+	utterances[2][3]="film..";
+	utterances[3][3]="hobby..";
+	utterances[4][3]="tv...";
 
-	keys[0][4]="disability..."; 
-	keys[1][4]="mobile...";
+	utterances[0][4]="disability..."; 
+	utterances[1][4]="mobile...";
 	links[2][4]="aboutyou";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 
 	document.main.src="images/aboutme.png";
 }

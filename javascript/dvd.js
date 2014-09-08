@@ -1,35 +1,35 @@
 
 function dvd(){
 reset();
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 	links[0][1]="1";
-	keys[1][1]="";
-	keys[2][1]="";
-	keys[3][1]="";
-	keys[4][1]="pause/play";
+	utterances[1][1]="";
+	utterances[2][1]="";
+	utterances[3][1]="";
+	utterances[4][1]="pause/play";
 
-	keys[0][2]="My DVDs";
-	keys[1][2]="";
-	keys[2][2]="";
-	keys[3][2]="";
-	keys[4][2]="";
+	utterances[0][2]="My DVDs";
+	utterances[1][2]="";
+	utterances[2][2]="";
+	utterances[3][2]="";
+	utterances[4][2]="";
 
-	keys[0][3]="dvd Volume Up";
-	keys[1][3]="";
-	keys[2][3]="";
-	keys[3][3]="";
-	keys[4][3]="";
+	utterances[0][3]="dvd Volume Up";
+	utterances[1][3]="";
+	utterances[2][3]="";
+	utterances[3][3]="";
+	utterances[4][3]="";
 
-	keys[0][4]="dvd Volume Down"; 
-	keys[1][4]="mute";
-	keys[2][4]="shuffle";
-	keys[3][4]="previous track";
-	keys[4][4]="next track";
+	utterances[0][4]="dvd Volume Down"; 
+	utterances[1][4]="mute";
+	utterances[2][4]="shuffle";
+	utterances[3][4]="previous track";
+	utterances[4][4]="next track";
 
 	document.main.src="images/dvd.png";
 }

@@ -5,40 +5,40 @@ function meat(){
 		{
 			for(i=0;i<5;i++)
 			{
-				keys[i][j]="link";
+				utterances[i][j]="link";
 				links[i][j]="blank";
 			}
 		}
-	keys[0][0]="yes";
-	keys[1][0]="";
-	keys[2][0]="";
-	keys[3][0]="";
-	keys[4][0]="no";
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
 
 
 	links[0][1]="1";
-	keys[1][1]="meat";
-	keys[2][1]="bacon";
-	keys[3][1]="beef";
-	keys[4][1]="tuna";
+	utterances[1][1]="meat";
+	utterances[2][1]="bacon";
+	utterances[3][1]="beef";
+	utterances[4][1]="tuna";
 
 
-	keys[0][2]="lamb";
-	keys[1][2]="ham";
-	keys[2][2]="chicken";
-	keys[3][2]="pork chop";
-	keys[4][2]="meatballs";
+	utterances[0][2]="lamb";
+	utterances[1][2]="ham";
+	utterances[2][2]="chicken";
+	utterances[3][2]="pork chop";
+	utterances[4][2]="meatballs";
 
-	keys[0][3]="fish";
-	keys[1][3]="mince";
-	keys[2][3]="prawn";
-	keys[3][3]="fish fingers";
-	keys[4][3]="sausages";
+	utterances[0][3]="fish";
+	utterances[1][3]="mince";
+	utterances[2][3]="prawn";
+	utterances[3][3]="fish fingers";
+	utterances[4][3]="sausages";
 
-	keys[0][4]=""; 
-	keys[1][4]="";
-	keys[2][4]="";
-	keys[3][4]="";
-	keys[4][4]="";
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
 	document.main.src="images/meat.png";
 }
