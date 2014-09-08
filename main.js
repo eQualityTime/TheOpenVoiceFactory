@@ -2231,7 +2231,7 @@ function outside(){
 
 function page1(){
 reset();	
-utterances[0][0]="yes ";
+utterances[0][0]="yeah ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
 	utterances[3][0]="yes ";
