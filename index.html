@@ -104,12 +104,15 @@ function add(i,j) {
 }
 
 function makeWav(){        
-            $.get(("http://www.joereddington.com/testsound/getsound.pl?text="+document.myform.outputtext.value));
+            $.get(("../testsound/getsound.pl?text="+document.myform.outputtext.value));
 setTimeout(callback, 500);
             return false;
         }
 function callback() {
-var audio = new Audio('http://www.joereddington.com/testsound/hope.wav');
+//the cb peramater is to force a reload, see http://stackoverflow.com/a/25823431/170243
+ var url = "http://www.joereddington.com/testsound/hope.wav?cb=" + new Date().getTime();
+  var audio = new Audio(url);
+audio.load();
 audio.play();
            //     $("#player").html("<embed src=http://www.joereddington.com/testsound/hope.wav autostart=true  >");
         }
