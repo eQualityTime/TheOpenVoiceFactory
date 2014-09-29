@@ -31,9 +31,9 @@ function computer(){
 	utterances[1][3]="speakers";
 	utterances[2][3]="joystick";
 	utterances[3][3]="touch screen";
-	utterances[4][3]="";
+	utterances[4][3]="extension lead";
 
-	utterances[0][4]=""; 
+	utterances[0][4]="charger"; 
 	utterances[1][4]="";
 	utterances[2][4]="";
 	utterances[3][4]="";

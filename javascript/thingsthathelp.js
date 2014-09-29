@@ -37,7 +37,7 @@ function thingsthathelp(){
 	utterances[1][4]="ecu";
 	utterances[2][4]="";
 	utterances[3][4]="";
-	utterances[4][4]="";
+	utterances[4][4]="charger";
 
 	document.main.src="images/thingsthathelp.jpg";
 }

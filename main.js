@@ -31,7 +31,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/aboutme.png";
+	document.main.src="images/aboutme.jpg";
 }
 
 function aboutyou(){
@@ -74,7 +74,7 @@ function aboutyou(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/aboutyou.png";
+	document.main.src="images/aboutyou.jpg";
 }
 
 function action(){
@@ -117,7 +117,7 @@ function action(){
 	utterances[3][4]="close";
 	links[4][4]="moreaction";
 
-	document.main.src="images/action.png";
+	document.main.src="images/action.jpg";
 }
 
 function alcohol(){
@@ -187,7 +187,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/animals.png";
+	document.main.src="images/animals.jpg";
 }
 
 function artthings(){
@@ -222,7 +222,7 @@ reset();
 	utterances[3][4]="";
 	links[4][4]="materials";
 
-	document.main.src="images/artthings.png";
+	document.main.src="images/artthings.jpg";
 }
 
 function birds(){
@@ -257,7 +257,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/birds.png";
+	document.main.src="images/birds.jpg";
 }
 
 function blank(){
@@ -381,7 +381,7 @@ function chatting(){
 	utterances[3][4]="ouch ";
 	utterances[4][4]="so";
 
-	document.main.src="images/chatting.png";
+	document.main.src="images/chatting.jpg";
 }
 
 function christmas(){
@@ -424,7 +424,7 @@ function christmas(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/christmas.png";
+	document.main.src="images/christmas.jpg";
 }
 
 function clothes(){
@@ -459,7 +459,7 @@ reset();
 	utterances[3][4]="boxer shorts";
 	utterances[4][4]="pants";
 
-	document.main.src="images/clothes.png";
+	document.main.src="images/clothes.jpg";
 }
 
 function colour(){
@@ -494,7 +494,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="silver";
 
-	document.main.src="images/colour.png";
+	document.main.src="images/colour.jpg";
 }
 
 function commonthings(){
@@ -529,7 +529,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="charger";
 
-	document.main.src="images/commonthings.png";
+	document.main.src="images/commonthings.jpg";
 }
 
 function computer(){
@@ -572,7 +572,7 @@ function computer(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/computer.png";
+	document.main.src="images/computer.jpg";
 }
 
 function cookingwords(){
@@ -615,7 +615,7 @@ function cookingwords(){
 	links[3][4]="kitchenequipment";
 	utterances[4][4]="don't burn it!";
 
-	document.main.src="images/cookingwords.png";
+	document.main.src="images/cookingwords.jpg";
 }
 
 function days(){
@@ -658,7 +658,7 @@ function days(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/days.png";
+	document.main.src="images/days.jpg";
 }
 
 function describe(){
@@ -701,7 +701,7 @@ function describe(){
 	utterances[3][4]="idea";
 	utterances[4][4]="favorite";
 
-	document.main.src="images/describe.png";
+	document.main.src="images/describe.jpg";
 }
 
 function drinks(){
@@ -783,7 +783,7 @@ reset();
 	utterances[3][4]="previous track";
 	utterances[4][4]="next track";
 
-	document.main.src="images/dvd.png";
+	document.main.src="images/dvd.jpg";
 }
 
 function educationstaff(){
@@ -826,7 +826,7 @@ function educationstaff(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/educationstaff.png";
+	document.main.src="images/educationstaff.jpg";
 }
 
 function family(){
@@ -869,7 +869,7 @@ function family(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/family.png";
+	document.main.src="images/family.jpg";
 }
 
 function farmanimals(){
@@ -904,7 +904,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/farmanimals.png";
+	document.main.src="images/farmanimals.jpg";
 }
 
 function fastfood(){
@@ -992,7 +992,7 @@ function feelings(){
 	utterances[3][4]="scared";
 	utterances[4][4]="confused";
 
-	document.main.src="images/feelings.png";
+	document.main.src="images/feelings.jpg";
 }
 
 function fizzydrinks(){
@@ -1174,7 +1174,7 @@ function foodchat(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/foodchat.png";
+	document.main.src="images/foodchat.jpg";
 }
 
 function friends(){
@@ -1217,7 +1217,7 @@ function friends(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/friends.png";
+	document.main.src="images/friends.jpg";
 }
 
 function fruit(){
@@ -1298,7 +1298,7 @@ reset();
 	utterances[3][4]="chair";
 	utterances[4][4]="sheets";
 
-	document.main.src="images/furniture.png";
+	document.main.src="images/furniture.jpg";
 }
 
 function gardening(){
@@ -1333,7 +1333,7 @@ reset();
 	utterances[3][4]="rake";
 	utterances[4][4]="trowel";
 
-	document.main.src="images/gardening.png";
+	document.main.src="images/gardening.jpg";
 }
 
 function health(){
@@ -1369,7 +1369,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/health.png";
+	document.main.src="images/health.jpg";
 }
 
 function insects(){
@@ -1404,7 +1404,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/insects.png";
+	document.main.src="images/insects.jpg";
 }
 
 function job(){
@@ -1447,7 +1447,7 @@ function job(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/job.png";
+	document.main.src="images/job.jpg";
 }
 
 function juice(){
@@ -1561,7 +1561,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/leisure.png";
+	document.main.src="images/leisure.jpg";
 }
 
 function littlewords(){
@@ -1604,7 +1604,7 @@ function littlewords(){
 	utterances[3][4]="at";
 	utterances[4][4]="the";
 
-	document.main.src="images/littlewords.png";
+	document.main.src="images/littlewords.jpg";
 }
 function lunch(){
 	var i,j
@@ -1684,7 +1684,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/materials.png";
+	document.main.src="images/materials.jpg";
 }
 
 function meals(){
@@ -1855,7 +1855,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/money.png";
+	document.main.src="images/money.jpg";
 }
 
 function months(){
@@ -1898,7 +1898,7 @@ function months(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/months.png";
+	document.main.src="images/months.jpg";
 }
 
 function moreaction(){
@@ -1937,11 +1937,11 @@ function moreaction(){
 
 	utterances[0][4]="win"; 
 	utterances[1][4]="lose";
-	utterances[2][4]="";
-	utterances[3][4]="";
-	utterances[4][4]="";
+	utterances[2][4]="finish";
+	utterances[3][4]="need";
+	links[4][4]="action";
 
-	document.main.src="images/moreaction.png";
+	document.main.src="images/moreaction.jpg";
 }
 
 function mp3(){
@@ -1976,7 +1976,7 @@ reset();
 	utterances[3][4]="previous track";
 	utterances[4][4]="next track";
 
-	document.main.src="images/mp3.png";
+	document.main.src="images/mp3.jpg";
 }
 
 function myday(){
@@ -2019,7 +2019,7 @@ function myday(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/myday.png";
+	document.main.src="images/myday.jpg";
 }
 
 function mystories(){
@@ -2062,7 +2062,7 @@ function mystories(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/mystories.png";
+	document.main.src="images/mystories.jpg";
 }
 
 function numbers(){
@@ -2105,7 +2105,7 @@ function numbers(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/numbers.png";
+	document.main.src="images/numbers.jpg";
 }
 
 function office(){
@@ -2140,7 +2140,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/office.png";
+	document.main.src="images/office.jpg";
 }
 
 function opposites(){
@@ -2183,7 +2183,7 @@ function opposites(){
 	utterances[3][4]="clean";
 	utterances[4][4]="dirty";
 
-	document.main.src="images/opposites.png";
+	document.main.src="images/opposites.jpg";
 }
 
 function outside(){
@@ -2226,7 +2226,7 @@ function outside(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/outside.png";
+	document.main.src="images/outside.jpg";
 }
 
 function page1(){
@@ -2305,7 +2305,7 @@ function parts(){
 	utterances[3][4]="toes";
 	links[4][4]="privateparts";
 
-	document.main.src="images/parts.png";
+	document.main.src="images/parts.jpg";
 }
 
 function people(){
@@ -2348,7 +2348,7 @@ function people(){
 	utterances[3][4]="she";
 	links[4][4]="family";
 
-	document.main.src="images/people.png";
+	document.main.src="images/people.jpg";
 }
 
 
@@ -2385,7 +2385,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/personalcare.png";
+	document.main.src="images/personalcare.jpg";
 }
 
 function petcare(){
@@ -2420,7 +2420,7 @@ reset();
 	utterances[3][4]="walk the dog";
 	utterances[4][4]="cage";
 
-	document.main.src="images/petcare.png";
+	document.main.src="images/petcare.jpg";
 }
 
 function pets(){
@@ -2455,7 +2455,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/pets.png";
+	document.main.src="images/pets.jpg";
 }
 
 function picture(){
@@ -2490,7 +2490,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/picture.png";
+	document.main.src="images/picture.jpg";
 }
 
 function pictures(){
@@ -2525,7 +2525,7 @@ reset();
 	links[3][4]="picture";
 	links[4][4]="picture";
 
-	document.main.src="images/pictures.png";
+	document.main.src="images/pictures.jpg";
 }
 
 function pint(){
@@ -2612,7 +2612,7 @@ function places(){
 	utterances[3][4]="cinema";
 	utterances[4][4]="";
 
-	document.main.src="images/places.png";
+	document.main.src="images/places.jpg";
 }
 
 function positionwords(){
@@ -2655,7 +2655,7 @@ function positionwords(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/positionwords.png";
+	document.main.src="images/positionwords.jpg";
 }
 
 function privateparts(){
@@ -2698,7 +2698,7 @@ function privateparts(){
 	utterances[3][4]="self pleasure";
 	utterances[4][4]="kiss";
 
-	document.main.src="images/privateparts.png";
+	document.main.src="images/privateparts.jpg";
 }
 
 function questions(){
@@ -2741,7 +2741,7 @@ function questions(){
 	utterances[3][4]="What's next?";
 	utterances[4][4]="What's that?";
 
-	document.main.src="images/questions.png";
+	document.main.src="images/questions.jpg";
 }
 
 function salad(){
@@ -2872,7 +2872,7 @@ function scwfriends(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/scwfriends.png";
+	document.main.src="images/scwfriends.jpg";
 }
 
 function shapes(){
@@ -2907,7 +2907,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/shapes.png";
+	document.main.src="images/shapes.jpg";
 }
 
 function shops(){
@@ -2950,7 +2950,7 @@ function shops(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/shops.png";
+	document.main.src="images/shops.jpg";
 }
 
 function snack(){
@@ -3041,7 +3041,7 @@ function specialdays(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/specialdays.png";
+	document.main.src="images/specialdays.jpg";
 }
 
 function spelling(){
@@ -3084,7 +3084,7 @@ function spelling(){
 	utterances[3][4]="shift";
 	utterances[4][4]="?";
 
-	document.main.src="images/spelling.png";
+	document.main.src="images/spelling.jpg";
 }
 
 function spelling2(){
@@ -3127,7 +3127,7 @@ function spelling2(){
 	utterances[3][4]="shift";
 	utterances[4][4]="!";
 
-	document.main.src="images/spelling2.png";
+	document.main.src="images/spelling2.jpg";
 }
 
 function sports(){
@@ -3162,7 +3162,7 @@ reset();
 	utterances[3][4]="judo";
 	utterances[4][4]="";
 
-	document.main.src="images/sports.png";
+	document.main.src="images/sports.jpg";
 }
 
 function supportstaff(){
@@ -3205,7 +3205,7 @@ function supportstaff(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/supportstaff.png";
+	document.main.src="images/supportstaff.jpg";
 }
 
 function things(){
@@ -3248,7 +3248,7 @@ function things(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/things.png";
+	document.main.src="images/things.jpg";
 }
 
 function thingsthathelp(){
@@ -3291,7 +3291,7 @@ function thingsthathelp(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/thingsthathelp.png";
+	document.main.src="images/thingsthathelp.jpg";
 }
 
 function time(){
@@ -3334,7 +3334,7 @@ function time(){
 	utterances[3][4]="before";
 	utterances[4][4]="after";
 
-	document.main.src="images/time.png";
+	document.main.src="images/time.jpg";
 }
 
 function toiletries(){
@@ -3377,7 +3377,7 @@ function toiletries(){
 	utterances[3][4]="hair spray";
 	utterances[4][4]="hair dye";
 
-	document.main.src="images/toiletries.png";
+	document.main.src="images/toiletries.jpg";
 }
 
 function tools(){
@@ -3412,7 +3412,7 @@ reset();
 	utterances[3][4]="";
 	links[4][4]="materials";
 
-	document.main.src="images/tools.png";
+	document.main.src="images/tools.jpg";
 }
 
 function transport(){
@@ -3455,7 +3455,7 @@ function transport(){
 	utterances[3][4]="underground";
 	utterances[4][4]="";
 
-	document.main.src="images/transport.png";
+	document.main.src="images/transport.jpg";
 }
 
 function tv(){
@@ -3490,7 +3490,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/tv.png";
+	document.main.src="images/tv.jpg";
 }
 
 function vegetables(){
@@ -3571,7 +3571,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="to go home";
 
-	document.main.src="images/want.png";
+	document.main.src="images/want.jpg";
 }
 
 function wateranimals(){
@@ -3606,7 +3606,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/wateranimals.png";
+	document.main.src="images/wateranimals.jpg";
 }
 
 function weather(){
@@ -3649,7 +3649,7 @@ function weather(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/weather.png";
+	document.main.src="images/weather.jpg";
 }
 
 function wildanimals(){
@@ -3684,7 +3684,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/wildanimals.png";
+	document.main.src="images/wildanimals.jpg";
 }
 
 function wml(){
@@ -3727,5 +3727,5 @@ function wml(){
 	utterances[3][4]="burp!";
 	utterances[4][4]="fart!";
 
-	document.main.src="images/wml.png";
+	document.main.src="images/wml.jpg";
 }
