@@ -41,6 +41,6 @@ function milkshake(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/milkshake.png";
+	document.main.src="images/milkshake.jpg";
 
 }

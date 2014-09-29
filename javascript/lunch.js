@@ -40,6 +40,6 @@ function lunch(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/lunch.png";
+	document.main.src="images/lunch.jpg";
 
 }

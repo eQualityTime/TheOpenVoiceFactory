@@ -41,6 +41,6 @@ function food(){
 	links[3][4]="foodchat";
 	utterances[4][4]="favourite food";
 
-	document.main.src="images/food.png";
+	document.main.src="images/food.jpg";
 
 }

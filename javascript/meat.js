@@ -40,5 +40,5 @@ function meat(){
 	utterances[2][4]="";
 	utterances[3][4]="";
 	utterances[4][4]="";
-	document.main.src="images/meat.png";
+	document.main.src="images/meat.jpg";
 }

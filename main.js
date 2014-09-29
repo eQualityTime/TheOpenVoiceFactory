@@ -1084,7 +1084,7 @@ function flavour(){
 	utterances[4][4]="blackberry";
 
 
-	document.main.src="images/flavour.png";
+	document.main.src="images/flavour.jpg";
 
 }
 

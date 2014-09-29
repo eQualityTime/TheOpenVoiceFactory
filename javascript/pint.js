@@ -40,5 +40,5 @@ function pint(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/pint.png";
+	document.main.src="images/pint.jpg";
 }
