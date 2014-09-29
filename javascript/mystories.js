@@ -39,5 +39,5 @@ function mystories(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/mystories.png";
+	document.main.src="images/mystories.jpg";
 }

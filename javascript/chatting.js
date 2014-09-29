@@ -39,5 +39,5 @@ function chatting(){
 	utterances[3][4]="ouch ";
 	utterances[4][4]="so";
 
-	document.main.src="images/chatting.png";
+	document.main.src="images/chatting.jpg";
 }

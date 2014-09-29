@@ -39,5 +39,5 @@ function things(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/things.png";
+	document.main.src="images/things.jpg";
 }

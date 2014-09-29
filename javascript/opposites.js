@@ -39,5 +39,5 @@ function opposites(){
 	utterances[3][4]="clean";
 	utterances[4][4]="dirty";
 
-	document.main.src="images/opposites.png";
+	document.main.src="images/opposites.jpg";
 }

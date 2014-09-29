@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="charger";
 
-	document.main.src="images/commonthings.png";
+	document.main.src="images/commonthings.jpg";
 }

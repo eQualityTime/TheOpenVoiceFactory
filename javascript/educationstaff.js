@@ -39,5 +39,5 @@ function educationstaff(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/educationstaff.png";
+	document.main.src="images/educationstaff.jpg";
 }

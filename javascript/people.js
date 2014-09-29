@@ -39,6 +39,6 @@ function people(){
 	utterances[3][4]="she";
 	links[4][4]="family";
 
-	document.main.src="images/people.png";
+	document.main.src="images/people.jpg";
 }
 

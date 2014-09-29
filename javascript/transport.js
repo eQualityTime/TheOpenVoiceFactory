@@ -39,5 +39,5 @@ function transport(){
 	utterances[3][4]="underground";
 	utterances[4][4]="";
 
-	document.main.src="images/transport.png";
+	document.main.src="images/transport.jpg";
 }

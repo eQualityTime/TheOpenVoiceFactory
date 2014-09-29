@@ -35,9 +35,9 @@ function moreaction(){
 
 	utterances[0][4]="win"; 
 	utterances[1][4]="lose";
-	utterances[2][4]="";
-	utterances[3][4]="";
-	utterances[4][4]="";
+	utterances[2][4]="finish";
+	utterances[3][4]="need";
+	links[4][4]="action";
 
-	document.main.src="images/moreaction.png";
+	document.main.src="images/moreaction.jpg";
 }

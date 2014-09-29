@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/juice.png";
+	document.main.src="images/juice.js";
 }

@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="rake";
 	utterances[4][4]="trowel";
 
-	document.main.src="images/gardening.png";
+	document.main.src="images/gardening.jpg";
 }

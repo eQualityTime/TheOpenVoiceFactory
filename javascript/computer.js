@@ -39,5 +39,5 @@ function computer(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/computer.png";
+	document.main.src="images/computer.jpg";
 }

@@ -39,5 +39,5 @@ function supportstaff(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/supportstaff.png";
+	document.main.src="images/supportstaff.jpg";
 }

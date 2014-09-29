@@ -39,5 +39,5 @@ function cookingwords(){
 	links[3][4]="kitchenequipment";
 	utterances[4][4]="don't burn it!";
 
-	document.main.src="images/cookingwords.png";
+	document.main.src="images/cookingwords.jpg";
 }

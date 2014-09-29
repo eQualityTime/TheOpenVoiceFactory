@@ -39,5 +39,5 @@ function action(){
 	utterances[3][4]="close";
 	links[4][4]="moreaction";
 
-	document.main.src="images/action.png";
+	document.main.src="images/action.jpg";
 }

@@ -39,5 +39,5 @@ function numbers(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/numbers.png";
+	document.main.src="images/numbers.jpg";
 }

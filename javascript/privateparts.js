@@ -39,5 +39,5 @@ function privateparts(){
 	utterances[3][4]="self pleasure";
 	utterances[4][4]="kiss";
 
-	document.main.src="images/privateparts.png";
+	document.main.src="images/privateparts.jpg";
 }

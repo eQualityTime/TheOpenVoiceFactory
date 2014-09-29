@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="previous track";
 	utterances[4][4]="next track";
 
-	document.main.src="images/mp3.png";
+	document.main.src="images/mp3.jpg";
 }

@@ -31,5 +31,5 @@ reset();
 	links[3][4]="picture";
 	links[4][4]="picture";
 
-	document.main.src="images/pictures.png";
+	document.main.src="images/pictures.jpg";
 }

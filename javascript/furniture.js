@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="chair";
 	utterances[4][4]="sheets";
 
-	document.main.src="images/furniture.png";
+	document.main.src="images/furniture.jpg";
 }

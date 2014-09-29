@@ -39,5 +39,5 @@ function family(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/family.png";
+	document.main.src="images/family.jpg";
 }

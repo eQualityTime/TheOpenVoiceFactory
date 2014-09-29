@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="boxer shorts";
 	utterances[4][4]="pants";
 
-	document.main.src="images/clothes.png";
+	document.main.src="images/clothes.jpg";
 }

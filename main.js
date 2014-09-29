@@ -152,7 +152,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/alcohol.png";
+	document.main.src="images/alcohol.jpg";
 }
 
 function animals(){
@@ -949,7 +949,7 @@ function fastfood(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/fastfood.png";
+	document.main.src="images/fastfood.jpg";
 }
 
 function feelings(){
@@ -1130,7 +1130,7 @@ function food(){
 	links[3][4]="foodchat";
 	utterances[4][4]="favourite food";
 
-	document.main.src="images/food.png";
+	document.main.src="images/food.jpg";
 
 }
 
@@ -1482,7 +1482,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/juice.png";
+	document.main.src="images/juice.js";
 }
 
 function kitchenequipment(){
@@ -1525,7 +1525,7 @@ function kitchenequipment(){
 	utterances[3][4]="grater";
 	utterances[4][4]="";
 
-	document.main.src="images/kitchenequipment.png";
+	document.main.src="images/kitchenequipment.jpg";
 }
 
 function leisure(){
@@ -1648,7 +1648,7 @@ function lunch(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/lunch.png";
+	document.main.src="images/lunch.jpg";
 
 }
 
@@ -1729,7 +1729,7 @@ function meals(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/meals.png";
+	document.main.src="images/meals.jpg";
 
 }
 
@@ -1774,7 +1774,7 @@ function meat(){
 	utterances[2][4]="";
 	utterances[3][4]="";
 	utterances[4][4]="";
-	document.main.src="images/meat.png";
+	document.main.src="images/meat.jpg";
 }
 
 function milkshake(){
@@ -1819,7 +1819,7 @@ function milkshake(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/milkshake.png";
+	document.main.src="images/milkshake.jpg";
 
 }
 
@@ -2569,7 +2569,7 @@ function pint(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/pint.png";
+	document.main.src="images/pint.jpg";
 }
 
 function places(){
@@ -2784,7 +2784,7 @@ function salad(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/salad.png";
+	document.main.src="images/salad.jpg";
 }
 
 function sauces(){
@@ -2829,7 +2829,7 @@ function sauces(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/sauces.png";
+	document.main.src="images/sauces.jpg";
 }
 
 function scwfriends(){
@@ -2998,7 +2998,7 @@ function snack(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/snack.png";
+	document.main.src="images/snack.jpg";
 }
 
 function specialdays(){

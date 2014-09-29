@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/office.png";
+	document.main.src="images/office.jpg";
 }

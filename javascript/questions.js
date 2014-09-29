@@ -39,5 +39,5 @@ function questions(){
 	utterances[3][4]="What's next?";
 	utterances[4][4]="What's that?";
 
-	document.main.src="images/questions.png";
+	document.main.src="images/questions.jpg";
 }

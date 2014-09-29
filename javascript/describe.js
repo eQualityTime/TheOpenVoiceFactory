@@ -39,5 +39,5 @@ function describe(){
 	utterances[3][4]="idea";
 	utterances[4][4]="favorite";
 
-	document.main.src="images/describe.png";
+	document.main.src="images/describe.jpg";
 }

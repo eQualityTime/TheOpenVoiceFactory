@@ -39,5 +39,5 @@ function outside(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/outside.png";
+	document.main.src="images/outside.jpg";
 }

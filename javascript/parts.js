@@ -39,5 +39,5 @@ function parts(){
 	utterances[3][4]="toes";
 	links[4][4]="privateparts";
 
-	document.main.src="images/parts.png";
+	document.main.src="images/parts.jpg";
 }

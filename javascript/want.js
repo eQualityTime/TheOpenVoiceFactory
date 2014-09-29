@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="to go home";
 
-	document.main.src="images/want.png";
+	document.main.src="images/want.jpg";
 }

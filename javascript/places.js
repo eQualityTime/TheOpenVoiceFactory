@@ -39,5 +39,5 @@ function places(){
 	utterances[3][4]="cinema";
 	utterances[4][4]="";
 
-	document.main.src="images/places.png";
+	document.main.src="images/places.jpg";
 }

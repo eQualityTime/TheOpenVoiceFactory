@@ -39,5 +39,5 @@ function littlewords(){
 	utterances[3][4]="at";
 	utterances[4][4]="the";
 
-	document.main.src="images/littlewords.png";
+	document.main.src="images/littlewords.jpg";
 }

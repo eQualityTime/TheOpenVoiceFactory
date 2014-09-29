@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="silver";
 
-	document.main.src="images/colour.png";
+	document.main.src="images/colour.jpg";
 }

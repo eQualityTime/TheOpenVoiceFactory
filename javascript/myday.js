@@ -39,5 +39,5 @@ function myday(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/myday.png";
+	document.main.src="images/myday.jpg";
 }

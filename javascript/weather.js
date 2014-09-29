@@ -39,5 +39,5 @@ function weather(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/weather.png";
+	document.main.src="images/weather.jpg";
 }

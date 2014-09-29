@@ -39,5 +39,5 @@ function days(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/days.png";
+	document.main.src="images/days.jpg";
 }

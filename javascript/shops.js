@@ -39,5 +39,5 @@ function shops(){
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/shops.png";
+	document.main.src="images/shops.jpg";
 }

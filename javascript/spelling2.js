@@ -39,5 +39,5 @@ function spelling2(){
 	utterances[3][4]="shift";
 	utterances[4][4]="!";
 
-	document.main.src="images/spelling2.png";
+	document.main.src="images/spelling2.jpg";
 }

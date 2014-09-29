@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="";
 	links[4][4]="materials";
 
-	document.main.src="images/artthings.png";
+	document.main.src="images/artthings.jpg";
 }

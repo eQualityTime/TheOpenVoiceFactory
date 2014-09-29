@@ -31,5 +31,5 @@ reset();
 	utterances[3][4]="walk the dog";
 	utterances[4][4]="cage";
 
-	document.main.src="images/petcare.png";
+	document.main.src="images/petcare.jpg";
 }

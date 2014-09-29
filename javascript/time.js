@@ -39,5 +39,5 @@ function time(){
 	utterances[3][4]="before";
 	utterances[4][4]="after";
 
-	document.main.src="images/time.png";
+	document.main.src="images/time.jpg";
 }

@@ -39,5 +39,5 @@ function kitchenequipment(){
 	utterances[3][4]="grater";
 	utterances[4][4]="";
 
-	document.main.src="images/kitchenequipment.png";
+	document.main.src="images/kitchenequipment.jpg";
 }

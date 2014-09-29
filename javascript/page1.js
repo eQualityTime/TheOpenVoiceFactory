@@ -31,6 +31,6 @@ utterances[0][0]="yes ";
 	links[3][4]="leisure";
 	links[4][4]="deleteword";
 
-	document.main.src="images/page1.png";
+	document.main.src="images/page1.jpg";
 
 }
