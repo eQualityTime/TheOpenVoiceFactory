@@ -1372,6 +1372,41 @@ reset();
 	document.main.src="images/health.jpg";
 }
 
+function home(){
+reset();
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
+
+	links[0][1]="1";
+	utterances[1][1]="home";
+	utterances[2][1]="cellar";
+	utterances[3][1]="dining room";
+	utterances[4][1]="hall";
+
+	utterances[0][2]="attic";
+	utterances[1][2]="bathroom";
+	utterances[2][2]="lounge";
+	utterances[3][2]="study";
+	utterances[4][2]="bedroom";
+
+	utterances[0][3]="kitchen";
+	utterances[1][3]="my room";
+	utterances[2][3]="utility room";
+	utterances[3][3]="play room";
+	utterances[4][3]="";
+
+	utterances[0][4]="up stairs"; 
+	utterances[1][4]="down staris";
+	utterances[2][4]="stairs";
+	utterances[3][4]="office";
+	utterances[4][4]="";
+
+	document.main.src="images/home.jpg";
+}
+
 function insects(){
 reset();
 	utterances[0][0]="yes";
@@ -1939,7 +1974,7 @@ function moreaction(){
 	utterances[1][4]="lose";
 	utterances[2][4]="finish";
 	utterances[3][4]="need";
-	links[4][4]="action";
+	links[4][4]="yetmoreaction";
 
 	document.main.src="images/moreaction.jpg";
 }
@@ -2063,6 +2098,41 @@ function mystories(){
 	utterances[4][4]="";
 
 	document.main.src="images/mystories.jpg";
+}
+
+function nature(){
+reset();
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
+
+	links[0][1]="1";
+	utterances[1][1]="weather";
+	utterances[2][1]="animals";
+	utterances[3][1]="gardening";
+	utterances[4][1]="";
+
+	utterances[0][2]="";
+	utterances[1][2]="";
+	utterances[2][2]="";
+	utterances[3][2]="";
+	utterances[4][2]="";
+
+	utterances[0][3]="";
+	utterances[1][3]="";
+	utterances[2][3]="";
+	utterances[3][3]="";
+	utterances[4][3]="";
+
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
+
+	document.main.src="images/nature.jpg";
 }
 
 function numbers(){
@@ -2610,7 +2680,7 @@ function places(){
 	utterances[1][4]="pub";
 	utterances[2][4]="post office";
 	utterances[3][4]="cinema";
-	utterances[4][4]="";
+	links[4][4]="home";
 
 	document.main.src="images/places.jpg";
 }
@@ -3227,13 +3297,13 @@ function things(){
 	links[0][1]="1";
 	links[1][1]="commonthings";
 	links[2][1]="artthings";
-	links[3][1]="animals";
+	links[3][1]="health";
 	links[4][1]="parts";
 
 	links[0][2]="clothes";
 	links[1][2]="computer";
 	links[2][2]="furniture";
-	links[3][2]="gardening";
+	links[3][2]="toys";
 	links[4][2]="kitchenequipment";
 
 	links[0][3]="money";
@@ -3244,7 +3314,7 @@ function things(){
 
 	links[0][4]="tools"; 
 	links[1][4]="transport";
-	links[2][4]="weather";
+	links[2][4]="nature";
 	utterances[3][4]="";
 	utterances[4][4]="";
 
@@ -3728,4 +3798,39 @@ function wml(){
 	utterances[4][4]="fart!";
 
 	document.main.src="images/wml.jpg";
+}
+
+function yetmoreaction(){
+reset();
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
+
+	links[0][1]="1";
+	utterances[1][1]="are";
+	utterances[2][1]="buy";
+	utterances[3][1]="can";
+	utterances[4][1]="count";
+
+	utterances[0][2]="find";
+	utterances[1][2]="hear";
+	utterances[2][2]="hold";
+	utterances[3][2]="let";
+	utterances[4][2]="live";
+
+	utterances[0][3]="ride";
+	utterances[1][3]="say";
+	utterances[2][3]="share";
+	utterances[3][3]="walk";
+	utterances[4][3]="was";
+
+	utterances[0][4]="wash"; 
+	utterances[1][4]="write";
+	utterances[2][4]="break";
+	utterances[3][4]="ask";
+	links[4][4]="action";
+
+	document.main.src="images/yetmoreaction.jpg";
 }

@@ -37,7 +37,7 @@ function places(){
 	utterances[1][4]="pub";
 	utterances[2][4]="post office";
 	utterances[3][4]="cinema";
-	utterances[4][4]="";
+	links[4][4]="home";
 
 	document.main.src="images/places.jpg";
 }
