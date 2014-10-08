@@ -16,7 +16,7 @@ reset();
 	utterances[0][2]="boccia";
 	utterances[1][2]="motor sport";
 	utterances[2][2]="golf";
-	utterances[3][2]="fishig";
+	utterances[3][2]="fishing";
 	utterances[4][2]="pool";
 
 	utterances[0][3]="bowling";

@@ -31,7 +31,7 @@ function thingsthathelp(){
 	utterances[1][3]="hearing aid";
 	utterances[2][3]="glasses";
 	utterances[3][3]="medicine";
-	utterances[4][3]="apointment";
+	utterances[4][3]="appointment";
 
 	utterances[0][4]="Toilet chair"; 
 	utterances[1][4]="ecu";

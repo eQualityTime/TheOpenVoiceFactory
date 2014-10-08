@@ -20,7 +20,7 @@ function fruit(){
 	utterances[1][1]="fruit";
 	utterances[2][1]="apple";
 	utterances[3][1]="banana";
-	utterances[4][1]="avacado";
+	utterances[4][1]="avocado";
 
 
 	utterances[0][2]="cranberries";
@@ -38,7 +38,7 @@ function fruit(){
 	utterances[0][4]="pear"; 
 	utterances[1][4]="stawberry";
 	utterances[2][4]="kiwi";
-	utterances[3][4]="cherry chat";
+	utterances[3][4]="cherry";
 	utterances[4][4]="blackberry";
 
 	document.main.src="images/fruit.jpg";

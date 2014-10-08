@@ -33,11 +33,11 @@ function computer(){
 	utterances[3][3]="touch screen";
 	utterances[4][3]="extension lead";
 
-	utterances[0][4]="charger"; 
+	utterances[0][4]=""; 
 	utterances[1][4]="";
 	utterances[2][4]="";
 	utterances[3][4]="";
-	utterances[4][4]="";
+	utterances[4][4]="charger";
 
 	document.main.src="images/computer.jpg";
 }

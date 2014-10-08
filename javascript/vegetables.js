@@ -18,13 +18,13 @@ function vegetables(){
 
 	links[0][1]="1";
 	links[1][1]="vegtables";
-	utterances[2][1]="potato";
+	links[2][1]="potato";
 	utterances[3][1]="aborigine";
 	utterances[4][1]="broccali";
 
 
 	utterances[0][2]="butternut squash";
-	utterances[1][1]="cabbage";
+	utterances[1][2]="cabbage";
 	utterances[2][2]="cauliflower";
 	utterances[3][2]="courgette";
 	utterances[4][2]="carrot";

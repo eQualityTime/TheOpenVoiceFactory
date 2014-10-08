@@ -16,20 +16,20 @@ function questions(){
 	utterances[4][0]="no";
 
 	links[0][1]="1";
-	utterances[1][1]="who";
+	utterances[1][1]="questions";
 	utterances[2][1]="why";
 	utterances[3][1]="when";
 	utterances[4][1]="could";
 
 	utterances[0][2]="what";
-	utterances[1][2]="how";
+	utterances[1][2]="who";
 	utterances[2][2]="where";
 	utterances[3][2]="which";
 	utterances[4][2]="would";
 
-	utterances[0][3]="how much?";
+	utterances[0][3]="how";
 	utterances[1][3]="can I see that?";
-	utterances[2][3]="";
+	utterances[2][3]="how much?";
 	utterances[3][3]="";
 	utterances[4][3]="should";
 

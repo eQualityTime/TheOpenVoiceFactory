@@ -17,7 +17,7 @@ function feelings(){
 
 	links[0][1]="1";
 	utterances[1][1]="feelings";
-	utterances[2][1]="afriad";
+	utterances[2][1]="afraid";
 	utterances[3][1]="nice";
 	utterances[4][1]="busy";
 
@@ -35,7 +35,7 @@ function feelings(){
 
 	utterances[0][4]="hot"; 
 	utterances[1][4]="cold";
-	utterances[2][4]="";
+	utterances[2][4]="bad";
 	utterances[3][4]="scared";
 	utterances[4][4]="confused";
 

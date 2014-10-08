@@ -29,7 +29,7 @@ function sauces(){
 	utterances[3][2]="jam";
 	utterances[4][2]="brown sauce";
 
-	utterances[0][3]="vingar";
+	utterances[0][3]="vinegar";
 	utterances[1][3]="spices";
 	utterances[2][3]="honey";
 	utterances[3][3]="";

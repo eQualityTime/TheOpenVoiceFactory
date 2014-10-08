@@ -28,7 +28,7 @@ function salad(){
 	utterances[4][2]="lettuce";
 
 	utterances[0][3]="beetroot";
-	utterances[1][3]="secret pepper";
+	utterances[1][3]="chili  pepper";
 	utterances[2][3]="";
 	utterances[3][3]="";
 	utterances[4][3]="";

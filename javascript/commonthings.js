@@ -19,7 +19,7 @@ reset();
 	utterances[3][2]="camera";
 	utterances[4][2]="";
 
-	utterances[0][3]="";
+	utterances[0][3]="stuff";
 	utterances[1][3]="part";
 	utterances[2][3]="lot";
 	utterances[3][3]="idea";

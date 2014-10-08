@@ -25,8 +25,8 @@ reset();
 	utterances[3][3]="play room";
 	utterances[4][3]="";
 
-	utterances[0][4]="up stairs"; 
-	utterances[1][4]="down staris";
+	utterances[0][4]="upstairs"; 
+	utterances[1][4]="downstairs";
 	utterances[2][4]="stairs";
 	utterances[3][4]="office";
 	utterances[4][4]="";

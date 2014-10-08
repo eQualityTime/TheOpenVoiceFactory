@@ -39,7 +39,7 @@ function food(){
 	utterances[1][4]="with";
 	utterances[2][4]="and";
 	links[3][4]="foodchat";
-	utterances[4][4]="favourite food";
+	utterances[4][4]="favorite food";
 
 	document.main.src="images/food.jpg";
 

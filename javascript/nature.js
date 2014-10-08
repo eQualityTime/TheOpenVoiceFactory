@@ -8,9 +8,9 @@ reset();
 	utterances[4][0]="no";
 
 	links[0][1]="1";
-	utterances[1][1]="weather";
-	utterances[2][1]="animals";
-	utterances[3][1]="gardening";
+	links[1][1]="weather";
+	links[2][1]="animals";
+	links[3][1]="gardening";
 	utterances[4][1]="";
 
 	utterances[0][2]="";

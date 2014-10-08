@@ -88,8 +88,12 @@ function reset(){
 
 function add(i,j) {
 	if(utterances[i][j]!="link")
-	{
-		document.myform.outputtext.value += " "+ utterances[i][j];
+	{ 
+		if(utterances[i][j].length==1){//so that we can spell with the single letter buttons
+			document.myform.outputtext.value += utterances[i][j];
+		}else{
+			document.myform.outputtext.value += " "+ utterances[i][j];
+		}
 	}
 	if(links[i][j]!="blank")
 	{
@@ -192,96 +196,7 @@ var images = new Array()
 		}
 	}
 preload(
-"./images/aboutme.jpg",
-"./images/action.jpg",
-"./images/animals.jpg",
-"./images/artthings.jpg",
-"./images/birds.jpg",
-"./images/breakfast.jpg",
-"./images/chatting.jpg",
-"./images/christmas.jpg",
-"./images/clothes.jpg",
-"./images/colour.jpg",
-"./images/computer.jpg",
-"./images/cookingwords.jpg",
-"./images/days.jpg",
-"./images/describe.jpg",
-"./images/drinks.jpg",
-"./images/dvd.jpg",
-"./images/educationstaff.jpg",
-"./images/family.jpg",
-"./images/farmanimals.jpg",
-"./images/fastfood.jpg",
-"./images/feelings.jpg",
-"./images/fizzydrinks.jpg",
-"./images/food.jpg",
-"./images/foodchat.jpg",
-"./images/friends.jpg",
-"./images/fruit.jpg",
-"./images/furniture.jpg",
-"./images/gardening.jpg",
-"./images/insects.jpg",
-"./images/job.jpg",
-"./images/kitchenequipment.jpg",
-"./images/leisure.jpg",
-"./images/littlewords.jpg",
-"./images/lunch.jpg",
-"./images/materials.jpg",
-"./images/meals.jpg",
-"./images/meat.jpg",
-"./images/milkshake.jpg",
-"./images/money.jpg",
-"./images/months.jpg",
-"./images/moreaction.jpg",
-"./images/mp3.jpg",
-"./images/myday.jpg",
-"./images/mystories.jpg",
-"./images/numbers.jpg",
-"./images/office.jpg",
-"./images/opposites.jpg",
-"./images/outside.jpg",
-"./images/page1 copy.jpg",
-"./images/page1.jpg",
-"./images/parts.jpg",
-"./images/people.jpg",
-"./images/petcare.jpg",
-"./images/pets.jpg",
-"./images/pint.jpg",
-"./images/places.jpg",
-"./images/positionwords.jpg",
-"./images/potato.jpg",
-"./images/privateparts.jpg",
-"./images/questions.jpg",
-"./images/salad.jpg",
-"./images/sauces.jpg",
-"./images/scwfriends.jpg",
-"./images/shapes.jpg",
-"./images/shops.jpg",
-"./images/smoothy.jpg",
-"./images/snack.jpg",
-"./images/specialdays.jpg",
-"./images/spelling.jpg",
-"./images/sports.jpg",
-"./images/supportstaff.jpg",
-"./images/things.jpg",
-"./images/thingsthathelp.jpg",
-"./images/time.jpg",
-"./images/toiletries.jpg",
-"./images/tools.jpg",
-"./images/toys.jpg",
-"./images/transport.jpg",
-"./images/tv.jpg",
-"./images/vegetables.jpg",
-"./images/want.jpg",
-"./images/wateranimals.jpg",
-"./images/weather.jpg",
-"./images/home.jpg",
-"./images/wildanimals.jpg",
-"./images/nature.jpg",
-"./images/phone.jpg",
-"./images/yetmoreaction.jpg",
-"./images/wml.jpg"
-		)
+"./images/aboutme.jpg", "./images/action.jpg", "./images/animals.jpg", "./images/artthings.jpg", "./images/birds.jpg", "./images/breakfast.jpg", "./images/chatting.jpg", "./images/christmas.jpg", "./images/clothes.jpg", "./images/colour.jpg", "./images/computer.jpg", "./images/cookingwords.jpg", "./images/days.jpg", "./images/describe.jpg", "./images/drinks.jpg", "./images/dvd.jpg", "./images/educationstaff.jpg", "./images/family.jpg", "./images/farmanimals.jpg", "./images/fastfood.jpg", "./images/feelings.jpg", "./images/fizzydrinks.jpg", "./images/food.jpg", "./images/foodchat.jpg", "./images/friends.jpg", "./images/fruit.jpg", "./images/furniture.jpg", "./images/gardening.jpg", "./images/insects.jpg", "./images/job.jpg", "./images/kitchenequipment.jpg", "./images/leisure.jpg", "./images/littlewords.jpg", "./images/lunch.jpg", "./images/materials.jpg", "./images/meals.jpg", "./images/meat.jpg", "./images/milkshake.jpg", "./images/money.jpg", "./images/months.jpg", "./images/moreaction.jpg", "./images/mp3.jpg", "./images/myday.jpg", "./images/mystories.jpg", "./images/numbers.jpg", "./images/office.jpg", "./images/opposites.jpg", "./images/outside.jpg", "./images/page1 copy.jpg", "./images/page1.jpg", "./images/parts.jpg", "./images/people.jpg", "./images/petcare.jpg", "./images/pets.jpg", "./images/pint.jpg", "./images/places.jpg", "./images/positionwords.jpg", "./images/potato.jpg", "./images/privateparts.jpg", "./images/questions.jpg", "./images/salad.jpg", "./images/sauces.jpg", "./images/scwfriends.jpg", "./images/shapes.jpg", "./images/shops.jpg", "./images/smoothy.jpg", "./images/snack.jpg", "./images/specialdays.jpg", "./images/spelling.jpg", "./images/sports.jpg", "./images/supportstaff.jpg", "./images/things.jpg", "./images/thingsthathelp.jpg", "./images/time.jpg", "./images/toiletries.jpg", "./images/tools.jpg", "./images/toys.jpg", "./images/transport.jpg", "./images/tv.jpg", "./images/vegetables.jpg", "./images/want.jpg", "./images/wateranimals.jpg", "./images/weather.jpg", "./images/home.jpg", "./images/wildanimals.jpg", "./images/nature.jpg", "./images/phone.jpg", "./images/yetmoreaction.jpg", "./images/wml.jpg")
 		</script>
 		</div>
 		<script>

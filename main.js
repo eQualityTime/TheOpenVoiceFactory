@@ -323,7 +323,7 @@ function breakfast(){
 	utterances[1][2]="butter";
 	utterances[2][2]="croissant";
 	utterances[3][2]="jam";
-	utterances[4][2]="muesili";
+	utterances[4][2]="muesli";
 
 	utterances[0][3]="boiled egg";
 	utterances[1][3]="fried egg";
@@ -454,7 +454,7 @@ reset();
 	utterances[4][3]="gloves";
 
 	utterances[0][4]="dressing gown"; 
-	utterances[1][4]="pjamas";
+	utterances[1][4]="pyjamas";
 	utterances[2][4]="slippers";
 	utterances[3][4]="boxer shorts";
 	utterances[4][4]="pants";
@@ -517,7 +517,7 @@ reset();
 	utterances[3][2]="camera";
 	utterances[4][2]="";
 
-	utterances[0][3]="";
+	utterances[0][3]="stuff";
 	utterances[1][3]="part";
 	utterances[2][3]="lot";
 	utterances[3][3]="idea";
@@ -566,11 +566,11 @@ function computer(){
 	utterances[3][3]="touch screen";
 	utterances[4][3]="extension lead";
 
-	utterances[0][4]="charger"; 
+	utterances[0][4]=""; 
 	utterances[1][4]="";
 	utterances[2][4]="";
 	utterances[3][4]="";
-	utterances[4][4]="";
+	utterances[4][4]="charger";
 
 	document.main.src="images/computer.jpg";
 }
@@ -683,14 +683,14 @@ function describe(){
 	links[3][1]="shapes";
 	links[4][1]="opposites";
 
-	utterances[0][2]="pretty";
+	utterances[0][2]="all";
 	utterances[1][2]="more";
 	utterances[2][2]="nice";
 	utterances[3][2]="wrong";
 	utterances[4][2]="right";
 
 	utterances[0][3]="finished";
-	utterances[1][3]="all";
+	utterances[1][3]="pretty";
 	utterances[2][3]="mean";
 	utterances[3][3]="different";
 	utterances[4][3]="same";
@@ -735,7 +735,7 @@ function drinks(){
 	utterances[4][2]="";
 
 	links[0][3]="juice";
-	utterances[1][3]="smoothy";
+	utterances[1][3]="smoothie";
 	links[1][3]="flavour";
 	links[2][3]="milkshake";
 	links[3][3]="fizzydrinks";
@@ -970,7 +970,7 @@ function feelings(){
 
 	links[0][1]="1";
 	utterances[1][1]="feelings";
-	utterances[2][1]="afriad";
+	utterances[2][1]="afraid";
 	utterances[3][1]="nice";
 	utterances[4][1]="busy";
 
@@ -988,7 +988,7 @@ function feelings(){
 
 	utterances[0][4]="hot"; 
 	utterances[1][4]="cold";
-	utterances[2][4]="";
+	utterances[2][4]="bad";
 	utterances[3][4]="scared";
 	utterances[4][4]="confused";
 
@@ -1128,7 +1128,7 @@ function food(){
 	utterances[1][4]="with";
 	utterances[2][4]="and";
 	links[3][4]="foodchat";
-	utterances[4][4]="favourite food";
+	utterances[4][4]="favorite food";
 
 	document.main.src="images/food.jpg";
 
@@ -1158,14 +1158,14 @@ function foodchat(){
 
 	utterances[0][2]="Can I have some more?";
 	utterances[1][2]="Can I have a drink?";
-	utterances[2][2]="What's for dinner?";
-	utterances[3][2]="What have you been doing?";
-	utterances[4][2]="eat";
+	utterances[2][2]="wipe my face";
+	utterances[3][2]="please";
+	utterances[4][2]="thank you";
 
-	utterances[0][3]="please";
-	utterances[1][3]="Thank you";
+	utterances[0][3]="What's for dinner?";
+	utterances[1][3]="What have you been doing?";
 	utterances[2][3]="I've had enought";
-	utterances[3][3]="Wipe my face";
+	utterances[3][3]="eat";
 	utterances[4][3]="drink";
 
 	utterances[0][4]="It's too hot"; 
@@ -1241,7 +1241,7 @@ function fruit(){
 	utterances[1][1]="fruit";
 	utterances[2][1]="apple";
 	utterances[3][1]="banana";
-	utterances[4][1]="avacado";
+	utterances[4][1]="avocado";
 
 
 	utterances[0][2]="cranberries";
@@ -1259,7 +1259,7 @@ function fruit(){
 	utterances[0][4]="pear"; 
 	utterances[1][4]="stawberry";
 	utterances[2][4]="kiwi";
-	utterances[3][4]="cherry chat";
+	utterances[3][4]="cherry";
 	utterances[4][4]="blackberry";
 
 	document.main.src="images/fruit.jpg";
@@ -1398,8 +1398,8 @@ reset();
 	utterances[3][3]="play room";
 	utterances[4][3]="";
 
-	utterances[0][4]="up stairs"; 
-	utterances[1][4]="down staris";
+	utterances[0][4]="upstairs"; 
+	utterances[1][4]="downstairs";
 	utterances[2][4]="stairs";
 	utterances[3][4]="office";
 	utterances[4][4]="";
@@ -1517,7 +1517,7 @@ reset();
 	utterances[3][4]="";
 	utterances[4][4]="";
 
-	document.main.src="images/juice.js";
+	document.main.src="images/juice.jpg";
 }
 
 function kitchenequipment(){
@@ -2109,9 +2109,9 @@ reset();
 	utterances[4][0]="no";
 
 	links[0][1]="1";
-	utterances[1][1]="weather";
-	utterances[2][1]="animals";
-	utterances[3][1]="gardening";
+	links[1][1]="weather";
+	links[2][1]="animals";
+	links[3][1]="gardening";
 	utterances[4][1]="";
 
 	utterances[0][2]="";
@@ -2765,6 +2765,41 @@ function positionwords(){
 	document.main.src="images/positionwords.jpg";
 }
 
+function potato(){
+reset();
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
+
+	links[0][1]="1";
+	utterances[1][1]="potato";
+	utterances[2][1]="chips";
+	utterances[3][1]="mashed potato";
+	utterances[4][1]="baked potato";
+
+	utterances[0][2]="sweet potato";
+	utterances[1][2]="";
+	utterances[2][2]="";
+	utterances[3][2]="";
+	utterances[4][2]="";
+
+	utterances[0][3]="";
+	utterances[1][3]="";
+	utterances[2][3]="";
+	utterances[3][3]="potato salad";
+	utterances[4][3]="";
+
+	utterances[0][4]=""; 
+	utterances[1][4]="";
+	utterances[2][4]="";
+	utterances[3][4]="";
+	utterances[4][4]="";
+
+	document.main.src="images/potato.jpg";
+}
+
 function privateparts(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -2825,20 +2860,20 @@ function questions(){
 	utterances[4][0]="no";
 
 	links[0][1]="1";
-	utterances[1][1]="who";
+	utterances[1][1]="questions";
 	utterances[2][1]="why";
 	utterances[3][1]="when";
 	utterances[4][1]="could";
 
 	utterances[0][2]="what";
-	utterances[1][2]="how";
+	utterances[1][2]="who";
 	utterances[2][2]="where";
 	utterances[3][2]="which";
 	utterances[4][2]="would";
 
-	utterances[0][3]="how much?";
+	utterances[0][3]="how";
 	utterances[1][3]="can I see that?";
-	utterances[2][3]="";
+	utterances[2][3]="how much?";
 	utterances[3][3]="";
 	utterances[4][3]="should";
 
@@ -2880,7 +2915,7 @@ function salad(){
 	utterances[4][2]="lettuce";
 
 	utterances[0][3]="beetroot";
-	utterances[1][3]="secret pepper";
+	utterances[1][3]="chili  pepper";
 	utterances[2][3]="";
 	utterances[3][3]="";
 	utterances[4][3]="";
@@ -2924,7 +2959,7 @@ function sauces(){
 	utterances[3][2]="jam";
 	utterances[4][2]="brown sauce";
 
-	utterances[0][3]="vingar";
+	utterances[0][3]="vinegar";
 	utterances[1][3]="spices";
 	utterances[2][3]="honey";
 	utterances[3][3]="";
@@ -3085,9 +3120,9 @@ function snack(){
 	utterances[4][1]="cake";
 
 
-	utterances[0][2]="fruit";
+	utterances[0][2]="custard";
 	utterances[1][2]="cream";
-	utterances[2][2]="custard";
+	links[2][2]="fruit";
 	utterances[3][2]="yoghurt";
 	links[3][2]="flavour";
 	utterances[4][2]="crisps";
@@ -3254,7 +3289,7 @@ reset();
 	utterances[0][2]="boccia";
 	utterances[1][2]="motor sport";
 	utterances[2][2]="golf";
-	utterances[3][2]="fishig";
+	utterances[3][2]="fishing";
 	utterances[4][2]="pool";
 
 	utterances[0][3]="bowling";
@@ -3390,7 +3425,7 @@ function thingsthathelp(){
 	utterances[1][3]="hearing aid";
 	utterances[2][3]="glasses";
 	utterances[3][3]="medicine";
-	utterances[4][3]="apointment";
+	utterances[4][3]="appointment";
 
 	utterances[0][4]="Toilet chair"; 
 	utterances[1][4]="ecu";
@@ -3522,6 +3557,41 @@ reset();
 	document.main.src="images/tools.jpg";
 }
 
+function toys(){
+reset();
+	utterances[0][0]="yes";
+	utterances[1][0]="";
+	utterances[2][0]="";
+	utterances[3][0]="";
+	utterances[4][0]="no";
+
+	links[0][1]="1";
+	utterances[1][1]="toys";
+	utterances[2][1]="trains";
+	utterances[3][1]="cars";
+	utterances[4][1]="dolls";
+
+	utterances[0][2]="bricks";
+	utterances[1][2]="lego";
+	utterances[2][2]="paint";
+	utterances[3][2]="stacker ring";
+	utterances[4][2]="colouring book";
+
+	utterances[0][3]="book";
+	utterances[1][3]="sticker book";
+	utterances[2][3]="kite";
+	utterances[3][3]="teddy";
+	utterances[4][3]="puppet";
+
+	utterances[0][4]="shape puzzle"; 
+	utterances[1][4]="jigsaw";
+	utterances[2][4]="toybox";
+	utterances[3][4]="";
+	utterances[4][4]="";
+
+	document.main.src="images/toys.jpg";
+}
+
 function transport(){
 	var i,j
 		for(j=0;j<5;j++)
@@ -3619,13 +3689,13 @@ function vegetables(){
 
 	links[0][1]="1";
 	links[1][1]="vegtables";
-	utterances[2][1]="potato";
+	links[2][1]="potato";
 	utterances[3][1]="aborigine";
 	utterances[4][1]="broccali";
 
 
 	utterances[0][2]="butternut squash";
-	utterances[1][1]="cabbage";
+	utterances[1][2]="cabbage";
 	utterances[2][2]="cauliflower";
 	utterances[3][2]="courgette";
 	utterances[4][2]="carrot";
@@ -3656,7 +3726,9 @@ reset();
 
 	links[0][1]="1";
 	utterances[1][1]="to go outside";
+	links[1][1]="outside";
 	utterances[2][1]="to call someone";
+	links[2][1]="people";
 	utterances[3][1]="to sit down";
 	utterances[4][1]="to stand up";
 
@@ -3666,11 +3738,13 @@ reset();
 	utterances[3][2]="to have a go";
 	utterances[4][2]="";
 
-        utterances[0][2]="to play";
+        utterances[0][3]="to play";
+        links[0][3]="toys";
 	utterances[1][3]="to listen to something";
 	utterances[2][3]="to go swimming";
 	utterances[3][3]="";
 	utterances[4][3]="to cook something";
+	links[4][3]="food";
 
 	links[0][4]="mystories"; 
 	utterances[1][4]="";

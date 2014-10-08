@@ -26,7 +26,7 @@ reset();
 	utterances[4][3]="gloves";
 
 	utterances[0][4]="dressing gown"; 
-	utterances[1][4]="pjamas";
+	utterances[1][4]="pyjamas";
 	utterances[2][4]="slippers";
 	utterances[3][4]="boxer shorts";
 	utterances[4][4]="pants";

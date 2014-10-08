@@ -23,14 +23,14 @@ function foodchat(){
 
 	utterances[0][2]="Can I have some more?";
 	utterances[1][2]="Can I have a drink?";
-	utterances[2][2]="What's for dinner?";
-	utterances[3][2]="What have you been doing?";
-	utterances[4][2]="eat";
+	utterances[2][2]="wipe my face";
+	utterances[3][2]="please";
+	utterances[4][2]="thank you";
 
-	utterances[0][3]="please";
-	utterances[1][3]="Thank you";
+	utterances[0][3]="What's for dinner?";
+	utterances[1][3]="What have you been doing?";
 	utterances[2][3]="I've had enought";
-	utterances[3][3]="Wipe my face";
+	utterances[3][3]="eat";
 	utterances[4][3]="drink";
 
 	utterances[0][4]="It's too hot"; 

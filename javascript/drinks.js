@@ -30,7 +30,7 @@ function drinks(){
 	utterances[4][2]="";
 
 	links[0][3]="juice";
-	utterances[1][3]="smoothy";
+	utterances[1][3]="smoothie";
 	links[1][3]="flavour";
 	links[2][3]="milkshake";
 	links[3][3]="fizzydrinks";

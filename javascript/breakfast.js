@@ -27,7 +27,7 @@ function breakfast(){
 	utterances[1][2]="butter";
 	utterances[2][2]="croissant";
 	utterances[3][2]="jam";
-	utterances[4][2]="muesili";
+	utterances[4][2]="muesli";
 
 	utterances[0][3]="boiled egg";
 	utterances[1][3]="fried egg";

@@ -24,9 +24,9 @@ function snack(){
 	utterances[4][1]="cake";
 
 
-	utterances[0][2]="fruit";
+	utterances[0][2]="custard";
 	utterances[1][2]="cream";
-	utterances[2][2]="custard";
+	links[2][2]="fruit";
 	utterances[3][2]="yoghurt";
 	links[3][2]="flavour";
 	utterances[4][2]="crisps";
