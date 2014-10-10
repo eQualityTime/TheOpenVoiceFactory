@@ -17,7 +17,7 @@ function foodchat(){
 
 	links[0][1]="1";
 	utterances[1][1]="I like it";
-	utterances[2][1]="It's gross";
+	utterances[2][1]="It's grose";
 	utterances[3][1]="It's spicy";
 	utterances[4][1]="Cut up food";
 
@@ -29,7 +29,7 @@ function foodchat(){
 
 	utterances[0][3]="What's for dinner?";
 	utterances[1][3]="What have you been doing?";
-	utterances[2][3]="I've had enought";
+	utterances[2][3]="I've had enough";
 	utterances[3][3]="eat";
 	utterances[4][3]="drink";
 

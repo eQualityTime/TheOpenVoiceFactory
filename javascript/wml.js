@@ -35,7 +35,7 @@ function wml(){
 
 	utterances[0][4]="don't"; 
 	utterances[1][4]="not";
-	utterances[2][4]="";
+	utterances[2][4]="well";
 	utterances[3][4]="burp!";
 	utterances[4][4]="fart!";
 

@@ -20,7 +20,7 @@ reset();
 	utterances[4][2]="tree";
 
 	utterances[0][3]="hose";
-	utterances[1][3]="seeks";
+	utterances[1][3]="seeds";
 	utterances[2][3]="hedge cutters";
 	utterances[3][3]="plant";
 	utterances[4][3]="hedge";

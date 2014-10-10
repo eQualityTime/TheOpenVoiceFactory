@@ -15,7 +15,7 @@ reset();
 
 	utterances[0][2]="bear";
 	utterances[1][2]="camel";
-	utterances[2][2]="chetah";
+	utterances[2][2]="cheetah";
 	utterances[3][2]="deer";
 	utterances[4][2]="elephant";
 
