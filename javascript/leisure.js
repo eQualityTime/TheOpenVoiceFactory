@@ -27,9 +27,9 @@ reset();
 	utterances[4][3]="volume down";
 
 	links[0][4]="mystories"; 
-	utterances[1][4]="";
-	utterances[2][4]="";
-	utterances[3][4]="";
+	links[1][4]="google";
+	links[2][4]="youtube";
+	links[3][4]="twitter";
 	utterances[4][4]="";
 
 	document.main.src="images/leisure.jpg";

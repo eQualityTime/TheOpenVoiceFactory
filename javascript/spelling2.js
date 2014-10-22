@@ -16,12 +16,12 @@ function spelling2(){
 	utterances[4][0]="no";
 
 	links[0][1]="1";
-	utterances[1][1]="m";
+	utterances[1][1]="n";
 	utterances[2][1]="o";
 	utterances[3][1]="p";
 	utterances[4][1]="q";
 
-	utterances[0][2]="Backspace";
+	links[0][2]="Backspace";
 	utterances[1][2]="r";
 	utterances[2][2]="s";
 	utterances[3][2]="t";

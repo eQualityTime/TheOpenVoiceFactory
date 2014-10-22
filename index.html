@@ -96,6 +96,10 @@ function add(i,j) {
 			//There are two special cases for links - clearing the message window, deleting the last word from the message window. Further special behaviours (volume change and the like) could be added here. 
 			case "clear":  document.myform.reset();break;
 			case "deleteword": var lastIndex =  document.myform.outputtext.value.lastIndexOf(" ");  document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);break;
+			case "Backspace": document.myform.outputtext.value = document.myform.outputtext.value.substring(0, document.myform.outputtext.value.length-1);break;
+			case "google": image(); break;
+			case "youtube": tube(); break;
+			case "twitter": tweet();break;
 			case "1": page1(); break;
 			default: eval(links[i][j]+"()");
 		}

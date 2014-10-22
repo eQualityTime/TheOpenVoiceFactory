@@ -13,7 +13,7 @@ utterances[0][0]="yes ";
 	links[3][1]="questions";
 	links[4][1]="food";
 
-	utterances[0][2]="I";
+	utterances[0][2]=" I";
 	links[1][2]="people";
 	links[2][2]="personalcare";
 	links[3][2]="littlewords";

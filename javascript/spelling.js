@@ -21,7 +21,7 @@ function spelling(){
 	utterances[3][1]="c";
 	utterances[4][1]="d";
 
-	utterances[0][2]="Backspace";
+	links[0][2]="Backspace";
 	utterances[1][2]="e";
 	utterances[2][2]="f";
 	utterances[3][2]="g";

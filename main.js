@@ -971,7 +971,7 @@ function feelings(){
 	links[0][1]="1";
 	utterances[1][1]="feelings";
 	utterances[2][1]="afraid";
-	utterances[3][1]="nice";
+	utterances[3][1]="safe";
 	utterances[4][1]="busy";
 
 	utterances[0][2]="It is";
@@ -1152,7 +1152,7 @@ function foodchat(){
 
 	links[0][1]="1";
 	utterances[1][1]="I like it";
-	utterances[2][1]="It's gross";
+	utterances[2][1]="It's grose";
 	utterances[3][1]="It's spicy";
 	utterances[4][1]="Cut up food";
 
@@ -1164,7 +1164,7 @@ function foodchat(){
 
 	utterances[0][3]="What's for dinner?";
 	utterances[1][3]="What have you been doing?";
-	utterances[2][3]="I've had enought";
+	utterances[2][3]="I've had enough";
 	utterances[3][3]="eat";
 	utterances[4][3]="drink";
 
@@ -1322,7 +1322,7 @@ reset();
 	utterances[4][2]="tree";
 
 	utterances[0][3]="hose";
-	utterances[1][3]="seeks";
+	utterances[1][3]="seeds";
 	utterances[2][3]="hedge cutters";
 	utterances[3][3]="plant";
 	utterances[4][3]="hedge";
@@ -1591,9 +1591,9 @@ reset();
 	utterances[4][3]="volume down";
 
 	links[0][4]="mystories"; 
-	utterances[1][4]="";
-	utterances[2][4]="";
-	utterances[3][4]="";
+	links[1][4]="google";
+	links[2][4]="youtube";
+	links[3][4]="twitter";
 	utterances[4][4]="";
 
 	document.main.src="images/leisure.jpg";
@@ -2313,7 +2313,7 @@ utterances[0][0]="yes ";
 	links[3][1]="questions";
 	links[4][1]="food";
 
-	utterances[0][2]="I";
+	utterances[0][2]=" I";
 	links[1][2]="people";
 	links[2][2]="personalcare";
 	links[3][2]="littlewords";
@@ -3208,7 +3208,7 @@ function spelling(){
 	utterances[3][1]="c";
 	utterances[4][1]="d";
 
-	utterances[0][2]="Backspace";
+	links[0][2]="Backspace";
 	utterances[1][2]="e";
 	utterances[2][2]="f";
 	utterances[3][2]="g";
@@ -3246,12 +3246,12 @@ function spelling2(){
 	utterances[4][0]="no";
 
 	links[0][1]="1";
-	utterances[1][1]="m";
+	utterances[1][1]="n";
 	utterances[2][1]="o";
 	utterances[3][1]="p";
 	utterances[4][1]="q";
 
-	utterances[0][2]="Backspace";
+	links[0][2]="Backspace";
 	utterances[1][2]="r";
 	utterances[2][2]="s";
 	utterances[3][2]="t";
@@ -3849,7 +3849,7 @@ reset();
 
 	utterances[0][2]="bear";
 	utterances[1][2]="camel";
-	utterances[2][2]="chetah";
+	utterances[2][2]="cheetah";
 	utterances[3][2]="deer";
 	utterances[4][2]="elephant";
 
@@ -3904,7 +3904,7 @@ function wml(){
 
 	utterances[0][4]="don't"; 
 	utterances[1][4]="not";
-	utterances[2][4]="";
+	utterances[2][4]="well";
 	utterances[3][4]="burp!";
 	utterances[4][4]="fart!";
 
