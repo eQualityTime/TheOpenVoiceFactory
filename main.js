@@ -308,7 +308,7 @@ function breakfast(){
 	utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
-	utterances[3][0]="yes ";
+	utterances[3][0]="";
 	utterances[4][0]="no";
 
 
@@ -1233,7 +1233,7 @@ function fruit(){
 	utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
-	utterances[3][0]="yes ";
+	utterances[3][0]="";
 	utterances[4][0]="no";
 
 
@@ -2304,7 +2304,7 @@ reset();
 utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
-	utterances[3][0]="yes ";
+	utterances[3][0]="";
 	utterances[4][0]="no";
 
 	utterances[0][1]="hello";
@@ -3683,7 +3683,7 @@ function vegetables(){
 	utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
-	utterances[3][0]="yes ";
+	utterances[3][0]="";
 	utterances[4][0]="no";
 
 

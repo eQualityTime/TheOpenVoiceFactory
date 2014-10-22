@@ -12,7 +12,7 @@ function fruit(){
 	utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
-	utterances[3][0]="yes ";
+	utterances[3][0]="";
 	utterances[4][0]="no";
 
 
