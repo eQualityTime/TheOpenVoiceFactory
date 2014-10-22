@@ -1,14 +1,6 @@
 
 function food(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes ";
 	utterances[1][0]="";
 	utterances[2][0]="";

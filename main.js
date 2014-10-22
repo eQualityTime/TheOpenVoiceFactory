@@ -35,15 +35,7 @@ reset();
 }
 
 function aboutyou(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -78,15 +70,7 @@ function aboutyou(){
 }
 
 function action(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -296,15 +280,7 @@ reset();
 }
 
 function breakfast(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+reset();
 	utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
@@ -342,15 +318,7 @@ function breakfast(){
 }
 
 function chatting(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -385,15 +353,7 @@ function chatting(){
 }
 
 function christmas(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -533,15 +493,7 @@ reset();
 }
 
 function computer(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -576,15 +528,7 @@ function computer(){
 }
 
 function cookingwords(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -619,15 +563,7 @@ function cookingwords(){
 }
 
 function days(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -662,15 +598,7 @@ function days(){
 }
 
 function describe(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -705,15 +633,7 @@ function describe(){
 }
 
 function drinks(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -787,15 +707,7 @@ reset();
 }
 
 function educationstaff(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -830,15 +742,7 @@ function educationstaff(){
 }
 
 function family(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -908,15 +812,7 @@ reset();
 }
 
 function fastfood(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -953,15 +849,7 @@ function fastfood(){
 }
 
 function feelings(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -996,15 +884,7 @@ function feelings(){
 }
 
 function fizzydrinks(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1042,15 +922,7 @@ function fizzydrinks(){
 }
 
 function flavour(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes"; 
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1089,15 +961,7 @@ function flavour(){
 }
 
 function food(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes ";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1135,15 +999,7 @@ function food(){
 }
 
 function foodchat(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1178,15 +1034,7 @@ function foodchat(){
 }
 
 function friends(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1221,15 +1069,7 @@ function friends(){
 }
 
 function fruit(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
@@ -1443,15 +1283,7 @@ reset();
 }
 
 function job(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1521,15 +1353,7 @@ reset();
 }
 
 function kitchenequipment(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1600,15 +1424,7 @@ reset();
 }
 
 function littlewords(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1642,15 +1458,7 @@ function littlewords(){
 	document.main.src="images/littlewords.jpg";
 }
 function lunch(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1723,15 +1531,7 @@ reset();
 }
 
 function meals(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1769,15 +1569,7 @@ function meals(){
 }
 
 function meat(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1813,15 +1605,7 @@ function meat(){
 }
 
 function milkshake(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1894,15 +1678,7 @@ reset();
 }
 
 function months(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -1937,15 +1713,7 @@ function months(){
 }
 
 function moreaction(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2015,15 +1783,7 @@ reset();
 }
 
 function myday(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2058,15 +1818,7 @@ function myday(){
 }
 
 function mystories(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2136,15 +1888,7 @@ reset();
 }
 
 function numbers(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2214,15 +1958,7 @@ reset();
 }
 
 function opposites(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2257,15 +1993,7 @@ function opposites(){
 }
 
 function outside(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2336,15 +2064,7 @@ utterances[0][0]="yes ";
 }
 
 function parts(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2379,15 +2099,7 @@ function parts(){
 }
 
 function people(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2636,15 +2348,7 @@ reset();
 }
 
 function pint(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2680,15 +2384,7 @@ function pint(){
 }
 
 function places(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2723,15 +2419,7 @@ function places(){
 }
 
 function positionwords(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2801,15 +2489,7 @@ reset();
 }
 
 function privateparts(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2844,15 +2524,7 @@ function privateparts(){
 }
 
 function questions(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2887,15 +2559,7 @@ function questions(){
 }
 
 function salad(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2930,15 +2594,7 @@ function salad(){
 }
 
 function sauces(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -2975,15 +2631,7 @@ function sauces(){
 }
 
 function scwfriends(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3053,15 +2701,7 @@ reset();
 }
 
 function shops(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3096,15 +2736,7 @@ function shops(){
 }
 
 function snack(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3144,15 +2776,7 @@ function snack(){
 }
 
 function specialdays(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3187,15 +2811,7 @@ function specialdays(){
 }
 
 function spelling(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3230,15 +2846,7 @@ function spelling(){
 }
 
 function spelling2(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3308,15 +2916,7 @@ reset();
 }
 
 function supportstaff(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3351,15 +2951,7 @@ function supportstaff(){
 }
 
 function things(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+        reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3394,15 +2986,7 @@ function things(){
 }
 
 function thingsthathelp(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3437,15 +3021,7 @@ function thingsthathelp(){
 }
 
 function time(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3480,15 +3056,7 @@ function time(){
 }
 
 function toiletries(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3593,15 +3161,7 @@ reset();
 }
 
 function transport(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3671,15 +3231,7 @@ reset();
 }
 
 function vegetables(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes ";
 	utterances[1][0]=" ";
 	utterances[2][0]=" ";
@@ -3791,15 +3343,7 @@ reset();
 }
 
 function weather(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
@@ -3869,15 +3413,7 @@ reset();
 }
 
 function wml(){
-	var i,j
-		for(j=0;j<5;j++)
-		{
-			for(i=0;i<5;i++)
-			{
-				utterances[i][j]="link";
-				links[i][j]="blank";
-			}
-		}
+	reset();
 	utterances[0][0]="yes";
 	utterances[1][0]="";
 	utterances[2][0]="";
