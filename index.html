@@ -77,6 +77,8 @@ function reset(){
 				links[i][j]="blank";
 			}
 		}
+links[3][0]="speak";
+
 }
 
 //The main function. First checks for an utterance to add, and then checks if a link should be activated. Within the utterance code we check the length of an addition - if it is a single character we assume that the user is spelling something and we do not insert the extra space. 
@@ -97,6 +99,7 @@ function add(i,j) {
 			case "clear":  document.myform.reset();break;
 			case "deleteword": var lastIndex =  document.myform.outputtext.value.lastIndexOf(" ");  document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);break;
 			case "Backspace": document.myform.outputtext.value = document.myform.outputtext.value.substring(0, document.myform.outputtext.value.length-1);break;
+			case "speak": makeWav(); break;
 			case "google": image(); break;
 			case "youtube": tube(); break;
 			case "twitter": tweet();break;
