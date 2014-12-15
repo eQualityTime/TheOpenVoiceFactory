@@ -113,6 +113,7 @@ function add(i,j) {
 function makeWav(){        
 	$.get(("getsound.pl?text="+document.myform.outputtext.value+"&filename="+SHA1(document.myform.outputtext.value)));
 	setTimeout(callback, 500);
+	_gaq.push([‘_trackEvent’, ‘azulejoe’, ‘speak’, ‘makeWav’, 5, true]);
 	return false;
 }
 //used within the above function - callback plays the wave that was created in makeWav() but only when it has finnished loading. 
