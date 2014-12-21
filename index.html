@@ -44,7 +44,7 @@ function tweet(){
 	{
 		twtTitle = twtTitle.substr(0, (maxLength -3))+'...';
 	}
-	var twtLink ='http://twitter.com/home?status='+document.myform.outputtext.value.replace(" ","%20");
+	var twtLink ='http://twitter.com/intent/tweet?text='+document.myform.outputtext.value.replace(" ","%20");
 	window.open(twtLink);
 
 }
