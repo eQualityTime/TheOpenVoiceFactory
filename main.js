@@ -1,4 +1,5 @@
 
+
 function aboutme(){
 reset();
 	utterances[0][0]="yes";
