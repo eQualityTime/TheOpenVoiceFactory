@@ -10,6 +10,15 @@ ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
 # something odd about the zero, look into that.
 
 
+def slide_title_placeholder(slide):
+	"""from https://github.com/scanny/python-pptx/issues/153#issuecomment-84475019"""
+	for shape in slide.shapes:
+		if not shape.is_placeholder:
+			continue
+		if shape.placeholder_format.idx == 0:
+			return shape
+		return None
+
 def get_row(in_num):
             # from http://stackoverflow.com/a/7934624/170243
     return ROW_TABLE[in_num] if in_num in ROW_TABLE else ROW_TABLE[min(ROW_TABLE.keys(), key=lambda k: abs(k - in_num))]
@@ -41,11 +50,13 @@ prs = Presentation("testSuite/test1/CommuniKate20-es.pptx")
 # one for each text run in presentation
 
 for slide in prs.slides:
+    title=slide_title_placeholder(slide)
+    print title.text
     utterances = [["link" for x in range(5)] for x in range(5)]
     links = [["blank" for x in range(5)] for x in range(5)]
     for shape in slide.shapes:
         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-            print shape.auto_shape_type
+      #      print shape.auto_shape_type
             if shape.auto_shape_type == 16:  # foldedcorner
                 links[get_column(shape.top)][get_row(shape.left)] = "real"
         if not shape.has_text_frame:
