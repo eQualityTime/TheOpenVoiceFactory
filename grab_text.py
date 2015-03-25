@@ -23,6 +23,9 @@ def get_row(in_num):
             # from http://stackoverflow.com/a/7934624/170243
     return ROW_TABLE[in_num] if in_num in ROW_TABLE else ROW_TABLE[min(ROW_TABLE.keys(), key=lambda k: abs(k - in_num))]
 
+def make_title(label):
+    return label.lower().strip().replace(" ","_")
+
 
 def get_column(in_num):
             # from http://stackoverflow.com/a/7934624/170243
@@ -44,14 +47,15 @@ class utterance(object):
     def __str__(self):
         return "utterance[%d][%d]=\"%s\";" % (self.column, self.row, self.text)
 
-prs = Presentation("testSuite/test1/CommuniKate20-es.pptx")
+prs = Presentation("testSuite/launch/CommuniKate20launch.pptx")
 
 # text_runs will be populated with a list of strings,
 # one for each text run in presentation
-
+slide_number=1
 for slide in prs.slides:
     title=slide_title_placeholder(slide)
-    print title.text
+    print """function %s(){
+reset();     """ % make_title(title.text)
     utterances = [["link" for x in range(5)] for x in range(5)]
     links = [["blank" for x in range(5)] for x in range(5)]
     for shape in slide.shapes:
@@ -74,12 +78,16 @@ for slide in prs.slides:
     for x in range(5):
         for y in range(5):
             if links[x][y] == "real":
-                print "     links[%d][%d]=\"%s\";" % (x, y, utterances[x][y])
+                print "     links[%d][%d]=\"%s\";" % (y, x, make_title(utterances[x][y]))
             else:
                 if links[x][y] == "blank":
-                    print "utterances[%d][%d]=\"%s\";" % (x, y, utterances[x][y])
+                    print "utterances[%d][%d]=\"%s\";" % (y, x, utterances[x][y])
                 else:
                     raise ValueError("You never listen.")
-    break
+    print """ document.main.src="images/originalSlides/Slide%02d.png";
+
+}""" % (slide_number)
+    
+    slide_number+=1
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
