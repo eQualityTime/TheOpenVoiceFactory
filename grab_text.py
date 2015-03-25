@@ -10,6 +10,16 @@ ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
 # something odd about the zero, look into that.
 
 
+alpha="abcdefghijklmnopqrstuvwxyz1234567890_"
+
+def remove_punctuation(s):
+    s_sans_punct = ""
+    for letter in s:
+        if letter in alpha:
+            s_sans_punct += letter
+    return s_sans_punct
+#from http://openbookproject.net/thinkcs/python/english3e/strings.html
+
 def slide_title_placeholder(slide):
 	"""from https://github.com/scanny/python-pptx/issues/153#issuecomment-84475019"""
 	for shape in slide.shapes:
@@ -24,7 +34,7 @@ def get_row(in_num):
     return ROW_TABLE[in_num] if in_num in ROW_TABLE else ROW_TABLE[min(ROW_TABLE.keys(), key=lambda k: abs(k - in_num))]
 
 def make_title(label):
-    return label.lower().strip().replace(" ","_")
+    return remove_punctuation(label.lower().strip().replace(" ","_"))
 
 
 def get_column(in_num):
