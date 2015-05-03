@@ -24,6 +24,10 @@ ApplicationWindow {
         text=""
     }
 
+    function getWords() {
+        return text.split(" ");
+    }
+
     function deleteWord() {
         // Get words
         var words = text.split(" ");
