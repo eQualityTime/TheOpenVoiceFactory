@@ -28,7 +28,8 @@ android {
   DISTFILES += TTS/java/azule-joe/android-tts/AndroidTTSClient.java
 }
 macx {
-  SOURCES += TTS/cpp/macx/TTSClient.cpp
+  OBJECTIVE_SOURCES += TTS/cpp/macx/TTSClient.mm
+  LIBS += -framework AppKit
 }
 win32 {
   SOURCES += TTS/cpp/win/TTSClient.cpp
