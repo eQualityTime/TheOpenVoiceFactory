@@ -56,6 +56,7 @@ Item {
                 onClicked: {
                     if (utterance.trim().length > 0) {
                         console.log(utterance);
+                        TTSClient.speak(utterance);
                     }
 
                     if (link.trim().length > 0) {

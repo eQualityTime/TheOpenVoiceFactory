@@ -11,7 +11,36 @@ RESOURCES += main-resources.qrc
 RESOURCES += ../images/images.qrc
 RESOURCES += ../javascript/pageset-code.qrc
 
-# Additional import path used to resolve QML modules in Qt Creator's code model
+# Things specific to TTS.
+# TODO: Make this a separate library. This isn't as trivial as it could be,
+# since we have to bundle in the .java files (I think).
+
+INCLUDEPATH += TTS/cpp/
+HEADERS += TTS/cpp/TTSClient.h
+
+# The implementation of the TTSClient object is OS-dependent. The build system
+# chooses the appropriate one.
+android {
+  SOURCES += TTS/cpp/android/TTSClient.cpp
+  QT += androidextras
+  ANDROID_PACKAGE_SOURCE_DIR = $$PWD/TTS/java/
+  OTHER_FILES += TTS/java/AndroidManifest.xml
+  DISTFILES += TTS/java/azule-joe/android-tts/AndroidTTSClient.java
+}
+macx {
+  SOURCES += TTS/cpp/macx/TTSClient.cpp
+}
+win32 {
+  SOURCES += TTS/cpp/win/TTSClient.cpp
+}
+# Not sure if "ios" is correct flag here - haven't checked
+ios {
+  SOURCES += TTS/cpp/ios/TTSClient.cpp
+}
+
+
+# Additional import path used to resolve QML modules in Qt Creator's code
+# model
 QML_IMPORT_PATH =
 
 # Default rules for deployment.
