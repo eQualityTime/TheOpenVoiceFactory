@@ -26,7 +26,7 @@ public:
     AVSpeechUtterance *utterance =
         [[[AVSpeechUtterance alloc] initWithString: msg_ns] autorelease];
 
-    // The default rate is *really* slow.
+    // The default rate is *really* fast.
     // Ideally this would be modifiable, but for now just set it to something
     // sensible
     utterance.rate = 0.2;
