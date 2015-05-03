@@ -20,6 +20,10 @@ ApplicationWindow {
         stagedText.changeText(text + word);
     }
 
+    function backspace() {
+        text=text.slice(0, - 1);
+    }
+
     function resetText() {
         text=""
     }

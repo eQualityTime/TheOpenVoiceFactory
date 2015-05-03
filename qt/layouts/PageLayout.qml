@@ -55,7 +55,14 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 onClicked: {
                     if (utterance.trim().length > 0) {
-                        app.appendWord(" " + qsTr(utterance))
+                        // If we've got a single letter, we're spelling a word
+                        // and don't want to add a space
+                        if (utterance.length === 1) {
+                            app.appendWord(qsTr(utterance))
+                        }
+                        else {
+                            app.appendWord(" " + qsTr(utterance))
+                        }
                     }
 
                     if (link.trim().length > 0) {
@@ -68,7 +75,7 @@ Item {
                             app.deleteWord();
                             break;
                         case "Backspace":
-                            app.deleteWord();
+                            app.backspace();
                             break;
                         case "speak":
                             TTSClient.speak(app.text);
