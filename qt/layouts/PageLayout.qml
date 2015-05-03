@@ -54,7 +54,7 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 onClicked: {
-                    if (utterance.trim().length > 0) {
+                    if (utterance.length > 0) {
                         // If we've got a single letter, we're spelling a word
                         // and don't want to add a space
                         if (utterance.length === 1) {
