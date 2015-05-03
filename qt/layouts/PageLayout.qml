@@ -76,6 +76,14 @@ Item {
                         case "1":
                             stackView.pop();
                             break;
+                        case "google":
+                            googlesearch();
+                            break;
+                        case "youtube":
+                            youtubesearch();
+                            break;
+                        case "twitter":
+                            tweet();break;
                         default:
                             stackView.push({ item: "qrc:/layouts/PageLayout.qml",
                                              replace: stackView.depth > 1 ,
@@ -142,6 +150,31 @@ Item {
             }
         }
         links[3][0]="speak";
+    }
+
+    function googlesearch() {
+        var words = app.getWords();
+        var url = "http://www.google.co.uk/images?q="
+                + words.join("+");
+        Qt.openUrlExternally(url);
+
+    }
+    function youtubesearch() {
+        var words = app.getWords();
+        var url = "http://www.youtube.com/results?search_query="
+                + words.join("+") +"&search_type=&aq=0";
+        Qt.openUrlExternally(url);
+    }
+    function tweet() {
+        var words = app.getWords();
+        var twtTitle=words.join(" ");
+        var maxLength = 140;
+        if(twtTitle.length > maxLength)
+        {
+            twtTitle = twtTitle.substr(0, (maxLength -3))+'...';
+        }
+        var url ='http://twitter.com/home?status='+twtTitle.replace(" ", "%20");
+        Qt.openUrlExternally(url);
     }
 
 }
