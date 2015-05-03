@@ -55,23 +55,23 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 onClicked: {
                     if (utterance.trim().length > 0) {
-                        TTSClient.speak(utterance);
+                        app.appendWord(" " + qsTr(utterance))
                     }
 
                     if (link.trim().length > 0) {
                         var cmd = link.trim();
                         switch (cmd) {
                         case "clear":
-                            console.log("CLEAR");
+                            app.resetText();
                             break;
                         case "deleteword":
-                            console.log("DELETE WORD");
+                            app.deleteWord();
                             break;
                         case "Backspace":
-                            console.log("BACKSPACE");
+                            app.deleteWord();
                             break;
                         case "speak":
-                            console.log("SPEAK");
+                            TTSClient.speak(app.text);
                             break;
                         case "1":
                             stackView.pop();
