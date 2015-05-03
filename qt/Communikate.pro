@@ -33,9 +33,10 @@ macx {
 win32 {
   SOURCES += TTS/cpp/win/TTSClient.cpp
 }
-# Not sure if "ios" is correct flag here - haven't checked
+# On iOS, we have an Objective-C source file instead.
 ios {
-  SOURCES += TTS/cpp/ios/TTSClient.cpp
+  OBJECTIVE_SOURCES += TTS/cpp/ios/TTSClient.mm
+  LIBS += -framework AVFoundation
 }
 
 
