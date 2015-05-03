@@ -8,9 +8,30 @@ import "layouts"
 // For now we'll probably never have more than two items on the stack, but it
 // keeps our navigation options open to future changes.
 ApplicationWindow {
+    id: app
     visible: true
     width: 1200
     height: 700
+
+    property alias text: stagedText.text
+
+    // Append a string. Does *not* add a space.
+    function appendWord(word) {
+        stagedText.changeText(text + word);
+    }
+
+    function resetText() {
+        text=""
+    }
+
+    function deleteWord() {
+        // Get words
+        var words = text.split(" ");
+        // Remove last word
+        words.splice(words.length-1, 1);
+        // Re-join
+        text = words.join(" ");
+    }
 
     StackView {
         id: stackView
@@ -45,6 +66,33 @@ ApplicationWindow {
                     to: 0
                 }
             }
+        }
+    }
+
+    // This text view sits on top of the stack of pagesets, to manage the pending
+    // utterances.
+    Rectangle {
+        property int tileX: (parent.width/5)
+        property int tileY: (parent.height/5)
+        property int bufferX: (parent.width/80)
+        property int bufferY: (parent.height/40)
+
+        x: tileX+bufferX
+        y: bufferY
+        width: 2*tileX - 2*bufferX
+        height: tileY - bufferY
+
+        color: "white"
+
+        ScrollableText {
+            id: stagedText
+            anchors.fill: parent
+
+            text: ""
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.family: "Helvetica"
+            font.pointSize: 32
+            color: "black"
         }
     }
 

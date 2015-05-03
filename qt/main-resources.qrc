@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>layouts/PageLayout.qml</file>
         <file>../JsLoader.js</file>
+        <file>layouts/ScrollableText.qml</file>
     </qresource>
 </RCC>
