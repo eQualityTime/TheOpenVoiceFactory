@@ -4,16 +4,23 @@
 
 #include "TTSClient.h"
 
-TTSClient::TTSClient(QObject *parent)
-    : QObject(parent)
-{
-}
+class AndroidTTSClient : public TTSClient {
+public:
+  explicit AndroidTTSClient(QObject* parent = 0):
+    TTSClient(parent)
+  {
+  }
 
-void TTSClient::speak(QString msg ){
-  QAndroidJniObject javaMessage = QAndroidJniObject::fromString(msg);
-  QAndroidJniObject::callStaticMethod<void>("org/qtproject/example/testandroidextras/AndroidTTSClient",
-                                            "speak",
-                                            "(Ljava/lang/String;)V",
-                                            javaMessage.object<jstring>());
+  Q_INVOKABLE virtual void speak(QString msg ) {
+    QAndroidJniObject javaMessage = QAndroidJniObject::fromString(msg);
+    QAndroidJniObject::callStaticMethod<void>("org/qtproject/example/testandroidextras/AndroidTTSClient",
+                                              "speak",
+                                              "(Ljava/lang/String;)V",
+                                              javaMessage.object<jstring>());
+  }
 
+};
+
+TTSClient* createTTSClient(QObject *parent) {
+  return new AndroidTTSClient(parent);
 }
