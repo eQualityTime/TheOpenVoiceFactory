@@ -55,7 +55,6 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 onClicked: {
                     if (utterance.trim().length > 0) {
-                        console.log(utterance);
                         TTSClient.speak(utterance);
                     }
 
@@ -78,7 +77,6 @@ Item {
                             stackView.pop();
                             break;
                         default:
-                            console.log("loading page: "+cmd)
                             stackView.push({ item: "qrc:/layouts/PageLayout.qml",
                                              replace: stackView.depth > 1 ,
                                              properties: { page: cmd } });
@@ -107,8 +105,6 @@ Item {
         id: pageSet
 
         Component.onCompleted: {
-            console.log("Loading resources for " + page)
-            console.log()
             JsLoader.loadResource("qrc:/" + page + ".js")
 
             utterances = new2dArray(5);
