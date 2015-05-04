@@ -80,6 +80,7 @@ ApplicationWindow {
     // This text view sits on top of the stack of pagesets, to manage the pending
     // utterances.
     Rectangle {
+        id:rect
         property int tileX: (parent.width/5)
         property int tileY: (parent.height/5)
         property int bufferX: (parent.width/80)
@@ -99,8 +100,11 @@ ApplicationWindow {
             text: ""
             anchors.horizontalCenter: parent.horizontalCenter
             font.family: "Helvetica"
-            font.pointSize: 32
             color: "black"
+
+            // We use pixel size scaled to the tile height, to give us the
+            // same approximate size on devices with different DPI.
+            font.pixelSize: rect.tileY/4
         }
     }
 
