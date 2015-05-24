@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls 1.2
 
 import "qrc:/JsLoader.js" as JsLoader
 
@@ -114,13 +115,52 @@ Item {
         model: pageSet
     }
 
+    // Message for page navigation errors
+    Rectangle {
+        id: error
+        z: 200
+        anchors.fill: parent
+        color: "white"
+        visible: false
+
+        Text {
+            id: msg
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: backButton.y - height
+            text: "Page not found"
+            width: paintedWidth
+            height: paintedHeight
+            color: "black"
+            font.pixelSize: parent.height/20
+        }
+
+        Button {
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: parent.height/2
+            id: backButton
+            text: "Back"
+            onClicked: {
+                app.showPendingUtterances();
+                stackView.pop();
+            }
+        }
+    }
 
     // Create a pageset model from JS file.
     ListModel {
         id: pageSet
 
         Component.onCompleted: {
-            JsLoader.loadResource("qrc:/" + page + ".js")
+            var success = JsLoader.loadResource("qrc:/" + page + ".js")
+
+            if (!success) {
+                app.hidePendingUtterances();
+                error.visible = "true"
+                return;
+            }
+            else {
+                app.showPendingUtterances();
+            }
 
             utterances = new2dArray(5);
             links = new2dArray(5);

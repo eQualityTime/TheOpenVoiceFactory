@@ -41,6 +41,14 @@ ApplicationWindow {
         text = words.join(" ");
     }
 
+    function hidePendingUtterances() {
+        stagedText.visible = false
+    }
+
+    function showPendingUtterances() {
+        stagedText.visible = true
+    }
+
     StackView {
         id: stackView
         anchors.fill: parent
