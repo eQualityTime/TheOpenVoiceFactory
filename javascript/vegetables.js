@@ -9,10 +9,10 @@ function vegetables(){
 
 
 	links[0][1]="1";
-	links[1][1]="vegtables";
+	links[1][1]="vegetables";
 	links[2][1]="potato";
-	utterances[3][1]="aborigine";
-	utterances[4][1]="broccali";
+	utterances[3][1]="aubergine";
+	utterances[4][1]="broccoli";
 
 
 	utterances[0][2]="butternut squash";
