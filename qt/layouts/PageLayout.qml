@@ -58,11 +58,14 @@ Item {
                     if (utterance.length > 0) {
                         // If we've got a single letter, we're spelling a word
                         // and don't want to add a space
+                        // Single-letter words such as "a" or "I" will be padded
+                        // to ensure they are identified as words, not letters.
+                        // We'll remove the padding with trim().
                         if (utterance.length === 1) {
-                            app.appendWord(qsTr(utterance))
+                            app.appendLetter(qsTr(utterance))
                         }
                         else {
-                            app.appendWord(" " + qsTr(utterance))
+                            app.appendWord(qsTr(utterance.trim()))
                         }
                     }
 
