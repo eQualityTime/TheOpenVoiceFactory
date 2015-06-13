@@ -9,7 +9,7 @@ function foodchat(){
 
 	links[0][1]="1";
 	utterances[1][1]="I like it";
-	utterances[2][1]="It's grose";
+	utterances[2][1]="It's gross";
 	utterances[3][1]="It's spicy";
 	utterances[4][1]="Cut up food";
 
