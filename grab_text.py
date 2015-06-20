@@ -81,16 +81,21 @@ for slide in prs.slides:
 reset();     """ % make_title(title.text)
     utterances = [["link" for x in range(5)] for x in range(5)]
     links = [["blank" for x in range(5)] for x in range(5)]
+    colors = [["" for x in range(5)] for x in range(5)]
 
     # First pass through the shapes populates our utterances array.
     for shape in slide.shapes:
+        co = get_column(shape.top)
+        ro = get_row(shape.left)
+
         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
       #      print shape.auto_shape_type
             # NOTE: There seems to be a bug in python-pptx v0.5.7.
             # where "foldedCorner" is misspelled "folderCorner" in enum/shapes.py
             if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
-                links[get_column(shape.top)][get_row(shape.left)] = "real"
-        
+                links[co][ro] = "real"
+                colors[co][ro] = shape.fill.fore_color.rgb
+
         if not shape.has_text_frame:
             continue
 
@@ -100,8 +105,7 @@ reset();     """ % make_title(title.text)
                 text += run.text.encode('ascii', 'ignore')
         if text != "":
             # add the if shape_type is text box
-            co = get_column(shape.top)
-            ro = get_row(shape.left)
+
             utterances[co][ro] = text
 
     # Second pass through shapes list finds images and saves them.
