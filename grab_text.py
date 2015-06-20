@@ -17,6 +17,7 @@ ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
 # something odd about the zero, look into that.
 
 
+# Note: This may not be robust to internationalisation.
 alpha="abcdefghijklmnopqrstuvwxyz1234567890_"
 
 
@@ -28,7 +29,7 @@ def getShortUuid():
 def remove_punctuation(s):
     s_sans_punct = ""
     for letter in s:
-        if letter in alpha:
+        if letter.lower() in alpha:
             s_sans_punct += letter
     return s_sans_punct
 #from http://openbookproject.net/thinkcs/python/english3e/strings.html
