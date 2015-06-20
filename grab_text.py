@@ -1,7 +1,14 @@
 #!/usr/bin/python
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
 from pptx import Presentation
+from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+
+import io
+from PIL import Image
+from array import array
+
+import uuid
 
 COL_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2, 2819400: 2, 2854919: 2,
              2854925: 2, 4170660: 3, 4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
@@ -11,6 +18,12 @@ ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
 
 
 alpha="abcdefghijklmnopqrstuvwxyz1234567890_"
+
+
+def getShortUuid():
+    u = str(uuid.uuid1())
+    u = u.split("-")[0]
+    return u;
 
 def remove_punctuation(s):
     s_sans_punct = ""
@@ -68,14 +81,19 @@ for slide in prs.slides:
 reset();     """ % make_title(title.text)
     utterances = [["link" for x in range(5)] for x in range(5)]
     links = [["blank" for x in range(5)] for x in range(5)]
+
+    # First pass through the shapes populates our utterances array.
     for shape in slide.shapes:
         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
       #      print shape.auto_shape_type
-            if shape.auto_shape_type == 16:  # foldedcorner
+            # NOTE: There seems to be a bug in python-pptx v0.5.7.
+            # where "foldedCorner" is misspelled "folderCorner" in enum/shapes.py
+            if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                 links[get_column(shape.top)][get_row(shape.left)] = "real"
+        
         if not shape.has_text_frame:
-
             continue
+
         text = ""
         for paragraph in shape.text_frame.paragraphs:
             for run in paragraph.runs:
@@ -85,6 +103,19 @@ reset();     """ % make_title(title.text)
             co = get_column(shape.top)
             ro = get_row(shape.left)
             utterances[co][ro] = text
+
+    # Second pass through shapes list finds images and saves them.
+    # We have to do this separately so it's guaranteed we already know what to
+    # name the images!
+    for shape in slide.shapes:
+
+        if shape.shape_type == MSO_SHAPE_TYPE.PICTURE :
+            co = get_column(shape.top)
+            ro = get_row(shape.left)
+            image = Image.open(io.BytesIO(shape.image.blob))
+            image.save("icons/" + remove_punctuation(utterances[co][ro]) + ".png")
+
+
     for x in range(5):
         for y in range(5):
             if links[x][y] == "real":
