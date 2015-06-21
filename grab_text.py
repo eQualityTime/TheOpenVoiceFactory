@@ -43,17 +43,26 @@ def slide_title_placeholder(slide):
 			return shape
 		return None
 
-def get_row(in_num):
-            # from http://stackoverflow.com/a/7934624/170243
-    return ROW_TABLE[in_num] if in_num in ROW_TABLE else ROW_TABLE[min(ROW_TABLE.keys(), key=lambda k: abs(k - in_num))]
 
 def make_title(label):
     return remove_punctuation(label.lower().strip().replace(" ","_"))
 
 
-def get_column(in_num):
-            # from http://stackoverflow.com/a/7934624/170243
-    return COL_TABLE[in_num] if in_num in COL_TABLE else COL_TABLE[min(COL_TABLE.keys(), key=lambda k: abs(k - in_num))]
+# Returns the closest key in the dictionary, for numerical keys.
+def get_closest_key(dict, inKey):
+    # from http://stackoverflow.com/a/7934624/170243
+    if inKey in dict:
+        return inKey
+    else:
+        return min(dict.keys(), key=lambda k: abs(k - inKey))
+
+def get_column(leftPos):
+    key = get_closest_key(COL_TABLE, leftPos);
+    return COL_TABLE[key]
+
+def get_row(topPos):
+    key = get_closest_key(ROW_TABLE, topPos);
+    return ROW_TABLE[key]
 
 
 class utterance(object):
