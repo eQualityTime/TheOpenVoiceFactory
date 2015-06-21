@@ -5,6 +5,7 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 import io
+import os
 from PIL import Image
 from array import array
 
@@ -20,7 +21,18 @@ ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
 # Note: This may not be robust to internationalisation.
 alpha="abcdefghijklmnopqrstuvwxyz1234567890_"
 
+# Global dictionary of icons,
+# key = (row, col)
+# value = list of one or more PICTURE shapes.
+images = {};
 
+def resizeImage(image, scaleFactor):
+    oldSize = image.size
+    newSize = (scaleFactor*oldSize[0],
+                scaleFactor*oldSize[1])
+    return image.resize(newSize, Image.ANTIALIAS)
+
+# Helper for testing - generate unique chars.
 def getShortUuid():
     u = str(uuid.uuid1())
     u = u.split("-")[0]
@@ -43,10 +55,8 @@ def slide_title_placeholder(slide):
 			return shape
 		return None
 
-
 def make_title(label):
     return remove_punctuation(label.lower().strip().replace(" ","_"))
-
 
 # Returns the closest key in the dictionary, for numerical keys.
 def get_closest_key(dict, inKey):
@@ -64,6 +74,10 @@ def get_row(topPos):
     key = get_closest_key(ROW_TABLE, topPos);
     return ROW_TABLE[key]
 
+def get_index(leftPos, topPos):
+    co = get_column(leftPos);
+    ro = get_row(topPos);
+    return ro*5 + co
 
 class utterance(object):
 
@@ -122,16 +136,61 @@ reset();     """ % make_title(title.text)
     # We have to do this separately so it's guaranteed we already know what to
     # name the images!
     for shape in slide.shapes:
-
         if shape.shape_type == MSO_SHAPE_TYPE.PICTURE :
             co = get_column(shape.top)
             ro = get_row(shape.left)
-            image = Image.open(io.BytesIO(shape.image.blob))
-            image.save("icons/" + remove_punctuation(utterances[co][ro]) + ".png")
+
+            if (co, ro) not in images:
+                images[co, ro] = []
+            images[co, ro].append(shape)
 
 
+    # Compose each icon out of all the images in the grid cell.
     for x in range(5):
         for y in range(5):
+            if (x,y) in images:
+                # Go through all the images, compute bounding box.
+                l = min([shape.left for shape in images[x,y]])
+                t = min([shape.top for shape in images[x,y]])
+                r = max([shape.left + shape.width for shape in images[x,y]])
+                b = max([shape.top + shape.height for shape in images[x,y]])
+
+                # Scale gives us the mapping from image pixels to powerpoint
+                # distance units. This depends on the resolution of the images.
+                scale = min([shape.width/shape.image.size[0]
+                                for shape in images[x,y]])
+
+                # Size of combined image, in actual pixels (not PPTX units)
+                # If scales differ between objects, we resize them next
+                w = (r-l)/scale
+                h = (b-t)/scale
+                composite = Image.new('RGBA', (w,h))
+
+                # Add all the images together.
+                for shape in images[x,y]:
+                    # TODO: Look at cropping, other modifications.
+
+                    part = Image.open(io.BytesIO(shape.image.blob))
+                    partScale = (shape.width/shape.image.size[0])
+
+                    part = resizeImage(part, partScale/scale)
+
+                    composite.paste(part,
+                                    ((shape.left - l)/scale,
+                                        (shape.top - t)/scale),
+                                    part) # This masks out transparent pixels
+
+                # Crop final image.
+                bbox = composite.getbbox()
+                composite = composite.crop(bbox)
+
+                # Save!
+                name = remove_punctuation(utterances[x][y]) + ".png";
+                folder = "icons/"+ str(slide_number)
+                if not os.path.exists(folder):
+                    os.makedirs(folder)
+                composite.save(folder + "/" + name );
+
             if links[x][y] == "real":
                 print "     links[%d][%d]=\"%s\";" % (y, x, make_title(utterances[x][y]))
             else:
