@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="AzuleJoe">
 <manifest package="org.azulejoe" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.1" android:versionCode="2" android:installLocation="auto">
+    <application android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="AzuleJoe" android:icon="@drawable/icon">
         <activity android:configChanges="orientation|uiMode|screenLayout|locale|fontScale|keyboard|keyboardHidden|navigation" android:name="org.qtproject.example.testandroidextras.AndroidTTSClient" android:label="AzuleJoe" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,7 +31,7 @@
             <!-- Splash screen -->
         </activity>
     </application>
-    <uses-sdk android:minSdkVersion="10"/>
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15"/>
     <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
     <!-- %%INSERT_PERMISSIONS -->
     <uses-permission android:name="android.permission.INTERNET"/>

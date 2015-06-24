@@ -48,5 +48,9 @@ QML_IMPORT_PATH =
 # Default rules for deployment.
 include(deployment.pri)
 
-DISTFILES += \
-    ../javascript/potato.js
+DISTFILES += TTS/java/gradle/wrapper/gradle-wrapper.jar
+DISTFILES += TTS/java/gradlew
+DISTFILES += TTS/java/res/values/libs.xml
+DISTFILES += TTS/java/build.gradle
+DISTFILES += TTS/java/gradle/wrapper/gradle-wrapper.properties
+DISTFILES += TTS/java/gradlew.bat
