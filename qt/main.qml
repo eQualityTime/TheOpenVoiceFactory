@@ -1,6 +1,8 @@
 
-import  QtQuick 2.2
-import  QtQuick.Controls 1.2
+import QtQuick 2.2
+import QtQuick.Controls 1.2
+import QtQuick.Dialogs 1.2
+import QtQuick.Controls.Styles 1.2
 
 import "layouts"
 
@@ -12,6 +14,49 @@ ApplicationWindow {
     visible: true
     width: 1200
     height: 700
+    color: "white"
+
+    // This is a pop up modal "dialog" that is simpler and nicer than
+    // a MessageDialog, which looks pretty rubbish on many platforms
+    Item {
+        anchors.fill: parent
+        id: ttsErrorDialog
+        visible: false        
+        z: 3000
+        Rectangle {
+            anchors.fill: parent
+            color: "#D8000000"
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: { mouse.accepted = true; }
+        }
+        Text {
+            id: msg
+            anchors.centerIn: parent
+            text: "Error occurred while trying to speak.\nPlease check your tablet's Text-to-Speech settings.";
+            horizontalAlignment: Text.AlignHCenteri
+            color: "white"
+            font.pixelSize: parent.height/30
+        }
+        SimpleButton {
+            anchors.top: msg.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.topMargin: 20
+            text: "OK"
+            font.pixelSize: parent.height/40
+            onClicked: ttsErrorDialog.visible = false
+        }
+    }
+
+    Component.onCompleted: {
+        queue = [];
+        TTSClient.ttsError.connect(onTtsError);
+    }
+
+    function onTtsError() {
+        ttsErrorDialog.visible = true;
+    }
 
     // Queue of words and/or letters that are staged
     // Each item looks like:
@@ -165,9 +210,4 @@ ApplicationWindow {
             }
         }
     }
-
-    Component.onCompleted: {
-        queue = [];
-    }
-
 }

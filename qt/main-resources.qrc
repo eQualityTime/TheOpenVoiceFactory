@@ -4,5 +4,6 @@
         <file>layouts/PageLayout.qml</file>
         <file>../JsLoader.js</file>
         <file>layouts/ScrollableText.qml</file>
+        <file>SimpleButton.qml</file>
     </qresource>
 </RCC>
