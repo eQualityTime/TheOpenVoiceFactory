@@ -40,6 +40,10 @@ ios {
   LIBS += -framework AVFoundation
 }
 
+# iOS deployment stuff
+ios {
+    QMAKE_INFO_PLIST = ios/Info.plist
+}
 
 # Additional import path used to resolve QML modules in Qt Creator's code
 # model
