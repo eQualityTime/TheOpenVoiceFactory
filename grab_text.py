@@ -97,7 +97,8 @@ reset();     """ % make_title(title.text)
     print """ document.main.src="images/originalSlides/Slide%02d.png";
 
 }""" % (slide_number)
-    
+
+    break
     slide_number+=1
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
