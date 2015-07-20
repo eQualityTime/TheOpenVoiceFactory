@@ -168,10 +168,17 @@ reset();     """ % make_title(title.text)
 
                 # Add all the images together.
                 for shape in images[x,y]:
-                    # TODO: Look at cropping, other modifications.
-
+                    # TODO: flipping.
                     part = Image.open(io.BytesIO(shape.image.blob))
-                    partScale = (shape.width/shape.image.size[0])
+                    width=part.size[0]
+                    height=part.size[1]
+                    left=shape.crop_left*width
+                    right=(1-shape.crop_right)*width
+                    top=shape.crop_top*height
+                    bottom=(1-shape.crop_bottom)*height
+                    box=(int(left),int(top),int(right),int(bottom))
+                    part=part.crop(box)
+                    partScale = (shape.width/part.size[0])#part.size because it might have been cropped
 
                     part = resizeImage(part, partScale/scale)
 
@@ -205,4 +212,5 @@ reset();     """ % make_title(title.text)
     break
     slide_number+=1
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
 
