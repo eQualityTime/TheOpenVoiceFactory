@@ -16,6 +16,8 @@ ApplicationWindow {
     height: 700
     color: "white"
 
+    property alias text: stagedText.text
+
     // This is a pop up modal "dialog" that is simpler and nicer than
     // a MessageDialog, which looks pretty rubbish on many platforms
     Item {
