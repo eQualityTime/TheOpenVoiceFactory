@@ -5,5 +5,7 @@
         <file>../JsLoader.js</file>
         <file>layouts/ScrollableText.qml</file>
         <file>SimpleButton.qml</file>
+        <file alias="CommunikateFromJs.js">pagesets/CommunikateFromJs.js</file>
+        <file>PageData.qml</file>
     </qresource>
 </RCC>

@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.2
 
-import "qrc:/JsLoader.js" as JsLoader
+import ".."
 
 Item {
     //anchors.fill: parent
@@ -11,27 +11,11 @@ Item {
     // data, e.g. food().
     property string page: ""
 
-    Item {
-        id: document
+    Image {
         anchors.fill: parent
-
-        // Without this alias, JS gives a TypeError.
-        property alias main: main
-        Image {
-            id: main
-
-            // This alias is to match the web conventions.
-            property alias src: main.source
-
-            anchors.fill: parent
-            z:0
-        }
+        z:0
+        source: "../" + pageLoader.imageSource
     }
-
-    // These need to have file-level scope so our external script can
-    // write to them.
-    property variant utterances: {}
-    property variant links: {}
 
     // The gridview of mouseareas
     GridView {
@@ -114,8 +98,7 @@ Item {
                 visible: mouseArea.pressedButtons
             }
         }
-
-        model: pageSet
+        model: pageLoader.listModel
     }
 
     // Message for page navigation errors
@@ -149,13 +132,12 @@ Item {
         }
     }
 
-    // Create a pageset model from JS file.
-    ListModel {
-        id: pageSet
-
+    PageData {
+        id: pageLoader
         Component.onCompleted: {
-            var success = JsLoader.loadResource("qrc:/" + page + ".js")
-
+            var success = pageLoader.loadFile(
+                        "qrc:/" + page + ".js",
+                        page);
             if (!success) {
                 app.hidePendingUtterances();
                 error.visible = "true"
@@ -163,43 +145,9 @@ Item {
             }
             else {
                 app.showPendingUtterances();
-            }
-
-            utterances = new2dArray(5);
-            links = new2dArray(5);
-
-            // TODO: Don't use the evil eval.
-            eval("JsLoader." + page + "()");
-
-            for (var i=0; i < 5; i++) {
-                for (var j=0; j < 5; j++) {
-                    pageSet.append({ link: links[j][i],
-                                       utterance: utterances[j][i] })
-                }
+                //gridView.model = pageLoader.listModel;
             }
         }
-    }
-
-    function new2dArray(size)
-    {
-        var temp = new Array(size);
-        for (var i = 0; i < size; i++) {
-            temp[i] = new Array(size);
-        }
-        return temp;
-    }
-
-    function reset() {
-        var i,j
-        for(j=0;j<5;j++)
-        {
-            for(i=0;i<5;i++)
-            {
-                utterances[i][j]="";
-                links[i][j]="";
-            }
-        }
-        links[3][0]="speak";
     }
 
     function googlesearch() {
