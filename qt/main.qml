@@ -129,7 +129,9 @@ ApplicationWindow {
                              event.accepted = true;
                          }
 
-        initialItem:  PageLayout { page: "page1" }
+        initialItem:  PageLayout {
+            pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
+        }
 
         delegate: StackViewDelegate {
             function transitionFinished(properties)

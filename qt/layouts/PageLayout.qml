@@ -6,10 +6,14 @@ import ".."
 Item {
     //anchors.fill: parent
 
+    id: pageLayout
+
     // The page name, e.g. "food".
     // Must correspond to the function called to populate the
     // data, e.g. food().
-    property string page: ""
+    property string pagesetType: "OBF"
+    property string pageset: "" // top level, defines whole set
+    property string page: ""    // individual page
 
     Image {
         anchors.fill: parent
@@ -39,6 +43,8 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 onClicked: {
+                    console.log(utterance);
+                    console.log(link);
                     if (utterance.length > 0) {
                         // If we've got a single letter, we're spelling a word
                         // and don't want to add a space
@@ -82,7 +88,9 @@ Item {
                         default:
                             stackView.push({ item: "qrc:/layouts/PageLayout.qml",
                                              replace: stackView.depth > 1 ,
-                                             properties: { page: cmd } });
+                                             properties: {
+                                                   pageset: pageLayout.pageset,
+                                                   page: cmd } });
                         }
                     }                    
                  }
@@ -96,6 +104,19 @@ Item {
                 color: "grey"
                 opacity: 0.2
                 visible: mouseArea.pressedButtons
+            }
+            Image {
+                height: parent.height * 0.8
+                width: parent.width * 0.8
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: image_path
+            }
+            Label {
+                text: label
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 10
             }
         }
         model: pageLoader.listModel
@@ -135,9 +156,9 @@ Item {
     PageData {
         id: pageLoader
         Component.onCompleted: {
-            var success = pageLoader.loadFile(
-                        "qrc:/" + page + ".js",
-                        page);
+            var success = pageLoader.loadFileFromObf(pageLayout.pageset,
+                                                     pageLayout.page);
+
             if (!success) {
                 app.hidePendingUtterances();
                 error.visible = "true"

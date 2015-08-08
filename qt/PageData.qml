@@ -1,6 +1,7 @@
 import QtQuick 2.0
 
 import "qrc:/JsLoader.js" as JsLoader
+import com.azulejoe 1.0 // for c++ types registered in main.cpp
 
 Item {
 
@@ -24,7 +25,6 @@ Item {
 
     function new2dArray(size)
     {
-        console.log("new2dArray")
         var temp = new Array(size);
         for (var i = 0; i < size; i++) {
             temp[i] = new Array(size);
@@ -33,9 +33,6 @@ Item {
     }
 
     function reset() {
-        console.log("reset")
-        console.log("utterances= " + utterances)
-
         var i,j;
         for(j=0;j<5;j++)
         {
@@ -60,19 +57,125 @@ Item {
             console.log("utterances= " + utterances)
             console.log("links = " + links)
 
-            for (var i=0; i < 5; i++) {
-                for (var j=0; j < 5; j++) {
-                    model.append({ link: links[j][i],
-                                     utterance: utterances[j][i] })
+//            for (var i=0; i < 5; i++) {
+//                for (var j=0; j < 5; j++) {
+//                    model.append({ link: links[j][i],
+//                                     utterance: utterances[j][i] })
+//                }
+//            }
+        }
+        return success;
+    }
+
+    // Return a string comprised of n spaces.
+    function spaces(n) {
+        var s = "";
+        for (var i=0; i < n; i++) {
+            s+=" ";
+        }
+        return s;
+    }
+
+    // For a JSON object, print to the console all the
+    // entries. Nested objects get indented according to
+    // level.
+    function logJsonRecursive(obj, level) {
+        if (typeof level === 'undefined') {
+            level = 0;
+        }
+        for (var prop in obj) {
+            var val = obj[prop];
+            console.log(spaces(level*2) + "Key:" + prop);
+            console.log(spaces(level*2) + "Value:" + val);
+            if (typeof val === 'object') {
+                logJsonRecursive(val, level+1);
+            }
+        }
+    }
+
+    FileUtils {
+        id:fileUtils
+    }
+
+    // manifestFile = full url to manifest which describes the whole file
+    // page = page name, or empty string for root page.
+    function loadFileFromObf(topDir, page) {
+
+        // Read manifest file for mappings/default page
+        var manifestFile = fileUtils.fullFile(topDir, "manifest.json");
+        if (!fileUtils.exists(manifestFile)) {
+            console.log("Cannot find file " + manifestFile);
+            return false;
+        }
+
+        var fileContent = fileUtils.read(manifestFile);
+        var manifestObj = JSON.parse(fileContent);
+        var image_paths = manifestObj["paths"]["images"];
+        var board_paths = manifestObj["paths"]["boards"];
+
+        // Default to root page if none requested
+        if (page === "") {
+            page = manifestObj["root"];
+        }
+
+        // Read requested page
+        var pageFile = fileUtils.fullFile(topDir, page);
+
+        if (!fileUtils.exists(pageFile)) {
+            console.log("Cannot find file " + pageFile);
+            return false;
+        }
+
+        fileContent = fileUtils.read(pageFile);
+        var obj = JSON.parse(fileContent);
+
+        // TEMPORARY HACK: Add "control bar" items to start of model
+        for (var i=0; i < 5; i++) {
+            model.append({ link: "",
+                           label: "",
+                           utterance: "",
+                           image_path: ""});
+        }
+        // TEMPORARY HACK
+
+        // Read all the fields we care about
+        for (var prop in obj) {
+            if (prop === "buttons") {
+                var allButtons = obj[prop];
+                // TODO: We assume buttons come in order,
+                // but they might not.
+                for (var button in allButtons) {
+                    var label = allButtons[button]["label"]
+                    var link = ""
+                    var utterance = ""
+                    var loadBoard = allButtons[button]["load_board"]
+                    if (loadBoard !== undefined) {
+                        link = loadBoard["path"]
+                    }
+                    else {
+                        utterance = label
+                    }
+                    var image_id = allButtons[button]["image_id"]
+                    var image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
+
+                    model.append({ link: link,
+                                   label: label,
+                                   utterance: utterance,
+                                   image_path: image_path});
                 }
             }
         }
-        return success;
+        return true;
     }
 
     // Create a pageset model from JS file.
     property ListModel listModel: ListModel {
         id: model
+    }
+
+    // Create a pageset model from JS file.
+    property ListModel listModelObf: ListModel {
+        id: modelObf
     }
 
 }
