@@ -93,6 +93,46 @@ Item {
         }
     }
 
+    function toHex( decString ) {
+      return  ("0"+(Number(decString).toString(16))).slice(-2).toUpperCase()
+    }
+
+    // Convert from OBF RGB: rgb(x, y, z) (in dec)
+    // to QML RGB: #RRGGBB (in hex)
+    function parseObfRgb( obfString ) {
+        if (typeof obfString === 'undefined') {
+            return "#000000"
+        }
+
+        // Strip out all whitespace
+        obfString = obfString.replace(/ /g,'');
+
+        // Extract numbers
+        var regExp = /rgb\((\d*),(\d*),(\d*)\)/i
+        var match = regExp.exec(obfString);
+
+        if (match == null || match.length < 4) {
+            console.log("Cannot parse colour "+obfString)
+            return "#000000"
+        }
+
+        // Extract colors, in hex
+        var r = toHex(match[1]);
+        var g = toHex(match[2]);
+        var b = toHex(match[3]);
+
+        if (match[1] > 255 || match[2] > 255 || match[3] > 255 ||
+            match[1] < 0 || match[2] < 0 || match[3] < 0) {
+            console.log("Cannot parse colour "+obfString)
+            return "#000000"
+        }
+
+        // Create new string
+        var qmlString = "#" + r + g + b
+        return qmlString
+    }
+
+
     FileUtils {
         id:fileUtils
     }
@@ -155,13 +195,22 @@ Item {
                     else {
                         utterance = label
                     }
+                    var bg_color = allButtons[button]["background_color"]
+                    bg_color = parseObfRgb(bg_color)
+
+                    var border_color = allButtons[button]["border_color"]
+                    border_color = parseObfRgb(border_color)
+
                     var image_id = allButtons[button]["image_id"]
                     var image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
 
                     model.append({ link: link,
                                    label: label,
                                    utterance: utterance,
-                                   image_path: image_path});
+                                   image_path: image_path,
+                                   bg_color: bg_color,
+                                   border_color: border_color
+                                 });
                 }
             }
         }

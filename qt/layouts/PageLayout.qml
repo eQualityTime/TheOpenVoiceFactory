@@ -95,9 +95,15 @@ Item {
                     }                    
                  }
             }
+
+            // padding around each button and between button edges
+            // and contents
+            property int padding: 2
+            property int borderWidth: 2
+
             Rectangle {
-                width: gridView.cellWidth*0.9
-                height: gridView.cellHeight*0.9
+                width: gridView.cellWidth - padding*2
+                height: gridView.cellHeight - padding*2
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
 
@@ -105,10 +111,20 @@ Item {
                 opacity: 0.2
                 visible: mouseArea.pressedButtons
             }
+            Rectangle {
+                width: gridView.cellWidth - padding*2
+                height: gridView.cellHeight - padding*2
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
+                color: bg_color
+                border.width: borderWidth
+                border.color: border_color
+            }
             Image {
                 height: parent.height * 0.8
                 width: parent.width * 0.8
                 anchors.top: parent.top
+                anchors.topMargin: padding*2 + borderWidth
                 anchors.horizontalCenter: parent.horizontalCenter
                 source: image_path
                 fillMode: Image.PreserveAspectFit
@@ -117,7 +133,7 @@ Item {
                 text: label
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: 10
+                anchors.bottomMargin: padding*2
                 font.pixelSize: parent.height/10
             }
         }
