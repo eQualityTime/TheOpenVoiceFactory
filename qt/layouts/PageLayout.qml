@@ -101,22 +101,14 @@ Item {
             property int padding: 2
             property int borderWidth: 2
 
-            Rectangle {
-                width: gridView.cellWidth - padding*2
-                height: gridView.cellHeight - padding*2
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
 
-                color: "grey"
-                opacity: 0.2
-                visible: mouseArea.pressedButtons
-            }
             Rectangle {
                 width: gridView.cellWidth - padding*2
                 height: gridView.cellHeight - padding*2
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 color: bg_color
+                opacity: mouseArea.pressedButtons ? 0.7 : 1
                 border.width: borderWidth
                 border.color: border_color
             }
