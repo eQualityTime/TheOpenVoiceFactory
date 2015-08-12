@@ -171,7 +171,7 @@ ApplicationWindow {
         x: bufferX
         y: bufferY
         width: 2*tileX - 2*bufferX
-        height: tileY - bufferY
+        height: tileY - bufferY*2
 
         color: "transparent"
 
