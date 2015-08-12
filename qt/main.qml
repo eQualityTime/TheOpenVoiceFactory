@@ -160,17 +160,20 @@ ApplicationWindow {
     // utterances.
     Rectangle {
         id:rect
+
+        // TODO : The size of this should be set by the pageset which
+        // defines number of items in a row of the grid.
         property int tileX: (parent.width/5)
         property int tileY: (parent.height/5)
         property int bufferX: (parent.width/80)
         property int bufferY: (parent.height/40)
 
-        x: tileX+bufferX
+        x: bufferX
         y: bufferY
         width: 2*tileX - 2*bufferX
         height: tileY - bufferY
 
-        color: "white"
+        color: "transparent"
 
         ScrollableText {
             id: stagedText

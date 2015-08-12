@@ -43,6 +43,57 @@ Item {
     // and contents
     property int padding: 2
     property int borderWidth: 2
+
+    // The control bar
+    Row {
+        width: parent.width
+        x: padding
+        y: padding
+        spacing: padding*2
+        z: 1000
+
+        // UI for staging area, which is defined up a level in main.qml.
+        // We can't do the actual staging here, since it needs to be accessible from multiple pages.
+        Rectangle {
+            width: itemWidth*2 - padding*2
+            height: itemHeight - padding*2
+            color: "white"
+            radius: width*0.02
+            border.color: "black"
+            border.width: borderWidth
+        }
+
+        // Backspace button
+        Rectangle {
+            width: itemWidth - padding*2
+            height: itemHeight - padding*2
+            color: "white"
+            radius: width*0.02
+            border.color: "black"
+            border.width: borderWidth
+        }
+
+        // Clear button
+        Rectangle {
+            width: itemWidth - padding*2
+            height: itemHeight - padding*2
+            color: "white"
+            radius: width*0.02
+            border.color: "black"
+            border.width: borderWidth
+        }
+
+        // Speak button
+        Rectangle {
+            width: itemWidth - padding*2
+            height: itemHeight - padding*2
+            color: "white"
+            radius: width*0.02
+            border.color: "black"
+            border.width: borderWidth
+        }
+    }
+
     // The grid of buttons
     GridView {
         id: gridView
