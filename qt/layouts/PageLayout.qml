@@ -111,12 +111,14 @@ Item {
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 source: image_path
+                fillMode: Image.PreserveAspectFit
             }
             Label {
                 text: label
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 10
+                font.pixelSize: parent.height/10
             }
         }
         model: pageLoader.listModel
