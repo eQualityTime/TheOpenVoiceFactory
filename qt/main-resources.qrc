@@ -7,5 +7,7 @@
         <file>SimpleButton.qml</file>
         <file alias="CommunikateFromJs.js">pagesets/CommunikateFromJs.js</file>
         <file>PageData.qml</file>
+        <file>icons/Delete.png</file>
+        <file>icons/Speak.png</file>
     </qresource>
 </RCC>

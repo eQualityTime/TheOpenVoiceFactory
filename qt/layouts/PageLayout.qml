@@ -69,30 +69,82 @@ Item {
         Rectangle {
             width: itemWidth - padding*2
             height: itemHeight - padding*2
-            color: "white"
+            color: "#CCFFCC"
             radius: width*0.02
             border.color: "black"
             border.width: borderWidth
+            opacity: mouseAreaDelete.pressedButtons ? 0.7 : 1
+
+            Rectangle {
+                id: imageRect
+                height: parent.height * 0.75
+                width: parent.width * 0.75
+                color: "transparent"
+                anchors.horizontalCenter: parent.horizontalCenter
+                Image {
+                    anchors.fill: parent
+                    source: "qrc:/icons/Delete.png"
+                    fillMode: Image.PreserveAspectFit
+                    anchors.centerIn: parent
+                }
+            }
+            Label {
+                anchors.top: imageRect.bottom
+                text: "Delete word"
+                color: "black"
+                font.pixelSize: parent.height/6
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            MouseArea {
+                id: mouseAreaDelete
+                anchors.fill: parent
+                onClicked: processClick("", "deleteword");
+            }
         }
 
         // Clear button
         Rectangle {
             width: itemWidth - padding*2
             height: itemHeight - padding*2
-            color: "white"
+            color: "#CCFFCC"
             radius: width*0.02
             border.color: "black"
             border.width: borderWidth
+            opacity: mouseAreaClear.pressedButtons ? 0.7 : 1
+            Label {
+                text: "Clear"
+                color: "black"
+                font.pixelSize: parent.height/2
+                anchors.centerIn: parent
+            }
+            MouseArea {
+                id: mouseAreaClear
+                anchors.fill: parent
+                onClicked: processClick("", "clear");
+            }
         }
 
         // Speak button
         Rectangle {
             width: itemWidth - padding*2
             height: itemHeight - padding*2
-            color: "white"
+            color: "#CCFFCC"
             radius: width*0.02
             border.color: "black"
             border.width: borderWidth
+            opacity: mouseAreaSpeak.pressedButtons ? 0.7 : 1
+            Image {
+                anchors.fill: parent
+                anchors.margins: parent.width *0.02
+                source: "qrc:/icons/Speak.png"
+                fillMode: Image.PreserveAspectFit
+                anchors.centerIn: parent
+            }
+            MouseArea {
+                id: mouseAreaSpeak
+                anchors.fill: parent
+                onClicked: processClick("", "speak");
+            }
         }
     }
 
