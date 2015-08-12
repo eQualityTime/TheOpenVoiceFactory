@@ -80,25 +80,16 @@ Item {
         }
 
         // Clear button
-        Rectangle {
+        SimpleButton {
             width: itemWidth - padding*2
             height: itemHeight - padding*2
-            color: "#CCFFCC"
+            text: "Clear"
             radius: width*0.02
+            color: "#CCFFCC"
             border.color: "black"
             border.width: borderWidth
-            opacity: mouseAreaClear.pressedButtons ? 0.7 : 1
-            Label {
-                text: "Clear"
-                color: "black"
-                font.pixelSize: parent.height/2
-                anchors.centerIn: parent
-            }
-            MouseArea {
-                id: mouseAreaClear
-                anchors.fill: parent
-                onClicked: processClick("", "clear");
-            }
+            font.pixelSize: parent.height/3
+            onClicked: processClick("", "clear");
         }
 
         // Speak button
