@@ -1,13 +1,16 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.1
+import QtGraphicalEffects 1.0
 
 import ".."
 
-Item {
+Rectangle {
     //anchors.fill: parent
 
     id: pageLayout
+
+    color: "ghostwhite"
 
     // The page name, e.g. "food".
     // Must correspond to the function called to populate the
@@ -42,7 +45,7 @@ Item {
     // Padding around each button and between button edges
     // and contents
     property int padding: 2
-    property int borderWidth: 2
+    property int borderWidth: 3
 
     // The control bar
     Row {
@@ -122,20 +125,53 @@ Item {
             width: gridView.cellWidth
             height: gridView.cellHeight
 
+            property bool isFolder: link.length > 0
+
             // This is the individual 'button'. It contains an image
             // and a label, and a mouse area to receive clicks.
             IconButton {
+                id: button
                 width: gridView.cellWidth - padding*2
                 height: gridView.cellHeight - padding*2
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                color: bg_color
-                border.width: borderWidth
+                color: isFolder ? "transparent" : bg_color
+                border.width: isFolder ? 0 : borderWidth
                 border.color: border_color
                 source: image_path
                 text: label
                 onClicked: {
                     processClick(utterance, link);
+                }
+
+                // If the folder is a link, then we use colorized backgrounds
+                // image instead of the main rectangle to create a "folder" icon
+                // of the correct color.
+                Image {
+                    z: button.z - 2
+                    visible: isFolder
+                    anchors.fill: parent
+                    source: "qrc:/icons/Folder.png"
+                    smooth: true
+
+                    ColorOverlay {
+                        anchors.fill: parent
+                        source: parent
+                        color: bg_color
+                    }
+                }
+                Image {
+                    visible: isFolder
+                    anchors.fill: parent
+                    source: "qrc:/icons/FolderBorder.png"
+                    smooth: true
+                    z: button.z - 1
+
+                    ColorOverlay {
+                        anchors.fill: parent
+                        source: parent
+                        color: border_color
+                    }
                 }
             }
         }

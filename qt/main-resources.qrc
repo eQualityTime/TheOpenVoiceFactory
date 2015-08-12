@@ -10,5 +10,7 @@
         <file>icons/Delete.png</file>
         <file>icons/Speak.png</file>
         <file>IconButton.qml</file>
+        <file>icons/Folder.png</file>
+        <file>icons/FolderBorder.png</file>
     </qresource>
 </RCC>
