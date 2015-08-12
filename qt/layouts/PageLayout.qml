@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.2
+import QtQuick.Layouts 1.1
 
 import ".."
 
@@ -15,94 +16,51 @@ Item {
     property string pageset: "" // top level, defines whole set
     property string page: ""    // individual page
 
-    Image {
-        anchors.fill: parent
-        z:0
-        source: "../" + pageLoader.imageSource
+    // This object is responsible for loading the chosen pageset.
+    PageData {
+        id: pageLoader
+        Component.onCompleted: {
+            var success = pageLoader.loadFileFromObf(pageLayout.pageset,
+                                                     pageLayout.page);
+            if (!success) {
+                app.hidePendingUtterances();
+                error.visible = "true"
+                return;
+            }
+            else {
+                app.showPendingUtterances();
+                //gridView.model = pageLoader.listModel;
+            }
+        }
     }
 
-    // The gridview of mouseareas
+    // Hardcoded to 5x5 grid.
+    // TODO: Read grid structure from OBF
+    property int itemWidth: width / 5
+    property int itemHeight: height / 5
+
+    // Padding around each button and between button edges
+    // and contents
+    property int padding: 2
+    property int borderWidth: 2
+    // The grid of buttons
     GridView {
         id: gridView
         z: 1
 
         anchors.fill: parent
 
-        // 5x5 grid.
-        // We'll add appropriate margins inside delegate
-        cellWidth: width / 5
-        cellHeight: height / 5
+        cellWidth: itemWidth
+        cellHeight: itemHeight
 
         delegate: Item {
             width: gridView.cellWidth
             height: gridView.cellHeight
-            MouseArea {
-                id: mouseArea
-                width: gridView.cellWidth*0.95
-                height: gridView.cellHeight*0.95
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
-                onClicked: {
-                    console.log(utterance);
-                    console.log(link);
-                    if (utterance.length > 0) {
-                        // If we've got a single letter, we're spelling a word
-                        // and don't want to add a space
-                        // Single-letter words such as "a" or "I" will be padded
-                        // to ensure they are identified as words, not letters.
-                        // We'll remove the padding with trim().
-                        if (utterance.length === 1) {
-                            app.appendLetter(qsTr(utterance))
-                        }
-                        else {
-                            app.appendWord(qsTr(utterance.trim()))
-                        }
-                    }
 
-                    if (link.trim().length > 0) {
-                        var cmd = link.trim();
-                        switch (cmd) {
-                        case "clear":
-                            app.resetText();
-                            break;
-                        case "deleteword":
-                            app.deleteWord();
-                            break;
-                        case "Backspace":
-                            app.backspace();
-                            break;
-                        case "speak":
-                            TTSClient.speak(app.text);
-                            break;
-                        case "1":
-                            stackView.pop();
-                            break;
-                        case "google":
-                            googlesearch();
-                            break;
-                        case "youtube":
-                            youtubesearch();
-                            break;
-                        case "twitter":
-                            tweet();break;
-                        default:
-                            stackView.push({ item: "qrc:/layouts/PageLayout.qml",
-                                             replace: stackView.depth > 1 ,
-                                             properties: {
-                                                   pageset: pageLayout.pageset,
-                                                   page: cmd } });
-                        }
-                    }                    
-                 }
-            }
-
-            // padding around each button and between button edges
-            // and contents
-            property int padding: 2
-            property int borderWidth: 2
-
-
+            // This is the individual 'button'. It contains an image
+            // and a label, and a mouse area to receive clicks.
             Rectangle {
+                id: individualButton
                 width: gridView.cellWidth - padding*2
                 height: gridView.cellHeight - padding*2
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -111,22 +69,33 @@ Item {
                 opacity: mouseArea.pressedButtons ? 0.7 : 1
                 border.width: borderWidth
                 border.color: border_color
-            }
-            Image {
-                height: parent.height * 0.8
-                width: parent.width * 0.8
-                anchors.top: parent.top
-                anchors.topMargin: padding*2 + borderWidth
-                anchors.horizontalCenter: parent.horizontalCenter
-                source: image_path
-                fillMode: Image.PreserveAspectFit
-            }
-            Label {
-                text: label
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: padding*2
-                font.pixelSize: parent.height/10
+                radius: width*0.02
+
+                Column {
+                    spacing: padding
+                    anchors.fill: parent
+                    anchors.margins: padding + borderWidth
+                    Image {
+                        height: individualButton.height*0.8
+                        width: individualButton.width*0.8
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        source: image_path
+                        fillMode: Image.PreserveAspectFit
+                    }
+                    Label {
+                        text: label
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        font.pixelSize: parent.height/10
+                    }
+                }
+
+                MouseArea {
+                    id: mouseArea
+                    anchors.fill: parent
+                    onClicked: {
+                        processClick(utterance, link);
+                     }
+                }
             }
         }
         model: pageLoader.listModel
@@ -163,20 +132,55 @@ Item {
         }
     }
 
-    PageData {
-        id: pageLoader
-        Component.onCompleted: {
-            var success = pageLoader.loadFileFromObf(pageLayout.pageset,
-                                                     pageLayout.page);
-
-            if (!success) {
-                app.hidePendingUtterances();
-                error.visible = "true"
-                return;
+    function processClick(utterance, link) {
+        console.log(utterance);
+        console.log(link);
+        if (utterance.length > 0) {
+            // If we've got a single letter, we're spelling a word
+            // and don't want to add a space
+            // Single-letter words such as "a" or "I" will be padded
+            // to ensure they are identified as words, not letters.
+            // We'll remove the padding with trim().
+            if (utterance.length === 1) {
+                app.appendLetter(qsTr(utterance))
             }
             else {
-                app.showPendingUtterances();
-                //gridView.model = pageLoader.listModel;
+                app.appendWord(qsTr(utterance.trim()))
+            }
+        }
+
+        if (link.trim().length > 0) {
+            var cmd = link.trim();
+            switch (cmd) {
+            case "clear":
+                app.resetText();
+                break;
+            case "deleteword":
+                app.deleteWord();
+                break;
+            case "Backspace":
+                app.backspace();
+                break;
+            case "speak":
+                TTSClient.speak(app.text);
+                break;
+            case "1":
+                stackView.pop();
+                break;
+            case "google":
+                googlesearch();
+                break;
+            case "youtube":
+                youtubesearch();
+                break;
+            case "twitter":
+                tweet();break;
+            default:
+                stackView.push({ item: "qrc:/layouts/PageLayout.qml",
+                                 replace: stackView.depth > 1 ,
+                                 properties: {
+                                       pageset: pageLayout.pageset,
+                                       page: cmd } });
             }
         }
     }
