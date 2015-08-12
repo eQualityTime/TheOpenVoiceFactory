@@ -169,15 +169,6 @@ Item {
         fileContent = fileUtils.read(pageFile);
         var obj = JSON.parse(fileContent);
 
-        // TEMPORARY HACK: Add "control bar" items to start of model
-        for (var i=0; i < 5; i++) {
-            model.append({ link: "",
-                           label: "",
-                           utterance: "",
-                           image_path: ""});
-        }
-        // TEMPORARY HACK
-
         // Read all the fields we care about
         for (var prop in obj) {
             if (prop === "buttons") {

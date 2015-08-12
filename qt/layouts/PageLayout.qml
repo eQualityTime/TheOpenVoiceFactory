@@ -46,7 +46,9 @@ Item {
 
     // The control bar
     Row {
+        id: controlBar
         width: parent.width
+        height: itemHeight
         x: padding
         y: padding
         spacing: padding*2
@@ -99,7 +101,10 @@ Item {
         id: gridView
         z: 1
 
-        anchors.fill: parent
+        anchors.top: controlBar.bottom
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
 
         cellWidth: itemWidth
         cellHeight: itemHeight
