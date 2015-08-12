@@ -9,5 +9,6 @@
         <file>PageData.qml</file>
         <file>icons/Delete.png</file>
         <file>icons/Speak.png</file>
+        <file>IconButton.qml</file>
     </qresource>
 </RCC>

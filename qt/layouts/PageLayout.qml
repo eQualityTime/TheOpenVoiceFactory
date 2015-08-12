@@ -66,40 +66,17 @@ Item {
         }
 
         // Backspace button
-        Rectangle {
+        IconButton {
             width: itemWidth - padding*2
             height: itemHeight - padding*2
             color: "#CCFFCC"
-            radius: width*0.02
             border.color: "black"
             border.width: borderWidth
-            opacity: mouseAreaDelete.pressedButtons ? 0.7 : 1
-
-            Rectangle {
-                id: imageRect
-                height: parent.height * 0.75
-                width: parent.width * 0.75
-                color: "transparent"
-                anchors.horizontalCenter: parent.horizontalCenter
-                Image {
-                    anchors.fill: parent
-                    source: "qrc:/icons/Delete.png"
-                    fillMode: Image.PreserveAspectFit
-                    anchors.centerIn: parent
-                }
-            }
-            Label {
-                anchors.top: imageRect.bottom
-                text: "Delete word"
-                color: "black"
-                font.pixelSize: parent.height/6
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
-            MouseArea {
-                id: mouseAreaDelete
-                anchors.fill: parent
-                onClicked: processClick("", "deleteword");
-            }
+            imageScale: 0.65
+            source: "qrc:/icons/Delete.png"
+            text: "Delete word"
+            font.pixelSize: parent.height/6
+            onClicked: processClick("", "deleteword");
         }
 
         // Clear button
@@ -125,26 +102,15 @@ Item {
         }
 
         // Speak button
-        Rectangle {
+        IconButton {
             width: itemWidth - padding*2
             height: itemHeight - padding*2
             color: "#CCFFCC"
-            radius: width*0.02
             border.color: "black"
             border.width: borderWidth
-            opacity: mouseAreaSpeak.pressedButtons ? 0.7 : 1
-            Image {
-                anchors.fill: parent
-                anchors.margins: parent.width *0.02
-                source: "qrc:/icons/Speak.png"
-                fillMode: Image.PreserveAspectFit
-                anchors.centerIn: parent
-            }
-            MouseArea {
-                id: mouseAreaSpeak
-                anchors.fill: parent
-                onClicked: processClick("", "speak");
-            }
+            source: "qrc:/icons/Speak.png"
+            imageScale: 0.95
+            onClicked: processClick("", "speak");
         }
     }
 
@@ -167,42 +133,18 @@ Item {
 
             // This is the individual 'button'. It contains an image
             // and a label, and a mouse area to receive clicks.
-            Rectangle {
-                id: individualButton
+            IconButton {
                 width: gridView.cellWidth - padding*2
                 height: gridView.cellHeight - padding*2
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 color: bg_color
-                opacity: mouseArea.pressedButtons ? 0.7 : 1
                 border.width: borderWidth
                 border.color: border_color
-                radius: width*0.02
-
-                Column {
-                    spacing: padding
-                    anchors.fill: parent
-                    anchors.margins: padding + borderWidth
-                    Image {
-                        height: individualButton.height*0.8
-                        width: individualButton.width*0.8
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        source: image_path
-                        fillMode: Image.PreserveAspectFit
-                    }
-                    Label {
-                        text: label
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        font.pixelSize: parent.height/10
-                    }
-                }
-
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    onClicked: {
-                        processClick(utterance, link);
-                     }
+                source: image_path
+                text: label
+                onClicked: {
+                    processClick(utterance, link);
                 }
             }
         }
