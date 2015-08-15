@@ -208,15 +208,12 @@ Item {
         return true;
     }
 
-    // Create a pageset model from JS file.
+    // Contents of the model that gets filled in by loading
+    // a file.
     property ListModel listModel: ListModel {
         id: model
     }
 
-    // Create a pageset model from JS file.
-    property ListModel listModelObf: ListModel {
-        id: modelObf
-    }
 
 }
 

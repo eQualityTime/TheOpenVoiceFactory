@@ -129,7 +129,7 @@ ApplicationWindow {
                              event.accepted = true;
                          }
 
-        initialItem:  PageLayout {
+        initialItem:  PageLayoutObf {
             pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
         }
 
