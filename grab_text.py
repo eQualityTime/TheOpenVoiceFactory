@@ -21,7 +21,7 @@ ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
 # Note: This may not be robust to internationalisation.
 alpha="abcdefghijklmnopqrstuvwxyz1234567890_"
 
-# Global dictionary of icons,
+#  dictionary of icons,
 # key = (row, col)
 # value = list of one or more PICTURE shapes.
 images = {};
@@ -94,18 +94,23 @@ class utterance(object):
     def __str__(self):
         return "utterance[%d][%d]=\"%s\";" % (self.column, self.row, self.text)
 
-prs = Presentation("testSuite/launch/CommuniKate20launch.pptx")
+prs = Presentation("../azuleKirsty/testSuite/launch/CommuniKate20launch.pptx")
 
 # text_runs will be populated with a list of strings,
 # one for each text run in presentation
 slide_number=1
 for slide in prs.slides:
+    print "slide number is %s" % slide_number
     title=slide_title_placeholder(slide)
     print """function %s(){
 reset();     """ % make_title(title.text)
     utterances = [["link" for x in range(5)] for x in range(5)]
     links = [["blank" for x in range(5)] for x in range(5)]
     colors = [["" for x in range(5)] for x in range(5)]
+    #  dictionary of icons,
+    # key = (row, col)
+    # value = list of one or more PICTURE shapes.
+    images = {};
 
     # First pass through the shapes populates our utterances array.
     for shape in slide.shapes:
@@ -118,7 +123,10 @@ reset();     """ % make_title(title.text)
             # where "foldedCorner" is misspelled "folderCorner" in enum/shapes.py
             if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                 links[co][ro] = "real"
-                colors[co][ro] = shape.fill.fore_color.rgb
+                try:
+                    colors[co][ro] = shape.fill.fore_color.rgb
+                except AttributeError:
+                    pass
 
         if not shape.has_text_frame:
             continue
@@ -192,10 +200,11 @@ reset();     """ % make_title(title.text)
                 composite = composite.crop(bbox)
 
                 # Save!
-                name = remove_punctuation(utterances[x][y]) + ".png";
+                name = remove_punctuation("%d-%d-"%(x,y)+utterances[x][y]) + ".png";
                 folder = "icons/"+ str(slide_number)
                 if not os.path.exists(folder):
                     os.makedirs(folder)
+                print folder + "/" + name
                 composite.save(folder + "/" + name );
 
             if links[x][y] == "real":
@@ -209,7 +218,7 @@ reset();     """ % make_title(title.text)
 
 }""" % (slide_number)
 
-    break
+    #break
     slide_number+=1
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
