@@ -187,12 +187,13 @@ ApplicationWindow {
             function updateText() {
                 var fullString = "";
                 if (queue.length > 0) {
+
+                    // First item
                     var item = queue[0];
-                    // dummy prev item to begin with
-                    var lastItem = { content: "",
-                                     isWord: false};
                     fullString += item.content;
 
+                    // All subsequent items
+                    var lastItem = item;
                     for (var i = 1; i < queue.length; i++) {
                         item = queue[i];
 
