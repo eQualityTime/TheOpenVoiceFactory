@@ -193,8 +193,10 @@ Item {
                     border_color = parseObfRgb(border_color)
 
                     var image_id = allButtons[button]["image_id"]
-                    var image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
-
+                    var image_path = ""
+                    if (typeof image_id !== "undefined") {
+                        var image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
+                    }
                     model.append({ link: link,
                                    label: label,
                                    utterance: utterance,
