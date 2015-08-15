@@ -6,7 +6,7 @@ import QtGraphicalEffects 1.0
 import ".."
 
 Rectangle {
-    //anchors.fill: parent
+    anchors.fill: parent
 
     id: pageLayout
 
@@ -15,16 +15,15 @@ Rectangle {
     // The page name, e.g. "food".
     // Must correspond to the function called to populate the
     // data, e.g. food().
-    property string pagesetType: "OBF"
-    property string pageset: "" // top level, defines whole set
     property string page: ""    // individual page
 
     // This object is responsible for loading the chosen pageset.
     PageData {
         id: pageLoader
         Component.onCompleted: {
-            var success = pageLoader.loadFileFromObf(pageLayout.pageset,
-                                                     pageLayout.page);
+            var success = pageLoader.loadFileFromJs(
+                                    "qrc:/" + page + ".js",
+                                    page);
             if (!success) {
                 app.hidePendingUtterances();
                 error.visible = "true"
@@ -32,180 +31,89 @@ Rectangle {
             }
             else {
                 app.showPendingUtterances();
-                //gridView.model = pageLoader.listModel;
             }
         }
     }
 
-    // Hardcoded to 5x5 grid.
-    // TODO: Read grid structure from OBF
-    property int itemWidth: width / 5
-    property int itemHeight: height / 5
+    // Background image for this page
+    Image {
+        anchors.fill: parent
+        z: 0
+        source: "../" + pageLoader.imageSource
+    }
 
-    // Padding around each button and between button edges
-    // and contents
+    // UI for staging area, which is defined up a level in main.qml.
+    // We can't do the actual staging here, since it needs to be accessible from multiple pages.
+    // We just provide a white background for the text.
     property int padding: 2
-    property int borderWidth: 3
+    Rectangle {
+        id: stage
+        // This is very specific to the original JS pagesets!
+        x: parent.width*0.212
+        y: parent.height*0.0165
+        width: parent.width*0.38
+        height: parent.height*0.182
 
-    // The control bar
-    Row {
-        id: controlBar
-        width: parent.width
-        height: itemHeight
-        x: padding
-        y: padding
-        spacing: padding*2
-        z: 1000
+        color: "white"
+        radius: width*0.01
 
-        // UI for staging area, which is defined up a level in main.qml.
-        // We can't do the actual staging here, since it needs to be accessible from multiple pages.
-        Rectangle {
-            width: itemWidth*2 - padding*2
-            height: itemHeight - padding*2
-            color: "white"
-            radius: width*0.02
-            border.color: "black"
-            border.width: borderWidth
+        // Whenever the size of this changes, make sure text area at top
+        // level changes too!
+        onWidthChanged: {
+            app.setStagingArea(x, y, width, height);
         }
-
-        // Backspace button
-        IconButton {
-            width: itemWidth - padding*2
-            height: itemHeight - padding*2
-            color: "#CCFFCC"
-            border.color: "black"
-            border.width: borderWidth
-            imageScale: 0.65
-            source: "qrc:/icons/Delete.png"
-            text: "Delete word"
-            font.pixelSize: parent.height/6
-            onClicked: processClick("", "deleteword");
-        }
-
-        // Clear button
-        SimpleButton {
-            width: itemWidth - padding*2
-            height: itemHeight - padding*2
-            text: "Clear"
-            radius: width*0.02
-            color: "#CCFFCC"
-            border.color: "black"
-            border.width: borderWidth
-            font.pixelSize: parent.height/3
-            onClicked: processClick("", "clear");
-        }
-
-        // Speak button
-        IconButton {
-            width: itemWidth - padding*2
-            height: itemHeight - padding*2
-            color: "#CCFFCC"
-            border.color: "black"
-            border.width: borderWidth
-            source: "qrc:/icons/Speak.png"
-            imageScale: 0.95
-            onClicked: processClick("", "speak");
+        onHeightChanged: {
+            app.setStagingArea(x, y, width, height);
         }
     }
 
-    // The grid of buttons
+
+    // The gridview of mouseareas
     GridView {
         id: gridView
         z: 1
 
-        anchors.top: controlBar.bottom
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors.fill: parent
 
-        cellWidth: itemWidth
-        cellHeight: itemHeight
+        // 5x5 grid.
+        // We'll add appropriate margins inside delegate
+        cellWidth: width / 5
+        cellHeight: height / 5
 
         delegate: Item {
             width: gridView.cellWidth
             height: gridView.cellHeight
-
-            property bool isFolder: link.length > 0
-
-            // This is the individual 'button'. It contains an image
-            // and a label, and a mouse area to receive clicks.
-            IconButton {
-                id: button
-                width: gridView.cellWidth - padding*2
-                height: gridView.cellHeight - padding*2
+            MouseArea {
+                id: mouseArea
+                width: gridView.cellWidth*0.95
+                height: gridView.cellHeight*0.95
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                color: isFolder ? "transparent" : bg_color
-                border.width: isFolder ? 0 : borderWidth
-                border.color: border_color
-                source: image_path
-                text: label
-                onClicked: {
-                    processClick(utterance, link);
-                }
+                onClicked: processClick(utterance, link);
+            }
+            Rectangle {
+                width: gridView.cellWidth*0.9
+                height: gridView.cellHeight*0.9
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
 
-                // If the folder is a link, then we use colorized backgrounds
-                // image instead of the main rectangle to create a "folder" icon
-                // of the correct color.
-                Image {
-                    z: button.z - 2
-                    visible: isFolder
-                    anchors.fill: parent
-                    source: "qrc:/icons/Folder.png"
-                    smooth: true
-
-                    ColorOverlay {
-                        anchors.fill: parent
-                        source: parent
-                        color: bg_color
-                    }
-                }
-                Image {
-                    visible: isFolder
-                    anchors.fill: parent
-                    source: "qrc:/icons/FolderBorder.png"
-                    smooth: true
-                    z: button.z - 1
-
-                    ColorOverlay {
-                        anchors.fill: parent
-                        source: parent
-                        color: border_color
-                    }
-                }
+                color: "grey"
+                opacity: 0.2
+                visible: mouseArea.pressedButtons
             }
         }
         model: pageLoader.listModel
     }
 
-    // Message for page navigation errors
-    Rectangle {
+    // Full-screen message for page navigation errors
+    ErrorPage {
         id: error
-        z: 200
-        anchors.fill: parent
-        color: "white"
+        z: 200 // TODO: relative z!
         visible: false
-
-        Text {
-            id: msg
-            anchors.horizontalCenter: parent.horizontalCenter
-            y: backButton.y - height
-            text: "Page not found"
-            width: paintedWidth
-            height: paintedHeight
-            color: "black"
-            font.pixelSize: parent.height/20
-        }
-
-        Button {
-            anchors.horizontalCenter: parent.horizontalCenter
-            y: parent.height/2
-            id: backButton
-            text: "Back"
-            onClicked: {
-                app.showPendingUtterances();
-                stackView.pop();
-            }
+        text: "Page not found"
+        onBack: {
+            app.showPendingUtterances();
+            stackView.pop();
         }
     }
 
@@ -253,11 +161,9 @@ Rectangle {
             case "twitter":
                 tweet();break;
             default:
-                stackView.push({ item: "qrc:/layouts/PageLayout.qml",
+                stackView.push({ item: "qrc:/layouts/PageLayoutJs.qml",
                                  replace: stackView.depth > 1 ,
-                                 properties: {
-                                       pageset: pageLayout.pageset,
-                                       page: cmd } });
+                                 properties: { page: cmd } });
             }
         }
     }

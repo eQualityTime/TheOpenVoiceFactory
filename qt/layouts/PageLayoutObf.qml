@@ -58,6 +58,7 @@ Rectangle {
 
         // UI for staging area, which is defined up a level in main.qml.
         // We can't do the actual staging here, since it needs to be accessible from multiple pages.
+        // We just provide a white background for the text.
         Rectangle {
             width: itemWidth*2 - padding*2
             height: itemHeight - padding*2

@@ -11,6 +11,9 @@ Item {
     property var links;
     property alias imageSource : main.src;
 
+    // This is a bit of a hack: The JS pagesets hardcode
+    // "document.main.src" as the destination for the background
+    // image. We mimic that here so that it still works.
     Item {
         id: document
         anchors.fill: parent
@@ -45,7 +48,7 @@ Item {
         links[3][0]="speak";
     }
 
-    function loadFile(inputFile, inputFunction) {
+    function loadFileFromJs(inputFile, inputFunction) {
         var success = JsLoader.loadResource(inputFile);
         if (success) {
             utterances = new2dArray(5);
@@ -54,15 +57,15 @@ Item {
             // TODO: Don't use the evil eval.
             eval("JsLoader." + inputFunction + "()");
 
-            console.log("utterances= " + utterances)
-            console.log("links = " + links)
 
-//            for (var i=0; i < 5; i++) {
-//                for (var j=0; j < 5; j++) {
-//                    model.append({ link: links[j][i],
-//                                     utterance: utterances[j][i] })
-//                }
-//            }
+            console.log("main.src:");
+            console.log(main.src);
+            for (var i=0; i < 5; i++) {
+                for (var j=0; j < 5; j++) {
+                    model.append({ link: links[j][i],
+                                     utterance: utterances[j][i] })
+                }
+            }
         }
         return success;
     }
