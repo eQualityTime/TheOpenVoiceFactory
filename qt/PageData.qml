@@ -154,6 +154,7 @@ Item {
     }
 
     function extractButtonInfo(button, topDir, image_paths) {
+        var id = button["id"]
         var label = button["label"]
         // utterance is 'vocalization', if defined, otherwise
         // defaults to 'label', unless it's a link.
@@ -177,12 +178,28 @@ Item {
         if (typeof image_id !== "undefined") {
            image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
         }
-        return { link: link,
+        return { id: id,
+                 link: link,
                  label: label,
                  utterance: utterance,
                  image_path: image_path,
                  bg_color: bg_color,
                  border_color: border_color };
+    }
+
+    function findIn2dArray(array, item) {
+        var l1 = array.length;
+        var countPrevRows = 0;
+        for(var i=0; i<l1; i++){
+            var pos = array[i].indexOf(item);
+            if(pos !== -1){
+                return countPrevRows + pos;
+            }
+            // Keep track of size of prev rows
+            // (may not all be the same)
+            countPrevRows += array[i].length;
+        }
+        return -1;
     }
 
     // manifestFile = full url to manifest which describes the whole file
@@ -217,23 +234,46 @@ Item {
         fileContent = fileUtils.read(pageFile);
         var obj = JSON.parse(fileContent);
 
+        // Pre-fill the model with the correct number of items for the
+        // grid. This is necessary since we might not read them in correct
+        // order
+        var grid = obj["grid"];
+        var grid_rows = grid["rows"];
+        var grid_cols = grid["columns"];
+        var max_items = grid_cols*grid_rows;
+        var button_order = grid["order"];
+
+        for (var i = 0; i < max_items; i++) {
+            model.append({ });
+        }
+
         // Read all the fields we care about
         for (var prop in obj) {
             if (prop === "buttons") {
                 var allButtons = obj[prop];
                 // TODO: We assume buttons come in order,
                 // but they might not.
+                var i = 0;
                 for (var buttonName in allButtons) {
                     var info = extractButtonInfo(allButtons[buttonName],
                                                  topDir,
                                                  image_paths);
-                    model.append({ link: info.link,
-                                   label: info.label,
-                                   utterance: info.utterance,
-                                   image_path: info.image_path,
-                                   bg_color: info.bg_color,
-                                   border_color: info.border_color
-                                 });
+
+                    // Find out index for this button
+                    var ind = findIn2dArray(button_order,info.id);
+                    if (ind < 0) {
+                        console.log("Cannot find index for button "+info);
+                    }
+                    else {
+                        model.set(ind, { link: info.link,
+                                         label: info.label,
+                                         utterance: info.utterance,
+                                         image_path: info.image_path,
+                                         bg_color: info.bg_color,
+                                         border_color: info.border_color
+                                       });
+                    }
+                    i++;
                 }
             }
         }
