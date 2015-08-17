@@ -199,7 +199,7 @@ Rectangle {
     function processClick(utterance, link) {
         console.log(utterance);
         console.log(link);
-        if (utterance.length > 0) {
+        if (utterance !== undefined && utterance.length > 0) {
             // If we've got a single letter, we're spelling a word
             // and don't want to add a space
             // Single-letter words such as "a" or "I" will be padded
@@ -213,7 +213,7 @@ Rectangle {
             }
         }
 
-        if (link.trim().length > 0) {
+        if (link !== undefined && link.trim().length > 0) {
             var cmd = link.trim();
             switch (cmd) {
             case "clear":
