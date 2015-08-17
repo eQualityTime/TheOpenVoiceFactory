@@ -210,7 +210,7 @@ Item {
         var manifestFile = fileUtils.fullFile(topDir, "manifest.json");
         if (!fileUtils.exists(manifestFile)) {
             console.log("Cannot find file " + manifestFile);
-            return false;
+            return null;
         }
 
         var fileContent = fileUtils.read(manifestFile);
@@ -228,7 +228,7 @@ Item {
 
         if (!fileUtils.exists(pageFile)) {
             console.log("Cannot find file " + pageFile);
-            return false;
+            return null;
         }
 
         fileContent = fileUtils.read(pageFile);
@@ -277,7 +277,7 @@ Item {
                 }
             }
         }
-        return true;
+        return { rows: grid_rows, cols: grid_cols }
     }
 
     // Contents of the model that gets filled in by loading

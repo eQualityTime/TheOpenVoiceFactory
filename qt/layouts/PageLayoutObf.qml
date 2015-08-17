@@ -23,23 +23,27 @@ Rectangle {
     PageData {
         id: pageLoader
         Component.onCompleted: {
-            var success = pageLoader.loadFileFromObf(pageLayout.pageset,
+            var output = pageLoader.loadFileFromObf(pageLayout.pageset,
                                                      pageLayout.page);
-            if (!success) {
+            if (output === null) {
                 app.hidePendingUtterances();
                 error.visible = "true"
                 return;
             }
             else {
+                nRows = output.rows;
+                nCols = output.cols;
                 app.showPendingUtterances();
             }
         }
     }
 
-    // Hardcoded to 5x5 grid.
-    // TODO: Read grid structure from OBF
-    property int itemWidth: width / 5
-    property int itemHeight: height / 5
+    // Get set by page-reading
+    property int nCols: 0
+    property int nRows: 0
+
+    property int itemWidth: width / nCols
+    property int itemHeight: height / (nRows+1)
 
     // Padding around each button and between button edges
     // and contents
