@@ -108,8 +108,6 @@ Item {
         if (typeof obfString === 'undefined') {
             return null
         }
-        console.log(obfString)
-
 
         // Strip out all whitespace
         obfString = obfString.replace(/ /g,'');
@@ -125,7 +123,6 @@ Item {
         // Check all captured values are in range
         // Start at 1 since 0 is whole matching string.
         for (var i = 1; i < match.length; i++) {
-            console.log(i + ": "+match[i])
             if (match[i] > 255 || match[i] < 0 ) {
                 console.log("Cannot parse colour "+obfString)
                 return "#000000"
@@ -148,7 +145,6 @@ Item {
         }
 
         qmlString += r + g + b
-        console.log(qmlString)
         return qmlString
     }
 
@@ -197,13 +193,15 @@ Item {
                 // but they might not.
                 for (var button in allButtons) {
                     var label = allButtons[button]["label"]
+                    // utterance is 'vocalization', if defined, otherwise
+                    // defaults to 'label', unless it's a link.
+                    var utterance = allButtons[button]["vocalization"]
                     var link = ""
-                    var utterance = ""
                     var loadBoard = allButtons[button]["load_board"]
                     if (loadBoard !== undefined) {
                         link = loadBoard["path"]
                     }
-                    else {
+                    else if (utterance === undefined){
                         utterance = label
                     }
                     var bg_color = allButtons[button]["background_color"]
