@@ -100,38 +100,55 @@ Item {
       return  ("0"+(Number(decString).toString(16))).slice(-2).toUpperCase()
     }
 
-    // Convert from OBF RGB: rgb(x, y, z) (in dec)
-    // to QML RGB: #RRGGBB (in hex)
+    // Convert from OBF RGB values to QML equivalents:
+    // rgb(x, y, z) -> #RRGGBB
+    // rgba(x, y, z, a) -> #AARRGGBB
+    // QML numbers are in hex, OBF are decimal.
     function parseObfRgb( obfString ) {
         if (typeof obfString === 'undefined') {
-            return "#000000"
+            return null
         }
+        console.log(obfString)
+
 
         // Strip out all whitespace
         obfString = obfString.replace(/ /g,'');
 
-        // Extract numbers
-        var regExp = /rgb\((\d*),(\d*),(\d*)\)/i
+        // Extract numbers, either RGB or RGBA
+        var regExp = /rgba?\((\d*),(\d*),(\d*),?(\d*)?\)/i
         var match = regExp.exec(obfString);
-
-        if (match == null || match.length < 4) {
+        if (match == null) {
             console.log("Cannot parse colour "+obfString)
             return "#000000"
+        }
+
+        // Check all captured values are in range
+        // Start at 1 since 0 is whole matching string.
+        for (var i = 1; i < match.length; i++) {
+            console.log(i + ": "+match[i])
+            if (match[i] > 255 || match[i] < 0 ) {
+                console.log("Cannot parse colour "+obfString)
+                return "#000000"
+            }
         }
 
         // Extract colors, in hex
         var r = toHex(match[1]);
         var g = toHex(match[2]);
         var b = toHex(match[3]);
-
-        if (match[1] > 255 || match[2] > 255 || match[3] > 255 ||
-            match[1] < 0 || match[2] < 0 || match[3] < 0) {
-            console.log("Cannot parse colour "+obfString)
-            return "#000000"
+        var a = null;
+        if (match.length > 4 && typeof match[4] != 'undefined') {
+            a = toHex(match[4]);
         }
 
         // Create new string
-        var qmlString = "#" + r + g + b
+        var qmlString = "#";
+        if (a != null) {
+            qmlString += a;
+        }
+
+        qmlString += r + g + b
+        console.log(qmlString)
         return qmlString
     }
 
