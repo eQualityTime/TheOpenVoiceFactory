@@ -153,6 +153,38 @@ Item {
         id:fileUtils
     }
 
+    function extractButtonInfo(button, topDir, image_paths) {
+        var label = button["label"]
+        // utterance is 'vocalization', if defined, otherwise
+        // defaults to 'label', unless it's a link.
+        var utterance = button["vocalization"]
+        var link = ""
+        var loadBoard = button["load_board"]
+        if (loadBoard !== undefined) {
+            link = loadBoard["path"]
+        }
+        else if (utterance === undefined){
+            utterance = label
+        }
+        var bg_color = button["background_color"]
+        bg_color = parseObfRgb(bg_color)
+
+        var border_color = button["border_color"]
+        border_color = parseObfRgb(border_color)
+
+        var image_id = button["image_id"]
+        var image_path = ""
+        if (typeof image_id !== "undefined") {
+           image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
+        }
+        return { link: link,
+                 label: label,
+                 utterance: utterance,
+                 image_path: image_path,
+                 bg_color: bg_color,
+                 border_color: border_color };
+    }
+
     // manifestFile = full url to manifest which describes the whole file
     // page = page name, or empty string for root page.
     function loadFileFromObf(topDir, page) {
@@ -191,36 +223,16 @@ Item {
                 var allButtons = obj[prop];
                 // TODO: We assume buttons come in order,
                 // but they might not.
-                for (var button in allButtons) {
-                    var label = allButtons[button]["label"]
-                    // utterance is 'vocalization', if defined, otherwise
-                    // defaults to 'label', unless it's a link.
-                    var utterance = allButtons[button]["vocalization"]
-                    var link = ""
-                    var loadBoard = allButtons[button]["load_board"]
-                    if (loadBoard !== undefined) {
-                        link = loadBoard["path"]
-                    }
-                    else if (utterance === undefined){
-                        utterance = label
-                    }
-                    var bg_color = allButtons[button]["background_color"]
-                    bg_color = parseObfRgb(bg_color)
-
-                    var border_color = allButtons[button]["border_color"]
-                    border_color = parseObfRgb(border_color)
-
-                    var image_id = allButtons[button]["image_id"]
-                    var image_path = ""
-                    if (typeof image_id !== "undefined") {
-                       image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
-                    }
-                    model.append({ link: link,
-                                   label: label,
-                                   utterance: utterance,
-                                   image_path: image_path,
-                                   bg_color: bg_color,
-                                   border_color: border_color
+                for (var buttonName in allButtons) {
+                    var info = extractButtonInfo(allButtons[buttonName],
+                                                 topDir,
+                                                 image_paths);
+                    model.append({ link: info.link,
+                                   label: info.label,
+                                   utterance: info.utterance,
+                                   image_path: info.image_path,
+                                   bg_color: info.bg_color,
+                                   border_color: info.border_color
                                  });
                 }
             }
