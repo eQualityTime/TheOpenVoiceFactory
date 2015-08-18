@@ -13,12 +13,33 @@ from PIL import Image
 
 import uuid
 
-COL_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
-             2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
-             4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
-ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
-             5610125: 3, 6095999: 3, 7314625: 4, 7340121: 4, 7340600: 4}
 
+COL_TABLE = {
+
+                152404:  0,
+                1845122: 1,
+                1874564: 1,
+                3504321: 2,
+                3505369: 2,
+                3541832: 2,
+                5225484: 3,
+                5226008: 3,
+                5576358:3
+             }
+ROW_TABLE = {0: 0,
+                152400:0,
+                152402:0,
+                175371:0,
+                2415785:1,
+                2415786:1,
+                2415786:1,
+                4697109:2,
+                4700413:2,
+                4700414:2,
+                6963797:3,
+                6963797:3,
+                6963798:3
+}
 
 # Note: This may not be robust to internationalisation.
 alpha = "abcdefghijklmnopqrstuvwxyz1234567890_"
@@ -91,7 +112,7 @@ def get_row(topPos):
 def get_index(leftPos, topPos):
         co = get_column(leftPos)
         ro = get_row(topPos)
-        return ro*5 + co
+        return ro*4 + co
 
 
 class utterance(object):
@@ -114,9 +135,9 @@ class utterance(object):
 
 
 def read_utterances_and_links(slide):
-        utterances = [["link" for x in range(5)] for x in range(5)]
-        links = [["blank" for x in range(5)] for x in range(5)]
-        colors = [["" for x in range(5)] for x in range(5)]
+        utterances = [["link" for x in range(4)] for x in range(4)]
+        links = [["blank" for x in range(4)] for x in range(4)]
+        colors = [["" for x in range(4)] for x in range(4)]
         #  dictionary of icons,
         # key = (row, col)
         # value = list of one or more PICTURE shapes.
@@ -126,46 +147,55 @@ def read_utterances_and_links(slide):
         for shape in slide.shapes:
                 co = get_column(shape.top)
                 ro = get_row(shape.left)
-
-                if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-                        if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
-                                links[co][ro] = "real"
-                                try:
-                                        colors[co][
-                                            ro] = shape.fill.fore_color.rgb
-                                except AttributeError:
-                                        pass
-
+                try:
+                    if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+                            if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
+                                    links[co][ro] = "real"
+                                    try:
+                                            colors[co][
+                                                ro] = shape.fill.fore_color.rgb
+                                    except AttributeError:
+                                            pass
+                except:
+                    continue
                 if not shape.has_text_frame:
                         continue
+                text = utterances[co][ro]
+                if "link" in utterances[co][ro]:
+                    text=""
 
-                text = ""
+                if  "Yes" in utterances[co][ro]:
+                    continue
                 for paragraph in shape.text_frame.paragraphs:
                         for run in paragraph.runs:
                                 text += run.text.encode('ascii', 'ignore')
                 if text != "":
                         # add the if shape_type is text box
-
                         utterances[co][ro] = text
+#                print "%s, %d, %d, [%d][%d]" % (text.rjust(15," "), shape.top,shape.left,co,ro)
         return (utterances, links, colors)
 
 
 def export_images(slide, utterances):
-"""     Second pass through shapes list finds images and saves them.
+        """     Second pass through shapes list finds images and saves them.
         We have to do this separately so it's guaranteed we already know what to
-         name the images!"""
+        name the images!"""
         for shape in slide.shapes:
-                if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                        co = get_column(shape.top)
-                        ro = get_row(shape.left)
+            try:
 
-                        if (co, ro) not in images:
-                                images[co, ro] = []
-                        images[co, ro].append(shape)
+                    if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
+                            co = get_column(shape.top)
+                            ro = get_row(shape.left)
+
+                            if (co, ro) not in images:
+                                    images[co, ro] = []
+                            images[co, ro].append(shape)
+            except:
+                continue
 
         # Compose each icon out of all the images in the grid cell.
-        for x in range(5):
-                for y in range(5):
+        for x in range(4):
+                for y in range(4):
                         if (x, y) in images:
                                 # Go through all the images, compute bounding
                                 # box.
@@ -232,18 +262,24 @@ def export_images(slide, utterances):
                                 if not os.path.exists(folder):
                                         os.makedirs(folder)
                                 composite.save(folder + "/" + name)
-
+def get_slide_title(slide):
+        tag = "unknown"
+        try:
+            tag = slide_title_placeholder(slide).text
+        except:
+            pass
+        return tag
 
 def process_slide(slide, slide_number):
         print "slide number is %s" % slide_number
-        title = slide_title_placeholder(slide)
+        tag=get_slide_title(slide)
         print """function %s(){
-reset();     """ % make_title(title.text)
+reset();     """ % make_title(tag)
         (utterances, links, colors) = read_utterances_and_links(slide)
 
         export_images(slide, utterances)
-        for x in range(5):
-                for y in range(5):
+        for x in range(4):
+                for y in range(4):
 
                         if links[x][y] == "real":
                                 print "     links[%d][%d]=\"%s\";" % (y, x, make_title(utterances[x][y]))
@@ -252,12 +288,12 @@ reset();     """ % make_title(title.text)
                                         print "utterances[%d][%d]=\"%s\";" % (y, x, utterances[x][y])
                                 else:
                                         raise ValueError("You never listen.")
-        print """ document.main.src="images/originalSlides/Slide%02d.png";
+        print """ document.main.src="images/originalSlides/CK15+.%03d.png";
 
 }""" % (slide_number)
 
 
-prs = Presentation("../azuleKirsty/testSuite/launch/CommuniKate20launch.pptx")
+prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
 
 # text_runs will be populated with a list of strings,
 # one for each text run in presentation
@@ -265,5 +301,6 @@ slide_number = 1
 for slide in prs.slides:
         process_slide(slide, slide_number)
         slide_number += 1
-        break
+        if slide_number==15:
+            break
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

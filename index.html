@@ -5,22 +5,18 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script language="javascript" src="lib/sha1.js"></script> 
 <script language="javascript" type="text/javascript">
-utterances=new Array(5);
-utterances[0]=new Array(5);
-utterances[1]=new Array(5);
-utterances[2]=new Array(5);
-utterances[3]=new Array(5);
-utterances[4]=new Array(5);
-utterances[5]=new Array(5);
+utterances=new Array(4);
+utterances[0]=new Array(4);
+utterances[1]=new Array(4);
+utterances[2]=new Array(4);
+utterances[3]=new Array(4);
 //the utterances array contain the actual text that can be placed on the message window
 
-links=new Array(5);
-links[0]=new Array(5);
-links[1]=new Array(5);
-links[2]=new Array(5);
-links[3]=new Array(5);
-links[4]=new Array(5);
-links[5]=new Array(5);
+links=new Array(4);
+links[0]=new Array(4);
+links[1]=new Array(4);
+links[2]=new Array(4);
+links[3]=new Array(4);
 //the links array contains keywords that perform different functions,  the most obvious one is that if the links array contains the name of another page, then it will cause a jump to that page when activated.  Other options include things like 'clear' and 'delete word' 
 
 //Note that if the utterance and links are are *both* set, then the utterance will activate and *then* the link will activate.
@@ -70,9 +66,9 @@ function tube(){
 
 function reset(){
 	var i,j
-		for(j=0;j<5;j++)
+		for(j=0;j<4;j++)
 		{
-			for(i=0;i<5;i++)
+			for(i=0;i<4;i++)
 			{
 				utterances[i][j]="link";
 				links[i][j]="blank";
@@ -176,11 +172,6 @@ $(window).load(function() {
 <area shape="rect" coords="432,324,576,432" onClick="add(3,3)"  alt="Way!">
 <area shape="rect" coords="576,324,720,432" onClick="add(4,3)"  alt="Way!">
 
-<area shape="rect" coords="000,432,144,540" onClick="add(0,4)"  alt="Way!">
-<area shape="rect" coords="144,432,288,540" onClick="add(1,4)"  alt="Way!">
-<area shape="rect" coords="288,432,432,540" onClick="add(2,4)"  alt="Way!">
-<area shape="rect" coords="432,432,576,540" onClick="add(3,4)"  alt="Way!">
-<area shape="rect" coords="576,432,720,540" onClick="add(4,4)"  alt="Way!">
 </map>
 
 <!--END THE MAIN MAP-->
