@@ -1,5 +1,8 @@
 #!/usr/bin/python
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
+#Todo - make the class a relevent thing
+#Make the images export more effectively
+
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
