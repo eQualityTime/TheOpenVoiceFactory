@@ -86,7 +86,10 @@ def slide_title_placeholder(slide):
 
 
 def make_title(label):
-        return remove_punctuation(label.lower().strip().replace(" ", "_"))
+        tag =remove_punctuation(label.lower().strip().replace(" ", "_"))
+        if tag=="":
+            tag="unknown"
+        return tag
 
 # Returns the closest key in the dictionary, for numerical keys.
 
@@ -271,13 +274,13 @@ def get_slide_title(slide):
         return tag
 
 def process_slide(slide, slide_number):
-        print "slide number is %s" % slide_number
+#        print "slide number is %s" % slide_number
         tag=get_slide_title(slide)
         print """function %s(){
 reset();     """ % make_title(tag)
         (utterances, links, colors) = read_utterances_and_links(slide)
 
-        export_images(slide, utterances)
+        #export_images(slide, utterances)
         for x in range(4):
                 for y in range(4):
 
@@ -288,7 +291,7 @@ reset();     """ % make_title(tag)
                                         print "utterances[%d][%d]=\"%s\";" % (y, x, utterances[x][y])
                                 else:
                                         raise ValueError("You never listen.")
-        print """ document.main.src="images/originalSlides/CK15+.%03d.png";
+        print """ document.main.src="images/CK15+.%03d.png";
 
 }""" % (slide_number)
 
@@ -301,6 +304,5 @@ slide_number = 1
 for slide in prs.slides:
         process_slide(slide, slide_number)
         slide_number += 1
-        if slide_number==15:
-            break
+#            break
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
