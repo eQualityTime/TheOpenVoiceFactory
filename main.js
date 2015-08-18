@@ -283,7 +283,7 @@ utterances[3][0]="No";
      links[3][1]="kitchen_things";
      links[0][2]="clothes";
      links[1][2]="furniture";
-     links[2][2]="fast_foodthings_that_help";
+     links[2][2]="things_that_help";
      links[3][2]="toiletries";
      links[0][3]="money";
      links[1][3]="transport";
@@ -481,6 +481,7 @@ utterances[3][3]="plum";
  document.main.src="images/CK15+.023.png";
 
 }
+
 function drinks(){
 reset();     
 utterances[0][0]="Yes";
@@ -1524,7 +1525,7 @@ utterances[0][2]="to do something else";
 utterances[1][2]="to watch something";
 utterances[2][2]="to go on holiday";
 utterances[3][2]="to have a go";
-     links[0][3]="my_storiesmy_stories";
+     links[0][3]="my_stories";
 utterances[1][3]="to listen to something";
 utterances[2][3]="to swim";
 utterances[3][3]="to go home";
@@ -1594,7 +1595,7 @@ utterances[3][3]="Fast forward";
  document.main.src="images/CK15+.076.png";
 
 }
-function cooking_words(){
+function cooking(){
 reset();     
 utterances[0][0]="Yes";
 utterances[1][0]="link";
@@ -1615,7 +1616,7 @@ utterances[3][3]="More action wordsdont burn it";
  document.main.src="images/CK15+.077.png";
 
 }
-function unknown(){
+function little_words(){
 reset();     
 utterances[0][0]="Yes";
 utterances[1][0]="link";
