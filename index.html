@@ -82,6 +82,9 @@ links[3][0]="speak";
 function add(i,j) {
 	if(utterances[i][j]!="link")
 	{ 
+		if(utterances[i][j]=="Clear"){
+			document.myform.reset();return;
+		}
 		if(utterances[i][j].length==1){//so that we can spell with the single letter buttons
 			document.myform.outputtext.value += utterances[i][j];
 		}else{
@@ -136,7 +139,7 @@ $(window).load(function() {
 <body onload="top_page()">
 <div class="loader" style=" position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999; background: url('interface/page-loader.gif') 50% 50% no-repeat rgb(249,249,249); " ></div><!--Used to put in the loading graphic--> 
 <!--START THE FOUR CONTROLS AT THE TOP OF THE PAGE--> 
-<table border=0px><tr><td><form name="myform"> <textarea name="outputtext" style="font-size: 18pt; height:98px; width:415px ;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position:absolute; left:160px; top:126px;"></textarea>
+<table border=0px><tr><td><form name="myform"> <textarea name="outputtext" style="font-size: 18pt; height:123px; width:345px ;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position:absolute; left:194px; top:128px;"></textarea>
 </form></td><td>
 <img onclick="makeWav()" src="interface/speak.png" height=100>
 <img onclick="image()" src="interface/google.jpg" height=100>
@@ -148,29 +151,25 @@ $(window).load(function() {
 <!--START THE MAIN MAP --> 
 <img name ="main" src="images/1.jpg" height=540 width=720 usemap="#voicemap" />
 <map name ="voicemap">
-<area shape="rect" coords="000,000,144,108" onClick="add(0,0)"  alt="Way!">
-<area shape="rect" coords="144,000,288,108" onClick="add(1,0)"  alt="Way!">
-<area shape="rect" coords="288,000,432,108" onClick="add(2,0)"  alt="Way!">
-<area shape="rect" coords="432,000,576,108" onClick="add(3,0)"  alt="Way!">
-<area shape="rect" coords="576,000,720,108" onClick="add(4,0)"  alt="Way!">
+<area shape="rect" coords="000,000,180,135" onClick="add(0,0)"  alt="Way!">
+<area shape="rect" coords="180,000,360,135" onClick="add(1,0)"  alt="Way!">
+<area shape="rect" coords="360,000,540,135" onClick="add(2,0)"  alt="Way!">
+<area shape="rect" coords="540,000,720,135" onClick="add(3,0)"  alt="Way!">
 
-<area shape="rect" coords="000,108,144,216" onClick="add(0,1)"  alt="Way!">
-<area shape="rect" coords="144,108,288,216" onClick="add(1,1)"  alt="Way!">
-<area shape="rect" coords="288,108,432,216" onClick="add(2,1)"  alt="Way!">
-<area shape="rect" coords="432,108,576,216" onClick="add(3,1)"  alt="Way!">
-<area shape="rect" coords="576,108,720,216" onClick="add(4,1)"  alt="Way!">
+<area shape="rect" coords="000,135,180,270" onClick="add(0,1)"  alt="Way!">
+<area shape="rect" coords="180,135,360,270" onClick="add(1,1)"  alt="Way!">
+<area shape="rect" coords="360,135,540,270" onClick="add(2,1)"  alt="Way!">
+<area shape="rect" coords="540,135,720,270" onClick="add(3,1)"  alt="Way!">
 
-<area shape="rect" coords="000,216,144,324" onClick="add(0,2)"  alt="Way!">
-<area shape="rect" coords="144,216,288,324" onClick="add(1,2)"  alt="Way!">
-<area shape="rect" coords="288,216,432,324" onClick="add(2,2)"  alt="Way!">
-<area shape="rect" coords="432,216,576,324" onClick="add(3,2)"  alt="Way!">
-<area shape="rect" coords="576,216,720,324" onClick="add(4,2)"  alt="Way!">
+<area shape="rect" coords="000,270,180,405" onClick="add(0,2)"  alt="Way!">
+<area shape="rect" coords="180,270,360,405" onClick="add(1,2)"  alt="Way!">
+<area shape="rect" coords="360,270,540,405" onClick="add(2,2)"  alt="Way!">
+<area shape="rect" coords="540,270,720,405" onClick="add(3,2)"  alt="Way!">
 
-<area shape="rect" coords="000,324,144,432" onClick="add(0,3)"  alt="Way!">
-<area shape="rect" coords="144,324,288,432" onClick="add(1,3)"  alt="Way!">
-<area shape="rect" coords="288,324,432,432" onClick="add(2,3)"  alt="Way!">
-<area shape="rect" coords="432,324,576,432" onClick="add(3,3)"  alt="Way!">
-<area shape="rect" coords="576,324,720,432" onClick="add(4,3)"  alt="Way!">
+<area shape="rect" coords="000,405,180,540" onClick="add(0,3)"  alt="Way!">
+<area shape="rect" coords="180,405,360,540" onClick="add(1,3)"  alt="Way!">
+<area shape="rect" coords="360,405,540,540" onClick="add(2,3)"  alt="Way!">
+<area shape="rect" coords="540,405,720,540" onClick="add(3,3)"  alt="Way!">
 
 </map>
 

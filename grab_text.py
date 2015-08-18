@@ -174,7 +174,7 @@ def read_utterances_and_links(slide):
                                 text += run.text.encode('ascii', 'ignore')
                 if text != "":
                         # add the if shape_type is text box
-                        utterances[co][ro] = text
+                        utterances[co][ro] = text.strip()
 #                print "%s, %d, %d, [%d][%d]" % (text.rjust(15," "), shape.top,shape.left,co,ro)
         return (utterances, links, colors)
 
