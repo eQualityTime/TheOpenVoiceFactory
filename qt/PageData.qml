@@ -153,6 +153,38 @@ Item {
         id:fileUtils
     }
 
+    // In the manifest.JSON, images are presented as a simple map, e.g.:
+    // "images": {
+    //   "af4183ed5": "images/im_af4183ed5.png",
+    //   "06f83586a": "images/im_06f83586a.png",
+    //   "6da965ab4": "images/im_6da965ab4.png",
+    //  }
+    // In individual page files with embedded images, we have a list instead:
+    // "images": [
+    //  {
+    //    "id": 1,
+    //    "data": "data:image/png;base64,iVBORw0KG...."
+    //  }
+    // {
+    //    "id": 2,
+    //    "data": "data:image/png;base64,dbH5s0if...."
+    //  }
+    // ]
+    // This function converts the latter to:
+    //  {
+    //   "1": "data:image/png;base64,iVBORw0KG....",
+    //   "2": "data:image/png;base64,dbH5s0if...."
+    //  }
+    function convertImageArrayToMap(image_array) {
+      var n = image_array.length;
+      var map = {};
+      for (var i = 0; i < n; i++) {
+        var im = image_array[i];
+        map[im["id"]]  = im["data"];
+      }
+      return map;
+    }
+
     function extractButtonInfo(button, topDir, image_paths) {
         var id = button["id"]
         var label = button["label"]
@@ -176,7 +208,14 @@ Item {
         var image_id = button["image_id"]
         var image_path = ""
         if (typeof image_id !== "undefined") {
-           image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
+            if (typeof image_id == "number") {
+                // Raw data URI
+                image_path = image_paths[image_id];
+            }
+            else {
+                // File reference
+                image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
+            }
         }
         return { id: id,
                  link: link,
@@ -216,6 +255,7 @@ Item {
         var fileContent = fileUtils.read(manifestFile);
         var manifestObj = JSON.parse(fileContent);
         var image_paths = manifestObj["paths"]["images"];
+
         var board_paths = manifestObj["paths"]["boards"];
 
         // Default to root page if none requested
@@ -247,13 +287,16 @@ Item {
             model.append({ });
         }
 
+        // If the manifest didn't give us an image map, then we'll look for
+        // one in the individual page...
+        if (typeof image_paths === 'undefined') {
+            image_paths = convertImageArrayToMap(obj["images"]);
+        }
+
         // Read all the fields we care about
         for (var prop in obj) {
             if (prop === "buttons") {
                 var allButtons = obj[prop];
-                // TODO: We assume buttons come in order,
-                // but they might not.
-                var i = 0;
                 for (var buttonName in allButtons) {
                     var info = extractButtonInfo(allButtons[buttonName],
                                                  topDir,
