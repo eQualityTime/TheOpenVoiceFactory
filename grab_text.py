@@ -11,51 +11,6 @@ import io
 import os
 from PIL import Image
 
-class Locator:
-
-    ROW_TABLE = {
-
-        152404:  0,
-        1845122: 1,
-        1874564: 1,
-        3504321: 2,
-        3505369: 2,
-        3541832: 2,
-        5225484: 3,
-        5226008: 3,
-        5576358: 3
-        }
-
-    COL_TABLE = {
-        0: 0,
-        152400: 0,
-        152402: 0,
-        175371: 0,
-        2415785: 1,
-        2415786: 1,
-        2415786: 1,
-        4697109: 2,
-        4700413: 2,
-        4700414: 2,
-        6963797: 3,
-        6963798: 3
-        }
-    @staticmethod
-    def get_closest_key(dict, inKey):
-            "Returns the closest key in the dictionary, for numerical keys."
-            # from http://stackoverflow.com/a/7934624/170243
-            if inKey in dict:
-                    return inKey
-            else:
-                    return min(dict.keys(), key=lambda k: abs(k - inKey))
-
-    @staticmethod
-    def get_cr(topPos,leftPos ):
-            col = Locator.get_closest_key(Locator.COL_TABLE, leftPos)
-            row = Locator.get_closest_key(Locator.ROW_TABLE, topPos)
-            return (Locator.COL_TABLE[col],Locator.ROW_TABLE[row])
-
-
 
 # Note: This may not be robust to internationalisation.
 alpha = "abcdefghijklmnopqrstuvwxyz1234567890_"
@@ -73,7 +28,6 @@ def resizeImage(image, scaleFactor):
         return image.resize(newSize, Image.ANTIALIAS)
 
 
-
 def remove_punctuation(s):
         s_sans_punct = ""
         for letter in s:
@@ -89,6 +43,51 @@ def make_title(label):
                 tag = "unknown"
         return tag
 
+
+class Locator:
+
+        ROW_TABLE = {
+
+            152404:  0,
+            1845122: 1,
+            1874564: 1,
+            3504321: 2,
+            3505369: 2,
+            3541832: 2,
+            5225484: 3,
+            5226008: 3,
+            5576358: 3
+            }
+
+        COL_TABLE = {
+            0: 0,
+            152400: 0,
+            152402: 0,
+            175371: 0,
+            2415785: 1,
+            2415786: 1,
+            2415786: 1,
+            4697109: 2,
+            4700413: 2,
+            4700414: 2,
+            6963797: 3,
+            6963798: 3
+            }
+
+        @staticmethod
+        def get_closest_key(dict, inKey):
+                "Returns the closest key in the dictionary, for numerical keys."
+                # from http://stackoverflow.com/a/7934624/170243
+                if inKey in dict:
+                        return inKey
+                else:
+                        return min(dict.keys(), key=lambda k: abs(k - inKey))
+
+        @staticmethod
+        def get_cr(topPos, leftPos):
+                col = Locator.get_closest_key(Locator.COL_TABLE, leftPos)
+                row = Locator.get_closest_key(Locator.ROW_TABLE, topPos)
+                return (Locator.COL_TABLE[col], Locator.ROW_TABLE[row])
 
 
 class Grid:
@@ -109,60 +108,59 @@ class Grid:
                     ["" for x in range(self.grid_width)]
                     for x in range(self.grid_width)]
                 self.tag = "unknown"
-                # First pass through the shapes populates our self.utterances
-                # array and the title
                 for shape in slide.shapes:
+                        self.process_shape(shape)
+
+        def process_shape(self, shape):
+                try:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
-                        (co,ro) = Locator.get_cr(shape.top,shape.left)
-                        try:
-                                if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-                                        if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
-                                                self.links[co][ro] = "real"
-                                                self.colors[co][
-                                                    ro] = shape.fill.fore_color.rgb
-                        except:
-                                continue
+                        (co, ro) = Locator.get_cr(shape.top, shape.left)
+                        if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+                                if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
+                                        self.links[co][ro] = "real"
+                                        self.colors[co][
+                                            ro] = shape.fill.fore_color.rgb
                         if not shape.has_text_frame:
-                                continue
+                                return
                         text = self.utterances[co][ro]
                         if "link" in self.utterances[co][ro]:
                                 text = ""
-
                         if "Yes" in self.utterances[co][ro]:
-                                continue #hacky, very hacky...
+                                return
                         for paragraph in shape.text_frame.paragraphs:
-                                for run in paragraph.runs:
-                                        text += run.text.encode('ascii',
-                                                                'ignore')
+                                text +="".join([run.text.encode('ascii', 'ignore') for run in paragraph.runs])
                         if text != "":
                                 # add the if shape_type is text box
                                 self.utterances[co][ro] = text.strip()
+                except:
+                        return
 
         def __str__(self):
-                return_me = []
-                return_me.append("""function %s(){
-reset();     """ % make_title(self.tag))
-                for col in range(self.grid_width):
-                        for row in range(self.grid_width):
-                                if self.links[row][col] == "real":
-                                        return_me.append(
-                                            "     links[%d][%d]=\"%s\";" %
-                                            (row, col, make_title(
-                                                self.utterances[row][col])))
-                                else:
-                                        if self.links[row][col] == "blank":
-                                                return_me.append(
-                                                    "utterances[%d][%d]=\"%s\";" %
-                                                    (row, col, self.utterances[row][col]))
-                                        else:
-                                                raise ValueError(
-                                                    "You never listen.")
-                return_me.append(""" document.main.src="images/CK15+.%03d.png";
+                body = "\n".join(
+                    [ (self.string_from_cell(row, col))
+                        for col in range (self.grid_width)
+                        for row in range(self.grid_width)])
+                return """
+function %s(){
+reset();
+%s
+document.main.src="images/CK15+.%03d.png";
 
-}\n""" % (slide_number))
-                return "\n".join(return_me)
+}""" % (make_title(self.tag), body, slide_number)
+
+        def string_from_cell(self, row, col):
+                if self.links[row][col] == "real":
+                        return "     links[%d][%d]=\"%s\";" % (
+                            row, col, make_title(self.utterances[row][col]))
+                else:
+                        if self.links[row][col] == "blank":
+                                return "utterances[%d][%d]=\"%s\";" % (
+                                    row, col, self.utterances[row][col])
+                        else:
+                                raise ValueError(
+                                    "You never listen.")
 
 
 def export_images(slide, utterances):
@@ -173,7 +171,7 @@ def export_images(slide, utterances):
                 try:
 
                         if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                                (co,ro) = Locator.get_cr(shape.top,shape.left)
+                                (co, ro) = Locator.get_cr(shape.top, shape.left)
 
                                 if (co, ro) not in images:
                                         images[co, ro] = []
