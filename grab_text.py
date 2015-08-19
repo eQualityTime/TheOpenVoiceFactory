@@ -1,7 +1,7 @@
 #!/usr/bin/python
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
-#Todo - make the class a relevent thing
-#Make the images export more effectively
+# Todo - make the class a relevent thing
+# Make the images export more effectively
 
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
@@ -11,35 +11,51 @@ import io
 import os
 from PIL import Image
 
-import uuid
+class Locator:
+
+    ROW_TABLE = {
+
+        152404:  0,
+        1845122: 1,
+        1874564: 1,
+        3504321: 2,
+        3505369: 2,
+        3541832: 2,
+        5225484: 3,
+        5226008: 3,
+        5576358: 3
+        }
+
+    COL_TABLE = {
+        0: 0,
+        152400: 0,
+        152402: 0,
+        175371: 0,
+        2415785: 1,
+        2415786: 1,
+        2415786: 1,
+        4697109: 2,
+        4700413: 2,
+        4700414: 2,
+        6963797: 3,
+        6963798: 3
+        }
+    @staticmethod
+    def get_closest_key(dict, inKey):
+            "Returns the closest key in the dictionary, for numerical keys."
+            # from http://stackoverflow.com/a/7934624/170243
+            if inKey in dict:
+                    return inKey
+            else:
+                    return min(dict.keys(), key=lambda k: abs(k - inKey))
+
+    @staticmethod
+    def get_cr(topPos,leftPos ):
+            col = Locator.get_closest_key(Locator.COL_TABLE, leftPos)
+            row = Locator.get_closest_key(Locator.ROW_TABLE, topPos)
+            return (Locator.COL_TABLE[col],Locator.ROW_TABLE[row])
 
 
-COL_TABLE = {
-
-                152404:  0,
-                1845122: 1,
-                1874564: 1,
-                3504321: 2,
-                3505369: 2,
-                3541832: 2,
-                5225484: 3,
-                5226008: 3,
-                5576358:3
-             }
-ROW_TABLE = {0: 0,
-                152400:0,
-                152402:0,
-                175371:0,
-                2415785:1,
-                2415786:1,
-                2415786:1,
-                4697109:2,
-                4700413:2,
-                4700414:2,
-                6963797:3,
-                6963797:3,
-                6963798:3
-}
 
 # Note: This may not be robust to internationalisation.
 alpha = "abcdefghijklmnopqrstuvwxyz1234567890_"
@@ -56,13 +72,6 @@ def resizeImage(image, scaleFactor):
                    scaleFactor*oldSize[1])
         return image.resize(newSize, Image.ANTIALIAS)
 
-# Helper for testing - generate unique chars.
-
-
-def getShortUuid():
-        u = str(uuid.uuid1())
-        u = u.split("-")[0]
-        return u
 
 
 def remove_punctuation(s):
@@ -74,109 +83,86 @@ def remove_punctuation(s):
 # from http://openbookproject.net/thinkcs/python/english3e/strings.html
 
 
-def slide_title_placeholder(slide):
-        """from https://github.com/scanny/python-pptx/issues
-        /153#issuecomment-84475019"""
-        for shape in slide.shapes:
-                if not shape.is_placeholder:
-                        continue
-                if shape.placeholder_format.idx == 0:
-                        return shape
-                return None
-
-
 def make_title(label):
-        tag =remove_punctuation(label.lower().strip().replace(" ", "_"))
-        if tag=="":
-            tag="unknown"
+        tag = remove_punctuation(label.lower().strip().replace(" ", "_"))
+        if tag == "":
+                tag = "unknown"
         return tag
 
-# Returns the closest key in the dictionary, for numerical keys.
 
 
-def get_closest_key(dict, inKey):
-        # from http://stackoverflow.com/a/7934624/170243
-        if inKey in dict:
-                return inKey
-        else:
-                return min(dict.keys(), key=lambda k: abs(k - inKey))
-
-
-def get_column(leftPos):
-        key = get_closest_key(COL_TABLE, leftPos)
-        return COL_TABLE[key]
-
-
-def get_row(topPos):
-        key = get_closest_key(ROW_TABLE, topPos)
-        return ROW_TABLE[key]
-
-
-def get_index(leftPos, topPos):
-        co = get_column(leftPos)
-        ro = get_row(topPos)
-        return ro*4 + co
-
-
-class utterance(object):
+class Grid:
 
         """recording the utterance and where it is on the screen, for now we are
          doing the grid, later we will allow this to use different heigh/width
          and placement options"""
+        grid_width = 4
 
-        column = 0
-        row = 0
+        def __init__(self, slide):
+                self.utterances = [
+                    ["link" for x in range(self.grid_width)]
+                    for x in range(self.grid_width)]
+                self.links = [
+                    ["blank" for x in range(self.grid_width)]
+                    for x in range(self.grid_width)]
+                self.colors = [
+                    ["" for x in range(self.grid_width)]
+                    for x in range(self.grid_width)]
+                self.tag = "unknown"
+                # First pass through the shapes populates our self.utterances
+                # array and the title
+                for shape in slide.shapes:
+                        if shape.is_placeholder:
+                                if shape.placeholder_format.idx == 0:
+                                        self.tag = shape.text
+                        (co,ro) = Locator.get_cr(shape.top,shape.left)
+                        try:
+                                if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+                                        if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
+                                                self.links[co][ro] = "real"
+                                                self.colors[co][
+                                                    ro] = shape.fill.fore_color.rgb
+                        except:
+                                continue
+                        if not shape.has_text_frame:
+                                continue
+                        text = self.utterances[co][ro]
+                        if "link" in self.utterances[co][ro]:
+                                text = ""
 
-        text = ""
-
-        def __init__(self, row, column, text):
-                self.column, self.row, self.text = row, column, text
+                        if "Yes" in self.utterances[co][ro]:
+                                continue #hacky, very hacky...
+                        for paragraph in shape.text_frame.paragraphs:
+                                for run in paragraph.runs:
+                                        text += run.text.encode('ascii',
+                                                                'ignore')
+                        if text != "":
+                                # add the if shape_type is text box
+                                self.utterances[co][ro] = text.strip()
 
         def __str__(self):
-                return "utterance[%d][%d]=\"%s\";" % (
-                    self.column, self.row, self.text)
+                return_me = []
+                return_me.append("""function %s(){
+reset();     """ % make_title(self.tag))
+                for col in range(self.grid_width):
+                        for row in range(self.grid_width):
+                                if self.links[row][col] == "real":
+                                        return_me.append(
+                                            "     links[%d][%d]=\"%s\";" %
+                                            (row, col, make_title(
+                                                self.utterances[row][col])))
+                                else:
+                                        if self.links[row][col] == "blank":
+                                                return_me.append(
+                                                    "utterances[%d][%d]=\"%s\";" %
+                                                    (row, col, self.utterances[row][col]))
+                                        else:
+                                                raise ValueError(
+                                                    "You never listen.")
+                return_me.append(""" document.main.src="images/CK15+.%03d.png";
 
-
-def read_utterances_and_links(slide):
-        utterances = [["link" for x in range(4)] for x in range(4)]
-        links = [["blank" for x in range(4)] for x in range(4)]
-        colors = [["" for x in range(4)] for x in range(4)]
-        #  dictionary of icons,
-        # key = (row, col)
-        # value = list of one or more PICTURE shapes.
-        images = {}
-
-        # First pass through the shapes populates our utterances array.
-        for shape in slide.shapes:
-                co = get_column(shape.top)
-                ro = get_row(shape.left)
-                try:
-                    if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-                            if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
-                                    links[co][ro] = "real"
-                                    try:
-                                            colors[co][
-                                                ro] = shape.fill.fore_color.rgb
-                                    except AttributeError:
-                                            pass
-                except:
-                    continue
-                if not shape.has_text_frame:
-                        continue
-                text = utterances[co][ro]
-                if "link" in utterances[co][ro]:
-                    text=""
-
-                if  "Yes" in utterances[co][ro]:
-                    continue
-                for paragraph in shape.text_frame.paragraphs:
-                        for run in paragraph.runs:
-                                text += run.text.encode('ascii', 'ignore')
-                if text != "":
-                        # add the if shape_type is text box
-                        utterances[co][ro] = text.strip()
-#                print "%s, %d, %d, [%d][%d]" % (text.rjust(15," "), shape.top,shape.left,co,ro)
-        return (utterances, links, colors)
+}\n""" % (slide_number))
+                return "\n".join(return_me)
 
 
 def export_images(slide, utterances):
@@ -184,17 +170,16 @@ def export_images(slide, utterances):
         We have to do this separately so it's guaranteed we already know what to
         name the images!"""
         for shape in slide.shapes:
-            try:
+                try:
 
-                    if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                            co = get_column(shape.top)
-                            ro = get_row(shape.left)
+                        if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
+                                (co,ro) = Locator.get_cr(shape.top,shape.left)
 
-                            if (co, ro) not in images:
-                                    images[co, ro] = []
-                            images[co, ro].append(shape)
-            except:
-                continue
+                                if (co, ro) not in images:
+                                        images[co, ro] = []
+                                images[co, ro].append(shape)
+                except:
+                        continue
 
         # Compose each icon out of all the images in the grid cell.
         for x in range(4):
@@ -259,50 +244,18 @@ def export_images(slide, utterances):
                                 composite = composite.crop(bbox)
 
                                 # Save!
-                                name = remove_punctuation( "%d-%d-" %
+                                name = remove_punctuation(
+                                    "%d-%d-" %
                                     (x, y)+utterances[x][y]) + ".png"
                                 folder = "icons/" + str(slide_number)
                                 if not os.path.exists(folder):
                                         os.makedirs(folder)
                                 composite.save(folder + "/" + name)
-def get_slide_title(slide):
-        tag = "unknown"
-        try:
-            tag = slide_title_placeholder(slide).text
-        except:
-            pass
-        return tag
-
-def process_slide(slide, slide_number):
-#        print "slide number is %s" % slide_number
-        tag=get_slide_title(slide)
-        print """function %s(){
-reset();     """ % make_title(tag)
-        (utterances, links, colors) = read_utterances_and_links(slide)
-
-        #export_images(slide, utterances)
-        for x in range(4):
-                for y in range(4):
-
-                        if links[x][y] == "real":
-                                print "     links[%d][%d]=\"%s\";" % (y, x, make_title(utterances[x][y]))
-                        else:
-                                if links[x][y] == "blank":
-                                        print "utterances[%d][%d]=\"%s\";" % (y, x, utterances[x][y])
-                                else:
-                                        raise ValueError("You never listen.")
-        print """ document.main.src="images/CK15+.%03d.png";
-
-}""" % (slide_number)
-
 
 prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
-
-# text_runs will be populated with a list of strings,
-# one for each text run in presentation
 slide_number = 1
 for slide in prs.slides:
-        process_slide(slide, slide_number)
+        print Grid(slide)
         slide_number += 1
 #            break
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
