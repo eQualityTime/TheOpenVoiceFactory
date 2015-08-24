@@ -16,7 +16,6 @@ alpha = "abcdefghijklmnopqrstuvwxyz1234567890_"
 #  dictionary of icons,
 # key = (row, col)
 # value = list of one or more PICTURE shapes.
-images = {}
 
 
 def resizeImage(image, scaleFactor):
@@ -168,6 +167,7 @@ def export_images(grid, slide):
         """     Second pass through shapes list finds images and saves them.
         We have to do this separately so it's guaranteed we already know what to
         name the images!"""
+        images = {}
         utterances = grid.utterances
         for shape in slide.shapes:
                 try:
@@ -224,7 +224,9 @@ def export_images(grid, slide):
                         # part.size because it might have been cropped
 
                         part = resizeImage(part, partScale / scale)
-                        composite.paste( part, ((shape.left - l)/scale,
+                        composite.paste(
+                            part,
+                            ((shape.left - l)/scale,
                              (shape.top - t)/scale),
                             part)  # This masks out transparent pixels
 
@@ -243,14 +245,14 @@ def export_images(grid, slide):
 
 prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
 slide_number = 1
-for_json={}
+for_json = {}
 for slide in prs.slides:
         grid = Grid(slide)
-        for_json[slide_number]=[grid.tag,grid.utterances]
-#        export_images(grid, slide)
+        for_json[slide_number] = [grid.tag, grid.utterances]
+        export_images(grid, slide)
         print grid
         slide_number += 1
 #            break
 with open('data.json', 'w') as outfile:
-    json.dump(for_json, outfile,sort_keys=True)
+        json.dump(for_json, outfile, sort_keys=True)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
