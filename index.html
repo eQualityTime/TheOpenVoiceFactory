@@ -5,16 +5,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script language="javascript" src="lib/sha1.js"></script> 
 <script language="javascript" type="text/javascript">
-var req = new XMLHttpRequest();
-req.open("GET", "data.json");
-req.overrideMimeType("application/json");
-req.send(null);
-req.onreadystatechange = function() {
-    if (req.readyState == 4 && req.status == 200) {
-	var obj = JSON.parse(req.responseText)
-	document.write(JSON.stringify(obj))
-    }
-}
 utterances=new Array(4);
 utterances[0]=new Array(4);
 utterances[1]=new Array(4);
