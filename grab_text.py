@@ -135,7 +135,11 @@ class Grid:
                                         for run in paragraph.runs])
                 if text != "":
                         # add the if shape_type is text box
-                        self.utterances[co][ro] = text.strip()
+                        if self.links[co][ro]=="real":
+                            self.links[co][ro] = make_title(text.strip())
+                            self.utterances[co][ro] = "link"
+                        else:
+                            self.utterances[co][ro] = text.strip()
 
         def __str__(self):
                 body = "\n".join(
@@ -151,7 +155,7 @@ document.main.src="images/CK15+.%03d.png";
 }""" % (make_title(self.tag), body, slide_number)
 
         def string_from_cell(self, row, col):
-                if self.links[row][col] == "real":
+                if self.links[row][col] != "blank":
                         return "     links[%d][%d]=\"%s\";" % (
                             row, col, make_title(self.utterances[row][col]))
                 else:
@@ -248,8 +252,8 @@ slide_number = 1
 for_json = {}
 for slide in prs.slides:
         grid = Grid(slide)
-        for_json[slide_number] = [grid.tag, grid.utterances]
-        export_images(grid, slide)
+        for_json[slide_number] = [make_title(grid.tag), grid.utterances, grid.links, slide_number]
+#        export_images(grid, slide)
         print grid
         slide_number += 1
 #            break
