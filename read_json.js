@@ -18,11 +18,11 @@ req.onreadystatechange = function() {
 //			document.write("<br><br>Name is"+key);
 //				document.write("<br> is"+slide_number[key]);
 //		}
-		setup()
+first_page()
 	}
 }
 
-function setup(){
+function first_page(){
 document.main.src="images/CK15+.001.png";
 
 
