@@ -8,17 +8,14 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 import json
 import io
 import os
+import string
 from PIL import Image
 
-# Note: This may not be robust to internationalisation.
-alpha = "abcdefghijklmnopqrstuvwxyz1234567890_"
-
-#  dictionary of icons,
-# key = (row, col)
-# value = list of one or more PICTURE shapes.
+alpha = string.ascii_lowercase + string.digits + '_'
 
 
 def resizeImage(image, scaleFactor):
+
         oldSize = image.size
         newSize = (scaleFactor*oldSize[0],
                    scaleFactor*oldSize[1])
@@ -26,15 +23,15 @@ def resizeImage(image, scaleFactor):
 
 
 def remove_punctuation(s):
-        s_sans_punct = ""
-        for letter in s:
-                if letter.lower() in alpha:
-                        s_sans_punct += letter
-        return s_sans_punct
-# from http://openbookproject.net/thinkcs/python/english3e/strings.html
+        """removes puncuation,
+        provided by http://codereview.stackexchange.com/a/101806/4759"""
+        return ''.join(c for c in s if c in alpha)
 
 
 def make_title(label):
+        """Given a  string, returns the string in the format we use for
+         identifying grids. This is used mostly to build internal link
+         structures"""
         tag = remove_punctuation(label.lower().strip().replace(" ", "_"))
         if tag == "":
                 tag = "unknown"
@@ -43,6 +40,8 @@ def make_title(label):
 
 class Locator:
 
+        """Static class designed to abstract away the process of working out
+        which bit of the grid a particular part of powerpoint is in"""
         ROW_TABLE = {
 
             152404:  0,
@@ -89,9 +88,10 @@ class Locator:
 
 class Grid:
 
-        """recording the utterance and where it is on the screen, for now we are
-         doing the grid, later we will allow this to use different heigh/width
-         and placement options"""
+        """Class representing on n by n grid, complete with utterances, links
+        colours, and so on. Currently outputs as javascript, should also
+        write to json on it's own mertits"""
+
         grid_width = 4
 
         def __init__(self, slide):
@@ -126,7 +126,7 @@ class Grid:
 
         def process_text_frame(self, shape, co, ro):
               #  text = self.utterances[co][ro]
-                text=""
+                text = ""
                 if "Yes" in self.utterances[co][ro]:
                         return
                 for paragraph in shape.text_frame.paragraphs:
@@ -146,16 +146,19 @@ class Grid:
                         for col in range(self.grid_width)
                         for row in range(self.grid_width)])
                 return """
-function %s(){
+function {}(){
 reset();
-%s
+{}
 document.main.src="images/CK15+.%03d.png";
 
-}""" % (make_title(self.tag), body, slide_number)
+}""".format(make_title(self.tag), body, slide_number)
 
         def string_from_cell(self, row, col):
-                return "     links[%d][%d]=\"%s\";" % (row, col, make_title(self.links[row][
-                                                       col])) + "utterances[%d][%d]=\"%s\";" % (row, col, self.utterances[row][col])
+                return '     links[{}][{}]="{}";'.format(
+                    row, col, make_title(
+                        self.links[row][col])) +\
+                    '  utterances[{}][{}]="{}";'.format(
+                        row, col, self.utterances[row][col])
 
 
 def export_images(grid, slide):
