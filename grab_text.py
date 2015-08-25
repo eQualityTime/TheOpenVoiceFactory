@@ -146,12 +146,12 @@ class Grid:
                         for col in range(self.grid_width)
                         for row in range(self.grid_width)])
                 return """
-function {}(){
+function %s(){
 reset();
-{}
-document.main.src="images/CK15+.%03d.png";
+%s
+document.main.src="ck15/CK15+.%03d.png";
 
-}""".format(make_title(self.tag), body, slide_number)
+}""" % (make_title(self.tag), body, slide_number)
 
         def string_from_cell(self, row, col):
                 return '     links[{}][{}]="{}";'.format(
