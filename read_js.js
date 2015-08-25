@@ -1,15 +1,13 @@
-        utterances = new Array(4);
-        utterances[0] = new Array(4);
-        utterances[1] = new Array(4);
-        utterances[2] = new Array(4);
-        utterances[3] = new Array(4);
+        utterances = new Array(grid_size_rows);
+        for (j = 0; j < grid_size_rows; j++) {
+        utterances[j] = new Array(grid_size_rows);
+	}
         //the utterances array contain the actual text that can be placed on the message window
 
-        links = new Array(4);
-        links[0] = new Array(4);
-        links[1] = new Array(4);
-        links[2] = new Array(4);
-        links[3] = new Array(4);
+        links = new Array(grid_size_rows);
+        for (j = 0; j < grid_size_rows; j++) {
+        links[j] = new Array(grid_size_rows);
+	}
         //the links array contains keywords that perform different functions,  the most obvious one is that if the links array contains the name of another page, then it will cause a jump to that page when activated.  Other options include things like 'clear' and 'delete word' 
 
         //Note that if the utterance and links are are *both* set, then the utterance will activate and *then* the link will activate.
@@ -58,8 +56,8 @@
 
         function reset() {
             var i, j
-            for (j = 0; j < 4; j++) {
-                for (i = 0; i < 4; i++) {
+            for (j = 0; j < grid_size_rows; j++) {
+                for (i = 0; i < grid_size_rows; i++) {
                     utterances[i][j] = "link";
                     links[i][j] = "blank";
                 }
