@@ -130,3 +130,7 @@ utter=document.myform.outputtext.value;
 	audio.load();
 	audio.play();
 }
+
+function top_page(){
+
+}
