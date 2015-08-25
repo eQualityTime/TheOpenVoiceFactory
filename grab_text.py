@@ -125,9 +125,8 @@ class Grid:
                         return
 
         def process_text_frame(self, shape, co, ro):
-                text = self.utterances[co][ro]
-                if "link" in self.utterances[co][ro]:
-                        text = ""
+              #  text = self.utterances[co][ro]
+                text=""
                 if "Yes" in self.utterances[co][ro]:
                         return
                 for paragraph in shape.text_frame.paragraphs:
@@ -135,11 +134,11 @@ class Grid:
                                         for run in paragraph.runs])
                 if text != "":
                         # add the if shape_type is text box
-                        if self.links[co][ro]=="real":
-                            self.links[co][ro] = make_title(text.strip())
-                            self.utterances[co][ro] = "link"
+                        if self.links[co][ro] == "real":
+                                self.links[co][ro] = make_title(text.strip())
+                                self.utterances[co][ro] = "link"
                         else:
-                            self.utterances[co][ro] = text.strip()
+                                self.utterances[co][ro] = text.strip()
 
         def __str__(self):
                 body = "\n".join(
@@ -155,16 +154,8 @@ document.main.src="images/CK15+.%03d.png";
 }""" % (make_title(self.tag), body, slide_number)
 
         def string_from_cell(self, row, col):
-                if self.links[row][col] != "blank":
-                        return "     links[%d][%d]=\"%s\";" % (
-                            row, col, make_title(self.utterances[row][col]))
-                else:
-                        if self.links[row][col] == "blank":
-                                return "utterances[%d][%d]=\"%s\";" % (
-                                    row, col, self.utterances[row][col])
-                        else:
-                                raise ValueError(
-                                    "You never listen.")
+                return "     links[%d][%d]=\"%s\";" % (row, col, make_title(self.links[row][
+                                                       col])) + "utterances[%d][%d]=\"%s\";" % (row, col, self.utterances[row][col])
 
 
 def export_images(grid, slide):
@@ -252,7 +243,12 @@ slide_number = 1
 for_json = {}
 for slide in prs.slides:
         grid = Grid(slide)
-        for_json[slide_number] = [make_title(grid.tag), grid.utterances, grid.links, slide_number]
+        for_json[slide_number] = [
+            make_title(
+                grid.tag),
+            grid.utterances,
+            grid.links,
+            slide_number]
 #        export_images(grid, slide)
         print grid
         slide_number += 1
