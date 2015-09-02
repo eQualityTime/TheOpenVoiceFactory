@@ -43,8 +43,8 @@ $('#main').click(function(e)
 rows=grid_size_rows;
 colums =grid_size_columns;
 
-    var offset_t = $(this).offset().top - $(window).scrollTop();
-    var offset_l = $(this).offset().left - $(window).scrollLeft();
+    offset_t = $(this).offset().top - $(window).scrollTop();
+    offset_l = $(this).offset().left - $(window).scrollLeft();
 
     var left = Math.floor(Math.round( (e.clientX - offset_l) )/this.width*colums);
     var top = Math.floor(Math.round( (e.clientY - offset_t) )/this.height*rows);
@@ -107,6 +107,20 @@ top_page()
         ga('create', 'UA-43886525-1', 'auto');
         ga('send', 'pageview');
     </script>
+<div id="box"></div>
+<script>
+main=document.getElementById("main");
+var offset_t = $(main).offset().top - $(window).scrollTop();
+var offset_l = $(main).offset().left - $(window).scrollLeft();
+hope=document.getElementById("box");
+$(hope).css('position', "absolute");
+$(hope).css('width', "140px");
+$(hope).css('height', "110px");
+$(hope).css('top', offset_t);
+$(hope).css('left', offset_l);
+$(hope).css('border', "4px solid #ffbe00");
+$(hope).css('background-color', "transparent");
+</script>
 </body>
 
 </html>
