@@ -284,7 +284,14 @@ Item {
         var button_order = grid["order"];
 
         for (var i = 0; i < max_items; i++) {
-            model.append({ });
+            // This model will be used for any empty buttons.
+            model.append({ link: "",
+                           label: "",
+                           utterance: "",
+                           image_path: "",
+                           bg_color: "white",
+                           border_color: "grey"
+                         });
         }
 
         // If the manifest didn't give us an image map, then we'll look for
