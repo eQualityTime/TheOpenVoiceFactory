@@ -131,7 +131,7 @@ Rectangle {
             width: gridView.cellWidth
             height: gridView.cellHeight
 
-            property bool isFolder: link.length > 0
+            property bool isFolder: link && (link.length > 0)
 
             // This is the individual 'button'. It contains an image
             // and a label, and a mouse area to receive clicks.

@@ -308,12 +308,12 @@ Item {
                         console.log("Cannot find index for button "+info);
                     }
                     else {
-                        model.set(ind, { link: info.link,
-                                         label: info.label,
-                                         utterance: info.utterance,
-                                         image_path: info.image_path,
-                                         bg_color: info.bg_color,
-                                         border_color: info.border_color
+                        model.set(ind, { link: info.link ? info.link : "",
+                                         label: info.label ? info.label : "",
+                                         utterance: info.utterance ? info.utterance : "",
+                                         image_path: info.image_path ? info.image_path : "",
+                                         bg_color: info.bg_color ? info.bg_color : "",
+                                         border_color: info.border_color ? info.border_color : ""
                                        });
                     }
                     i++;
