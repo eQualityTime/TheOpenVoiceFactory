@@ -120,6 +120,30 @@ $(hope).css('top', offset_t);
 $(hope).css('left', offset_l);
 $(hope).css('border', "4px solid #ffbe00");
 $(hope).css('background-color', "transparent");
+
+var x=0;
+var y=0;
+setInterval(itterateScanner,1000);
+
+function itterateScanner(){
+x++
+if (x==5){
+x=0;
+y=y+1;
+}
+if (y==5){
+y=0;
+}
+
+
+$(hope).css('top', offset_t+105*y);
+$(hope).css('left', offset_l+140*x);
+}
+
+
+
+
+
 </script>
 </body>
 
