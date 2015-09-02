@@ -40,7 +40,7 @@
 
 <script>
 
-var azulejoe_scanning=true;
+var azulejoe_scanning=false;
 
 $('#main').click(function(e)
 {   
@@ -117,23 +117,56 @@ top_page()
     </script>
 <div id="box"></div>
 <script>
+
+function toggleScanning(){
+
 if (azulejoe_scanning==true){
+azulejoe_scanning=false;
+stop_scanning();
+} else{
+azulejoe_scanning=true
+start_scanning();
+}
+}
+
 main=document.getElementById("main");
 var offset_t = $(main).offset().top - $(window).scrollTop();
 var offset_l = $(main).offset().left - $(window).scrollLeft();
+
+var interval_access_var=0
+
+function start_scanning(){
+if (azulejoe_scanning==true){
 hope=document.getElementById("box");
 $(hope).css('position', "absolute");
 $(hope).css('width', "140px");
 $(hope).css('height', "110px");
-$(hope).css('top', offset_t);
-$(hope).css('left', offset_l);
+$(hope).css('top', offset_t+105*y);
+$(hope).css('left', offset_l+140*x);
+//$(hope).css('top', offset_t);
+//$(hope).css('left', offset_l);
 $(hope).css('border', "4px solid #ffbe00");
 $(hope).css('background-color', "transparent");
 
+interval_access_var=setInterval(itterate_direct_Scanner,1000);
+}
+}
 var x=0;
 var y=0;
-setInterval(itterate_direct_Scanner,1000);
+
+function stop_scanning(){
+hope=document.getElementById("box");
+$(hope).css('position', "absolute");
+$(hope).css('width', "0px");
+$(hope).css('height', "0px");
+$(hope).css('top', 0);
+$(hope).css('left', 0);
+$(hope).css('border', "0px  #ffbe00");
+$(hope).css('background-color', "transparent");
+clearInterval(interval_access_var);
+
 }
+
 
 function itterate_direct_Scanner(){
 x++
@@ -145,7 +178,6 @@ if (y==5){
 y=0;
 }
 
-
 $(hope).css('top', offset_t+105*y);
 $(hope).css('left', offset_l+140*x);
 }
@@ -155,6 +187,7 @@ $(hope).css('left', offset_l+140*x);
 
 
 </script>
+ <button onClick="toggleScanning()">Toggle Scanning</button>
 </body>
 
 </html>
