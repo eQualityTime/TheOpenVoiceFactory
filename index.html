@@ -37,9 +37,17 @@
 
     <!--START THE MAIN MAP -->
     <img name="main" id="main" src="images/CK15+.001.png" height=540 width=720  />
+
 <script>
+
+var azulejoe_scanning=true;
+
 $('#main').click(function(e)
 {   
+if (azulejoe_scanning==true){
+add(x,y);
+
+}else{
 rows=grid_size_rows;
 colums =grid_size_columns;
 
@@ -51,7 +59,7 @@ colums =grid_size_columns;
 
 //    alert("Left: " + left + " Top: " + top );
 add(left,top)
-
+}
 });
 //from http://stackoverflow.com/a/14045047/170243
 
@@ -109,6 +117,7 @@ top_page()
     </script>
 <div id="box"></div>
 <script>
+if (azulejoe_scanning==true){
 main=document.getElementById("main");
 var offset_t = $(main).offset().top - $(window).scrollTop();
 var offset_l = $(main).offset().left - $(window).scrollLeft();
@@ -123,9 +132,10 @@ $(hope).css('background-color', "transparent");
 
 var x=0;
 var y=0;
-setInterval(itterateScanner,1000);
+setInterval(itterate_direct_Scanner,1000);
+}
 
-function itterateScanner(){
+function itterate_direct_Scanner(){
 x++
 if (x==5){
 x=0;
