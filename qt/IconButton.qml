@@ -2,7 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.2
 
 // A clickable, coloured rectangular button containing
-// an image and (optionally) a text label.
+// an image and/or a text label.
 Rectangle {
     id: button
 
@@ -25,12 +25,9 @@ Rectangle {
     Column {
         id: column
         spacing: padding
-        anchors.fill: parent
+        anchors.centerIn: parent
+        width: parent.width
         anchors.margins: padding + button.border.width
-
-        // This ensures the image is centred if the text is
-        // not in use.
-        y: label.visible ? 0 : ((1-imageScale)/2)
 
         Image {
             id: image
@@ -39,12 +36,13 @@ Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
             source: image_path
             fillMode: Image.PreserveAspectFit
+            visible: source != ""
         }
         Label {
             id: label
             text: ""
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: parent.height/10
+            font.pixelSize: button.height/10
             visible: text.length > 0
         }
     }
