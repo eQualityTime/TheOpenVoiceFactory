@@ -50,9 +50,19 @@ Rectangle {
     property int padding: 2
     property int borderWidth: 3
 
-    // The control bar
+    // The control bar.
+    // Needs to hold a minimum # of items, even if it means not matching the grid of the
+    // pageset.
+    property int minControlItems: 4
+    property int controlBarItemWidth : (nCols > minControlItems) ? itemWidth : pageLayout.width/minControlItems
+    // Staging area stretches to fill any extra space.
+    property int stageWidth : {
+        return (nCols > minControlItems) ? nCols - (minControlItems -1 ): 1;
+    }
+
     Row {
         id: controlBar
+
         width: parent.width
         height: itemHeight
         x: padding
@@ -64,7 +74,7 @@ Rectangle {
         // We can't do the actual staging here, since it needs to be accessible from multiple pages.
         // We just provide a white background for the text.
         Rectangle {
-            width: itemWidth*2 - padding*2
+            width: stageWidth * controlBarItemWidth
             height: itemHeight - padding*2
             color: "white"
             radius: width*0.02
@@ -74,7 +84,7 @@ Rectangle {
 
         // Backspace button
         IconButton {
-            width: itemWidth - padding*2
+            width: controlBarItemWidth - padding*2
             height: itemHeight - padding*2
             color: "#CCFFCC"
             border.color: "black"
@@ -87,8 +97,8 @@ Rectangle {
         }
 
         // Clear button
-        SimpleButton {
-            width: itemWidth - padding*2
+        IconButton {
+            width: controlBarItemWidth - padding*2
             height: itemHeight - padding*2
             text: "Clear"
             radius: width*0.02
@@ -101,7 +111,7 @@ Rectangle {
 
         // Speak button
         IconButton {
-            width: itemWidth - padding*2
+            width: controlBarItemWidth - padding*2
             height: itemHeight - padding*2
             color: "#CCFFCC"
             border.color: "black"
