@@ -206,7 +206,7 @@ Rectangle {
     // Full-screen message for page navigation errors
     ErrorPage {
         id: error
-        z: 200 // TODO: relative z!
+        z: 1000 // TODO: relative z!
         visible: false
         text: "Page not found"
         onBack: {
