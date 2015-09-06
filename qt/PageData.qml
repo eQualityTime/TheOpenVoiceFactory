@@ -117,7 +117,7 @@ Item {
         obfString = obfString.replace(/ /g,'');
 
         // Extract numbers, either RGB or RGBA
-        var regExp = /rgba?\((\d*),(\d*),(\d*),?(\d*)?\)/i
+        var regExp = /rgba?\((\d*),(\d*),(\d*),?([\d.]*)?\)/i
         var match = regExp.exec(obfString);
         if (match == null) {
             console.log("Cannot parse colour "+obfString)
@@ -139,7 +139,7 @@ Item {
         var b = toHex(match[3]);
         var a = null;
         if (match.length > 4 && typeof match[4] != 'undefined') {
-            a = toHex(match[4]);
+            a = toHex(Math.floor(parseFloat(match[4]*255)));
         }
 
         // Create new string
