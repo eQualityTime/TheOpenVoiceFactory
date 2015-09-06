@@ -104,9 +104,13 @@ Item {
     // rgb(x, y, z) -> #RRGGBB
     // rgba(x, y, z, a) -> #AARRGGBB
     // QML numbers are in hex, OBF are decimal.
-    function parseObfRgb( obfString ) {
+    function parseObfRgb( obfString, defaultColor ) {
+
         if (typeof obfString === 'undefined') {
-            return null
+            return defaultColor
+        }
+        if (typeof defaultColor === 'undefined') {
+          defaultColor = "#000000"
         }
 
         // Strip out all whitespace
@@ -117,7 +121,7 @@ Item {
         var match = regExp.exec(obfString);
         if (match == null) {
             console.log("Cannot parse colour "+obfString)
-            return "#000000"
+            return defaultColor
         }
 
         // Check all captured values are in range
@@ -125,7 +129,7 @@ Item {
         for (var i = 1; i < match.length; i++) {
             if (match[i] > 255 || match[i] < 0 ) {
                 console.log("Cannot parse colour "+obfString)
-                return "#000000"
+                return defaultColor
             }
         }
 
@@ -200,10 +204,10 @@ Item {
             utterance = label
         }
         var bg_color = button["background_color"]
-        bg_color = parseObfRgb(bg_color)
+        bg_color = parseObfRgb(bg_color, "white")
 
         var border_color = button["border_color"]
-        border_color = parseObfRgb(border_color)
+        border_color = parseObfRgb(border_color, "black")
 
         var image_id = button["image_id"]
         var image_path = ""
