@@ -80,6 +80,15 @@ Rectangle {
             radius: width*0.02
             border.color: "black"
             border.width: borderWidth
+
+            // Whenever the size of this changes, make sure text area at top
+            // level changes too!
+            onWidthChanged: {
+                app.setStagingArea(x, y, width, height);
+            }
+            onHeightChanged: {
+                app.setStagingArea(x, y, width, height);
+            }
         }
 
         // Backspace button

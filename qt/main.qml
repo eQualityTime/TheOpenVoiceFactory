@@ -191,7 +191,7 @@ ApplicationWindow {
         ScrollableText {
             id: stagedText
             anchors.fill: parent
-            anchors.margins: 5
+            anchors.margins: 10
 
             text: ""
             anchors.horizontalCenter: parent.horizontalCenter
