@@ -216,7 +216,8 @@ ApplicationWindow {
                         lastItem = item;
                     }
                 }
-                stagedText.text = fullString;
+                stagedText.changeText(fullString);
+
             }
         }
     }
