@@ -174,18 +174,6 @@ ApplicationWindow {
     Rectangle {
         id:rect
 
-        // TODO : The size of this should be set by the pageset which
-        // defines number of items in a row of the grid.
-        property int tileX: (parent.width/5)
-        property int tileY: (parent.height/5)
-        property int bufferX: (parent.width/80)
-        property int bufferY: (parent.height/40)
-
-        x: bufferX
-        y: bufferY
-        width: 2*tileX - 2*bufferX
-        height: tileY - bufferY*2
-
         color: "transparent"
 
         ScrollableText {
@@ -200,7 +188,7 @@ ApplicationWindow {
 
             // We use pixel size scaled to the tile height, to give us the
             // same approximate size on devices with different DPI.
-            font.pixelSize: rect.tileY/4
+            font.pixelSize: height/4
 
             // Parses the queue and updates the text output
             function updateText() {
