@@ -179,17 +179,62 @@ Item {
     //   "1": "data:image/png;base64,iVBORw0KG....",
     //   "2": "data:image/png;base64,dbH5s0if...."
     //  }
-    function convertImageArrayToMap(image_array) {
+    function convertImageArrayToMap(image_array, top_dir) {
       var n = image_array.length;
       var map = {};
       for (var i = 0; i < n; i++) {
         var im = image_array[i];
-        map[im["id"]]  = im["data"];
+
+        // According to OBF spec, references should be used in this order:
+        // 1 - data
+        // 2 - path
+        // 3 - url
+        // 4 - symbol.
+        // Currently we support 1-3, but not 4.
+        if (typeof im["data"] !== 'undefined') {
+           map[im["id"]]  = im["data"];
+        }
+        else if (typeof im["path"] !== 'undefined') {
+          map[im["id"]]  =  "file:/" + fileUtils.fullFile(top_dir, im["path"]);
+        }
+        else if (typeof im["url"] !== 'undefined') {
+            map[im["id"]]  = im["url"];
+        }
+        else if (typeof im["symbol"] !== 'undefined') {
+            map[im["id"]]  = im["symbol"];
+        }
+        else {
+          console.log("No data found for image "+im["id"]);
+        }
       }
       return map;
     }
 
-    function extractButtonInfo(button, topDir, image_paths) {
+    // Looks for an image reference first as an ID into a map.
+    // Checks local map first, then global map.
+    // If no matching id found, interprets as a file reference
+    // or URL
+    function findImage(id, local_map, global_map, top_dir) {
+      var image_path
+
+      if (typeof id === "undefined") {
+        return image_path
+      }
+
+      // Look in local map
+      image_path = local_map[id];
+
+      // Look in global map
+      if (typeof image_path === "undefined") {
+        image_path = global_map[id];
+      }
+
+      return image_path;
+    }
+
+    function extractButtonInfo(button, topDir,
+                               image_paths_local,
+                               image_paths_global){
         var id = button["id"]
         var label = button["label"]
         // utterance is 'vocalization', if defined, otherwise
@@ -210,17 +255,9 @@ Item {
         border_color = parseObfRgb(border_color, "black")
 
         var image_id = button["image_id"]
-        var image_path = ""
-        if (typeof image_id !== "undefined") {
-            if (typeof image_id == "number") {
-                // Raw data URI
-                image_path = image_paths[image_id];
-            }
-            else {
-                // File reference
-                image_path = "file:/" + fileUtils.fullFile(topDir, image_paths[image_id]);
-            }
-        }
+        var image_path = findImage(image_id, image_paths_local,
+                                    image_paths_global, topDir);
+
         return { id: id,
                  link: link,
                  label: label,
@@ -298,10 +335,15 @@ Item {
                          });
         }
 
-        // If the manifest didn't give us an image map, then we'll look for
-        // one in the individual page...
-        if (typeof image_paths === 'undefined') {
-            image_paths = convertImageArrayToMap(obj["images"]);
+        // Images may be defined in the manifest OR in the individual file.
+        // We should look in both places
+        if (typeof obj["images"] !== 'undefined') {
+          image_paths = convertImageArrayToMap(obj["images"], topDir);
+        }
+
+        var image_paths_file;
+        if (typeof obj["images"] !== 'undefined') {
+            image_paths_file = convertImageArrayToMap(obj["images"], topDir);
         }
 
         // Read all the fields we care about
@@ -311,6 +353,7 @@ Item {
                 for (var buttonName in allButtons) {
                     var info = extractButtonInfo(allButtons[buttonName],
                                                  topDir,
+                                                 image_paths_file,
                                                  image_paths);
 
                     // Find out index for this button
