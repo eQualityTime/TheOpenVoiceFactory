@@ -258,13 +258,15 @@ Item {
         var image_path = findImage(image_id, image_paths_local,
                                     image_paths_global, topDir);
 
+        var action = button["action"];
         return { id: id,
                  link: link,
                  label: label,
                  utterance: utterance,
                  image_path: image_path,
                  bg_color: bg_color,
-                 border_color: border_color };
+                 border_color: border_color,
+                 action: action};
     }
 
     function findIn2dArray(array, item) {
@@ -331,7 +333,8 @@ Item {
                            utterance: "",
                            image_path: "",
                            bg_color: "white",
-                           border_color: "grey"
+                           border_color: "grey",
+                           action: ""
                          });
         }
 
@@ -367,7 +370,8 @@ Item {
                                          utterance: info.utterance ? info.utterance : "",
                                          image_path: info.image_path ? info.image_path : "",
                                          bg_color: info.bg_color ? info.bg_color : "",
-                                         border_color: info.border_color ? info.border_color : ""
+                                         border_color: info.border_color ? info.border_color : "",
+                                         action: info.action ? info.action : ""
                                        });
                     }
                     i++;
