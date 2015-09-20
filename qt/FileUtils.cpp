@@ -2,6 +2,8 @@
 #include <QFile>
 #include <QDir>
 
+#include <fstream>
+
 QByteArray FileUtils::read(const QString &fullFilename)
 {
     QFile file(fullFilename);
@@ -29,5 +31,20 @@ bool FileUtils::exists(const QString &fullFilename)
 
 bool FileUtils::exists(const QString &path, const QString &filename)
 {
-    return this->exists(fullFile(path, filename));
+  return this->exists(fullFile(path, filename));
+}
+
+bool FileUtils::writeToFile(const QString& filename,
+                            const QString& string)
+{
+  std::ofstream myfile;
+  myfile.open(filename.toStdString());
+  if (myfile.is_open()) {
+    myfile << string.toStdString() << std::endl;
+    myfile.close();
+    return true;
+  }
+  else {
+    return false;
+  }
 }

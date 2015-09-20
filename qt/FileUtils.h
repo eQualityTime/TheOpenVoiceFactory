@@ -24,6 +24,10 @@ public:
     Q_INVOKABLE bool exists(const QString &path,
                             const QString &filename);
 
+    // Write string into file, return success boolean.
+    Q_INVOKABLE bool writeToFile(const QString& filename,
+                                 const QString& string);
+
 };
 
 
