@@ -157,6 +157,16 @@ Item {
         id:fileUtils
     }
 
+    // Make sure images in manifest are proper file references.
+    function fixupImagePaths(image_map, top_dir) {
+      for (var image_name in image_map) {
+        var image_path = image_map[image_name];
+        image_map[image_name] = "file:/" + fileUtils.fullFile(top_dir, image_path);
+
+      }
+      return image_map;
+    }
+
     // In the manifest.JSON, images are presented as a simple map, e.g.:
     // "images": {
     //   "af4183ed5": "images/im_af4183ed5.png",
@@ -222,10 +232,13 @@ Item {
       }
 
       // Look in local map
-      image_path = local_map[id];
+      if (typeof local_map !== "undefined") {
+        image_path = local_map[id];
+      }
 
       // Look in global map
-      if (typeof image_path === "undefined") {
+      if (typeof image_path === "undefined" &&
+          typeof global_map !== "undefined") {
         image_path = global_map[id];
       }
 
@@ -297,7 +310,8 @@ Item {
 
         var fileContent = fileUtils.read(manifestFile);
         var manifestObj = JSON.parse(fileContent);
-        var image_paths = manifestObj["paths"]["images"];
+        var image_paths = manifestObj["paths"]["images"];        
+        image_paths = fixupImagePaths(image_paths, topDir);
 
         var board_paths = manifestObj["paths"]["boards"];
 
