@@ -42,33 +42,12 @@ class Locator:
 
         """Static class designed to abstract away the process of working out
         which bit of the grid a particular part of powerpoint is in"""
-        ROW_TABLE = {
 
-            152404:  0,
-            1845122: 1,
-            1874564: 1,
-            3504321: 2,
-            3505369: 2,
-            3541832: 2,
-            5225484: 3,
-            5226008: 3,
-            5576358: 3
-            }
-
-        COL_TABLE = {
-            0: 0,
-            152400: 0,
-            152402: 0,
-            175371: 0,
-            2415785: 1,
-            2415786: 1,
-            2415786: 1,
-            4697109: 2,
-            4700413: 2,
-            4700414: 2,
-            6963797: 3,
-            6963798: 3
-            }
+        COL_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
+            2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
+            4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
+        ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
+             5610125: 3, 6095999: 3, 7314625: 4, 7340121: 4, 7340600: 4}
 
         @staticmethod
         def get_closest_key(dict, inKey):
@@ -241,7 +220,7 @@ def export_images(grid, slide):
                         os.makedirs(folder)
                 composite.save(folder + "/" + name)
 
-prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
+prs = Presentation("../azulejoe/testSuite/launch/CK20process.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
