@@ -71,7 +71,7 @@ class Grid:
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        grid_width = 4
+        grid_width =5
 
         def __init__(self, slide):
                 self.utterances = [
@@ -85,13 +85,16 @@ class Grid:
                     for x in range(self.grid_width)]
                 self.tag = "unknown"
                 for shape in slide.shapes:
+                        print shape
                         self.process_shape(shape)
 
         def process_shape(self, shape):
                 try:
                         if shape.is_placeholder:
+                                print "hopeless"
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
+                                        print "right here"
                         (co, ro) = Locator.get_cr(shape.top, shape.left)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
@@ -100,6 +103,8 @@ class Grid:
                                             ro] = shape.fill.fore_color.rgb
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
+                        print shape.text
+
                 except:
                         return
 
@@ -128,7 +133,7 @@ class Grid:
 function %s(){
 reset();
 %s
-document.main.src="ck15/CK15+.%03d.png";
+document.main.src="ck20/originalSlides/Slide%02d.png";
 
 }""" % (make_title(self.tag), body, slide_number)
 
@@ -221,6 +226,7 @@ def export_images(grid, slide):
                 composite.save(folder + "/" + name)
 
 prs = Presentation("../azulejoe/testSuite/launch/CK20process.pptx")
+#prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
