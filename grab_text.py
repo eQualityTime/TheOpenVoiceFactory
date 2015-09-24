@@ -13,10 +13,15 @@ import sys
 from PIL import Image
 
 
-if (len(sys.argv) < 2):
-        sys.exit("Usage: ./grab_text.py <inputPptxFile>")
+if (len(sys.argv) < 3):
+        print("\nUsage: ./grab_text.py <inputPptxFile> <imageFileRoot>\n")
+        print("inputPptxFile: The powerpoint pageset you want to process.")
+        print("imageFileRoot: The file root for full page images, e.g. ck15/CK15+")
+        print("    will save images for each slide with ck15/CK15+.%03d.png")
+        sys.exit(1)
 
 inputFile = sys.argv[1]
+fileRoot = sys.argv[2]
 alpha = string.ascii_lowercase + string.digits + '_'
 
 
@@ -155,9 +160,9 @@ class Grid:
 function %s(){
 reset();
 %s
-document.main.src="ck15/CK15+.%03d.png";
+document.main.src="%s.%03d.png";
 
-}""" % (make_title(self.tag), body, slide_number)
+}""" % (make_title(self.tag), body, fileRoot, slide_number)
 
         def string_from_cell(self, row, col):
                 return '     links[{}][{}]="{}";'.format(
