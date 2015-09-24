@@ -36,7 +36,7 @@ def resizeImage(image, scaleFactor):
 def remove_punctuation(s):
         """removes puncuation,
         provided by http://codereview.stackexchange.com/a/101806/4759"""
-        return ''.join(c for c in s if c in alpha)
+        return ''.join(c for c in s.lower() if c in alpha)
 
 
 def make_title(label):
