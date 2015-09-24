@@ -178,6 +178,7 @@ def export_images(grid, slide):
         name the images!"""
         images = {}
         utterances = grid.utterances
+        links = grid.links
         for shape in slide.shapes:
                 try:
                         if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
@@ -233,11 +234,15 @@ def export_images(grid, slide):
                         # part.size because it might have been cropped
 
                         part = resizeImage(part, partScale / scale)
-                        composite.paste(
-                            part,
-                            ((shape.left - l)/scale,
-                             (shape.top - t)/scale),
-                            part)  # This masks out transparent pixels
+                        try:
+                            composite.paste(
+                                part,
+                                ((shape.left - l)/scale,
+                                (shape.top - t)/scale),
+                                part)  # This masks out transparent pixels
+                        except ValueError:
+                            print "Error reading image for " + utterances[x][y] + \
+                                    "/" + links[x][y]
 
                 # Crop final image.
                 bbox = composite.getbbox()
