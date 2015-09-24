@@ -252,6 +252,11 @@ def export_images(grid, slide):
                         os.makedirs(folder)
                 composite.save(folder + "/" + name)
 
+
+doPrintJSON = True;
+doSaveJSON = True;
+doExportImages = True;
+
 prs = Presentation(inputFile)
 slide_number = 1
 for_json = {}
@@ -263,10 +268,14 @@ for slide in prs.slides:
             grid.utterances,
             grid.links,
             slide_number]
-#        export_images(grid, slide)
-        print grid
+        if (doExportImages):
+            export_images(grid, slide)
+        if (doPrintJSON):
+            print grid
         slide_number += 1
 #            break
-with open('data.json', 'w') as outfile:
-        json.dump(for_json, outfile, sort_keys=True)
+if (doSaveJSON):
+        with open('data.json', 'w') as outfile:
+            json.dump(for_json, outfile, sort_keys=True)
+
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
