@@ -13,7 +13,7 @@ Rectangle {
     property int padding: 2
 
     // Scale of image as proportion of whole button
-    property double imageScale: 0.8
+    property double imageScale: 0.7
 
     opacity: mouseArea.pressedButtons ? 0.7 : 1
     radius: width*0.02
@@ -31,8 +31,8 @@ Rectangle {
 
         Image {
             id: image
-            height: button.height*imageScale
-            width: button.width*imageScale
+            height: button.height - label.height - padding
+            width: button.width
             anchors.horizontalCenter: parent.horizontalCenter
             source: image_path
             fillMode: Image.PreserveAspectFit
@@ -42,8 +42,12 @@ Rectangle {
             id: label
             text: ""
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: button.height/10
+            font.pixelSize: button.height/6
+            font.family: "Comic Sans MS"
             visible: text.length > 0
+            wrapMode: Text.WordWrap
+            width: parent.width*0.9
+            horizontalAlignment: Text.AlignHCenter
         }
     }
 
