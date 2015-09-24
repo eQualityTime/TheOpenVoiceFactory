@@ -9,8 +9,14 @@ import json
 import io
 import os
 import string
+import sys
 from PIL import Image
 
+
+if (len(sys.argv) < 2):
+        sys.exit("Usage: ./grab_text.py <inputPptxFile>")
+
+inputFile = sys.argv[1]
 alpha = string.ascii_lowercase + string.digits + '_'
 
 
@@ -241,7 +247,7 @@ def export_images(grid, slide):
                         os.makedirs(folder)
                 composite.save(folder + "/" + name)
 
-prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
+prs = Presentation(inputFile)
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
