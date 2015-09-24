@@ -118,6 +118,16 @@ ApplicationWindow {
         stagedText.visible = true
     }
 
+    // Set the position of the staging area. This may depend on
+    // type of page set and number of tiles.
+    function setStagingArea(x, y,
+                            width, height) {
+        rect.x = x;
+        rect.y = y;
+        rect.width = width;
+        rect.height = height;
+    }
+
     StackView {
         id: stackView
         anchors.fill: parent
@@ -129,7 +139,12 @@ ApplicationWindow {
                              event.accepted = true;
                          }
 
-        initialItem:  PageLayout { page: "page1" }
+//        initialItem:  PageLayoutObf {
+//            pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
+//        }
+        initialItem:  PageLayoutJs {
+            page: "page1"
+        }
 
         delegate: StackViewDelegate {
             function transitionFinished(properties)
@@ -158,21 +173,13 @@ ApplicationWindow {
     // utterances.
     Rectangle {
         id:rect
-        property int tileX: (parent.width/5)
-        property int tileY: (parent.height/5)
-        property int bufferX: (parent.width/80)
-        property int bufferY: (parent.height/40)
 
-        x: tileX+bufferX
-        y: bufferY
-        width: 2*tileX - 2*bufferX
-        height: tileY - bufferY
-
-        color: "white"
+        color: "transparent"
 
         ScrollableText {
             id: stagedText
             anchors.fill: parent
+            anchors.margins: 10
 
             text: ""
             anchors.horizontalCenter: parent.horizontalCenter
@@ -181,7 +188,7 @@ ApplicationWindow {
 
             // We use pixel size scaled to the tile height, to give us the
             // same approximate size on devices with different DPI.
-            font.pixelSize: rect.tileY/4
+            font.pixelSize: height/4
 
             // Parses the queue and updates the text output
             function updateText() {
@@ -209,7 +216,8 @@ ApplicationWindow {
                         lastItem = item;
                     }
                 }
-                stagedText.text = fullString;
+                stagedText.changeText(fullString);
+
             }
         }
     }

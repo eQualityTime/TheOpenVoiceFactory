@@ -2,7 +2,8 @@ TEMPLATE = app
 
 QT += qml quick widgets
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    FileUtils.cpp
 
 RESOURCES += main-resources.qrc
 
@@ -16,7 +17,8 @@ RESOURCES += ../javascript/pageset-code.qrc
 # since we have to bundle in the .java files (I think).
 
 INCLUDEPATH += TTS/cpp/
-HEADERS += TTS/cpp/TTSClient.h
+HEADERS += TTS/cpp/TTSClient.h \
+    FileUtils.h
 
 # The implementation of the TTSClient object is OS-dependent. The build system
 # chooses the appropriate one.
