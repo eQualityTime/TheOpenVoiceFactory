@@ -92,9 +92,21 @@ class Locator:
 
         @staticmethod
         def get_cr(topPos, leftPos):
-                col = Locator.get_closest_key(Locator.COL_TABLE, leftPos)
-                row = Locator.get_closest_key(Locator.ROW_TABLE, topPos)
-                return (Locator.COL_TABLE[col], Locator.ROW_TABLE[row])
+
+                maxWidth = 7700000;
+                maxHeight = 6000000;
+
+                slide_height = 6858000;
+                slide_width = 9144000;
+
+                col = math.floor((leftPos * 5 / slide_width) + 0.5);
+                row = math.floor((topPos * 5 / slide_height) + 0.5);
+                print "row, " + str(topPos) + " = " + str(row);
+                print "col, " + str(leftPos) + " = " + str(col);
+
+                # col = Locator.get_closest_key(Locator.COL_TABLE, leftPos)
+                # row = Locator.get_closest_key(Locator.ROW_TABLE, topPos)
+                return (row, col)
 
 
 class Grid:
