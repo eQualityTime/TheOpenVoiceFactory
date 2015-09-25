@@ -20,7 +20,7 @@ function chatting(){
 	utterances[4][2]="thank you";
 
 	utterances[0][3]="sorry";
-	utterances[1][3]="execuse me";
+	utterances[1][3]="excuse me";
 	utterances[2][3]="maybe";
 	utterances[3][3]="really";
 	utterances[4][3]="I don't know";

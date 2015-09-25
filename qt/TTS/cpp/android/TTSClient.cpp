@@ -13,10 +13,14 @@ public:
 
   Q_INVOKABLE virtual void speak(QString msg ) {
     QAndroidJniObject javaMessage = QAndroidJniObject::fromString(msg);
-    QAndroidJniObject::callStaticMethod<void>("org/qtproject/example/testandroidextras/AndroidTTSClient",
-                                              "speak",
-                                              "(Ljava/lang/String;)V",
-                                              javaMessage.object<jstring>());
+    bool success = (bool)QAndroidJniObject::
+            callStaticMethod<jboolean>("org/qtproject/example/testandroidextras/AndroidTTSClient",
+                                       "speak",
+                                       "(Ljava/lang/String;)Z",
+                                       javaMessage.object<jstring>());
+    if (!success) {
+        emit ttsError();
+    }
   }
 
 };

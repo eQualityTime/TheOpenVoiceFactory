@@ -17,6 +17,9 @@ public:
 
     Q_INVOKABLE virtual void speak(QString msg ) = 0;
 
+signals:
+    void ttsError();
+
 };
 
 // This is a factory function which must be defined on each
