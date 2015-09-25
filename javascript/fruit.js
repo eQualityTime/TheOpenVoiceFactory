@@ -28,7 +28,7 @@ function fruit(){
 	utterances[4][3]="pineapple";
 
 	utterances[0][4]="pear"; 
-	utterances[1][4]="stawberry";
+	utterances[1][4]="strawberry";
 	utterances[2][4]="kiwi";
 	utterances[3][4]="cherry";
 	utterances[4][4]="blackberry";

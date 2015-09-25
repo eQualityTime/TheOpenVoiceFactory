@@ -11,7 +11,7 @@ reset();
 	utterances[1][1]="Juice";
 	utterances[2][1]="apple juice";
 	utterances[3][1]="orange juice";
-	utterances[4][1]="blackcurrent juice";
+	utterances[4][1]="blackcurrant juice";
 
 	utterances[0][2]="pineapple juice";
 	utterances[1][2]="grape juice";

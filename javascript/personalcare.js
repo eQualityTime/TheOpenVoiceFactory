@@ -14,7 +14,7 @@ reset();
 	links[3][1]="health";
 	links[4][1]="parts";
 
-	links[0][2]="cloths";
+	links[0][2]="clothes";
 	utterances[1][2]="I want to chill out on my bed";
 	utterances[2][2]="I'd like a shave";
 	utterances[3][2]="I need my medication";

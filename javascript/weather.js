@@ -17,9 +17,9 @@ function weather(){
 	utterances[1][2]="windy";
 	utterances[2][2]="cloudy";
 	utterances[3][2]="foggy";
-	utterances[4][2]="frezing";
+	utterances[4][2]="freezing";
 
-	utterances[0][3]="icey";
+	utterances[0][3]="icy";
 	utterances[1][3]="stormy";
 	utterances[2][3]="";
 	utterances[3][3]="";

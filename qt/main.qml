@@ -1,6 +1,8 @@
 
-import  QtQuick 2.2
-import  QtQuick.Controls 1.2
+import QtQuick 2.2
+import QtQuick.Controls 1.2
+import QtQuick.Dialogs 1.2
+import QtQuick.Controls.Styles 1.2
 
 import "layouts"
 
@@ -12,33 +14,118 @@ ApplicationWindow {
     visible: true
     width: 1200
     height: 700
+    color: "white"
 
     property alias text: stagedText.text
 
-    // Append a string. Does *not* add a space.
+    // This is a pop up modal "dialog" that is simpler and nicer than
+    // a MessageDialog, which looks pretty rubbish on many platforms
+    Item {
+        anchors.fill: parent
+        id: ttsErrorDialog
+        visible: false        
+        z: 3000
+        Rectangle {
+            anchors.fill: parent
+            color: "#D8000000"
+        }
+        MouseArea {
+            anchors.fill: parent
+            onClicked: { mouse.accepted = true; }
+        }
+        Text {
+            id: msg
+            anchors.centerIn: parent
+            text: "Error occurred while trying to speak.\nPlease check your tablet's Text-to-Speech settings.";
+            horizontalAlignment: Text.AlignHCenteri
+            color: "white"
+            font.pixelSize: parent.height/30
+        }
+        SimpleButton {
+            anchors.top: msg.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.topMargin: 20
+            text: "OK"
+            font.pixelSize: parent.height/40
+            onClicked: ttsErrorDialog.visible = false
+        }
+    }
+
+    Component.onCompleted: {
+        queue = [];
+        TTSClient.ttsError.connect(onTtsError);
+    }
+
+    function onTtsError() {
+        ttsErrorDialog.visible = true;
+    }
+
+    // Queue of words and/or letters that are staged
+    // Each item looks like:
+    // { content: 'text', isWord: true}
+    // { content: 'e', isWord: false}
+    property variant queue: ({})
+
     function appendWord(word) {
-        stagedText.changeText(text + word);
+        queue.push({ content: word,
+                     isWord: true});
+        stagedText.updateText();
+    }
+
+    function appendLetter(letter) {
+        queue.push({ content: letter,
+                     isWord: false});
+        stagedText.updateText();
     }
 
     function backspace() {
-        text=text.slice(0, - 1);
+        queue.splice(queue.length-1,1);
+        stagedText.updateText();
     }
 
     function resetText() {
-        text=""
-    }
-
-    function getWords() {
-        return text.split(" ");
+        queue = [];
+        stagedText.updateText();
     }
 
     function deleteWord() {
-        // Get words
-        var words = text.split(" ");
-        // Remove last word
-        words.splice(words.length-1, 1);
-        // Re-join
-        text = words.join(" ");
+        var deletingLetters = false;
+        for (var i = queue.length-1; i >= 0; i--) {
+            var item = queue[i];
+            if (item.isWord === true) {
+                if (deletingLetters) {
+                    break;
+                }
+                else {
+                    queue.splice(i,1);
+                    break;
+                }
+            }
+            else { // isWord = false
+                deletingLetters = true;
+                // We'll keep deleting until we see a word.
+                queue.splice(i,1);
+            }
+        }
+        stagedText.updateText();
+    }
+
+    function hidePendingUtterances() {
+        stagedText.visible = false
+    }
+
+    function showPendingUtterances() {
+        stagedText.visible = true
+    }
+
+    // Set the position of the staging area. This may depend on
+    // type of page set and number of tiles.
+    function setStagingArea(x, y,
+                            width, height) {
+        rect.x = x;
+        rect.y = y;
+        rect.width = width;
+        rect.height = height;
     }
 
     StackView {
@@ -52,7 +139,12 @@ ApplicationWindow {
                              event.accepted = true;
                          }
 
-        initialItem:  PageLayout { page: "page1" }
+//        initialItem:  PageLayoutObf {
+//            pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
+//        }
+        initialItem:  PageLayoutJs {
+            page: "page1"
+        }
 
         delegate: StackViewDelegate {
             function transitionFinished(properties)
@@ -81,21 +173,13 @@ ApplicationWindow {
     // utterances.
     Rectangle {
         id:rect
-        property int tileX: (parent.width/5)
-        property int tileY: (parent.height/5)
-        property int bufferX: (parent.width/80)
-        property int bufferY: (parent.height/40)
 
-        x: tileX+bufferX
-        y: bufferY
-        width: 2*tileX - 2*bufferX
-        height: tileY - bufferY
-
-        color: "white"
+        color: "transparent"
 
         ScrollableText {
             id: stagedText
             anchors.fill: parent
+            anchors.margins: 10
 
             text: ""
             anchors.horizontalCenter: parent.horizontalCenter
@@ -104,8 +188,37 @@ ApplicationWindow {
 
             // We use pixel size scaled to the tile height, to give us the
             // same approximate size on devices with different DPI.
-            font.pixelSize: rect.tileY/4
+            font.pixelSize: height/4
+
+            // Parses the queue and updates the text output
+            function updateText() {
+                var fullString = "";
+                if (queue.length > 0) {
+
+                    // First item
+                    var item = queue[0];
+                    fullString += item.content;
+
+                    // All subsequent items
+                    var lastItem = item;
+                    for (var i = 1; i < queue.length; i++) {
+                        item = queue[i];
+
+                        // Add a space before new word, or after word
+                        // and before letters.
+                        if (item.isWord || lastItem.isWord) {
+                            fullString += " ";
+                        }
+
+                        // Add the utterance
+                        fullString += item.content;
+
+                        lastItem = item;
+                    }
+                }
+                stagedText.changeText(fullString);
+
+            }
         }
     }
-
 }
