@@ -43,10 +43,10 @@ class Locator:
         """Static class designed to abstract away the process of working out
         which bit of the grid a particular part of powerpoint is in"""
 
-        COL_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
+        ROW_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
             2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
             4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
-        ROW_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
+        COL_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
              5610125: 3, 6095999: 3, 7314625: 4, 7340121: 4, 7340600: 4}
 
         @staticmethod
@@ -88,11 +88,13 @@ class Grid:
                         self.process_shape(shape)
 
         def process_shape(self, shape):
+                #print str(shape.top)+" "+str(shape.left)
                 try:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
                         (co, ro) = Locator.get_cr(shape.top, shape.left)
+                        #print (co,ro)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                         self.links[co][ro] = "real"
@@ -100,6 +102,8 @@ class Grid:
                                             ro] = shape.fill.fore_color.rgb
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
+                  #      print self.utterances[co][ro]
+                  #      print self.links[co][ro]
 
                 except:
                         return
@@ -140,7 +144,7 @@ document.main.src="ck20/originalSlides/Slide%02d.png";
 #                    '  utterances[{}][{}]="{}";'.format(
 #                        row, col, self.utterances[row][col])
                 if self.links[row][col]=="blank":
-                    return '  utterances[{}][{}]="{}";'.format(row, col, self.utterances[row][col])
+                    return 'utterances[{}][{}]="{}";'.format(row, col, self.utterances[row][col])
                 return '     links[{}][{}]="{}";'.format(
                     row, col, make_title(self.links[row][col]))
 
@@ -241,7 +245,7 @@ for slide in prs.slides:
 #        export_images(grid, slide)
         print grid
         slide_number += 1
-#            break
+#        break
 with open('data.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

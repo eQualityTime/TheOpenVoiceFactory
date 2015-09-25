@@ -31,36 +31,6 @@ links[4][4]="deleteword";
  document.main.src="ck20/originalSlides/Slide01.png";
 
 }
-function foodchat(){
-reset();     
-utterances[0][0]="Yes";
-utterances[1][0]="Foodchat";
-utterances[2][0]="link";
-utterances[3][0]="link";
-utterances[4][0]="No";
-     links[0][1]="top_page";
-utterances[1][1]="I like it";
-utterances[2][1]="Its grose";
-utterances[3][1]="Its spicy";
-utterances[4][1]="Cut up food";
-utterances[0][2]="Can I have some more?";
-utterances[1][2]="Can I have a drink?";
-utterances[2][2]="wipe my face";
-utterances[3][2]="please";
-utterances[4][2]="thank you";
-utterances[0][3]="Whats for dinner?";
-utterances[1][3]="What have you been doing?";
-utterances[2][3]="Ive had enough";
-utterances[3][3]="link";
-utterances[4][3]="drink";
-utterances[0][4]="Its too hot";
-utterances[1][4]="Its too cold";
-utterances[2][4]="full";
-utterances[3][4]="empty";
-utterances[4][4]="link";
- document.main.src="ck20/originalSlides/Slide02.png";
-
-}
 function chatting(){
 reset();     
 utterances[0][0]="Yes";
@@ -91,6 +61,39 @@ utterances[4][4]="so";
  document.main.src="ck20/originalSlides/Slide03.png";
 
 }
+function foodchat(){
+reset();     
+utterances[0][0]="Yes";
+utterances[1][0]="Foodchat";
+utterances[2][0]="link";
+utterances[3][0]="link";
+utterances[4][0]="No";
+     links[0][1]="top_page";
+utterances[1][1]="I like it";
+utterances[2][1]="Its grose";
+utterances[3][1]="Its spicy";
+utterances[4][1]="Cut up food";
+utterances[0][2]="Can I have some more?";
+utterances[1][2]="Can I have a drink?";
+utterances[2][2]="wipe my face";
+utterances[3][2]="please";
+utterances[4][2]="thank you";
+utterances[0][3]="Whats for dinner?";
+utterances[1][3]="What have you been doing?";
+utterances[2][3]="Ive had enough";
+utterances[3][3]="link";
+utterances[4][3]="drink";
+utterances[0][4]="Its too hot";
+utterances[1][4]="Its too cold";
+utterances[2][4]="full";
+utterances[3][4]="empty";
+utterances[4][4]="link";
+ document.main.src="ck20/originalSlides/Slide02.png";
+
+}
+
+
+
 function about_me(){
 reset();     
 utterances[0][0]="Yes";
