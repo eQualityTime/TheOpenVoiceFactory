@@ -2,7 +2,8 @@ TEMPLATE = app
 
 QT += qml quick widgets
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    FileUtils.cpp
 
 RESOURCES += main-resources.qrc
 
@@ -16,7 +17,8 @@ RESOURCES += ../javascript/pageset-code.qrc
 # since we have to bundle in the .java files (I think).
 
 INCLUDEPATH += TTS/cpp/
-HEADERS += TTS/cpp/TTSClient.h
+HEADERS += TTS/cpp/TTSClient.h \
+    FileUtils.h
 
 # The implementation of the TTSClient object is OS-dependent. The build system
 # chooses the appropriate one.
@@ -38,8 +40,20 @@ win32 {
 ios {
   OBJECTIVE_SOURCES += TTS/cpp/ios/TTSClient.mm
   LIBS += -framework AVFoundation
+
+  # Set "Target"
+  QMAKE_IOS_DEPLOYMENT_TARGET = 8.0
+
+  # Set "Devices" (2=iPad Only)
+  QMAKE_IOS_TARGETED_DEVICE_FAMILY = 2
 }
 
+# iOS deployment stuff
+ios {
+    QMAKE_INFO_PLIST = ios/Info.plist
+    ios_icon.files = $$files($$PWD/ios/icons/AppIcon*.png)
+    QMAKE_BUNDLE_DATA += ios_icon
+}
 
 # Additional import path used to resolve QML modules in Qt Creator's code
 # model
@@ -47,3 +61,4 @@ QML_IMPORT_PATH =
 
 # Default rules for deployment.
 include(deployment.pri)
+

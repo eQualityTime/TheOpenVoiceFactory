@@ -17,7 +17,6 @@ public class AndroidTTSClient extends QtActivity implements TextToSpeech.OnInitL
 
   public AndroidTTSClient()
   {
-    System.out.println("Java constructor " );
     m_instance = this;
   }
 
@@ -46,10 +45,14 @@ public class AndroidTTSClient extends QtActivity implements TextToSpeech.OnInitL
     tts.shutdown();
   }
 
-  public static void speak(String msg)
+  // Speaks the given message, returns true if successful
+  public static boolean speak(String msg)
   {
-    System.out.println(msg);
-    tts.speak(msg, TextToSpeech.QUEUE_FLUSH, null);
-
+    int result = tts.speak(msg, TextToSpeech.QUEUE_FLUSH, null);
+    boolean success = (result == TextToSpeech.SUCCESS);
+    if (!success) {
+      Log.e("AzuleJoe", "Error using Android TTS");
+    }
+    return success;
   }
 }

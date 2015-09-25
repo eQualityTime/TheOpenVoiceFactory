@@ -26,7 +26,7 @@ function spelling2(){
 	utterances[4][3]="y";
 
 	links[0][4]="clear"; 
-	utterances[1][4]="x";
+	utterances[1][4]="z";
 	utterances[2][4]=" ";
 	utterances[3][4]="shift";
 	utterances[4][4]="!";

@@ -13,7 +13,7 @@ reset();
 	utterances[3][1]="t-shirt";
 	utterances[4][1]="jumper";
 
-	links[0][2]="colours";
+	links[0][2]="colour";
 	utterances[1][2]="skirt";
 	utterances[2][2]="dress";
 	utterances[3][2]="swimming things";
