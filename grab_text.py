@@ -85,16 +85,13 @@ class Grid:
                     for x in range(self.grid_width)]
                 self.tag = "unknown"
                 for shape in slide.shapes:
-                        print shape
                         self.process_shape(shape)
 
         def process_shape(self, shape):
                 try:
                         if shape.is_placeholder:
-                                print "hopeless"
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
-                                        print "right here"
                         (co, ro) = Locator.get_cr(shape.top, shape.left)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
@@ -103,7 +100,6 @@ class Grid:
                                             ro] = shape.fill.fore_color.rgb
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
-                        print shape.text
 
                 except:
                         return
@@ -138,11 +134,16 @@ document.main.src="ck20/originalSlides/Slide%02d.png";
 }""" % (make_title(self.tag), body, slide_number)
 
         def string_from_cell(self, row, col):
+#                return '     links[{}][{}]="{}";'.format(
+#                    row, col, make_title(
+#                        self.links[row][col])) +\
+#                    '  utterances[{}][{}]="{}";'.format(
+#                        row, col, self.utterances[row][col])
+                if self.links[row][col]=="blank":
+                    return '  utterances[{}][{}]="{}";'.format(row, col, self.utterances[row][col])
                 return '     links[{}][{}]="{}";'.format(
-                    row, col, make_title(
-                        self.links[row][col])) +\
-                    '  utterances[{}][{}]="{}";'.format(
-                        row, col, self.utterances[row][col])
+                    row, col, make_title(self.links[row][col]))
+
 
 
 def export_images(grid, slide):
