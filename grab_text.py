@@ -14,14 +14,18 @@ from PIL import Image
 
 
 if (len(sys.argv) < 3):
-        print("\nUsage: ./grab_text.py <inputPptxFile> <imageFileRoot>\n")
+        print("\nUsage: ./grab_text.py <inputPptxFile> <imageFileRoot> <gridSize>\n")
         print("inputPptxFile: The powerpoint pageset you want to process.")
         print("imageFileRoot: The file root for full page images, e.g. ck15/CK15+")
         print("    will save images for each slide with ck15/CK15+.%03d.png")
+        print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
         sys.exit(1)
 
 inputFile = sys.argv[1]
 fileRoot = sys.argv[2]
+gridSize = 4;
+if (len(sys.argv) > 3):
+        gridSize = int(sys.argv[3])
 alpha = string.ascii_lowercase + string.digits + '_'
 
 
@@ -115,9 +119,8 @@ class Grid:
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        grid_width = 4
-
-        def __init__(self, slide):
+        def __init__(self, slide, width):
+                self.grid_width = width
                 self.utterances = [
                     ["link" for x in range(self.grid_width)]
                     for x in range(self.grid_width)]
@@ -278,7 +281,7 @@ prs = Presentation(inputFile)
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
-        grid = Grid(slide)
+        grid = Grid(slide, gridSize)
         for_json[slide_number] = [
             make_title(
                 grid.tag),
