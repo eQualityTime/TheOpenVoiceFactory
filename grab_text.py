@@ -148,6 +148,7 @@ class Grid:
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
                 except:
+                        print "Exception processing shape"
                         return
 
         def process_text_frame(self, shape, co, ro):
