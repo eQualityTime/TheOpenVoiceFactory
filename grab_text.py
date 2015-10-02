@@ -10,8 +10,16 @@ import io
 import os
 import string
 import sys
+import math
 from PIL import Image
+import uuid
 
+
+# Helper for testing - generate unique chars.
+def getShortUuid():
+    u = str(uuid.uuid1())
+    u = u.split("-")[0]
+    return u;
 
 if (len(sys.argv) < 3):
         print("\nUsage: ./grab_text.py <inputPptxFile> <imageFileRoot> <gridSize>\n")
@@ -53,125 +61,84 @@ def make_title(label):
         return tag
 
 
-class Locator:
-
-        """Static class designed to abstract away the process of working out
-        which bit of the grid a particular part of powerpoint is in"""
-        ROW_TABLE = {
-
-            152404:  0,
-            1845122: 1,
-            1874564: 1,
-            3504321: 2,
-            3505369: 2,
-            3541832: 2,
-            5225484: 3,
-            5226008: 3,
-            5576358: 3
-            }
-
-        COL_TABLE = {
-            0: 0,
-            152400: 0,
-            152402: 0,
-            175371: 0,
-            2415785: 1,
-            2415786: 1,
-            2415786: 1,
-            4697109: 2,
-            4700413: 2,
-            4700414: 2,
-            6963797: 3,
-            6963798: 3
-            }
-
-        @staticmethod
-        def get_closest_key(dict, inKey):
-                "Returns the closest key in the dictionary, for numerical keys."
-                # from http://stackoverflow.com/a/7934624/170243
-                if inKey in dict:
-                        return inKey
-                else:
-                        return min(dict.keys(), key=lambda k: abs(k - inKey))
-
-        @staticmethod
-        def get_cr(topPos, leftPos):
-
-                maxWidth = 7700000;
-                maxHeight = 6000000;
-
-                slide_height = 6858000;
-                slide_width = 9144000;
-
-                col = math.floor((leftPos * 5 / slide_width) + 0.5);
-                row = math.floor((topPos * 5 / slide_height) + 0.5);
-                print "row, " + str(topPos) + " = " + str(row);
-                print "col, " + str(leftPos) + " = " + str(col);
-
-                # col = Locator.get_closest_key(Locator.COL_TABLE, leftPos)
-                # row = Locator.get_closest_key(Locator.ROW_TABLE, topPos)
-                return (row, col)
-
-
 class Grid:
 
         """Class representing on n by n grid, complete with utterances, links
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        def __init__(self, slide, width):
-                self.grid_width = width
+        def __init__(self, pres, slide, gridSize):
+                self.grid_size = gridSize
                 self.utterances = [
-                    ["link" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
+                    ["link" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
                 self.links = [
-                    ["blank" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
+                    ["blank" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
                 self.colors = [
-                    ["" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
+                    ["" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
                 self.tag = "unknown"
+                self.slide_width = pres.slide_width
+                self.slide_height = pres.slide_height
                 for shape in slide.shapes:
                         self.process_shape(shape)
 
+        def get_col_row(self, top, left):
+                # It doesn't make sense to use width and height, since often the
+                # midpoint lies outside the cell, particularly in the horizontal directino
+                # (probably because text boxes have a default minimum width)
+                # It might be worth having a slight fudge right-and-down to make sure
+                # we don't miss items who are just outside the top left of the cell.
+                col = math.floor((left * self.grid_size / self.slide_width) + 0.5);
+                row = math.floor((top * self.grid_size / self.slide_height) + 0.5);
+                return (int(col), int(row))
+
         def process_shape(self, shape):
-                try:
+                # try:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
-                        (co, ro) = Locator.get_cr(shape.top, shape.left)
+
+                        (co, ro) = self.get_col_row(shape.top, shape.left)
+
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
-                                        self.links[co][ro] = "real"
-                                        self.colors[co][
-                                            ro] = shape.fill.fore_color.rgb
+                                    # Temporarily mark as "real link, needing to be filled by label"
+                                    self.links[co][ro] = "real"
+                                    self.colors[co][
+                                        ro] = shape.fill.fore_color.rgb
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
-                except:
-                        print "Exception processing shape"
-                        return
+                # except:
+                        #  print "Exception processing shape"
+                        #  return
+
 
         def process_text_frame(self, shape, co, ro):
               #  text = self.utterances[co][ro]
                 text = ""
-                if "Yes" in self.utterances[co][ro]:
-                        return
+                # if "Yes" in self.utterances[co][ro]:
+                #         return
                 for paragraph in shape.text_frame.paragraphs:
                         text += "".join([run.text.encode('ascii', 'ignore')
                                         for run in paragraph.runs])
-                if text != "":
+
                         # add the if shape_type is text box
-                        if self.links[co][ro] == "real":
+                        if (text.strip() == ""):
+                            print "empty string"
+                        else:
+                            if self.links[co][ro] == "real":
                                 self.links[co][ro] = make_title(text.strip())
                                 self.utterances[co][ro] = "link"
-                        else:
+                            else:
                                 self.utterances[co][ro] = text.strip()
 
         def __str__(self):
                 body = "\n".join(
-                    [(self.string_from_cell(row, col))
-                        for col in range(self.grid_width)
-                        for row in range(self.grid_width)])
+                    [(self.string_from_cell(col, row))
+                        for row in range(self.grid_size)
+                        for col in range(self.grid_size)])
                 return """
 function %s(){
 reset();
@@ -180,12 +147,12 @@ document.main.src="%s.%03d.png";
 
 }""" % (make_title(self.tag), body, fileRoot, slide_number)
 
-        def string_from_cell(self, row, col):
+        def string_from_cell(self, col, row):
                 return '     links[{}][{}]="{}";'.format(
-                    row, col, make_title(
-                        self.links[row][col])) +\
+                    col, row, make_title(
+                        self.links[col][row])) +\
                     '  utterances[{}][{}]="{}";'.format(
-                        row, col, self.utterances[row][col])
+                        col, row, self.utterances[col][row])
 
 
 def export_images(grid, slide):
@@ -196,17 +163,23 @@ def export_images(grid, slide):
         utterances = grid.utterances
         links = grid.links
         for shape in slide.shapes:
-                try:
-                        if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                                (co, ro) = Locator.get_cr(shape.top, shape.left)
-                                if (co, ro) not in images:
-                                        images[co, ro] = []
-                                images[co, ro].append(shape)
-                except:
-                        continue
+                # try:
+                print shape.shape_type
+                if shape.shape_type == MSO_SHAPE_TYPE.PICTURE or shape.shape_type == MSO_SHAPE_TYPE.LINKED_PICTURE:
+                        (co, ro) = grid.get_col_row(shape.top, shape.left)
+                        if (co, ro) not in images:
+                                images[co, ro] = []
+                        images[co, ro].append(shape);
+                        # thing = Image.open( io.BytesIO(shape.image.blob))
+                        # thing.save("icons/all/" + getShortUuid() + ".png")
+                #
+                # except:
+                #         print "Exception exporting images!"
+                #         continue
 
         # Compose each icon out of all the images in the grid cell.
         for (x, y) in images:
+                print "got some images for " + str(y) + ", " + str(x)
                 # Go through all the images, compute bounding
                 # box.
                 l = min([shape.left for shape in images[x, y]])
@@ -275,14 +248,14 @@ def export_images(grid, slide):
 
 
 doPrintJSON = True;
-doSaveJSON = True;
-doExportImages = True;
+doSaveJSON = False;
+doExportImages = False;
 
 prs = Presentation(inputFile)
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
-        grid = Grid(slide, gridSize)
+        grid = Grid(prs, slide, gridSize)
         for_json[slide_number] = [
             make_title(
                 grid.tag),
@@ -294,7 +267,7 @@ for slide in prs.slides:
         if (doPrintJSON):
             print grid
         slide_number += 1
-#            break
+        break
 if (doSaveJSON):
         with open('data.json', 'w') as outfile:
             json.dump(for_json, outfile, sort_keys=True)
