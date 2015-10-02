@@ -238,9 +238,12 @@ def export_images(grid, slide):
                 composite = composite.crop(bbox)
 
                 # Save!
+                label = utterances[x][y]
+                if  (label == "link"):
+                    label = links[x][y]
                 name = remove_punctuation(
                     "%d-%d-" %
-                    (x, y)+utterances[x][y]) + ".png"
+                    (x, y)+label) + ".png"
                 folder = "icons/" + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
