@@ -102,12 +102,14 @@ class Grid:
 
                         (co, ro) = self.get_col_row(shape.top, shape.left)
 
-                        if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+                        if hasattr(shape, "shape_type") and \
+                            shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                     # Temporarily mark as "real link, needing to be filled by label"
                                     self.links[co][ro] = "real"
-                                    self.colors[co][
-                                        ro] = shape.fill.fore_color.rgb
+                                    if (hasattr(shape.fill.fore_color, "rgb")):
+                                        self.colors[co][
+                                            ro] = shape.fill.fore_color.rgb
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
                 # except:
@@ -164,7 +166,9 @@ def export_images(grid, slide):
         links = grid.links
         for shape in slide.shapes:
                 # try:
-                print shape.shape_type
+                if not hasattr(shape, "shape_type"):
+                    continue
+
                 if shape.shape_type == MSO_SHAPE_TYPE.PICTURE or shape.shape_type == MSO_SHAPE_TYPE.LINKED_PICTURE:
                         (co, ro) = grid.get_col_row(shape.top, shape.left)
                         if (co, ro) not in images:
