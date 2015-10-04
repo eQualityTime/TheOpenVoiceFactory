@@ -154,7 +154,9 @@ document.main.src="%s.%03d.png";
                     col, row, make_title(
                         self.links[col][row])) +\
                     '  utterances[{}][{}]="{}";'.format(
-                        col, row, self.utterances[col][row])
+                        col, row, self.utterances[col][row]) + \
+                        '  colors[{}][{}]="{}";'.format(
+                            col, row, self.colors[col][row])
 
 
 def export_images(grid, slide):
