@@ -149,7 +149,7 @@ class Grid:
 function %s(){
 reset();
 %s
-document.main.src="ck15/CK15+.%03d.png";
+document.main.src="ck12/ck12+.%03d.png";
 
 }""" % (make_title(self.tag), body, slide_number)
 
@@ -241,7 +241,7 @@ def export_images(grid, slide):
                         os.makedirs(folder)
                 composite.save(folder + "/" + name)
 
-prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
+prs = Presentation("../azulejoe/testSuite/ck12/ck12+.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:

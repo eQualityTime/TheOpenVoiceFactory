@@ -19,7 +19,7 @@ reset();
      links[1][3]="places";  utterances[1][3]="link";
      links[2][3]="leisure";  utterances[2][3]="link";
      links[3][3]="little_words";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.001.png";
+document.main.src="ck12/ck12+.001.png";
 
 }
 
@@ -41,7 +41,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="sorry";
      links[2][3]="blank";  utterances[2][3]="I dont know";
      links[3][3]="blank";  utterances[3][3]="bye";
-document.main.src="ck15/CK15+.002.png";
+document.main.src="ck12/ck12+.002.png";
 
 }
 
@@ -63,7 +63,7 @@ reset();
      links[1][3]="i_dont_like";  utterances[1][3]="--------------";
      links[2][3]="tell_me_about_you";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="--------------";
-document.main.src="ck15/CK15+.003.png";
+document.main.src="ck12/ck12+.003.png";
 
 }
 
@@ -85,7 +85,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.004.png";
+document.main.src="ck12/ck12+.004.png";
 
 }
 
@@ -107,7 +107,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.005.png";
+document.main.src="ck12/ck12+.005.png";
 
 }
 
@@ -129,7 +129,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="--------------";
      links[2][3]="blank";  utterances[2][3]="Do you have?";
      links[3][3]="blank";  utterances[3][3]="--------------";
-document.main.src="ck15/CK15+.006.png";
+document.main.src="ck12/ck12+.006.png";
 
 }
 
@@ -151,7 +151,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="not";
      links[2][3]="blank";  utterances[2][3]="well";
      links[3][3]="blank";  utterances[3][3]="cool";
-document.main.src="ck15/CK15+.007.png";
+document.main.src="ck12/ck12+.007.png";
 
 }
 
@@ -173,7 +173,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.008.png";
+document.main.src="ck12/ck12+.008.png";
 
 }
 
@@ -195,7 +195,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="who";
      links[2][3]="blank";  utterances[2][3]="why";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.009.png";
+document.main.src="ck12/ck12+.009.png";
 
 }
 
@@ -217,7 +217,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="Can you do my hair?";
      links[2][3]="blank";  utterances[2][3]="clothes";
      links[3][3]="blank";  utterances[3][3]="toiletries";
-document.main.src="ck15/CK15+.010.png";
+document.main.src="ck12/ck12+.010.png";
 
 }
 
@@ -239,7 +239,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="back";
      links[2][3]="blank";  utterances[2][3]="foot";
      links[3][3]="private_parts";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.011.png";
+document.main.src="ck12/ck12+.011.png";
 
 }
 
@@ -261,7 +261,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="kiss";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.012.png";
+document.main.src="ck12/ck12+.012.png";
 
 }
 
@@ -283,7 +283,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="back pain";
      links[2][3]="blank";  utterances[2][3]="sore throat";
      links[3][3]="blank";  utterances[3][3]="itch";
-document.main.src="ck15/CK15+.013.png";
+document.main.src="ck12/ck12+.013.png";
 
 }
 
@@ -305,7 +305,7 @@ reset();
      links[1][3]="transport";  utterances[1][3]="link";
      links[2][3]="nature";  utterances[2][3]="link";
      links[3][3]="real";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.014.png";
+document.main.src="ck12/ck12+.014.png";
 
 }
 
@@ -327,7 +327,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="charger";
-document.main.src="ck15/CK15+.015.png";
+document.main.src="ck12/ck12+.015.png";
 
 }
 
@@ -349,7 +349,7 @@ reset();
      links[1][3]="snacks__pud";  utterances[1][3]="link";
      links[2][3]="saucesingredients";  utterances[2][3]="link";
      links[3][3]="food_chat";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.016.png";
+document.main.src="ck12/ck12+.016.png";
 
 }
 
@@ -371,7 +371,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="pancake";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.017.png";
+document.main.src="ck12/ck12+.017.png";
 
 }
 
@@ -393,7 +393,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="salad";
      links[2][3]="blank";  utterances[2][3]="cheese on toast";
      links[3][3]="blank";  utterances[3][3]="beans on toast";
-document.main.src="ck15/CK15+.018.png";
+document.main.src="ck12/ck12+.018.png";
 
 }
 
@@ -415,7 +415,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="pie";
      links[2][3]="blank";  utterances[2][3]="lasagna";
      links[3][3]="blank";  utterances[3][3]="rice";
-document.main.src="ck15/CK15+.019.png";
+document.main.src="ck12/ck12+.019.png";
 
 }
 
@@ -437,7 +437,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="mince";
      links[2][3]="blank";  utterances[2][3]="pork";
      links[3][3]="blank";  utterances[3][3]="sausages";
-document.main.src="ck15/CK15+.020.png";
+document.main.src="ck12/ck12+.020.png";
 
 }
 
@@ -459,7 +459,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="candy floss";
      links[2][3]="blank";  utterances[2][3]="pizza";
      links[3][3]="blank";  utterances[3][3]="hot dog";
-document.main.src="ck15/CK15+.021.png";
+document.main.src="ck12/ck12+.021.png";
 
 }
 
@@ -481,7 +481,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="peas";
      links[2][3]="blank";  utterances[2][3]="onion";
      links[3][3]="blank";  utterances[3][3]="lettuce";
-document.main.src="ck15/CK15+.022.png";
+document.main.src="ck12/ck12+.022.png";
 
 }
 
@@ -503,7 +503,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="strawberry";
      links[2][3]="blank";  utterances[2][3]="orange";
      links[3][3]="blank";  utterances[3][3]="plum";
-document.main.src="ck15/CK15+.023.png";
+document.main.src="ck12/ck12+.023.png";
 
 }
 
@@ -525,7 +525,7 @@ reset();
      links[1][3]="milkshake";  utterances[1][3]="link";
      links[2][3]="fizzy_drink";  utterances[2][3]="link";
      links[3][3]="alcohol";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.024.png";
+document.main.src="ck12/ck12+.024.png";
 
 }
 
@@ -547,7 +547,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="tomato juice";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.025.png";
+document.main.src="ck12/ck12+.025.png";
 
 }
 
@@ -569,7 +569,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.026.png";
+document.main.src="ck12/ck12+.026.png";
 
 }
 
@@ -591,7 +591,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.027.png";
+document.main.src="ck12/ck12+.027.png";
 
 }
 
@@ -613,7 +613,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.028.png";
+document.main.src="ck12/ck12+.028.png";
 
 }
 
@@ -635,7 +635,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="crisps";
      links[2][3]="blank";  utterances[2][3]="biscuits";
      links[3][3]="blank";  utterances[3][3]="chocolate";
-document.main.src="ck15/CK15+.029.png";
+document.main.src="ck12/ck12+.029.png";
 
 }
 
@@ -657,7 +657,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="chocolate";
-document.main.src="ck15/CK15+.030.png";
+document.main.src="ck12/ck12+.030.png";
 
 }
 
@@ -679,7 +679,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="cold";
      links[2][3]="blank";  utterances[2][3]="eat";
      links[3][3]="blank";  utterances[3][3]="drink";
-document.main.src="ck15/CK15+.031.png";
+document.main.src="ck12/ck12+.031.png";
 
 }
 
@@ -701,7 +701,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="pan";
      links[2][3]="blank";  utterances[2][3]="dish cloth";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.032.png";
+document.main.src="ck12/ck12+.032.png";
 
 }
 
@@ -723,7 +723,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="coat";
      links[2][3]="blank";  utterances[2][3]="shoes";
      links[3][3]="blank";  utterances[3][3]="socks";
-document.main.src="ck15/CK15+.033.png";
+document.main.src="ck12/ck12+.033.png";
 
 }
 
@@ -745,7 +745,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="sink";
      links[2][3]="blank";  utterances[2][3]="draw";
      links[3][3]="blank";  utterances[3][3]="couch";
-document.main.src="ck15/CK15+.034.png";
+document.main.src="ck12/ck12+.034.png";
 
 }
 
@@ -767,7 +767,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="ECU";
      links[2][3]="blank";  utterances[2][3]="appointment";
      links[3][3]="blank";  utterances[3][3]="charger";
-document.main.src="ck15/CK15+.035.png";
+document.main.src="ck12/ck12+.035.png";
 
 }
 
@@ -789,7 +789,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="brush";
      links[2][3]="blank";  utterances[2][3]="toilet roll";
      links[3][3]="blank";  utterances[3][3]="sanitary items";
-document.main.src="ck15/CK15+.036.png";
+document.main.src="ck12/ck12+.036.png";
 
 }
 
@@ -811,7 +811,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.037.png";
+document.main.src="ck12/ck12+.037.png";
 
 }
 
@@ -833,7 +833,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="train";
      links[2][3]="blank";  utterances[2][3]="lorry";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.038.png";
+document.main.src="ck12/ck12+.038.png";
 
 }
 
@@ -855,7 +855,7 @@ reset();
      links[1][3]="real";  utterances[1][3]="link";
      links[2][3]="real";  utterances[2][3]="link";
      links[3][3]="real";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.039.png";
+document.main.src="ck12/ck12+.039.png";
 
 }
 
@@ -877,7 +877,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="freezing";
      links[2][3]="blank";  utterances[2][3]="wind";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.040.png";
+document.main.src="ck12/ck12+.040.png";
 
 }
 
@@ -899,7 +899,7 @@ reset();
      links[1][3]="real";  utterances[1][3]="link";
      links[2][3]="real";  utterances[2][3]="link";
      links[3][3]="real";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.041.png";
+document.main.src="ck12/ck12+.041.png";
 
 }
 
@@ -921,7 +921,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="rat";
      links[2][3]="blank";  utterances[2][3]="dog";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.042.png";
+document.main.src="ck12/ck12+.042.png";
 
 }
 
@@ -943,7 +943,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.043.png";
+document.main.src="ck12/ck12+.043.png";
 
 }
 
@@ -965,7 +965,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="rhinoceros";
      links[2][3]="blank";  utterances[2][3]="hippo";
      links[3][3]="blank";  utterances[3][3]="lion";
-document.main.src="ck15/CK15+.044.png";
+document.main.src="ck12/ck12+.044.png";
 
 }
 
@@ -987,7 +987,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.045.png";
+document.main.src="ck12/ck12+.045.png";
 
 }
 
@@ -1009,7 +1009,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="robin";
      links[2][3]="blank";  utterances[2][3]="chicken";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.046.png";
+document.main.src="ck12/ck12+.046.png";
 
 }
 
@@ -1031,7 +1031,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.047.png";
+document.main.src="ck12/ck12+.047.png";
 
 }
 
@@ -1053,7 +1053,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="feed pet";
      links[2][3]="blank";  utterances[2][3]="walk the dog";
      links[3][3]="blank";  utterances[3][3]="materials";
-document.main.src="ck15/CK15+.048.png";
+document.main.src="ck12/ck12+.048.png";
 
 }
 
@@ -1075,7 +1075,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="seeds";
      links[2][3]="blank";  utterances[2][3]="clippers";
      links[3][3]="blank";  utterances[3][3]="rake";
-document.main.src="ck15/CK15+.049.png";
+document.main.src="ck12/ck12+.049.png";
 
 }
 
@@ -1097,7 +1097,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="turn";
      links[2][3]="blank";  utterances[2][3]="see";
      links[3][3]="more_action_words";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.050.png";
+document.main.src="ck12/ck12+.050.png";
 
 }
 
@@ -1119,7 +1119,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="take";
      links[2][3]="blank";  utterances[2][3]="tell";
      links[3][3]="blank";  utterances[3][3]="sing";
-document.main.src="ck15/CK15+.051.png";
+document.main.src="ck12/ck12+.051.png";
 
 }
 
@@ -1141,7 +1141,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="you";
      links[2][3]="blank";  utterances[2][3]="boy";
      links[3][3]="blank";  utterances[3][3]="girl";
-document.main.src="ck15/CK15+.052.png";
+document.main.src="ck12/ck12+.052.png";
 
 }
 
@@ -1163,7 +1163,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.053.png";
+document.main.src="ck12/ck12+.053.png";
 
 }
 
@@ -1185,7 +1185,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="jobs";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.054.png";
+document.main.src="ck12/ck12+.054.png";
 
 }
 
@@ -1207,7 +1207,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.055.png";
+document.main.src="ck12/ck12+.055.png";
 
 }
 
@@ -1229,7 +1229,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.056.png";
+document.main.src="ck12/ck12+.056.png";
 
 }
 
@@ -1251,7 +1251,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="right";
      links[2][3]="blank";  utterances[2][3]="problem";
      links[3][3]="blank";  utterances[3][3]="idea";
-document.main.src="ck15/CK15+.057.png";
+document.main.src="ck12/ck12+.057.png";
 
 }
 
@@ -1273,7 +1273,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="tired";
      links[2][3]="blank";  utterances[2][3]="bad";
      links[3][3]="blank";  utterances[3][3]="happy";
-document.main.src="ck15/CK15+.058.png";
+document.main.src="ck12/ck12+.058.png";
 
 }
 
@@ -1295,7 +1295,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="rectangle";
      links[2][3]="blank";  utterances[2][3]="green";
      links[3][3]="blank";  utterances[3][3]="blue";
-document.main.src="ck15/CK15+.059.png";
+document.main.src="ck12/ck12+.059.png";
 
 }
 
@@ -1317,7 +1317,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="hard";
      links[2][3]="blank";  utterances[2][3]="clean";
      links[3][3]="blank";  utterances[3][3]="dirty";
-document.main.src="ck15/CK15+.060.png";
+document.main.src="ck12/ck12+.060.png";
 
 }
 
@@ -1339,7 +1339,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.061.png";
+document.main.src="ck12/ck12+.061.png";
 
 }
 
@@ -1361,7 +1361,7 @@ reset();
      links[1][3]="real";  utterances[1][3]="link";
      links[2][3]="real";  utterances[2][3]="link";
      links[3][3]="real";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.062.png";
+document.main.src="ck12/ck12+.062.png";
 
 }
 
@@ -1383,7 +1383,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.063.png";
+document.main.src="ck12/ck12+.063.png";
 
 }
 
@@ -1405,7 +1405,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="pub";
      links[2][3]="blank";  utterances[2][3]="doctors";
      links[3][3]="places_at_home";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.064.png";
+document.main.src="ck12/ck12+.064.png";
 
 }
 
@@ -1427,7 +1427,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="cafe";
      links[2][3]="blank";  utterances[2][3]="music shop";
      links[3][3]="blank";  utterances[3][3]="pharmacy";
-document.main.src="ck15/CK15+.065.png";
+document.main.src="ck12/ck12+.065.png";
 
 }
 
@@ -1449,7 +1449,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="lake";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.066.png";
+document.main.src="ck12/ck12+.066.png";
 
 }
 
@@ -1471,7 +1471,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="up stairs";
      links[2][3]="blank";  utterances[2][3]="down stairs";
      links[3][3]="blank";  utterances[3][3]="stairs";
-document.main.src="ck15/CK15+.067.png";
+document.main.src="ck12/ck12+.067.png";
 
 }
 
@@ -1493,7 +1493,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="ready";
      links[2][3]="blank";  utterances[2][3]="before";
      links[3][3]="blank";  utterances[3][3]="after";
-document.main.src="ck15/CK15+.068.png";
+document.main.src="ck12/ck12+.068.png";
 
 }
 
@@ -1515,7 +1515,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="Saturday";
      links[2][3]="blank";  utterances[2][3]="Sunday";
      links[3][3]="blank";  utterances[3][3]="week";
-document.main.src="ck15/CK15+.069.png";
+document.main.src="ck12/ck12+.069.png";
 
 }
 
@@ -1537,7 +1537,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="Halloween";
      links[2][3]="blank";  utterances[2][3]="party";
      links[3][3]="christmas";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.070.png";
+document.main.src="ck12/ck12+.070.png";
 
 }
 
@@ -1559,7 +1559,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="Christmas tree";
      links[2][3]="blank";  utterances[2][3]="gift";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.071.png";
+document.main.src="ck12/ck12+.071.png";
 
 }
 
@@ -1581,7 +1581,7 @@ reset();
      links[1][3]="dvd";  utterances[1][3]="link";
      links[2][3]="tv";  utterances[2][3]="link";
      links[3][3]="ecu";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.072.png";
+document.main.src="ck12/ck12+.072.png";
 
 }
 
@@ -1603,7 +1603,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="to listen to something";
      links[2][3]="blank";  utterances[2][3]="to swim";
      links[3][3]="blank";  utterances[3][3]="to go home";
-document.main.src="ck15/CK15+.073.png";
+document.main.src="ck12/ck12+.073.png";
 
 }
 
@@ -1625,7 +1625,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="I miss you";
      links[2][3]="blank";  utterances[2][3]="Happy Birthday";
      links[3][3]="blank";  utterances[3][3]="Get well soon";
-document.main.src="ck15/CK15+.074.png";
+document.main.src="ck12/ck12+.074.png";
 
 }
 
@@ -1647,7 +1647,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="rewind";
      links[2][3]="blank";  utterances[2][3]="Play/pause";
      links[3][3]="blank";  utterances[3][3]="Fast forward";
-document.main.src="ck15/CK15+.075.png";
+document.main.src="ck12/ck12+.075.png";
 
 }
 
@@ -1669,7 +1669,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="rewind";
      links[2][3]="blank";  utterances[2][3]="Play/pause";
      links[3][3]="blank";  utterances[3][3]="Fast forward";
-document.main.src="ck15/CK15+.076.png";
+document.main.src="ck12/ck12+.076.png";
 
 }
 
@@ -1691,7 +1691,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="peal";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="dont burn it";
-document.main.src="ck15/CK15+.077.png";
+document.main.src="ck12/ck12+.077.png";
 
 }
 
@@ -1713,7 +1713,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="&";
      links[2][3]="blank";  utterances[2][3]="over";
      links[3][3]="blank";  utterances[3][3]="under";
-document.main.src="ck15/CK15+.078.png";
+document.main.src="ck12/ck12+.078.png";
 
 }
 
@@ -1735,7 +1735,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="link";
      links[2][3]="blank";  utterances[2][3]="link";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.079.png";
+document.main.src="ck12/ck12+.079.png";
 
 }
 
@@ -1757,7 +1757,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="jigsaw";
      links[2][3]="blank";  utterances[2][3]="doll";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.080.png";
+document.main.src="ck12/ck12+.080.png";
 
 }
 
@@ -1779,7 +1779,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="pencil";
      links[2][3]="blank";  utterances[2][3]="scissors";
      links[3][3]="materials";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.081.png";
+document.main.src="ck12/ck12+.081.png";
 
 }
 
@@ -1801,7 +1801,7 @@ reset();
      links[1][3]="blank";  utterances[1][3]="string";
      links[2][3]="blank";  utterances[2][3]="paper";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.082.png";
+document.main.src="ck12/ck12+.082.png";
 
 }
 
@@ -1823,6 +1823,6 @@ reset();
      links[1][3]="blank";  utterances[1][3]="adapted computer";
      links[2][3]="blank";  utterances[2][3]="speakers";
      links[3][3]="blank";  utterances[3][3]="link";
-document.main.src="ck15/CK15+.083.png";
+document.main.src="ck12/ck12+.083.png";
 
 }
