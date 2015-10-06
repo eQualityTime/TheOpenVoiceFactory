@@ -139,8 +139,8 @@ function start_scanning(){
 if (azulejoe_scanning==true){
 hope=document.getElementById("box");
 $(hope).css('position', "absolute");
-$(hope).css('width', "140px");
-$(hope).css('height', "110px");
+$(hope).css('width', 720/grid_size_rows);
+$(hope).css('height', 520/grid_size_columns);
 $(hope).css('top', offset_t+105*y);
 $(hope).css('left', offset_l+140*x);
 //$(hope).css('top', offset_t);
@@ -170,16 +170,16 @@ clearInterval(interval_access_var);
 
 function itterate_direct_Scanner(){
 x++
-if (x==5){
+if (x==grid_size_rows){
 x=0;
 y=y+1;
 }
-if (y==5){
+if (y==grid_size_columns){
 y=0;
 }
 
-$(hope).css('top', offset_t+105*y);
-$(hope).css('left', offset_l+140*x);
+$(hope).css('top', offset_t+(520/grid_size_rows)*y);
+$(hope).css('left', offset_l+(720/grid_size_columns)*x);
 }
 
 
