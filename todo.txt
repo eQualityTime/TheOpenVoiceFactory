@@ -1,8 +1,0 @@
-names of pages are appearing in the page's javascript
-pages have have multiple names i.e. spelling
-fix the question marks
-fix the google, youtube, and twitter buttons
-you need to fix the missing 'I have apain in my
-
-'clear' and 'delete' and other special words need updating. 
-what do we need to do to get 'drink' to work on the 'drinks' page.

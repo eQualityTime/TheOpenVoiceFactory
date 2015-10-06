@@ -29,7 +29,7 @@ utterances[0][4]="Clear";
      links[2][4]="places";
      links[3][4]="leisure";
 links[4][4]="deleteword";
-document.main.src="ck20/originalSlides/Slide01.png";
+document.main.src="ck20/CK20.001.png";
 
 }
 
@@ -60,7 +60,7 @@ utterances[1][4]="I love you";
 utterances[2][4]="but";
 utterances[3][4]="Ouch";
 utterances[4][4]="so";
-document.main.src="ck20/originalSlides/Slide03.png";
+document.main.src="ck20/CK20.002.png";
 
 }
 
@@ -91,7 +91,7 @@ utterances[1][4]="Its too cold";
 utterances[2][4]="full";
 utterances[3][4]="empty";
 utterances[4][4]="link";
-document.main.src="ck20/originalSlides/Slide02.png";
+document.main.src="ck20/CK20.003.png";
 
 }
 
@@ -122,7 +122,7 @@ utterances[1][4]="mobile";
      links[2][4]="about_you";
 utterances[3][4]="--------------";
 utterances[4][4]="--------------";
-document.main.src="ck20/originalSlides/Slide04.png";
+document.main.src="ck20/CK20.004.png";
 
 }
 
@@ -153,7 +153,7 @@ utterances[1][4]="--------------";
 utterances[2][4]="--------------";
 utterances[3][4]="--------------";
 utterances[4][4]="--------------";
-document.main.src="ck20/originalSlides/Slide05.png";
+document.main.src="ck20/CK20.005.png";
 
 }
 
@@ -184,7 +184,7 @@ utterances[1][4]="not";
 utterances[2][4]="well";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide06.png";
+document.main.src="ck20/CK20.006.png";
 
 }
 
@@ -215,7 +215,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="C";
-document.main.src="ck20/originalSlides/Slide07.png";
+document.main.src="ck20/CK20.007.png";
 
 }
 
@@ -246,7 +246,7 @@ utterances[1][4]="What have you been doing?";
 utterances[2][4]="What do you think?";
 utterances[3][4]="Whats  next?";
 utterances[4][4]="Whats that?";
-document.main.src="ck20/originalSlides/Slide08.png";
+document.main.src="ck20/CK20.008.png";
 
 }
 
@@ -277,7 +277,7 @@ utterances[1][4]="with";
 utterances[2][4]="&";
      links[3][4]="food_chat";
 utterances[4][4]="Favorite food";
-document.main.src="ck20/originalSlides/Slide09.png";
+document.main.src="ck20/CK20.009.png";
 
 }
 
@@ -308,7 +308,7 @@ utterances[1][4]="fruit";
 utterances[2][4]="pancakes";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide10.png";
+document.main.src="ck20/CK20.010.png";
 
 }
 
@@ -339,7 +339,7 @@ utterances[1][4]="strawberry";
 utterances[2][4]="kiwi";
 utterances[3][4]="cherry";
 utterances[4][4]="blackberry";
-document.main.src="ck20/originalSlides/Slide11.png";
+document.main.src="ck20/CK20.011.png";
 
 }
 
@@ -370,7 +370,7 @@ utterances[1][4]="mushroom";
 utterances[2][4]="turnip";
 utterances[3][4]="sweetcorn";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide12.png";
+document.main.src="ck20/CK20.012.png";
 
 }
 
@@ -401,7 +401,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide13.png";
+document.main.src="ck20/CK20.013.png";
 
 }
 
@@ -432,7 +432,7 @@ utterances[1][4]="with";
 utterances[2][4]="&";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide14.png";
+document.main.src="ck20/CK20.014.png";
 
 }
 
@@ -463,7 +463,7 @@ utterances[1][4]="strawberry";
 utterances[2][4]="link";
 utterances[3][4]="cherry";
 utterances[4][4]="blackberry";
-document.main.src="ck20/originalSlides/Slide15.png";
+document.main.src="ck20/CK20.015.png";
 
 }
 
@@ -494,7 +494,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide16.png";
+document.main.src="ck20/CK20.016.png";
 
 }
 
@@ -525,7 +525,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide17.png";
+document.main.src="ck20/CK20.017.png";
 
 }
 
@@ -556,7 +556,7 @@ utterances[1][4]="mushroom soup";
 utterances[2][4]="vegetable soup";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide18.png";
+document.main.src="ck20/CK20.018.png";
 
 }
 
@@ -587,7 +587,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide19.png";
+document.main.src="ck20/CK20.019.png";
 
 }
 
@@ -618,7 +618,7 @@ utterances[1][4]="link";
 utterances[2][4]="Macaroni cheese";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide20.png";
+document.main.src="ck20/CK20.020.png";
 
 }
 
@@ -649,7 +649,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide21.png";
+document.main.src="ck20/CK20.021.png";
 
 }
 
@@ -680,7 +680,7 @@ utterances[1][4]="cold";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide22.png";
+document.main.src="ck20/CK20.022.png";
 
 }
 
@@ -711,7 +711,7 @@ utterances[1][4]="rice cake";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide23.png";
+document.main.src="ck20/CK20.023.png";
 
 }
 
@@ -742,7 +742,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide24.png";
+document.main.src="ck20/CK20.024.png";
 
 }
 
@@ -773,7 +773,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide25.png";
+document.main.src="ck20/CK20.025.png";
 
 }
 
@@ -804,7 +804,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide26.png";
+document.main.src="ck20/CK20.026.png";
 
 }
 
@@ -835,7 +835,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide27.png";
+document.main.src="ck20/CK20.027.png";
 
 }
 
@@ -866,7 +866,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
      links[3][4]="kitchen_equipment";
 utterances[4][4]="Dont burn it";
-document.main.src="ck20/originalSlides/Slide28.png";
+document.main.src="ck20/CK20.028.png";
 
 }
 
@@ -897,7 +897,7 @@ utterances[1][4]="chopping board";
 utterances[2][4]="colander";
 utterances[3][4]="greater";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide29.png";
+document.main.src="ck20/CK20.029.png";
 
 }
 
@@ -928,7 +928,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="she";
      links[4][4]="family";
-document.main.src="ck20/originalSlides/Slide30.png";
+document.main.src="ck20/CK20.030.png";
 
 }
 
@@ -959,7 +959,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
-document.main.src="ck20/originalSlides/Slide31.png";
+document.main.src="ck20/CK20.031.png";
 
 }
 
@@ -990,7 +990,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
-document.main.src="ck20/originalSlides/Slide32.png";
+document.main.src="ck20/CK20.032.png";
 
 }
 
@@ -1021,7 +1021,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
-document.main.src="ck20/originalSlides/Slide33.png";
+document.main.src="ck20/CK20.033.png";
 
 }
 
@@ -1052,7 +1052,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
-document.main.src="ck20/originalSlides/Slide34.png";
+document.main.src="ck20/CK20.034.png";
 
 }
 
@@ -1083,7 +1083,7 @@ utterances[1][4]="caretaker";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
-document.main.src="ck20/originalSlides/Slide35.png";
+document.main.src="ck20/CK20.035.png";
 
 }
 
@@ -1114,7 +1114,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
-document.main.src="ck20/originalSlides/Slide36.png";
+document.main.src="ck20/CK20.036.png";
 
 }
 
@@ -1145,7 +1145,7 @@ utterances[1][4]="link";
 utterances[2][4]="Can you do my hair please";
 utterances[3][4]="link";
 utterances[4][4]="link";
-document.main.src="ck20/originalSlides/Slide37.png";
+document.main.src="ck20/CK20.037.png";
 
 }
 
@@ -1176,7 +1176,7 @@ utterances[1][4]="a sore throat";
 utterances[2][4]="cramp";
 utterances[3][4]="link";
 utterances[4][4]="C";
-document.main.src="ck20/originalSlides/Slide38.png";
+document.main.src="ck20/CK20.038.png";
 
 }
 
@@ -1207,7 +1207,7 @@ utterances[1][4]="with";
 utterances[2][4]="&";
 utterances[3][4]="at";
 utterances[4][4]="the";
-document.main.src="ck20/originalSlides/Slide39.png";
+document.main.src="ck20/CK20.039.png";
 
 }
 
@@ -1238,7 +1238,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide40.png";
+document.main.src="ck20/CK20.040.png";
 
 }
 
@@ -1269,7 +1269,7 @@ utterances[4][0]="No";
      links[2][4]="and";
      links[3][4]="link";
      links[4][4]="favorite_food";
-document.main.src="ck20/originalSlides/Slide41.png";
+document.main.src="ck20/CK20.041.png";
 
 }
 
@@ -1300,7 +1300,7 @@ utterances[1][4]="m";
 utterances[2][4]="Space";
 utterances[3][4]="Shift";
 utterances[4][4]="?";
-document.main.src="ck20/originalSlides/Slide42.png";
+document.main.src="ck20/CK20.042.png";
 
 }
 
@@ -1331,7 +1331,7 @@ utterances[1][4]="z";
 utterances[2][4]="Space";
 utterances[3][4]="Shift";
 utterances[4][4]="!";
-document.main.src="ck20/originalSlides/Slide43.png";
+document.main.src="ck20/CK20.043.png";
 
 }
 
@@ -1362,7 +1362,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
      links[4][4]="calculator";
-document.main.src="ck20/originalSlides/Slide44.png";
+document.main.src="ck20/CK20.044.png";
 
 }
 
@@ -1393,7 +1393,7 @@ utterances[1][4]="turn";
 utterances[2][4]="open";
 utterances[3][4]="close";
      links[4][4]="more_action_words";
-document.main.src="ck20/originalSlides/Slide45.png";
+document.main.src="ck20/CK20.045.png";
 
 }
 
@@ -1424,7 +1424,7 @@ utterances[1][4]="lose";
 utterances[2][4]="finish";
 utterances[3][4]="need";
      links[4][4]="yet_more_action_words";
-document.main.src="ck20/originalSlides/Slide46.png";
+document.main.src="ck20/CK20.046.png";
 
 }
 
@@ -1455,7 +1455,7 @@ utterances[1][4]="write";
 utterances[2][4]="link";
 utterances[3][4]="ask";
      links[4][4]="back_top_action_words";
-document.main.src="ck20/originalSlides/Slide47.png";
+document.main.src="ck20/CK20.047.png";
 
 }
 
@@ -1486,7 +1486,7 @@ utterances[1][4]="important";
 utterances[2][4]="link";
 utterances[3][4]="idea";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide48.png";
+document.main.src="ck20/CK20.048.png";
 
 }
 
@@ -1517,7 +1517,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="silver";
-document.main.src="ck20/originalSlides/Slide49.png";
+document.main.src="ck20/CK20.049.png";
 
 }
 
@@ -1548,7 +1548,7 @@ utterances[1][4]="cold";
 utterances[2][4]="bad";
 utterances[3][4]="scared";
 utterances[4][4]="confused";
-document.main.src="ck20/originalSlides/Slide50.png";
+document.main.src="ck20/CK20.050.png";
 
 }
 
@@ -1579,7 +1579,7 @@ utterances[1][4]="cube";
 utterances[2][4]="cylinder";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide51.png";
+document.main.src="ck20/CK20.051.png";
 
 }
 
@@ -1610,7 +1610,7 @@ utterances[1][4]="easy";
 utterances[2][4]="hard";
 utterances[3][4]="clean";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide52.png";
+document.main.src="ck20/CK20.052.png";
 
 }
 
@@ -1641,7 +1641,7 @@ utterances[1][4]="cold";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide53.png";
+document.main.src="ck20/CK20.053.png";
 
 }
 
@@ -1672,7 +1672,7 @@ utterances[4][0]="No";
      links[2][4]="nature";
      links[3][4]="link";
      links[4][4]="favorite_food";
-document.main.src="ck20/originalSlides/Slide54.png";
+document.main.src="ck20/CK20.054.png";
 
 }
 
@@ -1703,7 +1703,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
      links[4][4]="materials";
-document.main.src="ck20/originalSlides/Slide55.png";
+document.main.src="ck20/CK20.055.png";
 
 }
 
@@ -1734,7 +1734,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide56.png";
+document.main.src="ck20/CK20.056.png";
 
 }
 
@@ -1765,7 +1765,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide57.png";
+document.main.src="ck20/CK20.057.png";
 
 }
 
@@ -1796,7 +1796,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide58.png";
+document.main.src="ck20/CK20.058.png";
 
 }
 
@@ -1827,7 +1827,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="charger";
-document.main.src="ck20/originalSlides/Slide59.png";
+document.main.src="ck20/CK20.059.png";
 
 }
 
@@ -1858,7 +1858,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide60.png";
+document.main.src="ck20/CK20.060.png";
 
 }
 
@@ -1889,7 +1889,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide61.png";
+document.main.src="ck20/CK20.061.png";
 
 }
 
@@ -1920,7 +1920,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="C";
-document.main.src="ck20/originalSlides/Slide62.png";
+document.main.src="ck20/CK20.062.png";
 
 }
 
@@ -1951,7 +1951,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide63.png";
+document.main.src="ck20/CK20.063.png";
 
 }
 
@@ -1982,7 +1982,7 @@ utterances[1][4]="care for pet";
 utterances[2][4]=" feed pet";
 utterances[3][4]="walk the dag";
 utterances[4][4]="cage";
-document.main.src="ck20/originalSlides/Slide64.png";
+document.main.src="ck20/CK20.064.png";
 
 }
 
@@ -2013,7 +2013,7 @@ utterances[1][4]="neck";
 utterances[2][4]="leg";
 utterances[3][4]="toes";
      links[4][4]="private_parts";
-document.main.src="ck20/originalSlides/Slide65.png";
+document.main.src="ck20/CK20.065.png";
 
 }
 
@@ -2044,7 +2044,7 @@ utterances[1][4]="love";
 utterances[2][4]="shared pleasure";
 utterances[3][4]="self pleasure";
 utterances[4][4]="kiss";
-document.main.src="ck20/originalSlides/Slide66.png";
+document.main.src="ck20/CK20.066.png";
 
 }
 
@@ -2075,7 +2075,7 @@ utterances[1][4]="PJs";
 utterances[2][4]="slippers";
 utterances[3][4]="boxer shorts";
 utterances[4][4]="pants";
-document.main.src="ck20/originalSlides/Slide67.png";
+document.main.src="ck20/CK20.067.png";
 
 }
 
@@ -2106,7 +2106,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="charger";
-document.main.src="ck20/originalSlides/Slide68.png";
+document.main.src="ck20/CK20.068.png";
 
 }
 
@@ -2137,7 +2137,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
      links[4][4]="materials";
-document.main.src="ck20/originalSlides/Slide69.png";
+document.main.src="ck20/CK20.069.png";
 
 }
 
@@ -2168,7 +2168,7 @@ utterances[1][4]="jigsaw";
 utterances[2][4]="toy box";
 utterances[3][4]="link";
 utterances[4][4]="C";
-document.main.src="ck20/originalSlides/Slide70.png";
+document.main.src="ck20/CK20.070.png";
 
 }
 
@@ -2199,7 +2199,7 @@ utterances[1][4]="bin lorry";
 utterances[2][4]="taxi";
 utterances[3][4]="underground";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide71.png";
+document.main.src="ck20/CK20.071.png";
 
 }
 
@@ -2230,7 +2230,7 @@ utterances[1][4]="ecu";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="charger";
-document.main.src="ck20/originalSlides/Slide72.png";
+document.main.src="ck20/CK20.072.png";
 
 }
 
@@ -2261,7 +2261,7 @@ utterances[1][4]="comb";
 utterances[2][4]="brush";
 utterances[3][4]="hair spray";
 utterances[4][4]="hair die";
-document.main.src="ck20/originalSlides/Slide73.png";
+document.main.src="ck20/CK20.073.png";
 
 }
 
@@ -2292,7 +2292,7 @@ utterances[1][4]="bath";
 utterances[2][4]="lamp";
 utterances[3][4]="chair";
 utterances[4][4]="sheets";
-document.main.src="ck20/originalSlides/Slide74.png";
+document.main.src="ck20/CK20.074.png";
 
 }
 
@@ -2323,7 +2323,7 @@ utterances[1][4]="label";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide75.png";
+document.main.src="ck20/CK20.075.png";
 
 }
 
@@ -2354,7 +2354,7 @@ utterances[1][4]="shovel";
 utterances[2][4]="pot";
 utterances[3][4]="rake";
 utterances[4][4]="trowel";
-document.main.src="ck20/originalSlides/Slide76.png";
+document.main.src="ck20/CK20.076.png";
 
 }
 
@@ -2385,7 +2385,7 @@ utterances[1][4]="athletics";
 utterances[2][4]="outdoor sport";
 utterances[3][4]="judo";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide77.png";
+document.main.src="ck20/CK20.077.png";
 
 }
 
@@ -2416,7 +2416,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide78.png";
+document.main.src="ck20/CK20.078.png";
 
 }
 
@@ -2447,7 +2447,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide79.png";
+document.main.src="ck20/CK20.079.png";
 
 }
 
@@ -2478,7 +2478,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide80.png";
+document.main.src="ck20/CK20.080.png";
 
 }
 
@@ -2509,7 +2509,7 @@ utterances[1][4]="ready";
 utterances[2][4]="hurry";
 utterances[3][4]="link";
 utterances[4][4]="after";
-document.main.src="ck20/originalSlides/Slide81.png";
+document.main.src="ck20/CK20.081.png";
 
 }
 
@@ -2540,7 +2540,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide82.png";
+document.main.src="ck20/CK20.082.png";
 
 }
 
@@ -2571,7 +2571,7 @@ utterances[1][4]="December";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide83.png";
+document.main.src="ck20/CK20.083.png";
 
 }
 
@@ -2602,7 +2602,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide84.png";
+document.main.src="ck20/CK20.084.png";
 
 }
 
@@ -2633,7 +2633,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide85.png";
+document.main.src="ck20/CK20.085.png";
 
 }
 
@@ -2664,7 +2664,7 @@ utterances[1][4]="pub";
 utterances[2][4]="post office";
 utterances[3][4]="cinema";
      links[4][4]="home";
-document.main.src="ck20/originalSlides/Slide86.png";
+document.main.src="ck20/CK20.086.png";
 
 }
 
@@ -2695,7 +2695,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide87.png";
+document.main.src="ck20/CK20.087.png";
 
 }
 
@@ -2726,7 +2726,7 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide88.png";
+document.main.src="ck20/CK20.088.png";
 
 }
 
@@ -2757,6 +2757,6 @@ utterances[1][4]="down stairs";
 utterances[2][4]="stairs";
 utterances[3][4]="office";
 utterances[4][4]="Delete Word";
-document.main.src="ck20/originalSlides/Slide89.png";
+document.main.src="ck20/CK20.089.png";
 
 }
