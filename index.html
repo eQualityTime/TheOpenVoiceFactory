@@ -45,6 +45,16 @@ var azulejoe_scanning=false;
 $('#main').click(function(e)
 {   
 if (azulejoe_scanning==true){
+if(y==0){
+if(x>=Math.floor(grid_size_columns/4)){
+if(y<Math.celing(grid_size_columns*0.75)){
+makeWav()
+return
+}
+
+}
+
+}
 add(x,y);
 
 }else{
@@ -55,10 +65,9 @@ colums =grid_size_columns;
     offset_l = $(this).offset().left - $(window).scrollLeft();
 
     var left = Math.floor(Math.round( (e.clientX - offset_l) )/this.width*colums);
-    var top = Math.floor(Math.round( (e.clientY - offset_t) )/this.height*rows);
+    var our_top = Math.floor(Math.round( (e.clientY - offset_t) )/this.height*rows);
 
-//    alert("Left: " + left + " Top: " + top );
-add(left,top)
+add(left,our_top)
 }
 });
 //from http://stackoverflow.com/a/14045047/170243
@@ -191,3 +200,4 @@ $(hope).css('left', offset_l+(720/grid_size_columns)*x);
 </body>
 
 </html>
+
