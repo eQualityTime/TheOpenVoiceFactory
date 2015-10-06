@@ -1,8 +1,9 @@
 grid_size_rows=5
 grid_size_columns=5
 
+
 function top_page(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Top page";
 utterances[2][0]="link";
@@ -28,11 +29,12 @@ utterances[0][4]="Clear";
      links[2][4]="places";
      links[3][4]="leisure";
 links[4][4]="deleteword";
- document.main.src="ck20/originalSlides/Slide01.png";
+document.main.src="ck20/originalSlides/Slide01.png";
 
 }
+
 function chatting(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="chatting";
 utterances[2][0]="link";
@@ -58,13 +60,14 @@ utterances[1][4]="I love you";
 utterances[2][4]="but";
 utterances[3][4]="Ouch";
 utterances[4][4]="so";
- document.main.src="ck20/originalSlides/Slide03.png";
+document.main.src="ck20/originalSlides/Slide03.png";
 
 }
-function foodchat(){
-reset();     
+
+function food_chat(){
+reset();
 utterances[0][0]="Yes";
-utterances[1][0]="Foodchat";
+utterances[1][0]="Food chat";
 utterances[2][0]="link";
 utterances[3][0]="link";
 utterances[4][0]="No";
@@ -81,21 +84,19 @@ utterances[4][2]="thank you";
 utterances[0][3]="Whats for dinner?";
 utterances[1][3]="What have you been doing?";
 utterances[2][3]="Ive had enough";
-utterances[3][3]="link";
+utterances[3][3]="eat";
 utterances[4][3]="drink";
 utterances[0][4]="Its too hot";
 utterances[1][4]="Its too cold";
 utterances[2][4]="full";
 utterances[3][4]="empty";
 utterances[4][4]="link";
- document.main.src="ck20/originalSlides/Slide02.png";
+document.main.src="ck20/originalSlides/Slide02.png";
 
 }
 
-
-
 function about_me(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="About me";
 utterances[2][0]="link";
@@ -104,10 +105,10 @@ utterances[4][0]="No";
      links[0][1]="top_page";
 utterances[1][1]="Name";
 utterances[2][1]="I live in";
-utterances[3][1]="Birthday ";
+utterances[3][1]="Birthday";
 utterances[4][1]="age";
 utterances[0][2]="I live with";
-utterances[1][2]="--------------";
+utterances[1][2]="pet";
 utterances[2][2]="--------------";
 utterances[3][2]="--------------";
 utterances[4][2]="--------------";
@@ -118,14 +119,15 @@ utterances[3][3]="--------------";
 utterances[4][3]="--------------";
 utterances[0][4]="--------------";
 utterances[1][4]="mobile";
-     links[2][4]="";
+     links[2][4]="about_you";
 utterances[3][4]="--------------";
 utterances[4][4]="--------------";
- document.main.src="ck20/originalSlides/Slide04.png";
+document.main.src="ck20/originalSlides/Slide04.png";
 
 }
+
 function about_you(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="About you";
 utterances[2][0]="link";
@@ -151,11 +153,12 @@ utterances[1][4]="--------------";
 utterances[2][4]="--------------";
 utterances[3][4]="--------------";
 utterances[4][4]="--------------";
- document.main.src="ck20/originalSlides/Slide05.png";
+document.main.src="ck20/originalSlides/Slide05.png";
 
 }
+
 function wml(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="wml";
 utterances[2][0]="link";
@@ -176,18 +179,19 @@ utterances[1][3]="whatever";
 utterances[2][3]="no way";
 utterances[3][3]="shut up";
 utterances[4][3]="Were you put on this earth to annoy me?";
-utterances[0][4]="My stories";
-utterances[1][4]="link";
+utterances[0][4]="don't";
+utterances[1][4]="not";
 utterances[2][4]="well";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide06.png";
+document.main.src="ck20/originalSlides/Slide06.png";
 
 }
+
 function my_stories(){
-reset();     
+reset();
 utterances[0][0]="Yes";
-utterances[1][0]="My stories";
+utterances[1][0]="My Stories";
 utterances[2][0]="link";
 utterances[3][0]="Speak";
 utterances[4][0]="No";
@@ -211,11 +215,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="C";
- document.main.src="ck20/originalSlides/Slide07.png";
+document.main.src="ck20/originalSlides/Slide07.png";
 
 }
+
 function questions(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="questions";
 utterances[2][0]="link";
@@ -223,15 +228,15 @@ utterances[3][0]="link";
 utterances[4][0]="No";
      links[0][1]="top_page";
 utterances[1][1]="?";
-utterances[2][1]="link";
-utterances[3][1]="link";
+utterances[2][1]="why";
+utterances[3][1]="when";
 utterances[4][1]="could";
 utterances[0][2]="what";
 utterances[1][2]="who";
 utterances[2][2]="where";
 utterances[3][2]="which";
 utterances[4][2]="would";
-utterances[0][3]="link";
+utterances[0][3]="how";
 utterances[1][3]="Can I see that?";
 utterances[2][3]="How much?";
 utterances[3][3]="link";
@@ -241,13 +246,14 @@ utterances[1][4]="What have you been doing?";
 utterances[2][4]="What do you think?";
 utterances[3][4]="Whats  next?";
 utterances[4][4]="Whats that?";
- document.main.src="ck20/originalSlides/Slide08.png";
+document.main.src="ck20/originalSlides/Slide08.png";
 
 }
+
 function food(){
-reset();     
+reset();
 utterances[0][0]="Yes";
-utterances[1][0]="food";
+utterances[1][0]="Food";
 utterances[2][0]="link";
 utterances[3][0]="link";
 utterances[4][0]="No";
@@ -255,13 +261,13 @@ utterances[4][0]="No";
      links[1][1]="breakfast";
      links[2][1]="lunch";
      links[3][1]="meals";
-utterances[4][1]="link";
+     links[4][1]="meat_and_fish";
 utterances[0][2]="Im hungry";
      links[1][2]="vegetables";
      links[2][2]="fruit";
      links[3][2]="drinks";
      links[4][2]="fast_food";
-utterances[0][3]="Im thirsty	";
+utterances[0][3]="Im thirsty";
      links[1][3]="snackspudding";
      links[2][3]="saucesingredients";
      links[3][3]="salad";
@@ -271,18 +277,19 @@ utterances[1][4]="with";
 utterances[2][4]="&";
      links[3][4]="food_chat";
 utterances[4][4]="Favorite food";
- document.main.src="ck20/originalSlides/Slide09.png";
+document.main.src="ck20/originalSlides/Slide09.png";
 
 }
+
 function breakfast(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="breakfast";
 utterances[2][0]="link";
 utterances[3][0]="link";
 utterances[4][0]="No";
      links[0][1]="top_page";
-utterances[1][1]="link";
+utterances[1][1]="breakfast";
 utterances[2][1]="cereal";
 utterances[3][1]="porridge";
 utterances[4][1]="bran";
@@ -295,17 +302,18 @@ utterances[0][3]="boiled egg";
 utterances[1][3]="fried egg";
 utterances[2][3]="scrambled egg";
 utterances[3][3]="bagel";
-utterances[4][3]="link";
+utterances[4][3]="full english";
 utterances[0][4]="beans";
 utterances[1][4]="fruit";
 utterances[2][4]="pancakes";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide10.png";
+document.main.src="ck20/originalSlides/Slide10.png";
 
 }
+
 function fruit(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="fruit";
 utterances[2][0]="link";
@@ -331,11 +339,12 @@ utterances[1][4]="strawberry";
 utterances[2][4]="kiwi";
 utterances[3][4]="cherry";
 utterances[4][4]="blackberry";
- document.main.src="ck20/originalSlides/Slide11.png";
+document.main.src="ck20/originalSlides/Slide11.png";
 
 }
+
 function vegetables(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="vegetables";
 utterances[2][0]="link";
@@ -361,11 +370,12 @@ utterances[1][4]="mushroom";
 utterances[2][4]="turnip";
 utterances[3][4]="sweetcorn";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide12.png";
+document.main.src="ck20/originalSlides/Slide12.png";
 
 }
+
 function fizzy_drinks(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Fizzy drinks";
 utterances[2][0]="link";
@@ -380,29 +390,30 @@ utterances[0][2]="link";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
-utterances[4][2]=" ";
+utterances[4][2]="";
 utterances[0][3]="link";
 utterances[1][3]="link";
 utterances[2][3]="link";
 utterances[3][3]="link";
-utterances[4][3]=" ";
+utterances[4][3]="";
 utterances[0][4]="Clear";
 utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide13.png";
+document.main.src="ck20/originalSlides/Slide13.png";
 
 }
+
 function drinks(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="drinks";
 utterances[2][0]="link";
 utterances[3][0]="link";
 utterances[4][0]="No";
      links[0][1]="top_page";
-utterances[1][1]="link";
+utterances[1][1]="drink";
 utterances[2][1]="coffee";
 utterances[3][1]="tea";
 utterances[4][1]="hot chocolate";
@@ -421,11 +432,12 @@ utterances[1][4]="with";
 utterances[2][4]="&";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide14.png";
+document.main.src="ck20/originalSlides/Slide14.png";
 
 }
+
 function flavour(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="flavour";
 utterances[2][0]="link";
@@ -445,17 +457,18 @@ utterances[0][3]="link";
 utterances[1][3]="link";
 utterances[2][3]="link";
 utterances[3][3]="chocolate";
-utterances[4][3]="pineapple ";
+utterances[4][3]="pineapple";
 utterances[0][4]="Clear";
 utterances[1][4]="strawberry";
 utterances[2][4]="link";
 utterances[3][4]="cherry";
 utterances[4][4]="blackberry";
- document.main.src="ck20/originalSlides/Slide15.png";
+document.main.src="ck20/originalSlides/Slide15.png";
 
 }
+
 function milkshake(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="milkshake";
 utterances[2][0]="link";
@@ -466,11 +479,11 @@ utterances[1][1]="milkshake";
 utterances[2][1]="banana milkshake";
 utterances[3][1]="strawberry milkshake";
 utterances[4][1]="chocolate milkshake";
-utterances[0][2]=" ";
+utterances[0][2]="";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
-utterances[4][2]=" ";
+utterances[4][2]="";
 utterances[0][3]="link";
 utterances[1][3]="link";
 utterances[2][3]="link";
@@ -481,11 +494,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide16.png";
+document.main.src="ck20/originalSlides/Slide16.png";
 
 }
+
 function fast_food(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Fast food";
 utterances[2][0]="link";
@@ -505,17 +519,18 @@ utterances[0][3]="sweets";
 utterances[1][3]="candy floss";
 utterances[2][3]="link";
 utterances[3][3]="link";
-utterances[4][3]=" ";
+utterances[4][3]="";
 utterances[0][4]="Clear";
 utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide17.png";
+document.main.src="ck20/originalSlides/Slide17.png";
 
 }
+
 function lunch(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="lunch";
 utterances[2][0]="link";
@@ -535,19 +550,20 @@ utterances[0][3]="soup";
 utterances[1][3]="chicken soup";
 utterances[2][3]="tomato soup";
 utterances[3][3]="salad";
-utterances[4][3]=" ";
+utterances[4][3]="";
 utterances[0][4]="carrot soup";
 utterances[1][4]="mushroom soup";
 utterances[2][4]="vegetable soup";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide18.png";
+document.main.src="ck20/originalSlides/Slide18.png";
 
 }
-function meat(){
-reset();     
+
+function meat_and_fish(){
+reset();
 utterances[0][0]="Yes";
-utterances[1][0]="meat";
+utterances[1][0]="Meat and fish";
 utterances[2][0]="link";
 utterances[3][0]="link";
 utterances[4][0]="No";
@@ -571,11 +587,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide19.png";
+document.main.src="ck20/originalSlides/Slide19.png";
 
 }
+
 function meal(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="meal";
 utterances[2][0]="link";
@@ -601,11 +618,12 @@ utterances[1][4]="link";
 utterances[2][4]="Macaroni cheese";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide20.png";
+document.main.src="ck20/originalSlides/Slide20.png";
 
 }
+
 function potato(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="potato";
 utterances[2][0]="link";
@@ -616,7 +634,7 @@ utterances[1][1]="potato";
 utterances[2][1]="chips";
 utterances[3][1]="mash potato";
 utterances[4][1]="baked potato";
-utterances[0][2]="sweet potato ";
+utterances[0][2]="sweet potato";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
@@ -631,18 +649,19 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide21.png";
+document.main.src="ck20/originalSlides/Slide21.png";
 
 }
-function pint(){
-reset();     
+
+function describing_drinks(){
+reset();
 utterances[0][0]="Yes";
-utterances[1][0]="pint";
+utterances[1][0]="Describing drinks";
 utterances[2][0]="link";
 utterances[3][0]="link";
 utterances[4][0]="No";
      links[0][1]="top_page";
-utterances[1][1]="link";
+utterances[1][1]="pint";
 utterances[2][1]="half pint";
 utterances[3][1]="straw";
 utterances[4][1]="link";
@@ -661,13 +680,14 @@ utterances[1][4]="cold";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide22.png";
+document.main.src="ck20/originalSlides/Slide22.png";
 
 }
-function snack(){
-reset();     
+
+function snackspudding(){
+reset();
 utterances[0][0]="Yes";
-utterances[1][0]="snack";
+utterances[1][0]="Snacks/pudding";
 utterances[2][0]="link";
 utterances[3][0]="link";
 utterances[4][0]="No";
@@ -679,23 +699,24 @@ utterances[4][1]="cake";
 utterances[0][2]="custard";
 utterances[1][2]="cream";
      links[2][2]="fruit";
-     links[3][2]="beer";
+     links[3][2]="yoghurt";
 utterances[4][2]="crisps";
 utterances[0][3]="sweets";
 utterances[1][3]="candy floss";
 utterances[2][3]="pie";
-utterances[3][3]="link";
+utterances[3][3]="chocolate";
      links[4][3]="ice_cream";
 utterances[0][4]="cup cake";
 utterances[1][4]="rice cake";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide23.png";
+document.main.src="ck20/originalSlides/Slide23.png";
 
 }
+
 function sauces(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="sauces";
 utterances[2][0]="link";
@@ -721,11 +742,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide24.png";
+document.main.src="ck20/originalSlides/Slide24.png";
 
 }
+
 function salad(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="salad";
 utterances[2][0]="link";
@@ -751,11 +773,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide25.png";
+document.main.src="ck20/originalSlides/Slide25.png";
 
 }
+
 function alcohol(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="alcohol";
 utterances[2][0]="link";
@@ -770,22 +793,23 @@ utterances[0][2]="link";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
-utterances[4][2]=" ";
+utterances[4][2]="";
 utterances[0][3]="link";
 utterances[1][3]="link";
 utterances[2][3]="link";
 utterances[3][3]="link";
-utterances[4][3]=" ";
+utterances[4][3]="";
 utterances[0][4]="Clear";
 utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide26.png";
+document.main.src="ck20/originalSlides/Slide26.png";
 
 }
+
 function juice(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="juice";
 utterances[2][0]="link";
@@ -805,17 +829,18 @@ utterances[0][3]="link";
 utterances[1][3]="link";
 utterances[2][3]="link";
 utterances[3][3]="link";
-utterances[4][3]=" ";
+utterances[4][3]="";
 utterances[0][4]="Clear";
 utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide27.png";
+document.main.src="ck20/originalSlides/Slide27.png";
 
 }
+
 function cooking_words(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Cooking words";
 utterances[2][0]="link";
@@ -841,11 +866,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
      links[3][4]="kitchen_equipment";
 utterances[4][4]="Dont burn it";
- document.main.src="ck20/originalSlides/Slide28.png";
+document.main.src="ck20/originalSlides/Slide28.png";
 
 }
+
 function kitchen_equipment(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Kitchen equipment";
 utterances[2][0]="link";
@@ -871,11 +897,12 @@ utterances[1][4]="chopping board";
 utterances[2][4]="colander";
 utterances[3][4]="greater";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide29.png";
+document.main.src="ck20/originalSlides/Slide29.png";
 
 }
+
 function people(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="people";
 utterances[2][0]="link";
@@ -901,11 +928,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="she";
      links[4][4]="family";
- document.main.src="ck20/originalSlides/Slide30.png";
+document.main.src="ck20/originalSlides/Slide30.png";
 
 }
+
 function friends(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="friends";
 utterances[2][0]="link";
@@ -916,7 +944,7 @@ utterances[1][1]="link";
 utterances[2][1]="link";
 utterances[3][1]="School/college/work mates";
 utterances[4][1]="link";
-utterances[0][2]=" ";
+utterances[0][2]="";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
@@ -931,11 +959,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
- document.main.src="ck20/originalSlides/Slide31.png";
+document.main.src="ck20/originalSlides/Slide31.png";
 
 }
+
 function scwfriends(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="scwfriends";
 utterances[2][0]="link";
@@ -946,7 +975,7 @@ utterances[1][1]="School/college/work mates";
 utterances[2][1]="link";
 utterances[3][1]="School/college/work mates";
 utterances[4][1]="link";
-utterances[0][2]=" ";
+utterances[0][2]="";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
@@ -961,11 +990,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
- document.main.src="ck20/originalSlides/Slide32.png";
+document.main.src="ck20/originalSlides/Slide32.png";
 
 }
+
 function support_staff(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Support staff";
 utterances[2][0]="link";
@@ -976,7 +1006,7 @@ utterances[1][1]="Support staff";
 utterances[2][1]="link";
 utterances[3][1]="School/college/work mates";
 utterances[4][1]="link";
-utterances[0][2]=" ";
+utterances[0][2]="";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
@@ -991,11 +1021,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
- document.main.src="ck20/originalSlides/Slide33.png";
+document.main.src="ck20/originalSlides/Slide33.png";
 
 }
+
 function education_staff(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Education staff";
 utterances[2][0]="link";
@@ -1006,7 +1037,7 @@ utterances[1][1]="Education staff";
 utterances[2][1]="link";
 utterances[3][1]="School/college/work mates";
 utterances[4][1]="link";
-utterances[0][2]=" ";
+utterances[0][2]="";
 utterances[1][2]="link";
 utterances[2][2]="link";
 utterances[3][2]="link";
@@ -1021,11 +1052,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
- document.main.src="ck20/originalSlides/Slide34.png";
+document.main.src="ck20/originalSlides/Slide34.png";
 
 }
+
 function job(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="job";
 utterances[2][0]="link";
@@ -1051,11 +1083,12 @@ utterances[1][4]="caretaker";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
- document.main.src="ck20/originalSlides/Slide35.png";
+document.main.src="ck20/originalSlides/Slide35.png";
 
 }
+
 function family(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="family";
 utterances[2][0]="link";
@@ -1081,11 +1114,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Family";
- document.main.src="ck20/originalSlides/Slide36.png";
+document.main.src="ck20/originalSlides/Slide36.png";
 
 }
+
 function personal_care(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Personal care";
 utterances[2][0]="link";
@@ -1111,11 +1145,12 @@ utterances[1][4]="link";
 utterances[2][4]="Can you do my hair please";
 utterances[3][4]="link";
 utterances[4][4]="link";
- document.main.src="ck20/originalSlides/Slide37.png";
+document.main.src="ck20/originalSlides/Slide37.png";
 
 }
+
 function i_dont_feel_well(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="I dont feel well";
 utterances[2][0]="link";
@@ -1123,29 +1158,30 @@ utterances[3][0]="link";
 utterances[4][0]="No";
      links[0][1]="top_page";
      links[1][1]="i_have_pain_in_my";
-utterances[2][1]="I feel ";
-utterances[3][1]="headache ";
-utterances[4][1]="ouch ";
+utterances[2][1]="I feel";
+utterances[3][1]="headache";
+utterances[4][1]="ouch";
 utterances[0][2]="chest pain";
 utterances[1][2]="earache";
 utterances[2][2]="link";
-utterances[3][2]="sick ";
-utterances[4][2]="toothache ";
-utterances[0][3]=" ";
-utterances[1][3]="a cold ";
+utterances[3][2]="sick";
+utterances[4][2]="toothache";
+utterances[0][3]="";
+utterances[1][3]="a cold";
 utterances[2][3]="link";
-utterances[3][3]="itch ";
+utterances[3][3]="itch";
 utterances[4][3]="link";
-utterances[0][4]="stomach ache ";
-utterances[1][4]="a sore throat ";
+utterances[0][4]="stomach ache";
+utterances[1][4]="a sore throat";
 utterances[2][4]="cramp";
 utterances[3][4]="link";
 utterances[4][4]="C";
- document.main.src="ck20/originalSlides/Slide38.png";
+document.main.src="ck20/originalSlides/Slide38.png";
 
 }
+
 function position_words(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Position words";
 utterances[2][0]="link";
@@ -1159,7 +1195,7 @@ utterances[4][1]="a";
 utterances[0][2]="all";
 utterances[1][2]="this";
 utterances[2][2]="that";
-utterances[3][2]="is ";
+utterances[3][2]="is";
 utterances[4][2]="am";
 utterances[0][3]="none";
 utterances[1][3]="link";
@@ -1171,11 +1207,12 @@ utterances[1][4]="with";
 utterances[2][4]="&";
 utterances[3][4]="at";
 utterances[4][4]="the";
- document.main.src="ck20/originalSlides/Slide39.png";
+document.main.src="ck20/originalSlides/Slide39.png";
 
 }
+
 function little_words(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Little words";
 utterances[2][0]="link";
@@ -1201,11 +1238,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide40.png";
+document.main.src="ck20/originalSlides/Slide40.png";
 
 }
+
 function my_day(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="My day";
 utterances[2][0]="link";
@@ -1231,11 +1269,12 @@ utterances[4][0]="No";
      links[2][4]="and";
      links[3][4]="link";
      links[4][4]="favorite_food";
- document.main.src="ck20/originalSlides/Slide41.png";
+document.main.src="ck20/originalSlides/Slide41.png";
 
 }
+
 function spelling_am(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Spelling, a-m";
 utterances[2][0]="link";
@@ -1261,11 +1300,12 @@ utterances[1][4]="m";
 utterances[2][4]="Space";
 utterances[3][4]="Shift";
 utterances[4][4]="?";
- document.main.src="ck20/originalSlides/Slide42.png";
+document.main.src="ck20/originalSlides/Slide42.png";
 
 }
+
 function nz(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="N-Z";
 utterances[2][0]="link";
@@ -1291,11 +1331,12 @@ utterances[1][4]="z";
 utterances[2][4]="Space";
 utterances[3][4]="Shift";
 utterances[4][4]="!";
- document.main.src="ck20/originalSlides/Slide43.png";
+document.main.src="ck20/originalSlides/Slide43.png";
 
 }
+
 function numbers(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="numbers";
 utterances[2][0]="link";
@@ -1321,11 +1362,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
      links[4][4]="calculator";
- document.main.src="ck20/originalSlides/Slide44.png";
+document.main.src="ck20/originalSlides/Slide44.png";
 
 }
+
 function action_words(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Action words";
 utterances[2][0]="link";
@@ -1351,11 +1393,12 @@ utterances[1][4]="turn";
 utterances[2][4]="open";
 utterances[3][4]="close";
      links[4][4]="more_action_words";
- document.main.src="ck20/originalSlides/Slide45.png";
+document.main.src="ck20/originalSlides/Slide45.png";
 
 }
+
 function more_action_words(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="More action words";
 utterances[2][0]="link";
@@ -1381,11 +1424,12 @@ utterances[1][4]="lose";
 utterances[2][4]="finish";
 utterances[3][4]="need";
      links[4][4]="yet_more_action_words";
- document.main.src="ck20/originalSlides/Slide46.png";
+document.main.src="ck20/originalSlides/Slide46.png";
 
 }
+
 function yet_more_action_words(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Yet more action words";
 utterances[2][0]="link";
@@ -1411,11 +1455,12 @@ utterances[1][4]="write";
 utterances[2][4]="link";
 utterances[3][4]="ask";
      links[4][4]="back_top_action_words";
- document.main.src="ck20/originalSlides/Slide47.png";
+document.main.src="ck20/originalSlides/Slide47.png";
 
 }
+
 function describing(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="describing";
 utterances[2][0]="link";
@@ -1441,11 +1486,12 @@ utterances[1][4]="important";
 utterances[2][4]="link";
 utterances[3][4]="idea";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide48.png";
+document.main.src="ck20/originalSlides/Slide48.png";
 
 }
+
 function colours(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="colours";
 utterances[2][0]="link";
@@ -1471,11 +1517,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="silver";
- document.main.src="ck20/originalSlides/Slide49.png";
+document.main.src="ck20/originalSlides/Slide49.png";
 
 }
+
 function feelings(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="feelings";
 utterances[2][0]="link";
@@ -1501,11 +1548,12 @@ utterances[1][4]="cold";
 utterances[2][4]="bad";
 utterances[3][4]="scared";
 utterances[4][4]="confused";
- document.main.src="ck20/originalSlides/Slide50.png";
+document.main.src="ck20/originalSlides/Slide50.png";
 
 }
+
 function shapes(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="shapes";
 utterances[2][0]="link";
@@ -1531,11 +1579,12 @@ utterances[1][4]="cube";
 utterances[2][4]="cylinder";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide51.png";
+document.main.src="ck20/originalSlides/Slide51.png";
 
 }
+
 function opposites(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="opposites";
 utterances[2][0]="link";
@@ -1561,11 +1610,12 @@ utterances[1][4]="easy";
 utterances[2][4]="hard";
 utterances[3][4]="clean";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide52.png";
+document.main.src="ck20/originalSlides/Slide52.png";
 
 }
+
 function weather(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="weather";
 utterances[2][0]="link";
@@ -1591,11 +1641,12 @@ utterances[1][4]="cold";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide53.png";
+document.main.src="ck20/originalSlides/Slide53.png";
 
 }
+
 function things(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="things";
 utterances[2][0]="link";
@@ -1621,11 +1672,12 @@ utterances[4][0]="No";
      links[2][4]="nature";
      links[3][4]="link";
      links[4][4]="favorite_food";
- document.main.src="ck20/originalSlides/Slide54.png";
+document.main.src="ck20/originalSlides/Slide54.png";
 
 }
+
 function art_things(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Art things";
 utterances[2][0]="link";
@@ -1651,11 +1703,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
      links[4][4]="materials";
- document.main.src="ck20/originalSlides/Slide55.png";
+document.main.src="ck20/originalSlides/Slide55.png";
 
 }
+
 function animals(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="animals";
 utterances[2][0]="link";
@@ -1681,11 +1734,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide56.png";
+document.main.src="ck20/originalSlides/Slide56.png";
 
 }
+
 function water_animals(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Water animals";
 utterances[2][0]="link";
@@ -1711,11 +1765,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide57.png";
+document.main.src="ck20/originalSlides/Slide57.png";
 
 }
+
 function pets(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="pets";
 utterances[2][0]="link";
@@ -1741,11 +1796,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide58.png";
+document.main.src="ck20/originalSlides/Slide58.png";
 
 }
+
 function common_things(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Common things";
 utterances[2][0]="link";
@@ -1771,11 +1827,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="charger";
- document.main.src="ck20/originalSlides/Slide59.png";
+document.main.src="ck20/originalSlides/Slide59.png";
 
 }
+
 function wild_animals(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Wild animals";
 utterances[2][0]="link";
@@ -1801,11 +1858,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide60.png";
+document.main.src="ck20/originalSlides/Slide60.png";
 
 }
+
 function farm_animals(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Farm animals";
 utterances[2][0]="link";
@@ -1831,11 +1889,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide61.png";
+document.main.src="ck20/originalSlides/Slide61.png";
 
 }
+
 function insects(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="insects";
 utterances[2][0]="link";
@@ -1861,11 +1920,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="C";
- document.main.src="ck20/originalSlides/Slide62.png";
+document.main.src="ck20/originalSlides/Slide62.png";
 
 }
+
 function birds(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="birds";
 utterances[2][0]="link";
@@ -1891,11 +1951,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide63.png";
+document.main.src="ck20/originalSlides/Slide63.png";
 
 }
+
 function pet_care(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Pet care";
 utterances[2][0]="link";
@@ -1921,11 +1982,12 @@ utterances[1][4]="care for pet";
 utterances[2][4]=" feed pet";
 utterances[3][4]="walk the dag";
 utterances[4][4]="cage";
- document.main.src="ck20/originalSlides/Slide64.png";
+document.main.src="ck20/originalSlides/Slide64.png";
 
 }
+
 function body_parts(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Body parts";
 utterances[2][0]="link";
@@ -1951,11 +2013,12 @@ utterances[1][4]="neck";
 utterances[2][4]="leg";
 utterances[3][4]="toes";
      links[4][4]="private_parts";
- document.main.src="ck20/originalSlides/Slide65.png";
+document.main.src="ck20/originalSlides/Slide65.png";
 
 }
+
 function private_parts(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Private parts";
 utterances[2][0]="link";
@@ -1970,7 +2033,7 @@ utterances[0][2]="penis";
 utterances[1][2]="under arm hair";
 utterances[2][2]="link";
 utterances[3][2]="link";
-utterances[4][2]=" ";
+utterances[4][2]="";
 utterances[0][3]="link";
 utterances[1][3]="link";
 utterances[2][3]="link";
@@ -1981,11 +2044,12 @@ utterances[1][4]="love";
 utterances[2][4]="shared pleasure";
 utterances[3][4]="self pleasure";
 utterances[4][4]="kiss";
- document.main.src="ck20/originalSlides/Slide66.png";
+document.main.src="ck20/originalSlides/Slide66.png";
 
 }
+
 function clothes(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="clothes";
 utterances[2][0]="link";
@@ -2011,11 +2075,12 @@ utterances[1][4]="PJs";
 utterances[2][4]="slippers";
 utterances[3][4]="boxer shorts";
 utterances[4][4]="pants";
- document.main.src="ck20/originalSlides/Slide67.png";
+document.main.src="ck20/originalSlides/Slide67.png";
 
 }
+
 function computer(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Computer";
 utterances[2][0]="link";
@@ -2041,11 +2106,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="charger";
- document.main.src="ck20/originalSlides/Slide68.png";
+document.main.src="ck20/originalSlides/Slide68.png";
 
 }
+
 function tools(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="tools";
 utterances[2][0]="link";
@@ -2071,11 +2137,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
      links[4][4]="materials";
- document.main.src="ck20/originalSlides/Slide69.png";
+document.main.src="ck20/originalSlides/Slide69.png";
 
 }
+
 function toys(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="toys";
 utterances[2][0]="link";
@@ -2101,11 +2168,12 @@ utterances[1][4]="jigsaw";
 utterances[2][4]="toy box";
 utterances[3][4]="link";
 utterances[4][4]="C";
- document.main.src="ck20/originalSlides/Slide70.png";
+document.main.src="ck20/originalSlides/Slide70.png";
 
 }
+
 function transport(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="transport";
 utterances[2][0]="link";
@@ -2131,11 +2199,12 @@ utterances[1][4]="bin lorry";
 utterances[2][4]="taxi";
 utterances[3][4]="underground";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide71.png";
+document.main.src="ck20/originalSlides/Slide71.png";
 
 }
+
 function disabilities(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="disabilities";
 utterances[2][0]="link";
@@ -2161,11 +2230,12 @@ utterances[1][4]="ecu";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="charger";
- document.main.src="ck20/originalSlides/Slide72.png";
+document.main.src="ck20/originalSlides/Slide72.png";
 
 }
+
 function toiletries(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="toiletries";
 utterances[2][0]="link";
@@ -2191,11 +2261,12 @@ utterances[1][4]="comb";
 utterances[2][4]="brush";
 utterances[3][4]="hair spray";
 utterances[4][4]="hair die";
- document.main.src="ck20/originalSlides/Slide73.png";
+document.main.src="ck20/originalSlides/Slide73.png";
 
 }
+
 function furniture(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="furniture";
 utterances[2][0]="link";
@@ -2221,11 +2292,12 @@ utterances[1][4]="bath";
 utterances[2][4]="lamp";
 utterances[3][4]="chair";
 utterances[4][4]="sheets";
- document.main.src="ck20/originalSlides/Slide74.png";
+document.main.src="ck20/originalSlides/Slide74.png";
 
 }
+
 function office(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Office";
 utterances[2][0]="link";
@@ -2251,11 +2323,12 @@ utterances[1][4]="label";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide75.png";
+document.main.src="ck20/originalSlides/Slide75.png";
 
 }
+
 function gardening(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="gardening";
 utterances[2][0]="link";
@@ -2281,11 +2354,12 @@ utterances[1][4]="shovel";
 utterances[2][4]="pot";
 utterances[3][4]="rake";
 utterances[4][4]="trowel";
- document.main.src="ck20/originalSlides/Slide76.png";
+document.main.src="ck20/originalSlides/Slide76.png";
 
 }
+
 function sports(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="sports";
 utterances[2][0]="link";
@@ -2311,11 +2385,12 @@ utterances[1][4]="athletics";
 utterances[2][4]="outdoor sport";
 utterances[3][4]="judo";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide77.png";
+document.main.src="ck20/originalSlides/Slide77.png";
 
 }
+
 function materials(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="materials";
 utterances[2][0]="link";
@@ -2341,11 +2416,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide78.png";
+document.main.src="ck20/originalSlides/Slide78.png";
 
 }
+
 function money(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="money";
 utterances[2][0]="link";
@@ -2371,11 +2447,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide79.png";
+document.main.src="ck20/originalSlides/Slide79.png";
 
 }
+
 function nature(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="nature";
 utterances[2][0]="link";
@@ -2401,11 +2478,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide80.png";
+document.main.src="ck20/originalSlides/Slide80.png";
 
 }
+
 function time(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="time";
 utterances[2][0]="link";
@@ -2431,11 +2509,12 @@ utterances[1][4]="ready";
 utterances[2][4]="hurry";
 utterances[3][4]="link";
 utterances[4][4]="after";
- document.main.src="ck20/originalSlides/Slide81.png";
+document.main.src="ck20/originalSlides/Slide81.png";
 
 }
+
 function day(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="day";
 utterances[2][0]="link";
@@ -2461,11 +2540,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide82.png";
+document.main.src="ck20/originalSlides/Slide82.png";
 
 }
+
 function month(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="month";
 utterances[2][0]="link";
@@ -2491,11 +2571,12 @@ utterances[1][4]="December";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide83.png";
+document.main.src="ck20/originalSlides/Slide83.png";
 
 }
+
 function special_days(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Special days";
 utterances[2][0]="link";
@@ -2521,11 +2602,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide84.png";
+document.main.src="ck20/originalSlides/Slide84.png";
 
 }
+
 function christmas(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="christmas";
 utterances[2][0]="link";
@@ -2551,11 +2633,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide85.png";
+document.main.src="ck20/originalSlides/Slide85.png";
 
 }
+
 function places(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="places";
 utterances[2][0]="link";
@@ -2581,11 +2664,12 @@ utterances[1][4]="pub";
 utterances[2][4]="post office";
 utterances[3][4]="cinema";
      links[4][4]="home";
- document.main.src="ck20/originalSlides/Slide86.png";
+document.main.src="ck20/originalSlides/Slide86.png";
 
 }
+
 function shops(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="shops";
 utterances[2][0]="link";
@@ -2594,7 +2678,7 @@ utterances[4][0]="No";
      links[0][1]="top_page";
 utterances[1][1]="shop";
 utterances[2][1]="supermarket";
-utterances[3][1]="butchers ";
+utterances[3][1]="butchers";
 utterances[4][1]="shopping centre";
 utterances[0][2]="bakers";
 utterances[1][2]="Veg shop";
@@ -2611,11 +2695,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide87.png";
+document.main.src="ck20/originalSlides/Slide87.png";
 
 }
+
 function places_outside(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="Places outside";
 utterances[2][0]="link";
@@ -2641,11 +2726,12 @@ utterances[1][4]="link";
 utterances[2][4]="link";
 utterances[3][4]="link";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide88.png";
+document.main.src="ck20/originalSlides/Slide88.png";
 
 }
+
 function home(){
-reset();     
+reset();
 utterances[0][0]="Yes";
 utterances[1][0]="home";
 utterances[2][0]="link";
@@ -2671,6 +2757,6 @@ utterances[1][4]="down stairs";
 utterances[2][4]="stairs";
 utterances[3][4]="office";
 utterances[4][4]="Delete Word";
- document.main.src="ck20/originalSlides/Slide89.png";
+document.main.src="ck20/originalSlides/Slide89.png";
 
 }

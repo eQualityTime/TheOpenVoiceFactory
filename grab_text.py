@@ -231,7 +231,6 @@ def export_images(grid, slide):
                 composite.save(folder + "/" + name)
 
 prs = Presentation("../azulejoe/testSuite/launch/CK20process.pptx")
-#prs = Presentation("../azulejoe/testSuite/CK15/CK15+.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
