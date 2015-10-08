@@ -127,7 +127,7 @@ class Grid:
                                         for run in paragraph.runs])
 
                         # add the if shape_type is text box
-                        if (text.strip() == ""):
+                        if (remove_punctuation(text.strip()) == ""):
                             print "empty string"
                         else:
                             if self.links[co][ro] == "real":
