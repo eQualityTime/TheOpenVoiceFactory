@@ -42,15 +42,27 @@
 
 var azulejoe_scanning=false;
 
+document.body.onkeydown = function(e){
+	if (azulejoe_scanning==true){
+		if(y==0){
+			if(x>=Math.floor(grid_size_columns/4)){
+				if(x<Math.ceil(grid_size_columns*0.75)){
+					makeWav()
+					return
+				}
+			}
+		}
+	}
+add(x,y);
+};
+
+
 $('#main').click(function(e)
 {   
 if (azulejoe_scanning==true){
 if(y==0){
-alert("y is 0")
 if(x>=Math.floor(grid_size_columns/4)){
-alert("x>=Math.floor(gridsizecolums/4)")
 if(x<Math.ceil(grid_size_columns*0.75)){
-alert("we make a wav");
 makeWav()
 return
 }
