@@ -40,52 +40,6 @@
 
 <script>
 
-var azulejoe_scanning=false;
-
-document.body.onkeydown = function(e){
-	if (azulejoe_scanning==true){
-		if(y==0){
-			if(x>=Math.floor(grid_size_columns/4)){
-				if(x<Math.ceil(grid_size_columns*0.75)){
-					makeWav()
-					return
-				}
-			}
-		}
-	}
-add(x,y);
-};
-
-
-$('#main').click(function(e)
-{   
-if (azulejoe_scanning==true){
-if(y==0){
-if(x>=Math.floor(grid_size_columns/4)){
-if(x<Math.ceil(grid_size_columns*0.75)){
-makeWav()
-return
-}
-
-}
-
-}
-add(x,y);
-
-}else{
-rows=grid_size_rows;
-colums =grid_size_columns;
-
-    offset_t = $(this).offset().top - $(window).scrollTop();
-    offset_l = $(this).offset().left - $(window).scrollLeft();
-
-    var left = Math.floor(Math.round( (e.clientX - offset_l) )/this.width*colums);
-    var our_top = Math.floor(Math.round( (e.clientY - offset_t) )/this.height*rows);
-
-add(left,our_top)
-}
-});
-//from http://stackoverflow.com/a/14045047/170243
 
 function setup(){
 my_width=720/grid_size_columns*(Math.ceil(grid_size_columns/2))-15;
@@ -98,8 +52,6 @@ top_page()
 }
 </script>
 
-<!--   <script language="javascript" src="read_json.js" type="text/javascript">
-    </script>-->
     <script type="text/javascript" src="javascript/ck20.js"></script>
     <script language="javascript" src="javascript/read_js.js" type="text/javascript">
     </script>
@@ -140,77 +92,9 @@ top_page()
         ga('send', 'pageview');
     </script>
 <div id="box"></div>
-<script>
 
-function toggleScanning(){
+ <script type="text/javascript" src="javascript/scanning.js"></script>
 
-if (azulejoe_scanning==true){
-azulejoe_scanning=false;
-stop_scanning();
-} else{
-azulejoe_scanning=true
-start_scanning();
-}
-}
-
-main=document.getElementById("main");
-var offset_t = $(main).offset().top - $(window).scrollTop();
-var offset_l = $(main).offset().left - $(window).scrollLeft();
-
-var interval_access_var=0
-
-function start_scanning(){
-if (azulejoe_scanning==true){
-hope=document.getElementById("box");
-$(hope).css('position', "absolute");
-$(hope).css('width', 720/grid_size_rows);
-$(hope).css('height', 520/grid_size_columns);
-$(hope).css('top', offset_t+105*y);
-$(hope).css('left', offset_l+140*x);
-//$(hope).css('top', offset_t);
-//$(hope).css('left', offset_l);
-$(hope).css('border', "4px solid #ffbe00");
-$(hope).css('background-color', "transparent");
-
-interval_access_var=setInterval(itterate_direct_Scanner,1000);
-}
-}
-var x=0;
-var y=0;
-
-function stop_scanning(){
-hope=document.getElementById("box");
-$(hope).css('position', "absolute");
-$(hope).css('width', "0px");
-$(hope).css('height', "0px");
-$(hope).css('top', 0);
-$(hope).css('left', 0);
-$(hope).css('border', "0px  #ffbe00");
-$(hope).css('background-color', "transparent");
-clearInterval(interval_access_var);
-
-}
-
-
-function itterate_direct_Scanner(){
-x++
-if (x==grid_size_rows){
-x=0;
-y=y+1;
-}
-if (y==grid_size_columns){
-y=0;
-}
-
-$(hope).css('top', offset_t+(520/grid_size_rows)*y);
-$(hope).css('left', offset_l+(720/grid_size_columns)*x);
-}
-
-
-
-
-
-</script>
  <button onClick="toggleScanning()">Toggle Scanning</button>
 </body>
 
