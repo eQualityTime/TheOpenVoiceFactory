@@ -46,8 +46,11 @@ $('#main').click(function(e)
 {   
 if (azulejoe_scanning==true){
 if(y==0){
+alert("y is 0")
 if(x>=Math.floor(grid_size_columns/4)){
-if(y<Math.celing(grid_size_columns*0.75)){
+alert("x>=Math.floor(gridsizecolums/4)")
+if(x<Math.ceil(grid_size_columns*0.75)){
+alert("we make a wav");
 makeWav()
 return
 }
