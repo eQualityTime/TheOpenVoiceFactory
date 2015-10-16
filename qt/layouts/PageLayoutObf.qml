@@ -10,7 +10,7 @@ Rectangle {
 
     id: pageLayout
 
-    color: "ghostwhite"
+    color: "black"
 
     // top level OBF folder, defines whole set of pages
     property string pageset: ""
