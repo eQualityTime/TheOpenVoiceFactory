@@ -65,17 +65,17 @@ Rectangle {
 
         width: parent.width
         height: itemHeight
-        x: padding
-        y: padding
-        spacing: padding*2
+        x: pageLayout.padding
+        y: pageLayout.padding
+        spacing: pageLayout.padding*2
         z: 1000
 
         // UI for staging area, which is defined up a level in main.qml.
         // We can't do the actual staging here, since it needs to be accessible from multiple pages.
         // We just provide a white background for the text.
         Rectangle {
-            width: stageWidth * controlBarItemWidth
-            height: itemHeight - padding*2
+            width: stageWidth * controlBarItemWidth - pageLayout.padding*2
+            height: itemHeight - pageLayout.padding*2
             color: "white"
             radius: width*0.02
             border.color: "black"
@@ -93,8 +93,8 @@ Rectangle {
 
         // Backspace button
         IconButton {
-            width: controlBarItemWidth - padding*2
-            height: itemHeight - padding*2
+            width: controlBarItemWidth - pageLayout.padding*2
+            height: itemHeight - pageLayout.padding*2
             color: "#CCFFCC"
             border.color: "black"
             border.width: borderWidth
@@ -107,8 +107,8 @@ Rectangle {
 
         // Clear button
         IconButton {
-            width: controlBarItemWidth - padding*2
-            height: itemHeight - padding*2
+            width: controlBarItemWidth - pageLayout.padding*2
+            height: itemHeight - pageLayout.padding*2
             text: "Clear"
             radius: width*0.02
             color: "#CCFFCC"
@@ -120,8 +120,8 @@ Rectangle {
 
         // Speak button
         IconButton {
-            width: controlBarItemWidth - padding*2
-            height: itemHeight - padding*2
+            width: controlBarItemWidth - pageLayout.padding*2
+            height: itemHeight - pageLayout.padding*2
             color: "#CCFFCC"
             border.color: "black"
             border.width: borderWidth
@@ -156,8 +156,8 @@ Rectangle {
             // and a label, and a mouse area to receive clicks.
             IconButton {
                 id: button
-                width: gridView.cellWidth - padding*2
-                height: gridView.cellHeight - padding*2
+                width: gridView.cellWidth - pageLayout.padding*2
+                height: gridView.cellHeight - pageLayout.padding*2
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 color: isFolder ? "transparent" : bg_color
