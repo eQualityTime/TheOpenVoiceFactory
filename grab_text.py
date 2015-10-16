@@ -55,7 +55,7 @@ def make_title(label):
         """Given a  string, returns the string in the format we use for
          identifying grids. This is used mostly to build internal link
          structures"""
-        tag = remove_punctuation(label.lower().strip().replace(" ", "_"))
+        tag = remove_punctuation(label.lower().strip().replace(" ", ""))
         if tag == "":
                 tag = "unknown"
         return tag
