@@ -34,7 +34,7 @@ Rectangle {
             height: button.height - label.height - padding
             width: button.width
             anchors.horizontalCenter: parent.horizontalCenter
-            source: image_path
+            source: (typeof image_path !== "undefined") ? image_path : ""
             fillMode: Image.PreserveAspectFit
             visible: source != ""
         }
