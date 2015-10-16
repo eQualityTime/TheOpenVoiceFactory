@@ -100,7 +100,7 @@ Item {
           }
           if (obj[prop][buttonName]["image_id"]) {
             var label = obj[prop][buttonName]["label"];
-            var imagename = removeSpaces(label).toLowerCase();
+            var imagename = makeTitle(label).toLowerCase();
             obj[prop][buttonName]["image_id"] = imagename;
           }
         }
@@ -132,8 +132,8 @@ Item {
     }
   }
 
-  function removeSpaces(input) {
-    return input.replace(/ /g,'');
+  function makeTitle(input) {
+    return input.replace(/\W/g, '')
   }   
 
   FileUtils {
