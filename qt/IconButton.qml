@@ -10,7 +10,7 @@ Rectangle {
 
     // Padding between items e.g. above the image,
     // between the image and the text, and below the text.
-    property int padding: 2
+    property int padding: 5
 
     // Scale of image as proportion of whole button
     property double imageScale: 0.7
@@ -24,16 +24,19 @@ Rectangle {
 
     Column {
         id: column
-        spacing: padding
+        spacing: button.padding
+        width: parent.width - 2*button.padding
         anchors.centerIn: parent
-        width: parent.width
-        anchors.margins: padding + button.border.width
 
         Image {
             id: image
-            height: button.height - label.height - padding
-            width: button.width
+            width: button.width - 2*button.padding
+            // Take no space if there isn't an image
+            height: (source && source.toString() !== "") ?
+                      button.height - label.height - 3*button.padding :
+                      0
             anchors.horizontalCenter: parent.horizontalCenter
+            anchors.margins: parent.width/30
             source: (typeof image_path !== "undefined") ? image_path : ""
             fillMode: Image.PreserveAspectFit
             visible: source != ""
