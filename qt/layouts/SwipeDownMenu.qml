@@ -14,7 +14,7 @@ Item {
     height: parent.height/10
     width: parent.width
 
-    color: isSwipedDown ? "white" : "transparent"
+    color: isSwipedDown ? "cornflowerblue" : "transparent"
     property bool isSwipedDown: false
 
     onIsSwipedDownChanged: {
@@ -116,11 +116,13 @@ Item {
     access.visible = false;
   }
 
+  // TODO: Mark currently-selected page.
+
   // Settings content for Pagesets
   Rectangle {
     id: pagesets
     visible: false
-    color: "blue"
+    color: "aliceblue"
     width: parent.width
     height: parent.height - menu.height
     anchors.top: menu.bottom
@@ -130,7 +132,7 @@ Item {
   Rectangle {
     id: access
     visible: false
-    color: "red"
+    color: "aliceblue"
     width: parent.width
     height: parent.height - menu.height
     anchors.top: menu.bottom
