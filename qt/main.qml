@@ -95,6 +95,8 @@ ApplicationWindow {
         TTSClient.ttsError.connect(onTtsError);
     }
 
+    SwipeDownMenu {
+    }
 
     // Pass through methods for the staging area.
     function onTtsError() {
