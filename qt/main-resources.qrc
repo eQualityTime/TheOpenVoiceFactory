@@ -16,5 +16,6 @@
         <file>layouts/ErrorPage.qml</file>
         <file>layouts/TempConversion.qml</file>
         <file>layouts/TempConversionObf.qml</file>
+        <file>StagingArea.qml</file>
     </qresource>
 </RCC>
