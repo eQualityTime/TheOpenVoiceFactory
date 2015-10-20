@@ -39,7 +39,7 @@ Rectangle {
     Image {
         anchors.fill: parent
         z: 0
-        source: "../" + pageLoader.imageSource
+        source: pageLoader.imageSource ? "../" + pageLoader.imageSource : null
     }
 
     // UI for staging area, which is defined up a level in main.qml.
