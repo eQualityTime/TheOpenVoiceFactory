@@ -18,63 +18,7 @@ ApplicationWindow {
 
     property alias text: stagedText.text
 
-    ErrorPage {
-      id: ttsErrorDialog
-      z: 200 // TODO: relative z!
-      visible: false
-      text: qsTr("Error occurred while trying to speak.") + "\n" +
-            qsTr("Please check your tablet's Text-to-Speech settings.");
-      onBack: {
-        ttsErrorDialog.visible = false;
-      }
-    }
-
-    Component.onCompleted: {
-        TTSClient.ttsError.connect(onTtsError);
-    }
-
-    function onTtsError() {
-        ttsErrorDialog.visible = true;
-    }
-
-    function appendWord(word) {
-        stagedText.appendWord(word);
-    }
-
-    function appendLetter(letter) {
-        stagedText.appendLetter(letter);
-    }
-
-    function backspace() {
-        stagedText.backspace();
-    }
-
-    function resetText() {
-        stagedText.resetText();
-    }
-
-    function deleteWord() {
-        stagedText.deleteWord();
-    }
-
-    function hidePendingUtterances() {
-        stagedText.visible = false
-    }
-
-    function showPendingUtterances() {
-        stagedText.visible = true
-    }
-
-    // Set the position of the staging area. This may depend on
-    // type of page set and number of tiles.
-    function setStagingArea(x, y,
-                            width, height) {
-        stagedText.x = x;
-        stagedText.y = y;
-        stagedText.width = width;
-        stagedText.height = height;
-    }
-
+    // Main stackview, responsible for loading pages.
     StackView {
         id: stackView
         anchors.fill: parent
@@ -124,5 +68,64 @@ ApplicationWindow {
     // utterances.
     StagingArea {
         id: stagedText
+    }
+
+    // Set the position of the staging area. This may depend on
+    // type of page set and number of tiles.
+    function setStagingArea(x, y,
+                            width, height) {
+        stagedText.x = x;
+        stagedText.y = y;
+        stagedText.width = width;
+        stagedText.height = height;
+    }
+
+    ErrorPage {
+      id: ttsErrorDialog
+      z: 200 // TODO: relative z!
+      visible: false
+      text: qsTr("Error occurred while trying to speak.") + "\n" +
+            qsTr("Please check your tablet's Text-to-Speech settings.");
+      onBack: {
+        ttsErrorDialog.visible = false;
+      }
+    }
+
+    Component.onCompleted: {
+        TTSClient.ttsError.connect(onTtsError);
+    }
+
+
+    // Pass through methods for the staging area.
+    function onTtsError() {
+        ttsErrorDialog.visible = true;
+    }
+
+    function appendWord(word) {
+        stagedText.appendWord(word);
+    }
+
+    function appendLetter(letter) {
+        stagedText.appendLetter(letter);
+    }
+
+    function backspace() {
+        stagedText.backspace();
+    }
+
+    function resetText() {
+        stagedText.resetText();
+    }
+
+    function deleteWord() {
+        stagedText.deleteWord();
+    }
+
+    function hidePendingUtterances() {
+        stagedText.visible = false
+    }
+
+    function showPendingUtterances() {
+        stagedText.visible = true
     }
 }
