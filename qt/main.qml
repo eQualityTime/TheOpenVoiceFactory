@@ -18,37 +18,15 @@ ApplicationWindow {
 
     property alias text: stagedText.text
 
-    // This is a pop up modal "dialog" that is simpler and nicer than
-    // a MessageDialog, which looks pretty rubbish on many platforms
-    Item {
-        anchors.fill: parent
-        id: ttsErrorDialog
-        visible: false        
-        z: 3000
-        Rectangle {
-            anchors.fill: parent
-            color: "#D8000000"
-        }
-        MouseArea {
-            anchors.fill: parent
-            onClicked: { mouse.accepted = true; }
-        }
-        Text {
-            id: msg
-            anchors.centerIn: parent
-            text: "Error occurred while trying to speak.\nPlease check your tablet's Text-to-Speech settings.";
-            horizontalAlignment: Text.AlignHCenteri
-            color: "white"
-            font.pixelSize: parent.height/30
-        }
-        SimpleButton {
-            anchors.top: msg.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.topMargin: 20
-            text: "OK"
-            font.pixelSize: parent.height/40
-            onClicked: ttsErrorDialog.visible = false
-        }
+    ErrorPage {
+      id: ttsErrorDialog
+      z: 200 // TODO: relative z!
+      visible: false
+      text: qsTr("Error occurred while trying to speak.") + "\n" +
+            qsTr("Please check your tablet's Text-to-Speech settings.");
+      onBack: {
+        ttsErrorDialog.visible = false;
+      }
     }
 
     Component.onCompleted: {
