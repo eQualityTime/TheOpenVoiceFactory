@@ -9,7 +9,7 @@ RESOURCES += main-resources.qrc
 
 # Pagesets listed separately since we have to list
 # many files individually.
-RESOURCES += ../images/images.qrc
+RESOURCES += ../ck20/images.qrc
 RESOURCES += ../javascript/pageset-code.qrc
 
 # Things specific to TTS.
