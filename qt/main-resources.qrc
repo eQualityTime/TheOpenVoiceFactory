@@ -17,5 +17,6 @@
         <file>layouts/TempConversion.qml</file>
         <file>layouts/TempConversionObf.qml</file>
         <file>StagingArea.qml</file>
+        <file>layouts/SwipeArea.qml</file>
     </qresource>
 </RCC>
