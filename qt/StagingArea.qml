@@ -17,11 +17,7 @@ Rectangle {
   // Each item looks like:
   // { content: 'text', isWord: true}
   // { content: 'e', isWord: false}
-  property variant queue: ({})
-
-  Component.onCompleted: {
-    queue = [];
-  }
+  property variant queue: []
 
   function appendWord(word) {
     queue.push({ content: word,
