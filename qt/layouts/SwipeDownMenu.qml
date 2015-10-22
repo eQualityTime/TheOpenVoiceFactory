@@ -136,5 +136,17 @@ Item {
     width: parent.width
     height: parent.height - menu.height
     anchors.top: menu.bottom
+
+    Column {
+      id: accessCol
+      spacing: pagesets.height/20
+      anchors.fill: parent
+      anchors.leftMargin: parent.width/6
+      anchors.topMargin: parent.height/6
+
+      Text {
+        text: qsTr("Coming soon!")
+      }
+    }
   }
 }
