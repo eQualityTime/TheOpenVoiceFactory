@@ -5,6 +5,7 @@
 
 #include "TTSClient.h"
 #include "FileUtils.h"
+#include "PagesetCollection.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +19,12 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("TTSClient", ttsClient.data());
 
     // Register any cpp classes we want to instantiate in QML
+    qmlRegisterType<PagesetCollection>("com.azulejoe", 1, 0, "PagesetCollection");
     qmlRegisterType<FileUtils>("com.azulejoe", 1, 0, "FileUtils");
+
+    // Metatypes for signals/slots/settings
+    qRegisterMetaType<PagesetSource>("PagesetSource");
+    qRegisterMetaTypeStreamOperators<PagesetSource>("PagesetSource");
 
     // It's important that we register TTSClient *before* loading QML.
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));

@@ -1,7 +1,8 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.2
 import QtQuick.Controls.Styles 1.2
-
+import Qt.labs.settings 1.0
+import com.azulejoe 1.0
 
 // Main item is full settings page.
 Item {
@@ -107,8 +108,11 @@ Item {
         }
       }
     }
+  }
 
-
+  // This object will store persistent settings
+  Settings {
+    id: settings
   }
 
   function hideAllTabs() {
@@ -126,6 +130,48 @@ Item {
     width: parent.width
     height: parent.height - menu.height
     anchors.top: menu.bottom
+
+    Column {
+      id: pagesetsCol
+      spacing: pagesets.height/20
+      anchors.fill: parent
+      anchors.leftMargin: parent.width/6
+      anchors.topMargin: parent.height/6
+
+      Row {
+        spacing: parent.spacing/4
+
+        Text {
+          text: qsTr("Selected pageset")
+          anchors.verticalCenter: parent.verticalCenter
+        }
+        ComboBox {
+          id: combo
+          anchors.verticalCenter: parent.verticalCenter
+          model: pagesetModel
+          width: 300
+          textRole: "name"
+          PagesetCollection {
+            id: pagesetModel
+          }
+
+          onCurrentIndexChanged: {
+            // This ensure the pageset gets saved in settings in C++.
+            // We can't save a custom QVariant in a QML settings object.
+            if (this.completed) {
+              pagesetModel.setPreferredPageset(currentIndex);
+            }
+          }
+
+          property bool completed: false
+
+          Component.onCompleted: {
+            currentIndex = pagesetModel.getPreferredPageset();
+            this.completed = true;
+          }
+        }
+      }
+    }
   }
 
   // Settings content for Pagesets
