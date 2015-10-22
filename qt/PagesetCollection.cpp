@@ -4,7 +4,30 @@
 
 PagesetCollection::PagesetCollection()
 {
+  this->loadBundledPagesets();
+  // TODO: Also support user-saved local pagesets.
+}
 
+
+// This defines the QML properties
+QHash<int, QByteArray> PagesetCollection::roleNames() const
+{
+  QHash<int, QByteArray> roles;
+  roles[NameRole] = "name";
+  roles[PathRole] = "path";
+  roles[TypeRole] = "type";
+  roles[IsResourceRole] = "isResource";
+
+  return roles;
+}
+
+void PagesetCollection::loadCustomPagesetsFromSettings()
+{
+  //TODO: Implement
+}
+
+void PagesetCollection::loadBundledPagesets()
+{
   // Set up collection with bundled pagesets.
   {
     PagesetSource source;
@@ -12,15 +35,6 @@ PagesetCollection::PagesetCollection()
     source.type = PagesetSource::JS;
     source.rootPath = "page1";
     source.name = "CK 20, JS";
-
-    mPagesets << source;
-  }
-  {
-    PagesetSource source;
-    source.isQResource = true;
-    source.type = PagesetSource::JS;
-    source.rootPath = "page1";
-    source.name = "CK 15, JS";
 
     mPagesets << source;
   }
@@ -42,19 +56,6 @@ PagesetCollection::PagesetCollection()
 
     mPagesets << source;
   }
-}
-
-
-// This defines the QML properties
-QHash<int, QByteArray> PagesetCollection::roleNames() const
-{
-  QHash<int, QByteArray> roles;
-  roles[NameRole] = "name";
-  roles[PathRole] = "path";
-  roles[TypeRole] = "type";
-  roles[IsResourceRole] = "isResource";
-
-  return roles;
 }
 
 // This is required by QAbstractListModel
