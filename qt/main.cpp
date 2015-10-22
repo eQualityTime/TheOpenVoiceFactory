@@ -18,6 +18,10 @@ int main(int argc, char *argv[])
     ttsClient.reset(createTTSClient(&engine));
     engine.rootContext()->setContextProperty("TTSClient", ttsClient.data());
 
+    // Also a top level object for managing pageset choice.
+    PagesetCollection pagesetCollection;
+    engine.rootContext()->setContextProperty("pagesetCollection", &pagesetCollection);
+
     // Register any cpp classes we want to instantiate in QML
     qmlRegisterType<PagesetCollection>("com.azulejoe", 1, 0, "PagesetCollection");
     qmlRegisterType<FileUtils>("com.azulejoe", 1, 0, "FileUtils");

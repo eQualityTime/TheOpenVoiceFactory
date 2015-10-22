@@ -30,17 +30,6 @@ ApplicationWindow {
                              event.accepted = true;
                          }
 
-//        initialItem:  PageLayoutObf {
-//           // pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
-//            pageset: "/Users/kirsty/Documents/AzuleJoe/CK_OBF_new/"
-//        }
-//        initialItem:  TempConversionObf {
-//            pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
-//        }
-        initialItem:  PageLayoutJs {
-            page: "page1"
-        }
-
         delegate: StackViewDelegate {
             function transitionFinished(properties)
             {
@@ -61,6 +50,32 @@ ApplicationWindow {
                     to: 0
                 }
             }
+        }
+
+        // Clear and load the chosen pageset (saved in settings)
+        function resetPageset() {
+          stackView.clear();
+
+          // Load the requested pageset
+          if (pagesetCollection.isJs()) {
+            stackView.push({ item: "qrc:/layouts/PageLayoutJs.qml",
+                             properties: {
+                             page: pagesetCollection.getPreferredPagesetPath() }
+                           });
+          }
+          else if (pagesetCollection.isObf()) {
+            stackView.push({ item: "qrc:/layouts/PageLayoutObf.qml",
+                             properties: {
+                             pageset: pagesetCollection.getPreferredPagesetPath() }
+                           });
+          }
+          else {
+            console.log("Unrecognised default pageset");
+          }
+        }
+
+        Component.onCompleted: {
+          resetPageset();
         }
     }
 

@@ -120,3 +120,33 @@ void PagesetCollection::setPreferredPageset(int i) {
   QSettings settings;
   settings.setValue(pagesetKey,QVariant::fromValue(mPagesets[i]));
 }
+
+bool PagesetCollection::isJs()
+{
+  QSettings settings;
+  const PagesetSource pageset = settings.value(pagesetKey).value<PagesetSource>();
+  return (pageset.type == PagesetSource::JS);
+}
+
+bool PagesetCollection::isObf()
+{
+  QSettings settings;
+  const PagesetSource pageset = settings.value(pagesetKey).value<PagesetSource>();
+  return (pageset.type == PagesetSource::OBF);
+}
+
+QString PagesetCollection::getPreferredPagesetPath()
+{
+  QSettings settings;
+
+  const PagesetSource pageset = settings.value(pagesetKey).value<PagesetSource>();
+  return pageset.rootPath;
+}
+
+QString PagesetCollection::getPreferredPagesetName()
+{
+  QSettings settings;
+
+  const PagesetSource pageset = settings.value(pagesetKey).value<PagesetSource>();
+  return pageset.name;
+}

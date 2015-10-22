@@ -148,25 +148,25 @@ Item {
         ComboBox {
           id: combo
           anchors.verticalCenter: parent.verticalCenter
-          model: pagesetModel
+          model: pagesetCollection
           width: 300
           textRole: "name"
-          PagesetCollection {
-            id: pagesetModel
-          }
 
           onCurrentIndexChanged: {
             // This ensure the pageset gets saved in settings in C++.
             // We can't save a custom QVariant in a QML settings object.
             if (this.completed) {
-              pagesetModel.setPreferredPageset(currentIndex);
+              pagesetCollection.setPreferredPageset(currentIndex);
+
+              // Reload the new pageset in the app
+              stackView.resetPageset();
             }
           }
 
           property bool completed: false
 
           Component.onCompleted: {
-            currentIndex = pagesetModel.getPreferredPageset();
+            currentIndex = pagesetCollection.getPreferredPageset();
             this.completed = true;
           }
         }

@@ -29,7 +29,13 @@ public:
 
   Q_INVOKABLE void setPreferredPageset(int i);
 
+  // Unfortunately we can't directly return an enum for pageset format,
+  // since you can't have an object (a) useable in QML *and* (b) serializable to settings.
+  Q_INVOKABLE bool isJs();
+  Q_INVOKABLE bool isObf();
 
+  Q_INVOKABLE QString getPreferredPagesetPath();
+  Q_INVOKABLE QString getPreferredPagesetName();
 
 protected:
   QHash<int, QByteArray> roleNames() const;
