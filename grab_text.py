@@ -11,6 +11,22 @@ import os
 import string
 from PIL import Image
 
+import sys
+import linecache
+print_exceptions=False
+
+def PrintException():
+    # http://stackoverflow.com/a/20264059
+    if print_exceptions is True:
+        exc_type, exc_obj, tb = sys.exc_info()
+        f = tb.tb_frame
+        lineno = tb.tb_lineno
+        filename = f.f_code.co_filename
+        linecache.checkcache(filename)
+        line = linecache.getline(filename, lineno, f.f_globals)
+        print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
+
+
 alpha = string.ascii_lowercase + string.digits + '_'
 
 
@@ -44,10 +60,20 @@ class Locator:
         which bit of the grid a particular part of powerpoint is in"""
 
         ROW_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
-            2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
-            4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
-        COL_TABLE = {0: 0, 152400: 0, 152401: 0, 1981200: 1, 3771900: 2, 5562600: 3,
-             5610125: 3, 6095999: 3, 7314625: 4, 7340121: 4, 7340600: 4}
+                     2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
+                     4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
+        COL_TABLE = {
+            0: 0,
+            152400: 0,
+            152401: 0,
+            1981200: 1,
+            3771900: 2,
+            5562600: 3,
+            5610125: 3,
+            6095999: 3,
+            7314625: 4,
+            7340121: 4,
+            7340600: 4}
 
         @staticmethod
         def get_closest_key(dict, inKey):
@@ -71,7 +97,7 @@ class Grid:
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        grid_width =5
+        grid_width = 5
 
         def __init__(self, slide):
                 self.utterances = [
@@ -88,7 +114,7 @@ class Grid:
                         self.process_shape(shape)
 
         def process_shape(self, shape):
-                #print str(shape.top)+" "+str(shape.left)
+                # print str(shape.top)+" "+str(shape.left)
                 try:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
@@ -105,7 +131,8 @@ class Grid:
                   #      print self.utterances[co][ro]
                   #      print self.links[co][ro]
 
-                except:
+                except (AttributeError, KeyError, NotImplementedError):
+                        PrintException()
                         return
 
         def process_text_frame(self, shape, co, ro):
@@ -143,11 +170,13 @@ document.main.src="ck12/ck12+.%03d.png";
 #                        self.links[row][col])) +\
 #                    '  utterances[{}][{}]="{}";'.format(
 #                        row, col, self.utterances[row][col])
-                if self.links[row][col]=="blank":
-                    return 'utterances[{}][{}]="{}";'.format(row, col, self.utterances[row][col])
+                if self.links[row][col] == "blank":
+                        return 'utterances[{}][{}]="{}";'.format(
+                            row,
+                            col,
+                            self.utterances[row][col])
                 return '     links[{}][{}]="{}";'.format(
                     row, col, make_title(self.links[row][col]))
-
 
 
 def export_images(grid, slide):
@@ -230,7 +259,7 @@ def export_images(grid, slide):
                         os.makedirs(folder)
                 composite.save(folder + "/" + name)
 
-prs = Presentation("../azulejoe/testSuite/ck12/ck12+.pptx")
+prs = Presentation("../azulejoe/testSuite/launch/CK20process.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
