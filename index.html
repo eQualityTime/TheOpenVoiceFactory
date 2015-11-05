@@ -36,9 +36,11 @@
     <!--END THE FOUR CONTROLS AT THE TOP OF THE PAGE-->
 
     <!--START THE MAIN MAP -->
-    <img name="main" id="main" src="images/CK15+.001.png" height=540 width=720  />
+ <img name="main" id="main" src="images/CK12+.001.png" height=540 width=720  /><table id="mainGrid" border=1 width=720 height=540>
+<tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> <tr> <td></td> <td></td> <td></td> <td></td> </tr> </table> 
 
 <script>
+
 
 
 function setup(){
@@ -52,7 +54,7 @@ top_page()
 }
 </script>
 
-    <script type="text/javascript" src="javascript/ck20.js"></script>
+    <script type="text/javascript" src="javascript/ck12.js"></script>
     <script language="javascript" src="javascript/read_js.js" type="text/javascript">
     </script>
     <!--START THE PRELOADING OF THE IMAGES-->
@@ -74,7 +76,22 @@ top_page()
     </div>
 
     <!--END THE PRELOADING OF THE IMAGES-->
+<script>
 
+function set_colour(){
+x=0,y=0
+for(x=0;x<grid_size_rows;x++){
+for(y=0;y<grid_size_rows;y++){
+$('#mainGrid tr:eq('+x+') td:eq('+y+')').css('background-color',colour[y][x])
+	if(utterances[y][x]=="link"){
+		$('#mainGrid tr:eq('+x+') td:eq('+y+')').html("<IMG src=\"icons/"+slide_number+"-"+y+"-"+x+".png\" width=100>"+"<br>L: "+links[y][x])
+	}else{
+		$('#mainGrid tr:eq('+x+') td:eq('+y+')').html("<IMG src=\"icons/"+slide_number+"-"+y+"-"+x+".png\" width=100>"+"<br>"+utterances[y][x])
+	}
+}
+}
+}
+</script>
 
     <!--START THE GOOGLE ANALYTICS -->
     <script>
