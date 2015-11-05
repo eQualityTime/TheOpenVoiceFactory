@@ -10,6 +10,10 @@
 	}
         //the links array contains keywords that perform different functions,  the most obvious one is that if the links array contains the name of another page, then it will cause a jump to that page when activated.  Other options include things like 'clear' and 'delete word' 
 
+        colour = new Array(grid_size_rows);
+        for (j = 0; j < grid_size_rows; j++) {
+        colour[j] = new Array(grid_size_rows);
+	}
         //Note that if the utterance and links are are *both* set, then the utterance will activate and *then* the link will activate.
 
         function voiceinit() {
