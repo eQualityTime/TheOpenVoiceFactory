@@ -7,3 +7,10 @@ table td
     display: inline-block;
     overflow: auto;
 }
+
+
+#messagewindow 
+{
+font-size: 18pt; height:140px; width:380px ;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position:absolute; left:208px; top:140px;
+
+}
