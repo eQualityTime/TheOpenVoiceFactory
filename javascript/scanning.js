@@ -19,7 +19,7 @@ document.body.onkeydown = function(e) {
 };
 
 
-$('#main').click(function(e) {
+$('#mainGrid').click(function(e) {
   if (azulejoe_scanning == true) {
      trigger_on_scan();
   }
@@ -31,7 +31,7 @@ $('#main').click(function(e) {
     offset_l = $(this).offset().left - $(window).scrollLeft();
 
     var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
-    var our_top = Math.floor(Math.round((e.clientY - offset_t)) / this.height * rows);
+    var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
 
     add(left, our_top)
   }
@@ -51,7 +51,7 @@ function toggleScanning() {
   }
 }
 
-main = document.getElementById("main");
+main = document.getElementById("mainGrid");
 var offset_t = $(main).offset().top - $(window).scrollTop();
 var offset_l = $(main).offset().left - $(window).scrollLeft();
 

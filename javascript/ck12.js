@@ -37,7 +37,6 @@ colour[2][3]="3366FF"
 colour[3][3]="458B3C"
 slide_number=1
 set_colour()
-document.main.src="ck12/ck12+.001.png";
 
 }
 
@@ -77,7 +76,6 @@ colour[2][3]="BFBFBF"
 colour[3][3]="BFBFBF"
 slide_number=2
 set_colour()
-document.main.src="ck12/ck12+.002.png";
 
 }
 
@@ -117,7 +115,6 @@ colour[2][3]="FF6600"
 colour[3][3]="BFBFBF"
 slide_number=3
 set_colour()
-document.main.src="ck12/ck12+.003.png";
 
 }
 
@@ -157,7 +154,6 @@ colour[2][3]="BFBFBF"
 colour[3][3]="BFBFBF"
 slide_number=4
 set_colour()
-document.main.src="ck12/ck12+.004.png";
 
 }
 
@@ -197,7 +193,6 @@ colour[2][3]="BFBFBF"
 colour[3][3]="BFBFBF"
 slide_number=5
 set_colour()
-document.main.src="ck12/ck12+.005.png";
 
 }
 
@@ -237,7 +232,6 @@ colour[2][3]="FF6600"
 colour[3][3]="FF6600"
 slide_number=6
 set_colour()
-document.main.src="ck12/ck12+.006.png";
 
 }
 
@@ -277,7 +271,6 @@ colour[2][3]="BFBFBF"
 colour[3][3]="BFBFBF"
 slide_number=7
 set_colour()
-document.main.src="ck12/ck12+.007.png";
 
 }
 
@@ -317,7 +310,6 @@ colour[2][3]="black"
 colour[3][3]="black"
 slide_number=8
 set_colour()
-document.main.src="ck12/ck12+.008.png";
 
 }
 
@@ -357,7 +349,6 @@ colour[2][3]="FF6600"
 colour[3][3]="FF6600"
 slide_number=9
 set_colour()
-document.main.src="ck12/ck12+.009.png";
 
 }
 
@@ -397,7 +388,6 @@ colour[2][3]="FF9CF8"
 colour[3][3]="FF9CF8"
 slide_number=10
 set_colour()
-document.main.src="ck12/ck12+.010.png";
 
 }
 
@@ -437,7 +427,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFEF07"
 slide_number=11
 set_colour()
-document.main.src="ck12/ck12+.011.png";
 
 }
 
@@ -477,7 +466,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=12
 set_colour()
-document.main.src="ck12/ck12+.012.png";
 
 }
 
@@ -517,7 +505,6 @@ colour[2][3]="FF0000"
 colour[3][3]="black"
 slide_number=13
 set_colour()
-document.main.src="ck12/ck12+.013.png";
 
 }
 
@@ -557,7 +544,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=14
 set_colour()
-document.main.src="ck12/ck12+.014.png";
 
 }
 
@@ -597,7 +583,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=15
 set_colour()
-document.main.src="ck12/ck12+.015.png";
 
 }
 
@@ -637,7 +622,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="black"
 slide_number=16
 set_colour()
-document.main.src="ck12/ck12+.016.png";
 
 }
 
@@ -677,7 +661,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=17
 set_colour()
-document.main.src="ck12/ck12+.017.png";
 
 }
 
@@ -717,7 +700,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=18
 set_colour()
-document.main.src="ck12/ck12+.018.png";
 
 }
 
@@ -757,7 +739,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=19
 set_colour()
-document.main.src="ck12/ck12+.019.png";
 
 }
 
@@ -797,7 +778,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=20
 set_colour()
-document.main.src="ck12/ck12+.020.png";
 
 }
 
@@ -837,7 +817,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=21
 set_colour()
-document.main.src="ck12/ck12+.021.png";
 
 }
 
@@ -877,7 +856,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=22
 set_colour()
-document.main.src="ck12/ck12+.022.png";
 
 }
 
@@ -917,7 +895,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=23
 set_colour()
-document.main.src="ck12/ck12+.023.png";
 
 }
 
@@ -957,7 +934,6 @@ colour[2][3]="FFEF07"
 colour[3][3]="FFEF07"
 slide_number=24
 set_colour()
-document.main.src="ck12/ck12+.024.png";
 
 }
 
@@ -997,7 +973,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=25
 set_colour()
-document.main.src="ck12/ck12+.025.png";
 
 }
 
@@ -1037,7 +1012,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=26
 set_colour()
-document.main.src="ck12/ck12+.026.png";
 
 }
 
@@ -1077,7 +1051,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=27
 set_colour()
-document.main.src="ck12/ck12+.027.png";
 
 }
 
@@ -1117,7 +1090,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=28
 set_colour()
-document.main.src="ck12/ck12+.028.png";
 
 }
 
@@ -1157,7 +1129,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=29
 set_colour()
-document.main.src="ck12/ck12+.029.png";
 
 }
 
@@ -1197,7 +1168,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=30
 set_colour()
-document.main.src="ck12/ck12+.030.png";
 
 }
 
@@ -1237,7 +1207,6 @@ colour[2][3]="FF03FF"
 colour[3][3]="FF03FF"
 slide_number=31
 set_colour()
-document.main.src="ck12/ck12+.031.png";
 
 }
 
@@ -1277,7 +1246,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=32
 set_colour()
-document.main.src="ck12/ck12+.032.png";
 
 }
 
@@ -1317,7 +1285,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=33
 set_colour()
-document.main.src="ck12/ck12+.033.png";
 
 }
 
@@ -1357,7 +1324,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=34
 set_colour()
-document.main.src="ck12/ck12+.034.png";
 
 }
 
@@ -1397,7 +1363,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=35
 set_colour()
-document.main.src="ck12/ck12+.035.png";
 
 }
 
@@ -1437,7 +1402,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=36
 set_colour()
-document.main.src="ck12/ck12+.036.png";
 
 }
 
@@ -1477,7 +1441,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=37
 set_colour()
-document.main.src="ck12/ck12+.037.png";
 
 }
 
@@ -1517,7 +1480,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=38
 set_colour()
-document.main.src="ck12/ck12+.038.png";
 
 }
 
@@ -1557,7 +1519,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=39
 set_colour()
-document.main.src="ck12/ck12+.039.png";
 
 }
 
@@ -1597,7 +1558,6 @@ colour[2][3]="01E7FF"
 colour[3][3]="01E7FF"
 slide_number=40
 set_colour()
-document.main.src="ck12/ck12+.040.png";
 
 }
 
@@ -1637,7 +1597,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=41
 set_colour()
-document.main.src="ck12/ck12+.041.png";
 
 }
 
@@ -1677,7 +1636,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=42
 set_colour()
-document.main.src="ck12/ck12+.042.png";
 
 }
 
@@ -1717,7 +1675,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=43
 set_colour()
-document.main.src="ck12/ck12+.043.png";
 
 }
 
@@ -1757,7 +1714,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=44
 set_colour()
-document.main.src="ck12/ck12+.044.png";
 
 }
 
@@ -1797,7 +1753,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=45
 set_colour()
-document.main.src="ck12/ck12+.045.png";
 
 }
 
@@ -1837,7 +1792,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=46
 set_colour()
-document.main.src="ck12/ck12+.046.png";
 
 }
 
@@ -1877,7 +1831,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=47
 set_colour()
-document.main.src="ck12/ck12+.047.png";
 
 }
 
@@ -1917,7 +1870,6 @@ colour[2][3]="E741C6"
 colour[3][3]="FFFF00"
 slide_number=48
 set_colour()
-document.main.src="ck12/ck12+.048.png";
 
 }
 
@@ -1957,7 +1909,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=49
 set_colour()
-document.main.src="ck12/ck12+.049.png";
 
 }
 
@@ -1997,7 +1948,6 @@ colour[2][3]="E741C6"
 colour[3][3]="E741C6"
 slide_number=50
 set_colour()
-document.main.src="ck12/ck12+.050.png";
 
 }
 
@@ -2037,7 +1987,6 @@ colour[2][3]="E741C6"
 colour[3][3]="E741C6"
 slide_number=51
 set_colour()
-document.main.src="ck12/ck12+.051.png";
 
 }
 
@@ -2077,7 +2026,6 @@ colour[2][3]="C48300"
 colour[3][3]="C48300"
 slide_number=52
 set_colour()
-document.main.src="ck12/ck12+.052.png";
 
 }
 
@@ -2117,7 +2065,6 @@ colour[2][3]="C48300"
 colour[3][3]="C48300"
 slide_number=53
 set_colour()
-document.main.src="ck12/ck12+.053.png";
 
 }
 
@@ -2157,7 +2104,6 @@ colour[2][3]="C48300"
 colour[3][3]="B27B06"
 slide_number=54
 set_colour()
-document.main.src="ck12/ck12+.054.png";
 
 }
 
@@ -2197,7 +2143,6 @@ colour[2][3]="C48300"
 colour[3][3]="C48300"
 slide_number=55
 set_colour()
-document.main.src="ck12/ck12+.055.png";
 
 }
 
@@ -2237,7 +2182,6 @@ colour[2][3]="C48300"
 colour[3][3]="C48300"
 slide_number=56
 set_colour()
-document.main.src="ck12/ck12+.056.png";
 
 }
 
@@ -2277,7 +2221,6 @@ colour[2][3]="01E7FF"
 colour[3][3]="01E7FF"
 slide_number=57
 set_colour()
-document.main.src="ck12/ck12+.057.png";
 
 }
 
@@ -2317,7 +2260,6 @@ colour[2][3]="01E7FF"
 colour[3][3]="01E7FF"
 slide_number=58
 set_colour()
-document.main.src="ck12/ck12+.058.png";
 
 }
 
@@ -2357,7 +2299,6 @@ colour[2][3]="01E7FF"
 colour[3][3]="01E7FF"
 slide_number=59
 set_colour()
-document.main.src="ck12/ck12+.059.png";
 
 }
 
@@ -2397,7 +2338,6 @@ colour[2][3]="01E7FF"
 colour[3][3]="01E7FF"
 slide_number=60
 set_colour()
-document.main.src="ck12/ck12+.060.png";
 
 }
 
@@ -2437,7 +2377,6 @@ colour[2][3]="01E7FF"
 colour[3][3]="01E7FF"
 slide_number=61
 set_colour()
-document.main.src="ck12/ck12+.061.png";
 
 }
 
@@ -2477,7 +2416,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=62
 set_colour()
-document.main.src="ck12/ck12+.062.png";
 
 }
 
@@ -2517,7 +2455,6 @@ colour[2][3]="660066"
 colour[3][3]="660066"
 slide_number=63
 set_colour()
-document.main.src="ck12/ck12+.063.png";
 
 }
 
@@ -2557,7 +2494,6 @@ colour[2][3]="660066"
 colour[3][3]="660066"
 slide_number=64
 set_colour()
-document.main.src="ck12/ck12+.064.png";
 
 }
 
@@ -2597,7 +2533,6 @@ colour[2][3]="660066"
 colour[3][3]="660066"
 slide_number=65
 set_colour()
-document.main.src="ck12/ck12+.065.png";
 
 }
 
@@ -2637,7 +2572,6 @@ colour[2][3]="660066"
 colour[3][3]="660066"
 slide_number=66
 set_colour()
-document.main.src="ck12/ck12+.066.png";
 
 }
 
@@ -2677,7 +2611,6 @@ colour[2][3]="660066"
 colour[3][3]="660066"
 slide_number=67
 set_colour()
-document.main.src="ck12/ck12+.067.png";
 
 }
 
@@ -2717,7 +2650,6 @@ colour[2][3]="0000FF"
 colour[3][3]="0000FF"
 slide_number=68
 set_colour()
-document.main.src="ck12/ck12+.068.png";
 
 }
 
@@ -2757,7 +2689,6 @@ colour[2][3]="0000FF"
 colour[3][3]="0000FF"
 slide_number=69
 set_colour()
-document.main.src="ck12/ck12+.069.png";
 
 }
 
@@ -2797,7 +2728,6 @@ colour[2][3]="0000FF"
 colour[3][3]="0000FF"
 slide_number=70
 set_colour()
-document.main.src="ck12/ck12+.070.png";
 
 }
 
@@ -2837,7 +2767,6 @@ colour[2][3]="0000FF"
 colour[3][3]="0000FF"
 slide_number=71
 set_colour()
-document.main.src="ck12/ck12+.071.png";
 
 }
 
@@ -2877,7 +2806,6 @@ colour[2][3]="3366FF"
 colour[3][3]="3366FF"
 slide_number=72
 set_colour()
-document.main.src="ck12/ck12+.072.png";
 
 }
 
@@ -2917,7 +2845,6 @@ colour[2][3]="E741C6"
 colour[3][3]="E741C6"
 slide_number=73
 set_colour()
-document.main.src="ck12/ck12+.073.png";
 
 }
 
@@ -2957,7 +2884,6 @@ colour[2][3]="BFBFBF"
 colour[3][3]="BFBFBF"
 slide_number=74
 set_colour()
-document.main.src="ck12/ck12+.074.png";
 
 }
 
@@ -2997,7 +2923,6 @@ colour[2][3]="3366FF"
 colour[3][3]="3366FF"
 slide_number=75
 set_colour()
-document.main.src="ck12/ck12+.075.png";
 
 }
 
@@ -3037,7 +2962,6 @@ colour[2][3]="3366FF"
 colour[3][3]="3366FF"
 slide_number=76
 set_colour()
-document.main.src="ck12/ck12+.076.png";
 
 }
 
@@ -3077,7 +3001,6 @@ colour[2][3]="E741C6"
 colour[3][3]="BFBFBF"
 slide_number=77
 set_colour()
-document.main.src="ck12/ck12+.077.png";
 
 }
 
@@ -3117,7 +3040,6 @@ colour[2][3]="008000"
 colour[3][3]="008000"
 slide_number=78
 set_colour()
-document.main.src="ck12/ck12+.078.png";
 
 }
 
@@ -3157,7 +3079,6 @@ colour[2][3]="black"
 colour[3][3]="black"
 slide_number=79
 set_colour()
-document.main.src="ck12/ck12+.079.png";
 
 }
 
@@ -3197,7 +3118,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=80
 set_colour()
-document.main.src="ck12/ck12+.080.png";
 
 }
 
@@ -3237,7 +3157,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFEF07"
 slide_number=81
 set_colour()
-document.main.src="ck12/ck12+.081.png";
 
 }
 
@@ -3277,7 +3196,6 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=82
 set_colour()
-document.main.src="ck12/ck12+.082.png";
 
 }
 
@@ -3317,6 +3235,5 @@ colour[2][3]="FFFF00"
 colour[3][3]="FFFF00"
 slide_number=83
 set_colour()
-document.main.src="ck12/ck12+.083.png";
 
 }
