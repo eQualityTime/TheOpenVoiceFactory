@@ -130,6 +130,8 @@ class Grid:
                                 self.process_text_frame(shape, co, ro)
                   #      print self.utterances[co][ro]
                   #      print self.links[co][ro]
+                        if self.links[co][ro]=="real":
+                            self.links[co][ro] = "blank"
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
@@ -259,7 +261,7 @@ def export_images(grid, slide):
                         os.makedirs(folder)
                 composite.save(folder + "/" + name)
 
-prs = Presentation("../azulejoe/testSuite/launch/CK20process.pptx")
+prs = Presentation("../azulejoe/testSuite/CK12/CK12.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
