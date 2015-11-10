@@ -1,16 +1,22 @@
 table td
 {
     padding:0px;
-    
-    width: 178px;
+    width: 180px;
     height: 133px;
     display: inline-block;
     overflow: auto;
 }
 
+table
+{
+border-collapse: collapse;
+    padding:0px;
+
+}
+
 img
 {
-max-height: 120px;
+max-height: 110px;
 max-width: 160px;
 
 }
