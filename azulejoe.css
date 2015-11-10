@@ -3,7 +3,6 @@ table td
     padding:0px;
     width: 180px;
     height: 133px;
-    display: inline-block;
     overflow: auto;
 }
 

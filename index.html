@@ -32,7 +32,7 @@
     <!--END THE FOUR CONTROLS AT THE TOP OF THE PAGE-->
 
     <!--START THE MAIN MAP -->
-    <table id="mainGrid" border=0 >
+    <table id="mainGrid" border=1 height=520 width=720>
         <tr>
             <td align="center" valign="middle"></td>
             <td align="center" valign="middle"></td>
@@ -61,11 +61,12 @@
 
     <script>
         function setup() {
-            my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2)) - 15;
+            my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2)) ;
             my_height = 520 / grid_size_rows;
             area = document.getElementById('messagewindow')
             $(area).css('width', my_width);
-            $(area).css('left', (520 / grid_size_columns) + 55);
+            $(area).css('left', (720 / grid_size_columns) +7 );
+            $(area).css('top', (520 / grid_size_columns) +20 );
             $(area).css('height', my_height);
             top_page()
         }
