@@ -133,3 +133,31 @@
             audio.load();
             audio.play();
         }
+
+
+ function set_colour() {
+            x = 0, y = 0
+            for (x = 0; x < grid_size_rows; x++) {
+                for (y = 0; y < grid_size_rows; y++) {
+                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').css('background-color', colour[y][x])
+
+                    if (utterances[y][x] == "link") {
+                        if (links[y][x] == "blank") {
+                        $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("")
+}else {
+                        $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + links[y][x] + "</b><br><IMG src=\"icons/" + slide_number + "-" + y + "-" + x + ".png\" >")
+                    }} else {
+		    if (utterances[y][x]=="blank"){
+                        $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("")
+
+}else{ 
+                            $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + utterances[y][x] + "</b><br><IMG src=\"icons/" + slide_number + "-" + y + "-" + x + ".png\" >")
+                        }
+}
+                    }
+                }
+
+
+
+            }
+
