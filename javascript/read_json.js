@@ -39,10 +39,16 @@ function set_colour() {
 
             if (utterances[key][y][x] == "") {
                 if (links[key][y][x] == "") {
+			if (icons[key][y][x] == "") {
                     $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("")
-                } else {
-                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"icons/" + slide_number[key] + "-" + y + "-" + x + ".png\" >")
+			}
+			else{
+                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<br><IMG src=\"" + icons[key][y][x]+ "\" >")
                 }
+} else {
+			    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x]+ "\" >")
+
+}
             } else {
                 if (labels[key][y][x] == "") {
                    // $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + utterances[key][y][x] + "</b><br><IMG src=\"icons/" + slide_number[key] + "-" + y + "-" + x + ".png\" >")

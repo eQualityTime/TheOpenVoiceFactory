@@ -161,9 +161,9 @@ class Grid:
                                         self.links[co][ro] = "real"
                                         self.colors[co][
                                             ro] = shape.fill.fore_color.rgb
-                        self.icons[co][ro]="icons/" + str(slide_number)+"/"+create_icon_name(co,ro,self.utterances)
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
+                        self.icons[co][ro]="icons/" + create_icon_name(co,ro,self.utterances,self.links)
                   #      print self.utterances[co][ro]
                   #      print self.links[co][ro]
 
@@ -287,16 +287,22 @@ def export_images(grid, slide):
                 composite = composite.crop(bbox)
 
                 # Save!
-                name = create_icon_name(x,y,utterances)
-                folder = "icons/" + str(slide_number)
+                name = create_icon_name(x,y,utterances,grid.links)
+                print name
+                folder = "icons/" #+ str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
-                composite.save(folder + "/" + name)
+                composite.save(folder + "" + name)
 
 
-def create_icon_name(x,y,utterances):
- return remove_punctuation( "%d-%d-" % (x, y)+utterances[x][y]) + ".png"
+def create_icon_name(x,y,utterances,links):
 
+    name = remove_punctuation(utterances[x][y]) + ".png"
+    if name==".png":
+        name =remove_punctuation(links[x][y])+".png"
+        if name==".png":
+            name ="unknown"+str(slide_number)+str(x)+str(y)+".png"
+    return name
 
 prs = Presentation("../azulejoe/testSuite/CK12/CK12+.pptx")
 slide_number = 1
