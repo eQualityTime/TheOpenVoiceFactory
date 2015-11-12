@@ -303,6 +303,7 @@ slide_number = 1
 for_json = {}
 for slide in prs.slides:
         grid = Grid(slide)
+        export_images(grid, slide)
         for_json[slide_number] = [
             make_title(
                 grid.tag),
@@ -310,9 +311,9 @@ for slide in prs.slides:
             grid.utterances,
             grid.links,
             grid.icons,
+            grid.colors,
             slide_number]
-        export_images(grid, slide)
-        print grid
+       # print grid
         slide_number += 1
 #        break
 with open('data.json', 'w') as outfile:
