@@ -90,12 +90,13 @@ function stop_scanning() {
 }
 
 function itterate_direct_Scanner() {
-  x++
-  if (x == grid_size_rows) {
+  x++;
+//alert(grid_size_rows+" "+x);
+  if (x >= grid_size_rows) {
     x = 0;
     y = y + 1;
   }
-  if (y == grid_size_columns) {
+  if (y >= grid_size_columns) {
     y = 0;
   }
   $(hope).css('top', offset_t + (520 / grid_size_rows) * y);
