@@ -58,22 +58,51 @@ class Locator:
 
         """Static class designed to abstract away the process of working out
         which bit of the grid a particular part of powerpoint is in"""
+        ROW_TABLE = {
 
-        ROW_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
-                     2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
-                     4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
+            152404:  0,
+            1845122: 1,
+            1874564: 1,
+            3504321: 2,
+            3505369: 2,
+            3541832: 2,
+            5225484: 3,
+            5226008: 3,
+            5576358: 3
+            }
+
         COL_TABLE = {
             0: 0,
             152400: 0,
-            152401: 0,
-            1981200: 1,
-            3771900: 2,
-            5562600: 3,
-            5610125: 3,
-            6095999: 3,
-            7314625: 4,
-            7340121: 4,
-            7340600: 4}
+            152402: 0,
+            175371: 0,
+            2415785: 1,
+            2415786: 1,
+            2415786: 1,
+            4697109: 2,
+            4700413: 2,
+            4700414: 2,
+            6963797: 3,
+            6963798: 3
+            }
+
+
+
+#        ROW_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
+#                     2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
+#                     4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
+#        COL_TABLE = {
+#            0: 0,
+#            152400: 0,
+#            152401: 0,
+#            1981200: 1,
+#            3771900: 2,
+#            5562600: 3,
+#            5610125: 3,
+#            6095999: 3,
+#            7314625: 4,
+#            7340121: 4,
+#            7340600: 4}
 
         @staticmethod
         def get_closest_key(dict, inKey):
@@ -97,19 +126,25 @@ class Grid:
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        grid_width = 5
+        grid_width = 4
 
         def __init__(self, slide):
+                self.labels = [
+                    ["" for x in range(self.grid_width)]
+                    for x in range(self.grid_width)]
                 self.utterances = [
-                    ["link" for x in range(self.grid_width)]
+                    ["" for x in range(self.grid_width)]
                     for x in range(self.grid_width)]
                 self.links = [
-                    ["blank" for x in range(self.grid_width)]
+                    ["" for x in range(self.grid_width)]
                     for x in range(self.grid_width)]
                 self.colors = [
                     ["" for x in range(self.grid_width)]
                     for x in range(self.grid_width)]
-                self.tag = "unknown"
+                self.icons = [
+                    ["" for x in range(self.grid_width)]
+                    for x in range(self.grid_width)]
+                self.tag = ""
                 for shape in slide.shapes:
                         self.process_shape(shape)
 
@@ -126,12 +161,11 @@ class Grid:
                                         self.links[co][ro] = "real"
                                         self.colors[co][
                                             ro] = shape.fill.fore_color.rgb
+                        self.icons[co][ro]="icons/" + str(slide_number)+"/"+create_icon_name(co,ro,self.utterances)
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
                   #      print self.utterances[co][ro]
                   #      print self.links[co][ro]
-                        if self.links[co][ro]=="real":
-                            self.links[co][ro] = "blank"
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
@@ -149,7 +183,7 @@ class Grid:
                         # add the if shape_type is text box
                         if self.links[co][ro] == "real":
                                 self.links[co][ro] = make_title(text.strip())
-                                self.utterances[co][ro] = "link"
+                                self.labels[co][ro] = text.strip()
                         else:
                                 self.utterances[co][ro] = text.strip()
 
@@ -253,15 +287,18 @@ def export_images(grid, slide):
                 composite = composite.crop(bbox)
 
                 # Save!
-                name = remove_punctuation(
-                    "%d-%d-" %
-                    (x, y)+utterances[x][y]) + ".png"
+                name = create_icon_name(x,y,utterances)
                 folder = "icons/" + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
                 composite.save(folder + "/" + name)
 
-prs = Presentation("../azulejoe/testSuite/CK12/CK12.pptx")
+
+def create_icon_name(x,y,utterances):
+ return remove_punctuation( "%d-%d-" % (x, y)+utterances[x][y]) + ".png"
+
+
+prs = Presentation("../azulejoe/testSuite/CK12/CK12+.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
@@ -269,10 +306,12 @@ for slide in prs.slides:
         for_json[slide_number] = [
             make_title(
                 grid.tag),
+            grid.labels,
             grid.utterances,
             grid.links,
+            grid.icons,
             slide_number]
-#        export_images(grid, slide)
+        export_images(grid, slide)
         print grid
         slide_number += 1
 #        break
