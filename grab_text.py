@@ -27,7 +27,7 @@ def PrintException():
         print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
 
 
-alpha = string.ascii_lowercase + string.digits + '_'
+alpha = string.ascii_lowercase + string.ascii_uppercase + string.digits + '_'
 
 
 def resizeImage(image, scaleFactor):
@@ -58,51 +58,51 @@ class Locator:
 
         """Static class designed to abstract away the process of working out
         which bit of the grid a particular part of powerpoint is in"""
-        ROW_TABLE = {
+ #       ROW_TABLE = {
 
-            152404:  0,
-            1845122: 1,
-            1874564: 1,
-            3504321: 2,
-            3505369: 2,
-            3541832: 2,
-            5225484: 3,
-            5226008: 3,
-            5576358: 3
-            }
+ #           152404:  0,
+ #           1845122: 1,
+ #           1874564: 1,
+ #           3504321: 2,
+ #           3505369: 2,
+ #           3541832: 2,
+ #           5225484: 3,
+ #           5226008: 3,
+ #           5576358: 3
+ #           }
 
+ #       COL_TABLE = {
+ #           0: 0,
+ #           152400: 0,
+ #           152402: 0,
+ #           175371: 0,
+ #           2415785: 1,
+ #           2415786: 1,
+ #           2415786: 1,
+ #           4697109: 2,
+ #           4700413: 2,
+ #           4700414: 2,
+ #           6963797: 3,
+ #           6963798: 3
+ #           }
+
+
+
+        ROW_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
+                     2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
+                     4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
         COL_TABLE = {
             0: 0,
             152400: 0,
-            152402: 0,
-            175371: 0,
-            2415785: 1,
-            2415786: 1,
-            2415786: 1,
-            4697109: 2,
-            4700413: 2,
-            4700414: 2,
-            6963797: 3,
-            6963798: 3
-            }
-
-
-
-#        ROW_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
-#                     2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
-#                     4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
-#        COL_TABLE = {
-#            0: 0,
-#            152400: 0,
-#            152401: 0,
-#            1981200: 1,
-#            3771900: 2,
-#            5562600: 3,
-#            5610125: 3,
-#            6095999: 3,
-#            7314625: 4,
-#            7340121: 4,
-#            7340600: 4}
+            152401: 0,
+            1981200: 1,
+            3771900: 2,
+            5562600: 3,
+            5610125: 3,
+            6095999: 3,
+            7314625: 4,
+            7340121: 4,
+            7340600: 4}
 
         @staticmethod
         def get_closest_key(dict, inKey):
@@ -126,7 +126,7 @@ class Grid:
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        grid_width = 4
+        grid_width = 5
 
         def __init__(self, slide):
                 self.labels = [
@@ -304,7 +304,7 @@ def create_icon_name(x,y,utterances,links):
             name ="unknown"+str(slide_number)+str(x)+str(y)+".png"
     return name
 
-prs = Presentation("../azulejoe/testSuite/CK12/CK12+.pptx")
+prs = Presentation("../azulejoe/testSuite/launch/CK20process.pptx")
 slide_number = 1
 for_json = {}
 for slide in prs.slides:
@@ -322,6 +322,6 @@ for slide in prs.slides:
        # print grid
         slide_number += 1
 #        break
-with open('data.json', 'w') as outfile:
+with open('ck20.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
