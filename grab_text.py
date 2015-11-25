@@ -12,14 +12,21 @@ import string
 import sys
 import math
 from PIL import Image
-import uuid
 
+import sys
+import linecache
+print_exceptions=False
 
-# Helper for testing - generate unique chars.
-def getShortUuid():
-    u = str(uuid.uuid1())
-    u = u.split("-")[0]
-    return u;
+def PrintException():
+    # http://stackoverflow.com/a/20264059
+    if print_exceptions is True:
+        exc_type, exc_obj, tb = sys.exc_info()
+        f = tb.tb_frame
+        lineno = tb.tb_lineno
+        filename = f.f_code.co_filename
+        linecache.checkcache(filename)
+        line = linecache.getline(filename, lineno, f.f_globals)
+        print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
 
 if (len(sys.argv) < 3):
         print("\nUsage: ./grab_text.py <inputPptxFile> <imageFileRoot> <gridSize>\n")
@@ -95,7 +102,8 @@ class Grid:
                 return (int(col), int(row))
 
         def process_shape(self, shape):
-                # try:
+                # print str(shape.top)+" "+str(shape.left)
+                try:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
@@ -112,10 +120,12 @@ class Grid:
                                             ro] = shape.fill.fore_color.rgb
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
-                # except:
-                        #  print "Exception processing shape"
-                        #  return
+                  #      print self.utterances[co][ro]
+                  #      print self.links[co][ro]
 
+                except (AttributeError, KeyError, NotImplementedError):
+                        PrintException()
+                        return
 
         def process_text_frame(self, shape, co, ro):
               #  text = self.utterances[co][ro]
