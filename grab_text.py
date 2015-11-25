@@ -259,6 +259,7 @@ def export_images(grid, slide):
 doPrintJSON = True;
 doSaveJSON = False;
 doExportImages = False;
+doFirstSlideOnly = True;
 
 prs = Presentation(inputFile)
 slide_number = 1
@@ -276,7 +277,8 @@ for slide in prs.slides:
         if (doPrintJSON):
             print grid
         slide_number += 1
-        break
+        if doFirstSlideOnly:
+            break
 if (doSaveJSON):
         with open('data.json', 'w') as outfile:
             json.dump(for_json, outfile, sort_keys=True)
