@@ -139,12 +139,16 @@ ApplicationWindow {
                              event.accepted = true;
                          }
 
-//        initialItem:  PageLayoutObf {
+        initialItem:  PageLayoutObf {
+           // pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
+            pageset: "/Users/kirsty/Documents/AzuleJoe/CK_OBF_new/"
+        }
+//        initialItem:  TempConversionObf {
 //            pageset: "/Users/kirsty/Documents/AzuleJoe/commukate_pageset/communikate-20/"
 //        }
-        initialItem:  PageLayoutJs {
-            page: "page1"
-        }
+//        initialItem:  PageLayoutJs {
+//            page: "page1"
+//        }
 
         delegate: StackViewDelegate {
             function transitionFinished(properties)
