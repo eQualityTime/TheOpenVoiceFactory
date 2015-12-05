@@ -5,6 +5,7 @@
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+from pptx.enum.action import PP_ACTION
 import json
 import io
 import os
@@ -154,7 +155,21 @@ class Grid:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
+                                        #shoudl there be a return here?
                         (co, ro) = Locator.get_cr(shape.top, shape.left)
+                        #Now - let's find out if there is a link...
+                        click_action=shape.click_action
+                        if click_action.action == PP_ACTION.OPEN_FILE:
+                            print "open"
+                            print click_action.hyperlink.address
+                        if click_action.action == PP_ACTION.HYPERLINK:
+                            print "hyper"
+                            print click_action.hyperlink.address
+                        target_slide = click_action.target_slide
+                        if target_slide is not None:
+                             print "local"
+                             print click_action.hyperlink.address
+
                         #print (co,ro)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
