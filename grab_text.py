@@ -14,18 +14,19 @@ from PIL import Image
 
 import sys
 import linecache
-print_exceptions=False
+print_exceptions = False
+
 
 def PrintException():
-    # http://stackoverflow.com/a/20264059
-    if print_exceptions is True:
-        exc_type, exc_obj, tb = sys.exc_info()
-        f = tb.tb_frame
-        lineno = tb.tb_lineno
-        filename = f.f_code.co_filename
-        linecache.checkcache(filename)
-        line = linecache.getline(filename, lineno, f.f_globals)
-        print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
+        # http://stackoverflow.com/a/20264059
+        if print_exceptions is True:
+                exc_type, exc_obj, tb = sys.exc_info()
+                f = tb.tb_frame
+                lineno = tb.tb_lineno
+                filename = f.f_code.co_filename
+                linecache.checkcache(filename)
+                line = linecache.getline(filename, lineno, f.f_globals)
+                print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
 
 
 alpha = string.ascii_lowercase + string.ascii_uppercase + string.digits + '_'
@@ -127,7 +128,11 @@ class Grid:
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        grid_width =4
+        grid_width = 4
+
+        def update_links(self):
+                print "Update links called on"
+                print self.tag
 
         def __init__(self, slide):
                 self.labels = [
@@ -155,30 +160,33 @@ class Grid:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
-                                        #shoudl there be a return here?
+                                        # shoudl there be a return here?
                         (co, ro) = Locator.get_cr(shape.top, shape.left)
-                        #Now - let's find out if there is a link...
-                        click_action=shape.click_action
+                        # Now - let's find out if there is a link...
+                        click_action = shape.click_action
                         if click_action.action == PP_ACTION.OPEN_FILE:
-                            print "open"
-                            print click_action.hyperlink.address
+                                print "open"
+                                print click_action.hyperlink.address
                         if click_action.action == PP_ACTION.HYPERLINK:
-                            print "hyper"
-                            print click_action.hyperlink.address
+                                print "hyper"
+                                print click_action.hyperlink.address
                         target_slide = click_action.target_slide
                         if target_slide is not None:
-                             print "local"
-                             print click_action.hyperlink.address
+                                print "local"
+                                print click_action.hyperlink.address
 
                         #print (co,ro)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                         self.links[co][ro] = "real"
-                                        self.colors[co][
-                                            ro] = shape.fill.fore_color.rgb
+                                try:
+                                    self.colors[co][ro] = shape.fill.fore_color.rgb
+                                except (TypeError):
+                                    pass
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
-                        self.icons[co][ro]="icons/" + create_icon_name(co,ro,self.utterances,self.links)
+                        self.icons[co][
+                                ro] = "icons/" + create_icon_name(co, ro, self.utterances, self.links)
                   #      print self.utterances[co][ro]
                   #      print self.links[co][ro]
 
@@ -193,7 +201,7 @@ class Grid:
                         return
                 for paragraph in shape.text_frame.paragraphs:
                         text += "".join([run.text.encode('ascii', 'ignore')
-                                        for run in paragraph.runs])
+                                         for run in paragraph.runs])
                 if text != "":
                         # add the if shape_type is text box
                         if self.links[co][ro] == "real":
@@ -216,11 +224,11 @@ document.main.src="ck12/ck12+.%03d.png";
 }""" % (make_title(self.tag), body, slide_number)
 
         def string_from_cell(self, row, col):
-#                return '     links[{}][{}]="{}";'.format(
-#                    row, col, make_title(
-#                        self.links[row][col])) +\
-#                    '  utterances[{}][{}]="{}";'.format(
-#                        row, col, self.utterances[row][col])
+                #                return '     links[{}][{}]="{}";'.format(
+                #                    row, col, make_title(
+                #                        self.links[row][col])) +\
+                #                    '  utterances[{}][{}]="{}";'.format(
+                #                        row, col, self.utterances[row][col])
                 if self.links[row][col] == "blank":
                         return 'utterances[{}][{}]="{}";'.format(
                             row,
@@ -302,41 +310,48 @@ def export_images(grid, slide):
                 composite = composite.crop(bbox)
 
                 # Save!
-                name = create_icon_name(x,y,utterances,grid.links)
+                name = create_icon_name(x, y, utterances, grid.links)
                 print name
-                folder = "icons/" #+ str(slide_number)
+                folder = "icons/"  # + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
                 composite.save(folder + "" + name)
 
 
-def create_icon_name(x,y,utterances,links):
+def create_icon_name(x, y, utterances, links):
 
-    name = remove_punctuation(utterances[x][y]) + ".png"
-    if name==".png":
-        name =remove_punctuation(links[x][y])+".png"
-        if name==".png":
-            name ="unknown"+str(slide_number)+str(x)+str(y)+".png"
-    return name
+        name = remove_punctuation(utterances[x][y]) + ".png"
+        if name == ".png":
+                name = remove_punctuation(links[x][y])+".png"
+                if name == ".png":
+                        name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
+        return name
 
 prs = Presentation("../azulejoe/testSuite/ck12/CK12+.pptx")
 slide_number = 1
 for_json = {}
+grids = {}
 for slide in prs.slides:
-        grid = Grid(slide)
+        grids[slide_number] = Grid(slide)
    #     export_images(grid, slide)
-        for_json[slide_number] = [
-            make_title(
-                grid.tag),
-            grid.labels,
-            grid.utterances,
-            grid.links,
-            grid.icons,
-            grid.colors,
-            slide_number]
-       # print grid
         slide_number += 1
-#        break
+
+for i in range(1, slide_number):
+        grids[i].update_links()
+        for_json[i] = [
+            make_title(
+                grids[i].tag),
+            grids[i].labels,
+            grids[i].utterances,
+            grids[i].links,
+            grids[i].icons,
+            grids[i].colors,
+            i]
 with open('ck12.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+
+for i in range(1, 20):
+        print i
+        print grids[i].tag
