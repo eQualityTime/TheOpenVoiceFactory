@@ -130,9 +130,22 @@ class Grid:
 
         grid_width = 4
 
-        def update_links(self):
-                print "Update links called on"
-                print self.tag
+        def update_links(self, grids):
+                for col in range(self.grid_width):
+                        for row in range(self.grid_width):
+                                current=self.links[row][col]
+                                print current
+                                if "slide" in current:
+                                        # first extract the number
+                                        number_string = ''.join(
+                                            c for c in current if c in string.digits)
+                                        print number_string
+                                        print "which is", grids[int(number_string)].tag
+                                        # Then work out the relevent tag
+                                        self.links[row][col]=make_title(grids[int(number_string)].tag)
+
+                        print "Update links called on"
+                        print self.tag
 
         def __init__(self, slide):
                 self.labels = [
@@ -164,6 +177,9 @@ class Grid:
                         (co, ro) = Locator.get_cr(shape.top, shape.left)
                         # Now - let's find out if there is a link...
                         click_action = shape.click_action
+                        if click_action.hyperlink.address is not None:
+                                self.links[co][
+                                        ro] = click_action.hyperlink.address
                         if click_action.action == PP_ACTION.OPEN_FILE:
                                 print "open"
                                 print click_action.hyperlink.address
@@ -177,12 +193,11 @@ class Grid:
 
                         #print (co,ro)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-                                if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
-                                        self.links[co][ro] = "real"
                                 try:
-                                    self.colors[co][ro] = shape.fill.fore_color.rgb
+                                        self.colors[co][
+                                                ro] = shape.fill.fore_color.rgb
                                 except (TypeError):
-                                    pass
+                                        pass
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
                         self.icons[co][
@@ -204,11 +219,7 @@ class Grid:
                                          for run in paragraph.runs])
                 if text != "":
                         # add the if shape_type is text box
-                        if self.links[co][ro] == "real":
-                                self.links[co][ro] = make_title(text.strip())
-                                self.labels[co][ro] = text.strip()
-                        else:
-                                self.utterances[co][ro] = text.strip()
+                        self.utterances[co][ro] = text.strip()
 
         def __str__(self):
                 body = "\n".join(
@@ -333,11 +344,11 @@ for_json = {}
 grids = {}
 for slide in prs.slides:
         grids[slide_number] = Grid(slide)
-   #     export_images(grid, slide)
+        export_images(grids[slide_number], slide)
         slide_number += 1
 
 for i in range(1, slide_number):
-        grids[i].update_links()
+        grids[i].update_links(grids)
         for_json[i] = [
             make_title(
                 grids[i].tag),
@@ -352,6 +363,6 @@ with open('ck12.json', 'w') as outfile:
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 
-for i in range(1, 20):
-        print i
-        print grids[i].tag
+#for i in range(1, 20):
+#        print i
+#        print grids[i].tag
