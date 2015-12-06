@@ -141,7 +141,7 @@ class Grid:
                                             c for c in current if c in string.digits)
                                         print number_string
                                         print "which is", grids[int(number_string)].tag
-                                        # Then work out the relevent tag
+                                        # Then work out the relevant tag
                                         self.links[row][col]=make_title(grids[int(number_string)].tag)
 
                         print "Update links called on"
@@ -201,7 +201,7 @@ class Grid:
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
                         self.icons[co][
-                                ro] = "icons/" + create_icon_name(co, ro, self.utterances, self.links)
+                                ro] = "icons/" + create_icon_name(co, ro, self.labels, self.links)
                   #      print self.utterances[co][ro]
                   #      print self.links[co][ro]
 
@@ -212,14 +212,14 @@ class Grid:
         def process_text_frame(self, shape, co, ro):
               #  text = self.utterances[co][ro]
                 text = ""
-                if "Yes" in self.utterances[co][ro]:
+                if "Yes" in self.labels[co][ro]:
                         return
                 for paragraph in shape.text_frame.paragraphs:
                         text += "".join([run.text.encode('ascii', 'ignore')
                                          for run in paragraph.runs])
                 if text != "":
                         # add the if shape_type is text box
-                        self.utterances[co][ro] = text.strip()
+                        self.labels[co][ro] = text.strip()
 
         def __str__(self):
                 body = "\n".join(
@@ -254,7 +254,7 @@ def export_images(grid, slide):
         We have to do this separately so it's guaranteed we already know what to
         name the images!"""
         images = {}
-        utterances = grid.utterances
+        labels = grid.labels
         for shape in slide.shapes:
                 try:
                         if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
@@ -321,7 +321,7 @@ def export_images(grid, slide):
                 composite = composite.crop(bbox)
 
                 # Save!
-                name = create_icon_name(x, y, utterances, grid.links)
+                name = create_icon_name(x, y, labels, grid.links)
                 print name
                 folder = "icons/"  # + str(slide_number)
                 if not os.path.exists(folder):
@@ -329,9 +329,9 @@ def export_images(grid, slide):
                 composite.save(folder + "" + name)
 
 
-def create_icon_name(x, y, utterances, links):
+def create_icon_name(x, y, labels, links):
 
-        name = remove_punctuation(utterances[x][y]) + ".png"
+        name = remove_punctuation(labels[x][y]) + ".png"
         if name == ".png":
                 name = remove_punctuation(links[x][y])+".png"
                 if name == ".png":
@@ -344,7 +344,7 @@ for_json = {}
 grids = {}
 for slide in prs.slides:
         grids[slide_number] = Grid(slide)
-        export_images(grids[slide_number], slide)
+  #      export_images(grids[slide_number], slide)
         slide_number += 1
 
 for i in range(1, slide_number):
@@ -359,7 +359,7 @@ for i in range(1, slide_number):
             grids[i].colors,
             i]
 with open('ck12.json', 'w') as outfile:
-        json.dump(for_json, outfile, sort_keys=True)
+        json.dump(for_json, outfile, sort_keys=True,indent=4)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 

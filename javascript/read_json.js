@@ -37,7 +37,7 @@ function set_colour() {
         for (y = 0; y < grid_size_rows; y++) {
             $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').css('background-color', "rgb(" + colours[key][y][x] + ")")
 
-            if (utterances[key][y][x] == "") {
+            if (labels[key][y][x] == "") {
                 if (links[key][y][x] == "") {
 			if (icons[key][y][x] == "") {
                     $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("")
@@ -52,7 +52,7 @@ function set_colour() {
             } else {
                 if (labels[key][y][x] == "") {
                    // $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + utterances[key][y][x] + "</b><br><IMG src=\"icons/" + slide_number[key] + "-" + y + "-" + x + ".png\" >")
-                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + utterances[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x]+ "\" >")
+                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x]+ "\" >")
 
                 } else {
                     $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x]+ "\" >")
@@ -122,15 +122,15 @@ function tube() {
 //The main function. First checks for an utterance to add, and then checks if a link should be activated. Within the utterance code we check the length of an addition - if it is a single character we assume that the user is spelling something and we do not insert the extra space. 
 function add(i, j) {
 
-    if (utterances[key][i][j] != "link") {
-        if (utterances[key][i][j] == "Clear") {
+    if (labels[key][i][j] != "link") {
+        if (labels[key][i][j] == "Clear") {
             document.myform.reset();
             return;
         }
-        if (utterances[key][i][j].length == 1) { //so that we can spell with the single letter buttons
-            document.myform.outputtext.value += utterances[key][i][j];
+        if (labels[key][i][j].length == 1) { //so that we can spell with the single letter buttons
+            document.myform.outputtext.value += labels[key][i][j];
         } else {
-            document.myform.outputtext.value += " " + utterances[key][i][j];
+            document.myform.outputtext.value += " " + labels[key][i][j];
         }
     }
     if (links[key][i][j] != "") {
