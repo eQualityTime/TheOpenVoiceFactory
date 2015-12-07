@@ -134,7 +134,6 @@ class Grid:
                 for col in range(self.grid_width):
                         for row in range(self.grid_width):
                                 current=self.links[row][col]
-                                print current
                                 if "slide" in current:
                                         # first extract the number
                                         number_string = ''.join(
@@ -144,8 +143,6 @@ class Grid:
                                         # Then work out the relevant tag
                                         self.links[row][col]=make_title(grids[int(number_string)].tag)
 
-                        print "Update links called on"
-                        print self.tag
 
         def __init__(self, slide):
                 self.labels = [
@@ -343,11 +340,13 @@ slide_number = 1
 for_json = {}
 grids = {}
 for slide in prs.slides:
+        print "new slide!!!"
         grids[slide_number] = Grid(slide)
-  #      export_images(grids[slide_number], slide)
+        export_images(grids[slide_number], slide)
         slide_number += 1
 
 for i in range(1, slide_number):
+
         grids[i].update_links(grids)
         for_json[i] = [
             make_title(
@@ -358,7 +357,7 @@ for i in range(1, slide_number):
             grids[i].icons,
             grids[i].colors,
             i]
-with open('ck12.json', 'w') as outfile:
+with open('json/ck12.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True,indent=4)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
