@@ -197,8 +197,7 @@ class Grid:
                                         pass
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
-                        self.icons[co][
-                                ro] = "icons/" + create_icon_name(co, ro, self.labels, self.links)
+#                        self.icons[co][ ro] = "icons/" + create_icon_name(co, ro, self.labels, self.links)
                   #      print self.utterances[co][ro]
                   #      print self.links[co][ro]
 
@@ -318,6 +317,7 @@ def export_images(grid, slide):
                 composite = composite.crop(bbox)
 
                 # Save!
+                grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links)
                 name = create_icon_name(x, y, labels, grid.links)
                 print name
                 folder = "icons/"  # + str(slide_number)
