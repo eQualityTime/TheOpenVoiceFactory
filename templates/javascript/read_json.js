@@ -122,11 +122,7 @@ function tube() {
 //The main function. First checks for an utterance to add, and then checks if a link should be activated. Within the utterance code we check the length of an addition - if it is a single character we assume that the user is spelling something and we do not insert the extra space. 
 function add(i, j) {
 
-    if (labels[key][i][j] != "link") {
-        if (labels[key][i][j] == "Clear") {
-            document.myform.reset();
-            return;
-        }
+    if (links[key][i][j] == "") {
         if (labels[key][i][j].length == 1) { //so that we can spell with the single letter buttons
             document.myform.outputtext.value += labels[key][i][j];
         } else {
@@ -136,7 +132,7 @@ function add(i, j) {
     if (links[key][i][j] != "") {
         switch (links[key][i][j]) {
             //There are two special cases for links - clearing the message window, deleting the last word from the message window. Further special behaviours (volume change and the like) could be added here. 
-            case "clear":
+            case "special::clear":
                 document.myform.reset();
                 break;
             case "deleteword":
@@ -157,6 +153,9 @@ function add(i, j) {
                 break;
             case "twitter":
                 tweet();
+                break;
+            case "special::unfinnished":
+		alert("This feature is unimplemented on the web demo");
                 break;
             case "1":
                 key = "top_page";
