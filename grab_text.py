@@ -320,7 +320,7 @@ def export_images(grid, slide):
                 grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links)
                 name = create_icon_name(x, y, labels, grid.links)
                 print name
-                folder = "icons/"  # + str(slide_number)
+                folder = "output/icons/"  # + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
                 composite.save(folder + "" + name)
@@ -357,7 +357,7 @@ for i in range(1, slide_number):
             grids[i].icons,
             grids[i].colors,
             i]
-with open('json/ck12.json', 'w') as outfile:
+with open('output/json/ck12.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True,indent=4)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
