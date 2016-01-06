@@ -1,7 +1,8 @@
 #!/usr/bin/python
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
 # Make the images export more effectively
-
+import sys
+sys.path.append('/home/joereddington/')
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
@@ -11,6 +12,7 @@ import io
 import os
 import string
 from PIL import Image
+from sys import argv
 
 import sys
 import linecache
@@ -320,7 +322,7 @@ def export_images(grid, slide):
                 grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links)
                 name = create_icon_name(x, y, labels, grid.links)
                 print name
-                folder = "output/icons/"  # + str(slide_number)
+                folder = filename+"/icons/"  # + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
                 composite.save(folder + "" + name)
@@ -335,7 +337,15 @@ def create_icon_name(x, y, labels, links):
                         name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
         return name
 
-prs = Presentation("../azulejoe/testSuite/ck12/CK12+.pptx")
+########
+
+script, filename = argv
+
+#target = open(filename, 'w')
+
+########
+
+prs = Presentation("uploads/"+filename)
 slide_number = 1
 for_json = {}
 grids = {}
