@@ -367,7 +367,8 @@ for i in range(1, slide_number):
             grids[i].icons,
             grids[i].colors,
             i]
-with open('output/json/ck12.json', 'w') as outfile:
+#with open(filename+'/json/ck12.json', 'w') as outfile:
+with open('ck12.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True,indent=4)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 

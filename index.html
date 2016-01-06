@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- original tempalte from http://www.w3schools.com/php/php_file_upload.asp-->
+<html>
+<head><link rel="stylesheet" type="text/css" href="white.css"></head>
+<body>
+<div id="columns">
+<IMG src=ck_logo.png height=180>
+<h1>File processing upload</h1>
+<p>This page allows you to upload your pptx format grids for processing into online versions.</p>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <h3>File to upload</h3>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+<br>
+ <h3>Grid size</h3>
+ <input type="radio" name="size" value="5"> 5 wide and 5 tall<br>
+<br>
+  <input type="radio" name="size" value="4"> 4 wide and 4 tall<br>
+<br>
+    <input type="submit" value="Upload File" name="submit">
+</form>
+</div>
+</body>
+</html> 
