@@ -1,0 +1,20 @@
+/*from http://stackoverflow.com/a/14499545/170243 */
+td {
+    padding: 20px;
+}
+.note {
+    position: relative;
+}
+.note:after { /* Magic Happens Here!!! */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0; 
+    height: 0; 
+    display: block;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid rgba(0,0,0,0.5);
+
+    border-top: 20px solid transparent;
+} /* </magic> */

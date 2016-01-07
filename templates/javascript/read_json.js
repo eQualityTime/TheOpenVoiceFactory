@@ -35,23 +35,31 @@ function set_colour() {
     x = 0, y = 0
     for (x = 0; x < grid_size_rows; x++) {
         for (y = 0; y < grid_size_rows; y++) {
+                if (links[key][y][x]) {
+            $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').addClass('note')
+}else{
+            $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').removeClass('note')
+}
+
             $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').css('background-color', "rgb(" + colours[key][y][x] + ")")
 
             if (labels[key][y][x] == "") {
                 if (links[key][y][x] == "") {
 			if (icons[key][y][x] == "") {
+//everything blank
                     $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("")
 			}
 			else{
+//NO label or link just an image
                     $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<br><IMG src=\"" + icons[key][y][x]+ "\" >")
                 }
 } else {
+//link with NO label
 			    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x]+ "\" >")
 
 }
             } else {
                 if (labels[key][y][x] == "") {
-                   // $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + utterances[key][y][x] + "</b><br><IMG src=\"icons/" + slide_number[key] + "-" + y + "-" + x + ".png\" >")
                     $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x]+ "\" >")
 
                 } else {
