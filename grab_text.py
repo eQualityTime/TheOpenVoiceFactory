@@ -140,8 +140,8 @@ class Grid:
                                         # first extract the number
                                         number_string = ''.join(
                                             c for c in current if c in string.digits)
-                                        print number_string
-                                        print "which is", grids[int(number_string)].tag
+                                        #print number_string
+                                        #print "which is", grids[int(number_string)].tag
                                         # Then work out the relevant tag
                                         self.links[row][col]=make_title(grids[int(number_string)].tag)
 
@@ -179,16 +179,16 @@ class Grid:
                         if click_action.hyperlink.address is not None:
                                 self.links[co][
                                         ro] = click_action.hyperlink.address
-                        if click_action.action == PP_ACTION.OPEN_FILE:
-                                print "open"
-                                print click_action.hyperlink.address
-                        if click_action.action == PP_ACTION.HYPERLINK:
-                                print "hyper"
-                                print click_action.hyperlink.address
+#                        if click_action.action == PP_ACTION.OPEN_FILE:
+                                #print "open"
+                                #print click_action.hyperlink.address
+#                        if click_action.action == PP_ACTION.HYPERLINK:
+                                #print "hyper"
+                                #print click_action.hyperlink.address
                         target_slide = click_action.target_slide
-                        if target_slide is not None:
-                                print "local"
-                                print click_action.hyperlink.address
+#                        if target_slide is not None:
+#                                print "local"
+#                                print click_action.hyperlink.address
 
                         #print (co,ro)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
@@ -321,7 +321,7 @@ def export_images(grid, slide):
                 # Save!
                 grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links)
                 name = create_icon_name(x, y, labels, grid.links)
-                print name
+                #print name
                 folder = filename+"/icons/"  # + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
@@ -350,7 +350,7 @@ slide_number = 1
 for_json = {}
 grids = {}
 for slide in prs.slides:
-        print "new slide!!!"
+        #print "new slide!!!"
         grids[slide_number] = Grid(slide)
         export_images(grids[slide_number], slide)
         slide_number += 1
@@ -367,8 +367,8 @@ for i in range(1, slide_number):
             grids[i].icons,
             grids[i].colors,
             i]
-#with open(filename+'/json/ck12.json', 'w') as outfile:
-with open('ck12.json', 'w') as outfile:
+with open(filename+'/ck12.json', 'w') as outfile:
+#with open('ck12.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True,indent=4)
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
