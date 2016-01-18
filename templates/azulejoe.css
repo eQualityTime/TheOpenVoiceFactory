@@ -1,0 +1,27 @@
+table td
+{
+    padding:0px;
+    width: 180px;
+    height: 133px;
+    overflow: auto;
+}
+
+table
+{
+border-collapse: collapse;
+    padding:0px;
+
+}
+
+img
+{
+max-height: 110px;
+max-width: 160px;
+
+}
+
+#messagewindow 
+{
+font-size: 18pt; height:136px; width:370px ;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; position:absolute; left:193px; top:155px;
+
+}
