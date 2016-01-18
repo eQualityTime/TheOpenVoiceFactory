@@ -60,10 +60,14 @@ We think that pageset design should be as simple as possible for users. If it's 
 ### I like open source things, how can I get involved?
 
 We love the idea of people helping out with the code. Because AzuleJoe is currently such a simple project, it's there are a lot of easy things that people can do to help. So if you'd like to fork the repo to, for example:
-*   provide [scanning](http://en.wikipedia.org/wiki/Switch_access_scanning)
-*   use native TTS on android (or any other format)
 *   retarget AzuleJoe to a different pageset
 *   import from (hard) or export to (medium) the [openboardformat](http://www.openboardformat.org)
 *   precompute utterances
 
-Then we'd love to see what you can do. I'd also love to hear from people who are used to working with the Microsoft Office file formats.
+
+###Disclaimer###
+This software is designed to let healthcare professionals and interested individuals explore a pageset for use on an AAC device.  
+
+It is NOT an AAC device. AAC devices (including software released freely) must be registered as medical devices within the EU.  A freely downloadable piece of AAC software must also comply with the relevant medical device legislation in any of the 100s of countries they it can be accessed in. 
+
+We’re currently examining this process with a view to eventually registering, but this is a costly and time-consuming process, and we’d like to spend our time on development.  Until then, AzuleJoe is for pageset demonstration, exploration, and research. 
