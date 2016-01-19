@@ -46,30 +46,15 @@
 
     <!--START THE MAIN MAP -->
     <table id="mainGrid" border=1 height=520 width=720>
-        <tr>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-        </tr>
-        <tr>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-        </tr>
-        <tr>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-        </tr>
-        <tr>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-            <td align="center" valign="middle"></td>
-        </tr>
+
+<? 
+$table_size=5;
+for ($i=0;$i<$table_size;$i++){
+echo ' <tr>';
+	for ($j=0;$j<$table_size;$j++){
+	echo '            <td align="center" valign="middle"></td>';
+	}
+echo '        </tr>' ;}?>
     </table>
 
     <script language="javascript" src="javascript/read_json.js" type="text/javascript">
