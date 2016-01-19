@@ -76,8 +76,8 @@ class Grid:
         write to json on it's own mertits"""
 
         def update_links(self, grids):
-                for col in range(self.grid_width):
-                        for row in range(self.grid_width):
+                for col in range(self.grid_size):
+                        for row in range(self.grid_size):
                                 current = self.links[row][col]
                                 if "slide" in current:
                                         # first extract the number
@@ -92,13 +92,19 @@ class Grid:
 
         def __init__(self, pres, slide, gridSize):
                 self.grid_size = gridSize
+                self.labels = [
+                    ["" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
                 self.utterances = [
-                    ["link" for x in range(self.grid_size)]
+                    ["" for x in range(self.grid_size)]
                     for x in range(self.grid_size)]
                 self.links = [
-                    ["blank" for x in range(self.grid_size)]
+                    ["" for x in range(self.grid_size)]
                     for x in range(self.grid_size)]
                 self.colors = [
+                    ["" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
+                self.icons = [
                     ["" for x in range(self.grid_size)]
                     for x in range(self.grid_size)]
                 self.tag = "unknown"
@@ -271,7 +277,7 @@ slide_number = 1
 for_json = {}
 grids = {}
 for slide in prs.slides:
-        grids[slide_number] = Grid(slide)
+        grids[slide_number] = Grid(prs,slide,gridSize)
         export_images(grids[slide_number], slide)
         slide_number += 1
 
