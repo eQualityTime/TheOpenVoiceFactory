@@ -10,6 +10,7 @@ from pptx.enum.action import PP_ACTION
 import json
 import io
 import os
+import math
 import string
 from PIL import Image
 from sys import argv
@@ -30,6 +31,16 @@ def PrintException():
                 line = linecache.getline(filename, lineno, f.f_globals)
                 print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
 
+if (len(sys.argv) < 2):
+        print("\nUsage: ./grab_text.py <inputPptxFile> <gridSize>\n")
+        print("inputPptxFile: The powerpoint pageset you want to process.")
+        print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
+        sys.exit(1)
+
+filename = sys.argv[1]
+gridSize = 4
+if (len(sys.argv) > 2):
+        gridSize = int(sys.argv[2])
 
 alpha = string.ascii_lowercase + string.ascii_uppercase + string.digits + '_'
 
@@ -58,113 +69,56 @@ def make_title(label):
         return tag
 
 
-class Locator:
-
-        """Static class designed to abstract away the process of working out
-        which bit of the grid a particular part of powerpoint is in"""
-        ROW_TABLE = {
-
-            152404:  0,
-            1845122: 1,
-            1874564: 1,
-            3504321: 2,
-            3505369: 2,
-            3541832: 2,
-            5225484: 3,
-            5226008: 3,
-            5576358: 3
-            }
-
-        COL_TABLE = {
-            0: 0,
-            152400: 0,
-            152402: 0,
-            175371: 0,
-            2415785: 1,
-            2415786: 1,
-            2415786: 1,
-            4697109: 2,
-            4700413: 2,
-            4700414: 2,
-            6963797: 3,
-            6963798: 3
-            }
-
-
-#
-#        ROW_TABLE = {152400: 0, 1503659: 1, 1600200: 1, 2861846: 2,
-#                     2819400: 2, 2854919: 2, 2854925: 2, 4170660: 3,
-#                     4191000: 3, 5542260: 4, 5769114: 4, 5562600: 4, 5769125: 4}
-#        COL_TABLE = {
-#            0: 0,
-#            152400: 0,
-#            152401: 0,
-#            1981200: 1,
-#            3771900: 2,
-#            5562600: 3,
-#            5610125: 3,
-#            6095999: 3,
-#            7314625: 4,
-#            7340121: 4,
-#            7340600: 4}
-
-        @staticmethod
-        def get_closest_key(dict, inKey):
-                "Returns the closest key in the dictionary, for numerical keys."
-                # from http://stackoverflow.com/a/7934624/170243
-                if inKey in dict:
-                        return inKey
-                else:
-                        return min(dict.keys(), key=lambda k: abs(k - inKey))
-
-        @staticmethod
-        def get_cr(topPos, leftPos):
-                col = Locator.get_closest_key(Locator.COL_TABLE, leftPos)
-                row = Locator.get_closest_key(Locator.ROW_TABLE, topPos)
-                return (Locator.COL_TABLE[col], Locator.ROW_TABLE[row])
-
-
 class Grid:
 
         """Class representing on n by n grid, complete with utterances, links
         colours, and so on. Currently outputs as javascript, should also
         write to json on it's own mertits"""
 
-        grid_width = 4
-
         def update_links(self, grids):
                 for col in range(self.grid_width):
                         for row in range(self.grid_width):
-                                current=self.links[row][col]
+                                current = self.links[row][col]
                                 if "slide" in current:
                                         # first extract the number
                                         number_string = ''.join(
-                                            c for c in current if c in string.digits)
-                                        #print number_string
-                                        #print "which is", grids[int(number_string)].tag
+                                            c for c in current
+                                            if c in string.digits)
+                                        # print number_string
+                                        # print "which is", grids[int(number_string)].tag
                                         # Then work out the relevant tag
-                                        self.links[row][col]=make_title(grids[int(number_string)].tag)
+                                        self.links[row][col] = make_title(
+                                            grids[int(number_string)].tag)
 
-
-        def __init__(self, slide):
-                self.labels = [
-                    ["" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
+        def __init__(self, pres, slide, gridSize):
+                self.grid_size = gridSize
                 self.utterances = [
-                    ["" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
+                    ["link" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
                 self.links = [
-                    ["" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
+                    ["blank" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
                 self.colors = [
-                    ["" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
-                self.icons = [
-                    ["" for x in range(self.grid_width)]
-                    for x in range(self.grid_width)]
-                self.tag = ""
+                    ["" for x in range(self.grid_size)]
+                    for x in range(self.grid_size)]
+                self.tag = "unknown"
+                self.slide_width = pres.slide_width
+                self.slide_height = pres.slide_height
                 for shape in slide.shapes:
                         self.process_shape(shape)
+
+        def get_col_row(self, top, left):
+                # It doesn't make sense to use width and height, since often the
+                # midpoint lies outside the cell, particularly in the horizontal directino
+                # (probably because text boxes have a default minimum width)
+                # It might be worth having a slight fudge right-and-down to make sure
+                # we don't miss items who are just outside the top left of the
+                # cell.
+                col = math.floor(
+                    (left * self.grid_size / self.slide_width) + 0.5)
+                row = math.floor(
+                    (top * self.grid_size / self.slide_height) + 0.5)
+                return (int(col), int(row))
 
         def process_shape(self, shape):
                 # print str(shape.top)+" "+str(shape.left)
@@ -173,24 +127,12 @@ class Grid:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
                                         # shoudl there be a return here?
-                        (co, ro) = Locator.get_cr(shape.top, shape.left)
+                        (co, ro) = self.get_col_row(shape.top, shape.left)
                         # Now - let's find out if there is a link...
                         click_action = shape.click_action
                         if click_action.hyperlink.address is not None:
                                 self.links[co][
                                         ro] = click_action.hyperlink.address
-#                        if click_action.action == PP_ACTION.OPEN_FILE:
-                                #print "open"
-                                #print click_action.hyperlink.address
-#                        if click_action.action == PP_ACTION.HYPERLINK:
-                                #print "hyper"
-                                #print click_action.hyperlink.address
-                        target_slide = click_action.target_slide
-#                        if target_slide is not None:
-#                                print "local"
-#                                print click_action.hyperlink.address
-
-                        #print (co,ro)
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 try:
                                         self.colors[co][
@@ -199,9 +141,6 @@ class Grid:
                                         pass
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
-#                        self.icons[co][ ro] = "icons/" + create_icon_name(co, ro, self.labels, self.links)
-                  #      print self.utterances[co][ro]
-                  #      print self.links[co][ro]
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
@@ -219,33 +158,6 @@ class Grid:
                         # add the if shape_type is text box
                         self.labels[co][ro] = text.strip()
 
-        def __str__(self):
-                body = "\n".join(
-                    [(self.string_from_cell(row, col))
-                        for col in range(self.grid_width)
-                        for row in range(self.grid_width)])
-                return """
-function %s(){
-reset();
-%s
-document.main.src="ck12/ck12+.%03d.png";
-
-}""" % (make_title(self.tag), body, slide_number)
-
-        def string_from_cell(self, row, col):
-                #                return '     links[{}][{}]="{}";'.format(
-                #                    row, col, make_title(
-                #                        self.links[row][col])) +\
-                #                    '  utterances[{}][{}]="{}";'.format(
-                #                        row, col, self.utterances[row][col])
-                if self.links[row][col] == "blank":
-                        return 'utterances[{}][{}]="{}";'.format(
-                            row,
-                            col,
-                            self.utterances[row][col])
-                return '     links[{}][{}]="{}";'.format(
-                    row, col, make_title(self.links[row][col]))
-
 
 def export_images(grid, slide):
         """     Second pass through shapes list finds images and saves them.
@@ -255,12 +167,17 @@ def export_images(grid, slide):
         labels = grid.labels
         for shape in slide.shapes:
                 try:
+                        if not hasattr(shape, "shape_type"):
+                                continue
+
                         if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                                (co, ro) = Locator.get_cr(shape.top, shape.left)
+                                (co, ro) = grid.get_col_row(
+                                        shape.top, shape.left)
                                 if (co, ro) not in images:
                                         images[co, ro] = []
                                 images[co, ro].append(shape)
                 except:
+                        print "exception 23204234 triggered"
                         continue
 
         # Compose each icon out of all the images in the grid cell.
@@ -308,20 +225,25 @@ def export_images(grid, slide):
                         # part.size because it might have been cropped
 
                         part = resizeImage(part, partScale / scale)
-                        composite.paste(
-                            part,
-                            ((shape.left - l)/scale,
-                             (shape.top - t)/scale),
-                            part)  # This masks out transparent pixels
+                        try:
+                                composite.paste(
+                                    part,
+                                    ((shape.left - l)/scale,
+                                     (shape.top - t)/scale),
+                                    part)  # This masks out transparent pixels
+                        except ValueError:
+                                print "Error reading image for " + utterances[x][y] + \
+                                            "/" + links[x][y]
 
                 # Crop final image.
                 bbox = composite.getbbox()
                 composite = composite.crop(bbox)
 
                 # Save!
-                grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links)
+                grid.icons[x][
+                        y] = "icons/" + create_icon_name(x, y, labels, grid.links)
                 name = create_icon_name(x, y, labels, grid.links)
-                #print name
+                # print name
                 folder = filename+"/icons/"  # + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
@@ -339,9 +261,8 @@ def create_icon_name(x, y, labels, links):
 
 ########
 
-script, filename = argv
 
-#target = open(filename, 'w')
+# target = open(filename, 'w')
 
 ########
 
@@ -350,7 +271,6 @@ slide_number = 1
 for_json = {}
 grids = {}
 for slide in prs.slides:
-        #print "new slide!!!"
         grids[slide_number] = Grid(slide)
         export_images(grids[slide_number], slide)
         slide_number += 1
@@ -368,11 +288,6 @@ for i in range(1, slide_number):
             grids[i].colors,
             i]
 with open(filename+'/ck12.json', 'w') as outfile:
-#with open('ck12.json', 'w') as outfile:
-        json.dump(for_json, outfile, sort_keys=True,indent=4)
+        json.dump(for_json, outfile, sort_keys=True, indent=4)
+
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
-
-
-#for i in range(1, 20):
-#        print i
-#        print grids[i].tag
