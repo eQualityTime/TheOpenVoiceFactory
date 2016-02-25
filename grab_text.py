@@ -1,4 +1,4 @@
-#!/usr/bin/python
+# !/usr/bin/python
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
 # Make the images export more effectively
 import sys
@@ -134,6 +134,9 @@ class Grid:
                                         self.tag = shape.text
                                         # shoudl there be a return here?
                         (co, ro) = self.get_col_row(shape.top, shape.left)
+                        if ((co>= gridSize) or (ro >= gridSize)):
+                                print "Warning, shape outside of page area on page:{}".format(slide_number)
+                                return
                         # Now - let's find out if there is a link...
                         click_action = shape.click_action
                         if click_action.hyperlink.address is not None:
@@ -277,9 +280,10 @@ slide_number = 1
 for_json = {}
 grids = {}
 for slide in prs.slides:
-        grids[slide_number] = Grid(prs,slide,gridSize)
+        grids[slide_number] = Grid(prs, slide, gridSize)
         export_images(grids[slide_number], slide)
         slide_number += 1
+        print slide_number
 
 for i in range(1, slide_number):
 
