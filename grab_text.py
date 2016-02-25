@@ -1,12 +1,10 @@
-# !/usr/bin/python
+#!/usr/bin/python
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
 # Make the images export more effectively
 import sys
 sys.path.append('/home/joereddington/')
 from pptx import Presentation
-from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
-from pptx.enum.action import PP_ACTION
 import json
 import io
 import os
@@ -283,7 +281,6 @@ for slide in prs.slides:
         grids[slide_number] = Grid(prs, slide, gridSize)
         export_images(grids[slide_number], slide)
         slide_number += 1
-        print slide_number
 
 for i in range(1, slide_number):
 
