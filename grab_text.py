@@ -12,10 +12,15 @@ import math
 import string
 from PIL import Image
 from sys import argv
+from pptx.enum.shapes import MSO_SHAPE
+from pptx.enum.shapes import MSO_SHAPE_TYPE
+
 
 import sys
 import linecache
 print_exceptions = False
+
+warningMissingLinks = True
 
 
 def PrintException():
@@ -36,7 +41,7 @@ if (len(sys.argv) < 2):
         sys.exit(1)
 
 filename = sys.argv[1]
-gridSize =5
+gridSize = 5
 if (len(sys.argv) > 2):
         gridSize = int(sys.argv[2])
 
@@ -132,7 +137,7 @@ class Grid:
                                         self.tag = shape.text
                                         # shoudl there be a return here?
                         (co, ro) = self.get_col_row(shape.top, shape.left)
-                        if ((co>= gridSize) or (ro >= gridSize)):
+                        if ((co >= gridSize) or (ro >= gridSize)):
                                 print "Warning, shape outside of page area on page:{}".format(slide_number)
                                 return
                         # Now - let's find out if there is a link...
@@ -148,6 +153,14 @@ class Grid:
                                         pass
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
+
+                        if(warningMissingLinks):
+                                if (click_action.hyperlink.address is None):
+                                        if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+                                                if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
+                                                        if len(self.links[
+                                                               co][ro]) < 2:
+                                                                print self.tag + "Slide {} link here: [{}] [{}] {} ".format(slide_number, co, ro, self.labels[co][ro]) + self.links[co][ro]
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
