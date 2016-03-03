@@ -1,6 +1,6 @@
 key = "top_page"
-grid_size_rows = 4
-grid_size_columns = 4
+grid_size_rows = 5
+grid_size_columns = 5
 utterances = {}
 links = {}
 colours = {}
@@ -35,6 +35,7 @@ function set_colour() {
     x = 0, y = 0
     for (x = 0; x < grid_size_rows; x++) {
         for (y = 0; y < grid_size_rows; y++) {
+	//	alert("set_colour()"+key+" "+x+" "+y)
                 if (links[key][y][x]) {
             $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').addClass('note')
 }else{
@@ -128,8 +129,8 @@ function tube() {
 
 
 //The main function. First checks for an utterance to add, and then checks if a link should be activated. Within the utterance code we check the length of an addition - if it is a single character we assume that the user is spelling something and we do not insert the extra space. 
+//called from the html
 function add(i, j) {
-
     if (links[key][i][j] == "") {
         if (labels[key][i][j].length == 1) { //so that we can spell with the single letter buttons
             document.myform.outputtext.value += labels[key][i][j];
@@ -143,7 +144,7 @@ function add(i, j) {
             case "special::clear":
                 document.myform.reset();
                 break;
-            case "deleteword":
+            case "special::deleteword":
                 var lastIndex = document.myform.outputtext.value.lastIndexOf(" ");
                 document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);
                 break;
@@ -169,6 +170,7 @@ function add(i, j) {
                 key = "top_page";
                 break;
             default:
+		alert(key+" "+i+" "+j)
                 key = (links[key][i][j]);
                 set_colour();
         }

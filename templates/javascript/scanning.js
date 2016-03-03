@@ -4,7 +4,7 @@ function trigger_on_scan(){
   if (azulejoe_scanning == true) {
     if (y == 0) {
       if (x >= Math.floor(grid_size_columns / 4)) {
-        if (x < Math.ceil(grid_size_columns * 0.75)) {
+        if (x < Math.ceil(grid_size_columns * 0.75)) {//testing if we are in the message window
           makeWav()
           return
         }
@@ -29,12 +29,21 @@ $('#mainGrid').click(function(e) {
 
     offset_t = $(this).offset().top - $(window).scrollTop();
     offset_l = $(this).offset().left - $(window).scrollLeft();
+//alert(offset_t+" "+ $(this).offset().top+" "+$(window).scrollTop())
+//percentage_accross=(Math.round((e.clientX - offset_l)) / this.width)
+distance_down_in_table=e.clientY - offset_t
+percentage_down=(Math.round((e.clientY - offset_t)) / 540)
 
+//alert(offset_t+" "+e.clientY+" "+" "+distance_down_in_table+" "+percentage_down)
     var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
     var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
 
+if(our_top<grid_size_columns){
+if(left<grid_size_columns){
     add(left, our_top)
   }
+}
+}
 });
 //credit http://stackoverflow.com/a/14045047/170243
 
@@ -52,9 +61,8 @@ function toggleScanning() {
 }
 
 main = document.getElementById("mainGrid");
-var offset_t = $(main).offset().top - $(window).scrollTop();
-var offset_l = $(main).offset().left - $(window).scrollLeft();
-
+var offset_t = $(main).offset().top //- $(window).scrollTop();
+var offset_l = $(main).offset().left //- $(window).scrollLeft();
 var interval_access_var = 0
 
 function start_scanning() {

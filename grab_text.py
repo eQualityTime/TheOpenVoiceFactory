@@ -36,7 +36,7 @@ if (len(sys.argv) < 2):
         sys.exit(1)
 
 filename = sys.argv[1]
-gridSize = 4
+gridSize =5
 if (len(sys.argv) > 2):
         gridSize = int(sys.argv[2])
 
