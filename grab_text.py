@@ -187,6 +187,11 @@ def export_images(grid, slide):
                         continue
 
         # Compose each icon out of all the images in the grid cell.
+        for col in range(grid.grid_size):
+                for row in range(grid.grid_size):
+                        if (col, row) not in images:
+                                print "WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
+
         for (x, y) in images:
                 # Go through all the images, compute bounding
                 # box.
@@ -212,7 +217,7 @@ def export_images(grid, slide):
 
                 # Add all the images together.
                 for shape in images[x, y]:
-                        # TODO: flipping.
+                                # TODO: flipping.
                         part = Image.open(
                             io.BytesIO(
                                 shape.image.blob))
@@ -277,7 +282,7 @@ slide_number = 1
 for_json = {}
 grids = {}
 for slide in prs.slides:
-        grids[slide_number] = Grid(prs,slide,gridSize)
+        grids[slide_number] = Grid(prs, slide, gridSize)
         export_images(grids[slide_number], slide)
         slide_number += 1
 
