@@ -17,7 +17,7 @@ from sys import argv
 
 import sys
 import linecache
-print_exceptions = True
+print_exceptions = False
 
 
 def PrintException():
@@ -190,6 +190,7 @@ def export_images(grid, slide):
         for col in range(grid.grid_size):
                 for row in range(grid.grid_size):
                         if (col, row) not in images:
+                            if labels[col][row] is not "":
                                 print "WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
 
         for (x, y) in images:
