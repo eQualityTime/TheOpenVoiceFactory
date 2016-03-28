@@ -17,7 +17,7 @@ from sys import argv
 
 import sys
 import linecache
-print_exceptions = False
+print_exceptions = True
 
 
 def PrintException():
