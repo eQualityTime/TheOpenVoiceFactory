@@ -284,7 +284,7 @@ def create_icon_name(x, y, labels, links):
 prs = Presentation("uploads/"+filename)
 slide_number = 1
 for_json = {}
-for_json["Settings"] = [4,"test title","en", ""]
+for_json["Settings"] = [gridSize,"test title","en", ""]
 grid_json = {}
 grids = {}
 for slide in prs.slides:
