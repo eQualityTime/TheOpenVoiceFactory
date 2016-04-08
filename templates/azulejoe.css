@@ -2,7 +2,7 @@ table td
 {
     padding:0px;
     width: 180px;
-    height: 133px;
+    height: 103px;
     overflow: auto;
 }
 
@@ -15,8 +15,8 @@ border-collapse: collapse;
 
 img
 {
-max-height: 110px;
-max-width: 160px;
+max-height: 70px;
+max-width: 100px;
 
 }
 
