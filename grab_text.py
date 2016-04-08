@@ -284,6 +284,7 @@ def create_icon_name(x, y, labels, links):
 prs = Presentation("uploads/"+filename)
 slide_number = 1
 for_json = {}
+for_json["Settings"] = [4,"test title","en", ""]
 grids = {}
 for slide in prs.slides:
         grids[slide_number] = Grid(prs, slide, gridSize)
@@ -302,7 +303,7 @@ for i in range(1, slide_number):
             grids[i].icons,
             grids[i].colors,
             i]
-with open(filename+'/ck12.json', 'w') as outfile:
+with open(filename+'/pageset.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True, indent=4)
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

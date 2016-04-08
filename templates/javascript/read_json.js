@@ -8,7 +8,7 @@ icons = {}
 labels = {}
 slide_number = {}
 var req = new XMLHttpRequest();
-req.open("GET", "ck12.json");
+req.open("GET", "pageset.json");
 req.overrideMimeType("application/json");
 req.send(null);
 req.onreadystatechange = function() {
