@@ -170,7 +170,7 @@ function add(i, j) {
                 key = "top_page";
                 break;
             default:
-		alert(key+" "+i+" "+j)
+		//alert(key+" "+i+" "+j)
                 key = (links[key][i][j]);
                 set_colour();
         }
