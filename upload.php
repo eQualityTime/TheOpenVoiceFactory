@@ -39,7 +39,7 @@ if ($uploadOk == 0) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=".basename($_FILES["fileToUpload"]["name"])."/ >here</a>";
 $command = '/home/joereddington/communikate.joereddington.com/onlineprocess/create.sh '.basename($_FILES["fileToUpload"]["name"]) ;
 $temp = shell_exec($command );
-echo $temp;
+echo nl2br($temp);
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
