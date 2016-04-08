@@ -285,6 +285,7 @@ prs = Presentation("uploads/"+filename)
 slide_number = 1
 for_json = {}
 for_json["Settings"] = [4,"test title","en", ""]
+grid_json = {}
 grids = {}
 for slide in prs.slides:
         grids[slide_number] = Grid(prs, slide, gridSize)
@@ -294,7 +295,7 @@ for slide in prs.slides:
 for i in range(1, slide_number):
 
         grids[i].update_links(grids)
-        for_json[i] = [
+        grid_json[i] = [
             make_title(
                 grids[i].tag),
             grids[i].labels,
@@ -303,6 +304,8 @@ for i in range(1, slide_number):
             grids[i].icons,
             grids[i].colors,
             i]
+
+for_json["Grid"]=grid_json
 with open(filename+'/pageset.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True, indent=4)
 

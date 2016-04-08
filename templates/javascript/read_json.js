@@ -1,6 +1,4 @@
 key = "top_page"
-grid_size_rows = 4
-grid_size_columns = 4
 utterances = {}
 links = {}
 colours = {}
@@ -14,14 +12,16 @@ req.send(null);
 req.onreadystatechange = function() {
     if (req.readyState == 4 && req.status == 200) {
         var obj = JSON.parse(req.responseText)
-        for (grid in obj) {
-            labels[obj[grid][0]] = obj[grid][1]
-            utterances[obj[grid][0]] = obj[grid][2]
-            links[obj[grid][0]] = obj[grid][3]
-            icons[obj[grid][0]] = obj[grid][4]
-            colours[obj[grid][0]] = obj[grid][5]
-            slide_number[obj[grid][0]] = obj[grid][6]
+        for (grid in obj['Grid']) {
+            labels[obj['Grid'][grid][0]] = obj['Grid'][grid][1]
+            utterances[obj['Grid'][grid][0]] = obj['Grid'][grid][2]
+            links[obj['Grid'][grid][0]] = obj['Grid'][grid][3]
+            icons[obj['Grid'][grid][0]] = obj['Grid'][grid][4]
+            colours[obj['Grid'][grid][0]] = obj['Grid'][grid][5]
+            slide_number[obj['Grid'][grid][0]] = obj['Grid'][grid][6]
         }
+grid_size_rows =obj['Settings'][0]
+grid_size_columns =obj['Settings'][0]
         //		for(key in slide_number){
         //			document.write("<br><br>Name is"+key);
         //				document.write("<br> is"+slide_number[key]);
