@@ -19,6 +19,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 import sys
 import linecache
 print_exceptions = False
+IMAGE_WARNING = False
 
 warningMissingLinks = True
 
@@ -199,6 +200,14 @@ def export_images(grid, slide):
                 except:
                         print "exception 23204234 triggered"
                         continue
+        if IMAGE_WARNING:
+                for col in range(grid.grid_size):
+                        for row in range(grid.grid_size):
+                                if (col, row) not in images:
+                                        if labels[col][row] is not "":
+                                                if grid.tag not in labels[
+                                                        col][row]:
+                                                        print "WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
 
         # Compose each icon out of all the images in the grid cell.
         for (x, y) in images:
@@ -226,7 +235,7 @@ def export_images(grid, slide):
 
                 # Add all the images together.
                 for shape in images[x, y]:
-                        # TODO: flipping.
+                                        # TODO: flipping.
                         part = Image.open(
                             io.BytesIO(
                                 shape.image.blob))
