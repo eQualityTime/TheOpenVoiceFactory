@@ -37,7 +37,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=".basename($_FILES["fileToUpload"]["name"])."/ >here</a>";
-$command = '/home/joereddington/communikate.joereddington.com/onlineprocess/create.sh '.basename($_FILES["fileToUpload"]["name"]) ;
+$command = dirname(__FILE__).'/create.sh '.basename($_FILES["fileToUpload"]["name"]) ;
 $temp = shell_exec($command );
 echo nl2br($temp);
     } else {
