@@ -29,6 +29,16 @@ grid_size_columns =obj['Settings'][0]
         set_colour()
     }
 }
+ function setup() {
+            my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2)) ;
+            my_height = 520 / grid_size_rows;
+            area = document.getElementById('messagewindow')
+            $(area).css('width', my_width);
+            $(area).css('left', (720 / grid_size_columns) +7 );
+            $(area).css('top', (520 / grid_size_columns) +14 );
+            $(area).css('height', my_height);
+            top_page()
+        }
 
 
 function set_colour() {

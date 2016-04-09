@@ -6,18 +6,6 @@
     <link rel="stylesheet" type="text/css" href="note.css">
     <script language="javascript" src="javascript/sha1.js"></script>
     <!--The next two lines are part of the code that adds the loading screen.  The other part is the div tag marked 'loader' -->
- <script>
-        function setup() {
-            my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2)) ;
-            my_height = 520 / grid_size_rows;
-            area = document.getElementById('messagewindow')
-            $(area).css('width', my_width);
-            $(area).css('left', (720 / grid_size_columns) +7 );
-            $(area).css('top', (520 / grid_size_columns) +20 );
-            $(area).css('height', my_height);
-            top_page()
-        }
-    </script>
    <script src="javascript/jquery.min.js"></script>
     <script type="text/javascript">
         $(window).load(function() {
