@@ -22,6 +22,20 @@
     <form name="myform">
         <textarea id="messagewindow" name="outputtext"></textarea>
     </form>
+<? 
+
+$json_file = file_get_contents('pageset.json');
+// convert the string to a json object
+$jfo = json_decode($json_file);
+// read the title value
+$table_size = $jfo->Settings[0];?>
+<?
+if ($table_size==5){
+echo    '<table border=0 class="five">';
+}else{
+echo    '<table border=0 class="four">';
+}
+?>
     <table border=0px>
         <tr>
             <td><img onclick="makeWav()" src="interface/speak.png" height=100></td>
@@ -34,18 +48,15 @@
 
     <!--START THE MAIN MAP -->
 
-<? 
-
-$json_file = file_get_contents('pageset.json');
-// convert the string to a json object
-$jfo = json_decode($json_file);
-// read the title value
-$table_size = $jfo->Settings[0];
+<?
 if ($table_size==5){
 echo    '<table id="mainGrid" border=1 height=520 width=720 class="five">';
 }else{
 echo    '<table id="mainGrid" border=1 height=520 width=720 class="four">';
 }
+?>
+
+<?
 for ($i=0;$i<$table_size;$i++){
 echo ' <tr>';
 	for ($j=0;$j<$table_size;$j++){
