@@ -23,13 +23,14 @@ function import_json() {
             }
             grid_size_rows = obj.Settings[0];
             grid_size_columns = obj.Settings[0];
+            setup();
             set_colour();
         }
     };
 }
+    import_json();
 
 function setup() {
-    import_json();
     my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
     my_height = 520 / grid_size_rows;
     area = document.getElementById('messagewindow');
@@ -73,13 +74,6 @@ function set_colour() {
     }
 }
 
-function pad(num) {
-    var s = "000" + num;
-    return s.substr(s.length - 3);
-} //from http://stackoverflow.com/a/2998822/170243
-//the utterances array contain the actual text that can be placed on the message window
-//the links array contains keywords that perform different functions,  the most obvious one is that if the links array contains the name of another page, then it will cause a jump to that page when activated.  Other options include things like 'clear' and 'delete word' 
-//Note that if the utterance and links are are *both* set, then the utterance will activate and *then* the link will activate.
 function voiceinit() {
     var i, j;
     var voice = new ActiveXObject("SAPI.SpVoice");
