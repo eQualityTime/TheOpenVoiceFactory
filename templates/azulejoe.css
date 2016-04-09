@@ -21,7 +21,13 @@ border-collapse: collapse;
 
 }
 
-img
+img.four
+{
+max-height: 70px;
+max-width: 100px;
+
+}
+img.five
 {
 max-height: 70px;
 max-width: 100px;

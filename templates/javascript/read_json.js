@@ -41,6 +41,10 @@ function setup() {
 }
 
 function set_colour() {
+img_class="five";
+if (grid_size_rows!=5){
+img_class="four";
+}
     x = 0; y = 0;
     for (x = 0; x < grid_size_rows; x++) {
         for (y = 0; y < grid_size_rows; y++) {
@@ -61,13 +65,13 @@ function set_colour() {
                     }
                 } else {
                     //link with NO label
-                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x] + "\" >")
+                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x] + "\" class=\""+img_class+"\">")
                 }
             } else {
                 if (labels[key][y][x] == "") {
-                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x] + "\" >")
+                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x] + "\" class=\""+img_class+"\" >")
                 } else {
-                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x] + "\" >")
+                    $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<b>" + labels[key][y][x] + "</b><br><IMG src=\"" + icons[key][y][x] + "\" class=\""+img_class+"\" >")
                 }
             }
         }
