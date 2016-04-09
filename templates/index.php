@@ -33,7 +33,6 @@
     <!--END THE FOUR CONTROLS AT THE TOP OF THE PAGE-->
 
     <!--START THE MAIN MAP -->
-    <table id="mainGrid" border=1 height=520 width=720>
 
 <? 
 
@@ -42,6 +41,11 @@ $json_file = file_get_contents('pageset.json');
 $jfo = json_decode($json_file);
 // read the title value
 $table_size = $jfo->Settings[0];
+if ($table_size==5){
+echo    '<table id="mainGrid" border=1 height=520 width=720 class="five">';
+}else{
+echo    '<table id="mainGrid" border=1 height=520 width=720 class="four">';
+}
 for ($i=0;$i<$table_size;$i++){
 echo ' <tr>';
 	for ($j=0;$j<$table_size;$j++){

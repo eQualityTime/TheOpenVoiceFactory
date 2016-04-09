@@ -1,8 +1,16 @@
-table td
+table.five td
 {
     padding:0px;
     width: 180px;
     height: 103px;
+    overflow: auto;
+}
+
+table.four td
+{
+    padding:0px;
+    width: 180px;
+    height: 133px;
     overflow: auto;
 }
 
