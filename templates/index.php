@@ -36,12 +36,11 @@ echo    '<table border=0 class="five">';
 echo    '<table border=0 class="four">';
 }
 ?>
-    <table border=0px>
         <tr>
-            <td><img onclick="makeWav()" src="interface/speak.png" height=100></td>
-            <td><img onclick="image()" src="interface/google.jpg" height=100></td>
-            <td><img onclick="tube()" src="interface/youtube.jpg" height=100></td>
-            <td><img onclick="tweet()" src="interface/twitter.png" height=100></td>
+            <td><img onclick="makeWav()" src="interface/speak.png" height=50></td>
+            <td><img onclick="image()" src="interface/google.jpg" height=50></td>
+            <td><img onclick="tube()" src="interface/youtube.jpg" height=50></td>
+            <td><img onclick="tweet()" src="interface/twitter.png" height=50></td>
         </tr>
     </table>
     <!--END THE FOUR CONTROLS AT THE TOP OF THE PAGE-->
