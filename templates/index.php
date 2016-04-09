@@ -85,7 +85,6 @@ echo '        </tr>' ;}?>
     </script>
     <div id="box"></div>
 
-    <script type="text/javascript" src="javascript/scanning.js"></script>
 
     <button onClick="toggleScanning()">Toggle Scanning</button>
 </body>
