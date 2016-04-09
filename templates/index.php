@@ -36,7 +36,12 @@
     <table id="mainGrid" border=1 height=520 width=720>
 
 <? 
-$table_size=5;
+
+$json_file = file_get_contents('pageset.json');
+// convert the string to a json object
+$jfo = json_decode($json_file);
+// read the title value
+$table_size = $jfo->Settings[0];
 for ($i=0;$i<$table_size;$i++){
 echo ' <tr>';
 	for ($j=0;$j<$table_size;$j++){
