@@ -37,16 +37,13 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=".basename($_FILES["fileToUpload"]["name"])."/ >here</a>";
-$command = dirname(__FILE__).'/create.sh '.basename($_FILES["fileToUpload"]["name"]) ;
+$command = dirname(__FILE__).'/create.sh '.basename($_FILES["fileToUpload"]["name"]." ". $_POST["size"]." ".$_POST["lang"]) ;
+echo $command;
 $temp = shell_exec($command );
 echo nl2br($temp);
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
 }
-$file = 'details.txt';//should include the name of file also the date
-$current .= $_POST["size"];
-// Write the contents back to the file
-file_put_contents($file, $current);
 ?>
 
