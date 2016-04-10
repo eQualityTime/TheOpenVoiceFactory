@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
 # Make the images export more effectively
 import sys
@@ -173,7 +174,7 @@ class Grid:
                 if "Yes" in self.labels[co][ro]:
                         return
                 for paragraph in shape.text_frame.paragraphs:
-                        text += "".join([run.text.encode('ascii', 'ignore')
+                        text += "".join([run.text.replace(u"’", u"'")
                                          for run in paragraph.runs])
                 if text != "":
                         # add the if shape_type is text box
