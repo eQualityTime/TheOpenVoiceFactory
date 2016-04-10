@@ -38,7 +38,6 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=".basename($_FILES["fileToUpload"]["name"])."/ >here</a>";
 $command = dirname(__FILE__).'/create.sh '.basename($_FILES["fileToUpload"]["name"]." ". $_POST["size"]." ".$_POST["lang"]) ;
-echo $command;
 $temp = shell_exec($command );
 echo nl2br($temp);
     } else {
