@@ -11,6 +11,7 @@ import io
 import os
 import math
 import string
+import unicodedata
 from PIL import Image
 from sys import argv
 from pptx.enum.shapes import MSO_SHAPE
@@ -47,8 +48,6 @@ gridSize = 5
 if (len(sys.argv) > 2):
         gridSize = int(sys.argv[2])
 
-alpha = string.ascii_lowercase + string.ascii_uppercase + string.digits + '_'
-
 
 def resizeImage(image, scaleFactor):
 
@@ -58,10 +57,22 @@ def resizeImage(image, scaleFactor):
         return image.resize(newSize, Image.ANTIALIAS)
 
 
+
+
 def remove_punctuation(s):
-        """removes puncuation,
-        provided by http://codereview.stackexchange.com/a/101806/4759"""
-        return ''.join(c for c in s if c in alpha)
+    """
+    >>> strip_punctuation(u'something')
+    u'something'
+
+    >>> strip_punctuation(u'something.,:else really')
+    u'somethingelse really'
+    """
+    text=s
+    if type(s)!=type(u"hope"):
+        text = unicode(s, "utf-8")
+    punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
+    return ''.join(x for x in text
+                   if unicodedata.category(x) not in punctutation_cats)
 
 
 def make_title(label):
@@ -299,7 +310,7 @@ def create_icon_name(x, y, labels, links):
 prs = Presentation("uploads/"+filename)
 slide_number = 1
 for_json = {}
-for_json["Settings"] = [gridSize,"test title","en", ""]
+for_json["Settings"] = [gridSize, "test title", "en", ""]
 grid_json = {}
 grids = {}
 for slide in prs.slides:
@@ -320,7 +331,7 @@ for i in range(1, slide_number):
             grids[i].colors,
             i]
 
-for_json["Grid"]=grid_json
+for_json["Grid"] = grid_json
 with open(filename+'/pageset.json', 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True, indent=4)
 
