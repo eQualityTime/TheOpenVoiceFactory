@@ -1,5 +1,5 @@
 function import_json() {
-    key = "top_page";
+    key = "toppage";
     utterances = {};
     links = {};
     colours = {};
