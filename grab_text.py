@@ -264,7 +264,6 @@ def export_images(grid, slide):
                         part = part.crop(box)
                         partScale = (shape.width / part.size[0])
                         # part.size because it might have been cropped
-
                         part = resizeImage(part, partScale / scale)
                         try:
                                 composite.paste(
@@ -293,11 +292,11 @@ def export_images(grid, slide):
 
 def create_icon_name(x, y, labels, links):
 
-        name = remove_punctuation(labels[x][y]) + ".png"
-        if name == ".png":
-                name = remove_punctuation(links[x][y])+".png"
-                if name == ".png":
-                        name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
+    #    name = remove_punctuation(labels[x][y]) + ".png"
+    #    if name == ".png":
+    #            name = remove_punctuation(links[x][y])+".png"
+    #            if name == ".png":
+	name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
         return name
 
 ########
