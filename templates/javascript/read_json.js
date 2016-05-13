@@ -61,7 +61,7 @@ img_class="four";
                         $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("")
                     } else {
                         //NO label or link just an image
-                        $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<br><IMG src=\"" + icons[key][y][x] + "\" >")
+                        $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')').html("<br><IMG src=\"" + icons[key][y][x]+ "\" class=\""+img_class+"\">")
                     }
                 } else {
                     //link with NO label
