@@ -93,7 +93,8 @@ class Grid:
                                         # print "which is", grids[int(number_string)].tag
                                         # Then work out the relevant tag
                                         self.links[row][col] = make_title(
-                                            grids[int(number_string)].tag)
+                                            grids[int(number_string)-1].tag)
+                                        #Remember that slides are numbered from 1 but grids are numbered from 0
 
         def __init__(self, pres, slide, gridSize):
                 self.grid_size = gridSize
@@ -181,10 +182,11 @@ class Grid:
                         self.labels[co][ro] = text.strip()
 
 
-def export_images(grid, slide):
+def export_images(grids, slide_number, slide):
         """     Second pass through shapes list finds images and saves them.
         We have to do this separately so it's guaranteed we already know what to
         name the images!"""
+        grid=grids[slide_number]
         images = {}
         labels = grid.labels
         for shape in slide.shapes:
@@ -271,16 +273,38 @@ def export_images(grid, slide):
 
                 # Save!
                 grid.icons[x][
-                        y] = "icons/" + create_icon_name(x, y, labels, grid.links)
-                name = create_icon_name(x, y, labels, grid.links)
+                        y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
+                name = create_icon_name(x, y, labels, grid.links, slide_number)
                 # print name
                 folder = filename+"/icons/"  # + str(slide_number)
                 if not os.path.exists(folder):
                         os.makedirs(folder)
                 composite.save(folder + "" + name)
 
+def write_to_JSON(grids):
+#Start the JSON output.
+    grid_json = {}
+    print len(grids)
+    for i in grids:
+            grid_json[i] = [
+                make_title(
+                    grids[i].tag),
+                grids[i].labels,
+                grids[i].utterances,
+                grids[i].links,
+                grids[i].icons,
+                grids[i].colors,
+                i]
 
-def create_icon_name(x, y, labels, links):
+    for_json = {}
+    for_json["Settings"] = [gridSize, "test title", "en", ""]
+    for_json["Grid"] = grid_json
+    with open(filename+'/pageset.json', 'w') as outfile:
+            json.dump(for_json, outfile, sort_keys=True, indent=4)
+
+
+
+def create_icon_name(x, y, labels, links,slide_number):
 
         name = remove_punctuation(labels[x][y]) + ".png"
         if name == ".png":
@@ -289,6 +313,23 @@ def create_icon_name(x, y, labels, links):
                         name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
         return name
 
+def extract_and_label_images(prs,grids):
+#Deal with the images
+    image_slight_number=0
+    for slide in prs.slides:
+            export_images(grids,image_slight_number, slide)
+            image_slight_number+=1
+    return grids
+
+def extract_grid(prs):
+    slide_number =0
+    grids = {}
+    for slide in prs.slides:
+            grids[slide_number] = Grid(prs, slide, gridSize)
+            slide_number += 1
+    for i in grids:
+        grids[i].update_links(grids)
+    return grids
 ########
 
 
@@ -296,8 +337,9 @@ def create_icon_name(x, y, labels, links):
 
 ########
 if __name__ == "__main__":
+#There are three things happening here. Parsing, grabbing the images, and writing the javascript from the grids
 
-
+#First gather inputs
     if (len(sys.argv) < 2):
             print("\nUsage: ./grab_text.py <inputPptxFile> <gridSize>\n")
             print("inputPptxFile: The powerpoint pageset you want to process.")
@@ -309,32 +351,10 @@ if __name__ == "__main__":
     if (len(sys.argv) > 2):
             gridSize = int(sys.argv[2])
 
+#Then parse the file
     prs = Presentation("uploads/"+filename)
-    slide_number = 1
-    for_json = {}
-    for_json["Settings"] = [gridSize, "test title", "en", ""]
-    grid_json = {}
-    grids = {}
-    for slide in prs.slides:
-            grids[slide_number] = Grid(prs, slide, gridSize)
-            export_images(grids[slide_number], slide)
-            slide_number += 1
-
-    for i in range(1, slide_number):
-
-            grids[i].update_links(grids)
-            grid_json[i] = [
-                make_title(
-                    grids[i].tag),
-                grids[i].labels,
-                grids[i].utterances,
-                grids[i].links,
-                grids[i].icons,
-                grids[i].colors,
-                i]
-
-    for_json["Grid"] = grid_json
-    with open(filename+'/pageset.json', 'w') as outfile:
-            json.dump(for_json, outfile, sort_keys=True, indent=4)
+    grids=extract_grid(prs)
+    grids=extract_and_label_images(prs,grids)
+    write_to_JSON(grids)
 
     # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
