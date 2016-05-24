@@ -162,7 +162,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 2:
-                                                                print self.tag + "Slide {} link here: [{}] [{}] {} ".format(slide_number, co, ro, self.labels[co][ro]) + self.links[co][ro]
+                                                                print self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro]
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
