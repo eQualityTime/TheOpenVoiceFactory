@@ -181,7 +181,7 @@ class Grid:
                         self.labels[co][ro] = text.strip()
 
 
-def export_images(grids, slide_number, slide):
+def export_images(grids, slide_number, slide, filename, SAVE=True):
         """     Second pass through shapes list finds images and saves them.
         We have to do this separately so it's guaranteed we already know what to
         name the images!"""
@@ -275,13 +275,14 @@ def export_images(grids, slide_number, slide):
                         y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
                 name = create_icon_name(x, y, labels, grid.links, slide_number)
                 # print name
-                folder = filename+"/icons/"  # + str(slide_number)
-                if not os.path.exists(folder):
-                        os.makedirs(folder)
-                composite.save(folder + "" + name)
+                if SAVE:
+                    folder = filename+"/icons/"  # + str(slide_number)
+                    if not os.path.exists(folder):
+                            os.makedirs(folder)
+                    composite.save(folder + "" + name)
 
 
-def write_to_JSON(grids):
+def create_json_object(grids):
         # Start the JSON output.
         grid_json = {}
         for i in range(len(grids)):
@@ -298,7 +299,11 @@ def write_to_JSON(grids):
         for_json = {}
         for_json["Settings"] = [gridSize, "test title", "en", ""]
         for_json["Grid"] = grid_json
-        with open(filename+'/pageset.json', 'w') as outfile:
+        return for_json
+
+def write_to_JSON(grids,filename):
+        for_json=create_json_object(grids)
+        with open(filename, 'w') as outfile:
                 json.dump(for_json, outfile, sort_keys=True, indent=4)
 
 
@@ -312,11 +317,11 @@ def create_icon_name(x, y, labels, links, slide_number):
         return name
 
 
-def extract_and_label_images(prs, grids):
+def extract_and_label_images(prs, grids,filename, SAVE=True):
         # Deal with the images
         image_slight_number = 0
         for slide in prs.slides:
-                export_images(grids, image_slight_number, slide)
+                export_images(grids, image_slight_number, slide, filename, SAVE)
                 image_slight_number += 1
         return grids
 
@@ -344,7 +349,7 @@ if __name__ == "__main__":
 
         prs = Presentation("uploads/"+filename)
         grids = extract_grid(prs)
-        grids = extract_and_label_images(prs, grids)
-        write_to_JSON(grids)
+        grids = extract_and_label_images(prs, grids,filename)
+        write_to_JSON(grids,filename+'/pageset.json')
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
