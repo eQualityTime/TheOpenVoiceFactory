@@ -15,11 +15,11 @@ def test_ck20v2():
             "testinputs/CK20V2.json", 5)
 
 
-#def test_ck20v2_bg():
-#        compare_json_files(
-#            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2-BG.pptx",
-#            "testinputs/CK20V2-BG.json", 5)
-#
+def test_ck20v2_bg():
+        compare_json_files(
+            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2-BG.pptx",
+            "testinputs/CK20V2-BG.json", 5)
+
 
 def compare_json_files(pres_loc, target_loc, gridSize):
         prs = Presentation(pres_loc)
