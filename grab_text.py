@@ -37,17 +37,6 @@ def PrintException():
                 line = linecache.getline(filename, lineno, f.f_globals)
                 print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
 
-if (len(sys.argv) < 2):
-        print("\nUsage: ./grab_text.py <inputPptxFile> <gridSize>\n")
-        print("inputPptxFile: The powerpoint pageset you want to process.")
-        print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
-        sys.exit(1)
-
-filename = sys.argv[1]
-gridSize = 5
-if (len(sys.argv) > 2):
-        gridSize = int(sys.argv[2])
-
 
 def resizeImage(image, scaleFactor):
 
@@ -57,22 +46,20 @@ def resizeImage(image, scaleFactor):
         return image.resize(newSize, Image.ANTIALIAS)
 
 
-
-
 def remove_punctuation(s):
-    """
-    >>> strip_punctuation(u'something')
-    u'something'
+        """
+        >>> strip_punctuation(u'something')
+        u'something'
 
-    >>> strip_punctuation(u'something.,:else really')
-    u'somethingelse really'
-    """
-    text=s
-    if type(s)!=type(u"hope"):
-        text = unicode(s, "utf-8")
-    punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
-    return ''.join(x for x in text
-                   if unicodedata.category(x) not in punctutation_cats)
+        >>> strip_punctuation(u'something.,:else really')
+        u'somethingelse really'
+        """
+        text = s
+        if not isinstance(s, type(u"hope")):
+                text = unicode(s, "utf-8")
+        punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
+        return ''.join(x for x in text
+                       if unicodedata.category(x) not in punctutation_cats)
 
 
 def make_title(label):
@@ -104,7 +91,9 @@ class Grid:
                                         # print "which is", grids[int(number_string)].tag
                                         # Then work out the relevant tag
                                         self.links[row][col] = make_title(
-                                            grids[int(number_string)].tag)
+                                            grids[int(number_string)-1].tag)
+                                        # Remember that slides are numbered from
+                                        # 1 but grids are numbered from 0
 
         def __init__(self, pres, slide, gridSize):
                 self.grid_size = gridSize
@@ -173,7 +162,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 2:
-                                                                print self.tag + "Slide {} link here: [{}] [{}] {} ".format(slide_number, co, ro, self.labels[co][ro]) + self.links[co][ro]
+                                                                print self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro]
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
@@ -192,10 +181,11 @@ class Grid:
                         self.labels[co][ro] = text.strip()
 
 
-def export_images(grid, slide):
+def export_images(grids, slide_number, slide, filename, SAVE=True):
         """     Second pass through shapes list finds images and saves them.
         We have to do this separately so it's guaranteed we already know what to
         name the images!"""
+        grid = grids[slide_number]
         images = {}
         labels = grid.labels
         for shape in slide.shapes:
@@ -281,16 +271,42 @@ def export_images(grid, slide):
 
                 # Save!
                 grid.icons[x][
-                        y] = "icons/" + create_icon_name(x, y, labels, grid.links)
-                name = create_icon_name(x, y, labels, grid.links)
+                        y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
+                name = create_icon_name(x, y, labels, grid.links, slide_number)
                 # print name
-                folder = filename+"/icons/"  # + str(slide_number)
-                if not os.path.exists(folder):
-                        os.makedirs(folder)
-                composite.save(folder + "" + name)
+                if SAVE:
+                    folder = filename+"/icons/"  # + str(slide_number)
+                    if not os.path.exists(folder):
+                            os.makedirs(folder)
+                    composite.save(folder + "" + name)
 
 
-def create_icon_name(x, y, labels, links):
+def create_json_object(grids):
+        # Start the JSON output.
+        grid_json = {}
+        for i in range(len(grids)):
+                grid_json[i] = [
+                    make_title(
+                        grids[i].tag),
+                    grids[i].labels,
+                    grids[i].utterances,
+                    grids[i].links,
+                    grids[i].icons,
+                    grids[i].colors,
+                    i]
+
+        for_json = {}
+        for_json["Settings"] = [gridSize, "test title", "en", ""]
+        for_json["Grid"] = grid_json
+        return for_json
+
+def write_to_JSON(grids,filename):
+        for_json=create_json_object(grids)
+        with open(filename, 'w') as outfile:
+                json.dump(for_json, outfile, sort_keys=True, indent=4)
+
+
+def create_icon_name(x, y, labels, links, slide_number):
 
     #    name = remove_punctuation(labels[x][y]) + ".png"
     #    if name == ".png":
@@ -299,39 +315,40 @@ def create_icon_name(x, y, labels, links):
 	name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
         return name
 
+
+def extract_and_label_images(prs, grids,filename, SAVE=True):
+        # Deal with the images
+        image_slight_number = 0
+        for slide in prs.slides:
+                export_images(grids, image_slight_number, slide, filename, SAVE)
+                image_slight_number += 1
+        return grids
+
+
+def extract_grid(prs):
+        grids = []
+        for slide in prs.slides:
+                grids.append(Grid(prs, slide, gridSize))
+        for tok in grids:
+                tok.update_links(grids)
+        return grids
 ########
 
+if __name__ == "__main__":
+        if (len(sys.argv) < 2):
+                print("\nUsage: ./grab_text.py <inputPptxFile> <gridSize>\n")
+                print("inputPptxFile: The powerpoint pageset you want to process.")
+                print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
+                sys.exit(1)
 
-# target = open(filename, 'w')
+        filename = sys.argv[1]
+        gridSize = 5
+        if (len(sys.argv) > 2):
+                gridSize = int(sys.argv[2])
 
-########
+        prs = Presentation("uploads/"+filename)
+        grids = extract_grid(prs)
+        grids = extract_and_label_images(prs, grids,filename)
+        write_to_JSON(grids,filename+'/pageset.json')
 
-prs = Presentation("uploads/"+filename)
-slide_number = 1
-for_json = {}
-for_json["Settings"] = [gridSize, "test title", "en", ""]
-grid_json = {}
-grids = {}
-for slide in prs.slides:
-        grids[slide_number] = Grid(prs, slide, gridSize)
-        export_images(grids[slide_number], slide)
-        slide_number += 1
-
-for i in range(1, slide_number):
-
-        grids[i].update_links(grids)
-        grid_json[i] = [
-            make_title(
-                grids[i].tag),
-            grids[i].labels,
-            grids[i].utterances,
-            grids[i].links,
-            grids[i].icons,
-            grids[i].colors,
-            i]
-
-for_json["Grid"] = grid_json
-with open(filename+'/pageset.json', 'w') as outfile:
-        json.dump(for_json, outfile, sort_keys=True, indent=4)
-
-# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
+        # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
