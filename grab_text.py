@@ -342,13 +342,14 @@ if __name__ == "__main__":
                 sys.exit(1)
 
         filename = sys.argv[1]
+        dest = sys.argv[2]
         gridSize = 5
         if (len(sys.argv) > 2):
-                gridSize = int(sys.argv[2])
+                gridSize = int(sys.argv[3])
 
-        prs = Presentation("uploads/"+filename)
+        prs = Presentation(filename)
         grids = extract_grid(prs)
-        grids = extract_and_label_images(prs, grids,filename)
-        write_to_JSON(grids,filename+'/pageset.json')
+        grids = extract_and_label_images(prs, grids,dest)
+        write_to_JSON(grids,dest+'/pageset.json')
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
