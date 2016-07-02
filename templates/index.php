@@ -29,13 +29,7 @@ $json_file = file_get_contents('pageset.json');
 $jfo = json_decode($json_file);
 // read the title value
 $table_size = $jfo->Settings[0];?>
-<?
-if ($table_size==5){
-echo    '<table border=0 class="five">';
-}else{
-echo    '<table border=0 class="four">';
-}
-?>
+<table border=0 class="five">
         <tr>
             <td><img onclick="makeWav()" src="interface/speak.png" height=50></td>
             <td><img onclick="image()" src="interface/google.jpg" height=50></td>
