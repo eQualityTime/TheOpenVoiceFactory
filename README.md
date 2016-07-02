@@ -3,6 +3,7 @@
 
 From: http://joereddington.com/4855/2015/02/18/azulejoe-communikate-behind-the-scenes./ 
 
+
 One of the parts of CommuniKate 20 that turned out to be very popular is the [live demo](http://joereddington.com/azulejoe/communikatedemo/en/) (you can view a video of it in action [here](http://joereddington.com/4693/2015/01/19/using-azulejoe-and-communikate-20-online/ "Using AzuleJoe and CommuniKate 20 online")). It's time to talk a little bit about that live demo and how it works. This is one of those posts that's only focused on the technical reader. It will have very little value to the non-coders among you I'm afraid. The live demo software is called AzuleJoe, it's entirely open-source and, like almost all the code presented on this site, it's [available to download from github](https://github.com/joereddington/azulejoe). When you view the live demo, what you are actually looking at is the CommuniKate 20 pageset running on the AzuleJoe software. The software that became AzuleJoe dates back to 2009 when I built a system for my little brother. When we started to prepare CommuniKate 20 for public release in 2014, the software was significantly overhauled into something that developed it’s own identity
 ### The name ‘AzuleJoe’…
 
