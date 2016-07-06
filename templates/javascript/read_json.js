@@ -38,6 +38,20 @@ function setup() {
     $(area).css('left', (720 / grid_size_columns) + 7);
     $(area).css('top', 98) ;
     $(area).css('height', my_height);
+    var table = document.getElementById("mainGrid");
+    table.className="four";
+    if (grid_size_rows==5){
+	    table.className="five";
+    }	
+    for(y=0;y<grid_size_rows;y++){
+    var row = table.insertRow(0);
+    for (x=0;x<grid_size_rows;x++){
+	  cell=  row.insertCell(0);
+	cell.style.textAlign = "center";
+	cell.style.verticalAlign = "center";
+	
+    }
+}
 }
 
 function set_colour() {
