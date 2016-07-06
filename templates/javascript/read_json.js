@@ -133,110 +133,135 @@ function add(i, j) {
             document.myform.outputtext.value += " " + labels[key][i][j];
         }
     }
-    if (links[key][i][j] != "") {
-        switch (links[key][i][j]) {
-            //There are two special cases for links - clearing the message window, deleting the last word from the message window. Further special behaviours (volume change and the like) could be added here.
+    if (links[key][i][j].includes("special::")){
+	    processSpecial(links[key][i][j]);
+
+    }else if (links[key][i][j] != "") {
+	    switch (links[key][i][j]) {
+		    //There are two special cases for links - clearing the message window, deleting the last word from the message window. Further special behaviours (volume change and the like) could be added here.
+		    case "Backspace":
+			    document.myform.outputtext.value = document.myform.outputtext.value.substring(0, document.myform.outputtext.value.length - 1);
+			    break;
+		    case "speak":
+			    makeWav();
+			    break;
+		    case "google":
+			    image();
+			    break;
+		    case "youtube":
+			    tube();
+			    break;
+		    case "twitter":
+			    tweet();
+			    break;
+		    case "special::unfinnished":
+			    alert("This feature is unimplemented on the web demo");
+			    break;
+		    case "1":
+			    key = "top_page";
+			    break;
+		    default:
+			    //alert(key+" "+i+" "+j)
+			    key = (links[key][i][j]);
+			    set_colour();
+        }
+    }
+}
+
+function processSpecial(command){
+var commandArray=command.split(';');//there's going to be a problem with inserting a semicolon...
+for (i=0;i<commandArray.length;i++){
+	switch (commandArray[i]){
         case "special::clear":
             document.myform.reset();
             break;
         case "special::deleteword":
-            (function(){var lastIndex = document.myform.outputtext.value.lastIndexOf(" ");
-            document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);})();
-            break;
-        case "Backspace":
-            document.myform.outputtext.value = document.myform.outputtext.value.substring(0, document.myform.outputtext.value.length - 1);
-            break;
-        case "speak":
-            makeWav();
-            break;
-        case "google":
-            image();
-            break;
-        case "youtube":
-            tube();
-            break;
-        case "twitter":
-            tweet();
-            break;
-        case "special::unfinnished":
-            alert("This feature is unimplemented on the web demo");
-            break;
-        case "1":
-            key = "top_page";
-            break;
-        default:
-            //alert(key+" "+i+" "+j)
-            key = (links[key][i][j]);
-            set_colour();
-        }
-    }
+	    (function(){var lastIndex = document.myform.outputtext.value.lastIndexOf(" ");
+	     document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);})();
+	default:
+	    parts=commandArray[i].split("%22")
+		    if (parts[0].includes("place"))
+		    {
+			    document.myform.outputtext.value += parts[1].split("%20").join(" ")
+		    }else if (parts[0].includes("open")){
+			    key=parts[1]
+			    set_colour();
+
+		    }
+
+	    break;
+	}
+	}
+
+
 }
+
 //calls the perl script that creates the *.wav file from the text given. This part requires an internet connection unless you can retarget to a local system (on a mac, for example, one can make a call to the command line utility 'say').
 function makeWav() {
-    $.get("getsound.pl?text=" + document.myform.outputtext.value + "&filename=" + SHA1(document.myform.outputtext.value));
-    setTimeout(callback, 500);
-    _gaq.push(["_trackEvent", "azulejoe", "speak", "makeWav", 5, true]);
-    return false;
+	$.get("getsound.pl?text=" + document.myform.outputtext.value + "&filename=" + SHA1(document.myform.outputtext.value));
+	setTimeout(callback, 500);
+	_gaq.push(["_trackEvent", "azulejoe", "speak", "makeWav", 5, true]);
+	return false;
 }
 //used within the above function - callback plays the wave that was created in makeWav() but only when it has finnished loading.
 function callback() {
-    utter = document.myform.outputtext.value;
-    //the cb peramater is to force a reload, see http://stackoverflow.com/a/25823431/170243
-    var url = SHA1(document.myform.outputtext.value) + ".wav?cb=" + new Date().getTime();
-    var audio = new Audio(url);
-    audio.load();
-    audio.play();
+	utter = document.myform.outputtext.value;
+	//the cb peramater is to force a reload, see http://stackoverflow.com/a/25823431/170243
+	var url = SHA1(document.myform.outputtext.value) + ".wav?cb=" + new Date().getTime();
+	var audio = new Audio(url);
+	audio.load();
+	audio.play();
 }
 
 var azulejoe_scanning = false;
 
 function trigger_on_scan() {
-    if (azulejoe_scanning == true) {
-        if (y == 0) {
-            if (x >= Math.floor(grid_size_columns / 4)) {
-                if (x < Math.ceil(grid_size_columns * 0.75)) { //testing if we are in the message window
-                    makeWav();
-                    return;
-                }
-            }
-        }
-    }
-    add(x, y);
+	if (azulejoe_scanning == true) {
+		if (y == 0) {
+			if (x >= Math.floor(grid_size_columns / 4)) {
+				if (x < Math.ceil(grid_size_columns * 0.75)) { //testing if we are in the message window
+					makeWav();
+					return;
+				}
+			}
+		}
+	}
+	add(x, y);
 }
 document.body.onkeydown = function (e) {
-    trigger_on_scan()
+	trigger_on_scan()
 };
 $('#mainGrid').click(function (e) {
-    if (azulejoe_scanning == true) {
-        trigger_on_scan();
-    } else {
-        rows = grid_size_rows;
-        colums = grid_size_columns;
-        offset_t = $(this).offset().top - $(window).scrollTop();
-        offset_l = $(this).offset().left - $(window).scrollLeft();
-        //alert(offset_t+" "+ $(this).offset().top+" "+$(window).scrollTop())
-        //percentage_accross=(Math.round((e.clientX - offset_l)) / this.width)
-        distance_down_in_table = e.clientY - offset_t
-        percentage_down = (Math.round((e.clientY - offset_t)) / 540)
-            //alert(offset_t+" "+e.clientY+" "+" "+distance_down_in_table+" "+percentage_down)
-        var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
-        var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
-        if (our_top < grid_size_columns) {
-            if (left < grid_size_columns) {
-                add(left, our_top)
-            }
-        }
-    }
+		if (azulejoe_scanning == true) {
+		trigger_on_scan();
+		} else {
+		rows = grid_size_rows;
+		colums = grid_size_columns;
+		offset_t = $(this).offset().top - $(window).scrollTop();
+		offset_l = $(this).offset().left - $(window).scrollLeft();
+		//alert(offset_t+" "+ $(this).offset().top+" "+$(window).scrollTop())
+		//percentage_accross=(Math.round((e.clientX - offset_l)) / this.width)
+		distance_down_in_table = e.clientY - offset_t
+		percentage_down = (Math.round((e.clientY - offset_t)) / 540)
+		//alert(offset_t+" "+e.clientY+" "+" "+distance_down_in_table+" "+percentage_down)
+		var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
+		var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
+		if (our_top < grid_size_columns) {
+		if (left < grid_size_columns) {
+		add(left, our_top)
+		}
+		}
+		}
 });
 //credit http://stackoverflow.com/a/14045047/170243
 function toggleScanning() {
-    if (azulejoe_scanning == true) {
-        azulejoe_scanning = false;
-        stop_scanning();
-    } else {
-        azulejoe_scanning = true
-        start_scanning();
-    }
+	if (azulejoe_scanning == true) {
+		azulejoe_scanning = false;
+		stop_scanning();
+	} else {
+		azulejoe_scanning = true
+			start_scanning();
+	}
 }
 main = document.getElementById("mainGrid");
 var offset_t = $(main).offset().top //- $(window).scrollTop();
@@ -244,13 +269,13 @@ var offset_l = $(main).offset().left //- $(window).scrollLeft();
 var interval_access_var = 0
 
 function start_scanning() {
-    if (azulejoe_scanning == true) {
-        hope = document.getElementById("box");
-        $(hope).css('position', "absolute");
-        $(hope).css('width', 720 / grid_size_rows);
-        $(hope).css('height', 520 / grid_size_columns);
-        $(hope).css('top', offset_t + 105 * y);
-        $(hope).css('left', offset_l + 140 * x);
+	if (azulejoe_scanning == true) {
+		hope = document.getElementById("box");
+		$(hope).css('position', "absolute");
+		$(hope).css('width', 720 / grid_size_rows);
+		$(hope).css('height', 520 / grid_size_columns);
+		$(hope).css('top', offset_t + 105 * y);
+		$(hope).css('left', offset_l + 140 * x);
         //$(hope).css('top', offset_t);
         //$(hope).css('left', offset_l);
         $(hope).css('border', "4px solid #ffbe00");
