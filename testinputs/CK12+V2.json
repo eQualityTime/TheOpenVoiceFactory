@@ -2187,7 +2187,7 @@
                 ], 
                 [
                     "", 
-                    "text::%22I%20have%20a%20pain%20in%20my%22;link::%22body%20parts%22", 
+                    "special::place(%22I%20have%20a%20pain%20in%20my%22);open(%22bodyparts%22)", 
                     "", 
                     ""
                 ], 

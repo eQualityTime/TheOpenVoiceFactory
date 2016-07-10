@@ -3345,7 +3345,7 @@
                     "", 
                     "", 
                     "", 
-                    "special:place(%22smoothie);special::open(%22flavour%22)", 
+                    "special:place(%22smoothie%22);special::open(%22flavour%22)", 
                     ""
                 ], 
                 [
@@ -9524,7 +9524,7 @@
                 ], 
                 [
                     "", 
-                    "", 
+                    "idontfeelwell", 
                     "", 
                     "", 
                     ""
@@ -9779,7 +9779,7 @@
                 ], 
                 [
                     "", 
-                    "special::say=%22I%20have%20a%20pain%20in%20my%22;open=%22bodyparts%22", 
+                    "special::place(%22I%20have%20a%20pain%20in%20my%22);open(%22bodyparts%22)", 
                     "", 
                     "", 
                     ""
@@ -10773,7 +10773,7 @@
                     "Top Page", 
                     "", 
                     "", 
-                    "Clear"
+                    ""
                 ], 
                 [
                     "spelling", 
@@ -10784,7 +10784,7 @@
                 ], 
                 [
                     "", 
-                    "C", 
+                    "", 
                     "", 
                     "", 
                     "Space"
@@ -10801,7 +10801,7 @@
                     "", 
                     "", 
                     "", 
-                    "C"
+                    ""
                 ]
             ], 
             [
@@ -10847,35 +10847,35 @@
                     "toppage", 
                     "", 
                     "nz", 
+                    "special::clear"
+                ], 
+                [
+                    "", 
+                    "special::place(%22a%22)", 
+                    "special::place(%22e%22)", 
+                    "special::place(%22i%22)", 
+                    "special::place(%22m%22)"
+                ], 
+                [
+                    "", 
+                    "special::place(%22b%22)", 
+                    "special::place(%22f%22)", 
+                    "special::place(%22j%22)", 
+                    "special::place(%22%20%22)"
+                ], 
+                [
+                    "", 
+                    "special::place(%22c%22)", 
+                    "special::place(%22g%22)", 
+                    "special::place(%22k%22)", 
                     ""
                 ], 
                 [
                     "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
+                    "special::place(%22d%22)", 
+                    "special::place(%22h%22)", 
+                    "special::place(%22l%22)", 
+                    "special::place(%22?%22)"
                 ]
             ], 
             [
@@ -11042,7 +11042,7 @@
                     "Top Page", 
                     "", 
                     "", 
-                    "Clear"
+                    ""
                 ], 
                 [
                     "N-z", 
@@ -11053,7 +11053,7 @@
                 ], 
                 [
                     "", 
-                    "C", 
+                    "", 
                     "", 
                     "", 
                     "Space"
@@ -11070,7 +11070,7 @@
                     "", 
                     "", 
                     "", 
-                    "C"
+                    ""
                 ]
             ], 
             [
@@ -11116,35 +11116,35 @@
                     "toppage", 
                     "", 
                     "spelling", 
+                    "special::clear"
+                ], 
+                [
+                    "", 
+                    "special::place(%22n%22)", 
+                    "special::place(%22r%22)", 
+                    "special::place(%22v%22)", 
+                    "special::place(%22z%22)"
+                ], 
+                [
+                    "", 
+                    "special::place(%22o%22)", 
+                    "special::place(%22s%22)", 
+                    "special::place(%22w%22)", 
+                    "special::place(%22%20%22)"
+                ], 
+                [
+                    "", 
+                    "special::place(%22p%22)", 
+                    "special::place(%22t%22)", 
+                    "special::place(%22x%22)", 
                     ""
                 ], 
                 [
                     "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
+                    "special::place(%22q%22)", 
+                    "special::place(%22u%22)", 
+                    "special::place(%22y%22)", 
+                    "special::place(%22!%22)"
                 ]
             ], 
             [
@@ -11310,7 +11310,7 @@
                     "Yes", 
                     "Top Page", 
                     "", 
-                    "A-M", 
+                    "", 
                     ""
                 ], 
                 [
@@ -11383,35 +11383,35 @@
                 [
                     "", 
                     "toppage", 
-                    "", 
-                    "", 
+                    "special::place(%224%22)", 
+                    "special::place(%229%22)", 
                     ""
                 ], 
                 [
                     "", 
                     "", 
+                    "special::place(%225%22)", 
+                    "special::place(%2210%22)", 
+                    ""
+                ], 
+                [
                     "", 
+                    "special::place(%221%22)", 
+                    "special::place(%226%22)", 
+                    "special::place(%220%22)", 
+                    ""
+                ], 
+                [
+                    "", 
+                    "special::place(%222%22)", 
+                    "special::place(%227%22)", 
                     "", 
                     ""
                 ], 
                 [
                     "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
-                    "", 
-                    ""
-                ], 
-                [
-                    "", 
-                    "", 
-                    "", 
+                    "special::place(%223%22)", 
+                    "special::place(%228%22)", 
                     "", 
                     "special::unfinnished"
                 ]
