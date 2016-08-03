@@ -138,9 +138,11 @@ class Grid:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
                                         # shoudl there be a return here?
-                        (co, ro) = self.get_col_row(shape.top, shape.left)
+                        (co, ro) = self.get_col_row(shape.top+shape.height/2, shape.left+shape.width/2)
+#                        print "top  : {}, left  : {}".format(shape.top,shape.left)
+#                        print "width: {}, height: {}".format(shape.width,shape.height)
                         if ((co >= gridSize) or (ro >= gridSize)):
-                                print "Warning, shape outside of page area on page:{}".format(slide_number)
+                                print "Warning, shape outside of page area on page:{}".format(self.tag)
                                 return
                         # Now - let's find out if there is a link...
                         click_action = shape.click_action
@@ -242,6 +244,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                         part = Image.open(
                             io.BytesIO(
                                 shape.image.blob))
+                        part.load()
                         width = part.size[0]
                         height = part.size[1]
                         left = shape.crop_left*width
@@ -256,14 +259,14 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                         partScale = (shape.width / part.size[0])
                         # part.size because it might have been cropped
                         part = resizeImage(part, partScale / scale)
-                        try:
-                                composite.paste(
-                                    part,
-                                    ((shape.left - l)/scale,
-                                     (shape.top - t)/scale),
-                                    part)  # This masks out transparent pixels
-                        except ValueError:
-                                print "Error reading image for {} {}".format(x,y)
+#                        try:
+                        composite.paste(
+                            part,
+                            ((shape.left - l)/scale,
+                             (shape.top - t)/scale))
+#                            part.split()[0])  # This masks out transparent pixels
+#                        except ValueError:
+#                                print "Error reading image for {} {}".format(x,y)
 
                 # Crop final image.
                 bbox = composite.getbbox()
