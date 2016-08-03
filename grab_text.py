@@ -188,6 +188,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         grid = grids[slide_number]
         images = {}
         labels = grid.labels
+        print "Extract images {}".format(slide_number)
         for shape in slide.shapes:
                 try:
                         if not hasattr(shape, "shape_type"):
@@ -262,8 +263,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                                      (shape.top - t)/scale),
                                     part)  # This masks out transparent pixels
                         except ValueError:
-                                print "Error reading image for " + utterances[x][y] + \
-                                            "/" + links[x][y]
+                                print "Error reading image for {} {}".format(x,y)
 
                 # Crop final image.
                 bbox = composite.getbbox()
@@ -327,7 +327,10 @@ def extract_and_label_images(prs, grids,filename, SAVE=True):
 
 def extract_grid(prs):
         grids = []
+        debug_no=0
         for slide in prs.slides:
+                debug_no+=1
+                print debug_no
                 grids.append(Grid(prs, slide, gridSize))
         for tok in grids:
                 tok.update_links(grids)
@@ -344,9 +347,9 @@ if __name__ == "__main__":
         filename = sys.argv[1]
         dest = sys.argv[2]
         gridSize = 5
-        if (len(sys.argv) > 2):
-                gridSize = int(sys.argv[3])
-
+#        if (len(sys.argv) > 2):
+#                gridSize = int(sys.argv[3])
+#
         prs = Presentation(filename)
         grids = extract_grid(prs)
         grids = extract_and_label_images(prs, grids,dest)
