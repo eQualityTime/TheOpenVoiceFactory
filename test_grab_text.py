@@ -3,22 +3,22 @@ from pptx import Presentation
 import json
 
 
-def test_ck12v2():
-        compare_json_files(
-            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK12+V2.pptx",
-            "testinputs/CK12+V2.json", 4)
-
-
-def test_ck20v2():
-        compare_json_files(
-            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2.pptx",
-            "testinputs/CK20V2.json", 5)
-
-
-def test_ck20v2_bg():
-        compare_json_files(
-            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2-BG.pptx",
-            "testinputs/CK20V2-BG.json", 5)
+#def test_ck12v2():
+#        compare_json_files(
+#            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK12+V2.pptx",
+#            "testinputs/CK12+V2.json", 4)
+#
+#
+#def test_ck20v2():
+#        compare_json_files(
+#            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2.pptx",
+#            "testinputs/CK20V2.json", 5)
+#
+#
+#def test_ck20v2_bg():
+#        compare_json_files(
+#            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2-BG.pptx",
+#            "testinputs/CK20V2-BG.json", 5)
 
 def test_ck20v2firstpage():
         compare_json_files(
