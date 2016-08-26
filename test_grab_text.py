@@ -20,9 +20,11 @@ def test_ck20v2_bg():
             "testinputs/CK20V2-BG.json", 5)
 
 def test_ck20v2ara():
+        grab_text.bordercolor =True
         compare_json_files(
             "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2arabic.pptx",
             "testinputs/CK20V2arabic.json", 5)
+        grab_text.bordercolor =False
 
 def compare_json_files(pres_loc, target_loc, gridSize):
         prs = Presentation(pres_loc)
