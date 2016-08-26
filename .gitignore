@@ -3,4 +3,5 @@ build-*
 *.pro.user
 icons/*
 testSuite/*
+uploads/*
 .*

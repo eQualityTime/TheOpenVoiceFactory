@@ -22,6 +22,7 @@ import sys
 import linecache
 print_exceptions = False
 IMAGE_WARNING = False
+bordercolor = True
 
 warningMissingLinks = True
 
@@ -138,9 +139,12 @@ class Grid:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
                                         # shoudl there be a return here?
-                        (co, ro) = self.get_col_row(shape.top, shape.left)
+                        (co, ro) = self.get_col_row(
+                                shape.top+shape.height/2, shape.left+shape.width/2)
+#                        print "top  : {}, left  : {}".format(shape.top,shape.left)
+# print "width: {}, height: {}".format(shape.width,shape.height)
                         if ((co >= gridSize) or (ro >= gridSize)):
-                                print "Warning, shape outside of page area on page:{}".format(slide_number)
+                                print "Warning, shape outside of page area on page:{}".format(self.tag)
                                 return
                         # Now - let's find out if there is a link...
                         click_action = shape.click_action
@@ -149,8 +153,12 @@ class Grid:
                                         ro] = click_action.hyperlink.address
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                 try:
-                                        self.colors[co][
-                                                ro] = shape.fill.fore_color.rgb
+                                        if bordercolor:
+                                                self.colors[co][
+                                                        ro] = shape.line.color.rgb
+                                        else:
+                                                self.colors[co][
+                                                        ro] = shape.fill.fore_color.rgb
                                 except (TypeError):
                                         pass
                         if shape.has_text_frame:
@@ -188,6 +196,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         grid = grids[slide_number]
         images = {}
         labels = grid.labels
+        print "Extract images {}".format(slide_number)
         for shape in slide.shapes:
                 try:
                         if not hasattr(shape, "shape_type"):
@@ -195,7 +204,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
 
                         if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
                                 (co, ro) = grid.get_col_row(
-                                        shape.top, shape.left)
+                                        shape.top+shape.height/2, shape.left+shape.width/2)
                                 if (co, ro) not in images:
                                         images[co, ro] = []
                                 images[co, ro].append(shape)
@@ -238,32 +247,34 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                 # Add all the images together.
                 for shape in images[x, y]:
                                         # TODO: flipping.
-                        part = Image.open(
-                            io.BytesIO(
-                                shape.image.blob))
-                        width = part.size[0]
-                        height = part.size[1]
-                        left = shape.crop_left*width
-                        right = (1-shape.crop_right)*width
-                        top = shape.crop_top*height
-                        bottom = (1-shape.crop_bottom)*height
-                        box = (int(left),
-                               int(top),
-                               int(right),
-                               int(bottom))
-                        part = part.crop(box)
-                        partScale = (shape.width / part.size[0])
-                        # part.size because it might have been cropped
-                        part = resizeImage(part, partScale / scale)
                         try:
+                                part = Image.open(
+                                    io.BytesIO(
+                                        shape.image.blob))
+                                part.load()
+                                width = part.size[0]
+                                height = part.size[1]
+                                left = shape.crop_left*width
+                                right = (1-shape.crop_right)*width
+                                top = shape.crop_top*height
+                                bottom = (1-shape.crop_bottom)*height
+                                box = (int(left),
+                                       int(top),
+                                       int(right),
+                                       int(bottom))
+                                part = part.crop(box)
+                                partScale = (shape.width / part.size[0])
+                                # part.size because it might have been cropped
+                                part = resizeImage(part, partScale / scale)
                                 composite.paste(
                                     part,
                                     ((shape.left - l)/scale,
-                                     (shape.top - t)/scale),
-                                    part)  # This masks out transparent pixels
-                        except ValueError:
-                                print "Error reading image for " + utterances[x][y] + \
-                                            "/" + links[x][y]
+                                     (shape.top - t)/scale))
+        # part.split()[0])  # This masks out transparent pixels
+                        except IOError:
+                                print "Error reading image for {} {}".format(x, y)
+                        except ValueErrorr:
+                                print "Error reading image for {} {}".format(x, y)
 
                 # Crop final image.
                 bbox = composite.getbbox()
@@ -275,10 +286,10 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                 name = create_icon_name(x, y, labels, grid.links, slide_number)
                 # print name
                 if SAVE:
-                    folder = filename+"/icons/"  # + str(slide_number)
-                    if not os.path.exists(folder):
-                            os.makedirs(folder)
-                    composite.save(folder + "" + name)
+                        folder = filename+"/icons/"  # + str(slide_number)
+                        if not os.path.exists(folder):
+                                os.makedirs(folder)
+                        composite.save(folder + "" + name)
 
 
 def create_json_object(grids):
@@ -300,23 +311,24 @@ def create_json_object(grids):
         for_json["Grid"] = grid_json
         return for_json
 
-def write_to_JSON(grids,filename):
-        for_json=create_json_object(grids)
+
+def write_to_JSON(grids, filename):
+        for_json = create_json_object(grids)
         with open(filename, 'w') as outfile:
                 json.dump(for_json, outfile, sort_keys=True, indent=4)
 
 
 def create_icon_name(x, y, labels, links, slide_number):
 
-    #    name = remove_punctuation(labels[x][y]) + ".png"
-    #    if name == ".png":
-    #            name = remove_punctuation(links[x][y])+".png"
-    #            if name == ".png":
-	name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
+        #    name = remove_punctuation(labels[x][y]) + ".png"
+        #    if name == ".png":
+        #            name = remove_punctuation(links[x][y])+".png"
+        #            if name == ".png":
+        name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
         return name
 
 
-def extract_and_label_images(prs, grids,filename, SAVE=True):
+def extract_and_label_images(prs, grids, filename, SAVE=True):
         # Deal with the images
         image_slight_number = 0
         for slide in prs.slides:
@@ -327,7 +339,10 @@ def extract_and_label_images(prs, grids,filename, SAVE=True):
 
 def extract_grid(prs):
         grids = []
+        debug_no = 0
         for slide in prs.slides:
+                debug_no += 1
+                print debug_no
                 grids.append(Grid(prs, slide, gridSize))
         for tok in grids:
                 tok.update_links(grids)
@@ -344,12 +359,12 @@ if __name__ == "__main__":
         filename = sys.argv[1]
         dest = sys.argv[2]
         gridSize = 5
-        if (len(sys.argv) > 2):
-                gridSize = int(sys.argv[3])
-
-        prs = Presentation(filename)
+#        if (len(sys.argv) > 2):
+#                gridSize = int(sys.argv[3])
+#
+        prs = Presentation("uploads/"+filename)
         grids = extract_grid(prs)
-        grids = extract_and_label_images(prs, grids,dest)
-        write_to_JSON(grids,dest+'/pageset.json')
+        grids = extract_and_label_images(prs, grids, dest)
+        write_to_JSON(grids, dest+'/pageset.json')
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
