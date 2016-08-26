@@ -25,11 +25,11 @@
                }
                grid_size_rows = obj.Settings[0];
                grid_size_columns = obj.Settings[0];
-	       right_to_left(labels)
-	       right_to_left(utterances)
-	       right_to_left(links)
-	       right_to_left(icons)
-	       right_to_left(colours)
+//	       right_to_left(labels)
+//	       right_to_left(utterances)
+//	       right_to_left(links)
+//	       right_to_left(icons)
+//	       right_to_left(colours)
                setup_messagewindow();
                setup_table();
                load_page(key);

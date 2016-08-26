@@ -22,7 +22,7 @@ import sys
 import linecache
 print_exceptions = False
 IMAGE_WARNING = False
-bordercolor = True
+bordercolor = False
 
 warningMissingLinks = True
 
@@ -359,9 +359,10 @@ if __name__ == "__main__":
         filename = sys.argv[1]
         dest = sys.argv[2]
         gridSize = 5
-#        if (len(sys.argv) > 2):
-#                gridSize = int(sys.argv[3])
-#
+        if (len(sys.argv) > 2):
+                gridSize = int(sys.argv[3])
+
+#        prs = Presentation("uploads/"+filename)
         prs = Presentation(filename)
         grids = extract_grid(prs)
         grids = extract_and_label_images(prs, grids, dest)

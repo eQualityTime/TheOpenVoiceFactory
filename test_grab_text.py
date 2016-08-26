@@ -8,7 +8,6 @@ def test_ck12v2():
             "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK12+V2.pptx",
             "testinputs/CK12+V2.json", 4)
 
-
 def test_ck20v2():
         compare_json_files(
             "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2.pptx",
@@ -20,15 +19,12 @@ def test_ck20v2_bg():
             "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2-BG.pptx",
             "testinputs/CK20V2-BG.json", 5)
 
-def test_ck20v2_ara():
+def test_ck20v2ara():
+        grab_text.bordercolor =True
         compare_json_files(
             "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2arabic.pptx",
             "testinputs/CK20V2arabic.json", 5)
-
-#def test_ck20v2firstpage():
-#        compare_json_files(
-#            "/Users/josephreddington/Dropbox/git/azulejoe/testinputs/CK20V2firstpagewithErrors.pptx",
-#            "testinputs/CK20V2firstpagewithErrors.json", 5)
+        grab_text.bordercolor =False
 
 def compare_json_files(pres_loc, target_loc, gridSize):
         prs = Presentation(pres_loc)
