@@ -362,7 +362,7 @@ if __name__ == "__main__":
 #        if (len(sys.argv) > 2):
 #                gridSize = int(sys.argv[3])
 #
-        prs = Presentation(filename)
+        prs = Presentation("uploads/"+filename)
         grids = extract_grid(prs)
         grids = extract_and_label_images(prs, grids, dest)
         write_to_JSON(grids, dest+'/pageset.json')
