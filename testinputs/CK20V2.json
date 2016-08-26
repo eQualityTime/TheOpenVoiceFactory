@@ -674,7 +674,7 @@
                 ], 
                 [
                     "", 
-                    "beer", 
+                    "It's gross", 
                     "wipe my face", 
                     "I've had enough", 
                     "full"
@@ -4332,7 +4332,7 @@
                 ], 
                 [
                     "", 
-                    "beer", 
+                    "sandwich", 
                     "chicken", 
                     "tomato soup", 
                     "vegetable soup"
@@ -4601,7 +4601,7 @@
                 ], 
                 [
                     "", 
-                    "beer", 
+                    "bacon", 
                     "chicken", 
                     "prawn", 
                     ""
@@ -4870,7 +4870,7 @@
                 ], 
                 [
                     "", 
-                    "beer", 
+                    "pasty", 
                     "roast dinner", 
                     "pie", 
                     "Macaroni cheese"
@@ -7291,7 +7291,7 @@
                 ], 
                 [
                     "", 
-                    "beer", 
+                    "knife", 
                     "tea towel", 
                     "plate", 
                     "colander"
@@ -12667,21 +12667,21 @@
                 ], 
                 [
                     "", 
-                    "Yes", 
+                    "white", 
                     "orange", 
                     "pink", 
                     ""
                 ], 
                 [
                     "", 
-                    "Yes", 
+                    "black", 
                     "green", 
                     "brown", 
                     ""
                 ], 
                 [
                     "No", 
-                    "Yes", 
+                    "red", 
                     "blue", 
                     "gold", 
                     "silver"
@@ -12943,14 +12943,14 @@
                 ], 
                 [
                     "", 
-                    "opposites", 
+                    "safe", 
                     "good", 
                     "sad", 
                     "scared"
                 ], 
                 [
                     "No", 
-                    "", 
+                    "busy", 
                     "happy", 
                     "sick", 
                     "confused"
@@ -13474,21 +13474,21 @@
                 ], 
                 [
                     "", 
-                    "Yes", 
+                    "wet", 
                     "slow", 
                     "little", 
                     "hard"
                 ], 
                 [
                     "", 
-                    "Yes", 
+                    "long", 
                     "loud", 
                     "new", 
                     "clean"
                 ], 
                 [
                     "No", 
-                    "Yes", 
+                    "short", 
                     "quiet", 
                     "old", 
                     "dirty"
@@ -21275,21 +21275,21 @@
                 ], 
                 [
                     "", 
-                    "Yes", 
+                    "day", 
                     "tomorrow", 
                     "pm", 
                     "hurry"
                 ], 
                 [
                     "", 
-                    "Yes", 
+                    "months", 
                     "later", 
                     "now", 
                     "before"
                 ], 
                 [
                     "No", 
-                    "Yes", 
+                    "special days", 
                     "late", 
                     "never", 
                     "after"
@@ -25426,7 +25426,7 @@
                 ], 
                 [
                     "", 
-                    "Yes", 
+                    "I want to ask you something..", 
                     "speak soon", 
                     "When will I see you?", 
                     "Get well soon"
@@ -25537,7 +25537,7 @@
                 ], 
                 [
                     "", 
-                    "", 
+                    "icons/unknown9631.png", 
                     "icons/unknown9632.png", 
                     "icons/unknown9633.png", 
                     "icons/unknown9634.png"
