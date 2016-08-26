@@ -25,40 +25,20 @@
                }
                grid_size_rows = obj.Settings[0];
                grid_size_columns = obj.Settings[0];
-//	       right_to_left(labels)
-//	       right_to_left(utterances)
-//	       right_to_left(links)
-//	       right_to_left(icons)
-//	       right_to_left(colours)
                setup_messagewindow();
                setup_table();
                load_page(key);
            }
        };
        //TODO - needs an error message if the JSON doesn't load
-
-	
    }
 
-function right_to_left(arr){
-	       for(newkey in arr){
-		      for (y = 0; y < grid_size_rows; y++) {
-			      for (x = 0; x < grid_size_rows/2; x++) {
-					a= arr[newkey][x][y]
-					num=grid_size_rows-1-x
-					arr[newkey][x][y]= arr[newkey][num][y]
-					arr[newkey][num][y]=a
-
-			       }
-		       }
-		}
-}
    function setup_messagewindow() {
        my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
        my_height = 520 / grid_size_rows;
        area = document.getElementById('messagewindow');
        $(area).css('width', my_width);
-       $(area).css('left', (720 / grid_size_columns) + 15);
+       $(area).css('left', (720 / grid_size_columns) + 7);
        $(area).css('top', 105);
        $(area).css('height', my_height);
    }
@@ -87,12 +67,12 @@ function get_size_class(){ return (grid_size_rows == 5 ? "five":"four")};
        for (x = 0; x < grid_size_rows; x++) {
            for (y = 0; y < grid_size_rows; y++) {
                var image_html = "<IMG src=\"" + icons[key][y][x] + "\" class=\"" + get_size_class() + "\">";
-//               compute_cell(x, y).css('background-color', "rgb(" + colours[key][y][x] + ")")
+               compute_cell(x, y).css('background-color', "rgb(" + colours[key][y][x] + ")")
 	       compute_cell(x, y).removeClass('note')
                if (links[key][y][x]) {
                    compute_cell(x, y).addClass('note')
                }
-               compute_cell(x, y).html("<div style=\"height: 98%; width: 98%;border:3px solid rgb("+ colours[key][y][x]+")\"><b>" + labels[key][y][x] + "</b><br>" + image_html+"</div>");
+               compute_cell(x, y).html("<b>" + labels[key][y][x] + "</b><br>" + image_html);
                if (icons[key][y][x] == "") {
 		   compute_cell(x, y).html("")
            } } }
