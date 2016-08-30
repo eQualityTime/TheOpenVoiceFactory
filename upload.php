@@ -17,10 +17,9 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-	$location="phptest";
+	$location=hash_file("md5",$target_file);
 	$command = dirname(__FILE__).'/create.sh '.$target_file." ". $_POST["size"]." ".$location." ".$_POST["lang"] ;
 	$temp = shell_exec($command );
-	echo $command;
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=".$location."/ >here</a>";
 	echo nl2br($temp);
     } else {
