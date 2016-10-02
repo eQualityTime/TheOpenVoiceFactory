@@ -342,10 +342,19 @@ def extract_grid(prs):
         debug_no = 0
         for slide in prs.slides:
                 debug_no += 1
-                print debug_no
+                print "Slide: {}".format(debug_no)
                 grids.append(Grid(prs, slide, gridSize))
+        debug_no = 0
         for tok in grids:
+                debug_no += 1
+                print "Slide: {}: {}".format(debug_no,tok.tag)
                 tok.update_links(grids)
+                for i in range(gridSize):
+                    for j in range(gridSize):
+
+                        if( len(tok.colors[j][i])<2):
+                            print "Missing colour in {},{}".format(j,i)
+                            print tok.colors[j][i]
         return grids
 ########
 
