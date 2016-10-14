@@ -347,7 +347,7 @@ def extract_grid(prs):
         debug_no = 0
         for tok in grids:
                 debug_no += 1
-                print "Slide: {}: {}".format(debug_no,tok.tag)
+                #print "Slide: {}: {}".format(debug_no,tok.tag)
                 tok.update_links(grids)
                 for i in range(gridSize):
                     for j in range(gridSize):
