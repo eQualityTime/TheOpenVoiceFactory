@@ -61,21 +61,25 @@
        return $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')');
    }
 
-function get_size_class(){ return (grid_size_rows == 5 ? "five":"four")};
+   function get_size_class() {
+       return (grid_size_rows == 5 ? "five" : "four")
+   };
 
    function load_page(key) {
        for (x = 0; x < grid_size_rows; x++) {
            for (y = 0; y < grid_size_rows; y++) {
                var image_html = "<IMG src=\"" + icons[key][y][x] + "\" class=\"" + get_size_class() + "\">";
                compute_cell(x, y).css('background-color', "rgb(" + colours[key][y][x] + ")")
-	       compute_cell(x, y).removeClass('note')
+               compute_cell(x, y).removeClass('note')
                if (links[key][y][x]) {
                    compute_cell(x, y).addClass('note')
                }
                compute_cell(x, y).html("<b>" + labels[key][y][x] + "</b><br>" + image_html);
                if (icons[key][y][x] == "") {
-		   compute_cell(x, y).html("")
-           } } }
+                   compute_cell(x, y).html("")
+               }
+           }
+       }
    }
 
    function voiceinit() {
@@ -111,8 +115,10 @@ function get_size_class(){ return (grid_size_rows == 5 ? "five":"four")};
    }
    //The main function. First checks for an utterance to add, and then checks if a link should be activated. Within the utterance code we check the length of an addition - if it is a single character we assume that the user is spelling something and we do not insert the extra space.
    //called from the html
- 
-function append(text){ document.myform.outputtext.value += text;}
+
+   function append(text) {
+       document.myform.outputtext.value += text;
+   }
 
    function add(i, j) {
        if (links[key][i][j] == "") {
@@ -122,11 +128,10 @@ function append(text){ document.myform.outputtext.value += text;}
                append(" " + labels[key][i][j]);
            }
        }
-	
+
        if (links[key][i][j].includes("ovf(")) {
            processSpecial(links[key][i][j]);
-}
-       else if (links[key][i][j].includes("special::")) {
+       } else if (links[key][i][j].includes("special::")) {
            processSpecialOld(links[key][i][j]);
 
        } else if (links[key][i][j] != "") {
@@ -147,7 +152,7 @@ function append(text){ document.myform.outputtext.value += text;}
                case "twitter":
                    tweet();
                    break;
-	       case "1":
+               case "1":
                    key = "top_page";
                    break;
                default:
@@ -165,7 +170,7 @@ function append(text){ document.myform.outputtext.value += text;}
                case "special::clear":
                    document.myform.reset();
                    break;
-	       case "special::unfinnished":
+               case "special::unfinnished":
                    alert("This feature is unimplemented on the web demo");
                    break;
                case "special::deleteword":
@@ -176,7 +181,7 @@ function append(text){ document.myform.outputtext.value += text;}
                default:
                    parts = commandArray[i].split("%22")
                    if (parts[0].includes("place")) {
-                      append(parts[1].split("%20").join(" "));
+                       append(parts[1].split("%20").join(" "));
                    } else if (parts[0].includes("open")) {
                        key = parts[1]
                        load_page(key);
@@ -189,38 +194,48 @@ function append(text){ document.myform.outputtext.value += text;}
 
 
    }
-   function processSpecial(command) {
-	console.log(command);
-//So right now the command should start with an ovf( and end with a ) and then we know what is in there. so 
-//	
-	if (command.startsWith("ovf(")){
-command=command.substring(4,command.length - 1)
-}
-else
-{
-console.log("Special Command doesn't start with 'ovf(', bugging out");
-return;
-}
-console.log("Command is now:"+command);
 
-       var commandArray = command.split(','); //there's going to be a problem with inserting a semicolon...
+   function processSpecial(command) {
+       console.log(command);
+       //So right now the command should start with an ovf( and end with a ) and then we know what is in there. so 
+       //	
+       if (command.startsWith("ovf(")) {
+           command = command.substring(4, command.length - 1)
+       } else {
+           console.log("Special Command doesn't start with 'ovf(', bugging out");
+           return;
+       }
+       console.log("Command is now:" + command);
+       //so far, all we've done is strip the 'command' from the front. But that's slightly the wrong order. 
+       // What we want to do is execute the command each time
+       // No, we want a javascript function for each command, that makes sense.
+
+       var commandArray = command.split(','); 
        for (i = 0; i < commandArray.length; i++) {
-           switch (commandArray[i]) {
-               case "clear()":
+	   functionname=commandArray[i].split('(')[0]
+	   console.log("Function Name is :"+functionname);
+           switch (functionname) {
+               case "clear":
                    document.myform.reset();
                    break;
-	       case "unfinnished()":
+               case "unfinnished":
                    alert("This feature is unimplemented on the web demo");
                    break;
-               case "deleteword()":
+               case "deleteword":
                    (function() {
                        var lastIndex = document.myform.outputtext.value.lastIndexOf(" ");
                        document.myform.outputtext.value = document.myform.outputtext.value.substring(0, lastIndex);
                    })();
+		break;
+	       case "place":
+			args=commandArray[i].split('(')[1];
+			args=args.substring(0,args.length-1);
+			append(args);
+			break;
                default:
                    parts = commandArray[i].split("%22")
                    if (parts[0].includes("place")) {
-                      append(parts[1].split("%20").join(" "));
+                       append(parts[1].split("%20").join(" "));
                    } else if (parts[0].includes("open")) {
                        key = parts[1]
                        load_page(key);
