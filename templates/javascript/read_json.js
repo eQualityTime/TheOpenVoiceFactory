@@ -235,6 +235,12 @@
 			arg=arg.substring(0,arg.length-1);
 			arg=arg.replace(/\'/g,"") 
 			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
 			append(arg);
 			break;
 		case "open":
