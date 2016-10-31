@@ -228,20 +228,18 @@
                    })();
 		break;
 	       case "place":
+			arg=commandArray[i].split('(')[1];
+			arg=arg.substring(0,arg.length-1);
+			arg=arg.replace(/\'/g,"") 
+			append(arg);
+			break;
+		case "open":
 			args=commandArray[i].split('(')[1];
 			args=args.substring(0,args.length-1);
-			append(args);
+			load_page(args);
 			break;
                default:
-                   parts = commandArray[i].split("%22")
-                   if (parts[0].includes("place")) {
-                       append(parts[1].split("%20").join(" "));
-                   } else if (parts[0].includes("open")) {
-                       key = parts[1]
-                       load_page(key);
-
-                   }
-
+                   alert("Implementation error - an unrecognised OVF function was called");
                    break;
            }
        }
