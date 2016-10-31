@@ -218,6 +218,9 @@
                case "clear":
                    document.myform.reset();
                    break;
+               case "backspace":
+                   document.myform.outputtext.value = document.myform.outputtext.value.substring(0, document.myform.outputtext.value.length - 1);
+                   break;
                case "unfinnished":
                    alert("This feature is unimplemented on the web demo");
                    break;
