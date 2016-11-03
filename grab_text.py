@@ -153,40 +153,46 @@ class Grid:
                                 self.links[co][
                                         ro] = click_action.hyperlink.address
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-
-                                if (shape.fill.fore_color.type=="SCHEME (2)"):
+                            if hasattr(shape.fill, 'fore_color'):
+                                if (str(shape.fill.fore_color.type)=="SCHEME (2)"):
                                     print "Ending here"
-
-
-                                if hasattr(shape.fill, 'fore_color'):
-                                    print "Tell me about the fore color"
-                                    print (type(shape.fill.fore_color))
-                                    print dir(shape.fill.fore_color)
-                                    print shape.fill.fore_color.type
-                                    if hasattr(shape.fill.fore_color, 'rgb'):
-                                        print (type(shape.fill.fore_color.rgb))
-                                        print "there!"
-                                    if (type(shape.fill.fore_color)=="_SchemeColor"):
-                                        print "here!"
-                                        print dir(shape.fill.fore_color.rgb)
-                                        print shape.fill.fore_color.rgb
-                                    print "Tell me about the filr"
-                                    pprint(vars(shape.fill))
-                                else:
-                                    print "Different type of object"
-                                    #pprint(vars(shape.fill))
-                                    #print shape.fill.background
-                                    print "See!"
-
-                                try:
-                                        if bordercolor:
+                                elif (str(shape.fill.fore_color.type)=="RGB (1)"):
+                                       print "We can use this color"
+                                       if bordercolor:
                                                 self.colors[co][
                                                         ro] = shape.line.color.rgb
-                                        else:
+                                       else:
                                                 self.colors[co][ ro] = shape.fill.fore_color.rgb
                                                 print "colour is"
                                                 print self.colors[co][ ro]
 
+                                else:
+                                    print "Something new has happened."
+                                    print "A"+str(shape.fill.fore_color.type)+"A"
+
+
+#                                if hasattr(shape.fill, 'fore_color'):
+#                                    print "Tell me about the fore color"
+#                                    print (type(shape.fill.fore_color))
+#                                    print dir(shape.fill.fore_color)
+#                                    print shape.fill.fore_color.type
+#                                    if hasattr(shape.fill.fore_color, 'rgb'):
+#                                        print (type(shape.fill.fore_color.rgb))
+#                                        print "there!"
+#                                    if (type(shape.fill.fore_color)=="_SchemeColor"):
+#                                        print "here!"
+#                                        print dir(shape.fill.fore_color.rgb)
+#                                        print shape.fill.fore_color.rgb
+#                                    print "Tell me about the filr"
+#                                    pprint(vars(shape.fill))
+#                                else:
+#                                    print "Different type of object"
+#                                    #pprint(vars(shape.fill))
+#                                    #print shape.fill.background
+#                                    print "See!"
+#
+                                try:
+                                    pass
                                 except (TypeError):
                                         print "There was an exception"
                         if shape.has_text_frame:
