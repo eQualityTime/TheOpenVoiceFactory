@@ -6,6 +6,7 @@ import sys
 sys.path.append('/home/joereddington/')
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+from pprint import pprint
 import json
 import io
 import os
@@ -20,7 +21,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 import sys
 import linecache
-print_exceptions = False
+print_exceptions = True
 IMAGE_WARNING = False
 bordercolor = False
 
@@ -152,15 +153,42 @@ class Grid:
                                 self.links[co][
                                         ro] = click_action.hyperlink.address
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+
+                                if (shape.fill.fore_color.type=="SCHEME (2)"):
+                                    print "Ending here"
+
+
+                                if hasattr(shape.fill, 'fore_color'):
+                                    print "Tell me about the fore color"
+                                    print (type(shape.fill.fore_color))
+                                    print dir(shape.fill.fore_color)
+                                    print shape.fill.fore_color.type
+                                    if hasattr(shape.fill.fore_color, 'rgb'):
+                                        print (type(shape.fill.fore_color.rgb))
+                                        print "there!"
+                                    if (type(shape.fill.fore_color)=="_SchemeColor"):
+                                        print "here!"
+                                        print dir(shape.fill.fore_color.rgb)
+                                        print shape.fill.fore_color.rgb
+                                    print "Tell me about the filr"
+                                    pprint(vars(shape.fill))
+                                else:
+                                    print "Different type of object"
+                                    #pprint(vars(shape.fill))
+                                    #print shape.fill.background
+                                    print "See!"
+
                                 try:
                                         if bordercolor:
                                                 self.colors[co][
                                                         ro] = shape.line.color.rgb
                                         else:
-                                                self.colors[co][
-                                                        ro] = shape.fill.fore_color.rgb
+                                                self.colors[co][ ro] = shape.fill.fore_color.rgb
+                                                print "colour is"
+                                                print self.colors[co][ ro]
+
                                 except (TypeError):
-                                        pass
+                                        print "There was an exception"
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
 
@@ -169,7 +197,7 @@ class Grid:
                                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
-                                                               co][ro]) < 2:
+                                                               co][ro]) < 1:
                                                                 print self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro]
 
                 except (AttributeError, KeyError, NotImplementedError):
@@ -196,7 +224,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         grid = grids[slide_number]
         images = {}
         labels = grid.labels
-        print "Extract images {}".format(slide_number)
+##        print "Extract images {}".format(slide_number)
         for shape in slide.shapes:
                 try:
                         if not hasattr(shape, "shape_type"):
@@ -353,7 +381,7 @@ def extract_grid(prs):
                     for j in range(gridSize):
 
                         if( len(tok.colors[j][i])<2):
-                            print "Missing colour in {},{}".format(j,i)
+                            print "Missing colour in {}: {},{} - {} ".format(tok.tag,j,i,tok.labels[j][i].encode('ascii', 'ignore'))
                             print tok.colors[j][i]
         return grids
 ########
