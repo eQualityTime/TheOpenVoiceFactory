@@ -21,7 +21,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 import sys
 import linecache
-print_exceptions = True
+print_exceptions = False
 IMAGE_WARNING = False
 bordercolor = False
 
@@ -139,11 +139,9 @@ class Grid:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = shape.text
-                                        # shoudl there be a return here?
+                                        # should there be a return here?
                         (co, ro) = self.get_col_row(
                                 shape.top+shape.height/2, shape.left+shape.width/2)
-#                        print "top  : {}, left  : {}".format(shape.top,shape.left)
-# print "width: {}, height: {}".format(shape.width,shape.height)
                         if ((co >= gridSize) or (ro >= gridSize)):
                                 print "Warning, shape outside of page area on page:{}".format(self.tag)
                                 return
@@ -153,49 +151,25 @@ class Grid:
                                 self.links[co][
                                         ro] = click_action.hyperlink.address
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-                            if hasattr(shape.fill, 'fore_color'):
-                                if (str(shape.fill.fore_color.type)=="SCHEME (2)"):
-                                    self.colors[co][ro]=(200,0,0)
-                                  #  print "Ending here"
-                                  #  print dir(shape.fill)
-                                  #  print dir(shape.fill.background)
-                                  #  print shape.fill.fore_color.theme_color
-                                  #  print dir(shape.fill.fore_color.theme_color)
-                                  #  pprint (vars( shape.fill.fore_color.theme_color))
-                                  #  print "hope"
-                                elif (str(shape.fill.fore_color.type)=="RGB (1)"):
-                                       #print "We can use this color"
-                                       if bordercolor:
-                                                self.colors[co][
-                                                        ro] = shape.line.color.rgb
-                                       else:
-                                                self.colors[co][ ro] = shape.fill.fore_color.rgb
+                                if hasattr(shape.fill, 'fore_color'):
+                                        if (str(shape.fill.fore_color.type)
+                                                == "SCHEME (2)"):
+                                                self.colors[co][ro] = (
+                                                        200, 0, 0)
+                                        elif (str(shape.fill.fore_color.type) == "RGB (1)"):
+                                                # "We can use this color"
+                                                if bordercolor:
+                                                        self.colors[co][
+                                                                ro] = shape.line.color.rgb
+                                                else:
+                                                        self.colors[co][
+                                                                ro] = shape.fill.fore_color.rgb
 
-                                else:
-                                    print "Something new has happened."
-                                    print "A"+str(shape.fill.fore_color.type)+"A"
+                                        else:
+                                                print "Something new has happened."
+                                                print "A"+str(shape.fill.fore_color.type)+"A"
 
 
-#                                if hasattr(shape.fill, 'fore_color'):
-#                                    print "Tell me about the fore color"
-#                                    print (type(shape.fill.fore_color))
-#                                    print dir(shape.fill.fore_color)
-#                                    print shape.fill.fore_color.type
-#                                    if hasattr(shape.fill.fore_color, 'rgb'):
-#                                        print (type(shape.fill.fore_color.rgb))
-#                                        print "there!"
-#                                    if (type(shape.fill.fore_color)=="_SchemeColor"):
-#                                        print "here!"
-#                                        print dir(shape.fill.fore_color.rgb)
-#                                        print shape.fill.fore_color.rgb
-#                                    print "Tell me about the filr"
-#                                    pprint(vars(shape.fill))
-#                                else:
-#                                    print "Different type of object"
-#                                    #pprint(vars(shape.fill))
-#                                    #print shape.fill.background
-#                                    print "See!"
-#
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
 
@@ -212,7 +186,6 @@ class Grid:
                         return
 
         def process_text_frame(self, shape, co, ro):
-              #  text = self.utterances[co][ro]
                 text = ""
                 if "Yes" in self.labels[co][ro]:
                         return
@@ -231,7 +204,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         grid = grids[slide_number]
         images = {}
         labels = grid.labels
-        print "Extract images {}".format(slide_number)
+        print "Extracting Symbols {}".format(slide_number)
         for shape in slide.shapes:
                 try:
                         if not hasattr(shape, "shape_type"):
@@ -354,11 +327,6 @@ def write_to_JSON(grids, filename):
 
 
 def create_icon_name(x, y, labels, links, slide_number):
-
-        #    name = remove_punctuation(labels[x][y]) + ".png"
-        #    if name == ".png":
-        #            name = remove_punctuation(links[x][y])+".png"
-        #            if name == ".png":
         name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
         return name
 
@@ -382,14 +350,13 @@ def extract_grid(prs):
         debug_no = 0
         for tok in grids:
                 debug_no += 1
-                #print "Slide: {}: {}".format(debug_no,tok.tag)
                 tok.update_links(grids)
                 for i in range(gridSize):
-                    for j in range(gridSize):
+                        for j in range(gridSize):
 
-                        if( tok.colors[j][i]==(200,0,0)):
-                            print "Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'),j,i,tok.labels[j][i].encode('ascii', 'ignore'))
-                            print tok.colors[j][i]
+                                if(tok.colors[j][i] == (200, 0, 0)):
+                                        print "Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'), j, i, tok.labels[j][i].encode('ascii', 'ignore'))
+                                        print tok.colors[j][i]
         return grids
 ########
 
@@ -406,7 +373,6 @@ if __name__ == "__main__":
         if (len(sys.argv) > 2):
                 gridSize = int(sys.argv[3])
 
-#        prs = Presentation("uploads/"+filename)
         prs = Presentation(filename)
         grids = extract_grid(prs)
         grids = extract_and_label_images(prs, grids, dest)
