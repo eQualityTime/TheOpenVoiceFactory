@@ -155,16 +155,21 @@ class Grid:
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                             if hasattr(shape.fill, 'fore_color'):
                                 if (str(shape.fill.fore_color.type)=="SCHEME (2)"):
-                                    print "Ending here"
+                                    self.colors[co][ro]=(200,0,0)
+                                  #  print "Ending here"
+                                  #  print dir(shape.fill)
+                                  #  print dir(shape.fill.background)
+                                  #  print shape.fill.fore_color.theme_color
+                                  #  print dir(shape.fill.fore_color.theme_color)
+                                  #  pprint (vars( shape.fill.fore_color.theme_color))
+                                  #  print "hope"
                                 elif (str(shape.fill.fore_color.type)=="RGB (1)"):
-                                       print "We can use this color"
+                                       #print "We can use this color"
                                        if bordercolor:
                                                 self.colors[co][
                                                         ro] = shape.line.color.rgb
                                        else:
                                                 self.colors[co][ ro] = shape.fill.fore_color.rgb
-                                                print "colour is"
-                                                print self.colors[co][ ro]
 
                                 else:
                                     print "Something new has happened."
@@ -191,10 +196,6 @@ class Grid:
 #                                    #print shape.fill.background
 #                                    print "See!"
 #
-                                try:
-                                    pass
-                                except (TypeError):
-                                        print "There was an exception"
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
 
@@ -230,7 +231,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         grid = grids[slide_number]
         images = {}
         labels = grid.labels
-##        print "Extract images {}".format(slide_number)
+        print "Extract images {}".format(slide_number)
         for shape in slide.shapes:
                 try:
                         if not hasattr(shape, "shape_type"):
@@ -386,8 +387,8 @@ def extract_grid(prs):
                 for i in range(gridSize):
                     for j in range(gridSize):
 
-                        if( len(tok.colors[j][i])<2):
-                            print "Missing colour in {}: {},{} - {} ".format(tok.tag,j,i,tok.labels[j][i].encode('ascii', 'ignore'))
+                        if( tok.colors[j][i]==(200,0,0)):
+                            print "Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'),j,i,tok.labels[j][i].encode('ascii', 'ignore'))
                             print tok.colors[j][i]
         return grids
 ########
