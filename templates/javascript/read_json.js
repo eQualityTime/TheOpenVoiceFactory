@@ -66,7 +66,8 @@
        return (grid_size_rows == 5 ? "five" : "four")
    };
 
-   function load_page(key) {
+   function load_page(key_in) {
+       key=key_in	
        for (x = 0; x < grid_size_rows; x++) {
            for (y = 0; y < grid_size_rows; y++) {
                var image_html = "<IMG src=\"" + icons[key][y][x] + "\" class=\"" + get_size_class() + "\">";
@@ -158,8 +159,7 @@
                    break;
                default:
                    //alert(key+" "+i+" "+j)
-                   key = (links[key][i][j]);
-                   load_page(key);
+                   load_page(links[key][i][j]);
            }
        }
    }
@@ -242,6 +242,7 @@
 			arg=decodeURIComponent(arg)
 			arg=decodeURIComponent(arg)
 			arg=decodeURIComponent(arg)
+			arg=arg.replace(/\"/g,"") 
 			append(arg);
 			break;
 		case "open":
@@ -254,6 +255,7 @@
 			arg=decodeURIComponent(arg)
 			arg=decodeURIComponent(arg)
 			arg=decodeURIComponent(arg)
+			//the next line is to match what the python does for internal grid names
 			arg=arg.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(" ", "")
 			console.log("Arg becomes:"+arg)
 			load_page(arg);
