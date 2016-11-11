@@ -16,6 +16,7 @@
            if (req.readyState == 4 && req.status == 200) {
                var obj = JSON.parse(req.responseText);
                for (grid in obj.Grid) {
+		   console.log(obj.Grid[grid][0])
                    labels[obj.Grid[grid][0]] = obj.Grid[grid][1];
                    utterances[obj.Grid[grid][0]] = obj.Grid[grid][2];
                    links[obj.Grid[grid][0]] = obj.Grid[grid][3];
@@ -39,7 +40,7 @@
        area = document.getElementById('messagewindow');
        $(area).css('width', my_width);
        $(area).css('left', (720 / grid_size_columns) + 7);
-       $(area).css('top', 98);
+       $(area).css('top', 105);
        $(area).css('height', my_height);
    }
 
@@ -244,9 +245,18 @@
 			append(arg);
 			break;
 		case "open":
-			args=commandArray[i].split('(')[1];
-			args=args.substring(0,args.length-1);
-			load_page(args);
+			console.log("Open gets this far")
+			arg=commandArray[i].split('(')[1];
+			console.log("Args was:"+arg)
+			arg=arg.replace(/\'/g,"") 
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=decodeURIComponent(arg)
+			arg=arg.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(" ", "")
+			console.log("Arg becomes:"+arg)
+			load_page(arg);
 			break;
                default:
                    alert("Implementation error - an unrecognised OVF function was called");
