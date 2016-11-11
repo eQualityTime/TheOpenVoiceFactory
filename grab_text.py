@@ -154,8 +154,8 @@ class Grid:
                                 if hasattr(shape.fill, 'fore_color'):
                                         if (str(shape.fill.fore_color.type)
                                                 == "SCHEME (2)"):
-                                                self.colors[co][ro] = (
-                                                        200, 0, 0)
+                                                #self.colors[co][ro] = ( 200, 0, 0)
+						pass
                                         elif (str(shape.fill.fore_color.type) == "RGB (1)"):
                                                 # "We can use this color"
                                                 if bordercolor:

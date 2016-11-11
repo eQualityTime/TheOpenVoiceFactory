@@ -39,7 +39,7 @@
        area = document.getElementById('messagewindow');
        $(area).css('width', my_width);
        $(area).css('left', (720 / grid_size_columns) + 7);
-       $(area).css('top', 105);
+       $(area).css('top', 98);
        $(area).css('height', my_height);
    }
 
