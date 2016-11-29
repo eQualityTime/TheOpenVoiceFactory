@@ -327,7 +327,7 @@ def write_to_JSON(grids, filename):
 
 
 def create_icon_name(x, y, labels, links, slide_number):
-        name = "unknown"+str(slide_number)+str(x)+str(y)+".png"
+        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+".png"
         return name
 
 
