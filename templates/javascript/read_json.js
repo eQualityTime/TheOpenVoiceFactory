@@ -119,16 +119,16 @@
    //called from the html
 
    function append(text) {
-       document.myform.outputtext.value += text;
+           if (text.length == 1) { //so that we can spell with the single letter buttons
+		   document.myform.outputtext.value += text;
+           } else {
+		   document.myform.outputtext.value += " "+text;
+           }
    }
 
    function add(i, j) {
        if (links[key][i][j] == "") {
-           if (labels[key][i][j].length == 1) { //so that we can spell with the single letter buttons
                append(labels[key][i][j]);
-           } else {
-               append(" " + labels[key][i][j]);
-           }
        }
 
        if (links[key][i][j].includes("ovf(")) {
