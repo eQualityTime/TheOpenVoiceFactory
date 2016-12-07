@@ -271,19 +271,8 @@
 
    //calls the perl script that creates the *.wav file from the text given. This part requires an internet connection unless you can retarget to a local system (on a mac, for example, one can make a call to the command line utility 'say').
    function makeWav() {
-       $.get("getsound.pl?text=" + document.myform.outputtext.value + "&filename=" + SHA1(document.myform.outputtext.value));
-       setTimeout(callback, 500);
-       _gaq.push(["_trackEvent", "azulejoe", "speak", "makeWav", 5, true]);
-       return false;
-   }
-   //used within the above function - callback plays the wave that was created in makeWav() but only when it has finnished loading.
-   function callback() {
-       utter = document.myform.outputtext.value;
-       //the cb peramater is to force a reload, see http://stackoverflow.com/a/25823431/170243
-       var url = SHA1(document.myform.outputtext.value) + ".wav?cb=" + new Date().getTime();
-       var audio = new Audio(url);
-       audio.load();
-       audio.play();
+	   var utterance = new SpeechSynthesisUtterance(document.myform.outputtext.value);
+	   window.speechSynthesis.speak(utterance);
    }
 
    var azulejoe_scanning = false;
