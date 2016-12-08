@@ -18,30 +18,18 @@
 <br>
   <input type="radio" name="size" value="4"> 4 wide and 4 tall<br>
 <br>
-<h3>Spoken voice</h3>
+<h3>Voice</h3>
 <select name="lang" id="lang">
 </select>
 <br>
 <br>
 <br>
-    <input type="submit" value="Upload File" name="submit">
+    <input type="submit" value="Process uploaded file" name="submit">
 </form>
 
-<script> 
-window.speechSynthesis.onvoiceschanged = function() {
-    voices = window.speechSynthesis.getVoices();
-    var select = document.getElementById("lang");
-    for (i in voices){
-	console.log(voices[i].name+" "+voices[i].lang)
-		var opt = voices[i].name+" "+voices[i].lang
-	var el = document.createElement("option");
-	el.textContent = opt;
-	el.value = opt;
-	select.appendChild(el);
-    }		
-}
-</script>
-<p>Please note that at this stage of development, anyone with the correct link will be able to view your files. Please keep this in mind before uploading content that may be private. </p>
+<p>Please note that anyone with the correct link will be able to view your files. Please keep this in mind before uploading content that may be private. </p>
 </div>
+  <script src="choosevoice.js"></script>
+
 </body>
 </html> 
