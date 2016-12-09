@@ -23,6 +23,9 @@
                    icons[obj.Grid[grid][0]] = obj.Grid[grid][4];
                    colours[obj.Grid[grid][0]] = obj.Grid[grid][5];
                    slide_number[obj.Grid[grid][0]] = obj.Grid[grid][6];
+		   if(obj.Grid[grid][6]==0){
+			key=obj.Grid[grid][0]
+			}
                }
                grid_size_rows = obj.Settings[0];
                grid_size_columns = obj.Settings[0];
@@ -65,6 +68,11 @@
    function get_size_class() {
        return (grid_size_rows == 5 ? "five" : "four")
    };
+
+function get_toppage(){
+return 
+
+}
 
    function load_page(key_in) {
        key=key_in	
