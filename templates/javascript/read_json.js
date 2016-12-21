@@ -78,17 +78,24 @@ return
        key=key_in	
        for (x = 0; x < grid_size_rows; x++) {
            for (y = 0; y < grid_size_rows; y++) {
-               var image_html = "<IMG src=\"" + icons[key][y][x] + "\" class=\"" + get_size_class() + "\">";
-               compute_cell(x, y).css('background-color', "rgb(" + colours[key][y][x] + ")")
-               compute_cell(x, y).removeClass('note')
-               if (links[key][y][x]) {
-                   compute_cell(x, y).addClass('note')
-               }
-               compute_cell(x, y).html("<b>" + labels[key][y][x] + "</b><br>" + image_html);
-               if (icons[key][y][x] == "") {
-                   compute_cell(x, y).html("")
-               }
-           }
+		   try{
+		       var image_html = "<IMG src=\"" + icons[key][y][x] + "\" class=\"" + get_size_class() + "\">";
+		       compute_cell(x, y).css('background-color', "rgb(" + colours[key][y][x] + ")")
+		       compute_cell(x, y).removeClass('note')
+		       if (links[key][y][x]) {
+			   compute_cell(x, y).addClass('note')
+		       }
+		       compute_cell(x, y).html("<b>" + labels[key][y][x] + "</b><br>" + image_html);
+		       if (icons[key][y][x] == "") {
+			   compute_cell(x, y).html("")
+		       }
+		   }
+		   catch(err) {
+			   console.log("Error with key: "+key);
+			alert("There has been an exception: "+err.message)
+			start()
+		   }
+	   }
        }
    }
 
