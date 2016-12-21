@@ -284,7 +284,7 @@ return
 
    }
 
-   //calls the perl script that creates the *.wav file from the text given. This part requires an internet connection unless you can retarget to a local system (on a mac, for example, one can make a call to the command line utility 'say').
+   //calls the Google api from the text given. This part requires an internet connection unless you can retarget to a local system (on a mac, for example, one can make a call to the command line utility 'say').
    function makeWav() {
 	   var utterance = new SpeechSynthesisUtterance(document.myform.outputtext.value);
 	   var voicename=getParameterByName("lang")
