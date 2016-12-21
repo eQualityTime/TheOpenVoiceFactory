@@ -23,6 +23,9 @@
                    icons[obj.Grid[grid][0]] = obj.Grid[grid][4];
                    colours[obj.Grid[grid][0]] = obj.Grid[grid][5];
                    slide_number[obj.Grid[grid][0]] = obj.Grid[grid][6];
+		   if(obj.Grid[grid][6]==0){
+			key=obj.Grid[grid][0]
+			}
                }
                grid_size_rows = obj.Settings[0];
                grid_size_columns = obj.Settings[0];
@@ -66,21 +69,33 @@
        return (grid_size_rows == 5 ? "five" : "four")
    };
 
+function get_toppage(){
+return 
+
+}
+
    function load_page(key_in) {
        key=key_in	
        for (x = 0; x < grid_size_rows; x++) {
            for (y = 0; y < grid_size_rows; y++) {
-               var image_html = "<IMG src=\"" + icons[key][y][x] + "\" class=\"" + get_size_class() + "\">";
-               compute_cell(x, y).css('background-color', "rgb(" + colours[key][y][x] + ")")
-               compute_cell(x, y).removeClass('note')
-               if (links[key][y][x]) {
-                   compute_cell(x, y).addClass('note')
-               }
-               compute_cell(x, y).html("<b>" + labels[key][y][x] + "</b><br>" + image_html);
-               if (icons[key][y][x] == "") {
-                   compute_cell(x, y).html("")
-               }
-           }
+		   try{
+		       var image_html = "<IMG src=\"" + icons[key][y][x] + "\" class=\"" + get_size_class() + "\">";
+		       compute_cell(x, y).css('background-color', "rgb(" + colours[key][y][x] + ")")
+		       compute_cell(x, y).removeClass('note')
+		       if (links[key][y][x]) {
+			   compute_cell(x, y).addClass('note')
+		       }
+		       compute_cell(x, y).html("<b>" + labels[key][y][x] + "</b><br>" + image_html);
+		       if (icons[key][y][x] == "") {
+			   compute_cell(x, y).html("")
+		       }
+		   }
+		   catch(err) {
+			   console.log("Error with key: "+key);
+			alert("There has been an exception: "+err.message)
+			start()
+		   }
+	   }
        }
    }
 
@@ -119,16 +134,16 @@
    //called from the html
 
    function append(text) {
-       document.myform.outputtext.value += text;
+           if (text.length == 1) { //so that we can spell with the single letter buttons
+		   document.myform.outputtext.value += text;
+           } else {
+		   document.myform.outputtext.value += " "+text;
+           }
    }
 
    function add(i, j) {
        if (links[key][i][j] == "") {
-           if (labels[key][i][j].length == 1) { //so that we can spell with the single letter buttons
                append(labels[key][i][j]);
-           } else {
-               append(" " + labels[key][i][j]);
-           }
        }
 
        if (links[key][i][j].includes("ovf(")) {
@@ -271,20 +286,27 @@
 
    //calls the perl script that creates the *.wav file from the text given. This part requires an internet connection unless you can retarget to a local system (on a mac, for example, one can make a call to the command line utility 'say').
    function makeWav() {
-       $.get("getsound.pl?text=" + document.myform.outputtext.value + "&filename=" + SHA1(document.myform.outputtext.value));
-       setTimeout(callback, 500);
-       _gaq.push(["_trackEvent", "azulejoe", "speak", "makeWav", 5, true]);
-       return false;
+	   var utterance = new SpeechSynthesisUtterance(document.myform.outputtext.value);
+	   var voicename=getParameterByName("lang")
+	   utterance.voice=speechSynthesis.getVoices().filter(function(voice) { return voice.name == voicename; })[0];
+	   if (utterance.voice == null){
+	   utterance.voice=speechSynthesis.getVoices().filter(function(voice) { return voice.name == "Daniel"; })[0];
+}
+	   window.speechSynthesis.speak(utterance);
    }
-   //used within the above function - callback plays the wave that was created in makeWav() but only when it has finnished loading.
-   function callback() {
-       utter = document.myform.outputtext.value;
-       //the cb peramater is to force a reload, see http://stackoverflow.com/a/25823431/170243
-       var url = SHA1(document.myform.outputtext.value) + ".wav?cb=" + new Date().getTime();
-       var audio = new Audio(url);
-       audio.load();
-       audio.play();
-   }
+
+function getParameterByName(name, url) {
+//from http://stackoverflow.com/a/901144/170243
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
    var azulejoe_scanning = false;
 
