@@ -286,20 +286,27 @@ return
 
    //calls the perl script that creates the *.wav file from the text given. This part requires an internet connection unless you can retarget to a local system (on a mac, for example, one can make a call to the command line utility 'say').
    function makeWav() {
-       $.get("getsound.pl?text=" + document.myform.outputtext.value + "&filename=" + SHA1(document.myform.outputtext.value));
-       setTimeout(callback, 500);
-       _gaq.push(["_trackEvent", "azulejoe", "speak", "makeWav", 5, true]);
-       return false;
+	   var utterance = new SpeechSynthesisUtterance(document.myform.outputtext.value);
+	   var voicename=getParameterByName("lang")
+	   utterance.voice=speechSynthesis.getVoices().filter(function(voice) { return voice.name == voicename; })[0];
+	   if (utterance.voice == null){
+	   utterance.voice=speechSynthesis.getVoices().filter(function(voice) { return voice.name == "Daniel"; })[0];
+}
+	   window.speechSynthesis.speak(utterance);
    }
-   //used within the above function - callback plays the wave that was created in makeWav() but only when it has finnished loading.
-   function callback() {
-       utter = document.myform.outputtext.value;
-       //the cb peramater is to force a reload, see http://stackoverflow.com/a/25823431/170243
-       var url = SHA1(document.myform.outputtext.value) + ".wav?cb=" + new Date().getTime();
-       var audio = new Audio(url);
-       audio.load();
-       audio.play();
-   }
+
+function getParameterByName(name, url) {
+//from http://stackoverflow.com/a/901144/170243
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
    var azulejoe_scanning = false;
 
