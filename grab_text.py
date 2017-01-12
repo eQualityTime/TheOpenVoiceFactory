@@ -319,6 +319,69 @@ def create_json_object(grids):
         for_json["Grid"] = grid_json
         return for_json
 
+def create_obf_object(grids, i):
+        # Start the JSON output.
+        for_json = {}
+        for_json["format"] = "open-board-0.1"
+        for_json["name"] = "CommuniKate "+make_title(grids[i].tag)
+        for_json["locale"] = "en"
+        for_json["id"] = make_title(grids[i].tag)
+        for_json["grid"] = {}
+        for_json["images"] = []
+        for_json["sounds"] = []
+        for_json["grid"]["rows"] = gridSize
+        for_json["grid"]["columns"] = gridSize
+        for_json["buttons"] = []
+        grid = []
+        for row in range(gridSize):
+                grid_row = []
+                for col in range(gridSize):
+                        print grids[i].labels[col][row]
+                        if (len(grids[i].labels[col][row]) > 0):
+                                button = {}
+                                id = "{}{}".format(col, row)
+                                button["id"] = id
+                                grid_row.append(id)
+                                button["label"] = grids[i].labels[col][row]
+                                button["border_color"] = "rgb(68,68,68)"
+                                hope = str(type(grids[i].colors[col][row]))
+                                if("pptx" in hope):
+                                        color = grids[i].colors[col][row]
+                                        button["background_color"] = "rgb({},{},{})".format(
+                                            color[0], color[1], color[2])
+                                else:
+                                        button["background_color"] = "rgb(0,0,0)"
+                                button["image_id"] = grids[i].icons[col][row]
+                                for_json["buttons"].append(button)
+                        else:
+                                grid_row.append(None)
+                grid.append(grid_row)
+        for_json["grid"]["order"] = grid
+        images=[]
+        for row in range(gridSize):
+                for col in range(gridSize):
+                    if (len(grids[i].icons[col][row])>2):
+                        img = {}
+                        img["content_type"] = "image/png"
+                        id = "{}{}image".format(col, row)
+                        img["id"] = id
+                        img["width"] = 300
+                        img["height"] = 300
+                        img["path"]=grids[i].icons[col][row]
+                        images.append(img)
+        for_json["images"]=images
+
+        return for_json
+
+
+def write_to_obf(grids, filename):
+        for_json = create_obf_object(grids, 0)
+        with open(filename, 'w') as outfile:
+                json.dump(for_json, outfile, sort_keys=True, indent=2)
+
+
+
+
 
 def write_to_JSON(grids, filename):
         for_json = create_json_object(grids)
@@ -377,5 +440,7 @@ if __name__ == "__main__":
         grids = extract_grid(prs)
         grids = extract_and_label_images(prs, grids, dest)
         write_to_JSON(grids, dest+'/pageset.json')
+        write_to_obf(grids, dest+'/pageset.obf')
+
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
