@@ -334,55 +334,54 @@ def create_obf_manifest(grid,dest):
 
 
 
-def create_obf_object(grids, i):
+def create_obf_object(grid):
         # Start the JSON output.
         for_json = {}
         for_json["format"] = "open-board-0.1"
-        for_json["name"] = "CommuniKate "+make_title(grids[i].tag)
+        for_json["name"] = "CommuniKate "+make_title(grid.tag)
         for_json["locale"] = "en"
-        for_json["id"] = make_title(grids[i].tag)
+        for_json["id"] = make_title(grid.tag)
         for_json["grid"] = {}
         for_json["images"] = []
         for_json["sounds"] = []
         for_json["grid"]["rows"] = gridSize
         for_json["grid"]["columns"] = gridSize
         for_json["buttons"] = []
-        grid = []
+        ovfgrid = []
         for row in range(gridSize):
                 grid_row = []
                 for col in range(gridSize):
-                        print grids[i].labels[col][row]
-                        if (len(grids[i].labels[col][row]) > 0):
+                        if (len(grid.labels[col][row]) > 0):
                                 button = {}
                                 id = "{}{}".format(col, row)
                                 button["id"] = id
                                 grid_row.append(id)
-                                button["label"] = grids[i].labels[col][row]
+                                button["label"] = grid.labels[col][row]
                                 button["border_color"] = "rgb(68,68,68)"
-                                hope = str(type(grids[i].colors[col][row]))
+                                hope = str(type(grid.colors[col][row]))
                                 if("pptx" in hope):
-                                        color = grids[i].colors[col][row]
+                                        color = grid.colors[col][row]
                                         button["background_color"] = "rgb({},{},{})".format(
                                             color[0], color[1], color[2])
                                 else:
                                         button["background_color"] = "rgb(0,0,0)"
-                                button["image_id"] = grids[i].icons[col][row]
+                                button["image_id"] = grid.icons[col][row]
                                 for_json["buttons"].append(button)
                         else:
                                 grid_row.append(None)
-                grid.append(grid_row)
-        for_json["grid"]["order"] = grid
+                ovfgrid.append(grid_row)
+        for_json["grid"]["order"] = ovfgrid
         images=[]
         for row in range(gridSize):
                 for col in range(gridSize):
-                    if (len(grids[i].icons[col][row])>2):
+                    if (len(grid.icons[col][row])>2):
                         img = {}
                         img["content_type"] = "image/png"
                         id = "{}{}image".format(col, row)
                         img["id"] = id
                         img["width"] = 300
                         img["height"] = 300
-                        img["path"]=grids[i].icons[col][row]
+                        img["path"]=grid.icons[col][row]
                         images.append(img)
         for_json["images"]=images
 
@@ -390,12 +389,13 @@ def create_obf_object(grids, i):
 
 
 def write_to_obf(grids, dest):
-        board_number=0
-        for_json = create_obf_object(grids, board_number)
-        filename=dest+'/obf/boards/'+make_title(grids[board_number].tag)+'.obf'
+    for tok in grids:
+        for_json = create_obf_object(tok)
+        filename=dest+'/obf/boards/'+make_title(tok.tag)+'.obf'
         filename=filename.encode('ascii', 'ignore')
         with open(filename, 'w') as outfile:
                 json.dump(for_json, outfile, sort_keys=True, indent=2)
+
 
 
 
@@ -414,10 +414,10 @@ def create_icon_name(x, y, labels, links, slide_number):
 
 def extract_and_label_images(prs, grids, filename, SAVE=True):
         # Deal with the images
-        image_slight_number = 0
+        image_slide_number = 0
         for slide in prs.slides:
-                export_images(grids, image_slight_number, slide, filename, SAVE)
-                image_slight_number += 1
+                export_images(grids, image_slide_number, slide, filename, SAVE)
+                image_slide_number += 1
         return grids
 
 
