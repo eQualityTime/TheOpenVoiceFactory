@@ -8,6 +8,7 @@ from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pprint import pprint
 import json
+import zipfile
 import io
 import os
 import math
@@ -155,7 +156,7 @@ class Grid:
                                         if (str(shape.fill.fore_color.type)
                                                 == "SCHEME (2)"):
                                                 #self.colors[co][ro] = ( 200, 0, 0)
-						pass
+                                                pass
                                         elif (str(shape.fill.fore_color.type) == "RGB (1)"):
                                                 # "We can use this color"
                                                 if bordercolor:
@@ -168,7 +169,6 @@ class Grid:
                                         else:
                                                 print "Something new has happened."
                                                 print "A"+str(shape.fill.fore_color.type)+"A"
-
 
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
@@ -319,19 +319,23 @@ def create_json_object(grids):
         for_json["Grid"] = grid_json
         return for_json
 
-def create_obf_manifest(grid,dest):
-#Create the manifest
-  with open(dest+"/obf/manifest.json","w") as manifest:
-            manifest.write("""{{
+
+def create_obf_manifest(list_of_board_names, dest):
+        # Create the manifest
+        root = list_of_board_names['toppage']
+        string_of_board_names = json.dumps(list_of_board_names)
+        print string_of_board_names
+        print "XXXXXXXXXXXXXXX"
+        with open(dest+"/obf/manifest.json", "w") as manifest:
+                manifest.write("""{{
   "format": "open-board-0.1",
   "root": "{}",
   "paths": {{
     "boards": {{
-      "random": "{}"
+      {}
     }}
   }}
-}}""".format("boards/complex.obf","boards/complex.obf"))
-
+}}""".format(root, string_of_board_names))
 
 
 def create_obf_object(grid):
@@ -371,32 +375,42 @@ def create_obf_object(grid):
                                 grid_row.append(None)
                 ovfgrid.append(grid_row)
         for_json["grid"]["order"] = ovfgrid
-        images=[]
-        for row in range(gridSize):
-                for col in range(gridSize):
-                    if (len(grid.icons[col][row])>2):
-                        img = {}
-                        img["content_type"] = "image/png"
-                        id = "{}{}image".format(col, row)
-                        img["id"] = id
-                        img["width"] = 300
-                        img["height"] = 300
-                        img["path"]=grid.icons[col][row]
-                        images.append(img)
-        for_json["images"]=images
-
+      #  images=[]
+      #  for row in range(gridSize):
+      #          for col in range(gridSize):
+      #              if (len(grid.icons[col][row])>2):
+      #                  img = {}
+      #                  img["content_type"] = "image/png"
+      #                  id = "{}{}image".format(col, row)
+      #                  img["id"] = id
+      #                  img["width"] = 300
+      #                  img["height"] = 300
+      #                  img["path"]=grid.icons[col][row]
+      #                  images.append(img)
+      #  for_json["images"]=images
         return for_json
 
 
 def write_to_obf(grids, dest):
-    for tok in grids:
-        for_json = create_obf_object(tok)
-        filename=dest+'/obf/boards/'+make_title(tok.tag)+'.obf'
-        filename=filename.encode('ascii', 'ignore')
-        with open(filename, 'w') as outfile:
-                json.dump(for_json, outfile, sort_keys=True, indent=2)
-
-
+        #Lots of relative addressing going on here.
+        list_of_board_names = {}
+        owd = os.getcwd()
+        for tok in grids:
+                for_json = create_obf_object(tok)
+                filename = 'boards/'+make_title(tok.tag)+'.obf'
+                list_of_board_names[make_title(tok.tag)]=filename
+                filename = filename.encode('ascii', 'ignore')
+                with open(dest+'/obf/'+filename, 'w') as outfile:
+                        json.dump(for_json, outfile, sort_keys=True, indent=2)
+        create_obf_manifest(list_of_board_names, dest)
+        os.chdir(dest+'/obf')
+        outzipfile = 'pageset.obz'
+        list_of_board_names['manifest']='manifest.json'
+        with zipfile.ZipFile(outzipfile, "w") as w:
+                for x in list_of_board_names.values():
+                        print "Adding "+x
+                        w.write(x)
+        os.chdir(owd)
 
 
 
@@ -408,7 +422,8 @@ def write_to_JSON(grids, filename):
 
 
 def create_icon_name(x, y, labels, links, slide_number):
-        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(labels[x][y]).encode('ascii', 'ignore')+".png"
+        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
+                labels[x][y]).encode('ascii', 'ignore')+".png"
         return name
 
 
@@ -459,6 +474,5 @@ if __name__ == "__main__":
         grids = extract_and_label_images(prs, grids, dest)
         write_to_JSON(grids, dest+'/pageset.json')
         write_to_obf(grids, dest)
-
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
