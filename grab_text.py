@@ -331,9 +331,9 @@ def create_obf_manifest(list_of_board_names, dest):
   "format": "open-board-0.1",
   "root": "{}",
   "paths": {{
-    "boards": {{
+    "boards":
       {}
-    }}
+
   }}
 }}""".format(root, string_of_board_names))
 
@@ -370,6 +370,10 @@ def create_obf_object(grid):
                                 else:
                                         button["background_color"] = "rgb(0,0,0)"
                                 button["image_id"] = grid.icons[col][row]
+#                                if len(grid.links[col][row]) > 1:
+#                                    button["load_board"]= { "path": "boards/"+grid.links[col][row]+".obf" }
+
+
                                 for_json["buttons"].append(button)
                         else:
                                 grid_row.append(None)
