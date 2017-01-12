@@ -319,6 +319,21 @@ def create_json_object(grids):
         for_json["Grid"] = grid_json
         return for_json
 
+def create_obf_manifest(grid,dest):
+#Create the manifest
+  with open(dest+"/obf/manifest.json","w") as manifest:
+            manifest.write("""{{
+  "format": "open-board-0.1",
+  "root": "{}",
+  "paths": {{
+    "boards": {{
+      "random": "{}"
+    }}
+  }}
+}}""".format("boards/complex.obf","boards/complex.obf"))
+
+
+
 def create_obf_object(grids, i):
         # Start the JSON output.
         for_json = {}
@@ -374,8 +389,11 @@ def create_obf_object(grids, i):
         return for_json
 
 
-def write_to_obf(grids, filename):
-        for_json = create_obf_object(grids, 0)
+def write_to_obf(grids, dest):
+        board_number=0
+        for_json = create_obf_object(grids, board_number)
+        filename=dest+'/obf/boards/'+make_title(grids[board_number].tag)+'.obf'
+        filename=filename.encode('ascii', 'ignore')
         with open(filename, 'w') as outfile:
                 json.dump(for_json, outfile, sort_keys=True, indent=2)
 
@@ -440,7 +458,7 @@ if __name__ == "__main__":
         grids = extract_grid(prs)
         grids = extract_and_label_images(prs, grids, dest)
         write_to_JSON(grids, dest+'/pageset.json')
-        write_to_obf(grids, dest+'/pageset.obf')
+        write_to_obf(grids, dest)
 
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
