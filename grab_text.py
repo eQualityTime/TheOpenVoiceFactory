@@ -179,7 +179,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 1:
-                                                                print self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro]
+                                                                print "Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro]
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
@@ -204,7 +204,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         grid = grids[slide_number]
         images = {}
         labels = grid.labels
-        print "Extracting Symbols {}".format(slide_number)
+#        print "Extracting Symbols {}".format(slide_number)
         for shape in slide.shapes:
                 try:
                         if not hasattr(shape, "shape_type"):
@@ -217,6 +217,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                                         images[co, ro] = []
                                 images[co, ro].append(shape)
                 except:
+                        print "exception at at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
                         print "exception 23204234 triggered"
                         continue
         if IMAGE_WARNING:
@@ -345,7 +346,7 @@ def extract_grid(prs):
         debug_no = 0
         for slide in prs.slides:
                 debug_no += 1
-                print "Slide: {}".format(debug_no)
+#                print "Slide: {}".format(debug_no)
                 grids.append(Grid(prs, slide, gridSize))
         debug_no = 0
         for tok in grids:
