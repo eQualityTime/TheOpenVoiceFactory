@@ -249,41 +249,43 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                 # Size of combined image, in actual pixels (not PPTX units)
                 # If scales differ between objects, we resize
                 # them next
-                w = (r-l)/scale
-                h = (b-t)/scale
-                composite = Image.new('RGBA', (w, h))
+                try:
+                    w = (r-l)/scale
+                    h = (b-t)/scale
+                    composite = Image.new('RGBA', (w, h))
 
-                # Add all the images together.
-                for shape in images[x, y]:
-                                        # TODO: flipping.
-                        try:
-                                part = Image.open(
-                                    io.BytesIO(
-                                        shape.image.blob))
-                                part.load()
-                                width = part.size[0]
-                                height = part.size[1]
-                                left = shape.crop_left*width
-                                right = (1-shape.crop_right)*width
-                                top = shape.crop_top*height
-                                bottom = (1-shape.crop_bottom)*height
-                                box = (int(left),
-                                       int(top),
-                                       int(right),
-                                       int(bottom))
-                                part = part.crop(box)
-                                partScale = (shape.width / part.size[0])
-                                # part.size because it might have been cropped
-                                part = resizeImage(part, partScale / scale)
-                                composite.paste(
-                                    part,
-                                    ((shape.left - l)/scale,
-                                     (shape.top - t)/scale))
-        # part.split()[0])  # This masks out transparent pixels
-                        except IOError:
-                                print "Error reading image for {} {}".format(x, y)
-                        except ValueErrorr:
-                                print "Error reading image for {} {}".format(x, y)
+                    # Add all the images together.
+                    for shape in images[x, y]:
+                                            # TODO: flipping.
+                                    part = Image.open(
+                                        io.BytesIO(
+                                            shape.image.blob))
+                                    part.load()
+                                    width = part.size[0]
+                                    height = part.size[1]
+                                    left = shape.crop_left*width
+                                    right = (1-shape.crop_right)*width
+                                    top = shape.crop_top*height
+                                    bottom = (1-shape.crop_bottom)*height
+                                    box = (int(left),
+                                           int(top),
+                                           int(right),
+                                           int(bottom))
+                                    part = part.crop(box)
+                                    partScale = (shape.width / part.size[0])
+                                    # part.size because it might have been cropped
+                                    part = resizeImage(part, partScale / scale)
+                                    composite.paste(
+                                        part,
+                                        ((shape.left - l)/scale,
+                                         (shape.top - t)/scale))
+            # part.split()[0])  # This masks out transparent pixels
+                except IOError as e:
+                        print "Error reading image for {} {}".format(x, y)
+                        if ("cannot find loader for this WMF file" in e):
+                            print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x,y,slide_number)
+                except ValueError:
+                        print "Error reading image for {} {}".format(x, y)
 
                 # Crop final image.
                 bbox = composite.getbbox()
