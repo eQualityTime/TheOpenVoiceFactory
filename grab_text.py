@@ -279,28 +279,26 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                                         part,
                                         ((shape.left - l)/scale,
                                          (shape.top - t)/scale))
-            # part.split()[0])  # This masks out transparent pixels
+                    # Crop final image.
+                    bbox = composite.getbbox()
+                    composite = composite.crop(bbox)
+
+                    # Save!
+                    grid.icons[x][
+                            y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
+                    name = create_icon_name(x, y, labels, grid.links, slide_number)
+                    # print name
+                    if SAVE:
+                            folder = filename+"/icons/"  # + str(slide_number)
+                            if not os.path.exists(folder):
+                                    os.makedirs(folder)
+                            composite.save(folder + "" + name)
                 except IOError as e:
                         print "Error reading image for {} {}".format(x, y)
                         if ("cannot find loader for this WMF file" in e):
                             print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x,y,slide_number)
                 except ValueError:
                         print "Error reading image for {} {}".format(x, y)
-
-                # Crop final image.
-                bbox = composite.getbbox()
-                composite = composite.crop(bbox)
-
-                # Save!
-                grid.icons[x][
-                        y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
-                name = create_icon_name(x, y, labels, grid.links, slide_number)
-                # print name
-                if SAVE:
-                        folder = filename+"/icons/"  # + str(slide_number)
-                        if not os.path.exists(folder):
-                                os.makedirs(folder)
-                        composite.save(folder + "" + name)
 
 
 def create_json_object(grids):
