@@ -240,16 +240,16 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                 b = max([shape.top +
                          shape.height for shape in images[x, y]])
 
-                # Scale gives us the mapping from image pixels to powerpoint
-                # distance units. This depends on the resolution
-                # of the images.
-                scale = min([shape.width/shape.image.size[0]
-                             for shape in images[x, y]])
-
-                # Size of combined image, in actual pixels (not PPTX units)
-                # If scales differ between objects, we resize
-                # them next
                 try:
+                    # Scale gives us the mapping from image pixels to powerpoint
+                    # distance units. This depends on the resolution
+                    # of the images.
+                    scale = min([shape.width/shape.image.size[0]
+                                 for shape in images[x, y]])
+
+                    # Size of combined image, in actual pixels (not PPTX units)
+                    # If scales differ between objects, we resize
+                    # them next
                     w = (r-l)/scale
                     h = (b-t)/scale
                     composite = Image.new('RGBA', (w, h))
@@ -296,6 +296,8 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                 except IOError as e:
                         print "Error reading image for {} {}".format(x, y)
                         if ("cannot find loader for this WMF file" in e):
+                            print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x,y,slide_number)
+                        if ("cannot identify image file" in e):
                             print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x,y,slide_number)
                 except ValueError:
                         print "Error reading image for {} {}".format(x, y)
