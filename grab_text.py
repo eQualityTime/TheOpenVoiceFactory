@@ -320,10 +320,11 @@ def create_json_object(grids):
         return for_json
 
 
-def create_obf_manifest(list_of_board_names, dest):
+def create_obf_manifest(boards_names_dic, image_names_dic, dest):
         # Create the manifest
-        root = list_of_board_names['toppage']
-        string_of_board_names = json.dumps(list_of_board_names)
+        root = boards_names_dic['toppage']
+        string_of_board_names = json.dumps(boards_names_dic)
+        string_of_image_names = json.dumps(images_names_dic)
         print string_of_board_names
         print "XXXXXXXXXXXXXXX"
         with open(dest+"/data/manifest.json", "w") as manifest:
@@ -338,7 +339,7 @@ def create_obf_manifest(list_of_board_names, dest):
 }}
 
   }}
-}}""".format(root, string_of_board_names))
+}}""".format(root, string_of_board_names, string_of_image_names))
 
 
 def create_obf_object(grid):
@@ -365,7 +366,6 @@ def create_obf_object(grid):
                                 grid_row.append(id)
                                 button["label"] = grid.labels[col][row]
                                 button["border_color"] = "rgb(68,68,68)"
-                                button["image_id"]="2"
                                 hope = str(type(grid.colors[col][row]))
                                 if("pptx" in hope):
                                         color = grid.colors[col][row]
@@ -373,7 +373,7 @@ def create_obf_object(grid):
                                             color[0], color[1], color[2])
                                 else:
                                         button["background_color"] = "rgb(0,0,0)"
-                             #   button["image_id"] = grid.icons[col][row]
+                                button["image_id"] = grid.icons[col][row]
                                 if len(grid.links[col][row]) > 1:
                                    if "special::" not in grid.links[col][row]:
                                       if "ovf(" not in grid.links[col][row]:
@@ -393,11 +393,10 @@ def create_obf_object(grid):
         img = {}
         img["content_type"] = "image/png"
         #                  id = "{}{}image".format(col, row)
-        img["id"] = "2"
+        img["id"] = grid.icons[col][row]
         img["width"] = 300
         img["height"] = 300
-        img["path"]="images/happy.png"
-    #                  img["path"]=grid.icons[col][row]
+        img["path"]=grid.icons[col][row]
         images.append(img)
         for_json["images"]=images
         return for_json
@@ -405,22 +404,23 @@ def create_obf_object(grid):
 
 def write_to_obf(grids, dest):
         #Lots of relative addressing going on here.
-        list_of_board_names = {}
+        boards_names_dic = {}
+        image_names_dic = {}
         owd = os.getcwd()
         for tok in grids:
                 for_json = create_obf_object(tok)
                 filename = 'boards/'+make_title(tok.tag)+'.obf'
-                list_of_board_names[make_title(tok.tag)]=filename
+                boards_names_dic[make_title(tok.tag)]=filename
                 filename = filename.encode('ascii', 'ignore')
                 with open(dest+'/data/'+filename, 'w') as outfile:
                         json.dump(for_json, outfile, sort_keys=True, indent=2)
-        create_obf_manifest(list_of_board_names, dest)
+        create_obf_manifest(boards_names_dic,image_names_dic, dest)
         os.chdir(dest+'/data')
         outzipfile = 'pageset.obz'
-        list_of_board_names['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
-        list_of_board_names['images']='images/happy.png'
+        boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
+        boards_names_dic['images']='images/happy.png'
         with zipfile.ZipFile(outzipfile, "w") as w:
-                for x in list_of_board_names.values():
+                for x in boards_names_dic.values():
                         print "Adding "+x
                         w.write(x)
         os.chdir(owd)
