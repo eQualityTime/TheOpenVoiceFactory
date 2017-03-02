@@ -290,11 +290,11 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
 
                 # Save!
                 grid.icons[x][
-                        y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
+                        y] = "data/images/" + create_icon_name(x, y, labels, grid.links, slide_number)
                 name = create_icon_name(x, y, labels, grid.links, slide_number)
                 # print name
                 if SAVE:
-                        folder = filename+"/icons/"  # + str(slide_number)
+                        folder = filename+"/data/images/"  # + str(slide_number)
                         if not os.path.exists(folder):
                                 os.makedirs(folder)
                         composite.save(folder + "" + name)
@@ -326,7 +326,7 @@ def create_obf_manifest(list_of_board_names, dest):
         string_of_board_names = json.dumps(list_of_board_names)
         print string_of_board_names
         print "XXXXXXXXXXXXXXX"
-        with open(dest+"/obf/manifest.json", "w") as manifest:
+        with open(dest+"/data/manifest.json", "w") as manifest:
                 manifest.write("""{{
   "format": "open-board-0.1",
   "root": "{}",
@@ -412,10 +412,10 @@ def write_to_obf(grids, dest):
                 filename = 'boards/'+make_title(tok.tag)+'.obf'
                 list_of_board_names[make_title(tok.tag)]=filename
                 filename = filename.encode('ascii', 'ignore')
-                with open(dest+'/obf/'+filename, 'w') as outfile:
+                with open(dest+'/data/'+filename, 'w') as outfile:
                         json.dump(for_json, outfile, sort_keys=True, indent=2)
         create_obf_manifest(list_of_board_names, dest)
-        os.chdir(dest+'/obf')
+        os.chdir(dest+'/data')
         outzipfile = 'pageset.obz'
         list_of_board_names['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
         list_of_board_names['images']='images/happy.png'
