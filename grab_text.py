@@ -324,7 +324,7 @@ def create_obf_manifest(boards_names_dic, image_names_dic, dest):
         # Create the manifest
         root = boards_names_dic['toppage']
         string_of_board_names = json.dumps(boards_names_dic)
-        string_of_image_names = json.dumps(images_names_dic)
+        string_of_image_names = json.dumps(image_names_dic)
         print string_of_board_names
         print "XXXXXXXXXXXXXXX"
         with open(dest+"/data/manifest.json", "w") as manifest:
@@ -334,9 +334,8 @@ def create_obf_manifest(boards_names_dic, image_names_dic, dest):
   "paths": {{
     "boards":
       {},
-"images": {{
-"2": "images/happy.png"
-}}
+"images":
+{}
 
   }}
 }}""".format(root, string_of_board_names, string_of_image_names))
@@ -409,6 +408,8 @@ def write_to_obf(grids, dest):
         owd = os.getcwd()
         for tok in grids:
                 for_json = create_obf_object(tok)
+                for image in for_json["images"]:
+                     image_names_dic[image['id']]=image['path']
                 filename = 'boards/'+make_title(tok.tag)+'.obf'
                 boards_names_dic[make_title(tok.tag)]=filename
                 filename = filename.encode('ascii', 'ignore')
@@ -418,7 +419,6 @@ def write_to_obf(grids, dest):
         os.chdir(dest+'/data')
         outzipfile = 'pageset.obz'
         boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
-        boards_names_dic['images']='images/happy.png'
         with zipfile.ZipFile(outzipfile, "w") as w:
                 for x in boards_names_dic.values():
                         print "Adding "+x
