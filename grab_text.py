@@ -370,8 +370,10 @@ def create_obf_object(grid):
                                 else:
                                         button["background_color"] = "rgb(0,0,0)"
                                 button["image_id"] = grid.icons[col][row]
-#                                if len(grid.links[col][row]) > 1:
-#                                    button["load_board"]= { "path": "boards/"+grid.links[col][row]+".obf" }
+                                if len(grid.links[col][row]) > 1:
+                                   if "special::" not in grid.links[col][row]:
+                                      if "ovf(" not in grid.links[col][row]:
+                                        button["load_board"]= { "path": "boards/"+grid.links[col][row]+".obf" }
 
 
                                 for_json["buttons"].append(button)
