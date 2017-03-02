@@ -332,7 +332,10 @@ def create_obf_manifest(list_of_board_names, dest):
   "root": "{}",
   "paths": {{
     "boards":
-      {}
+      {},
+"images": {{
+"2": "images/happy.png"
+}}
 
   }}
 }}""".format(root, string_of_board_names))
@@ -362,6 +365,7 @@ def create_obf_object(grid):
                                 grid_row.append(id)
                                 button["label"] = grid.labels[col][row]
                                 button["border_color"] = "rgb(68,68,68)"
+                                button["image_id"]="2"
                                 hope = str(type(grid.colors[col][row]))
                                 if("pptx" in hope):
                                         color = grid.colors[col][row]
@@ -369,7 +373,7 @@ def create_obf_object(grid):
                                             color[0], color[1], color[2])
                                 else:
                                         button["background_color"] = "rgb(0,0,0)"
-                                button["image_id"] = grid.icons[col][row]
+                             #   button["image_id"] = grid.icons[col][row]
                                 if len(grid.links[col][row]) > 1:
                                    if "special::" not in grid.links[col][row]:
                                       if "ovf(" not in grid.links[col][row]:
@@ -381,19 +385,21 @@ def create_obf_object(grid):
                                 grid_row.append(None)
                 ovfgrid.append(grid_row)
         for_json["grid"]["order"] = ovfgrid
-      #  images=[]
-      #  for row in range(gridSize):
-      #          for col in range(gridSize):
-      #              if (len(grid.icons[col][row])>2):
-      #                  img = {}
-      #                  img["content_type"] = "image/png"
-      #                  id = "{}{}image".format(col, row)
-      #                  img["id"] = id
-      #                  img["width"] = 300
-      #                  img["height"] = 300
-      #                  img["path"]=grid.icons[col][row]
-      #                  images.append(img)
-      #  for_json["images"]=images
+        images=[]
+
+        #  for row in range(gridSize):
+        #          for col in range(gridSize):
+        #              if (len(grid.icons[col][row])>2):
+        img = {}
+        img["content_type"] = "image/png"
+        #                  id = "{}{}image".format(col, row)
+        img["id"] = "2"
+        img["width"] = 300
+        img["height"] = 300
+        img["path"]="images/happy.png"
+    #                  img["path"]=grid.icons[col][row]
+        images.append(img)
+        for_json["images"]=images
         return for_json
 
 
@@ -411,7 +417,8 @@ def write_to_obf(grids, dest):
         create_obf_manifest(list_of_board_names, dest)
         os.chdir(dest+'/obf')
         outzipfile = 'pageset.obz'
-        list_of_board_names['manifest']='manifest.json'
+        list_of_board_names['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
+        list_of_board_names['images']='images/happy.png'
         with zipfile.ZipFile(outzipfile, "w") as w:
                 for x in list_of_board_names.values():
                         print "Adding "+x
