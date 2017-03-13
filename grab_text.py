@@ -290,7 +290,7 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
 
                 # Save!
                 grid.icons[x][
-                        y] = "data/images/" + create_icon_name(x, y, labels, grid.links, slide_number)
+                        y] = "" + create_icon_name(x, y, labels, grid.links, slide_number)
                 name = create_icon_name(x, y, labels, grid.links, slide_number)
                 # print name
                 if SAVE:
@@ -386,17 +386,17 @@ def create_obf_object(grid):
         for_json["grid"]["order"] = ovfgrid
         images=[]
 
-        #  for row in range(gridSize):
-        #          for col in range(gridSize):
-        #              if (len(grid.icons[col][row])>2):
-        img = {}
-        img["content_type"] = "image/png"
-        #                  id = "{}{}image".format(col, row)
-        img["id"] = grid.icons[col][row]
-        img["width"] = 300
-        img["height"] = 300
-        img["path"]=grid.icons[col][row]
-        images.append(img)
+        for row in range(gridSize):
+            for col in range(gridSize):
+                if (len(grid.icons[col][row])>2):
+                    img = {}
+                    img["content_type"] = "image/png"
+                    #                  id = "{}{}image".format(col, row)
+                    img["id"] = grid.icons[col][row]
+                    img["width"] = 300
+                    img["height"] = 300
+                    img["path"]="images/"+grid.icons[col][row]
+                    images.append(img)
         for_json["images"]=images
         return for_json
 
