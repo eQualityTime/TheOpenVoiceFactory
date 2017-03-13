@@ -421,7 +421,8 @@ def write_to_obf(grids, dest):
         boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
         with zipfile.ZipFile(outzipfile, "w") as w:
                 for x in boards_names_dic.values():
-                        print "Adding "+x
+                        w.write(x)
+                for x in image_names_dic.values():
                         w.write(x)
         os.chdir(owd)
 
