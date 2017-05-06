@@ -1,4 +1,4 @@
-package mobile.theopenvoicefactory.org.theopenvoicefactory;
+package mobile.theopenvoicefactory.org.theopenvoicefactory.util;
 
 import android.annotation.TargetApi;
 import android.content.Context;
