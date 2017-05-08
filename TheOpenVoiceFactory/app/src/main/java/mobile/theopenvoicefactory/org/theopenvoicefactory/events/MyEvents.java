@@ -1,4 +1,4 @@
-package mobile.theopenvoicefactory.org.theopenvoicefactory;
+package mobile.theopenvoicefactory.org.theopenvoicefactory.events;
 
 import mobile.theopenvoicefactory.org.theopenvoicefactory.model.Grid;
 

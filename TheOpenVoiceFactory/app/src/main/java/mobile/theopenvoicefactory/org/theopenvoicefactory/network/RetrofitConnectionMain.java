@@ -18,11 +18,17 @@ public class RetrofitConnectionMain {
     private static final String TAG = RetrofitConnectionMain.class.getSimpleName();
 
     private static final String BASE_URL = "http://equalitytime.github.io/";        //staging instance
-    private static Context mContext;
 
     public static Retrofit provideRetrofit(String path) {
         return new Retrofit.Builder()
                 .baseUrl(path)
+                .client(provideOkHttpClient())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
+    public static Retrofit provideRetrofit() {
+        return new Retrofit.Builder()
                 .client(provideOkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -62,12 +68,11 @@ public class RetrofitConnectionMain {
         }
     }
 
-    public static ApiInterface getService() {
-        return provideRetrofit(BASE_URL).create(ApiInterface.class);
-    }
+//    public static ApiInterface getService() {
+//        return provideRetrofit().create(ApiInterface.class);
+//    }
 
-    public static ApiInterface getService(Context context) {
-        mContext = context;
+    public static ApiInterface getService() {
         return provideRetrofit(BASE_URL).create(ApiInterface.class);
     }
 }

@@ -1,11 +1,7 @@
 package mobile.theopenvoicefactory.org.theopenvoicefactory.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.os.Build;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
@@ -22,7 +18,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import mobile.theopenvoicefactory.org.theopenvoicefactory.MyEvents;
+import mobile.theopenvoicefactory.org.theopenvoicefactory.events.MyEvents;
 import mobile.theopenvoicefactory.org.theopenvoicefactory.R;
 import mobile.theopenvoicefactory.org.theopenvoicefactory.model.Grid;
 
@@ -34,6 +30,7 @@ public class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context mContext;
     private List<Grid> mGrids;
+    private String imgBaseUrl;
 
     public GridAdapter(Context context, List<Grid> grids) {
         this.mContext = context;
@@ -71,6 +68,10 @@ public class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return viewHolder;
     }
 
+    public void setImageUrl(String baseUrl) {
+        this.imgBaseUrl = baseUrl;
+    }
+
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
@@ -86,12 +87,13 @@ public class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             viewHolder.title.setVisibility(View.VISIBLE);
         }
 
-        Glide.with(mContext).load("http://equalitytime.github.io/CommuniKate/demos/CK20V2.pptx/" + grid.getIconUrl()).into(viewHolder.imageView);
+        Glide.with(mContext).load(imgBaseUrl + grid.getIconUrl()).into(viewHolder.imageView);
         viewHolder.container.setTag(position);
 
         GradientDrawable border = new GradientDrawable();
-        border.setColor(grid.getColor()); //white background
-        border.setStroke(1, 0xFF000000); //black border with full opacity
+        border.setColor(grid.getColor());
+        border.setStroke(1, 0xFF000000);                 //black border with full opacity
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             viewHolder.container.setBackground(border);
         } else {
