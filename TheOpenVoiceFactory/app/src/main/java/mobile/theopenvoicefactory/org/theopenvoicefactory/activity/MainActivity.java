@@ -22,6 +22,7 @@ import android.support.v7.widget.SwitchCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CompoundButton;
@@ -108,6 +109,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     private boolean isScanning = false;
 
+    int timeSec;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +148,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                     stopScan();
                     isScanning = false;
                 }
+
+                layout.requestDisallowInterceptTouchEvent(!isScanning);
             }
         });
 
@@ -176,6 +181,33 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 }
             }
         });
+
+      /* layout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(isScanning) {
+                    Grid grid = mGrid.get((scanIndex == 0)?(mGrid.size()-1):(scanIndex-1));
+                    handleClicks(grid);
+                }
+
+                return true;
+            }
+        });*/
+
+        gridView.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener() {
+            @Override
+            public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+                switch (e.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        if(isScanning) {
+                            layout.callOnClick();
+                        }
+                        break;
+                }
+
+                return isScanning;
+            }
+        });
     }
 
     /**
@@ -183,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
      */
     private void setupRecyclerView() {
         gridView.setLayoutManager(new GridLayoutManager(this, gridSize));
-        adapter = new GridAdapter(this, mGrid);
+        adapter = new GridAdapter(this, mGrid, gridSize);
         gridView.setAdapter(adapter);
 
     }
@@ -409,6 +441,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 }
 
             }
+
+            adapter.setGridSize(gridSize);
             adapter.setImageUrl(baseUrl);
             adapter.notifyDataSetChanged();
 
@@ -428,7 +462,11 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                     float a = v.getX() + gridView.getX();
                     float b = v.getY();
 
-                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(v.getWidth() * 3, v.getHeight());
+                    int mult = 3;
+                    if(gridSize == 5) mult = 3;
+                    else mult = gridSize - 2;
+
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(v.getWidth() * mult, v.getHeight());
                     params.leftMargin = (int) a;
                     params.rightMargin = (int) b;
 
