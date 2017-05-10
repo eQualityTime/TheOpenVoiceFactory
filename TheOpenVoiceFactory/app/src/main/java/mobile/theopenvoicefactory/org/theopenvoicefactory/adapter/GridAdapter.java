@@ -6,9 +6,13 @@ import android.os.Build;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 
 import com.bumptech.glide.Glide;
 
@@ -31,10 +35,12 @@ public class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context mContext;
     private List<Grid> mGrids;
     private String imgBaseUrl;
+    private int mGridSize = 5;
 
-    public GridAdapter(Context context, List<Grid> grids) {
+    public GridAdapter(Context context, List<Grid> grids, int gridSize) {
         this.mContext = context;
         this.mGrids = grids;
+        this.mGridSize = gridSize;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -57,15 +63,23 @@ public class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
+    public void setGridSize (int gridSize) {
+        this.mGridSize = gridSize;
+    }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-
         View view = inflater.inflate(R.layout.item_grid, parent, false);
 
-        ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
+        /*int height = (int) getScreenHeight() / mGridSize;
+
+        Log.i("TAG", height + " -- height");
+
+        view.setMinimumHeight(height);*/
+
+        return new ViewHolder(view);
     }
 
     public void setImageUrl(String baseUrl) {
@@ -106,6 +120,11 @@ public class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             viewHolder.clickable.setVisibility(View.VISIBLE);
         }
 
+        int height = (int) getScreenHeight() / mGridSize;
+
+        RecyclerView.LayoutParams params = new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, height); // (width, height)
+        viewHolder.container.setLayoutParams(params);
+
         viewHolder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,5 +143,19 @@ public class GridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public int getItemCount() {
         return mGrids.size();
+    }
+
+    private float getScreenHeight()
+    {
+        WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        DisplayMetrics metrics = new DisplayMetrics();
+        display.getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+
+        if(width > height) return height;
+        else return width;
+
     }
 }
