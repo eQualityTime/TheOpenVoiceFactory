@@ -31,3 +31,6 @@ This software is designed to let healthcare professionals and interested individ
 It is NOT an AAC device. AAC devices (including software released freely) must be registered as medical devices within the EU.  A freely downloadable piece of AAC software must also comply with the relevant medical device legislation in any of the 100s of countries they it can be accessed in. 
 
 We’re currently examining this process with a view to eventually registering, but this is a costly and time-consuming process, and we’d like to spend our time on development.  Until then, the Open Voice Factory is for pageset demonstration, exploration, and research. 
+
+# Current App versions
+Current Android app version: https://www.dropbox.com/s/shb5e2r71pdsmrz/app-debug.apk?dl=0
