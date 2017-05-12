@@ -49,6 +49,25 @@ class ovfTest(TestCase):
         self.assertEqual(grids[0].tag,"Top page")
 
 
+    def test_read_CK20_and_check_color(self):
+        grids = self.get_singleton_CK20()
+        self.assertEqual(grids[0].colors[2][2],(255,125,236))
+
+    def test_read_CK20_and_check_link(self):
+        grids = self.get_singleton_CK20()
+        print "XXXXXX"
+        print grids[0].labels[4][1]
+        print grids[0].links[4][1]
+        print "XXXXXX"
+        self.assertNotEqual(grids[0].links[4][1],"")
+
+
+
+
+    def test_read_CK20_and_check_link_neg(self):
+        grids = self.get_singleton_CK20()
+        self.assertEqual(grids[0].links[1][1],"")
+
     def test_make_title(self):
         tag = grab_text.make_title("A sentance")
         self.assertEqual(tag,"asentance")
