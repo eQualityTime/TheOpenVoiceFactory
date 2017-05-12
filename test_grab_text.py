@@ -29,7 +29,7 @@ class ovfTest(TestCase):
 
     def get_singleton_CK20(self):
         if not self.CK20:
-            prs = Presentation("testinputs/CK20V2.pptx")
+            prs = Presentation("testinputs/CK20V2cutdown.pptx")
             grab_text.gridSize=5
             self.CK20 = grab_text.extract_grid(prs)
         return self.CK20
@@ -41,13 +41,25 @@ class ovfTest(TestCase):
 
     def test_read_CK20_and_count_slides(self):
         grids = self.get_singleton_CK20()
-        self.assertEqual(len(grids),100)
+        self.assertEqual(len(grids),10)
 
 
     def test_read_CK20_and_check_titles(self):
         grids = self.get_singleton_CK20()
         self.assertEqual(grids[0].tag,"Top page")
 
+
+    def test_make_title(self):
+        tag = grab_text.make_title("A sentance")
+        self.assertEqual(tag,"asentance")
+
+    def test_make_title_2(self):
+        tag = grab_text.make_title("ThInGs In MiXeD cAsE")
+        self.assertEqual(tag,"thingsinmixedcase")
+
+    def test_make_title_3(self):
+        tag = grab_text.make_title("Sysbols#")
+        self.assertEqual(tag,"sysbols")
 
 
 if __name__=="__main__":
