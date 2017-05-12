@@ -27,6 +27,8 @@ bordercolor = False
 
 warningMissingLinks = True
 
+def addwarning(input):
+    print input
 
 def PrintException():
         # http://stackoverflow.com/a/20264059
@@ -179,7 +181,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 1:
-                                                                print "Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro]
+                                                                addwarning("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
