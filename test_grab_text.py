@@ -25,23 +25,28 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 class ovfTest(TestCase):
 
+    CK20=None
+
+    def get_singleton_CK20(self):
+        if not self.CK20:
+            prs = Presentation("testinputs/CK20V2.pptx")
+            grab_text.gridSize=5
+            self.CK20 = grab_text.extract_grid(prs)
+        return self.CK20
+
     def test_first(self):
          self.assertEqual(3,3)
 
 
 
     def test_read_CK20_and_count_slides(self):
-        prs = Presentation("testinputs/CK20V2.pptx")
-        grab_text.gridSize=5
-        grids = grab_text.extract_grid(prs)
+        grids = self.get_singleton_CK20()
         self.assertEqual(len(grids),100)
 
 
     def test_read_CK20_and_check_titles(self):
-        prs = Presentation("testinputs/CK20V2.pptx")
-        grab_text.gridSize=5
-        grids = grab_text.extract_grid(prs)
-        self.assertEqual(grids[0]['title'],"main")
+        grids = self.get_singleton_CK20()
+        self.assertEqual(grids[0].tag,"Top page")
 
 
 
