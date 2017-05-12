@@ -28,6 +28,7 @@ bordercolor = False
 warningMissingLinks = True
 
 def addwarning(input):
+    #This is a stub - this is to be used to manage the passing of messages to the user.
     print input
 
 def PrintException():
