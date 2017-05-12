@@ -36,5 +36,14 @@ class ovfTest(TestCase):
         grids = grab_text.extract_grid(prs)
         self.assertEqual(len(grids),100)
 
+
+    def test_read_CK20_and_check_titles(self):
+        prs = Presentation("testinputs/CK20V2.pptx")
+        grab_text.gridSize=5
+        grids = grab_text.extract_grid(prs)
+        self.assertEqual(grids[0]['title'],"main")
+
+
+
 if __name__=="__main__":
     unittest.main()
