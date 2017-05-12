@@ -1,5 +1,6 @@
 from unittest import TestCase
 import unittest
+import mock
 import grab_text
 import urllib
 import json
@@ -79,6 +80,13 @@ class ovfTest(TestCase):
     def test_make_title_3(self):
         tag = grab_text.make_title("Sysbols#")
         self.assertEqual(tag,"sysbols")
+
+    def test_warning_for_missinglink(self):
+        grab_text.addwarning=mock.Mock(return_value=None)
+        prs = Presentation("testinputs/CK20V2cutdown.pptx") #Can't use the sinlgeton because it might have been called before the mocking
+        grab_text.gridSize=5
+        grab_text.extract_grid(prs)
+        grab_text.addwarning.assert_called()
 
 
 if __name__=="__main__":
