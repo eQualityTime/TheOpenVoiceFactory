@@ -88,6 +88,36 @@ class ovfTest(TestCase):
         grab_text.extract_grid(prs)
         grab_text.addwarning.assert_called()
 
+    def test_regession_ck20v2_cutdown(self):
+        compare_json_files(
+            "testinputs/CK20V2cutdown.pptx",
+            "testinputs/CK20V2cutdown.json", 5)
+
+    def test_regession_ck20v2_slo(self):
+        compare_json_files(
+            "testinputs/CK20_slo_regession.pptx",
+            "testinputs/CK20_slo_regession.json", 5)
+
+    def test_regession_ck20v2_bg(self):
+        compare_json_files(
+            "testinputs/CK20V2-BG.pptx",
+            "testinputs/CK20V2-BG.json", 5)
+
+def compare_json_files(pres_loc, target_loc, gridSize):
+        prs = Presentation(pres_loc)
+        grab_text.gridSize = gridSize
+        grids = grab_text.extract_grid(prs)
+        grids = grab_text.extract_and_label_images(prs, grids, "", False)
+        internal = grab_text.create_json_object(grids)
+        internal = json.dumps(internal)
+        grab_text.write_to_JSON(grids, "temp.json")
+        local = 0
+        with open('temp.json', 'r') as f:
+                local = json.load(f)
+        with open(target_loc, 'r') as f:
+                real = json.load(f)
+                assert real == local
+
 
 if __name__=="__main__":
     unittest.main()
