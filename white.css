@@ -11,3 +11,29 @@ div#columns {
 	 margin-left: auto ;
   margin-right: auto ;
 }
+.button {
+    padding:1em;
+    position:relative;
+}
+.button:hover {
+  cursor:pointer;
+}
+.button[disabled]:before {
+  content:attr(data-tooltip);
+  position:absolute;
+  left:75%;
+  opacity:0;
+  top:0;
+  width:auto;
+  white-space: nowrap;
+  margin-left:1em;
+  display:block;
+  padding:1em;
+  border:1px solid grey;
+  background:white;
+  transition:all 0.3s;
+}
+.button[disabled]:hover:before {
+  left:100%;
+  opacity:1;
+}

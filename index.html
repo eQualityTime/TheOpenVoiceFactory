@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <!-- original tempalte from http://www.w3schools.com/php/php_file_upload.asp-->
 <html>
-<head><link rel="stylesheet" type="text/css" href="white.css"></head>
+<head>
+  <link rel="stylesheet" type="text/css" href="white.css">
+</head>
 <body>
 <!-- hope -->
 <div id="columns">
@@ -9,27 +11,28 @@
 <h1>AzuleJoe Grid generation</h1>
 <p>Upload your Communication aid templates here to create an online Voice!</p>
 <p>If you'd like some help getting started, you can download a simple starting template of <a href=https://raw.github.com/joereddington/CommuniKate/master/ck12/CK12%2B.pptx>CK12</a> or <a href=https://raw.githubusercontent.com/joereddington/CommuniKate/master/ck20/CK20V2.pptx>CK20</a> and look at our <a>help files</a>.</p>
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="upload.php" method="post" enctype="multipart/form-data" class="file-submit">
     <h3>File to upload</h3>
     <input type="file" name="fileToUpload" id="fileToUpload">
-<br>
- <h3>Grid size</h3>
- <input type="radio" name="size" value="5"> 5 wide and 5 tall<br>
-<br>
-  <input type="radio" name="size" value="4"> 4 wide and 4 tall<br>
-<br>
-<h3>Voice</h3>
-<select name="lang" id="lang">
-</select>
-<br>
-<br>
-<br>
-    <input type="submit" value="Process uploaded file" name="submit">
+    <br>
+    <h3>Grid size</h3>
+    <input type="radio" name="size" value="5" class="size"> 5 wide and 5 tall<br>
+    <br>
+    <input type="radio" name="size" value="4" class="size"> 4 wide and 4 tall<br>
+    <br>
+    <h3>Voice</h3>
+    <select name="lang" id="lang">
+    </select>
+    <br>
+    <br>
+    <br>
+    <button class="button" data-tooltip="Please select a file and a gridsize first!" disabled>Process uploaded file</button>
 </form>
 
 <p>Please note that anyone with the correct link will be able to view your files. Please keep this in mind before uploading content that may be private. </p>
 </div>
   <script src="choosevoice.js"></script>
+  <script src="form-validation.js"></script>
 
 </body>
-</html> 
+</html>
