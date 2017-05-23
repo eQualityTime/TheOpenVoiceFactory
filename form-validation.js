@@ -21,7 +21,7 @@ formEl.addEventListener("change", function(){
     var sizeValid = false;
     //Check all radio buttons for values
     for(var x=0; x < sizeEl.length; x++) {
-        if(sizeEl[x].value) {
+        if(sizeEl[x].checked) {
             //If any is selected, say it's valid
             sizeValid = true;
         }

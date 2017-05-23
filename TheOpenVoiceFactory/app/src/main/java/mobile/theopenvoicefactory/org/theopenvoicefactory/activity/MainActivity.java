@@ -177,7 +177,11 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             public void onClick(View v) {
                 if(isScanning) {
                     Grid grid = mGrid.get((scanIndex == 0)?(mGrid.size()-1):(scanIndex-1));
-                    handleClicks(grid);
+                    if(scanIndex >= 2 && scanIndex <= gridSize - 1) {
+                        speak();
+                    } else {
+                        handleClicks(grid);
+                    }
                 }
             }
         });
@@ -446,6 +450,10 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             adapter.setImageUrl(baseUrl);
             adapter.notifyDataSetChanged();
 
+            if(layout.findViewById(R.id.textView) != null) {
+                layout.removeView(textBox);
+            }
+
             /*
              * Below module places the text box properly in first row
              */
@@ -577,6 +585,11 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         handleClicks(grid);
     }
 
+    /**
+     * This function handle clicks on each cell
+     * @param grid If cell is a nodeLeaf, it places the label/utterance, otherwise it processes
+     *             special commands or take to another slide.
+     */
     private void handleClicks(Grid grid) {
         if (grid.isLeaf()) {
             String txt = textBox.getText().toString();
