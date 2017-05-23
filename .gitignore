@@ -1,5 +1,6 @@
 *.DS_Store
 build-*
+*.pyc
 *.pro.user
 icons/*
 testSuite/*
