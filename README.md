@@ -32,7 +32,7 @@ I've just built the working developement version on a mac that was not my own an
 * ./localcreate.sh CK20V2.pptx 5
 * open aidCK20V2.pptx/index.html
 
-###Disclaimer###
+# Disclaimer
 This software is designed to let healthcare professionals and interested individuals explore a pageset for use on an AAC device.  
 
 It is NOT an AAC device. AAC devices (including software released freely) must be registered as medical devices within the EU.  A freely downloadable piece of AAC software must also comply with the relevant medical device legislation in any of the 100s of countries they it can be accessed in. 
