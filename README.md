@@ -24,6 +24,13 @@ We love the idea of people helping out with the code. Because the Open Voice Fac
 *   import from (hard) or export to (medium) the [openboardformat](http://www.openboardformat.org)
 *   precompute utterances
 
+## Building the developement version
+I've just built the working developement version on a mac that was not my own and the commands I needed were...
+* Clone or download the repo
+* pip install python-pptx
+* sudo pip install python-pptx
+* ./localcreate.sh CK20V2.pptx 5
+* open aidCK20V2.pptx/index.html
 
 ###Disclaimer###
 This software is designed to let healthcare professionals and interested individuals explore a pageset for use on an AAC device.  
