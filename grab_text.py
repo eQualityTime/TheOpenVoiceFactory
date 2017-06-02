@@ -27,7 +27,7 @@ bordercolor = False
 
 warningMissingLinks = True
 
-def addwarning(input):
+def addfeedback(input):
     #This is a stub - this is to be used to manage the passing of messages to the user.
     print input
 
@@ -182,7 +182,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 1:
-                                                                addwarning("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
+                                                                addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()

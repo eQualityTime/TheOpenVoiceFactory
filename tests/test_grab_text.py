@@ -82,12 +82,21 @@ class ovfTest(TestCase):
         tag = grab_text.make_title("Sysbols#")
         self.assertEqual(tag,"sysbols")
 
+  #  def test_warning_for_missinglink(self):
+  #      grab_text.addfeedback=mock.Mock(return_value=None)
+  #      prs = Presentation("CK20V2cutdown.pptx") #Can't use the sinlgeton because it might have been called before the mocking
+  #      grab_text.gridSize=5
+  #      grab_text.extract_grid(prs)
+  #      grab_text.addfeedback.assert_called()
+
     def test_warning_for_missinglink(self):
-        grab_text.addwarning=mock.Mock(return_value=None)
         prs = Presentation("CK20V2cutdown.pptx") #Can't use the sinlgeton because it might have been called before the mocking
         grab_text.gridSize=5
         grab_text.extract_grid(prs)
-        grab_text.addwarning.assert_called()
+        feedback=grab_text.getfeedback
+        self.assertEqual(1,len(feedback))
+
+
 
     def test_regession_ck12(self):
         regress("regression_tests_size_4/CK12+V2.pptx",4)
