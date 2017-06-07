@@ -98,7 +98,9 @@ class ovfTest(TestCase):
     def test_correct_warning_for_blank_file(self):
         grab_text.gridSize=5
         pageset = grab_text.Pageset("blank.pptx","",False)
+        print "################################################################################"
         print pageset.getfeedback()
+        self.assertEqual(21,len(feedback))
 
 
     def test_regession_ck12(self):
