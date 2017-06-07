@@ -93,7 +93,7 @@ class ovfTest(TestCase):
         pageset = grab_text.Pageset("CK20V2cutdown.pptx","",False)
         feedback=pageset.getfeedback()
         print feedback
-        self.assertEqual(1,len(feedback))
+        self.assertEqual(18,len(feedback))
 
 
 

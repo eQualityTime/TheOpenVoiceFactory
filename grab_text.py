@@ -97,7 +97,7 @@ class Pageset:
             debug_no = 0
             for slide in prs.slides:
                     debug_no += 1
-                    self.grids.append(Grid(prs, slide, gridSize))
+                    self.grids.append(Grid(prs, slide, gridSize,self))
             debug_no = 0
             for tok in self.grids:
                     debug_no += 1
@@ -219,7 +219,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 1:
-                                                                pageset.addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
+                                                                self.pageset.addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
