@@ -90,22 +90,26 @@ class ovfTest(TestCase):
   #      grab_text.addfeedback.assert_called()
 
     def test_warning_for_missinglink(self):
-        pageset = grab_text.Pageset("CK20V2cutdown.pptx","",False)
+        pageset = self.get_singleton_CK20()
         feedback=pageset.getfeedback()
         print feedback
-        self.assertEqual(18,len(feedback))
+        self.assertEqual(21,len(feedback))
 
+    def test_correct_warning_for_blank_file(self):
+        grab_text.gridSize=5
+        pageset = grab_text.Pageset("blank.pptx","",False)
+        print pageset.getfeedback()
 
 
     def test_regession_ck12(self):
         regress("regression_tests_size_4/CK12+V2.pptx",4)
 
-#    def test_regession_ck20_slo(self):
-#        regress("regression_tests_size_5/CK20_slo_regession.pptx",5)
-#
-#    def test_regession_ck20v2_bg(self):
-#        regress("regression_tests_size_5/CK20V2.pptx",5)
-#
+    def test_regession_ck20_slo(self):
+        regress("regression_tests_size_5/CK20_slo_regession.pptx",5)
+
+    def test_regession_ck20v2_bg(self):
+        regress("regression_tests_size_5/CK20V2.pptx",5)
+
 
 
 def regress(filename,size):
