@@ -30,7 +30,7 @@ warningMissingLinks = True
 
 
 
-def PrintException():
+def returnException():
         # http://stackoverflow.com/a/20264059
         if print_exceptions is True:
                 exc_type, exc_obj, tb = sys.exc_info()
@@ -39,7 +39,7 @@ def PrintException():
                 filename = f.f_code.co_filename
                 linecache.checkcache(filename)
                 line = linecache.getline(filename, lineno, f.f_globals)
-                print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
+                return 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
 
 
 def resizeImage(image, scaleFactor):
@@ -66,14 +66,6 @@ def remove_punctuation(s):
                        if unicodedata.category(x) not in punctutation_cats)
 
 
-def make_title(label):
-        """Given a  string, returns the string in the format we use for
-         identifying grids. This is used mostly to build internal link
-         structures"""
-        tag = remove_punctuation(label.lower().strip().replace(" ", "_"))
-        if tag == "":
-                tag = "unknown"
-        return tag
 
 class Pageset:
 
@@ -87,7 +79,7 @@ class Pageset:
     def addfeedback(self,feedelement):
             self.feedback.append(feedelement)
             #This is a stub - this is to be used to manage the passing of messages to the user.
-            print feedelement
+         #   print feedelement
 
     def getfeedback(self):
             return self.feedback
@@ -130,8 +122,7 @@ class Grid:
                                         # print number_string
                                         # print "which is", grids[int(number_string)].tag
                                         # Then work out the relevant tag
-                                        self.links[row][col] = make_title(
-                                            grids[int(number_string)-1].tag)
+                                        self.links[row][col] = grids[int(number_string)-1].tag
                                         # Remember that slides are numbered from
                                         # 1 but grids are numbered from 0
 
@@ -178,7 +169,7 @@ class Grid:
                 try:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
-                                        self.tag = shape.text
+                                        self.tag = make_title(shape.text)
                                         # should there be a return here?
                         (co, ro) = self.get_col_row(
                                 shape.top+shape.height/2, shape.left+shape.width/2)
@@ -222,7 +213,7 @@ class Grid:
                                                                 self.pageset.addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
                 except (AttributeError, KeyError, NotImplementedError):
-                        PrintException()
+                        self.pageset.addfeedback(returnException())
                         return
 
         def process_text_frame(self, shape, co, ro):
@@ -244,7 +235,6 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         grid = grids[slide_number]
         images = {}
         labels = grid.labels
-#        print "Extracting Symbols {}".format(slide_number)
         for shape in slide.shapes:
                 try:
                         if not hasattr(shape, "shape_type"):
@@ -348,8 +338,7 @@ def create_json_object(grids):
         grid_json = {}
         for i in range(len(grids)):
                 grid_json[i] = [
-                    make_title(
-                        grids[i].tag),
+                    grids[i].tag,
                     grids[i].labels,
                     grids[i].utterances,
                     grids[i].links,
@@ -367,6 +356,16 @@ def write_to_JSON(grids, filename):
         for_json = create_json_object(grids)
         with open(filename, 'w') as outfile:
                 json.dump(for_json, outfile, sort_keys=True, indent=4)
+
+
+def make_title(label):
+        """Given a  string, returns the string in the format we use for
+         identifying grids. This is used mostly to build internal link
+         structures"""
+        tag = remove_punctuation(label.lower().strip().replace(" ", "_"))
+        if tag == "":
+                tag = "unknown"
+        return tag
 
 
 def create_icon_name(x, y, labels, links, slide_number):
@@ -391,18 +390,11 @@ if __name__ == "__main__":
                 print("inputPptxFile: The powerpoint pageset you want to process.")
                 print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
                 sys.exit(1)
-
         filename = sys.argv[1]
         dest = sys.argv[2]
         gridSize = 5
         if (len(sys.argv) > 2):
                 gridSize = int(sys.argv[3])
-
-    #    prs = Presentation(filename)
-    #    grids = extract_grid(prs)
-    #    grids = extract_and_label_images(prs, grids, dest)
-     #   write_to_JSON(grids, dest+'/pageset.json')
-
         pageset=Pageset(filename,dest)
         write_to_JSON(pageset.grids, dest+'/pageset.json')
 

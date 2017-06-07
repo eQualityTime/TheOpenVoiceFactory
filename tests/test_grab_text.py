@@ -48,7 +48,7 @@ class ovfTest(TestCase):
 
     def test_read_CK20_and_check_titles(self):
         grids = self.get_singleton_CK20().grids
-        self.assertEqual(grids[0].tag,"Top page")
+        self.assertEqual(grids[0].tag,grab_text.make_title("Top page"))
 
 
     def test_read_CK20_and_check_color(self):
@@ -93,7 +93,7 @@ class ovfTest(TestCase):
         pageset = self.get_singleton_CK20()
         feedback=pageset.getfeedback()
         print feedback
-        self.assertEqual(21,len(feedback))
+        self.assertEqual(26,len(feedback))
 
     def test_correct_warning_for_blank_file(self):
         grab_text.gridSize=5
