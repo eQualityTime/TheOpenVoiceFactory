@@ -27,13 +27,13 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 class ovfTest(TestCase):
 
-    CK20=None
+    CK20=None #This is the pageset
 
     def get_singleton_CK20(self):
         if not self.CK20:
-            prs = Presentation("CK20V2cutdown.pptx")
+           # prs = Presentation("CK20V2cutdown.pptx")
             grab_text.gridSize=5
-            self.CK20 = grab_text.extract_grid(prs)
+            self.CK20 = grab_text.Pageset("CK20V2cutdown.pptx","",False)
         return self.CK20
 
     def test_first(self):
@@ -42,21 +42,21 @@ class ovfTest(TestCase):
 
 
     def test_read_CK20_and_count_slides(self):
-        grids = self.get_singleton_CK20()
+        grids = self.get_singleton_CK20().grids
         self.assertEqual(len(grids),10)
 
 
     def test_read_CK20_and_check_titles(self):
-        grids = self.get_singleton_CK20()
+        grids = self.get_singleton_CK20().grids
         self.assertEqual(grids[0].tag,"Top page")
 
 
     def test_read_CK20_and_check_color(self):
-        grids = self.get_singleton_CK20()
+        grids = self.get_singleton_CK20().grids
         self.assertEqual(grids[0].colors[2][2],(255,125,236))
 
     def test_read_CK20_and_check_link(self):
-        grids = self.get_singleton_CK20()
+        grids = self.get_singleton_CK20().grids
         print "XXXXXX"
         print grids[0].labels[4][1]
         print grids[0].links[4][1]
@@ -67,7 +67,7 @@ class ovfTest(TestCase):
 
 
     def test_read_CK20_and_check_link_neg(self):
-        grids = self.get_singleton_CK20()
+        grids = self.get_singleton_CK20().grids
         self.assertEqual(grids[0].links[1][1],"")
 
     def test_make_title(self):
@@ -90,10 +90,9 @@ class ovfTest(TestCase):
   #      grab_text.addfeedback.assert_called()
 
     def test_warning_for_missinglink(self):
-        prs = Presentation("CK20V2cutdown.pptx") #Can't use the sinlgeton because it might have been called before the mocking
-        grab_text.gridSize=5
-        grab_text.extract_grid(prs)
-        feedback=grab_text.getfeedback
+        pageset = self.get_singleton_CK20()
+        feedback=getset.getfeedback()
+        print feedback
         self.assertEqual(1,len(feedback))
 
 
@@ -113,10 +112,7 @@ def regress(filename,size):
         compare_json_files(filename,filename+".json", size)
 
 def compare_json_files(pres_loc, target_loc, gridSize):
-        prs = Presentation(pres_loc)
-        grab_text.gridSize = gridSize
-        grids = grab_text.extract_grid(prs)
-        grids = grab_text.extract_and_label_images(prs, grids, "", False)
+        grids = grab_text.Pageset(pres_loc,"",False).grids
         internal = grab_text.create_json_object(grids)
         internal = json.dumps(internal)
         grab_text.write_to_JSON(grids, "temp.json")

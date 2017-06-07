@@ -27,9 +27,8 @@ bordercolor = False
 
 warningMissingLinks = True
 
-def addfeedback(input):
-    #This is a stub - this is to be used to manage the passing of messages to the user.
-    print input
+
+
 
 def PrintException():
         # http://stackoverflow.com/a/20264059
@@ -76,6 +75,41 @@ def make_title(label):
                 tag = "unknown"
         return tag
 
+class Pageset:
+
+    def __init__(self, filename,dest, saveimages=True):
+        prs = Presentation(filename)
+        self.grids = []
+        self.extract_grid(prs)
+        self.grids = extract_and_label_images(prs, self.grids, dest, saveimages)
+
+    def addfeedback(self,feedelement):
+            self.feedback.append(feedelement)
+            #This is a stub - this is to be used to manage the passing of messages to the user.
+            print feedelement
+
+    def getfeedback(self):
+            return self.feedback
+
+
+    def extract_grid(self,prs):
+            debug_no = 0
+            for slide in prs.slides:
+                    debug_no += 1
+                    self.grids.append(Grid(prs, slide, gridSize))
+            debug_no = 0
+            for tok in self.grids:
+                    debug_no += 1
+                    tok.update_links(self.grids)
+                    for i in range(gridSize):
+                            for j in range(gridSize):
+
+                                    if(tok.colors[j][i] == (200, 0, 0)):
+                                            print "Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'), j, i, tok.labels[j][i].encode('ascii', 'ignore'))
+                                            print tok.colors[j][i]
+
+
+
 
 class Grid:
 
@@ -120,6 +154,7 @@ class Grid:
                 self.tag = "unknown"
                 self.slide_width = pres.slide_width
                 self.slide_height = pres.slide_height
+                self.feedback=[]
                 for shape in slide.shapes:
                         self.process_shape(shape)
 
@@ -182,7 +217,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 1:
-                                                                addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
+                                                                self.addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
@@ -346,24 +381,6 @@ def extract_and_label_images(prs, grids, filename, SAVE=True):
         return grids
 
 
-def extract_grid(prs):
-        grids = []
-        debug_no = 0
-        for slide in prs.slides:
-                debug_no += 1
-#                print "Slide: {}".format(debug_no)
-                grids.append(Grid(prs, slide, gridSize))
-        debug_no = 0
-        for tok in grids:
-                debug_no += 1
-                tok.update_links(grids)
-                for i in range(gridSize):
-                        for j in range(gridSize):
-
-                                if(tok.colors[j][i] == (200, 0, 0)):
-                                        print "Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'), j, i, tok.labels[j][i].encode('ascii', 'ignore'))
-                                        print tok.colors[j][i]
-        return grids
 ########
 
 if __name__ == "__main__":
@@ -379,9 +396,12 @@ if __name__ == "__main__":
         if (len(sys.argv) > 2):
                 gridSize = int(sys.argv[3])
 
-        prs = Presentation(filename)
-        grids = extract_grid(prs)
-        grids = extract_and_label_images(prs, grids, dest)
-        write_to_JSON(grids, dest+'/pageset.json')
+    #    prs = Presentation(filename)
+    #    grids = extract_grid(prs)
+    #    grids = extract_and_label_images(prs, grids, dest)
+     #   write_to_JSON(grids, dest+'/pageset.json')
+
+        pageset=Pageset(filename,dest)
+        pageset.write_to_JSON(grids, dest+'/pageset.json')
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
