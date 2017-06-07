@@ -404,6 +404,6 @@ if __name__ == "__main__":
      #   write_to_JSON(grids, dest+'/pageset.json')
 
         pageset=Pageset(filename,dest)
-        pageset.write_to_JSON(grids, dest+'/pageset.json')
+        write_to_JSON(pageset.grids, dest+'/pageset.json')
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
