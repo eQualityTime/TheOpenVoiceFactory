@@ -91,7 +91,7 @@ class ovfTest(TestCase):
 
     def test_warning_for_missinglink(self):
         pageset = self.get_singleton_CK20()
-        feedback=getset.getfeedback()
+        feedback=pageset.getfeedback()
         print feedback
         self.assertEqual(1,len(feedback))
 
@@ -100,18 +100,19 @@ class ovfTest(TestCase):
     def test_regession_ck12(self):
         regress("regression_tests_size_4/CK12+V2.pptx",4)
 
-    def test_regession_ck20_slo(self):
-        regress("regression_tests_size_5/CK20_slo_regession.pptx",5)
-
-    def test_regession_ck20v2_bg(self):
-        regress("regression_tests_size_5/CK20V2.pptx",5)
-
+#    def test_regession_ck20_slo(self):
+#        regress("regression_tests_size_5/CK20_slo_regession.pptx",5)
+#
+#    def test_regession_ck20v2_bg(self):
+#        regress("regression_tests_size_5/CK20V2.pptx",5)
+#
 
 
 def regress(filename,size):
         compare_json_files(filename,filename+".json", size)
 
 def compare_json_files(pres_loc, target_loc, gridSize):
+        grab_text.gridSize=gridSize
         grids = grab_text.Pageset(pres_loc,"",False).grids
         internal = grab_text.create_json_object(grids)
         internal = json.dumps(internal)

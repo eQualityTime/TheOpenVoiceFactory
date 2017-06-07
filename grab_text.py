@@ -80,6 +80,7 @@ class Pageset:
     def __init__(self, filename,dest, saveimages=True):
         prs = Presentation(filename)
         self.grids = []
+        self.feedback=[]
         self.extract_grid(prs)
         self.grids = extract_and_label_images(prs, self.grids, dest, saveimages)
 
