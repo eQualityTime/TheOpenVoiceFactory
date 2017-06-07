@@ -90,7 +90,7 @@ class ovfTest(TestCase):
   #      grab_text.addfeedback.assert_called()
 
     def test_warning_for_missinglink(self):
-        pageset = self.get_singleton_CK20()
+        pageset = grab_text.Pageset("CK20V2cutdown.pptx","",False)
         feedback=pageset.getfeedback()
         print feedback
         self.assertEqual(1,len(feedback))

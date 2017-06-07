@@ -135,8 +135,9 @@ class Grid:
                                         # Remember that slides are numbered from
                                         # 1 but grids are numbered from 0
 
-        def __init__(self, pres, slide, gridSize):
+        def __init__(self, pres, slide, gridSize,owningPageset):
                 self.grid_size = gridSize
+                self.pageset=owningPageset
                 self.labels = [
                     ["" for x in range(self.grid_size)]
                     for x in range(self.grid_size)]
@@ -218,7 +219,7 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 1:
-                                                                self.addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
+                                                                pageset.addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
                 except (AttributeError, KeyError, NotImplementedError):
                         PrintException()
