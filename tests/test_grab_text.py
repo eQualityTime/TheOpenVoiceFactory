@@ -95,12 +95,34 @@ class ovfTest(TestCase):
         print feedback
         self.assertEqual(26,len(feedback))
 
-    def test_correct_warning_for_blank_file(self):
-        grab_text.gridSize=5
-        pageset = grab_text.Pageset("blank.pptx","",False)
-        print "################################################################################"
-        print pageset.getfeedback()
-        self.assertEqual(21,len(feedback))
+
+#    def test_warning_for_missingimage(self):
+#        #This test is broken because we CAN'T switch warnings on and off around a singleton
+#        pageset = self.get_singleton_CK20()
+#        feedback=pageset.getfeedback()
+#        grab_text.IMAGE_WARNING=True
+#        print feedback
+#        self.assertEqual(90,len(feedback))
+
+
+
+#    def test_correct_warning_for_blank_file(self):
+#        grab_text.gridSize=5
+#        pageset = grab_text.Pageset("blank.pptx","",False)
+#        print "################################################################################"
+#        feedback= pageset.getfeedback()
+#        self.assertEqual(21,len(feedback))
+
+
+
+  #  def test_run_first_break_file(self):
+  #      grab_text.gridSize=5
+  #      pageset = grab_text.Pageset("break.pptx","",False)
+  #      print "################################################################################"
+  #      feedback= pageset.getfeedback()
+  #      for f in feedback:
+  #          print f
+  #      self.assertEqual(21,len(feedback))
 
 
     def test_regession_ck12(self):
@@ -108,6 +130,13 @@ class ovfTest(TestCase):
 
     def test_regession_ck20_slo(self):
         regress("regression_tests_size_5/CK20_slo_regession.pptx",5)
+
+    def test_regession_ck20_arabic(self):
+       # grab_text.bordercolor = True
+        regress("regression_tests_size_5/CK20V2_ara_regession.pptx",5)
+       # grab_text.bordercolor = False
+
+
 
     def test_regession_ck20v2_bg(self):
         regress("regression_tests_size_5/CK20V2.pptx",5)

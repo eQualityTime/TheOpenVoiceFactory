@@ -79,27 +79,20 @@ class Pageset:
     def addfeedback(self,feedelement):
             self.feedback.append(feedelement)
             #This is a stub - this is to be used to manage the passing of messages to the user.
-         #   print feedelement
+            print feedelement
 
     def getfeedback(self):
             return self.feedback
 
-
     def extract_grid(self,prs):
-            debug_no = 0
             for slide in prs.slides:
-                    debug_no += 1
                     self.grids.append(Grid(prs, slide, gridSize,self))
-            debug_no = 0
-            for tok in self.grids:
-                    debug_no += 1
-                    tok.update_links(self.grids)
+            for grid in self.grids:
+                    grid.update_links(self.grids)
                     for i in range(gridSize):
                             for j in range(gridSize):
-
-                                    if(tok.colors[j][i] == (200, 0, 0)):
-                                            print "Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'), j, i, tok.labels[j][i].encode('ascii', 'ignore'))
-                                            print tok.colors[j][i]
+                                    if(grid.colors[j][i] == (200, 0, 0)):
+                                        self.addfeedback("Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'), j, i, tok.labels[j][i].encode('ascii', 'ignore')))
 
 
 
@@ -250,14 +243,14 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                         print "exception at at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
                         print "exception 23204234 triggered"
                         continue
-        if IMAGE_WARNING:
-                for col in range(grid.grid_size):
-                        for row in range(grid.grid_size):
-                                if (col, row) not in images:
-                                        if labels[col][row] is not "":
-                                                if grid.tag not in labels[
-                                                        col][row]:
-                                                        print "WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
+                if IMAGE_WARNING:
+                        for col in range(grid.grid_size):
+                                for row in range(grid.grid_size):
+                                        if (col, row) not in images:
+                                                if labels[col][row] is not "":
+                                                        if grid.tag not in labels[
+                                                                col][row]:
+                                                                print "WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
 
         # Compose each icon out of all the images in the grid cell.
         for (x, y) in images:
