@@ -133,7 +133,7 @@ class ovfTest(TestCase):
 
     def test_regession_ck20_arabic(self):
        # grab_text.bordercolor = True
-        regress("regression_tests_size_5/CK20V2_ara_regession.pptx",5)
+        regress("regression_tests_size_5/CK20V2_ara_regession.pptx",5, True)
        # grab_text.bordercolor = False
 
 
@@ -143,11 +143,12 @@ class ovfTest(TestCase):
 
 
 
-def regress(filename,size):
-        compare_json_files(filename,filename+".json", size)
+def regress(filename,size,bordercolor=False):
+        compare_json_files(filename,filename+".json", size,bordercolor)
 
-def compare_json_files(pres_loc, target_loc, gridSize):
+def compare_json_files(pres_loc, target_loc, gridSize,bordercolor=False):
         grab_text.gridSize=gridSize
+        grab_text.bordercolor=bordercolor
         grids = grab_text.Pageset(pres_loc,"",False).grids
         internal = grab_text.create_json_object(grids)
         internal = json.dumps(internal)

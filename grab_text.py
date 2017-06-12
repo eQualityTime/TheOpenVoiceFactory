@@ -176,10 +176,10 @@ class Grid:
                                         ro] = click_action.hyperlink.address
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                             if bordercolor:
-                                print "here"
-                                print "X {}".format(shape.line.color.rgb)
+                                #print "here"
+                                #print "X {}".format(shape.line.color.rgb)
                                 self.colors[co][ro] = shape.line.color.rgb
-                                print "there"
+                                #print "there"
 
                             else:
                                 if hasattr(shape.fill, 'fore_color'):
