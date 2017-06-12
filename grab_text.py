@@ -69,12 +69,15 @@ def remove_punctuation(s):
 
 class Pageset:
 
-    def __init__(self, filename,dest, saveimages=True):
-        prs = Presentation(filename)
+# Todo
+# Should throw error if fileanem doens't produce a proper pageset.
+
+    def __init__(self, filename, dest, saveimages=True):
+        self.prs = Presentation(filename)
         self.grids = []
         self.feedback=[]
-        self.extract_grid(prs)
-        self.grids = extract_and_label_images(prs, self.grids, dest, saveimages)
+        self.extract_grid()
+        self.extract_and_label_images(dest, saveimages)
 
     def addfeedback(self,feedelement):
             self.feedback.append(feedelement)
@@ -84,15 +87,17 @@ class Pageset:
     def getfeedback(self):
             return self.feedback
 
-    def extract_grid(self,prs):
-            for slide in prs.slides:
-                    self.grids.append(Grid(prs, slide, gridSize,self))
+    def extract_grid(self):
+            for slide in self.prs.slides:
+                    self.grids.append(Grid(self.prs, slide, gridSize,self))
             for grid in self.grids:
                     grid.update_links(self.grids)
-                    for i in range(gridSize):
-                            for j in range(gridSize):
-                                    if(grid.colors[j][i] == (200, 0, 0)):
-                                        self.addfeedback("Missing colour in {}: {},{} - {} ".format(tok.tag.encode('ascii', 'ignore'), j, i, tok.labels[j][i].encode('ascii', 'ignore')))
+
+    def extract_and_label_images(self, filename, SAVE):
+            image_slight_number = 0
+            for slide in self.prs.slides:
+                    export_images(self.grids, image_slight_number, slide, filename, SAVE)
+                    image_slight_number += 1
 
 
 
@@ -112,8 +117,6 @@ class Grid:
                                         number_string = ''.join(
                                             c for c in current
                                             if c in string.digits)
-                                        # print number_string
-                                        # print "which is", grids[int(number_string)].tag
                                         # Then work out the relevant tag
                                         self.links[row][col] = grids[int(number_string)-1].tag
                                         # Remember that slides are numbered from
@@ -158,12 +161,10 @@ class Grid:
                 return (int(col), int(row))
 
         def process_shape(self, shape):
-                # print str(shape.top)+" "+str(shape.left)
                 try:
                         if shape.is_placeholder:
                                 if shape.placeholder_format.idx == 0:
                                         self.tag = make_title(shape.text)
-                                        # should there be a return here?
                         (co, ro) = self.get_col_row(
                                 shape.top+shape.height/2, shape.left+shape.width/2)
                         if ((co >= gridSize) or (ro >= gridSize)):
@@ -183,18 +184,12 @@ class Grid:
 
                             else:
                                 if hasattr(shape.fill, 'fore_color'):
-                                        if (str(shape.fill.fore_color.type)
-                                                == "SCHEME (2)"):
+                                        if (str(shape.fill.fore_color.type) == "SCHEME (2)"):
                                                 #self.colors[co][ro] = ( 200, 0, 0)
 						pass
-                                        elif (str(shape.fill.fore_color.type) == "RGB (1)"):
-                                                # "We can use this color"
-                                                                                                        self.colors[co][
-                                                                ro] = shape.fill.fore_color.rgb
-
                                         else:
-                                                print "Something new has happened."
-                                                print "A"+str(shape.fill.fore_color.type)+"A"
+                                            self.colors[co][ro] = shape.fill.fore_color.rgb
+
 
 
                         if shape.has_text_frame:
@@ -232,20 +227,15 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
         images = {}
         labels = grid.labels
         for shape in slide.shapes:
-                try:
-                        if not hasattr(shape, "shape_type"):
-                                continue
-
-                        if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                                (co, ro) = grid.get_col_row(
-                                        shape.top+shape.height/2, shape.left+shape.width/2)
-                                if (co, ro) not in images:
-                                        images[co, ro] = []
-                                images[co, ro].append(shape)
-                except:
-                        print "exception at at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
-                        print "exception 23204234 triggered"
+                if not hasattr(shape, "shape_type"):
                         continue
+
+                if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
+                        (co, ro) = grid.get_col_row(
+                                shape.top+shape.height/2, shape.left+shape.width/2)
+                        if (co, ro) not in images:
+                                images[co, ro] = []
+                        images[co, ro].append(shape)
                 if IMAGE_WARNING:
                         for col in range(grid.grid_size):
                                 for row in range(grid.grid_size):
@@ -368,14 +358,6 @@ def create_icon_name(x, y, labels, links, slide_number):
         name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(labels[x][y]).encode('ascii', 'ignore')+".png"
         return name
 
-
-def extract_and_label_images(prs, grids, filename, SAVE=True):
-        # Deal with the images
-        image_slight_number = 0
-        for slide in prs.slides:
-                export_images(grids, image_slight_number, slide, filename, SAVE)
-                image_slight_number += 1
-        return grids
 
 
 ########
