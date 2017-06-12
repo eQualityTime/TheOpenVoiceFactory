@@ -21,7 +21,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 import sys
 import linecache
-print_exceptions = False
+print_exceptions = True
 IMAGE_WARNING = False
 bordercolor = False
 
@@ -79,7 +79,7 @@ class Pageset:
     def addfeedback(self,feedelement):
             self.feedback.append(feedelement)
             #This is a stub - this is to be used to manage the passing of messages to the user.
-            print feedelement
+            print "Feedback added {}".format(feedelement)
 
     def getfeedback(self):
             return self.feedback
@@ -175,6 +175,13 @@ class Grid:
                                 self.links[co][
                                         ro] = click_action.hyperlink.address
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+                            if bordercolor:
+                                print "here"
+                                print "X {}".format(shape.line.color.rgb)
+                                self.colors[co][ro] = shape.line.color.rgb
+                                print "there"
+
+                            else:
                                 if hasattr(shape.fill, 'fore_color'):
                                         if (str(shape.fill.fore_color.type)
                                                 == "SCHEME (2)"):
@@ -182,11 +189,7 @@ class Grid:
 						pass
                                         elif (str(shape.fill.fore_color.type) == "RGB (1)"):
                                                 # "We can use this color"
-                                                if bordercolor:
-                                                        self.colors[co][
-                                                                ro] = shape.line.color.rgb
-                                                else:
-                                                        self.colors[co][
+                                                                                                        self.colors[co][
                                                                 ro] = shape.fill.fore_color.rgb
 
                                         else:
