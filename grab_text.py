@@ -28,8 +28,6 @@ bordercolor = False
 warningMissingLinks = True
 
 
-
-
 def returnException():
         # http://stackoverflow.com/a/20264059
         if print_exceptions is True:
@@ -39,7 +37,8 @@ def returnException():
                 filename = f.f_code.co_filename
                 linecache.checkcache(filename)
                 line = linecache.getline(filename, lineno, f.f_globals)
-                return 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
+                return 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(
+                        filename, lineno, line.strip(), exc_obj)
 
 
 def resizeImage(image, scaleFactor):
@@ -66,40 +65,43 @@ def remove_punctuation(s):
                        if unicodedata.category(x) not in punctutation_cats)
 
 
-
 class Pageset:
 
-# Todo
-# Should throw error if fileanem doens't produce a proper pageset.
+        # Todo
+        # Should throw error if fileanem doens't produce a proper pageset.
 
-    def __init__(self, filename, dest, saveimages=True):
-        self.prs = Presentation(filename)
-        self.grids = []
-        self.feedback=[]
-        self.extract_grid()
-        self.extract_and_label_images(dest, saveimages)
+        def __init__(self, filename, dest, saveimages=True):
+                self.prs = Presentation(filename)
+                self.grids = []
+                self.feedback = []
+                self.extract_grid()
+                self.extract_and_label_images(dest, saveimages)
 
-    def addfeedback(self,feedelement):
-            self.feedback.append(feedelement)
-            #This is a stub - this is to be used to manage the passing of messages to the user.
-            print "Feedback added {}".format(feedelement)
+        def addfeedback(self, feedelement):
+                self.feedback.append(feedelement)
+                # This is a stub - this is to be used to manage the passing of
+                # messages to the user.
+                print "Feedback added {}".format(feedelement)
 
-    def getfeedback(self):
-            return self.feedback
+        def getfeedback(self):
+                return self.feedback
 
-    def extract_grid(self):
-            for slide in self.prs.slides:
-                    self.grids.append(Grid(self.prs, slide, gridSize,self))
-            for grid in self.grids:
-                    grid.update_links(self.grids)
+        def extract_grid(self):
+                for slide in self.prs.slides:
+                        self.grids.append(Grid(self.prs, slide, gridSize, self))
+                for grid in self.grids:
+                        grid.update_links(self.grids)
 
-    def extract_and_label_images(self, filename, SAVE):
-            image_slight_number = 0
-            for slide in self.prs.slides:
-                    export_images(self.grids, image_slight_number, slide, filename, SAVE)
-                    image_slight_number += 1
-
-
+        def extract_and_label_images(self, filename, SAVE):
+                image_slight_number = 0
+                for slide in self.prs.slides:
+                        export_images(
+                            self.grids[image_slight_number],
+                            image_slight_number,
+                            slide,
+                            filename,
+                            SAVE)
+                        image_slight_number += 1
 
 
 class Grid:
@@ -118,13 +120,14 @@ class Grid:
                                             c for c in current
                                             if c in string.digits)
                                         # Then work out the relevant tag
-                                        self.links[row][col] = grids[int(number_string)-1].tag
+                                        self.links[row][col] = grids[
+                                            int(number_string) - 1].tag
                                         # Remember that slides are numbered from
                                         # 1 but grids are numbered from 0
 
-        def __init__(self, pres, slide, gridSize,owningPageset):
+        def __init__(self, pres, slide, gridSize, owningPageset):
                 self.grid_size = gridSize
-                self.pageset=owningPageset
+                self.pageset = owningPageset
                 self.labels = [
                     ["" for x in range(self.grid_size)]
                     for x in range(self.grid_size)]
@@ -143,7 +146,7 @@ class Grid:
                 self.tag = "unknown"
                 self.slide_width = pres.slide_width
                 self.slide_height = pres.slide_height
-                self.feedback=[]
+                self.feedback = []
                 for shape in slide.shapes:
                         self.process_shape(shape)
 
@@ -176,21 +179,23 @@ class Grid:
                                 self.links[co][
                                         ro] = click_action.hyperlink.address
                         if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-                            if bordercolor:
-                                #print "here"
-                                #print "X {}".format(shape.line.color.rgb)
-                                self.colors[co][ro] = shape.line.color.rgb
-                                #print "there"
+                                if bordercolor:
+                                        # print "here"
+                                        # print "X
+                                        # {}".format(shape.line.color.rgb)
+                                        self.colors[co][
+                                                ro] = shape.line.color.rgb
+                                        # print "there"
 
-                            else:
-                                if hasattr(shape.fill, 'fore_color'):
-                                        if (str(shape.fill.fore_color.type) == "SCHEME (2)"):
-                                                #self.colors[co][ro] = ( 200, 0, 0)
-						pass
-                                        else:
-                                            self.colors[co][ro] = shape.fill.fore_color.rgb
-
-
+                                else:
+                                        if hasattr(shape.fill, 'fore_color'):
+                                                if (str(shape.fill.fore_color.type)
+                                                        == "SCHEME (2)"):
+                                                        #self.colors[co][ro] = ( 200, 0, 0)
+                                                        pass
+                                                else:
+                                                        self.colors[co][
+                                                                ro] = shape.fill.fore_color.rgb
 
                         if shape.has_text_frame:
                                 self.process_text_frame(shape, co, ro)
@@ -201,7 +206,14 @@ class Grid:
                                                 if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                                                         if len(self.links[
                                                                co][ro]) < 1:
-                                                                self.pageset.addfeedback("Unknown link at slide: "+self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
+                                                                self.pageset.addfeedback(
+                                                                    "Unknown link at slide: " +
+                                                                    self.tag +
+                                                                    " link here: [{}] [{}] {} ".format(
+                                                                        co,
+                                                                        ro,
+                                                                        self.labels[co][ro]) +
+                                                                    self.links[co][ro])
 
                 except (AttributeError, KeyError, NotImplementedError):
                         self.pageset.addfeedback(returnException())
@@ -219,17 +231,11 @@ class Grid:
                         self.labels[co][ro] = text.strip()
 
 
-def export_images(grids, slide_number, slide, filename, SAVE=True):
-        """     Second pass through shapes list finds images and saves them.
-        We have to do this separately so it's guaranteed we already know what to
-        name the images!"""
-        grid = grids[slide_number]
+def create_image_grid(slide, grid):
         images = {}
-        labels = grid.labels
         for shape in slide.shapes:
                 if not hasattr(shape, "shape_type"):
                         continue
-
                 if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
                         (co, ro) = grid.get_col_row(
                                 shape.top+shape.height/2, shape.left+shape.width/2)
@@ -240,11 +246,20 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                         for col in range(grid.grid_size):
                                 for row in range(grid.grid_size):
                                         if (col, row) not in images:
-                                                if labels[col][row] is not "":
-                                                        if grid.tag not in labels[
+                                                if grid.labels[col][
+                                                        row] is not "":
+                                                        if grid.tag not in grid.labels[
                                                                 col][row]:
                                                                 print "WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
+        return images
 
+
+def export_images(grid, slide_number, slide, filename, SAVE=True):
+        """     Second pass through shapes list finds images and saves them.
+        We have to do this separately so it's guaranteed we already know what to
+        name the images!"""
+        labels = grid.labels
+        images = create_image_grid(slide, grid)
         # Compose each icon out of all the images in the grid cell.
         for (x, y) in images:
                 # Go through all the images, compute bounding
@@ -257,64 +272,65 @@ def export_images(grids, slide_number, slide, filename, SAVE=True):
                          shape.height for shape in images[x, y]])
 
                 try:
-                    # Scale gives us the mapping from image pixels to powerpoint
-                    # distance units. This depends on the resolution
-                    # of the images.
-                    scale = min([shape.width/shape.image.size[0]
-                                 for shape in images[x, y]])
+                        # Scale gives us the mapping from image pixels to powerpoint
+                        # distance units. This depends on the resolution
+                        # of the images.
+                        scale = min([shape.width/shape.image.size[0]
+                                     for shape in images[x, y]])
 
-                    # Size of combined image, in actual pixels (not PPTX units)
-                    # If scales differ between objects, we resize
-                    # them next
-                    w = (r-l)/scale
-                    h = (b-t)/scale
-                    composite = Image.new('RGBA', (w, h))
+                        # Size of combined image, in actual pixels (not PPTX units)
+                        # If scales differ between objects, we resize
+                        # them next
+                        w = (r-l)/scale
+                        h = (b-t)/scale
+                        composite = Image.new('RGBA', (w, h))
 
-                    # Add all the images together.
-                    for shape in images[x, y]:
-                                            # TODO: flipping.
-                                    part = Image.open(
-                                        io.BytesIO(
-                                            shape.image.blob))
-                                    part.load()
-                                    width = part.size[0]
-                                    height = part.size[1]
-                                    left = shape.crop_left*width
-                                    right = (1-shape.crop_right)*width
-                                    top = shape.crop_top*height
-                                    bottom = (1-shape.crop_bottom)*height
-                                    box = (int(left),
-                                           int(top),
-                                           int(right),
-                                           int(bottom))
-                                    part = part.crop(box)
-                                    partScale = (shape.width / part.size[0])
-                                    # part.size because it might have been cropped
-                                    part = resizeImage(part, partScale / scale)
-                                    composite.paste(
-                                        part,
-                                        ((shape.left - l)/scale,
-                                         (shape.top - t)/scale))
-                    # Crop final image.
-                    bbox = composite.getbbox()
-                    composite = composite.crop(bbox)
+                        # Add all the images together.
+                        for shape in images[x, y]:
+                                                        # TODO: flipping.
+                                part = Image.open(
+                                    io.BytesIO(
+                                        shape.image.blob))
+                                part.load()
+                                width = part.size[0]
+                                height = part.size[1]
+                                left = shape.crop_left*width
+                                right = (1-shape.crop_right)*width
+                                top = shape.crop_top*height
+                                bottom = (1-shape.crop_bottom)*height
+                                box = (int(left),
+                                       int(top),
+                                       int(right),
+                                       int(bottom))
+                                part = part.crop(box)
+                                partScale = (shape.width / part.size[0])
+                                # part.size because it might have been cropped
+                                part = resizeImage(part, partScale / scale)
+                                composite.paste(
+                                    part,
+                                    ((shape.left - l)/scale,
+                                     (shape.top - t)/scale))
+                        # Crop final image.
+                        bbox = composite.getbbox()
+                        composite = composite.crop(bbox)
 
-                    # Save!
-                    grid.icons[x][
-                            y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
-                    name = create_icon_name(x, y, labels, grid.links, slide_number)
-                    # print name
-                    if SAVE:
-                            folder = filename+"/icons/"  # + str(slide_number)
-                            if not os.path.exists(folder):
-                                    os.makedirs(folder)
-                            composite.save(folder + "" + name)
+                        # Save!
+                        grid.icons[x][
+                                y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
+                        name =                  create_icon_name(x, y, labels, grid.links, slide_number)
+                        # print name
+                        if SAVE:
+                                # + str(slide_number)
+                                folder = filename+"/icons/"
+                                if not os.path.exists(folder):
+                                        os.makedirs(folder)
+                                composite.save(folder + "" + name)
                 except IOError as e:
                         print "Error reading image for {} {}".format(x, y)
                         if ("cannot find loader for this WMF file" in e):
-                            print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x,y,slide_number)
+                                print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number)
                         if ("cannot identify image file" in e):
-                            print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x,y,slide_number)
+                                print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number)
                 except ValueError:
                         print "Error reading image for {} {}".format(x, y)
 
@@ -355,9 +371,9 @@ def make_title(label):
 
 
 def create_icon_name(x, y, labels, links, slide_number):
-        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(labels[x][y]).encode('ascii', 'ignore')+".png"
+        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
+                labels[x][y]).encode('ascii', 'ignore')+".png"
         return name
-
 
 
 ########
@@ -373,7 +389,7 @@ if __name__ == "__main__":
         gridSize = 5
         if (len(sys.argv) > 2):
                 gridSize = int(sys.argv[3])
-        pageset=Pageset(filename,dest)
+        pageset = Pageset(filename, dest)
         write_to_JSON(pageset.grids, dest+'/pageset.json')
 
         # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
