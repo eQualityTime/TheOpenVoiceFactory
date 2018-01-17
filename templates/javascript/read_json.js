@@ -332,13 +332,10 @@ function getParameterByName(name, url) {
        } else {
            rows = grid_size_rows;
            colums = grid_size_columns;
-           offset_t = $(this).offset().top - $(window).scrollTop();
            offset_l = $(this).offset().left - $(window).scrollLeft();
-           //alert(offset_t+" "+ $(this).offset().top+" "+$(window).scrollTop())
-           //percentage_accross=(Math.round((e.clientX - offset_l)) / this.width)
+           offset_t = $(this).offset().top - $(window).scrollTop();
            distance_down_in_table = e.clientY - offset_t
            percentage_down = (Math.round((e.clientY - offset_t)) / 540)
-               //alert(offset_t+" "+e.clientY+" "+" "+distance_down_in_table+" "+percentage_down)
            var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
            var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
            if (our_top < grid_size_columns) {
