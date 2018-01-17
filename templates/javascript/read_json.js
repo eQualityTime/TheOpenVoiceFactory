@@ -1,4 +1,3 @@
-   start();
 
    function start() {
        key = "toppage";
@@ -355,10 +354,13 @@ function getParameterByName(name, url) {
            start_scanning();
        }
    }
+
+function MAYBE(){
    main = document.getElementById("mainGrid");
-   var offset_t = $(main).offset().top //- $(window).scrollTop();
-   var offset_l = $(main).offset().left //- $(window).scrollLeft();
+   var offset_t = $(main).offset().top 
+   var offset_l = $(main).offset().left
    var interval_access_var = 0
+}
 
    function start_scanning() {
        if (azulejoe_scanning == true) {
