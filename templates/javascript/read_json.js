@@ -34,6 +34,11 @@
            }
        };
        //TODO - needs an error message if the JSON doesn't load
+       main = document.getElementById("mainGrid");
+	   offset_t = $(main).offset().top 
+	   offset_l = $(main).offset().left
+	   interval_access_var = 0
+
    }
 
    function setup_messagewindow() {
@@ -356,11 +361,7 @@ function getParameterByName(name, url) {
    }
 
 function MAYBE(){
-   main = document.getElementById("mainGrid");
-   var offset_t = $(main).offset().top 
-   var offset_l = $(main).offset().left
-   var interval_access_var = 0
-}
+  }
 
    function start_scanning() {
        if (azulejoe_scanning == true) {
