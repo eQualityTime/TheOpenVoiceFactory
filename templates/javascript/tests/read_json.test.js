@@ -6,7 +6,7 @@ describe('Comscan', function() {
 
     // inject the HTML fixture for the tests
     beforeEach(function() {
-        var fixture = '<table id="mainGrid" border=1 height=520 width=720 class="four"></table>';
+        var fixture = '<table id="mainGrid" border=1 height=520 width=720 class="four"></table> <form name="myform"> <textarea id="messagewindow" name="outputtext"></textarea> </form>';
         document.body.insertAdjacentHTML(
             'afterbegin',
             fixture);
@@ -28,7 +28,12 @@ describe('Comscan', function() {
 // * Do two-part functions trigger at the right time? 
 //
 // That should be enought to get started.
+//
+//
 
+
+//List of todos: 
+// We should seperate the click event so that there is a function that takes a pixel x,y, a function that takes a normalised x,y for the grid, and one that takes the information converted into a grid reference
 
 // * Does that object have the right number of slides in it. 
     it('We can parse an example json document', function() {
@@ -44,6 +49,13 @@ describe('Comscan', function() {
     });
 
 // * When pressing a particular button, does the message window change apropreityly 
+  it('Message window sets up and changes with button press.', function() {
+        setupInternalDataStructures(sample);	
+	setupMessageWindow();
+	add(0,0);
+	console.log(document.myform)
+	expect(document.myform.outputtext.value).toBe("");
+    });
 
 
 

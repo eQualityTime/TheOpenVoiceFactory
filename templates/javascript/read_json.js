@@ -34,7 +34,7 @@ function start() {
     req.onreadystatechange = function() {
         if (req.readyState == 4 && req.status == 200) {
 	    setupInternalDataStructures(req.responseText);
-            setup_messagewindow();
+            setupMessageWindow();
             setup_table();
             load_page(key);
         }
@@ -47,7 +47,7 @@ function start() {
 
 }
 
-function setup_messagewindow() {
+function setupMessageWindow() {
     my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
     my_height = 520 / grid_size_rows;
     area = document.getElementById('messagewindow');
@@ -339,6 +339,8 @@ function trigger_on_scan() {
 document.body.onkeydown = function(e) {
     trigger_on_scan()
 };
+
+
 $('#mainGrid').click(function(e) {
     if (azulejoe_scanning == true) {
         trigger_on_scan();
@@ -349,6 +351,7 @@ $('#mainGrid').click(function(e) {
         offset_t = $(this).offset().top - $(window).scrollTop();
         distance_down_in_table = e.clientY - offset_t
         percentage_down = (Math.round((e.clientY - offset_t)) / 540)
+
         var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
         var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
         if (our_top < grid_size_columns) {
