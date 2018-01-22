@@ -22,7 +22,7 @@ describe('Comscan', function() {
 // * Can you fetch an object from a json file? 
 // - When loading the first page. Do a selection of the right squares have the correct message in them?
 // - When pressing a particular button, does the message window change appropriately 
-// * Does the 'clear' function work when triggered? 
+// - Does the 'clear' function work when triggered? 
 // * Do two-part functions trigger at the right time? 
 //
 // That should be enought to get started.
@@ -66,6 +66,30 @@ describe('Comscan', function() {
 	expect(document.getElementById("messagewindow").value).toBe("");
     });
 
+
+   it('clear function works', function() {
+        setupInternalDataStructures(sample);	
+	setupMessageWindow();
+	expect(document.getElementById("messagewindow").value).toBe("");
+	add(1,1);
+	expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
+	add(0,4);
+	expect(document.getElementById("messagewindow").value).toBe("");
+    });
+
+
+  it('Two part function works', function() {
+        setupInternalDataStructures(sample);	
+	setupMessageWindow();
+	expect(document.getElementById("messagewindow").value).toBe("");
+	add(2,2);
+	add(3,1);
+	add(1,1);
+	expect(document.getElementById("messagewindow").value).toBe(" I have a pain in my");
+	expect(key).toBe("bodyparts")
+
+
+    });
 
 // * When pressing a particular button, does the contents of other buttons change. 
   it('the add function changes the keys', function() {
