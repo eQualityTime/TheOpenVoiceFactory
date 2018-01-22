@@ -194,7 +194,8 @@ function processSpecialOld(command) {
     for (i = 0; i < commandArray.length; i++) {
         switch (commandArray[i]) {
             case "special::clear":
-                document.myform.reset();
+               // document.myform.reset();Works, but NOT in tests...
+		document.getElementById("messagewindow").value= "";
                 break;
             case "special::unfinnished":
                 alert("This feature is unimplemented on the web demo");
@@ -242,7 +243,9 @@ function processSpecial(command) {
         console.log("Function Name is :" + functionname);
         switch (functionname) {
             case "clear":
-                document.myform.reset();
+                //document.myform.reset();Works but NOT in tests
+		document.getElementById("messagewindow").value= "";
+
                 break;
             case "backspace":
                 document.myform.outputtext.value = document.myform.outputtext.value.substring(0, document.myform.outputtext.value.length - 1);

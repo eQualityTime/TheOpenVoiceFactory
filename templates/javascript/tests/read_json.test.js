@@ -20,10 +20,8 @@ describe('Comscan', function() {
 
 // # List of tests 
 // * Can you fetch an object from a json file? 
-// * When loading the first page. Do a selection of the right squares have the correct message in them?
-// * When pressing a particular button, does the message window change apropreityly 
-// * When pressing a particular button, does the contents of other buttons change. 
-// * Does the 'speak' function trigger when that button is pressed
+// - When loading the first page. Do a selection of the right squares have the correct message in them?
+// - When pressing a particular button, does the message window change appropriately 
 // * Does the 'clear' function work when triggered? 
 // * Do two-part functions trigger at the right time? 
 //
@@ -58,12 +56,30 @@ describe('Comscan', function() {
     });
 
 
-
-    it('the highlight outputs -thinking- speech each time it is moved', function() {
-        spyOn(window, "think");
-        expect(think).toHaveBeenCalled();
-        //learned this at http://www.htmlgoodies.com/html5/javascript/spy-on-javascript-methods-using-the-jasmine-testing-framework.html#fbid=KJtVgELupgs
+ it('clear function works', function() {
+        setupInternalDataStructures(sample);	
+	setupMessageWindow();
+	expect(document.getElementById("messagewindow").value).toBe("");
+	add(1,1);
+	expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
+	add(0,4);
+	expect(document.getElementById("messagewindow").value).toBe("");
     });
+
+
+// * When pressing a particular button, does the contents of other buttons change. 
+  it('the add function changes the keys', function() {
+        setupInternalDataStructures(sample);	
+	add(2,2);
+	expect(key).toBe("personalcare");
+    });
+
+
+//it('Speak function is triggered...', function() {
+ //       spyOn(window, "say");
+  //      expect(think).toHaveBeenCalled();
+   //     //learned this at http://www.htmlgoodies.com/html5/javascript/spy-on-javascript-methods-using-the-jasmine-testing-framework.html#fbid=KJtVgELupgs
+  //  });
 
 });
 
