@@ -31,10 +31,9 @@ describe('Comscan', function() {
 // That should be enought to get started.
 
 
-    it('The iterator, loaded with test values, shoudl have an initial highlight value of 4', function() {
-	alert("nearly")
-        iterator = testiteratorA();
-        expect(iterator.getHighlightedItemID()).toBe(4);
+    it('We can parse an example json document', function() {
+        setupInternalDataStructures(sample);	
+        expect(Object.keys(links).length).toBe(100);
     });
 
     it('the highlight outputs -thinking- speech each time it is moved', function() {

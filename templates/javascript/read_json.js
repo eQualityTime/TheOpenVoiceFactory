@@ -1,18 +1,14 @@
-function start() {
-    key = "toppage";
-    utterances = {};
-    links = {};
-    colours = {};
-    icons = {};
-    labels = {};
-    slide_number = {};
-    var req = new XMLHttpRequest();
-    req.open("GET", "pageset.json");
-    req.overrideMimeType("application/json");
-    req.send(null);
-    req.onreadystatechange = function() {
-        if (req.readyState == 4 && req.status == 200) {
-            var obj = JSON.parse(req.responseText);
+
+function setupInternalDataStructures(responseText){
+	    key = "toppage";
+	    utterances = {};
+	    links = {};
+	    colours = {};
+	    icons = {};
+	    labels = {};
+	    slide_number = {};
+
+            var obj = JSON.parse(responseText);
             for (grid in obj.Grid) {
                 console.log(obj.Grid[grid][0])
                 labels[obj.Grid[grid][0]] = obj.Grid[grid][1];
@@ -27,6 +23,17 @@ function start() {
             }
             grid_size_rows = obj.Settings[0];
             grid_size_columns = obj.Settings[0];
+
+}
+
+function start() {
+    var req = new XMLHttpRequest();
+    req.open("GET", "pageset.json");
+    req.overrideMimeType("application/json");
+    req.send(null);
+    req.onreadystatechange = function() {
+        if (req.readyState == 4 && req.status == 200) {
+	    setupInternalDataStructures(req.responseText);
             setup_messagewindow();
             setup_table();
             load_page(key);
