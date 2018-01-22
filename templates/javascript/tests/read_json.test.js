@@ -52,9 +52,9 @@ describe('Comscan', function() {
   it('Message window sets up and changes with button press.', function() {
         setupInternalDataStructures(sample);	
 	setupMessageWindow();
-	add(0,0);
-	console.log(document.myform)
-	expect(document.myform.outputtext.value).toBe("");
+	expect(document.getElementById("messagewindow").value).toBe("");
+	add(1,1);
+	expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
     });
 
 

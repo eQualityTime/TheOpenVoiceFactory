@@ -146,7 +146,8 @@ function append(text) {
     if (text.length == 1) { //so that we can spell with the single letter buttons
         document.myform.outputtext.value += text;
     } else {
-        document.myform.outputtext.value += " " + text;
+        //document.myform.outputtext.value += " " + text; (works, but NOT when testing... 
+	document.getElementById("messagewindow").value+= " " +text;
     }
 }
 
