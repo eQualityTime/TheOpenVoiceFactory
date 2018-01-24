@@ -431,7 +431,7 @@ def create_obf_object(grid):
                     img["id"] = grid.icons[col][row]
                     img["width"] = 300
                     img["height"] = 300
-                    img["path"]="images/"+grid.icons[col][row]
+                    img["path"]="../"+grid.icons[col][row]
                     images.append(img)
         for_json["images"]=images
         return for_json
@@ -458,7 +458,10 @@ def write_to_obf(grids, dest):
         with zipfile.ZipFile(outzipfile, "w") as w:
                 for x in boards_names_dic.values():
                         w.write(x)
-                for x in image_names_dic.values():
+                for y in image_names_dic.keys():
+                        x=image_names_dic[y]
+                        image_names_dic[y]=x.replace("../icons","images")
+                        print x
                         w.write(x)
         os.chdir(owd)
 
