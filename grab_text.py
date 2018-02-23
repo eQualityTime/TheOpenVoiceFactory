@@ -399,14 +399,16 @@ def create_obf_button(grid,col,row):
                 commands=commandstring.split(",")
                 for command in commands:
                     command_name= command.split("(",1)[0]
+                    argument=command.split("(",1)[0][2:-2]
                     if command_name == "deleteword":
                         #should find out what we do there...
-                        pass
+                        button["action"]=":deleteword"
                     elif command_name == "clear":
-                        pass
+                        button["action"]=":clear"
                     elif command_name == "place":
-                        pass
+                        button["label"] = argument
                     elif command_name == "open":
+                        button["load_board"]= { "path": "boards/"+argument+".obf" }
                         pass
                     else:
                         raise ValueError('Unknown special command_name ({}) to process'.format(command_name))
