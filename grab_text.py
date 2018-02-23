@@ -380,7 +380,6 @@ def create_obf_manifest(boards_names_dic, image_names_dic, dest):
 def create_obf_button(grid,col,row):
     button = {}
     button["id"] = "{}{}".format(col, row)
-    button["label"] = grid.labels[col][row]
     button["border_color"] = "rgb(68,68,68)"
     if("pptx" in str(type(grid.colors[col][row]))):
         color = grid.colors[col][row]
@@ -393,6 +392,27 @@ def create_obf_button(grid,col,row):
         if "special::" not in grid.links[col][row]:
             if not grid.links[col][row].startswith("ovf("):
                 button["load_board"]= { "path": "boards/"+grid.links[col][row]+".obf" }
+            else:
+                #It's a special commend. let's extract it.
+
+                commandstring=grid.links[col][row][4:-1]
+                commands=commandstring.split(",")
+                for command in commands:
+                    command_name= command.split("(",1)[0]
+                    if command_name == "deleteword":
+                        #should find out what we do there...
+                        pass
+                    elif command_name == "clear":
+                        pass
+                    elif command_name == "place":
+                        pass
+                    elif command_name == "open":
+                        pass
+                    else:
+                        raise ValueError('Unknown special command_name ({}) to process'.format(command_name))
+                pass
+    #This is at the end because we might change it during the special commands.
+    button["label"] = grid.labels[col][row]
     return button
 
 
