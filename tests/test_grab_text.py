@@ -55,6 +55,14 @@ class ovfTest(TestCase):
         grids = self.get_singleton_CK20().grids
         self.assertEqual(grids[0].colors[2][2],(255,125,236))
 
+
+    def test_create_obf_object(self):
+        grids = self.get_singleton_CK20().grids
+        obf=grab_text.create_obf_object(grids[0])
+        self.maxDiff = None
+        self.assertMultiLineEqual(open('../testoutputs/singleobffile.obf').read().strip(),"{}".format(obf))
+
+
     def test_read_CK20_and_check_link(self):
         grids = self.get_singleton_CK20().grids
         print "XXXXXX"
