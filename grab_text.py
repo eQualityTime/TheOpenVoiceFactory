@@ -394,12 +394,16 @@ def create_obf_button(grid,col,row):
                 button["load_board"]= { "path": "boards/"+grid.links[col][row]+".obf" }
             else:
                 #It's a special commend. let's extract it.
-
+                print "We're in the special commands:"
+                print "original line is : {}".format(grid.links[col][row])
                 commandstring=grid.links[col][row][4:-1]
+                print "Command is {}".format(commandstring)
                 commands=commandstring.split(",")
                 for command in commands:
                     command_name= command.split("(",1)[0]
-                    argument=command.split("(",1)[0][2:-2]
+                    argument=command.split("(",1)[1][0:-1]
+                    print "command name is {}".format(command_name)
+                    print "argument is {}".format(argument)
                     if command_name == "deleteword":
                         #should find out what we do there...
                         button["action"]=":deleteword"
@@ -408,8 +412,12 @@ def create_obf_button(grid,col,row):
                     elif command_name == "place":
                         button["label"] = argument
                     elif command_name == "open":
-                        button["load_board"]= { "path": "boards/"+argument+".obf" }
-                        pass
+                        button["load_board"]= { "path": "boards/"+make_title(argument)+".obf" }
+
+                    elif command_name == "unfinnished":
+                         pass
+                    elif command_name == "blank":
+                         pass
                     else:
                         raise ValueError('Unknown special command_name ({}) to process'.format(command_name))
                 pass
@@ -495,7 +503,7 @@ def make_title(label):
     """Given a  string, returns the string in the format we use for
      identifying grids. This is used mostly to build internal link
      structures"""
-    tag = remove_punctuation(label.lower().strip().replace(" ", "_"))
+    tag = remove_punctuation(label.lower().strip().replace(" ", "_").replace("%20","_"))
     if tag == "":
         tag = "unknown"
     return tag
