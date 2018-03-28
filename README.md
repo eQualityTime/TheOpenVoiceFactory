@@ -5,7 +5,7 @@ Live site: http://theopenvoicefactory.org
 
 The Open Voice Factory converts communication boards into communication devices.
 
-Anyone can create an aid by editing a PowerPoint template to add their one pages or utterances. When you upload your template to the factory, it will create a working communication aid for you.
+Anyone can create an aid by editing a PowerPoint template to add their own pages or utterances. When you upload your template to the factory, it will create a working communication aid for you.
 
 The resulting programs run on any platform, from tablets to laptops to phones, without installation or complex setup.
 
