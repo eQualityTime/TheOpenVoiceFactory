@@ -44,14 +44,21 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
+
 				var filterData = JSON.parse(data);
 				
-				var nameFun = function() {
+				var jsondata = JSON.stringify(filterData[0]);
+
+				expect(function() {
+					setupInternalDataStructuresObf(jsondata);
+				}).toThrow("No page name defined");
+
+				/* var nameFun = function() {
 					if(!filterData[0].name){
 						throw 'No page name defined';
 					}
 				};
-				expect(nameFun).toThrow('No page name defined');				
+				expect(nameFun).toThrow('No page name defined'); */				
 				doneFn();
 			});
 			
@@ -74,17 +81,20 @@ describe( "Reading OBF Data into local data structures", function () {
 		
 		it('The value button.label should appear in the labels array', function(doneFn) {
 
-			var fileName = 'test-2.obf';
+			var fileName = 'test-1.obf';
 
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
+
 				var filterData = JSON.parse(data); // Convert JSON to object
 				
 				var jsondata = JSON.stringify(filterData[0]);
 				
 				setupInternalDataStructuresObf(jsondata);
 				
-				expect(filterData[0].buttons[0].label).toBe(labels.undefined[0][0]);
+				var objKey = Object.keys(labels);
+				
+				expect(filterData[0].buttons[0].label).toBe( labels[objKey[1]][0][0] );
 
 				doneFn();
 			});			
@@ -96,10 +106,17 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
+
 				var filterData = JSON.parse(data); // Convert JSON to object
-				
+
+				var jsondata = JSON.stringify(filterData[0]);
+
+				setupInternalDataStructuresObf(jsondata);
+
+				var objKey = Object.keys(labels);			
+
 				var buttonLableFun = function() {
-					if(!filterData[0].buttons[0].label){
+					if(!labels[objKey[1]][0][0]){
 						throw 'No label defined for button id ' + filterData[0].buttons[0].id;
 					}
 				};
@@ -123,7 +140,7 @@ describe( "Reading OBF Data into local data structures", function () {
  */ 
 myFunctionThatMakesRequests = function (fileName, cb) {
 	$.ajax({
-		url: '/base/testdata/' + fileName,	
+		url: '/base/sampledata/' + fileName,	
 		cache: false,
 		success: function (data) {	
 			cb(false, data);			
