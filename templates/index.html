@@ -26,7 +26,6 @@ function setupInternalDataStructures(responseText){
 	    labels = {};
 	    slide_number = {};
 
-        debugger;
             var obj = JSON.parse(responseText);
             for (grid in obj.Grid) {
                 console.log(obj.Grid[grid][0])
@@ -47,13 +46,12 @@ function setupInternalDataStructures(responseText){
 
 function start() {
     var req = new XMLHttpRequest();
-    req.open("GET", "./pageset.json");
-    debugger;
+    req.open("GET", "./pageset.ovf");
     req.overrideMimeType("application/json");
     req.send(null);
     req.onreadystatechange = function() {
         if (req.readyState == 4 && req.status == 200) {
-            setupInternalDataStructures(req.responseText);
+            	setupInternalDataStructures(req.responseText);
                 setupMessageWindow();
                 setup_table();
                 load_page(key);
@@ -124,7 +122,7 @@ function load_page(key_in) {
             } catch (err) {
                 console.log("Error with key: " + key);
                 alert("There has been an exception: " + err.message)
-                start()
+                //start()
             }
         }
     }

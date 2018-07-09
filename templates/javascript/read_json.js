@@ -32,13 +32,14 @@ function start(format) {
     req.send(null);
     req.onreadystatechange = function() {
         if (req.readyState == 4 && req.status == 200) {
-            if (format === "obf") { //Open Board Format file to read in
+            /*if (format === "obf") { //Open Board Format file to read in
                 setupInternalDataStructuresObf(req.responseText);
             } else if (format === "ovf") { //Open Voice Factory format file
                 setupInternalDataStructuresOvf(req.responseText);
             } else {
                 console.log("Unknown file format to read in");
-            }
+            }*/
+	    setupInternalDataStructures(req.responseText);
             setupMessageWindow();
             setup_table();
             load_page(key);
