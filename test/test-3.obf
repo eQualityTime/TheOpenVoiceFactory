@@ -1,4 +1,4 @@
-{
+[{
   "format": "open-board-0.1",
   "id": "test-2",
   "locale": "en",
@@ -17,4 +17,4 @@
       "id": "T1"
     }
   ]
-}
+}]
