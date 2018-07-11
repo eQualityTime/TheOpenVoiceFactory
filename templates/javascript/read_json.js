@@ -26,27 +26,32 @@ function setupInternalDataStructures(responseText){
 }
 
 function start(format) {
-    var req = new XMLHttpRequest();
-    req.open("GET", "lots_of_stuff2.obf");
-    req.overrideMimeType("application/json");
-    req.send(null);
-    req.onreadystatechange = function() {
-        if (req.readyState == 4 && req.status == 200) {
-            /*if (format === "obf") { //Open Board Format file to read in
-                setupInternalDataStructuresObf(req.responseText);
-            } else if (format === "ovf") { //Open Voice Factory format file
-                setupInternalDataStructuresOvf(req.responseText);
-            } else {
-                console.log("Unknown file format to read in");
-            }*/
-	    setupInternalDataStructures(req.responseText);
+
+    readManifest(function(err, result) {
+        if (!err) {
+            setupInternalDataStructures(result);
             setupMessageWindow();
             setup_table();
             load_page(key);
         } else {
             console.log("Problem reading file");
         }
-    };
+    });
+
+    /* var req = new XMLHttpRequest();
+    req.open("GET", "pageset.ovf");
+    req.overrideMimeType("application/json");
+    req.send(null);
+    req.onreadystatechange = function() {
+        if (req.readyState == 4 && req.status == 200) {            
+            setupInternalDataStructures(req.responseText);
+            setupMessageWindow();
+            setup_table();
+            load_page(key);
+        } else {
+            console.log("Problem reading file");
+        }
+    }; */
     //TODO - needs an error message if the JSON doesn't load
     main = document.getElementById("mainGrid");
     offset_t = $(main).offset().top
@@ -617,4 +622,49 @@ function rgbObject2Array(rgbColorObject) {
         } 
     }
     return rgb;
+}
+
+// Read Manifest file
+function readManifest(cb)
+{    
+    var req = new XMLHttpRequest();
+    req.open("GET", 'data/manifest.json');
+    //req.overrideMimeType("application/json");
+    req.send(null);
+    req.onreadystatechange = function() {
+        
+        if (req.readyState == 4 && req.status == 200) {
+            
+            var parseData = JSON.parse(req.responseText);
+            
+            readManifestRelationFile(parseData.root, function(err, result){
+                if (!err) {
+                    cb (false, result);
+                } else {
+                    cb(true);
+                }
+            })
+
+        } else {
+            console.log("Problem reading file");
+        }
+    };
+}
+
+function readManifestRelationFile(file, cb)
+{
+    var req = new XMLHttpRequest();
+    req.open("GET", 'data/' + file);
+    //req.overrideMimeType("application/json");
+    req.send(null);
+    req.onreadystatechange = function() {
+        if (req.readyState == 4) {
+            if (req.status == 200) {
+                cb(false, req.responseText);
+            } else {
+                console.log("Problem reading file");
+                cb(true);
+            }
+        }
+    };
 }
