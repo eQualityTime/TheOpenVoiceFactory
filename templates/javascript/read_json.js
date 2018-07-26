@@ -29,10 +29,17 @@ function start(format) {
 
     readManifest(function(err, result) {
         if (!err) {
-            setupInternalDataStructures(result);
-            setupMessageWindow();
-            setup_table();
-            load_page(key);
+            if (format == "obf") {
+                setupInternalDataStructuresObf(result);
+            } else if (format == "ovf") {
+                setupInternalDataStructures(result);
+                setupMessageWindow();
+                setup_table();
+                load_page(key);
+            } else {
+                console.log('Invalid file format.');
+            }
+            
         } else {
             console.log("Problem reading file");
         }
@@ -625,7 +632,7 @@ function rgbObject2Array(rgbColorObject) {
 }
 
 // Read Manifest file
-function readManifest(cb)
+function readManifest(callback)
 {    
     var req = new XMLHttpRequest();
     req.open("GET", 'data/manifest.json');
@@ -639,9 +646,9 @@ function readManifest(cb)
             
             readManifestRelationFile(parseData.root, function(err, result){
                 if (!err) {
-                    cb (false, result);
+                    callback (false, result);
                 } else {
-                    cb(true);
+                    callback(true);
                 }
             })
 
@@ -651,7 +658,7 @@ function readManifest(cb)
     };
 }
 
-function readManifestRelationFile(file, cb)
+function readManifestRelationFile(file, callback)
 {
     var req = new XMLHttpRequest();
     req.open("GET", 'data/' + file);
@@ -660,10 +667,10 @@ function readManifestRelationFile(file, cb)
     req.onreadystatechange = function() {
         if (req.readyState == 4) {
             if (req.status == 200) {
-                cb(false, req.responseText);
+                callback(false, req.responseText);
             } else {
                 console.log("Problem reading file");
-                cb(true);
+                callback(true);
             }
         }
     };
