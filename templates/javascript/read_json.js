@@ -25,14 +25,22 @@ function setupInternalDataStructures(responseText){
             grid_size_columns = obj.Settings[0];
 }
 
-function start(format) {
+function start() {
 
-    readManifest(function(err, result) {
+    readManifest(function(err, response) {
         if (!err) {
-            setupInternalDataStructures(result);
-            setupMessageWindow();
-            setup_table();
-            load_page(key);
+            console.log(response.file_type);
+            if (response.file_type == "obf") {
+                setupInternalDataStructuresObf(response.result);
+            } else if (response.file_type == "ovf") {
+                setupInternalDataStructures(response.result);
+                setupMessageWindow();
+                setup_table();
+                load_page(key);
+            } else {
+                console.log('Invalid file format.');
+            }
+            
         } else {
             console.log("Problem reading file");
         }
@@ -625,7 +633,7 @@ function rgbObject2Array(rgbColorObject) {
 }
 
 // Read Manifest file
-function readManifest(cb)
+function readManifest(callback)
 {    
     var req = new XMLHttpRequest();
     req.open("GET", 'data/manifest.json');
@@ -639,9 +647,9 @@ function readManifest(cb)
             
             readManifestRelationFile(parseData.root, function(err, result){
                 if (!err) {
-                    cb (false, result);
+                    callback (false, result);
                 } else {
-                    cb(true);
+                    callback(true);
                 }
             })
 
@@ -651,8 +659,12 @@ function readManifest(cb)
     };
 }
 
-function readManifestRelationFile(file, cb)
+function readManifestRelationFile(file, callback)
 {
+    var s = file;
+    var splitString = s.split(".");
+    var fileType = splitString[splitString.length-1];
+
     var req = new XMLHttpRequest();
     req.open("GET", 'data/' + file);
     //req.overrideMimeType("application/json");
@@ -660,10 +672,10 @@ function readManifestRelationFile(file, cb)
     req.onreadystatechange = function() {
         if (req.readyState == 4) {
             if (req.status == 200) {
-                cb(false, req.responseText);
+                callback(false, {"file_type": fileType, "result": req.responseText});
             } else {
                 console.log("Problem reading file");
-                cb(true);
+                callback(true);
             }
         }
     };
