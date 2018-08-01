@@ -25,27 +25,41 @@ function setupInternalDataStructures(responseText){
             grid_size_columns = obj.Settings[0];
 }
 
-function start(format) {
-    var req = new XMLHttpRequest();
-    req.open("GET", "lots_of_stuff2.obf");
+function start() {
+
+    readManifest(function(err, response) {
+        if (!err) {
+            console.log(response.file_type);
+            if (response.file_type == "obf") {
+                setupInternalDataStructuresObf(response.result);
+            } else if (response.file_type == "ovf") {
+                setupInternalDataStructures(response.result);
+                setupMessageWindow();
+                setup_table();
+                load_page(key);
+            } else {
+                console.log('Invalid file format.');
+            }
+            
+        } else {
+            console.log("Problem reading file");
+        }
+    });
+
+    /* var req = new XMLHttpRequest();
+    req.open("GET", "pageset.ovf");
     req.overrideMimeType("application/json");
     req.send(null);
     req.onreadystatechange = function() {
-        if (req.readyState == 4 && req.status == 200) {
-            if (format === "obf") { //Open Board Format file to read in
-                setupInternalDataStructuresObf(req.responseText);
-            } else if (format === "ovf") { //Open Voice Factory format file
-                setupInternalDataStructuresOvf(req.responseText);
-            } else {
-                console.log("Unknown file format to read in");
-            }
+        if (req.readyState == 4 && req.status == 200) {            
+            setupInternalDataStructures(req.responseText);
             setupMessageWindow();
             setup_table();
             load_page(key);
         } else {
             console.log("Problem reading file");
         }
-    };
+    }; */
     //TODO - needs an error message if the JSON doesn't load
     main = document.getElementById("mainGrid");
     offset_t = $(main).offset().top
@@ -616,4 +630,53 @@ function rgbObject2Array(rgbColorObject) {
         } 
     }
     return rgb;
+}
+
+// Read Manifest file
+function readManifest(callback)
+{    
+    var req = new XMLHttpRequest();
+    req.open("GET", 'data/manifest.json');
+    //req.overrideMimeType("application/json");
+    req.send(null);
+    req.onreadystatechange = function() {
+        
+        if (req.readyState == 4 && req.status == 200) {
+            
+            var parseData = JSON.parse(req.responseText);
+            
+            readManifestRelationFile(parseData.root, function(err, result){
+                if (!err) {
+                    callback (false, result);
+                } else {
+                    callback(true);
+                }
+            })
+
+        } else {
+            console.log("Problem reading file");
+        }
+    };
+}
+
+function readManifestRelationFile(file, callback)
+{
+    var s = file;
+    var splitString = s.split(".");
+    var fileType = splitString[splitString.length-1];
+
+    var req = new XMLHttpRequest();
+    req.open("GET", 'data/' + file);
+    //req.overrideMimeType("application/json");
+    req.send(null);
+    req.onreadystatechange = function() {
+        if (req.readyState == 4) {
+            if (req.status == 200) {
+                callback(false, {"file_type": fileType, "result": req.responseText});
+            } else {
+                console.log("Problem reading file");
+                callback(true);
+            }
+        }
+    };
 }

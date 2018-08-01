@@ -14,6 +14,14 @@
 	},
 	"buttons": [{
 		"id": "T1",
-		"label": "Testing"
-	}]
+		"label": "Testing",
+        "sound_id": "s1"
+	}],
+    "sounds": [
+	{
+      "id": "s2",
+      "url": "http://soundbible.com/grab.php?id=132&type=mp3",
+      "duration": 2,
+      "content_type": "audio/mp3"
+    }]       
 }]

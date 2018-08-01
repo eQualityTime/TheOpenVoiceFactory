@@ -58,11 +58,11 @@ function setupInternalDataStructuresObf(responseText) {
 
 		boardname = obfInput.name;
 
-        /* if(obfInput.name){
+        if(obfInput.name){
             
         } else {
             throw "No page name defined"
-        } */
+        }
             
         
         //Load the grid array
@@ -74,16 +74,19 @@ function setupInternalDataStructuresObf(responseText) {
             gridRow = []; //Clears the array (actually creates a new array)
         }
         
-        //Load images from obf into the local array
-        /* var imageCount = obfInput.images.length;
-        for (i=0;i<imageCount; i++) { 
-            let image = obfInput.images[i];
-            if(image.url) {
-                imageArray.push(new Image(image.id, image.url));
-            } else {
-                imageArray.push(new Image(image.id, ""));
+
+        if (obfInput.images) {
+            //Load images from obf into the local array
+            var imageCount = obfInput.images.length;
+            for (i=0;i<imageCount; i++) { 
+                let image = obfInput.images[i];
+                if(image.url) {
+                    imageArray.push(new Image(image.id, image.url));
+                } else {
+                    imageArray.push(new Image(image.id, ""));
+                }
             }
-        } */
+        }
         
         
         //Load Buttons into the local array
@@ -93,11 +96,13 @@ function setupInternalDataStructuresObf(responseText) {
         }
             
         //Load sounds into the local array
-        /* for (i=0; i<obfInput.sounds.length; i++) {
-            let sound = obfInput.sounds[i];
-            soundsArray.push(new Sound(sound.id, sound.url));
-        } */
-        
+        if (obfInput.sounds) {
+            for (i=0; i<obfInput.sounds.length; i++) {
+                let sound = obfInput.sounds[i];
+                let soundURL = (sound.url) || "";
+                soundsArray.push(new Sound(sound.id, soundURL));
+            }
+        }
         //Now construct the ovf array style
         for(row=0; row<rows; row++)  {
             for(column=0; column<columns; column++) {
@@ -122,7 +127,7 @@ function setupInternalDataStructuresObf(responseText) {
                     
                     if(thisLabel.soundId) {
                         let soundId = soundsArray.find(x => x.key === thisLabel.soundId);
-                        soundRow.push(soundId.url)
+                        //soundRow.push(soundId.url)
                     } else {
                         soundRow.push(""); //No sound associated with this button
                     }
@@ -147,10 +152,13 @@ function setupInternalDataStructuresObf(responseText) {
     colours.addPage(boardname, colorPage);
     key = boardname;
     
-    grid_size_rows = row;
+    grid_size_rows = rows;
     grid_size_columns = columns; //Global variables for rows and columns
+    grid_Setter(buttonGrid);
+    soude_Getter(soundsArray);
+    images_Setter(imageArray);
 
-    }	
+    }
     console.log("Finished reading");
 }
 
@@ -163,6 +171,17 @@ function Button(id, label, imageId, soundId, color) {
     this.color = color;
 }
 
+function grid_Setter(grid) {
+    this.gridSize = grid;
+}
+
+function images_Setter(imageArray) {
+    this.images = imageArray;
+}
+
+function soude_Getter(soundPage) {
+    this.soundGrid = soundPage;
+}
 //Construct an Image object, an id, url pair
 function Image(imageId, url) {
     this.imageId = imageId;
