@@ -48,7 +48,7 @@ class ovfTest(TestCase):
 
     def test_create_manifest(self):
         print "Hello"
-        grab_text.create_ovf_manifest()
+        grab_text.create_ovf_manifest("manifest.json")
         with open('test_manifest.json', 'r') as f:
               local = json.load(f)
         with open('manifest.json', 'r') as f:
