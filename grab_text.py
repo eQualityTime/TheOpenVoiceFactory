@@ -508,6 +508,8 @@ def make_title(label):
         tag = "unknown"
     return tag
 
+def create_ovf_manifest():
+    pass
 
 def create_icon_name(x, y, labels, links, slide_number):
     name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
