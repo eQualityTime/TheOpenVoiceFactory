@@ -4,7 +4,7 @@
 	"locale": "en",
 	"name": "valid single cell board",
 	"ext_speaker_url": "http://www.example.com/mylink",
-	"description_html": "A valid test board with a single cell",
+	"description_html": "A valid test board with a single cell with valid colours",
 	"grid": {
 		"rows": 1,
 		"columns": 1,
