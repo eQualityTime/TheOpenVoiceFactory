@@ -4,14 +4,14 @@
 	"locale": "en",
 	"name": "valid multi cell board",
 	"ext_speaker_url": "http://www.example.com/mylink",
-	"description_html": "A valid test board with a 3x2 grid of cells",
+	"description_html": "A valid test board with a 4x4 grid of cells",
 	"grid": {
 		"rows": 3,
 		"columns": 3,
 		"order": [
-			["T1", "T2", "T3"],
-			["T6", "T7", "T8"],
-			["T11", "T12", "T13"]
+			["T1", "T2", "T3", "T4"],
+			["T6", "T7", "T8", "T9"],
+			["T11", "T12", "T13", "T14"]
 		]
 	},
   "buttons": [
@@ -29,6 +29,10 @@
       "label": "laugh"
     },
     {
+      "id": "T4",
+      "label": "cry"
+    },
+    {
       "id": "T6",
       "label": "like"
     },
@@ -41,6 +45,10 @@
       "label": "surprised"
     },
     {
+      "id": "T9",
+      "label": "confused"
+    },
+    {
       "id": "T11",
       "label": "cold"
     },
@@ -51,6 +59,10 @@
     {
       "id": "T13",
       "label": "relaxed"
+    },
+    {
+      "id": "T14",
+      "label": "excited"
     }],
   "sounds": [
     {

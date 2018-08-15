@@ -2,9 +2,9 @@
 	"format": "open-board-0.1",
 	"id": "test-1",
 	"locale": "en",
-	"name": "valid single cell board",
+	"name": "A test board with an invalid sound id cell",
 	"ext_speaker_url": "http://www.example.com/mylink",
-	"description_html": "A valid test board with a single cell",
+	"description_html": "A test board with an invalid sound id cell",
 	"grid": {
 		"rows": 1,
 		"columns": 1,
