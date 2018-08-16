@@ -1,10 +1,10 @@
 [{
 	"format": "open-board-0.1",
-	"id": "test-4",
+	"id": "test-9",
 	"locale": "en",
 	"name": "valid multi cell board",
 	"ext_speaker_url": "http://www.example.com/mylink",
-	"description_html": "A valid test board with a 3x2 grid of cells",
+	"description_html": "A valid test board with a 5x5 grid of cells",
 	"grid": {
 		"rows": 5,
 		"columns": 5,
