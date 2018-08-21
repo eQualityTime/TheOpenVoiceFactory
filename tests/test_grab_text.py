@@ -63,7 +63,7 @@ class ovfTest(TestCase):
         with open('temp.json', 'w') as outfile:
             json.dump(obf, outfile)
         self.maxDiff = None
-        self.assertMultiLineEqual(open('../testoutputs/singleobffile.obf').read().strip(),"{}".format(obf))
+        self.assertMultiLineEqual(open('../testoutputs/singleobffile.obf').read().strip(),open('temp.json').read().strip())
 
 
     def test_read_CK20_and_check_link(self):
