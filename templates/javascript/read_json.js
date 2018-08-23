@@ -80,7 +80,7 @@ function setupInternalDataStructuresObf(responseText) {
             var imageCount = obfInput.images.length;
             for (i=0;i<imageCount; i++) { 
                 let image = obfInput.images[i];
-                if(image.url) {
+                if(typeof image.url != 'undefined') {
                     imageArray.push(new Image(image.id, image.url));
                 } else if(image.data) {
                     imageArray.push(new Image(image.id, image.data));
@@ -131,7 +131,11 @@ function setupInternalDataStructuresObf(responseText) {
                     
                     if(thisLabel.soundId) {
                         let soundId = soundsArray.find(x => x.key === thisLabel.soundId);
-                        soundRow.push(soundId.url)
+                        if (soundId) {
+                            soundRow.push(soundId.url);
+                        } else {
+                            soundRow.push(""); //No sound associated with this button
+                        }
                     } else {
                         soundRow.push(""); //No sound associated with this button
                     }
@@ -164,6 +168,10 @@ function setupInternalDataStructuresObf(responseText) {
         
         grid_size_rows = rows;
         grid_size_columns = columns; //Global variables for rows and columns
+
+        grid_Setter(buttonGrid);
+    	soude_Getter(soundsArray);
+    	images_Setter(imageArray);
     }
     console.log("Finished reading");
 }
@@ -669,6 +677,18 @@ function Button(id, label, imageId, soundId, color) {
     this.color = color;
 }
 
+function grid_Setter(grid) {
+    this.gridSize = grid;
+}
+
+function images_Setter(imageArray) {
+    this.images = imageArray;
+}
+
+function soude_Getter(soundPage) {
+    this.soundGrid = soundPage;
+}
+
 //Construct an Image object, an id, url pair
 function Image(imageId, url) {
     this.imageId = imageId;
@@ -701,7 +721,7 @@ function rgbObject2Array(rgbColorObject) {
 
 // Read Manifest file
 function readManifest(callback)
-{    
+{
     var req = new XMLHttpRequest();
     req.open("GET", 'data/manifest.json');
     //req.overrideMimeType("application/json");
