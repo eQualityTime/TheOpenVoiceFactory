@@ -59,8 +59,11 @@ class ovfTest(TestCase):
     def test_create_obf_object(self):
         grids = self.get_singleton_CK20().grids
         obf=grab_text.create_obf_object(grids[0])
+        import json
+        with open('temp.json', 'w') as outfile:
+            json.dump(obf, outfile)
         self.maxDiff = None
-        self.assertMultiLineEqual(open('../testoutputs/singleobffile.obf').read().strip(),"{}".format(obf))
+        self.assertMultiLineEqual(open('../testoutputs/singleobffile.obf').read().strip(),open('temp.json').read().strip())
 
 
     def test_read_CK20_and_check_link(self):
