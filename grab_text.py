@@ -499,6 +499,7 @@ def write_to_JSON(grids, filename):
         json.dump(for_json, outfile, sort_keys=True, indent=4)
 
 
+
 def make_title(label):
     """Given a  string, returns the string in the format we use for
      identifying grids. This is used mostly to build internal link
@@ -508,6 +509,12 @@ def make_title(label):
         tag = "unknown"
     return tag
 
+def create_ovf_manifest(filename):
+    with open(filename, "w") as manifest:
+        manifest.write("""{
+"format": "open-board-0.1",
+"root": "boards/my-board.ovf"
+}""")
 
 def create_icon_name(x, y, labels, links, slide_number):
     name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
@@ -530,6 +537,7 @@ if __name__ == "__main__":
     pageset = Pageset(filename, dest)
     write_to_JSON(pageset.grids, dest+'/pageset.json')
     write_to_JSON(pageset.grids, dest+'/pageset.json')
+    create_ovf_manifest(dest+'/manifest.json')
     write_to_obf(pageset.grids, dest)
 
     # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

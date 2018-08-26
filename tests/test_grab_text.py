@@ -41,10 +41,20 @@ class ovfTest(TestCase):
 
 
 
+
     def test_read_CK20_and_count_slides(self):
         grids = self.get_singleton_CK20().grids
         self.assertEqual(len(grids),10)
 
+    def test_create_manifest(self):
+        print "Hello"
+        grab_text.create_ovf_manifest("manifest.json")
+        with open('test_manifest.json', 'r') as f:
+              local = json.load(f)
+        with open('manifest.json', 'r') as f:
+                real = json.load(f)
+                assert real == local
+        return False
 
     def test_read_CK20_and_check_titles(self):
         grids = self.get_singleton_CK20().grids
