@@ -228,7 +228,7 @@ function start() {
 
 function setupMessageWindow() {
     var cellWidthInPixels = 720/grid_size_columns;
-    var messageWindowWidthInCells = Math.ceil(cellWidth/2)
+    var messageWindowWidthInCells = Math.ceil(grid_size_columns/2)
     my_width = cellWidthInPixels * messageWindowWidthInCells;
     my_height = 520 / grid_size_rows;
     area = document.getElementById('messagewindow');

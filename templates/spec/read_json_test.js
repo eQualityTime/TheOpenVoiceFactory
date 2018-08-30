@@ -456,7 +456,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 		describe( "The width of the messaging window is 2 cells less than the width of the board", function () {
 
-			it('A test obf file with a grid size of 4x4', function(doneFn) {
+			it('Test messaging window size with a 4x4 grid', function(doneFn) {
 				var fileName = 'test-8.obf';
                 console.log("Message window size test");
 				// Read data from file
@@ -474,7 +474,7 @@ describe( "Reading OBF Data into local data structures", function () {
 				});
 			});
 
-			it('A test obf file with a grid size of 5x5', function(doneFn) {
+			it('Test messaging window size with a 4x4 grid', function(doneFn) {
 				var fileName = 'test-9.obf';
 		        console.log("Another 5x5 test");
                 // Read data from file
