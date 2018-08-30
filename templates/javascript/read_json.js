@@ -109,7 +109,6 @@ function setupInternalDataStructuresObf(responseText) {
         //Now construct the ovf array style
         for(row=0; row<rows; row++)  {
             for(column=0; column<columns; column++) {
-               
                 //We need to find the button id at this position in the grid to get the corresponding element ids and 
                 //add them to the labels/Icons/Utterances arrays, a row at a time
                 if(!grid[row][column]) { //This position is null
@@ -139,8 +138,7 @@ function setupInternalDataStructuresObf(responseText) {
                     } else {
                         soundRow.push(""); //No sound associated with this button
                     }
-                }
-                
+                }           
             }
             labelPage.push(labelRow);          
             labelRow = [];
@@ -154,26 +152,19 @@ function setupInternalDataStructuresObf(responseText) {
             colorPage.push(colorRow);
             colorRow = [];
         }
-
         labels.addPage(boardname, labelPage);
         icons.addPage(boardname, iconPage);
         utterances.addPage(boardname, soundPage);
         colours.addPage(boardname, colorPage);
         key = boardname;
 
-        console.log("labels: ", labels);
-        console.log("icons: ", icons);
-        console.log("utterances: ", utterances);
-        console.log("colours: ", colours);
-        
         grid_size_rows = rows;
         grid_size_columns = columns; //Global variables for rows and columns
-
         grid_Setter(buttonGrid);
-    	soude_Getter(soundsArray);
-    	images_Setter(imageArray);
+        sound_Getter(soundsArray);
+        images_Setter(imageArray);
     }
-    console.log("Finished reading");
+    console.log("Finished reading ");
 }
 
 function setupInternalDataStructures(responseText){
@@ -236,7 +227,9 @@ function start() {
 }
 
 function setupMessageWindow() {
-    my_width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
+    var cellWidthInPixels = 720/grid_size_columns;
+    var messageWindowWidthInCells = Math.ceil(cellWidth/2)
+    my_width = cellWidthInPixels * messageWindowWidthInCells;
     my_height = 520 / grid_size_rows;
     area = document.getElementById('messagewindow');
     $(area).css('width', my_width);
@@ -676,7 +669,6 @@ function Button(id, label, imageId, soundId, color) {
     this.soundId = soundId;
     this.color = color;
 }
-
 function grid_Setter(grid) {
     this.gridSize = grid;
 }
@@ -685,7 +677,7 @@ function images_Setter(imageArray) {
     this.images = imageArray;
 }
 
-function soude_Getter(soundPage) {
+function sound_Getter(soundPage) {
     this.soundGrid = soundPage;
 }
 
@@ -721,7 +713,7 @@ function rgbObject2Array(rgbColorObject) {
 
 // Read Manifest file
 function readManifest(callback)
-{
+{    
     var req = new XMLHttpRequest();
     req.open("GET", 'data/manifest.json');
     //req.overrideMimeType("application/json");
