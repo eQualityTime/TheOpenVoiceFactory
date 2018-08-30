@@ -310,6 +310,173 @@ describe( "Reading OBF Data into local data structures", function () {
 
 	});
 
+	describe( "Grid Size", function () {
+		var originalTimeout;
+
+		beforeEach(function () {
+			originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+		});
+		
+		afterEach(function() {
+		  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+		});
+
+		describe( "The number of rows and columns in the labels variable should be the same as the number of rows and columns in the Grid", function () {
+			it('A test obf file with a grid size of 4x4', function(doneFn) {
+				
+				var fileName = 'test-8.obf';
+
+				// Read data from file
+				myFunctionThatMakesRequests(fileName, function(error, data) {
+
+					var filterData = JSON.parse(data);
+					
+					var jsondata = JSON.stringify(filterData[0]);
+
+					setupInternalDataStructuresObf(jsondata);
+
+					var total = 0;
+		
+					for ( var i = 0; i < labels[key].length; i++ ) {
+						total = total + labels[key][i].length;		
+					}
+					
+					expect(gridSize.length).toBe(total);
+					doneFn();
+				});
+
+			});
+
+			it('A test obf file with a grid size of 5x5', function(doneFn) {
+				
+				var fileName = 'test-9.obf';
+
+				// Read data from file
+				myFunctionThatMakesRequests(fileName, function(error, data) {
+
+					var filterData = JSON.parse(data);
+					
+					var jsondata = JSON.stringify(filterData[0]);
+
+					setupInternalDataStructuresObf(jsondata);
+
+					var total = 0;
+		
+					for ( var i = 0; i < labels[key].length; i++ ) {
+						total = total + labels[key][i].length;
+					}
+
+					console.log('labels.length: ',labels[key].length);
+					console.log('total elements: ',total);
+					console.log('gridSize.length: ',gridSize.length);
+					expect(gridSize.length).toBe(total);
+					doneFn();
+				});
+
+			});
+		});
+	});
+
+	describe( "Board Display", function () {
+		var originalTimeout;
+
+		beforeEach(function () {
+			originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+		});
+		
+		afterEach(function() {
+		  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+		});
+
+		it('An message window is displayed. It is 1 row high and the width is the board column width less 2', function(doneFn) {
+			
+			var fileName = 'test-8.obf';
+			// Read data from file
+			myFunctionThatMakesRequests(fileName, function(error, data) {
+				var filterData = JSON.parse(data);
+					
+				var jsondata = JSON.stringify(filterData[0]);
+
+				setupInternalDataStructuresObf(jsondata);
+
+				var width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
+				var height = 520 / grid_size_rows;
+
+				console.log('width >>>>>>>>>: ', width);
+				console.log('height >>>>>>>>>: ', height);
+
+				setupMessageWindow();
+
+				console.log('my_width >>>>>>>>>: ', my_width);
+				console.log('my_height >>>>>>>>>: ', my_height);
+
+				expect(my_width).toBe(width);
+				expect(my_height).toBe(height);
+
+				doneFn();
+
+			});
+
+		});
+
+	});
+
+	describe( "Messaging Window", function () {
+		var originalTimeout;
+
+		beforeEach(function () {
+			originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+		});
+		
+		afterEach(function() {
+		  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+		});
+
+		describe( "The width of the messaging window is 2 cells less than the width of the board", function () {
+
+			it('A test obf file with a grid size of 4x4', function(doneFn) {
+				var fileName = 'test-8.obf';
+				// Read data from file
+				myFunctionThatMakesRequests(fileName, function(error, data) {
+					var filterData = JSON.parse(data);
+						
+					var jsondata = JSON.stringify(filterData[0]);
+
+					setupInternalDataStructuresObf(jsondata);
+					setupMessageWindow();
+					
+					expect(my_width).toBeLessThan(720);
+
+					doneFn();
+				});
+			});
+
+			it('A test obf file with a grid size of 5x5', function(doneFn) {
+				var fileName = 'test-9.obf';
+				// Read data from file
+				myFunctionThatMakesRequests(fileName, function(error, data) {
+					var filterData = JSON.parse(data);
+						
+					var jsondata = JSON.stringify(filterData[0]);
+
+					setupInternalDataStructuresObf(jsondata);
+					setupMessageWindow();
+					
+					expect(my_width).toBeLessThan(720);
+
+					doneFn();
+				});
+
+			});
+
+		});
+
+	});
+
+
 });
 
 /**
