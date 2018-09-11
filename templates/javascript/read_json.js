@@ -598,7 +598,9 @@ var obf_data_click = function() {
         if (txt == "Clear Text") {
             document.getElementById("messagewindow").value= "";
         } else if(txt == "Delete Word") {
-            document.myform.outputtext.value = document.myform.outputtext.value.substring(0, document.myform.outputtext.value.length - 1);
+            let str = document.myform.outputtext.value;
+            let lastIndex = str.lastIndexOf(" ");            
+            document.myform.outputtext.value = str.substring(0, lastIndex);
         } else {
             append(txt);
         }
