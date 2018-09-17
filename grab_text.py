@@ -175,7 +175,9 @@ class Grid:
                 print "Warning, shape outside of page area on page:{}".format(self.tag)
                 return
             # Now - let's find out if there is a link...
-            click_action = shape.click_action
+            click_action = None
+            if shape.shape_type != MSO_SHAPE_TYPE.GROUP:
+                click_action = shape.click_action
             if click_action.hyperlink.address is not None:
                 self.links[co][
                         ro] = click_action.hyperlink.address
