@@ -7,6 +7,7 @@ module.exports = function (config) {
         files: [
             'src/*.js',
             'spec/*_test.js',
+            'javascript/read_json.js',
             {pattern: 'testdata/*.obf', watched: true, served: true, included: true},
         ],
         exclude: [

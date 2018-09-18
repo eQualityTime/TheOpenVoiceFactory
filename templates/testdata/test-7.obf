@@ -15,7 +15,7 @@
 	"buttons": [
     {
 		"id": "T1",
-        "image_id": "2",
+        "image_id": "1",
 		"label": "Testing",
         "sound_id": "s1",
         "border_color": "rgb(0, 0, 55)",
@@ -29,14 +29,20 @@
     ],
     "images": [
     {
-      "id": "2",
+      "id": "1",
       "url": "http://cdn.myaacapp.com/happy.png",
       "width": 1024,
       "height": 768,
       "content_type": "image/png"
     },
     {
-      "id": "3",      
+      "id": "2",
+      "width": 1024,
+      "height": 768,
+      "content_type": "image/png"
+    },
+    {
+      "id": "3",
       "width": 1024,
       "height": 768,
       "content_type": "image/png"

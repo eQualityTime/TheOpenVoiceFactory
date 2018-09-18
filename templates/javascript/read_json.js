@@ -2,6 +2,7 @@ var fileType;
 
 function setupInternalDataStructuresObf(responseText) {
     errorMsg = '';
+    
     try {
         key = "";
         utterances = {};
@@ -63,7 +64,7 @@ function setupInternalDataStructuresObf(responseText) {
             if(obfInput.name){
                 
             } else {
-                throw "No page name defined"
+                throw "No page name defined";
             }
                 
             
@@ -82,7 +83,7 @@ function setupInternalDataStructuresObf(responseText) {
                 var imageCount = obfInput.images.length;
                 for (i=0;i<imageCount; i++) { 
                     let image = obfInput.images[i];
-                    if(typeof image.url != 'undefined') {
+                    if(image.url) {
                         imageArray.push(new Image(image.id, image.url));
                     } else if(image.data) {
                         imageArray.push(new Image(image.id, image.data));
@@ -126,7 +127,11 @@ function setupInternalDataStructuresObf(responseText) {
                         
                         if(thisLabel.imageId) {
                             let iconId = imageArray.find(x => x.imageId === thisLabel.imageId);
-                            iconRow.push(iconId.url);
+                            if (iconId) {
+                                iconRow.push(iconId.url);
+                            } else {
+                                errorMsg += "Image reference is not defined";
+                            }
                         } else {
                             iconRow.push(""); //There is no image associated with this button
                         }
@@ -136,8 +141,8 @@ function setupInternalDataStructuresObf(responseText) {
                             if (soundId) {
                                 soundRow.push(soundId.url);
                             } else {
-                                soundRow.push(""); //No sound associated with this button
-                            }
+                                errorMsg += "Sound reference is not defined";
+                            }                            
                         } else {
                             soundRow.push(""); //No sound associated with this button
                         }
@@ -163,11 +168,6 @@ function setupInternalDataStructuresObf(responseText) {
             colours.addPage(boardname, colorPage);
             key = boardname;
 
-            console.log("labels: ", labels);
-            console.log("icons: ", icons);
-            console.log("utterances: ", utterances);
-            console.log("colours: ", colours);
-            
             grid_size_rows = rows;
             grid_size_columns = columns; //Global variables for rows and columns
 
@@ -180,7 +180,7 @@ function setupInternalDataStructuresObf(responseText) {
         console.log("Finished reading");
     } catch(Error) {
         console.log("Expection: ", Error);
-        errorMsg = Error;
+        errorMsg += Error;
     }
 }
 
@@ -605,6 +605,7 @@ var ovf_data_click = function() {
             
             var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
             var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
+
             if (our_top < grid_size_columns) {
                 if (left < grid_size_columns) {                
                     add(left, our_top)
