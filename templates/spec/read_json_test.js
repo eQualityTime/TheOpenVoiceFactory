@@ -6,7 +6,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
 describe( "Reading OBF Data into local data structures", function () {
          
     describe( "Test Name property", function () {
-		
+
 		//Declare the variable within the suite's scope		
 		var originalTimeout;
 		
@@ -23,6 +23,8 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-1.obf';
 
+            
+            console.log("Check Key");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -42,6 +44,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-2.obf';
 
+			console.log("Check Name");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -72,6 +75,7 @@ describe( "Reading OBF Data into local data structures", function () {
 		//Declare the variable within the suite's scope		
 		var originalTimeout;
 
+        console.log("Test Grid and Button property");
 		beforeEach(function () {
 			originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
 			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
@@ -85,6 +89,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-1.obf';
 
+			console.log("button.label appears");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -106,6 +111,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-3.obf';
 
+			console.log("No button.label");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -132,6 +138,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-4.obf';
 
+			console.log("3x2 grid read");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -154,6 +161,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-4.obf';
 
+			console.log("Sounds read");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -174,6 +182,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-4.obf';
 
+			console.log("No associated sound");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -199,6 +208,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 			var fileName = 'test-5.obf';
 
+			console.log("Invalid IDs");
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -263,6 +273,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 		it('Images can be read in correctly', function(doneFn) {
 
+            console.log("Test Images");
 			var fileName = 'test-6.obf';
 
 			// Read data from file
@@ -327,6 +338,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 		it('Images with invalid external references are reported as errors', function(doneFn) {
 
+            console.log("Images with external errors");
 			var fileName = 'test-7.obf';
 
 			// Read data from file
@@ -343,8 +355,8 @@ describe( "Reading OBF Data into local data structures", function () {
 					arr.push(images[i].imageId);
 				}
 
-				for (var i=0; i < gridSize.length; i++ ) {
-					expect(arr).toContain(gridSize[i].imageId);
+				for (var i=0; i < gridSize.length; i++ ) { //This test isn't valid.  setupIDSObf should be returning an error message
+					expect(gridSize[i].imageId).toBe(images[i].imageId); //This line should be something like expect(errorMessage).toBe("Invalid external ref")
 				}
 				//expect(gridSize[i].imageId).toBe(images[i].imageId);
 				doneFn();
@@ -356,6 +368,7 @@ describe( "Reading OBF Data into local data structures", function () {
 	describe( "Grid Size", function () {
 		var originalTimeout;
 
+        console.log("Test Grid Size");
 		beforeEach(function () {
 			originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
 			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
@@ -370,6 +383,7 @@ describe( "Reading OBF Data into local data structures", function () {
 				
 				var fileName = 'test-8.obf';
 
+                console.log("4x4 test");
 				// Read data from file
 				myFunctionThatMakesRequests(fileName, function(error, data) {
 
@@ -394,6 +408,7 @@ describe( "Reading OBF Data into local data structures", function () {
 			it('A test obf file with a grid size of 5x5', function(doneFn) {
 				
 				var fileName = 'test-9.obf';
+                console.log("5x5 test");
 
 				// Read data from file
 				myFunctionThatMakesRequests(fileName, function(error, data) {
@@ -421,6 +436,7 @@ describe( "Reading OBF Data into local data structures", function () {
 	describe( "Board Display", function () {
 		var originalTimeout;
 
+        console.log("Test board display");
 		beforeEach(function () {
 			originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
 			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
@@ -432,7 +448,8 @@ describe( "Reading OBF Data into local data structures", function () {
 
 		it('An message window is displayed. It is 1 row high and the width is the board column width less 2', function(doneFn) {
 			
-			var fileName = 'test-8.obf';
+			console.log("Message window test");
+            var fileName = 'test-8.obf';
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {
 				var filterData = JSON.parse(data);
@@ -441,7 +458,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 				setupInternalDataStructuresObf(jsondata);
 
-				var width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
+                var width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
 				var height = 520 / grid_size_rows;
 				
 				setupMessageWindow();
@@ -457,9 +474,11 @@ describe( "Reading OBF Data into local data structures", function () {
 
 	});
 
+    
 	describe( "Messaging Window", function () {
 		var originalTimeout;
 
+        console.log("Test messaging window");
 		beforeEach(function () {
 			originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
 			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
@@ -471,8 +490,9 @@ describe( "Reading OBF Data into local data structures", function () {
 
 		describe( "The width of the messaging window is 2 cells less than the width of the board", function () {
 
-			it('A test obf file with a grid size of 4x4', function(doneFn) {
+			it('Test messaging window size with a 4x4 grid', function(doneFn) {
 				var fileName = 'test-8.obf';
+                console.log("Message window size test");
 				// Read data from file
 				myFunctionThatMakesRequests(fileName, function(error, data) {
 					var filterData = JSON.parse(data);
@@ -488,9 +508,10 @@ describe( "Reading OBF Data into local data structures", function () {
 				});
 			});
 
-			it('A test obf file with a grid size of 5x5', function(doneFn) {
+			it('Test messaging window size with a 4x4 grid', function(doneFn) {
 				var fileName = 'test-9.obf';
-				// Read data from file
+		        console.log("Another 5x5 test");
+                // Read data from file
 				myFunctionThatMakesRequests(fileName, function(error, data) {
 					var filterData = JSON.parse(data);
 						
@@ -509,7 +530,6 @@ describe( "Reading OBF Data into local data structures", function () {
 		});
 
 	});
-
 
 });
 
