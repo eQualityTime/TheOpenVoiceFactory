@@ -509,7 +509,7 @@ describe( "Reading OBF Data into local data structures", function () {
 				});
 			});
 
-			it('Test messaging window size with a 4x4 grid', function(doneFn) {
+			it('Test messaging window size with a 5x5 grid', function(doneFn) {
 				var fileName = 'test-9.obf';
 		        console.log("Another 5x5 test");
                 // Read data from file
@@ -531,6 +531,7 @@ describe( "Reading OBF Data into local data structures", function () {
 		});
 
 	});
+
 
 });
 

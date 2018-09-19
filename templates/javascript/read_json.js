@@ -1,7 +1,6 @@
 var fileType;
 
 function setupInternalDataStructuresObf(responseText) {
-    
     errorMsg = '';
     
     try {
@@ -66,7 +65,8 @@ function setupInternalDataStructuresObf(responseText) {
                 
             } else {
                 throw "No page name defined";
-            }                
+            }
+                
             
             //Load the grid array
             for (row=0; row<rows; row++) {
@@ -109,26 +109,17 @@ function setupInternalDataStructuresObf(responseText) {
                 }
             }
             
-        }
-        
-        //Now construct the ovf array style
-        for(row=0; row<rows; row++)  {
-            for(column=0; column<columns; column++) {
-                //We need to find the button id at this position in the grid to get the corresponding element ids and 
-                //add them to the labels/Icons/Utterances arrays, a row at a time
-                if(!grid[row][column]) { //This position is null
-                    labelRow.push("");
-                    iconRow.push("");
-                    soundRow.push("");
-                    colorRow.push("");
-                } else {
-                    thisLabel = buttonGrid.find(x => x.id === grid[row][column]);
-                    labelRow.push(thisLabel.label);
-                    colorRow.push(rgbObject2Array(thisLabel.color));
-                    
-                    if(thisLabel.imageId) {
-                        let iconId = imageArray.find(x => x.imageId === thisLabel.imageId);
-                        iconRow.push(iconId.url);
+            //Now construct the ovf array style
+            for(row=0; row<rows; row++)  {
+                for(column=0; column<columns; column++) {
+                
+                    //We need to find the button id at this position in the grid to get the corresponding element ids and 
+                    //add them to the labels/Icons/Utterances arrays, a row at a time
+                    if(!grid[row][column]) { //This position is null
+                        labelRow.push("");
+                        iconRow.push("");
+                        soundRow.push("");
+                        colorRow.push("");
                     } else {
                         thisLabel = buttonGrid.find(x => x.id === grid[row][column]);
                         labelRow.push(thisLabel.label);
@@ -155,7 +146,8 @@ function setupInternalDataStructuresObf(responseText) {
                         } else {
                             soundRow.push(""); //No sound associated with this button
                         }
-                    }             
+                    }
+                    
                 }
                 labelPage.push(labelRow);          
                 labelRow = [];
@@ -180,14 +172,12 @@ function setupInternalDataStructuresObf(responseText) {
             grid_size_columns = columns; //Global variables for rows and columns
 
             grid_Setter(buttonGrid);
-            soude_Getter(soundsArray);
+            sound_Getter(soundsArray);
             images_Setter(imageArray);
         } else {
             throw "Invalid JSON format";
         }
-
         console.log("Finished reading");
-
     } catch(Error) {
         console.log("Expection: ", Error);
         errorMsg += Error;
@@ -706,6 +696,7 @@ function Button(id, label, imageId, soundId, color) {
     this.soundId = soundId;
     this.color = color;
 }
+
 function grid_Setter(grid) {
     this.gridSize = grid;
 }
@@ -761,7 +752,7 @@ function rgbObject2Array(rgbColorObject) {
 
 // Read Manifest file
 function readManifest(callback)
-{    
+{
     var req = new XMLHttpRequest();
     req.open("GET", 'data/manifest.json');
     //req.overrideMimeType("application/json");
