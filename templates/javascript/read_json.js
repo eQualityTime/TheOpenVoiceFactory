@@ -1,6 +1,7 @@
 var fileType;
 
 function setupInternalDataStructuresObf(responseText) {
+    
     errorMsg = '';
     
     try {
@@ -65,8 +66,7 @@ function setupInternalDataStructuresObf(responseText) {
                 
             } else {
                 throw "No page name defined";
-            }
-                
+            }                
             
             //Load the grid array
             for (row=0; row<rows; row++) {
@@ -177,7 +177,9 @@ function setupInternalDataStructuresObf(responseText) {
         } else {
             throw "Invalid JSON format";
         }
+
         console.log("Finished reading");
+
     } catch(Error) {
         console.log("Expection: ", Error);
         errorMsg += Error;

@@ -342,6 +342,7 @@ describe( "Reading OBF Data into local data structures", function () {
 				for (var i=0; i < images.length; i++ ) {
 					arr.push(images[i].imageId);
 				}
+				console.log("Images array: ", arr);
 
 				for (var i=0; i < gridSize.length; i++ ) {
 					expect(arr).toContain(gridSize[i].imageId);
