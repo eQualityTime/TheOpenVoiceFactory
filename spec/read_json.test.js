@@ -353,7 +353,7 @@ describe( "Reading OBF Data into local data structures", function () {
 
 		it('Invalid (out of range) background colour values are reported as errors', function(doneFn) {
 			
-			var fileName = 'test-9.obf';
+			var fileName = 'test-7.obf';
 
 			// Read data from file
 			myFunctionThatMakesRequests(fileName, function(error, data) {

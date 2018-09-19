@@ -51,11 +51,19 @@ describe( "Reading OBF Data into local data structures", function () {
 				var filterData = JSON.parse(data);
 				
 				var jsondata = JSON.stringify(filterData[0]);
+				
+				setupInternalDataStructuresObf(jsondata);
+				
+				var buttonLableFun = function() {
+					if(errorMsg){
+						throw errorMsg;
+					}
+				};
+				//expect(buttonLableFun).toThrow('No label defined for button id T1');
+				
 
-				expect(function() {
-					setupInternalDataStructuresObf(jsondata);
-				}).toThrow("No page name defined");
-								
+				expect(buttonLableFun).toThrow('No page name defined');
+
 				doneFn();
 			});
 			
@@ -149,7 +157,7 @@ describe( "Reading OBF Data into local data structures", function () {
 			});
 		});
 
-		it('Sounds can be read in correctly, Button T1 has the associated sound "s1"', function(doneFn) {
+		it('Sounds can be read correctly, Button T1 has the associated sound "s1"', function(doneFn) {
 
 			var fileName = 'test-4.obf';
 
@@ -170,7 +178,7 @@ describe( "Reading OBF Data into local data structures", function () {
 			
 		});
 
-		it('Sounds can be read in correctly, Button T2 has no associated sound', function(doneFn) {
+		it('Sounds can be read correctly, Button T2 has no associated sound', function(doneFn) {
 
 			var fileName = 'test-4.obf';
 
@@ -210,8 +218,17 @@ describe( "Reading OBF Data into local data structures", function () {
 
 				setupInternalDataStructuresObf(jsondata);
 
-				for (var i=0; i < gridSize.length; i++ ) { //This test isn't valid.  setupInternalDataStructuresObf should be returning an error			
-					expect(gridSize[i].soundId).toBe(soundGrid[i].key); //This line should be something like expect(errorMessage toBe "Invalid Sound ID"
+				/* for (var i=0; i < gridSize.length; i++ ) {					
+					expect(gridSize[i].soundId).toBe(soundGrid[i].key);
+				} */
+
+				var arr = [];
+				for (var i=0; i < soundGrid.length; i++ ) {
+					arr.push(soundGrid[i].key);
+				}
+
+				for (var i=0; i < gridSize.length; i++ ) {
+					expect(arr).toContain(gridSize[i].soundId);
 				}
 
 				doneFn();
@@ -233,6 +250,26 @@ describe( "Reading OBF Data into local data structures", function () {
 		afterEach(function() {
 		  jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
 		});
+
+		/* it('If the obf file references an image which is not defined it should throw error', function(doneFn) {
+
+			var fileName = 'test-6.obf';
+
+			// Read data from file
+			myFunctionThatMakesRequests(fileName, function(error, data) {
+
+				var filterData = JSON.parse(data);
+				
+				var jsondata = JSON.stringify(filterData[0]);
+
+				expect(function() {
+					setupInternalDataStructuresObf(jsondata);
+				}).toThrow("Image reference is not defined");
+								
+				doneFn();
+			});
+			
+        }); */
 
 		it('Images can be read in correctly', function(doneFn) {
 
@@ -268,7 +305,7 @@ describe( "Reading OBF Data into local data structures", function () {
 				setupInternalDataStructuresObf(jsondata);
 
 				var ImgFun = function() {
-					if(!images[1].url){
+					if(!images[1].url) {
 						throw 'Image id: ' + images[1].imageId + ' has no image url';
 					}
 				};
@@ -278,7 +315,7 @@ describe( "Reading OBF Data into local data structures", function () {
 			});			
 		});
 
-		it('Images as external references can be read in correctly', function(doneFn) {
+		it('Images as external references can be read correctly', function(doneFn) {
 
 			var fileName = 'test-6.obf';
 
@@ -312,10 +349,17 @@ describe( "Reading OBF Data into local data structures", function () {
 				var jsondata = JSON.stringify(filterData[0]);
 
 				setupInternalDataStructuresObf(jsondata);
+				
+				var arr = [];
+				for (var i=0; i < images.length; i++ ) {
+					arr.push(images[i].imageId);
+				}
+				console.log("Images array: ", arr);
 
 				for (var i=0; i < gridSize.length; i++ ) { //This test isn't valid.  setupIDSObf should be returning an error message
 					expect(gridSize[i].imageId).toBe(images[i].imageId); //This line should be something like expect(errorMessage).toBe("Invalid external ref")
 				}
+				//expect(gridSize[i].imageId).toBe(images[i].imageId);
 				doneFn();
 			});			
 		});
@@ -381,10 +425,7 @@ describe( "Reading OBF Data into local data structures", function () {
 					for ( var i = 0; i < labels[key].length; i++ ) {
 						total = total + labels[key][i].length;
 					}
-
-					console.log('labels.length: ',labels[key].length);
-					console.log('total elements: ',total);
-					console.log('gridSize.length: ',gridSize.length);
+					
 					expect(gridSize.length).toBe(total);
 					doneFn();
 				});
@@ -420,14 +461,8 @@ describe( "Reading OBF Data into local data structures", function () {
 
                 var width = 720 / grid_size_columns * (Math.ceil(grid_size_columns / 2));
 				var height = 520 / grid_size_rows;
-
-				console.log('width >>>>>>>>>: ', width);
-				console.log('height >>>>>>>>>: ', height);
-
+				
 				setupMessageWindow();
-
-				console.log('my_width >>>>>>>>>: ', my_width);
-				console.log('my_height >>>>>>>>>: ', my_height);
 
 				expect(my_width).toBe(width);
 				expect(my_height).toBe(height);
@@ -474,7 +509,7 @@ describe( "Reading OBF Data into local data structures", function () {
 				});
 			});
 
-			it('Test messaging window size with a 4x4 grid', function(doneFn) {
+			it('Test messaging window size with a 5x5 grid', function(doneFn) {
 				var fileName = 'test-9.obf';
 		        console.log("Another 5x5 test");
                 // Read data from file
@@ -496,6 +531,7 @@ describe( "Reading OBF Data into local data structures", function () {
 		});
 
 	});
+
 
 });
 
