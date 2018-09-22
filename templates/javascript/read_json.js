@@ -1,170 +1,187 @@
 var fileType;
 
 function setupInternalDataStructuresObf(responseText) {
-    key = "";
-    utterances = {};
-    links = {};
-    colours = {};
-    icons = {};
-    labels = {};
-    slide_number = {};
- 
-    var rows = 0;
-    var columns = 0;
-    var boardname = "";
+    errorMsg = '';
     
-    var grid = []; //Array to hold all the button ids in their position in the grid
-    var gridRow = []; //Array to hold one rows worth of button ids
-    var imageArray = []; //Array to hold all obf images to be assigned to the correct location in the ovf icon object
-    var buttonGrid = []; //Array to hold all the defined buttons
-    var soundsArray = [];
+    try {
+        key = "";
+        utterances = {};
+        links = {};
+        colours = {};
+        icons = {};
+        labels = {};
+        slide_number = {};
     
-    var labelRow = []; //One row of labels
-    var labelPage = []; //A page of labels (rows and columns)
-    
-    var iconRow = [];
-    var iconPage = [];
-    
-    var soundRow = [];
-    var soundPage = [];
-    
-    var colorRow = [];
-    var colorPage = [];
-    
-    //Setup add methods
-    labels.addPage = function(pagename, pageOfLabels) {
-        this[pagename] = pageOfLabels;
-    };
-    
-    icons.addPage = function(pagename, pageOfIcons) {
-        this[pagename] = pageOfIcons;
-    };
-    
-    utterances.addPage = function(pagename, pageOfSounds) {
-        this[pagename] = pageOfSounds;
-    };
-    
-    colours.addPage = function(pagename, pageOfColors) {
-        this[pagename] = pageOfColors;
-    };
-    
-    let obfInput = JSON.parse(responseText);    
-    if(obfInput.format === "open-board-0.1") { //We are reading a valid obf file
- 
-        //Get the grid size
-        let numberOfCells = obfInput.grid.order.length;
-        rows = obfInput.grid.rows; //Total number of rowsr
-        columns = obfInput.grid.columns; //Total number of columns
-
-		boardname = obfInput.name;
-
-        if(obfInput.name){
-            
-        } else {
-            throw "No page name defined"
-        }
-            
+        var rows = 0;
+        var columns = 0;
+        var boardname = "";
         
-        //Load the grid array
-        for (row=0; row<rows; row++) {
-            for (column=0; column<columns; column++) {
-                gridRow.push(obfInput.grid.order[row][column]);
+        var grid = []; //Array to hold all the button ids in their position in the grid
+        var gridRow = []; //Array to hold one rows worth of button ids
+        var imageArray = []; //Array to hold all obf images to be assigned to the correct location in the ovf icon object
+        var buttonGrid = []; //Array to hold all the defined buttons
+        var soundsArray = [];
+        
+        var labelRow = []; //One row of labels
+        var labelPage = []; //A page of labels (rows and columns)
+        
+        var iconRow = [];
+        var iconPage = [];
+        
+        var soundRow = [];
+        var soundPage = [];
+        
+        var colorRow = [];
+        var colorPage = [];
+        
+        //Setup add methods
+        labels.addPage = function(pagename, pageOfLabels) {
+            this[pagename] = pageOfLabels;
+        };
+        
+        icons.addPage = function(pagename, pageOfIcons) {
+            this[pagename] = pageOfIcons;
+        };
+        
+        utterances.addPage = function(pagename, pageOfSounds) {
+            this[pagename] = pageOfSounds;
+        };
+        
+        colours.addPage = function(pagename, pageOfColors) {
+            this[pagename] = pageOfColors;
+        };
+        
+        let obfInput = JSON.parse(responseText);    
+        if(obfInput.format === "open-board-0.1") { //We are reading a valid obf file
+    
+            //Get the grid size
+            let numberOfCells = obfInput.grid.order.length;
+            rows = obfInput.grid.rows; //Total number of rowsr
+            columns = obfInput.grid.columns; //Total number of columns
+
+            boardname = obfInput.name;
+
+            if(obfInput.name){
+                
+            } else {
+                throw "No page name defined";
             }
-            grid.push(gridRow); //Copy the whole row into the grid
-            gridRow = []; //Clears the array (actually creates a new array)
-        }
-        
+                
+            
+            //Load the grid array
+            for (row=0; row<rows; row++) {
+                for (column=0; column<columns; column++) {
+                    gridRow.push(obfInput.grid.order[row][column]);
+                }
+                grid.push(gridRow); //Copy the whole row into the grid
+                gridRow = []; //Clears the array (actually creates a new array)
+            }
+            
 
-        if (obfInput.images) {
-            //Load images from obf into the local array
-            var imageCount = obfInput.images.length;
-            for (i=0;i<imageCount; i++) { 
-                let image = obfInput.images[i];
-                if(typeof image.url != 'undefined') {
-                    imageArray.push(new Image(image.id, image.url));
-                } else if(image.data) {
-                    imageArray.push(new Image(image.id, image.data));
-                } else {
-                    imageArray.push(new Image(image.id, ""));
+            if (obfInput.images) {
+                //Load images from obf into the local array
+                var imageCount = obfInput.images.length;
+                for (i=0;i<imageCount; i++) { 
+                    let image = obfInput.images[i];
+                    if(image.url) {
+                        imageArray.push(new Image(image.id, image.url));
+                    } else if(image.data) {
+                        imageArray.push(new Image(image.id, image.data));
+                    } else {
+                        imageArray.push(new Image(image.id, ""));
+                    }
                 }
             }
-        }
-        
-        
-        //Load Buttons into the local array
-        for (i=0; i<obfInput.buttons.length; i++) {
-            let button = obfInput.buttons[i];
-            buttonGrid.push(new Button(button.id, button.label, button.image_id, button.sound_id, button.background_color));
-        }
             
-        //Load sounds into the local array
-        if (obfInput.sounds) {
-            for (i=0; i<obfInput.sounds.length; i++) {
-                let sound = obfInput.sounds[i];
-                let soundURL = (sound.url) || "";
-                soundsArray.push(new Sound(sound.id, soundURL));
+            
+            //Load Buttons into the local array
+            for (i=0; i<obfInput.buttons.length; i++) {
+                let button = obfInput.buttons[i];
+                buttonGrid.push(new Button(button.id, button.label, button.image_id, button.sound_id, button.background_color));
             }
-        }
-        
-        //Now construct the ovf array style
-        for(row=0; row<rows; row++)  {
-            for(column=0; column<columns; column++) {
-                //We need to find the button id at this position in the grid to get the corresponding element ids and 
-                //add them to the labels/Icons/Utterances arrays, a row at a time
-                if(!grid[row][column]) { //This position is null
-                    labelRow.push("");
-                    iconRow.push("");
-                    soundRow.push("");
-                    colorRow.push("");
-                } else {
-                    thisLabel = buttonGrid.find(x => x.id === grid[row][column]);
-                    labelRow.push(thisLabel.label);
-                    colorRow.push(rgbObject2Array(thisLabel.color));
-                    
-                    if(thisLabel.imageId) {
-                        let iconId = imageArray.find(x => x.imageId === thisLabel.imageId);
-                        iconRow.push(iconId.url);
+                
+            //Load sounds into the local array
+            if (obfInput.sounds) {
+                for (i=0; i<obfInput.sounds.length; i++) {
+                    let sound = obfInput.sounds[i];
+                    let soundURL = (sound.url) || "";
+                    soundsArray.push(new Sound(sound.id, soundURL));
+                }
+            }
+            
+            //Now construct the ovf array style
+            for(row=0; row<rows; row++)  {
+                for(column=0; column<columns; column++) {
+                
+                    //We need to find the button id at this position in the grid to get the corresponding element ids and 
+                    //add them to the labels/Icons/Utterances arrays, a row at a time
+                    if(!grid[row][column]) { //This position is null
+                        labelRow.push("");
+                        iconRow.push("");
+                        soundRow.push("");
+                        colorRow.push("");
                     } else {
-                        iconRow.push(""); //There is no image associated with this button
-                    }
-                    
-                    if(thisLabel.soundId) {
-                        let soundId = soundsArray.find(x => x.key === thisLabel.soundId);
-                        if (soundId) {
-                            soundRow.push(soundId.url);
+                        thisLabel = buttonGrid.find(x => x.id === grid[row][column]);
+                        labelRow.push(thisLabel.label);
+                        colorRow.push(rgbObject2Array(thisLabel.color));
+                        
+                        if(thisLabel.imageId) {
+                            let iconId = imageArray.find(x => x.imageId === thisLabel.imageId);
+                            if (iconId) {
+                                iconRow.push(iconId.url);
+                            } else {
+                                errorMsg += "Image reference is not defined";
+                            }
+                        } else {
+                            iconRow.push(""); //There is no image associated with this button
+                        }
+                        
+                        if(thisLabel.soundId) {
+                            let soundId = soundsArray.find(x => x.key === thisLabel.soundId);
+                            if (soundId) {
+                                soundRow.push(soundId.url);
+                            } else {
+                                errorMsg += "Sound reference is not defined";
+                            }                            
                         } else {
                             soundRow.push(""); //No sound associated with this button
                         }
-                    } else {
-                        soundRow.push(""); //No sound associated with this button
                     }
-                }           
+                    
+                }
+                labelPage.push(labelRow);          
+                labelRow = [];
+                
+                iconPage.push(iconRow);
+                iconRow = [];
+                
+                soundPage.push(soundRow);
+                soundRow = [];
+                
+                colorPage.push(colorRow);
+                colorRow = [];
             }
-            labelPage.push(labelRow);          
-            labelRow = [];
-            
-            iconPage.push(iconRow);
-            iconRow = [];
-            
-            soundPage.push(soundRow);
-            soundRow = [];
-            
-            colorPage.push(colorRow);
-            colorRow = [];
-        }
-        labels.addPage(boardname, labelPage);
-        icons.addPage(boardname, iconPage);
-        utterances.addPage(boardname, soundPage);
-        colours.addPage(boardname, colorPage);
-        key = boardname;
 
-        grid_size_rows = rows;
-        grid_size_columns = columns; //Global variables for rows and columns
-        grid_Setter(buttonGrid);
-        sound_Getter(soundsArray);
-        images_Setter(imageArray);
+            labels.addPage(boardname, labelPage);
+            icons.addPage(boardname, iconPage);
+            utterances.addPage(boardname, soundPage);
+            colours.addPage(boardname, colorPage);
+            key = boardname;
+
+            grid_size_rows = rows;
+            grid_size_columns = columns; //Global variables for rows and columns
+
+            grid_Setter(buttonGrid);
+            sound_Getter(soundsArray);
+            images_Setter(imageArray);
+        } else {
+            throw "Invalid JSON format";
+        }
+        console.log("Finished reading");
+    } catch(Error) {
+        console.log("Expection: ", Error);
+        errorMsg += Error;
     }
-    console.log("Finished reading ");
 }
 
 function setupInternalDataStructures(responseText){
@@ -200,10 +217,17 @@ function start() {
             fileType = response.file_type;
             if (response.file_type == "obf") {
                 setupInternalDataStructuresObf(response.result);
-                setupMessageWindow();
-                setup_table_obf();
-                load_page_obf(key);
-                obf_data_click();
+                if (!errorMsg) {
+                    setupMessageWindow();
+                    setup_table_obf();
+                    load_page_obf(key);
+                    obf_data_click();
+                    document.getElementById('toggle_scanning').style.display = 'block';
+                } else {
+                    document.getElementsByClassName('error')[0].innerHTML = errorMsg;
+                    document.getElementsByClassName('error')[0].style.display = 'block';
+                    document.getElementById('toggle_scanning').style.display = 'none';
+                }
             } else if (response.file_type == "ovf") {
                 setupInternalDataStructures(response.result);
                 setupMessageWindow();
@@ -583,6 +607,7 @@ var ovf_data_click = function() {
             
             var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
             var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
+
             if (our_top < grid_size_columns) {
                 if (left < grid_size_columns) {                
                     add(left, our_top)
@@ -598,9 +623,9 @@ var obf_data_click = function() {
         if (txt == "Clear Text") {
             document.getElementById("messagewindow").value= "";
         } else if(txt == "Delete Word") {
-            let str = document.myform.outputtext.value;
+	    let str = document.myform.outputtext.value;
             let lastIndex = str.lastIndexOf(" ");            
-            document.myform.outputtext.value = str.substring(0, lastIndex);
+            document.myform.outputtext.value = str.substring(0, lastIndex);            
         } else {
             append(txt);
         }
@@ -671,6 +696,7 @@ function Button(id, label, imageId, soundId, color) {
     this.soundId = soundId;
     this.color = color;
 }
+
 function grid_Setter(grid) {
     this.gridSize = grid;
 }
@@ -710,12 +736,23 @@ function rgbObject2Array(rgbColorObject) {
             rgb = rgbColorObject.replace(/[^\d,]/g, '').split(','); //
         } 
     }
+
+    if (rgb[0] > 255) {
+        throw "Invalid color property.";
+    }
+    if (rgb[1] > 255) {
+        throw "Invalid color property.";
+    }
+    if (rgb[2] > 255) {
+        throw "Invalid color property.";
+    }
+    
     return rgb;
 }
 
 // Read Manifest file
 function readManifest(callback)
-{    
+{
     var req = new XMLHttpRequest();
     req.open("GET", 'data/manifest.json');
     //req.overrideMimeType("application/json");

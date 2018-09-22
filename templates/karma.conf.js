@@ -5,9 +5,11 @@ module.exports = function (config) {
         frameworks: ['jasmine'],
 
         files: [
-            'src/*.js',
+            //'src/*.js',
             'spec/*_test.js',
+            'javascript/read_json.js',
             {pattern: 'testdata/*.obf', watched: true, served: true, included: true},
+            'https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js'
         ],
         exclude: [
         ],

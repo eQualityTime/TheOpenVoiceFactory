@@ -34,10 +34,6 @@
       "label": "cry"
     },
     {
-      "id": "T5",
-      "label": "frown"
-    },
-    {
       "id": "T6",
       "label": "like"
     },
@@ -52,10 +48,6 @@
     {
       "id": "T9",
       "label": "confused"
-    },
-    {
-      "id": "T10",
-      "label": "angry"
     },
     {
       "id": "T11",
