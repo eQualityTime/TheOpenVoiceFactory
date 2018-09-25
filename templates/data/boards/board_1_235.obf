@@ -236,25 +236,7 @@
       "action": ":delete",
       "label": "Delete Word",
       "background_color": "rgb(204, 255, 204)"
-    },
-    {
-      "id": "b3",
-      "label": "",
-      "ext_speaker_should_be_hidden_in_preview": true,
-      "hidden": true
-    },
-    {
-      "id": "b4",
-      "label": "",
-      "ext_speaker_should_be_hidden_in_preview": true,
-      "hidden": true
-    },
-    {
-      "id": "b5",
-      "label": "",
-      "ext_speaker_should_be_hidden_in_preview": true,
-      "hidden": true
-    }
+    }   
   ],
   "grid": {
     "rows": 5,
@@ -262,9 +244,9 @@
     "order": [
       [
         19,
-        "b3",
-        "b4",
-        "b5",
+        null,
+        null,
+        null,
         20
       ],
       [

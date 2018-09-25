@@ -33,7 +33,10 @@ function setupInternalDataStructuresObf(responseText) {
         
         var colorRow = [];
         var colorPage = [];
-        
+
+        var externalBoardRow = [];
+        var externalBoardPage = [];
+
         //Setup add methods
         labels.addPage = function(pagename, pageOfLabels) {
             this[pagename] = pageOfLabels;
@@ -50,8 +53,12 @@ function setupInternalDataStructuresObf(responseText) {
         colours.addPage = function(pagename, pageOfColors) {
             this[pagename] = pageOfColors;
         };
-        
-        let obfInput = JSON.parse(responseText);    
+
+        links.addPage = function(pagename, pageOfExternalBoard) {
+            this[pagename] = pageOfExternalBoard;
+        };
+
+        let obfInput = JSON.parse(responseText);
         if(obfInput.format === "open-board-0.1") { //We are reading a valid obf file
     
             //Get the grid size
@@ -78,7 +85,7 @@ function setupInternalDataStructuresObf(responseText) {
             }
             
 
-            if (obfInput.images) {
+            if (typeof obfInput.images != 'undefined' && obfInput.images.length > 0) {
                 //Load images from obf into the local array
                 var imageCount = obfInput.images.length;
                 for (i=0;i<imageCount; i++) { 
@@ -97,11 +104,15 @@ function setupInternalDataStructuresObf(responseText) {
             //Load Buttons into the local array
             for (i=0; i<obfInput.buttons.length; i++) {
                 let button = obfInput.buttons[i];
-                buttonGrid.push(new Button(button.id, button.label, button.image_id, button.sound_id, button.background_color));
+                var external_board = "";
+                if (button.load_board) {
+                    external_board = button.load_board.path;
+                }
+                buttonGrid.push(new Button(button.id, button.label, button.image_id, button.sound_id, button.background_color, external_board));
             }
                 
             //Load sounds into the local array
-            if (obfInput.sounds) {
+            if (typeof obfInput.sounds != 'undefined' && obfInput.sounds.length > 0) {
                 for (i=0; i<obfInput.sounds.length; i++) {
                     let sound = obfInput.sounds[i];
                     let soundURL = (sound.url) || "";
@@ -112,20 +123,20 @@ function setupInternalDataStructuresObf(responseText) {
             //Now construct the ovf array style
             for(row=0; row<rows; row++)  {
                 for(column=0; column<columns; column++) {
-                
                     //We need to find the button id at this position in the grid to get the corresponding element ids and 
                     //add them to the labels/Icons/Utterances arrays, a row at a time
-                    if(!grid[row][column]) { //This position is null
+                    if( (grid[row][column] === null) || (grid[row][column] === '')) { //This position is null
                         labelRow.push("");
                         iconRow.push("");
                         soundRow.push("");
                         colorRow.push("");
+                        externalBoardRow.push("");
                     } else {
                         thisLabel = buttonGrid.find(x => x.id === grid[row][column]);
                         labelRow.push(thisLabel.label);
                         colorRow.push(rgbObject2Array(thisLabel.color));
                         
-                        if(thisLabel.imageId) {
+                        if (typeof thisLabel.imageId != 'undefined') {
                             let iconId = imageArray.find(x => x.imageId === thisLabel.imageId);
                             if (iconId) {
                                 iconRow.push(iconId.url);
@@ -136,7 +147,7 @@ function setupInternalDataStructuresObf(responseText) {
                             iconRow.push(""); //There is no image associated with this button
                         }
                         
-                        if(thisLabel.soundId) {
+                        if (typeof thisLabel.soundId != 'undefined') {
                             let soundId = soundsArray.find(x => x.key === thisLabel.soundId);
                             if (soundId) {
                                 soundRow.push(soundId.url);
@@ -145,6 +156,12 @@ function setupInternalDataStructuresObf(responseText) {
                             }                            
                         } else {
                             soundRow.push(""); //No sound associated with this button
+                        }
+
+                        if (typeof thisLabel.external_board != 'undefined') {
+                            let externalBoard = externalBoardRow.push(thisLabel.external_board);
+                        } else {
+                            externalBoardRow.push("");
                         }
                     }
                     
@@ -160,12 +177,16 @@ function setupInternalDataStructuresObf(responseText) {
                 
                 colorPage.push(colorRow);
                 colorRow = [];
+
+                externalBoardPage.push(externalBoardRow);
+                externalBoardRow = [];
             }
 
             labels.addPage(boardname, labelPage);
             icons.addPage(boardname, iconPage);
             utterances.addPage(boardname, soundPage);
             colours.addPage(boardname, colorPage);
+            links.addPage(boardname, externalBoardPage);
             key = boardname;
 
             grid_size_rows = rows;
@@ -221,19 +242,17 @@ function start() {
                     setupMessageWindow();
                     setup_table_obf();
                     load_page_obf(key);
-                    obf_data_click();
                     document.getElementById('toggle_scanning').style.display = 'block';
                 } else {
                     document.getElementsByClassName('error')[0].innerHTML = errorMsg;
                     document.getElementsByClassName('error')[0].style.display = 'block';
                     document.getElementById('toggle_scanning').style.display = 'none';
-                }
+                }                
             } else if (response.file_type == "ovf") {
                 setupInternalDataStructures(response.result);
                 setupMessageWindow();
                 setup_table();
-                load_page(key);
-                ovf_data_click();
+                load_page(key);                
             } else {
                 console.log('Invalid file format.');
             }            
@@ -288,6 +307,10 @@ function setup_table() {
     }
 }
 
+function resetTable() {
+    var table = document.getElementById("mainGrid");
+    table.innerHTML = '';
+}
 
 function compute_cell(x, y) {
     return $('#mainGrid tr:eq(' + x + ') td:eq(' + y + ')');
@@ -434,6 +457,56 @@ function add(i, j) {
                 load_page(links[key][i][j]);
         }
     }
+}
+
+function addObfData(i, j) {
+    if (links[key][i][j] == "") {
+        switch (labels[key][i][j]) {
+            //There are two special cases for links - clearing the message window, deleting the last word from the message window. Further special behaviours (volume change and the like) could be added here.
+            case "Delete Word":
+                let str = document.myform.outputtext.value;
+                let lastIndex = str.lastIndexOf(" ");            
+                document.myform.outputtext.value = str.substring(0, lastIndex);
+                break;
+            case "Clear Text":
+                document.getElementById("messagewindow").value= "";
+                break;
+            case "speak":
+                makeWav();
+                break;
+            case "google":
+                image();
+                break;
+            case "youtube":
+                tube();
+                break;
+            case "twitter":
+                tweet();
+                break;            
+            default:
+                //alert(key+" "+i+" "+j)
+                append(labels[key][i][j]);
+                break;
+        }
+    }
+
+    if (links[key][i][j] != "") {
+        readManifestRelationFile('boards/' + links[key][i][j], function(err, response){
+            if (!err) {
+                fileType = response.file_type;
+                resetTable();
+                setupInternalDataStructuresObf(response.result);
+                setupMessageWindow();
+                setup_table_obf();
+                load_page_obf(key);
+
+            } else {
+                callback(true);
+            }
+        });
+    }
+        
+    
 }
 
 function processSpecialOld(command) {
@@ -591,46 +664,32 @@ document.body.onkeydown = function(e) {
     trigger_on_scan()
 };
 
+$('#mainGrid').click(function(e) {
+    if (azulejoe_scanning == true) {
+        trigger_on_scan();
+    } else {
+        rows = grid_size_rows;
+        colums = grid_size_columns;
+        offset_l = $(this).offset().left - $(window).scrollLeft();
+        offset_t = $(this).offset().top - $(window).scrollTop();       
+        distance_down_in_table = e.clientY - offset_t
+        percentage_down = (Math.round((e.clientY - offset_t)) / 540)
+        
+        var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
+        var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
 
-var ovf_data_click = function() {
-
-    $('#mainGrid').click(function(e) {    
-        if (azulejoe_scanning == true) {
-            trigger_on_scan();
-        } else {        
-            rows = grid_size_rows;
-            colums = grid_size_columns;
-            offset_l = $(this).offset().left - $(window).scrollLeft();
-            offset_t = $(this).offset().top - $(window).scrollTop();       
-            distance_down_in_table = e.clientY - offset_t
-            percentage_down = (Math.round((e.clientY - offset_t)) / 540)
-            
-            var left = Math.floor(Math.round((e.clientX - offset_l)) / this.width * colums);
-            var our_top = Math.floor(Math.round((e.clientY - offset_t)) / 540 * rows);
-
-            if (our_top < grid_size_columns) {
-                if (left < grid_size_columns) {                
+        if (our_top < grid_size_columns) {
+            if (left < grid_size_columns) {
+                if (fileType == 'obf') {
+                    addObfData(our_top, left);
+                } else {
                     add(left, our_top)
                 }
-            }        
-        }
-    });
-}
+            }
+        }        
+    }
+});
 
-var obf_data_click = function() {
-    $('.addText').click(function() {
-        var txt = $(this).text();
-        if (txt == "Clear Text") {
-            document.getElementById("messagewindow").value= "";
-        } else if(txt == "Delete Word") {
-	    let str = document.myform.outputtext.value;
-            let lastIndex = str.lastIndexOf(" ");            
-            document.myform.outputtext.value = str.substring(0, lastIndex);            
-        } else {
-            append(txt);
-        }
-    });
-}
 //credit http://stackoverflow.com/a/14045047/170243
 function toggleScanning() {
     if (azulejoe_scanning == true) {
@@ -689,12 +748,13 @@ function itterate_direct_Scanner() {
 
 
 // Construct a Button object
-function Button(id, label, imageId, soundId, color) {
+function Button(id, label, imageId, soundId, color, external_board) {
     this.id = id;
     this.label = label;
     this.imageId = imageId;
     this.soundId = soundId;
     this.color = color;
+    this.external_board = external_board;
 }
 
 function grid_Setter(grid) {
@@ -760,7 +820,7 @@ function readManifest(callback)
     req.onreadystatechange = function() {
         
         if (req.readyState == 4 && req.status == 200) {
-            
+           
             var parseData = JSON.parse(req.responseText);
             
             readManifestRelationFile(parseData.root, function(err, result){

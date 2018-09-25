@@ -1,6 +1,6 @@
 module.exports = function (config) {
     'use strict';
-    config.set({        
+    config.set({
     basePath: './', //set this if you want to run tests from a specific directory
         frameworks: ['jasmine'],
 
@@ -13,8 +13,8 @@ module.exports = function (config) {
         exclude: [
         ],
         proxies: {
-                    '/testdata/': '/base/testdata/'
-                },
+            '/testdata/': '/base/testdata/'
+        },
             
         preprocessors: {
             // '../src/*.js': ['coverage']
@@ -29,7 +29,7 @@ module.exports = function (config) {
 
         plugins: [
 			'karma-jquery',
-            'karma-jasmine',            
+            'karma-jasmine',
             'karma-chrome-launcher'
         ]
     });
