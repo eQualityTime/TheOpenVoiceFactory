@@ -1,8 +1,8 @@
 /*
- * Unit tests for javascript/comscan.js
+ * Unit tests for read_json.js
  *
  */
-describe('Comscan', function() {
+describe('read_json', function() {
 
     // inject the HTML fixture for the tests
     beforeEach(function() {
