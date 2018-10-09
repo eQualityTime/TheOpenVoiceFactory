@@ -1,8 +1,8 @@
 /*
- * Unit tests for javascript/comscan.js
- *
+ * Unit tests for javascript/read_json.js using Jasmine
+ * These tests focus on behaviour of the UI
  */
-describe('Comscan', function() {
+describe('Board actions are performed correctly', function() {
 
     // inject the HTML fixture for the tests
     beforeEach(function() {
@@ -35,6 +35,7 @@ describe('Comscan', function() {
 
 // * Does that object have the right number of slides in it. 
     it('We can parse an example json document', function() {
+        console.log("parse json doc");
         setupInternalDataStructures(sample);	
         expect(Object.keys(links).length).toBe(100);
     });
