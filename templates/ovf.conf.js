@@ -15,11 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js',
       'spec/*_test.js',
       'javascript/read_json.js',
-      'javascript/tests/*.js',
-      {pattern: 'testdata/*.obf', watched: true, served: true, included: true},
-      'https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js'
+      //'javascript/tests/*.js',
+      {pattern: 'testdata/*.obf', watched: true, served: true, included: true}
     ],
 
 

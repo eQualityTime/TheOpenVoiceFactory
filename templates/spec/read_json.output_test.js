@@ -34,69 +34,60 @@ describe('Board actions are performed correctly', function() {
 // We should seperate the click event so that there is a function that takes a pixel x,y, a function that takes a normalised x,y for the grid, and one that takes the information converted into a grid reference
 
 // * Does that object have the right number of slides in it. 
-    it('We can parse an example json document', function() {
-        console.log("parse json doc");
-        setupInternalDataStructures(sample);	
-        expect(Object.keys(links).length).toBe(100);
-    });
+  it('We can parse an example json document', function() {
+      console.log("parse json doc");
+      setupInternalDataStructures(sample);	
+      expect(Object.keys(links).length).toBe(100);
+  });
 
 // * When loading the first page. Do a selection of the right squares have the correct message in them?
-    it('When loading top page, the utterances are in the right place', function() {
-        setupInternalDataStructures(sample);	
-        expect(labels["toppage"][0][0]).toBe('Yes');
-        expect(labels["toppage"][1][1]).toBe('I want to talk to you.');
-    });
+  it('When loading top page, the utterances are in the right place', function() {
+      console.log("right messages in squares");
+      setupInternalDataStructures(sample);	
+      expect(labels["toppage"][0][0]).toBe('Yes');
+      expect(labels["toppage"][1][1]).toBe('I want to talk to you.');
+  });
 
-// * When pressing a particular button, does the message window change apropreityly 
+// * When pressing a particular button, does the message window change appropriately 
   it('Message window sets up and changes with button press.', function() {
-        setupInternalDataStructures(sample);	
-	setupMessageWindow();
-	expect(document.getElementById("messagewindow").value).toBe("");
-	add(1,1);
-	expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
+    console.log("message window change");
+    setupInternalDataStructures(sample);	
+    setupMessageWindow();
+    expect(document.getElementById("messagewindow").value).toBe("");
+    add(1,1);
+    expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
     });
 
 
- it('clear function works', function() {
-        setupInternalDataStructures(sample);	
-	setupMessageWindow();
-	expect(document.getElementById("messagewindow").value).toBe("");
-	add(1,1);
-	expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
-	add(0,4);
-	expect(document.getElementById("messagewindow").value).toBe("");
+  it('clear function works', function() {
+    console.log("clear function works");
+    setupInternalDataStructures(sample);	
+    setupMessageWindow();
+    expect(document.getElementById("messagewindow").value).toBe("");
+    add(1,1);
+    expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
+    add(0,4);
+    expect(document.getElementById("messagewindow").value).toBe("");
     });
-
-
-   it('clear function works', function() {
-        setupInternalDataStructures(sample);	
-	setupMessageWindow();
-	expect(document.getElementById("messagewindow").value).toBe("");
-	add(1,1);
-	expect(document.getElementById("messagewindow").value).toBe(" I want to talk to you.");
-	add(0,4);
-	expect(document.getElementById("messagewindow").value).toBe("");
-    });
-
 
   it('Two part function works', function() {
-        setupInternalDataStructures(sample);	
-	setupMessageWindow();
-	expect(document.getElementById("messagewindow").value).toBe("");
-	add(2,2);
-	add(3,1);
-	add(1,1);
-	expect(document.getElementById("messagewindow").value).toBe(" I have a pain in my");
-	expect(key).toBe("bodyparts")
-
-
+    console.log("Two part function works");
+    setupInternalDataStructures(sample);	
+    setupMessageWindow();
+    expect(document.getElementById("messagewindow").value).toBe("");
+    add(2,2);
+    add(3,1);
+    add(1,1);
+    expect(document.getElementById("messagewindow").value).toBe(" I have a pain in my");
+    expect(key).toBe("bodyparts")
     });
 
 // * When pressing a particular button, does the contents of other buttons change. 
   it('the add function changes the keys', function() {
-        setupInternalDataStructures(sample);	
-	add(2,2);
-	expect(key).toBe("personalcare");
+    console.log("add function changes the key");
+    setupInternalDataStructures(sample);	
+    add(2,2);
+    expect(key).toBe("personalcare");
     });
 
 
@@ -107,6 +98,3 @@ describe('Board actions are performed correctly', function() {
   //  });
 
 });
-
-
-
