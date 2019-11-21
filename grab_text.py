@@ -3,7 +3,7 @@
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
 # Make the images export more effectively
 import sys
-sys.path.append('/home/joereddington/')
+sys.path.append('/home/ovf/')
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pprint import pprint
@@ -328,6 +328,7 @@ def export_images(grid, slide_number, slide, filename, SAVE=True):
                 if not os.path.exists(folder):
                     os.makedirs(folder)
                 composite.save(folder + "" + name)
+		print "Saving an icon to {}".format(folder+""+name)
         except IOError as e:
             print "Error reading image for {} {}".format(x, y)
             if ("cannot find loader for this WMF file" in e):
@@ -358,13 +359,23 @@ def create_json_object(grids):
     return for_json
 
 
-def create_obf_manifest(boards_names_dic, image_names_dic, dest):
+def create_obf_manifest(root, boards_names_dic, image_names_dic, dest):
     # Create the manifest
-    root = boards_names_dic['toppage']
     string_of_board_names = json.dumps(boards_names_dic)
     string_of_image_names = json.dumps(image_names_dic)
     print string_of_board_names
     print "XXXXXXXXXXXXXXX"
+    print """{{
+"format": "open-board-0.1",
+"root": "{}",
+"paths": {{
+"boards":
+{},
+"images":
+{}
+
+}}
+}}""".format(root, string_of_board_names, string_of_image_names)
     with open(dest+"/data/manifest.json", "w") as manifest:
         manifest.write("""{{
 "format": "open-board-0.1",
@@ -380,6 +391,8 @@ def create_obf_manifest(boards_names_dic, image_names_dic, dest):
 
 
 def create_obf_button(grid,col,row):
+#    print "   Creating OBF Button for {}".format(grid.labels[col][row])
+    
     button = {}
     button["id"] = "{}{}".format(col, row)
     button["border_color"] = "rgb(68,68,68)"
@@ -398,13 +411,15 @@ def create_obf_button(grid,col,row):
                 #It's a special commend. let's extract it.
                 print "We're in the special commands:"
                 print "original line is : {}".format(grid.links[col][row])
+		grid.links[col][row]=grid.links[col][row].replace("%20"," ")
+		grid.links[col][row]=grid.links[col][row].replace("%22","\"")
                 commandstring=grid.links[col][row][4:-1]
-                print "Command is {}".format(commandstring)
+                print "Commands are {}".format(commandstring)
                 commands=commandstring.split(",")
                 for command in commands:
-                    command_name= command.split("(",1)[0]
+                    command_name= command.split("(",1)[0].strip() #if it's a multiple command it's likely to have whitespace
                     argument=command.split("(",1)[1][0:-1]
-                    print "command name is {}".format(command_name)
+                    print "command name is :{}:".format(command_name)
                     print "argument is {}".format(argument)
                     if command_name == "deleteword":
                         #should find out what we do there...
@@ -421,15 +436,18 @@ def create_obf_button(grid,col,row):
                     elif command_name == "blank":
                          pass
                     else:
+			print "Bad THING happening"
                         raise ValueError('Unknown special command_name ({}) to process'.format(command_name))
                 pass
     #This is at the end because we might change it during the special commands.
     button["label"] = grid.labels[col][row]
+    print "Returning button" 
     return button
 
 
 
 def create_obf_object(grid):
+    print "Creating OBF object for: {}".format(make_title(grid.tag))
     for_json = {}
     for_json["format"] = "open-board-0.1"
     for_json["name"] = "CommuniKate "+make_title(grid.tag)
@@ -461,6 +479,7 @@ def create_obf_object(grid):
                 img["height"] = 300
                 img["path"]="../"+grid.icons[col][row]
                 for_json["images"].append(img)
+    print "Returning page"
     return for_json
 
 
@@ -469,21 +488,35 @@ def write_to_obf(grids, dest):
     boards_names_dic = {}
     image_names_dic = {}
     owd = os.getcwd()
+    print owd
     for tok in grids:
         for_json = create_obf_object(tok)
         for image in for_json["images"]:
             image_names_dic[image['id']]=image['path']
         filename = 'boards/'+make_title(tok.tag)+'.obf'
-        boards_names_dic[make_title(tok.tag)]=filename
-        filename = filename.encode('ascii', 'ignore')
-        with open(dest+'/data/'+filename, 'w') as outfile:
+        boards_names_dic[make_title(tok.tag)]=filename.decode('ascii','replace')
+	print "before writing to {}".format(dest+'/data/'+filename)
+        with open(filename, 'w') as outfile:
             json.dump(for_json, outfile, sort_keys=True, indent=2)
-    create_obf_manifest(boards_names_dic,image_names_dic, dest)
+	
+	print "Wo"
+        with open('data/'+filename, 'w') as outfile:
+            json.dump(for_json, outfile, sort_keys=True, indent=2)
+	
+	print "WoW"
+        with open(dest+'/data/'+filename, 'w') as outfile:
+	    print "So far" 
+            json.dump(for_json, outfile, sort_keys=True, indent=2)
+	    print "So good" 
+	print "After" 
+    print "XXXXX" + make_title(grids[0].tag)
+    create_obf_manifest(boards_names_dic[make_title(grids[0].tag)],boards_names_dic,image_names_dic, dest)
     os.chdir(dest+'/data')
     outzipfile = 'pageset.obz'
     boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
     with zipfile.ZipFile(outzipfile, "w") as w:
         for x in boards_names_dic.values():
+            print x 
             w.write(x)
         for y in image_names_dic.keys():
             x=image_names_dic[y]
@@ -491,6 +524,7 @@ def write_to_obf(grids, dest):
             print x
             w.write(x)
     os.chdir(owd)
+    print "Wrote obz file"
 
 
 
@@ -509,14 +543,8 @@ def make_title(label):
     tag = remove_punctuation(label.lower().strip().replace(" ", "_").replace("%20","_"))
     if tag == "":
         tag = "unknown"
-    return tag
+    return tag.encode('utf-8')
 
-def create_ovf_manifest(filename):
-    with open(filename, "w") as manifest:
-        manifest.write("""{
-"format": "open-board-0.1",
-"root": "boards/my-board.ovf"
-}""")
 
 def create_icon_name(x, y, labels, links, slide_number):
     name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
@@ -538,8 +566,10 @@ if __name__ == "__main__":
         gridSize = int(sys.argv[3])
     pageset = Pageset(filename, dest)
     write_to_JSON(pageset.grids, dest+'/pageset.json')
+    print "OVF format written" 
     write_to_JSON(pageset.grids, dest+'/pageset.json')
-    create_ovf_manifest(dest+'/manifest.json')
+    print "OVF format written" 
     write_to_obf(pageset.grids, dest)
+    print "OBF written" 
 
     # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4
