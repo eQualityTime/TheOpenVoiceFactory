@@ -496,14 +496,6 @@ def write_to_obf(grids, dest):
         filename = 'boards/'+make_title(tok.tag)+'.obf'
         boards_names_dic[make_title(tok.tag)]=filename.decode('ascii','replace')
 	print "before writing to {}".format(dest+'/data/'+filename)
-        with open(filename, 'w') as outfile:
-            json.dump(for_json, outfile, sort_keys=True, indent=2)
-	
-	print "Wo"
-        with open('data/'+filename, 'w') as outfile:
-            json.dump(for_json, outfile, sort_keys=True, indent=2)
-	
-	print "WoW"
         with open(dest+'/data/'+filename, 'w') as outfile:
 	    print "So far" 
             json.dump(for_json, outfile, sort_keys=True, indent=2)

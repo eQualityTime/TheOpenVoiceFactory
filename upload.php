@@ -31,7 +31,7 @@ if ($uploadOk == 0) {
 	$temp = shell_exec($command );
         echo "<b>The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can use the resulting system <a href=".$url."?lang=".$_POST["lang"]."/ >here</a></b><br><br>";
 	$fileurl = "https://designs.theopenvoicefactory.org/".$location."/data/pageset.obz";
-        echo "<b>You can also downloaded the <i>Open Board Format</i> file <a href=".$fileurl."/ >here</a></b><br><br>";
+        echo "<b>You can also downloaded the <i>Open Board Format</i> file <a href=".$fileurl." />here</a></b><br><br>";
 
 	echo "<h2>Script Trace</h2><br>";
 	echo "Various debugging information is provided below in case of errors. If there is a major problem, then the support team will want to see this<br><br>";
