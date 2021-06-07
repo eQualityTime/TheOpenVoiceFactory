@@ -24,7 +24,7 @@ if ($uploadOk == 0) {
 	$location = hash_file("md5",$target_file);
 	$command = dirname(__FILE__).'/create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
 	$temp = shell_exec($command );
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=".$location."?lang=".$_POST["lang"]."/ >here</a><br><br>";
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=http://designs.theopenvoicefactory.org/".$location."?lang=".$_POST["lang"]."/ >here</a><br><br>";
 	echo nl2br($temp);
     } else {
         echo "Sorry, there was an error uploading your file.";
