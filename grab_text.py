@@ -82,7 +82,7 @@ class Pageset:
         self.feedback.append(feedelement)
         # This is a stub - this is to be used to manage the passing of
         # messages to the user.
-        print "Feedback added {}".format(feedelement)
+        print u"Feedback added :{}".format(feedelement)
 
     def getfeedback(self):
         return self.feedback
@@ -209,14 +209,17 @@ class Grid:
                         if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                             if len(self.links[
                                    co][ro]) < 1:
-                                self.pageset.addfeedback(
-                                    "Unknown link at slide: " +
-                                    self.tag +
-                                    " link here: [{}] [{}] {} ".format(
-                                        co,
-                                        ro,
-                                        self.labels[co][ro]) +
-                                    self.links[co][ro])
+                                print self.tag
+                                print type(self.tag)
+                                print type(co)
+                                print ro
+                                print type(ro)
+                                print self.labels[co][ro]
+                                print type(self.labels[co][ro])
+                                print "hello" 
+                                print self.links[co][ro]
+                                print type(self.links[co][ro])
+                                self.pageset.addfeedback(u"Unknown link at slide: " + self.tag + u" link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
         except (AttributeError, KeyError, NotImplementedError):
             self.pageset.addfeedback(returnException())
@@ -358,15 +361,15 @@ def create_json_object(grids):
     return for_json
 
 
-def create_obf_manifest(boards_names_dic, image_names_dic, dest):
+def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
     # Create the manifest
-    root = boards_names_dic['toppage']
+#    root = boards_names_dic['toppage']
     string_of_board_names = json.dumps(boards_names_dic)
     string_of_image_names = json.dumps(image_names_dic)
-    print string_of_board_names
     print "XXXXXXXXXXXXXXX"
+    print root
     with open(dest+"/data/manifest.json", "w") as manifest:
-        manifest.write("""{{
+        manifest.write(u"""{{
 "format": "open-board-0.1",
 "root": "{}",
 "paths": {{
@@ -376,7 +379,7 @@ def create_obf_manifest(boards_names_dic, image_names_dic, dest):
 {}
 
 }}
-}}""".format(root, string_of_board_names, string_of_image_names))
+}}""".format(root, string_of_board_names, string_of_image_names).encode('utf8'))
 
 
 def create_obf_button(grid,col,row):
@@ -469,27 +472,30 @@ def write_to_obf(grids, dest):
     boards_names_dic = {}
     image_names_dic = {}
     owd = os.getcwd()
+    root=make_title(grids[0].tag)
+    print u"The title of the root board is {}".format(root) 
     for tok in grids:
         for_json = create_obf_object(tok)
         for image in for_json["images"]:
             image_names_dic[image['id']]=image['path']
         filename = 'boards/'+make_title(tok.tag)+'.obf'
+        filename = filename.encode('ascii', 'ignore') #so, this turns it into asci? 
         boards_names_dic[make_title(tok.tag)]=filename
-        filename = filename.encode('ascii', 'ignore')
+        print filename
         with open(dest+'/data/'+filename, 'w') as outfile:
             json.dump(for_json, outfile, sort_keys=True, indent=2)
-    create_obf_manifest(boards_names_dic,image_names_dic, dest)
+    create_obf_manifest(root,boards_names_dic,image_names_dic, dest)
     os.chdir(dest+'/data')
     outzipfile = 'pageset.obz'
     boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
     with zipfile.ZipFile(outzipfile, "w") as w:
         for x in boards_names_dic.values():
-            w.write(x)
+            w.write(x.encode('utf8'))
         for y in image_names_dic.keys():
             x=image_names_dic[y]
             image_names_dic[y]=x.replace("../icons","images")
             print x
-            w.write(x)
+            w.write(x.encode('utf8'))
     os.chdir(owd)
 
 
