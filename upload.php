@@ -1,3 +1,8 @@
+<html>
+<head>
+<link rel="stylesheet" href="white.css">
+</head>
+<body>
 <?php
 //All code from http://www.w3schools.com/php/php_file_upload.asp with thanks
 $target_dir = "uploads/";
@@ -24,7 +29,13 @@ if ($uploadOk == 0) {
 	$location = hash_file("md5",$target_file);
 	$command = dirname(__FILE__).'/create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
 	$temp = shell_exec($command );
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed, you can view the results <a href=http://designs.theopenvoicefactory.org/".$location."?lang=".$_POST["lang"]."/ >here</a><br><br>";
+	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
+ 	echo "<ul>";
+	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz>here</a>.";
+	echo "<li> Please keep the link private - anyone with access to it will be able to acess the aid.";
+	echo "<li> Please keep your pptx files in a safe place - they will be the only way to modify or recover your aid" ;
+	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";
+	echo "<ul>";
 	echo nl2br($temp);
     } else {
         echo "Sorry, there was an error uploading your file.";
@@ -45,3 +56,5 @@ function filenameSlugify($text) {
    return $filename.".".$fileExtension;
 }
 ?>
+</body>
+</html>

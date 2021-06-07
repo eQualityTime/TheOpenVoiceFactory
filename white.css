@@ -4,7 +4,7 @@ img{
     margin-right: auto;
 }
 
-div#columns {
+body {
     position: relative;
     width: 750px;
     top: 20px;
