@@ -159,10 +159,14 @@ class Grid:
         # It might be worth having a slight fudge right-and-down to make sure
         # we don't miss items who are just outside the top left of the
         # cell.
+        # This method is terrible - it worked fine with python 2.7, and when I upgraded to python3, the division caused problems. I fixed it by putting interger division *back*, which is clearly wrong but... 
+     #   print("top: {}, left: {}, height: {}, width: {}".format(top,left,self.slide_height,self.slide_width))
+        numberofrows=self.grid_size #forreadability  
+        numberofcolumns=self.grid_size #forreadability  
         col = math.floor(
-            (left * self.grid_size / self.slide_width) + 0.5)
+            (numberofcolumns * left // self.slide_width) + 0.5)
         row = math.floor(
-            (top * self.grid_size / self.slide_height) + 0.5)
+            (numberofrows * top // self.slide_height) + 0.5)
         return (int(col), int(row))
 
     def process_shape(self, shape):
