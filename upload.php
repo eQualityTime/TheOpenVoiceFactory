@@ -31,7 +31,7 @@ if ($uploadOk == 0) {
 	$temp = shell_exec($command. " 2>&1" );
 	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
  	echo "<ul>";
-	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz>here</a>.";
+	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz target=\"_blank\">here</a>.";
 	echo "<li> Please keep the link private - anyone with access to it will be able to acess the aid.";
 	echo "<li> Please keep your pptx files in a safe place - they will be the only way to modify or recover your aid" ;
 	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";

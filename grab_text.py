@@ -3,7 +3,7 @@
 "Extracting Utterances from CommuniKate pagesets designed in PowerPoint"
 # Make the images export more effectively
 import sys
-sys.path.append('/home/joereddington/')
+sys.path.append('/home/ovf/')
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pprint import pprint
@@ -369,7 +369,7 @@ def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
     with io.open(dest+"/data/manifest.json", "w") as manifest:
         manifest.write("""{{
 "format": "open-board-0.1",
-"root": "{}",
+"root": "boards/{}.obf",
 "paths": {{
 "boards":
 {},
