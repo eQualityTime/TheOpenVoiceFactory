@@ -26,9 +26,9 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-	$location = hash_file("md5",$target_file);
+	$location = hash("md5",time().hash_file("md5",$target_file));
 	$command = dirname(__FILE__).'/create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
-	$temp = shell_exec($command );
+	$temp = shell_exec($command. " 2>&1" );
 	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
  	echo "<ul>";
 	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz>here</a>.";
@@ -37,6 +37,9 @@ if ($uploadOk == 0) {
 	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";
 	echo "<ul>";
 	echo nl2br($temp);
+	echo "Hello?";
+	echo $temp;
+	echo "now?";
     } else {
         echo "Sorry, there was an error uploading your file.";
    }
