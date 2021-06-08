@@ -1,12 +1,11 @@
 from unittest import TestCase
 import unittest
-import mock
+#import mock
 import urllib
 import json
 import os
 import sys
-sys.path.append('/home/joereddington/')
-sys.path.append('..')
+sys.path.append('..') #todo - test removal 
 import grab_text
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
@@ -136,14 +135,6 @@ class ovfTest(TestCase):
 
 
 
-  #  def test_run_first_break_file(self):
-  #      grab_text.gridSize=5
-  #      pageset = grab_text.Pageset("break.pptx","",False)
-  #      print "################################################################################"
-  #      feedback= pageset.getfeedback()
-  #      for f in feedback:
-  #          print f
-  #      self.assertEqual(21,len(feedback))
 
 
     def test_regession_ck12(self):

@@ -364,11 +364,13 @@ def create_json_object(grids):
 def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
     # Create the manifest
 #    root = boards_names_dic['toppage']
-    string_of_board_names = json.dumps(boards_names_dic)
-    string_of_image_names = json.dumps(image_names_dic)
+    string_of_board_names = json.dumps(boards_names_dic,ensure_ascii=False)
+    string_of_image_names = json.dumps(image_names_dic,ensure_ascii=False)
+#    import code
+#    code.interact(local=locals())
     print "XXXXXXXXXXXXXXX"
     print root
-    with open(dest+"/data/manifest.json", "w") as manifest:
+    with io.open(dest+"/data/manifest.json", "w") as manifest:
         manifest.write(u"""{{
 "format": "open-board-0.1",
 "root": "{}",
@@ -379,7 +381,7 @@ def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
 {}
 
 }}
-}}""".format(root, string_of_board_names, string_of_image_names).encode('utf8'))
+}}""".format(root, string_of_board_names, string_of_image_names))
 
 
 def create_obf_button(grid,col,row):
@@ -479,7 +481,7 @@ def write_to_obf(grids, dest):
         for image in for_json["images"]:
             image_names_dic[image['id']]=image['path']
         filename = 'boards/'+make_title(tok.tag)+'.obf'
-        filename = filename.encode('ascii', 'ignore') #so, this turns it into asci? 
+        filename = filename #.encode('ascii', 'ignore') #so, this turns it into asci? 
         boards_names_dic[make_title(tok.tag)]=filename
         print filename
         with open(dest+'/data/'+filename, 'w') as outfile:
@@ -490,12 +492,12 @@ def write_to_obf(grids, dest):
     boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
     with zipfile.ZipFile(outzipfile, "w") as w:
         for x in boards_names_dic.values():
-            w.write(x.encode('utf8'))
+            w.write(x)#.encode('utf8'))
         for y in image_names_dic.keys():
             x=image_names_dic[y]
             image_names_dic[y]=x.replace("../icons","images")
             print x
-            w.write(x.encode('utf8'))
+            w.write(x) #.encode('utf8'))
     os.chdir(owd)
 
 
@@ -526,7 +528,7 @@ def create_ovf_manifest(filename):
 
 def create_icon_name(x, y, labels, links, slide_number):
     name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
-            labels[x][y]).encode('ascii', 'ignore')+".png"
+            labels[x][y])+".png" #.encode('ascii', 'ignore')+".png"
     return name
 
 ########
