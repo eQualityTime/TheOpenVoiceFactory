@@ -162,6 +162,7 @@ class Grid:
             (left * self.grid_size / self.slide_width) + 0.5)
         row = math.floor(
             (top * self.grid_size / self.slide_height) + 0.5)
+        #print("self.assertEqual(grids[0].get_col_row({},{}),({},{}))".format(top,left,int(col),int(row)))
         return (int(col), int(row))
 
     def process_shape(self, shape):
@@ -183,12 +184,8 @@ class Grid:
                         ro] = click_action.hyperlink.address
             if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                 if bordercolor:
-                    # print "here"
-                    # print "X
-                    # {}".format(shape.line.color.rgb)
                     self.colors[co][
                             ro] = shape.line.color.rgb
-                    # print "there"
 
                 else:
                     if hasattr(shape.fill, 'fore_color'):
@@ -209,16 +206,6 @@ class Grid:
                         if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                             if len(self.links[
                                    co][ro]) < 1:
-                                print self.tag
-                                print type(self.tag)
-                                print type(co)
-                                print ro
-                                print type(ro)
-                                print self.labels[co][ro]
-                                print type(self.labels[co][ro])
-                                print "hello" 
-                                print self.links[co][ro]
-                                print type(self.links[co][ro])
                                 self.pageset.addfeedback(u"Unknown link at slide: " + self.tag + u" link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
         except (AttributeError, KeyError, NotImplementedError):
