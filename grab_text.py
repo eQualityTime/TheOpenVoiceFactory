@@ -210,16 +210,6 @@ class Grid:
                         if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                             if len(self.links[
                                    co][ro]) < 1:
-                                print(self.tag)
-                                print(type(self.tag))
-                                print(type(co))
-                                print(ro)
-                                print(type(ro))
-                                print(self.labels[co][ro])
-                                print(type(self.labels[co][ro]))
-                                print("hello") 
-                                print(self.links[co][ro])
-                                print(type(self.links[co][ro]))
                                 self.pageset.addfeedback("Unknown link at slide: " + self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
         except (AttributeError, KeyError, NotImplementedError):
