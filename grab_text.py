@@ -18,6 +18,7 @@ from PIL import Image
 from sys import argv
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+from pptx.enum.dml import MSO_FILL
 
 
 import sys
@@ -45,8 +46,8 @@ def returnException():
 def resizeImage(image, scaleFactor):
 
     oldSize = image.size
-    newSize = (scaleFactor*oldSize[0],
-               scaleFactor*oldSize[1])
+    newSize = (int(scaleFactor*oldSize[0]),
+               int(scaleFactor*oldSize[1]))
     return image.resize(newSize, Image.ANTIALIAS)
 
 
@@ -59,8 +60,8 @@ def remove_punctuation(s):
     u'somethingelse really'
     """
     text = s
-    if not isinstance(s, type(u"hope")):
-        text = unicode(s, "utf-8")
+    if not isinstance(s, type("hope")):
+        text = str(s, "utf-8")
     punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
     return ''.join(x for x in text
                    if unicodedata.category(x) not in punctutation_cats)
@@ -82,7 +83,7 @@ class Pageset:
         self.feedback.append(feedelement)
         # This is a stub - this is to be used to manage the passing of
         # messages to the user.
-        print u"Feedback added :{}".format(feedelement)
+        print("Feedback added :{}".format(feedelement))
 
     def getfeedback(self):
         return self.feedback
@@ -172,7 +173,7 @@ class Grid:
             (co, ro) = self.get_col_row(
                     shape.top+shape.height/2, shape.left+shape.width/2)
             if ((co >= gridSize) or (ro >= gridSize)):
-                print "Warning, shape outside of page area on page:{}".format(self.tag)
+                print("Warning, shape outside of page area on page:{}".format(self.tag))
                 return
             # Now - let's find out if there is a link...
             click_action = None
@@ -191,7 +192,7 @@ class Grid:
                     # print "there"
 
                 else:
-                    if hasattr(shape.fill, 'fore_color'):
+                    if shape.fill.type==MSO_FILL.SOLID:
                         if (str(shape.fill.fore_color.type)
                                 == "SCHEME (2)"):
                             #self.colors[co][ro] = ( 200, 0, 0)
@@ -209,17 +210,17 @@ class Grid:
                         if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                             if len(self.links[
                                    co][ro]) < 1:
-                                print self.tag
-                                print type(self.tag)
-                                print type(co)
-                                print ro
-                                print type(ro)
-                                print self.labels[co][ro]
-                                print type(self.labels[co][ro])
-                                print "hello" 
-                                print self.links[co][ro]
-                                print type(self.links[co][ro])
-                                self.pageset.addfeedback(u"Unknown link at slide: " + self.tag + u" link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
+                                print(self.tag)
+                                print(type(self.tag))
+                                print(type(co))
+                                print(ro)
+                                print(type(ro))
+                                print(self.labels[co][ro])
+                                print(type(self.labels[co][ro]))
+                                print("hello") 
+                                print(self.links[co][ro])
+                                print(type(self.links[co][ro]))
+                                self.pageset.addfeedback("Unknown link at slide: " + self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
         except (AttributeError, KeyError, NotImplementedError):
             self.pageset.addfeedback(returnException())
@@ -230,7 +231,7 @@ class Grid:
         if "Yes" in self.labels[co][ro]:
             return
         for paragraph in shape.text_frame.paragraphs:
-            text += "".join([run.text.replace(u"’", u"'")
+            text += "".join([run.text.replace("’", "'")
                              for run in paragraph.runs])
         if text != "":
             # add the if shape_type is text box
@@ -256,7 +257,7 @@ def create_image_grid(slide, grid):
                                 row] is not "":
                             if grid.tag not in grid.labels[
                                     col][row]:
-                                print "WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag)
+                                print("WARNING: image missing at column {}, row  {} (label: {}) on slide:{}".format(col, row, labels[col][row], grid.tag))
     return images
 
 
@@ -287,8 +288,9 @@ def export_images(grid, slide_number, slide, filename, SAVE=True):
             # Size of combined image, in actual pixels (not PPTX units)
             # If scales differ between objects, we resize
             # them next
-            w = (r-l)/scale
-            h = (b-t)/scale
+            w = int((r-l)/scale)
+            h = int((b-t)/scale)
+
             composite = Image.new('RGBA', (w, h))
 
             # Add all the images together.
@@ -311,18 +313,18 @@ def export_images(grid, slide_number, slide, filename, SAVE=True):
                 part = part.crop(box)
                 partScale = (shape.width / part.size[0])
                 # part.size because it might have been cropped
+
                 part = resizeImage(part, partScale / scale)
                 composite.paste(
                     part,
-                    ((shape.left - l)/scale,
-                     (shape.top - t)/scale))
+                    (int((shape.left - l)/scale),int(
+                     (shape.top - t)/scale)))
             # Crop final image.
             bbox = composite.getbbox()
             composite = composite.crop(bbox)
 
             # Save!
-            grid.icons[x][
-                    y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
+            grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
             name =                  create_icon_name(x, y, labels, grid.links, slide_number)
             # print name
             if SAVE:
@@ -332,13 +334,15 @@ def export_images(grid, slide_number, slide, filename, SAVE=True):
                     os.makedirs(folder)
                 composite.save(folder + "" + name)
         except IOError as e:
-            print "Error reading image for {} {}".format(x, y)
+            print("Error reading image for {} {}".format(x, y))
             if ("cannot find loader for this WMF file" in e):
-                print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number)
+                print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number))
             if ("cannot identify image file" in e):
-                print "Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number)
+                print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number))
         except ValueError:
-            print "Error reading image for {} {}".format(x, y)
+            print("Error reading image for {} {}".format(x, y))
+        except IndexError:
+            print("Error reading image for {} {}- it is outside the grid".format(x, y))
 
 
 
@@ -366,12 +370,10 @@ def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
 #    root = boards_names_dic['toppage']
     string_of_board_names = json.dumps(boards_names_dic,ensure_ascii=False)
     string_of_image_names = json.dumps(image_names_dic,ensure_ascii=False)
-#    import code
-#    code.interact(local=locals())
-    print "XXXXXXXXXXXXXXX"
-    print root
+    print("XXXXXXXXXXXXXXX")
+    print(root)
     with io.open(dest+"/data/manifest.json", "w") as manifest:
-        manifest.write(u"""{{
+        manifest.write("""{{
 "format": "open-board-0.1",
 "root": "{}",
 "paths": {{
@@ -401,16 +403,16 @@ def create_obf_button(grid,col,row):
                 button["load_board"]= { "path": "boards/"+grid.links[col][row]+".obf" }
             else:
                 #It's a special commend. let's extract it.
-                print "We're in the special commands:"
-                print "original line is : {}".format(grid.links[col][row])
+                print("We're in the special commands:")
+                print("original line is : {}".format(grid.links[col][row]))
                 commandstring=grid.links[col][row][4:-1]
-                print "Command is {}".format(commandstring)
+                print("Command is {}".format(commandstring))
                 commands=commandstring.split(",")
                 for command in commands:
                     command_name= command.split("(",1)[0]
                     argument=command.split("(",1)[1][0:-1]
-                    print "command name is {}".format(command_name)
-                    print "argument is {}".format(argument)
+                    print("command name is {}".format(command_name))
+                    print("argument is {}".format(argument))
                     if command_name == "deleteword":
                         #should find out what we do there...
                         button["action"]=":deleteword"
@@ -475,7 +477,7 @@ def write_to_obf(grids, dest):
     image_names_dic = {}
     owd = os.getcwd()
     root=make_title(grids[0].tag)
-    print u"The title of the root board is {}".format(root) 
+    print("The title of the root board is {}".format(root)) 
     for tok in grids:
         for_json = create_obf_object(tok)
         for image in for_json["images"]:
@@ -483,7 +485,7 @@ def write_to_obf(grids, dest):
         filename = 'boards/'+make_title(tok.tag)+'.obf'
         filename = filename #.encode('ascii', 'ignore') #so, this turns it into asci? 
         boards_names_dic[make_title(tok.tag)]=filename
-        print filename
+        print(filename)
         with open(dest+'/data/'+filename, 'w') as outfile:
             json.dump(for_json, outfile, sort_keys=True, indent=2)
     create_obf_manifest(root,boards_names_dic,image_names_dic, dest)
@@ -491,12 +493,12 @@ def write_to_obf(grids, dest):
     outzipfile = 'pageset.obz'
     boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
     with zipfile.ZipFile(outzipfile, "w") as w:
-        for x in boards_names_dic.values():
+        for x in list(boards_names_dic.values()):
             w.write(x)#.encode('utf8'))
-        for y in image_names_dic.keys():
+        for y in list(image_names_dic.keys()):
             x=image_names_dic[y]
             image_names_dic[y]=x.replace("../icons","images")
-            print x
+            print(x)
             w.write(x) #.encode('utf8'))
     os.chdir(owd)
 
@@ -527,8 +529,12 @@ def create_ovf_manifest(filename):
 }""")
 
 def create_icon_name(x, y, labels, links, slide_number):
-    name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
-            labels[x][y])+".png" #.encode('ascii', 'ignore')+".png"
+    name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+".png" 
+    try:
+        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+make_title(
+                labels[x][y])+".png" 
+    except IndexError:
+        print("Create_icon_name was given an x y that was outside the possible ranges")
     return name
 
 ########

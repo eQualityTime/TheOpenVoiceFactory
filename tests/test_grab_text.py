@@ -1,7 +1,7 @@
 from unittest import TestCase
 import unittest
 #import mock
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import json
 import os
 import sys
@@ -46,7 +46,7 @@ class ovfTest(TestCase):
         self.assertEqual(len(grids),10)
 
     def test_create_manifest(self):
-        print "Hello"
+        print("Hello")
         grab_text.create_ovf_manifest("manifest.json")
         with open('test_manifest.json', 'r') as f:
               local = json.load(f)
@@ -77,10 +77,10 @@ class ovfTest(TestCase):
 
     def test_read_CK20_and_check_link(self):
         grids = self.get_singleton_CK20().grids
-        print "XXXXXX"
-        print grids[0].labels[4][1]
-        print grids[0].links[4][1]
-        print "XXXXXX"
+        print("XXXXXX")
+        print(grids[0].labels[4][1])
+        print(grids[0].links[4][1])
+        print("XXXXXX")
         self.assertNotEqual(grids[0].links[4][1],"")
 
 
@@ -112,7 +112,7 @@ class ovfTest(TestCase):
     def test_warning_for_missinglink(self):
         pageset = self.get_singleton_CK20()
         feedback=pageset.getfeedback()
-        print feedback
+        print(feedback)
         self.assertEqual(26,len(feedback))
 
 
