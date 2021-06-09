@@ -1,8 +1,67 @@
 <html>
 <head>
-<link rel="stylesheet" href="white.css">
+<style>
+
+
+body,button { 
+box-sizing: border-box;
+color: rgb(51, 51, 51);
+font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 25.2px;
+margin-bottom: 10px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+  position:relative;
+  width:750px;
+  margin-left:auto;
+  margin-right:auto;
+  top:80px;
+  
+}
+
+/** Images */
+img {margin: auto;
+  display: block; width:100%}
+
+
+
+@media only screen and (max-width: 700px) {
+
+ img {width: 100%; height: 100%; margin: 0; padding: 0;}
+}
+
+
+.collapsible {
+ display:block;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: block;
+  outline: none;
+  font-size: 26px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+</style>
+
 </head>
 <body>
+<img src="http://equalitytime.github.io/TheOpenVoiceFactory/img/intro-bg.jpg">
 <?php
 //All code from http://www.w3schools.com/php/php_file_upload.asp with thanks
 $target_dir = "uploads/";
@@ -37,11 +96,11 @@ if ($uploadOk == 0) {
 	echo "<li> To use the language pack in another speech aid (such as Optikey or Cough Drop) click <a href=". $obzlink . ">here</a> to download the OBZ file.";
 	echo "<li> Please keep your pptx files in a safe place - they will be the only way to modify or recover your aid" ;
 	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";
-	echo "<ul>";
+	echo "</ul>";
+	echo "<button type=\"button\" class=\"collapsible\">Click for debugging information</button>";
+	echo "<div class=\"content\">";
 	echo nl2br($temp);
-	echo "Hello?";
-	echo $temp;
-	echo "now?";
+	echo "</div>";
     } else {
         echo "Sorry, there was an error uploading your file.";
    }
@@ -61,5 +120,24 @@ function filenameSlugify($text) {
    return $filename.".".$fileExtension;
 }
 ?>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
 </body>
 </html>
