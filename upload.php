@@ -27,12 +27,14 @@ if ($uploadOk == 0) {
 } else {
    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	$location = hash("md5",time().hash_file("md5",$target_file));
+	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz"; 
 	$command = dirname(__FILE__).'/create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
 	$temp = shell_exec($command. " 2>&1" );
 	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
  	echo "<ul>";
-	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz target=\"_blank\">here</a>.";
+	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=".$obzlink . " target=\"_blank\">here</a>.";
 	echo "<li> Please keep the link private - anyone with access to it will be able to acess the aid.";
+	echo "<li> To use the language pack in another speech aid (such as Optikey or Cough Drop) click <a href=". $obzlink . ">here</a> to download the OBZ file.";
 	echo "<li> Please keep your pptx files in a safe place - they will be the only way to modify or recover your aid" ;
 	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";
 	echo "<ul>";
