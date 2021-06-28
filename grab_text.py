@@ -58,6 +58,7 @@ def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
 def create_obf_button(grid,col,row):
     button = {}
     button["id"] = "{}{}".format(col, row)
+    button["label"] = grid.labels[col][row]
     button["border_color"] = "rgb(68,68,68)"
     if("pptx" in str(type(grid.colors[col][row]))):
         color = grid.colors[col][row]
@@ -105,7 +106,9 @@ def create_obf_button(grid,col,row):
                         raise ValueError('Exception: Unknown special command_name ({}) to process in slide {} row {} col {}'.format(command_name, grid.tag,row, col))
                 pass
     #This is at the end because we might change it during the special commands.
-    button["label"] = grid.labels[col][row]
+    if button["label"] is "": 
+        button["label"]=button['id']
+
     return button
 
 
