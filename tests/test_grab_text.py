@@ -32,7 +32,7 @@ class ovfTest(TestCase):
         if not self.CK20:
            # prs = Presentation("CK20V2cutdown.pptx")
             grab_text.gridSize=5
-            self.CK20 = grab_text.Pageset("CK20V2cutdown.pptx","",False)
+            self.CK20 = grab_text.Pageset("CK20V2cutdown.pptx","",grab_text.gridSize, False)
         return self.CK20
 
     def test_first(self):
@@ -41,6 +41,7 @@ class ovfTest(TestCase):
 
     def test_col_row(self): 
         grids = self.get_singleton_CK20().grids
+        self.assertEqual(grids[0].get_col_row(5083720,8158320),(4,3))
         self.assertEqual(grids[0].get_col_row(3609180,941940),(0,2))
         self.assertEqual(grids[0].get_col_row(1639980,2780820),(1,1))
         self.assertEqual(grids[0].get_col_row(1639980,8139780),(4,1))
@@ -329,7 +330,6 @@ class ovfTest(TestCase):
         self.assertEqual(grids[0].get_col_row(5031864,920356),(0,3))
         self.assertEqual(grids[0].get_col_row(5083720,2793240),(1,3))
         self.assertEqual(grids[0].get_col_row(5083720,6431788),(3,3))
-        self.assertEqual(grids[0].get_col_row(5083720,8158320),(4,3))
         self.assertEqual(grids[0].get_col_row(5111524,4592864),(2,3))
         self.assertEqual(grids[0].get_col_row(5225760,4285980),(2,3))
         self.assertEqual(grids[0].get_col_row(5678460,4571820),(2,4))
@@ -553,7 +553,7 @@ def regress(filename,size,bordercolor=False):
 def compare_json_files(pres_loc, target_loc, gridSize,bordercolor=False):
         grab_text.gridSize=gridSize
         grab_text.bordercolor=bordercolor
-        grids = grab_text.Pageset(pres_loc,"",False).grids
+        grids = grab_text.Pageset(pres_loc,"",gridSize,False).grids
         internal = grab_text.create_json_object(grids)
         internal = json.dumps(internal)
         grab_text.write_to_JSON(grids, "temp.json")
