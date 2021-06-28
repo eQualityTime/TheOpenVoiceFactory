@@ -23,7 +23,6 @@ def create_json_object(grids):
         grid_json[i] = [
             grids[i].tag,
             grids[i].labels,
-            grids[i].utterances,
             grids[i].links,
             grids[i].icons,
             grids[i].colors,
@@ -89,6 +88,8 @@ def create_obf_button(grid,col,row):
                     if command_name == "deleteword":
                         #should find out what we do there...
                         button["action"]=":deleteword"
+                    elif command_name == "backspace":
+                        button["action"]=":backspace"
                     elif command_name == "clear":
                         button["action"]=":clear"
                     elif command_name == "place":
@@ -125,7 +126,7 @@ def create_obf_object(grid):
     for row in range(gridSize):
         grid_row = []
         for col in range(gridSize):
-            if (len(grid.labels[col][row]) > 0):
+            if (len(grid.labels[col][row]) +len(grid.links[col][row]) > 0): 
                 button=create_obf_button(grid,col,row)
                 grid_row.append(button["id"])
                 for_json["buttons"].append(button)
@@ -182,8 +183,6 @@ def write_to_JSON(grids, filename):
     for_json = create_json_object(grids)
     with open(filename, 'w') as outfile:
         json.dump(for_json, outfile, sort_keys=True, indent=4)
-
-
 
 
 def create_ovf_manifest(filename):

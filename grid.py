@@ -32,12 +32,10 @@ class Grid:
                     # 1 but grids are numbered from 0
 
     def __init__(self, pres, slide, gridSize, owningPageset):
+        self.slide=slide
         self.pageset = owningPageset
         self.grid_size = gridSize
         self.labels = [
-            ["" for x in range(self.grid_size)]
-            for x in range(self.grid_size)]
-        self.utterances = [
             ["" for x in range(self.grid_size)]
             for x in range(self.grid_size)]
         self.links = [
@@ -95,13 +93,8 @@ class Grid:
                         ro] = click_action.hyperlink.address
             if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                 if bordercolor:
-                    # print "here"
-                    # print "X
-                    # {}".format(shape.line.color.rgb)
                     self.colors[co][
                             ro] = shape.line.color.rgb
-                    # print "there"
-
                 else:
                     if shape.fill.type==MSO_FILL.SOLID:
                         if (str(shape.fill.fore_color.type)
@@ -139,9 +132,9 @@ class Grid:
             self.labels[co][ro] = text.strip()
 
 
-    def create_image_grid(self,slide):
+    def create_image_grid(self):
         images = {}
-        for shape in slide.shapes:
+        for shape in self.slide.shapes:
             if not hasattr(shape, "shape_type"):
                 continue
             if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:

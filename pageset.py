@@ -3,6 +3,7 @@ from core import make_title
 from pptx import Presentation
 from PIL import Image
 import io
+import os
 
 class Pageset:
 
@@ -32,24 +33,23 @@ class Pageset:
         for grid in self.grids:
             grid.update_links(self.grids)
 
-    def extract_and_label_images(self, filename, SAVE):
+    def extract_and_label_images(self, dest, SAVE):
         image_slight_number = 0
-        for slide in self.prs.slides:
+        for slide in self.prs.slides: #TODO - you'll note that we don't use the slide in the loop...
             export_images(
                 self.grids[image_slight_number],
                 image_slight_number,
-                slide,
-                filename,
+                dest,
                 SAVE)
             image_slight_number += 1
 
 
-def export_images(grid, slide_number, slide, filename, SAVE=True):
+def export_images(grid, slide_number, dest_folder, SAVE=True):
     """     Second pass through shapes list finds images and saves them.
     We have to do this separately so it's guaranteed we already know what to
     name the images!"""
     labels = grid.labels
-    images = grid.create_image_grid(slide)
+    images = grid.create_image_grid()
     # Compose each icon out of all the images in the grid cell.
     for (x, y) in images:
         # Go through all the images, compute bounding
@@ -112,7 +112,7 @@ def export_images(grid, slide_number, slide, filename, SAVE=True):
             # print name
             if SAVE:
                 # + str(slide_number)
-                folder = filename+"/icons/"
+                folder = dest_folder+"/icons/"
                 if not os.path.exists(folder):
                     os.makedirs(folder)
                 composite.save(folder + "" + name)
