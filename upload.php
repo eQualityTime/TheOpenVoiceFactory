@@ -61,7 +61,7 @@ img {margin: auto;
 
 </head>
 <body>
-<img src="http://equalitytime.github.io/TheOpenVoiceFactory/img/intro-bg.jpg">
+<img src="http://equalitytime.github.io/TheOpenVoiceFactory-site/img/intro-bg.jpg">
 <?php
 //All code from http://www.w3schools.com/php/php_file_upload.asp with thanks
 $target_dir = "uploads/";
