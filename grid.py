@@ -99,7 +99,6 @@ class Grid:
                     if shape.fill.type==MSO_FILL.SOLID:
                         if (str(shape.fill.fore_color.type)
                                 == "SCHEME (2)"):
-                            #self.colors[co][ro] = ( 200, 0, 0)
                             pass
                         else:
                             self.colors[co][
