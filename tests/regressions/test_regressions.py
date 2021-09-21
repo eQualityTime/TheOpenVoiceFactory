@@ -15,6 +15,7 @@ import io
 import os
 import math
 import string
+import glob
 import unicodedata
 from PIL import Image
 from sys import argv
@@ -26,19 +27,17 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 class ovfTest(TestCase):
 
-    def test_regession_ck12(self):
-        regress("tests/regressions/regression_tests_size_4/CK12+V2.pptx",4)
 
-    def test_regession_ck20_slo(self):
-        regress("tests/regressions/regression_tests_size_5/CK20_slo_regession.pptx",5)
+    def test_all_regressions(self): 
+         for file in glob.glob("tests/regressions/regression_tests_size_5/*.pptx"):
+            with self.subTest(file):
+                print(file)
+                regress(file,5) 
+         for file in glob.glob("tests/regressions/regression_tests_size_4/*.pptx"):
+            with self.subTest(file):
+                print(file)
+                regress(file,4) 
 
-    def test_regession_ck20_arabic(self):
-       # grab_text.bordercolor = True
-        regress("tests/regressions/regression_tests_size_5/CK20V2_ara_regession.pptx",5, True)
-       # grab_text.bordercolor = False
-
-    def test_regession_ck20v2_bg(self):
-        regress("tests/regressions/regression_tests_size_5/CK20V2.pptx",5)
 
 
 
