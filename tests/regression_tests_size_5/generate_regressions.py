@@ -1,5 +1,5 @@
 from unittest import TestCase
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import json
 import glob
 import os
@@ -27,8 +27,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 def generate(filename, gridSize):
         prs = Presentation(filename)
         grab_text.gridSize = gridSize
-        grids = grab_text.extract_grid(prs)
-        grids = grab_text.extract_and_label_images(prs, grids, "", False)
+        grids = grab_text.Pageset(filename,"",gridSize,False).grids
         internal = grab_text.create_json_object(grids)
         internal = json.dumps(internal)
         grab_text.write_to_JSON(grids, filename+".json")
@@ -36,7 +35,7 @@ def generate(filename, gridSize):
 
 if __name__=="__main__":
  for file in glob.glob("*.pptx"):
-        print file
+        print(file)
         generate(file,5)
 
 
