@@ -6,7 +6,7 @@ import json
 import os
 import sys
 sys.path.append('..') #todo - test removal 
-import grab_text
+import TheOpenVoiceFactory.grab_text as grab_text
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pprint import pprint
@@ -29,10 +29,12 @@ class ovfTest(TestCase):
     CK20=None #This is the pageset
 
     def get_singleton_CK20(self):
+        print(os.getcwd())
+        print("XXXXXXXX")
         if not self.CK20:
-           # prs = Presentation("CK20V2cutdown.pptx")
+           # prs = Presentation("tests/CK20V2cutdown.pptx")
             grab_text.gridSize=5
-            self.CK20 = grab_text.Pageset("CK20V2cutdown.pptx","",grab_text.gridSize, False)
+            self.CK20 = grab_text.Pageset("tests/CK20V2cutdown.pptx","",grab_text.gridSize, False)
         return self.CK20
 
     def test_first(self):
@@ -440,7 +442,7 @@ class ovfTest(TestCase):
     def test_create_manifest(self):
         print("Hello")
         grab_text.create_ovf_manifest("manifest.json")
-        with open('test_manifest.json', 'r') as f:
+        with open('tests/testinputs/test_manifest.json', 'r') as f:
               local = json.load(f)
         with open('manifest.json', 'r') as f:
                 real = json.load(f)
@@ -461,10 +463,10 @@ class ovfTest(TestCase):
         grids = self.get_singleton_CK20().grids
         obf=grab_text.create_obf_object(grids[0])
         import json
-        with open('temp1.json', 'w') as outfile:
+        with open('temp.json', 'w') as outfile:
             json.dump(obf, outfile, sort_keys=True, indent=2)
         self.maxDiff = None
-        self.assertMultiLineEqual(open('../testoutputs/singleobffile.obf').read().strip(),open('temp1.json').read().strip())
+        self.assertMultiLineEqual(open('tests/testoutputs/singleobffile.obf').read().strip(),open('temp.json').read().strip())
 
 
     def test_read_CK20_and_check_link(self):
@@ -530,20 +532,20 @@ class ovfTest(TestCase):
 
 
     def test_regession_ck12(self):
-        regress("regression_tests_size_4/CK12+V2.pptx",4)
+        regress("tests/regressions/regression_tests_size_4/CK12+V2.pptx",4)
 
     def test_regession_ck20_slo(self):
-        regress("regression_tests_size_5/CK20_slo_regession.pptx",5)
+        regress("tests/regressions/regression_tests_size_5/CK20_slo_regession.pptx",5)
 
     def test_regession_ck20_arabic(self):
        # grab_text.bordercolor = True
-        regress("regression_tests_size_5/CK20V2_ara_regession.pptx",5, True)
+        regress("tests/regressions/regression_tests_size_5/CK20V2_ara_regession.pptx",5, True)
        # grab_text.bordercolor = False
 
 
 
     def test_regession_ck20v2_bg(self):
-        regress("regression_tests_size_5/CK20V2.pptx",5)
+        regress("tests/regressions/regression_tests_size_5/CK20V2.pptx",5)
 
 
 

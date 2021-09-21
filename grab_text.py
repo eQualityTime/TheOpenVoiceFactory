@@ -5,9 +5,9 @@
 import sys
 sys.path.append('/home/ovf/')
 import json
-from core import make_title
-from pageset import Pageset
-from grid import Grid
+from TheOpenVoiceFactory.core import make_title
+from TheOpenVoiceFactory.pageset import Pageset
+from TheOpenVoiceFactory.grid import Grid
 import zipfile
 import io
 import os
