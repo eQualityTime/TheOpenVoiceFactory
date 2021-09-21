@@ -1,5 +1,5 @@
-from TheOpenVoiceFactory.grid import Grid
-from TheOpenVoiceFactory.core import make_title
+from grid import Grid
+from core import make_title
 from pptx import Presentation
 from PIL import Image
 import io

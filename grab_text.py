@@ -5,9 +5,10 @@
 import sys
 sys.path.append('/home/ovf/')
 import json
-from TheOpenVoiceFactory.core import make_title
-from TheOpenVoiceFactory.pageset import Pageset
-from TheOpenVoiceFactory.grid import Grid
+import urllib.parse
+from core import make_title
+from pageset import Pageset
+from grid import Grid
 import zipfile
 import io
 import os
@@ -55,17 +56,21 @@ def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
 }}""".format(root, string_of_board_names, string_of_image_names))
 
 
+
+def get_button_colour(colour):
+    if("pptx" in str(type(colour))):
+        return "rgb({},{},{})".format( colour[0], colour[1], colour[2])
+    else:
+        return "rgb(0,0,0)"
+
+
+
 def create_obf_button(grid,col,row):
     button = {}
     button["id"] = "{}{}".format(col, row)
     button["label"] = grid.labels[col][row]
-    button["border_color"] = "rgb(68,68,68)"
-    if("pptx" in str(type(grid.colors[col][row]))):
-        color = grid.colors[col][row]
-        button["background_color"] = "rgb({},{},{})".format(
-            color[0], color[1], color[2])
-    else:
-        button["background_color"] = "rgb(0,0,0)"
+    button["border_color"]= "rgb(68,68,68)"
+    button["background_color"] = get_button_colour(grid.colors[col][row])
     button["image_id"] = grid.icons[col][row]
     if len(grid.links[col][row]) > 1:
         print("The button has a link")
@@ -79,31 +84,12 @@ def create_obf_button(grid,col,row):
                 print("    The original line is : {}".format(grid.links[col][row]))
                 commandstring=grid.links[col][row][4:-1]
                 print("    We strip to the command to get: {}".format(commandstring))
+                commandstring=urllib.parse.unquote(commandstring)
+                print("    We decode the link to get: {}".format(commandstring))
                 commands=commandstring.split(",")
                 print("    There are {} subcommands".format(len(commands)))
                 for command in commands:
-                    command_name= command.split("(",1)[0]
-                    argument=command.split("(",1)[1][0:-1]
-                    print("        command name is {}".format(command_name))
-                    print("        argument is {}".format(argument))
-                    if command_name == "deleteword":
-                        #should find out what we do there...
-                        button["action"]=":deleteword"
-                    elif command_name == "backspace":
-                        button["action"]=":backspace"
-                    elif command_name == "clear":
-                        button["action"]=":clear"
-                    elif command_name == "place":
-                        button["label"] = argument
-                    elif command_name == "open":
-                        button["load_board"]= { "path": "boards/"+make_title(argument)+".obf" }
-
-                    elif command_name == "unfinnished":
-                         pass
-                    elif command_name == "blank":
-                         pass
-                    else:
-                        raise ValueError('Exception: Unknown special command_name ({}) to process in slide {} row {} col {}'.format(command_name, grid.tag,row, col))
+                    process_command(command,button)  
                 pass
     #This is at the end because we might change it during the special commands.
     if button["label"] is "": 
@@ -111,6 +97,30 @@ def create_obf_button(grid,col,row):
 
     return button
 
+def process_command(command,button): 
+    command_name= command.split("(",1)[0]
+    argument=command.split("(",1)[1][0:-1]
+    print("        command name is {}".format(command_name))
+    print("        argument is {}".format(argument))
+    if command_name == "deleteword":
+        #should find out what we do there...
+        button["action"]=":deleteword"
+    elif command_name == "backspace":
+        button["action"]=":backspace"
+    elif command_name == "clear":
+        button["action"]=":clear"
+    elif command_name == "place":
+        print(argument)
+        button["vocalization"] = argument
+    elif command_name == "open":
+        button["load_board"]= { "path": "boards/"+make_title(argument)+".obf" }
+
+    elif command_name == "unfinnished":
+         pass
+    elif command_name == "blank":
+         pass
+    else:
+        raise ValueError('Exception: Unknown special command_name ({}) to process in slide {} row {} col {}'.format(command_name, grid.tag,row, col))
 
 
 def create_obf_object(grid):

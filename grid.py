@@ -1,6 +1,6 @@
 import math
-from TheOpenVoiceFactory.core import make_title
-import TheOpenVoiceFactory.core as core
+from core import make_title
+import core
 import string
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
