@@ -28,8 +28,9 @@ class Pageset:
         return self.feedback
 
     def extract_grid(self):
-        for slide in self.prs.slides:
-            self.grids.append(Grid(self.prs, slide, self.gridSize, self))
+        for index,slide in enumerate(self.prs.slides):
+            index="Unknown"+str(index)
+            self.grids.append(Grid(self.prs, slide, self.gridSize, self,index))
         for grid in self.grids:
             grid.update_links(self.grids)
 
@@ -117,13 +118,13 @@ def export_images(grid, slide_number, dest_folder, SAVE=True):
                     os.makedirs(folder)
                 composite.save(folder + "" + name)
         except IOError as e:
-            print("Error reading image for {} {}".format(x, y))
-            if ("cannot find loader for this WMF file" in e):
+            print("Error reading image for {} {} (Code 121)".format(x, y))
+            if ("cannot find loader for this WMF file" in str(e)):
                 print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number))
-            if ("cannot identify image file" in e):
+            if ("cannot identify image file" in str(e)):
                 print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, slide_number))
         except ValueError:
-            print("Error reading image for {} {}".format(x, y))
+            print("Error reading image for {} {} (Code 127)".format(x, y))
         except IndexError:
             print("Error reading image for {} {}- it is outside the grid".format(x, y))
 

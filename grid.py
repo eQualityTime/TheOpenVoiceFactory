@@ -31,7 +31,7 @@ class Grid:
                     # Remember that slides are numbered from
                     # 1 but grids are numbered from 0
 
-    def __init__(self, pres, slide, gridSize, owningPageset):
+    def __init__(self, pres, slide, gridSize, owningPageset,tag="unknown"):
         self.slide=slide
         self.pageset = owningPageset
         self.grid_size = gridSize
@@ -47,7 +47,7 @@ class Grid:
         self.icons = [
             ["" for x in range(self.grid_size)]
             for x in range(self.grid_size)]
-        self.tag = "unknown"
+        self.tag = tag #"Unknown"
         self.slide_width = pres.slide_width
         self.slide_height = pres.slide_height
         self.feedback = []
@@ -113,7 +113,7 @@ class Grid:
                         if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
                             if len(self.links[
                                    co][ro]) < 1:
-                                self.pageset.addfeedback("Unknown link at slide: " + self.tag + " link here: [{}] [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
+                                self.pageset.addfeedback("Unknown link at slide: " + self.tag + " link here: col [{}] row [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
         except (AttributeError, KeyError, NotImplementedError):
             self.pageset.addfeedback(core.returnException())
