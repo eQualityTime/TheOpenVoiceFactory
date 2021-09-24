@@ -220,6 +220,7 @@ if __name__ == "__main__":
     if (len(sys.argv) > 2):
         gridSize = int(sys.argv[3])
     pageset = Pageset(filename, dest, gridSize)
+    pageset.extract_and_label_images(dest)
     write_to_JSON(pageset.grids, dest+'/pageset.json')
     create_ovf_manifest(dest+'/manifest.json')
     write_to_obf(pageset.grids, dest)

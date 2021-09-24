@@ -16,7 +16,7 @@ class Pageset:
         self.gridSize=gridSize
         self.feedback = []
         self.extract_grid()
-        self.extract_and_label_images(dest, saveimages)
+        self.extract_and_label_images(dest, False) #This has to run to get the names right. TODO - make into a smaller, nicer, naming file 
 
     def addfeedback(self, feedelement):
         self.feedback.append(feedelement)
@@ -34,7 +34,7 @@ class Pageset:
         for grid in self.grids:
             grid.update_links(self.grids)
 
-    def extract_and_label_images(self, dest, SAVE):
+    def extract_and_label_images(self, dest, SAVE=True):
         image_slight_number = 0
         for slide in self.prs.slides: #TODO - you'll note that we don't use the slide in the loop...
             export_images(
@@ -61,48 +61,26 @@ def export_images(grid, slide_number, dest_folder, SAVE=True):
                  shape.width for shape in images[x, y]])
         b = max([shape.top +
                  shape.height for shape in images[x, y]])
+        # Scale gives us the mapping from image pixels to powerpoint
+        # distance units. This depends on the resolution
+        # of the images.
+        scale = min([shape.width/shape.image.size[0]
+                     for shape in images[x, y]])
+
+        # Size of combined image, in actual pixels (not PPTX units)
+        # If scales differ between objects, we resize
+        # them next
+        w = int((r-l)/scale)
+        h = int((b-t)/scale)
 
         try:
-            # Scale gives us the mapping from image pixels to powerpoint
-            # distance units. This depends on the resolution
-            # of the images.
-            scale = min([shape.width/shape.image.size[0]
-                         for shape in images[x, y]])
-
-            # Size of combined image, in actual pixels (not PPTX units)
-            # If scales differ between objects, we resize
-            # them next
-            w = int((r-l)/scale)
-            h = int((b-t)/scale)
 
             composite = Image.new('RGBA', (w, h))
 
             # Add all the images together.
             for shape in images[x, y]:
-                            # TODO: flipping.
-                part = Image.open(
-                    io.BytesIO(
-                        shape.image.blob))
-                part.load()
-                width = part.size[0]
-                height = part.size[1]
-                left = shape.crop_left*width
-                right = (1-shape.crop_right)*width
-                top = shape.crop_top*height
-                bottom = (1-shape.crop_bottom)*height
-                box = (int(left),
-                       int(top),
-                       int(right),
-                       int(bottom))
-                part = part.crop(box)
-                partScale = (shape.width / part.size[0])
-                # part.size because it might have been cropped
-
-                part = resizeImage(part, partScale / scale)
-                composite.paste(
-                    part,
-                    (int((shape.left - l)/scale),int(
-                     (shape.top - t)/scale)))
+                partBox=ready_for_composite(shape,scale,w,h,l,t)
+                composite=Image.alpha_composite(composite,partBox)
             # Crop final image.
             bbox = composite.getbbox()
             composite = composite.crop(bbox)
@@ -127,6 +105,34 @@ def export_images(grid, slide_number, dest_folder, SAVE=True):
             print("Error reading image for {} {} (Code 127)".format(x, y))
         except IndexError:
             print("Error reading image for {} {}- it is outside the grid".format(x, y))
+
+
+def ready_for_composite(shape,scale,w,h,l,t):
+
+    part = Image.open(
+        io.BytesIO(
+            shape.image.blob))
+    part.load()
+    part = part.crop(crop_to_shape(shape,part))
+    partScale = (shape.width / part.size[0])
+    # part.size because it might have been cropped
+    part = resizeImage(part, partScale / scale)
+    partBox = Image.new('RGBA', (w, h))
+    partBox.paste( part, (int((shape.left - l)/scale),int( (shape.top - t)/scale)))
+    return partBox
+
+def crop_to_shape(shape,part):
+    width = part.size[0]
+    height = part.size[1]
+    left = shape.crop_left*width
+    right = (1-shape.crop_right)*width
+    top = shape.crop_top*height
+    bottom = (1-shape.crop_bottom)*height
+    box = (int(left),
+           int(top),
+           int(right),
+           int(bottom))
+    return box
 
 
 
