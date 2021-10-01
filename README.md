@@ -21,7 +21,6 @@ One of the parts of CommuniKate 20 that turned out to be very popular is the [li
 
 We love the idea of people helping out with the code. Because the Open Voice Factory is currently such a simple project, it's there are a lot of easy things that people can do to help. So if you'd like to fork the repo to, for example:
 *   retarget the Open Voice Factory to a different pageset
-*   import from (hard) or export to (medium) the [openboardformat](http://www.openboardformat.org)
 *   precompute utterances
 
 ## Building the developement version
