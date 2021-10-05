@@ -15,7 +15,7 @@ def returnException():
         filename = f.f_code.co_filename
         linecache.checkcache(filename)
         line = linecache.getline(filename, lineno, f.f_globals)
-        return 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(
+        return '{} EXCEPTION IN ({}, LINE {} "{}"): {}'.format(exc_type,
                 filename, lineno, line.strip(), exc_obj)
 
 def make_title(label):

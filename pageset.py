@@ -29,7 +29,7 @@ class Pageset:
 
     def extract_grid(self):
         for index,slide in enumerate(self.prs.slides):
-            index="Unknown"+str(index)
+            index="Slide number "+str(index+1)
             self.grids.append(Grid(self.prs, slide, self.gridSize, self,index))
         for grid in self.grids:
             grid.update_links(self.grids)
@@ -88,7 +88,6 @@ def export_images(grid, slide_number, dest_folder, SAVE=True):
             # Save!
             grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
             name =                  create_icon_name(x, y, labels, grid.links, slide_number)
-            # print name
             if SAVE:
                 # + str(slide_number)
                 folder = dest_folder+"/icons/"

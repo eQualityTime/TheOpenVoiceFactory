@@ -34,14 +34,11 @@ def create_json_object(grids):
     for_json["Grid"] = grid_json
     return for_json
 
-
 def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
     # Create the manifest
 #    root = boards_names_dic['toppage']
     string_of_board_names = json.dumps(boards_names_dic,ensure_ascii=False)
     string_of_image_names = json.dumps(image_names_dic,ensure_ascii=False)
-    print("XXXXXXXXXXXXXXX")
-    print(root)
     with io.open(dest+"/data/manifest.json", "w") as manifest:
         manifest.write("""{{
 "format": "open-board-0.1",
@@ -73,21 +70,21 @@ def create_obf_button(grid,col,row):
     button["background_color"] = get_button_colour(grid.colors[col][row])
     button["image_id"] = grid.icons[col][row]
     if len(grid.links[col][row]) > 1:
-        print("The button has a link")
+        #print("The button has a link")
         if "special::" not in grid.links[col][row]:
             if not grid.links[col][row].startswith("ovf("):
                 button["load_board"]= { "path": "boards/"+grid.links[col][row]+".obf" }
-                print("    The link is to a board: {}".format(grid.links[col][row]))
+        #        print("    The link is to a board: {}".format(grid.links[col][row]))
             else:
                 #It's a special commend. let's extract it.
-                print("    The link is a special command")
-                print("    The original line is : {}".format(grid.links[col][row]))
+        #        print("    The link is a special command")
+        #        print("    The original line is : {}".format(grid.links[col][row]))
                 commandstring=grid.links[col][row][4:-1]
-                print("    We strip to the command to get: {}".format(commandstring))
+        #        print("    We strip to the command to get: {}".format(commandstring))
                 commandstring=urllib.parse.unquote(commandstring)
-                print("    We decode the link to get: {}".format(commandstring))
+        #        print("    We decode the link to get: {}".format(commandstring))
                 commands=commandstring.split(",")
-                print("    There are {} subcommands".format(len(commands)))
+        #        print("    There are {} subcommands".format(len(commands)))
                 for command in commands:
                     process_command(command,button)  
                 pass
@@ -100,8 +97,8 @@ def create_obf_button(grid,col,row):
 def process_command(command,button): 
     command_name= command.split("(",1)[0]
     argument=command.split("(",1)[1][0:-1]
-    print("        command name is {}".format(command_name))
-    print("        argument is {}".format(argument))
+    #print("        command name is {}".format(command_name))
+    #print("        argument is {}".format(argument))
     if command_name == "deleteword":
         #should find out what we do there...
         button["action"]=":deleteword"
@@ -110,7 +107,7 @@ def process_command(command,button):
     elif command_name == "clear":
         button["action"]=":clear"
     elif command_name == "place":
-        print(argument)
+        #print(argument)
         button["vocalization"] = argument
     elif command_name == "open":
         button["load_board"]= { "path": "boards/"+make_title(argument)+".obf" }
@@ -164,7 +161,7 @@ def write_to_obf(grids, dest):
     image_names_dic = {}
     owd = os.getcwd()
     root=make_title(grids[0].tag)
-    print("The title of the root board is {}".format(root)) 
+    #print("The title of the root board is {}".format(root)) 
     for tok in grids:
         for_json = create_obf_object(tok)
         for image in for_json["images"]:
@@ -172,7 +169,7 @@ def write_to_obf(grids, dest):
         filename = 'boards/'+make_title(tok.tag)+'.obf'
         filename = filename #.encode('ascii', 'ignore') #so, this turns it into asci? 
         boards_names_dic[make_title(tok.tag)]=filename
-        print("We are about to write the file {}".format(filename))
+        #print("We are about to write the file {}".format(filename))
         with open(dest+'/data/'+filename, 'w') as outfile:
             json.dump(for_json, outfile, sort_keys=True, indent=2)
     create_obf_manifest(root,boards_names_dic,image_names_dic, dest)
@@ -185,7 +182,6 @@ def write_to_obf(grids, dest):
         for y in list(image_names_dic.keys()):
             x=image_names_dic[y]
             image_names_dic[y]=x.replace("../icons","images")
-            print(x)
             w.write(x) #.encode('utf8'))
     os.chdir(owd)
 

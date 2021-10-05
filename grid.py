@@ -86,15 +86,9 @@ class Grid:
                 return
             # Now - let's find out if there is a link...
             click_action = None
-            if shape.shape_type != MSO_SHAPE_TYPE.GROUP:
-                click_action = shape.click_action
-            if click_action.hyperlink.address is not None:
-                self.links[co][
-                        ro] = click_action.hyperlink.address
             if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
                 if bordercolor:
-                    self.colors[co][
-                            ro] = shape.line.color.rgb
+                    self.colors[co][ro] = shape.line.color.rgb
                 else:
                     if shape.fill.type==MSO_FILL.SOLID:
                         if (str(shape.fill.fore_color.type)
@@ -106,16 +100,18 @@ class Grid:
 
             if shape.has_text_frame:
                 self.process_text_frame(shape, co, ro)
+            if shape.shape_type != MSO_SHAPE_TYPE.GROUP:
+                click_action = shape.click_action
+                if click_action.hyperlink.address is not None:
+                    self.links[co][ro] = click_action.hyperlink.address
+                    if(warningMissingLinks):
+                        if (click_action.hyperlink.address is None):
+                            if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
+                                if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
+                                    if len(self.links[co][ro]) < 1:
+                                        self.pageset.addfeedback("Unknown link at slide: " + self.tag + " link here: col [{}] row [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
 
-            if(warningMissingLinks):
-                if (click_action.hyperlink.address is None):
-                    if shape.shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE:
-                        if shape.auto_shape_type == MSO_SHAPE.FOLDED_CORNER:
-                            if len(self.links[
-                                   co][ro]) < 1:
-                                self.pageset.addfeedback("Unknown link at slide: " + self.tag + " link here: col [{}] row [{}] {} ".format(co, ro, self.labels[co][ro]) + self.links[co][ro])
-
-        except (AttributeError, KeyError, NotImplementedError):
+        except (AttributeError, KeyError,  NotImplementedError):
             self.pageset.addfeedback(core.returnException())
             return
 

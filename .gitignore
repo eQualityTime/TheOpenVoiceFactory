@@ -1,4 +1,5 @@
 *.DS_Store
+*.attempt.json
 build-*
 *.pyc
 *.pro.user
@@ -7,14 +8,3 @@ testSuite/*
 uploads/*
 .*
 *.iml
-
-# below for android project
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-tests/htmlcov/*
