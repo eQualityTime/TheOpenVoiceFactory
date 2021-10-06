@@ -5,7 +5,7 @@ import glob
 import os
 import sys
 sys.path.append('../..')
-import grab_text
+import pagesetparser
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pprint import pprint
@@ -21,16 +21,13 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 
-
-
-
 def generate(filename, gridSize):
         prs = Presentation(filename)
-        grab_text.gridSize = gridSize
-        grids = grab_text.Pageset(filename,"",gridSize,False).grids
-        internal = grab_text.create_json_object(grids)
+        pagesetparser.gridSize = gridSize
+        grids = pagesetparser.Pageset(filename,"",gridSize,False).grids
+        internal = pagesetparser.create_json_object(grids)
         internal = json.dumps(internal)
-        grab_text.write_to_JSON(grids, filename+".json")
+        pagesetparser.write_to_JSON(grids, filename+".json")
 
 
 if __name__=="__main__":

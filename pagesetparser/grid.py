@@ -1,6 +1,5 @@
 import math
-from core import make_title
-import core
+import pagesetparser.core as core
 import string
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
@@ -78,7 +77,7 @@ class Grid:
         try:
             if shape.is_placeholder:
                 if shape.placeholder_format.idx == 0:
-                    self.tag = make_title(shape.text)
+                    self.tag = core.make_title(shape.text)
             (co, ro) = self.get_col_row(
                     shape.top+shape.height/2, shape.left+shape.width/2)
             if ((co >= self.grid_size) or (ro >= self.grid_size)):

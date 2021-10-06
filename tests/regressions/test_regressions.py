@@ -6,7 +6,7 @@ import json
 import os
 import sys
 sys.path.append('..') #todo - test removal 
-import TheOpenVoiceFactory.grab_text as grab_text
+import pagesetparser.pagesetparser as pagesetparser
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pprint import pprint
@@ -38,23 +38,21 @@ class ovfTest(TestCase):
                 print(file)
                 regress(file,4) 
 
-    def test_one(self):
-        regress("tests/regressions/regression_tests_size_5/CK20V2.pptx",5)
 
 
 
+def regress(filename,size,bordercolor=False):
+        compare_json_files(filename,filename+".json", size,bordercolor)
 
-def regress(pres_loc,gridSize,bordercolor=False):
-        target_loc=pres_loc+".json"
-        attempt_loc=pres_loc+".attempt.json"
-        grab_text.gridSize=gridSize
-        grab_text.bordercolor=bordercolor
-        grids = grab_text.Pageset(pres_loc,"",gridSize,False).grids
-        internal = grab_text.create_json_object(grids)
+def compare_json_files(pres_loc, target_loc, gridSize,bordercolor=False):
+        pagesetparser.gridSize=gridSize
+        pagesetparser.bordercolor=bordercolor
+        grids = pagesetparser.Pageset(pres_loc,"",gridSize,False).grids
+        internal = pagesetparser.create_json_object(grids)
         internal = json.dumps(internal)
-        grab_text.write_to_JSON(grids, attempt_loc)
+        pagesetparser.write_to_JSON(grids, "temp.json")
         local = 0
-        with open(attempt_loc, 'r') as f:
+        with open('temp.json', 'r') as f:
                 local = json.load(f)
         with open(target_loc, 'r') as f:
                 real = json.load(f)

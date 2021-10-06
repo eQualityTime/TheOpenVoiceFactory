@@ -6,9 +6,9 @@ import sys
 sys.path.append('/home/ovf/')
 import json
 import urllib.parse
-from core import make_title
-from pageset import Pageset
-from grid import Grid
+from pagesetparser.core import make_title
+from pagesetparser.pageset import Pageset
+from pagesetparser.grid import Grid
 import zipfile
 import io
 import os
@@ -206,7 +206,7 @@ def create_ovf_manifest(filename):
 
 if __name__ == "__main__":
     if (len(sys.argv) < 2):
-        print("\nUsage: ./grab_text.py <inputPptxFile> <gridSize>\n")
+        print("\nUsage: ./pagesetparser.py <inputPptxFile> <gridSize>\n")
         print("inputPptxFile: The powerpoint pageset you want to process.")
         print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
         sys.exit(1)

@@ -1,5 +1,5 @@
-from grid import Grid
-from core import make_title
+from pagesetparser.grid import Grid
+from pagesetparser.core import make_title
 from pptx import Presentation
 from PIL import Image
 import io
