@@ -203,22 +203,4 @@ def create_ovf_manifest(filename):
 
 
 ########
-
-if __name__ == "__main__":
-    if (len(sys.argv) < 2):
-        print("\nUsage: ./pagesetparser.py <inputPptxFile> <gridSize>\n")
-        print("inputPptxFile: The powerpoint pageset you want to process.")
-        print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
-        sys.exit(1)
-    filename = sys.argv[1]
-    dest = sys.argv[2]
-    gridSize = 5
-    if (len(sys.argv) > 2):
-        gridSize = int(sys.argv[3])
-    pageset = Pageset(filename, dest, gridSize)
-    pageset.extract_and_label_images(dest)
-    write_to_JSON(pageset.grids, dest+'/pageset.json')
-    create_ovf_manifest(dest+'/manifest.json')
-    write_to_obf(pageset.grids, dest)
-
     # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

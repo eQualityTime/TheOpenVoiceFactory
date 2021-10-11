@@ -5,4 +5,4 @@ dest="aid${filename}"
 echo $dest
 mkdir $dest
 cp -R templates/* $dest
-python3 grab_text.py $1 $dest $2
+python3 main.py $1 $dest $2
