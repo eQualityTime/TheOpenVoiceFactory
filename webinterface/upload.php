@@ -73,7 +73,7 @@ $uploadOk = 1;
 
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 //echo $_post["lang"];
-//echo "hello";
+//echo "hello<br>";
 // Allow certain file formats
 if($imageFileType != "pptx"){
     echo "We're afraid we only accept pptx files for the moment.<br>";
@@ -81,13 +81,16 @@ if($imageFileType != "pptx"){
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
+    echo "Sorry, your file was not uploaded.<br>";
 // if everything is ok, try to upload file
 } else {
-   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    echo "Your file has been uploaded.<br>";
+    // echo $target_file."<br>" ; 
+   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../".$target_file)) {
 	$location = hash("md5",time().hash_file("md5",$target_file));
 	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz"; 
-	$command = dirname(__FILE__).'/create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
+	$command = dirname(__FILE__).'/../create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
+  //echo $command. "<br>" ;
 	$temp = shell_exec($command. " 2>&1" );
 	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
  	echo "<ul>";
@@ -102,7 +105,7 @@ if ($uploadOk == 0) {
 	echo nl2br($temp);
 	echo "</div>";
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        echo "Sorry, there was an error processing your file.";
    }
 }
 

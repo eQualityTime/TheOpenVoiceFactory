@@ -1,3 +1,5 @@
+#!/bin/bash
+cd "$(dirname "$0")"
 echo "Starting Script"
 filelocation=$1
 size=$2
@@ -7,3 +9,4 @@ cp -R templates/* $targetname
 python3 main.py $filelocation $targetname $size
 mv $targetname ../designs.theopenvoicefactory.org/
 echo "Script Completed"
+echo $1 $2 $3 
