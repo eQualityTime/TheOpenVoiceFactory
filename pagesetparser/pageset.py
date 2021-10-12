@@ -86,11 +86,11 @@ def export_images(grid, slide_number, dest_folder, SAVE=True):
             composite = composite.crop(bbox)
 
             # Save!
-            grid.icons[x][y] = "icons/" + create_icon_name(x, y, labels, grid.links, slide_number)
+            grid.icons[x][y] = "images/" + create_icon_name(x, y, labels, grid.links, slide_number)
             name =                  create_icon_name(x, y, labels, grid.links, slide_number)
             if SAVE:
                 # + str(slide_number)
-                folder = dest_folder+"/icons/"
+                folder = dest_folder+"/images/"
                 if not os.path.exists(folder):
                     os.makedirs(folder)
                 composite.save(folder + "" + name)

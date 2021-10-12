@@ -39,7 +39,7 @@ def create_obf_manifest(root,boards_names_dic, image_names_dic, dest):
 #    root = boards_names_dic['toppage']
     string_of_board_names = json.dumps(boards_names_dic,ensure_ascii=False)
     string_of_image_names = json.dumps(image_names_dic,ensure_ascii=False)
-    with io.open(dest+"/data/manifest.json", "w") as manifest:
+    with io.open(dest+"manifest.json", "w") as manifest:
         manifest.write("""{{
 "format": "open-board-0.1",
 "root": "boards/{}.obf",
@@ -150,7 +150,7 @@ def create_obf_object(grid):
                 img["id"] = grid.icons[col][row]
                 img["width"] = 300
                 img["height"] = 300
-                img["path"]="../"+grid.icons[col][row]
+                img["path"]=grid.icons[col][row]
                 for_json["images"].append(img)
     return for_json
 
@@ -167,13 +167,12 @@ def write_to_obf(grids, dest):
         for image in for_json["images"]:
             image_names_dic[image['id']]=image['path']
         filename = 'boards/'+make_title(tok.tag)+'.obf'
-        filename = filename #.encode('ascii', 'ignore') #so, this turns it into asci? 
         boards_names_dic[make_title(tok.tag)]=filename
         #print("We are about to write the file {}".format(filename))
-        with open(dest+'/data/'+filename, 'w') as outfile:
+        with open(dest+filename, 'w') as outfile:
             json.dump(for_json, outfile, sort_keys=True, indent=2)
     create_obf_manifest(root,boards_names_dic,image_names_dic, dest)
-    os.chdir(dest+'/data')
+    os.chdir(dest)
     outzipfile = 'pageset.obz'
     boards_names_dic['manifest']='manifest.json' #no idea what this line does, definately needs some test/reactoring.
     with zipfile.ZipFile(outzipfile, "w") as w:
@@ -181,7 +180,8 @@ def write_to_obf(grids, dest):
             w.write(x)#.encode('utf8'))
         for y in list(image_names_dic.keys()):
             x=image_names_dic[y]
-            image_names_dic[y]=x.replace("../icons","images")
+            x=x.replace("../data/","")
+            image_names_dic[y]=x
             w.write(x) #.encode('utf8'))
     os.chdir(owd)
 

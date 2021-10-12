@@ -19,11 +19,33 @@ from PIL import Image
 from sys import argv
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+import hashlib
+import pagesetparser.pagesetparser as parser
+from pagesetparser.pageset import Pageset
 
+
+
+def sha256sum(filename):
+    h  = hashlib.sha256()
+    b  = bytearray(128*1024)
+    mv = memoryview(b)
+    with open(filename, 'rb', buffering=0) as f:
+        for n in iter(lambda : f.readinto(mv), 0):
+            h.update(mv[:n])
+    return h.hexdigest()
+
+def generate_hash(filename,gridSize): 
+        gridSize = 5
+        parser.gridSize=gridSize
+        obf_dest='../obf/data/'
+        pageset = Pageset(filename,obf_dest, gridSize)
+        pageset.extract_and_label_images(obf_dest)
+        parser.write_to_obf(pageset.grids, obf_dest)
+        hashis=sha256sum(obf_dest+'pageset.obz')
+        print(f"{hashis} is the hash value for {filename}")
 
 def generate(filename, gridSize):
         prs = Presentation(filename)
-        pagesetparser.gridSize = gridSize
         grids = pagesetparser.Pageset(filename,"",gridSize,False).grids
         internal = pagesetparser.create_json_object(grids)
         internal = json.dumps(internal)
@@ -31,11 +53,16 @@ def generate(filename, gridSize):
 
 
 if __name__=="__main__":
+
  for file in glob.glob("regression_tests_size_5/*.pptx"):
         print(file)
-        generate(file,5)
+        generate_hash(file,5)
  for file in glob.glob("regression_tests_size_4/*.pptx"):
         print(file)
-        generate(file,4)
+        generate_hash(file,4)
+
+
+
+
 
 

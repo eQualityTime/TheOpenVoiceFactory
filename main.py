@@ -15,9 +15,10 @@ if __name__ == "__main__":
     if (len(sys.argv) > 2):
         gridSize = int(sys.argv[3])
     parser.gridSize=gridSize
-    pageset = Pageset(filename, dest, gridSize)
-    pageset.extract_and_label_images(dest)
+    obf_dest=dest+'/data/'
+    pageset = Pageset(filename, ovf_dest, gridSize)
+    pageset.extract_and_label_images(ovf_dest)
     parser.write_to_JSON(pageset.grids, dest+'/pageset.json')
     parser.create_ovf_manifest(dest+'/manifest.json')
-    parser.write_to_obf(pageset.grids, dest)
+    parser.write_to_obf(pageset.grids, ovf_dest)
 
