@@ -1,0 +1,342 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S9X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "ra\u0148ajky"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S9X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S9X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S9X1Y1ra\u0148ajky.png",
+      "label": "ra\u0148ajky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S9X2Y1vlo\u010dky.png",
+      "label": "vlo\u010dky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S9X3Y1ka\u0161a.png",
+      "label": "ka\u0161a"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S9X4Y1otruby.png",
+      "label": "otruby"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S9X0Y2hrianka.png",
+      "label": "hrianka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S9X1Y2maslo.png",
+      "label": "maslo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S9X2Y2croissant.png",
+      "label": "croissant"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S9X3Y2d\u017eem.png",
+      "label": "d\u017eem"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S9X4Y2m\u00fcsli.png",
+      "label": "m\u00fcsli"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S9X0Y3varen\u00e9vajce.png",
+      "label": "varen\u00e9 vajce"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S9X1Y3volsk\u00e9oko.png",
+      "label": "volsk\u00e9 oko"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S9X2Y3pra\u017eenica.png",
+      "label": "pra\u017eenica"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S9X3Y3\u017eem\u013ea.png",
+      "label": "\u017eem\u013ea"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S9X4Y3anglick\u00e9ra\u0148ajky.png",
+      "label": "Anglick\u00e9 ra\u0148ajky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S9X0Y4fazu\u013ea.png",
+      "label": "fazu\u013ea"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S9X1Y4ovocie.png",
+      "label": "ovocie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S9X2Y4palacinky.png",
+      "label": "palacinky"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "ra\u0148ajky",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X0Y0\u00e1no.png",
+      "path": "images/S9X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X4Y0nie.png",
+      "path": "images/S9X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S9X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X1Y1ra\u0148ajky.png",
+      "path": "images/S9X1Y1ra\u0148ajky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X2Y1vlo\u010dky.png",
+      "path": "images/S9X2Y1vlo\u010dky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X3Y1ka\u0161a.png",
+      "path": "images/S9X3Y1ka\u0161a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X4Y1otruby.png",
+      "path": "images/S9X4Y1otruby.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X0Y2hrianka.png",
+      "path": "images/S9X0Y2hrianka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X1Y2maslo.png",
+      "path": "images/S9X1Y2maslo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X2Y2croissant.png",
+      "path": "images/S9X2Y2croissant.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X3Y2d\u017eem.png",
+      "path": "images/S9X3Y2d\u017eem.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X4Y2m\u00fcsli.png",
+      "path": "images/S9X4Y2m\u00fcsli.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X0Y3varen\u00e9vajce.png",
+      "path": "images/S9X0Y3varen\u00e9vajce.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X1Y3volsk\u00e9oko.png",
+      "path": "images/S9X1Y3volsk\u00e9oko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X2Y3pra\u017eenica.png",
+      "path": "images/S9X2Y3pra\u017eenica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X3Y3\u017eem\u013ea.png",
+      "path": "images/S9X3Y3\u017eem\u013ea.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X4Y3anglick\u00e9ra\u0148ajky.png",
+      "path": "images/S9X4Y3anglick\u00e9ra\u0148ajky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X0Y4fazu\u013ea.png",
+      "path": "images/S9X0Y4fazu\u013ea.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X1Y4ovocie.png",
+      "path": "images/S9X1Y4ovocie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S9X2Y4palacinky.png",
+      "path": "images/S9X2Y4palacinky.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate ra\u0148ajky",
+  "sounds": []
+}

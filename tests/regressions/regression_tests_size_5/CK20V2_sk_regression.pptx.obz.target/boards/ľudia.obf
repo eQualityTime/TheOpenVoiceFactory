@@ -1,0 +1,388 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S29X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "\u013eudia"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S29X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S29X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S29X1Y1\u013eudia.png",
+      "label": "\u013eudia"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S29X2Y1priatelia.png",
+      "label": "priatelia",
+      "load_board": {
+        "path": "boards/priatelia.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S29X3Y1spolu\u017eiacikolegovia.png",
+      "label": "Spolu\u017eiaci/kolegovia",
+      "load_board": {
+        "path": "boards/priateliazo\u0161kolyzpr\u00e1ce.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S29X4Y1podporn\u00edzamestnanci.png",
+      "label": "Podporn\u00ed zamestnanci",
+      "load_board": {
+        "path": "boards/podporn\u00edzamestnanci.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S29X0Y2som.png",
+      "label": "Som"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S29X1Y2mam\u0148a.png",
+      "label": "ma/m\u0148a"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S29X2Y2m\u00f4j.png",
+      "label": "m\u00f4j"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S29X3Y2moje.png",
+      "label": "moje"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S29X4Y2pedagogick\u00edzamestnanci.png",
+      "label": "Pedagogick\u00ed zamestnanci",
+      "load_board": {
+        "path": "boards/pedagogick\u00edzamestnanci.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S29X0Y3my.png",
+      "label": "my"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S29X1Y3oni.png",
+      "label": "oni"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S29X2Y3chlapec.png",
+      "label": "chlapec"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S29X3Y3diev\u010da.png",
+      "label": "diev\u010da"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S29X4Y3zamestnanie.png",
+      "label": "Zamestnanie",
+      "load_board": {
+        "path": "boards/zamestnanie.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S29X0Y4toono.png",
+      "label": "to/ono"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S29X1Y4ty.png",
+      "label": "ty"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S29X2Y4on.png",
+      "label": "on"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S29X3Y4ona.png",
+      "label": "ona"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S29X4Y4rodina.png",
+      "label": "Rodina",
+      "load_board": {
+        "path": "boards/rodina.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "\u013eudia",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X0Y0\u00e1no.png",
+      "path": "images/S29X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X4Y0nie.png",
+      "path": "images/S29X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S29X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X1Y1\u013eudia.png",
+      "path": "images/S29X1Y1\u013eudia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X2Y1priatelia.png",
+      "path": "images/S29X2Y1priatelia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X3Y1spolu\u017eiacikolegovia.png",
+      "path": "images/S29X3Y1spolu\u017eiacikolegovia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X4Y1podporn\u00edzamestnanci.png",
+      "path": "images/S29X4Y1podporn\u00edzamestnanci.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X0Y2som.png",
+      "path": "images/S29X0Y2som.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X1Y2mam\u0148a.png",
+      "path": "images/S29X1Y2mam\u0148a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X2Y2m\u00f4j.png",
+      "path": "images/S29X2Y2m\u00f4j.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X3Y2moje.png",
+      "path": "images/S29X3Y2moje.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X4Y2pedagogick\u00edzamestnanci.png",
+      "path": "images/S29X4Y2pedagogick\u00edzamestnanci.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X0Y3my.png",
+      "path": "images/S29X0Y3my.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X1Y3oni.png",
+      "path": "images/S29X1Y3oni.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X2Y3chlapec.png",
+      "path": "images/S29X2Y3chlapec.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X3Y3diev\u010da.png",
+      "path": "images/S29X3Y3diev\u010da.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X4Y3zamestnanie.png",
+      "path": "images/S29X4Y3zamestnanie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X0Y4toono.png",
+      "path": "images/S29X0Y4toono.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X1Y4ty.png",
+      "path": "images/S29X1Y4ty.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X2Y4on.png",
+      "path": "images/S29X2Y4on.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X3Y4ona.png",
+      "path": "images/S29X3Y4ona.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S29X4Y4rodina.png",
+      "path": "images/S29X4Y4rodina.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate \u013eudia",
+  "sounds": []
+}

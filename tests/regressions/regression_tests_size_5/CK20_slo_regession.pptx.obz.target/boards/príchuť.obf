@@ -1,0 +1,286 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S14X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "pr\u00edchu\u0165"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S14X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S14X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S14X1Y1pr\u00edchu\u0165.png",
+      "label": "pr\u00edchu\u0165"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S14X2Y1hrozienka.png",
+      "label": "hrozienka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S14X3Y1ban\u00e1n.png",
+      "label": "ban\u00e1n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S14X0Y2ovocie.png",
+      "label": "ovocie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S14X1Y2m\u00e4ta.png",
+      "label": "m\u00e4ta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S14X2Y2karamel.png",
+      "label": "karamel"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S14X3Y2lime.png",
+      "label": "lime"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S14X4Y2citr\u00f3n.png",
+      "label": "citr\u00f3n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S14X3Y3\u010dokol\u00e1da.png",
+      "label": "\u010dokol\u00e1da"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S14X4Y3anan\u00e1s.png",
+      "label": "anan\u00e1s"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S14X1Y4jahoda.png",
+      "label": "jahoda"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S14X3Y4\u010dere\u0161\u0148a.png",
+      "label": "\u010dere\u0161\u0148a"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S14X4Y4\u010dernica.png",
+      "label": "\u010dernica"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        null
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        null,
+        null,
+        null,
+        "33",
+        "43"
+      ],
+      [
+        null,
+        "14",
+        null,
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "pr\u00edchu\u0165",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X0Y0\u00e1no.png",
+      "path": "images/S14X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y0nie.png",
+      "path": "images/S14X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S14X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X1Y1pr\u00edchu\u0165.png",
+      "path": "images/S14X1Y1pr\u00edchu\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X2Y1hrozienka.png",
+      "path": "images/S14X2Y1hrozienka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y1ban\u00e1n.png",
+      "path": "images/S14X3Y1ban\u00e1n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X0Y2ovocie.png",
+      "path": "images/S14X0Y2ovocie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X1Y2m\u00e4ta.png",
+      "path": "images/S14X1Y2m\u00e4ta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X2Y2karamel.png",
+      "path": "images/S14X2Y2karamel.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y2lime.png",
+      "path": "images/S14X3Y2lime.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y2citr\u00f3n.png",
+      "path": "images/S14X4Y2citr\u00f3n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y3\u010dokol\u00e1da.png",
+      "path": "images/S14X3Y3\u010dokol\u00e1da.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y3anan\u00e1s.png",
+      "path": "images/S14X4Y3anan\u00e1s.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X1Y4jahoda.png",
+      "path": "images/S14X1Y4jahoda.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y4\u010dere\u0161\u0148a.png",
+      "path": "images/S14X3Y4\u010dere\u0161\u0148a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y4\u010dernica.png",
+      "path": "images/S14X4Y4\u010dernica.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate pr\u00edchu\u0165",
+  "sounds": []
+}

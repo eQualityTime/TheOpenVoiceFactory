@@ -1,0 +1,300 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S97X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "Chcem"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S97X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S97X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S97X1Y1\u00eds\u0165von.png",
+      "label": "\u00eds\u0165 von"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S97X2Y1niekomuzavola\u0165.png",
+      "label": "niekomu zavola\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S97X3Y1sisadn\u00fa\u0165.png",
+      "label": "si sadn\u00fa\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S97X4Y1vsta\u0165.png",
+      "label": "vsta\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S97X0Y2nie\u010dorobi\u0165.png",
+      "label": "nie\u010do robi\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S97X1Y2sinie\u010dopozrie\u0165.png",
+      "label": "si nie\u010do pozrie\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S97X2Y2\u00eds\u0165nadovolenku.png",
+      "label": "\u00eds\u0165 na dovolenku"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S97X3Y2prejs\u0165.png",
+      "label": "prejs\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S97X0Y3sahra\u0165.png",
+      "label": "sa hra\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S97X1Y3nie\u010dopo\u010d\u00fava\u0165.png",
+      "label": "nie\u010do po\u010d\u00fava\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S97X2Y3\u00eds\u0165pl\u00e1va\u0165.png",
+      "label": "\u00eds\u0165 pl\u00e1va\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S97X4Y3nie\u010dovari\u0165.png",
+      "label": "nie\u010do vari\u0165"
+    },
+    {
+      "background_color": "rgb(255,192,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S97X0Y4mojepr\u00edbehy.png",
+      "label": "Moje pr\u00edbehy"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S97X4Y4\u00eds\u0165domov.png",
+      "label": "\u00eds\u0165 domov"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        null
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        null,
+        "43"
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "chcem",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X0Y0\u00e1no.png",
+      "path": "images/S97X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X4Y0nie.png",
+      "path": "images/S97X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S97X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X1Y1\u00eds\u0165von.png",
+      "path": "images/S97X1Y1\u00eds\u0165von.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X2Y1niekomuzavola\u0165.png",
+      "path": "images/S97X2Y1niekomuzavola\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X3Y1sisadn\u00fa\u0165.png",
+      "path": "images/S97X3Y1sisadn\u00fa\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X4Y1vsta\u0165.png",
+      "path": "images/S97X4Y1vsta\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X0Y2nie\u010dorobi\u0165.png",
+      "path": "images/S97X0Y2nie\u010dorobi\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X1Y2sinie\u010dopozrie\u0165.png",
+      "path": "images/S97X1Y2sinie\u010dopozrie\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X2Y2\u00eds\u0165nadovolenku.png",
+      "path": "images/S97X2Y2\u00eds\u0165nadovolenku.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X3Y2prejs\u0165.png",
+      "path": "images/S97X3Y2prejs\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X0Y3sahra\u0165.png",
+      "path": "images/S97X0Y3sahra\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X1Y3nie\u010dopo\u010d\u00fava\u0165.png",
+      "path": "images/S97X1Y3nie\u010dopo\u010d\u00fava\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X2Y3\u00eds\u0165pl\u00e1va\u0165.png",
+      "path": "images/S97X2Y3\u00eds\u0165pl\u00e1va\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X4Y3nie\u010dovari\u0165.png",
+      "path": "images/S97X4Y3nie\u010dovari\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X0Y4mojepr\u00edbehy.png",
+      "path": "images/S97X0Y4mojepr\u00edbehy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S97X4Y4\u00eds\u0165domov.png",
+      "path": "images/S97X4Y4\u00eds\u0165domov.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate chcem",
+  "sounds": []
+}

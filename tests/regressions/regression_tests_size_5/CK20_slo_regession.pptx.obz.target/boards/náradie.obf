@@ -1,0 +1,331 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S70X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "n\u00e1radie"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S70X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S70X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S70X1Y1n\u00e1radie.png",
+      "label": "n\u00e1radie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S70X2Y1zver\u00e1k.png",
+      "label": "zver\u00e1k"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S70X3Y1v\u0155ta\u010dka.png",
+      "label": "v\u0155ta\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S70X4Y1baterka.png",
+      "label": "baterka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S70X0Y2ochrann\u00e9okuliare.png",
+      "label": "ochrann\u00e9 okuliare"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S70X1Y2kladivo.png",
+      "label": "kladivo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S70X2Y2prilba.png",
+      "label": "prilba"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S70X3Y2vrt\u00e1k.png",
+      "label": "vrt\u00e1k"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S70X4Y2kombina\u010dky.png",
+      "label": "kombina\u010dky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S70X0Y3\u0161mirge\u013e.png",
+      "label": "\u0161mirge\u013e"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S70X1Y3k\u013e\u00fa\u010d.png",
+      "label": "k\u013e\u00fa\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S70X2Y3skrutkova\u010d.png",
+      "label": "skrutkova\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S70X3Y3dl\u00e1to.png",
+      "label": "dl\u00e1to"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S70X4Y3predl\u017eova\u010dka.png",
+      "label": "predl\u017eova\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S70X0Y4skrutka.png",
+      "label": "skrutka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S70X4Y4materi\u00e1ly.png",
+      "label": "materi\u00e1ly",
+      "load_board": {
+        "path": "boards/materi\u00e1ly.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "n\u00e1radie",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X0Y0\u00e1no.png",
+      "path": "images/S70X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X4Y0nie.png",
+      "path": "images/S70X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S70X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X1Y1n\u00e1radie.png",
+      "path": "images/S70X1Y1n\u00e1radie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X2Y1zver\u00e1k.png",
+      "path": "images/S70X2Y1zver\u00e1k.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X3Y1v\u0155ta\u010dka.png",
+      "path": "images/S70X3Y1v\u0155ta\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X4Y1baterka.png",
+      "path": "images/S70X4Y1baterka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X0Y2ochrann\u00e9okuliare.png",
+      "path": "images/S70X0Y2ochrann\u00e9okuliare.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X1Y2kladivo.png",
+      "path": "images/S70X1Y2kladivo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X2Y2prilba.png",
+      "path": "images/S70X2Y2prilba.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X3Y2vrt\u00e1k.png",
+      "path": "images/S70X3Y2vrt\u00e1k.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X4Y2kombina\u010dky.png",
+      "path": "images/S70X4Y2kombina\u010dky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X0Y3\u0161mirge\u013e.png",
+      "path": "images/S70X0Y3\u0161mirge\u013e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X1Y3k\u013e\u00fa\u010d.png",
+      "path": "images/S70X1Y3k\u013e\u00fa\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X2Y3skrutkova\u010d.png",
+      "path": "images/S70X2Y3skrutkova\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X3Y3dl\u00e1to.png",
+      "path": "images/S70X3Y3dl\u00e1to.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X4Y3predl\u017eova\u010dka.png",
+      "path": "images/S70X4Y3predl\u017eova\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X0Y4skrutka.png",
+      "path": "images/S70X0Y4skrutka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S70X4Y4materi\u00e1ly.png",
+      "path": "images/S70X4Y4materi\u00e1ly.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate n\u00e1radie",
+  "sounds": []
+}

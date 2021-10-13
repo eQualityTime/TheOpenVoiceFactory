@@ -1,0 +1,370 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S74X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "drog\u00e9ria"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S74X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S74X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S74X1Y1drog\u00e9ria.png",
+      "label": "drog\u00e9ria"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S74X2Y1mydlo.png",
+      "label": "mydlo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S74X3Y1zubn\u00e1kefka.png",
+      "label": "zubn\u00e1 kefka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S74X4Y1zubn\u00e1pasta.png",
+      "label": "zubn\u00e1 pasta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S74X0Y2penadok\u00fape\u013ea.png",
+      "label": "pena do k\u00fape\u013ea"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S74X1Y2deodorant.png",
+      "label": "deodorant"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S74X2Y2\u0161amp\u00f3n.png",
+      "label": "\u0161amp\u00f3n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S74X3Y2kondicion\u00e9r.png",
+      "label": "kondicion\u00e9r"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S74X4Y2l\u00ed\u010didl\u00e1.png",
+      "label": "l\u00ed\u010didl\u00e1"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S74X0Y3holiacistroj\u010dek.png",
+      "label": "holiaci stroj\u010dek"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S74X1Y3penanaholenie.png",
+      "label": "pena na holenie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S74X2Y3vodapoholen\u00ed.png",
+      "label": "voda po holen\u00ed"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S74X3Y3toaletn\u00fdpapier.png",
+      "label": "toaletn\u00fd papier"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S74X4Y3int\u00edmnepotreby.png",
+      "label": "int\u00edmne potreby"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S74X0Y4su\u0161i\u010dnavlasy.png",
+      "label": "su\u0161i\u010d na vlasy"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S74X1Y4hrebe\u0148.png",
+      "label": "hrebe\u0148"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S74X2Y4kefa.png",
+      "label": "kefa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S74X3Y4sprejnavlasy.png",
+      "label": "sprej na vlasy"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S74X4Y4farbanavlasy.png",
+      "label": "farba na vlasy"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "drog\u00e9ria",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X0Y0\u00e1no.png",
+      "path": "images/S74X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X4Y0nie.png",
+      "path": "images/S74X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S74X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X1Y1drog\u00e9ria.png",
+      "path": "images/S74X1Y1drog\u00e9ria.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X2Y1mydlo.png",
+      "path": "images/S74X2Y1mydlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X3Y1zubn\u00e1kefka.png",
+      "path": "images/S74X3Y1zubn\u00e1kefka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X4Y1zubn\u00e1pasta.png",
+      "path": "images/S74X4Y1zubn\u00e1pasta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X0Y2penadok\u00fape\u013ea.png",
+      "path": "images/S74X0Y2penadok\u00fape\u013ea.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X1Y2deodorant.png",
+      "path": "images/S74X1Y2deodorant.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X2Y2\u0161amp\u00f3n.png",
+      "path": "images/S74X2Y2\u0161amp\u00f3n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X3Y2kondicion\u00e9r.png",
+      "path": "images/S74X3Y2kondicion\u00e9r.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X4Y2l\u00ed\u010didl\u00e1.png",
+      "path": "images/S74X4Y2l\u00ed\u010didl\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X0Y3holiacistroj\u010dek.png",
+      "path": "images/S74X0Y3holiacistroj\u010dek.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X1Y3penanaholenie.png",
+      "path": "images/S74X1Y3penanaholenie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X2Y3vodapoholen\u00ed.png",
+      "path": "images/S74X2Y3vodapoholen\u00ed.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X3Y3toaletn\u00fdpapier.png",
+      "path": "images/S74X3Y3toaletn\u00fdpapier.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X4Y3int\u00edmnepotreby.png",
+      "path": "images/S74X4Y3int\u00edmnepotreby.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X0Y4su\u0161i\u010dnavlasy.png",
+      "path": "images/S74X0Y4su\u0161i\u010dnavlasy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X1Y4hrebe\u0148.png",
+      "path": "images/S74X1Y4hrebe\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X2Y4kefa.png",
+      "path": "images/S74X2Y4kefa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X3Y4sprejnavlasy.png",
+      "path": "images/S74X3Y4sprejnavlasy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S74X4Y4farbanavlasy.png",
+      "path": "images/S74X4Y4farbanavlasy.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate drog\u00e9ria",
+  "sounds": []
+}

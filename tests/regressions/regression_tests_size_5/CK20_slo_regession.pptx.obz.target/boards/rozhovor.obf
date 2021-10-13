@@ -1,0 +1,379 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S1X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "rozhovor"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S1X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S1X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S1X1Y1omne.png",
+      "label": "O mne",
+      "load_board": {
+        "path": "boards/omne.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S1X2Y1slang.png",
+      "label": "Slang",
+      "load_board": {
+        "path": "boards/slang.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S1X3Y1neviemn\u00e1js\u0165\u010dochcempoveda\u0165.png",
+      "label": "Neviem n\u00e1js\u0165, \u010do chcem poveda\u0165."
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S1X4Y1dovidenia.png",
+      "label": "dovidenia"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S1X0Y2m\u00e1msadobre.png",
+      "label": "M\u00e1m sa dobre"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S1X1Y2ok.png",
+      "label": "ok"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S1X2Y2niejemidobre.png",
+      "label": "Nie je mi dobre"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S1X3Y2pros\u00edm.png",
+      "label": "pros\u00edm"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S1X4Y2\u010fakujem.png",
+      "label": "\u010fakujem"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S1X0Y3prep\u00e1\u010d.png",
+      "label": "prep\u00e1\u010d"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S1X1Y3pardon.png",
+      "label": "pardon"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S1X2Y3mo\u017eno.png",
+      "label": "mo\u017eno"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S1X3Y3naozaj.png",
+      "label": "naozaj"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S1X4Y3neviem.png",
+      "label": "Neviem"
+    },
+    {
+      "background_color": "rgb(255,192,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S1X0Y4mojepr\u00edbehy.png",
+      "label": "Moje pr\u00edbehy",
+      "load_board": {
+        "path": "boards/mojepr\u00edbehy.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S1X1Y4\u013e\u00fabim\u0165a.png",
+      "label": "\u013d\u00fabim \u0164a"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S1X2Y4ale.png",
+      "label": "ale"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S1X3Y4au.png",
+      "label": "Au"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S1X4Y4tak\u017ee.png",
+      "label": "tak\u017ee"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "rozhovor",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X0Y0\u00e1no.png",
+      "path": "images/S1X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X4Y0nie.png",
+      "path": "images/S1X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S1X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X1Y1omne.png",
+      "path": "images/S1X1Y1omne.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X2Y1slang.png",
+      "path": "images/S1X2Y1slang.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X3Y1neviemn\u00e1js\u0165\u010dochcempoveda\u0165.png",
+      "path": "images/S1X3Y1neviemn\u00e1js\u0165\u010dochcempoveda\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X4Y1dovidenia.png",
+      "path": "images/S1X4Y1dovidenia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X0Y2m\u00e1msadobre.png",
+      "path": "images/S1X0Y2m\u00e1msadobre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X1Y2ok.png",
+      "path": "images/S1X1Y2ok.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X2Y2niejemidobre.png",
+      "path": "images/S1X2Y2niejemidobre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X3Y2pros\u00edm.png",
+      "path": "images/S1X3Y2pros\u00edm.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X4Y2\u010fakujem.png",
+      "path": "images/S1X4Y2\u010fakujem.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X0Y3prep\u00e1\u010d.png",
+      "path": "images/S1X0Y3prep\u00e1\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X1Y3pardon.png",
+      "path": "images/S1X1Y3pardon.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X2Y3mo\u017eno.png",
+      "path": "images/S1X2Y3mo\u017eno.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X3Y3naozaj.png",
+      "path": "images/S1X3Y3naozaj.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X4Y3neviem.png",
+      "path": "images/S1X4Y3neviem.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X0Y4mojepr\u00edbehy.png",
+      "path": "images/S1X0Y4mojepr\u00edbehy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X1Y4\u013e\u00fabim\u0165a.png",
+      "path": "images/S1X1Y4\u013e\u00fabim\u0165a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X2Y4ale.png",
+      "path": "images/S1X2Y4ale.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X3Y4au.png",
+      "path": "images/S1X3Y4au.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S1X4Y4tak\u017ee.png",
+      "path": "images/S1X4Y4tak\u017ee.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate rozhovor",
+  "sounds": []
+}

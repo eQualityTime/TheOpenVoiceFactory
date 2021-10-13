@@ -1,0 +1,272 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S23X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "om\u00e1\u010dky/suroviny"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S23X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S23X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S23X1Y1paradajkov\u00e1om\u00e1\u010dka.png",
+      "label": "paradajkov\u00e1 om\u00e1\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S23X2Y1majon\u00e9za.png",
+      "label": "majon\u00e9za"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S23X3Y1ara\u0161idov\u00e9maslo.png",
+      "label": "ara\u0161idov\u00e9 maslo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S23X4Y1paprika.png",
+      "label": "paprika"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S23X0Y2so\u013e.png",
+      "label": "so\u013e"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S23X1Y2v\u00fdpekzm\u00e4sa.png",
+      "label": "v\u00fdpek z m\u00e4sa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S23X2Y2cukor.png",
+      "label": "cukor"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S23X3Y2d\u017eem.png",
+      "label": "d\u017eem"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S23X4Y2hned\u00e1om\u00e1\u010dkabrownsauce.png",
+      "label": "hned\u00e1 om\u00e1\u010dka brown sauce"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S23X0Y3ocot.png",
+      "label": "ocot"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S23X1Y3korenie.png",
+      "label": "korenie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S23X2Y3med.png",
+      "label": "med"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "om\u00e1\u010dkysuroviny",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X0Y0\u00e1no.png",
+      "path": "images/S23X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X4Y0nie.png",
+      "path": "images/S23X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S23X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X1Y1paradajkov\u00e1om\u00e1\u010dka.png",
+      "path": "images/S23X1Y1paradajkov\u00e1om\u00e1\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X2Y1majon\u00e9za.png",
+      "path": "images/S23X2Y1majon\u00e9za.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X3Y1ara\u0161idov\u00e9maslo.png",
+      "path": "images/S23X3Y1ara\u0161idov\u00e9maslo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X4Y1paprika.png",
+      "path": "images/S23X4Y1paprika.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X0Y2so\u013e.png",
+      "path": "images/S23X0Y2so\u013e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X1Y2v\u00fdpekzm\u00e4sa.png",
+      "path": "images/S23X1Y2v\u00fdpekzm\u00e4sa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X2Y2cukor.png",
+      "path": "images/S23X2Y2cukor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X3Y2d\u017eem.png",
+      "path": "images/S23X3Y2d\u017eem.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X4Y2hned\u00e1om\u00e1\u010dkabrownsauce.png",
+      "path": "images/S23X4Y2hned\u00e1om\u00e1\u010dkabrownsauce.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X0Y3ocot.png",
+      "path": "images/S23X0Y3ocot.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X1Y3korenie.png",
+      "path": "images/S23X1Y3korenie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S23X2Y3med.png",
+      "path": "images/S23X2Y3med.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate om\u00e1\u010dkysuroviny",
+  "sounds": []
+}

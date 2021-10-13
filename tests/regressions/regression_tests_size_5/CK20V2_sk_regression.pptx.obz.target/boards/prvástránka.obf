@@ -1,0 +1,408 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S0X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Prv\u00e1 str\u00e1nka"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S0X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S0X0Y1ahoj.png",
+      "label": "Ahoj"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S0X1Y1chcemsastebourozpr\u00e1va\u0165.png",
+      "label": "Chcem sa s Tebou rozpr\u00e1va\u0165."
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S0X2Y1rozhovor.png",
+      "label": "Rozhovor",
+      "load_board": {
+        "path": "boards/rozhovor.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S0X3Y1ot\u00e1zky.png",
+      "label": "Ot\u00e1zky",
+      "load_board": {
+        "path": "boards/ot\u00e1zky.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S0X4Y1jedlo.png",
+      "label": "Jedlo",
+      "load_board": {
+        "path": "boards/jedlo.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S0X0Y2ja.png",
+      "label": "Ja"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S0X1Y2\u013eudia.png",
+      "label": "\u013dudia",
+      "load_board": {
+        "path": "boards/\u013eudia.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S0X2Y2osobn\u00e1hygiena.png",
+      "label": "Osobn\u00e1 hygiena",
+      "load_board": {
+        "path": "boards/osobn\u00e1hygiena.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S0X3Y2kr\u00e1tkeslov\u00e1.png",
+      "label": "Kr\u00e1tke slov\u00e1",
+      "load_board": {
+        "path": "boards/kr\u00e1tkeslov\u00e1.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S0X4Y2m\u00f4jde\u0148.png",
+      "label": "M\u00f4j de\u0148",
+      "load_board": {
+        "path": "boards/m\u00f4jde\u0148.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S0X0Y3\u010dinnosti.png",
+      "label": "\u010cinnosti",
+      "load_board": {
+        "path": "boards/\u010dinnosti.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S0X1Y3\u00eds\u0165.png",
+      "label": "\u00eds\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S0X2Y3chcie\u0165.png",
+      "label": "chcie\u0165"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S0X3Y3opisovanie.png",
+      "label": "Opisovanie",
+      "load_board": {
+        "path": "boards/opisovanie.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S0X4Y3veci.png",
+      "label": "Veci",
+      "load_board": {
+        "path": "boards/veci.obf"
+      }
+    },
+    {
+      "action": ":clear",
+      "background_color": "rgb(204,255,204)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S0X0Y4unknown.png",
+      "label": "04"
+    },
+    {
+      "background_color": "rgb(0,0,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S0X1Y4\u010das.png",
+      "label": "\u010cas",
+      "load_board": {
+        "path": "boards/\u010das.obf"
+      }
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S0X2Y4miesta.png",
+      "label": "Miesta",
+      "load_board": {
+        "path": "boards/miesta.obf"
+      }
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S0X3Y4vo\u013en\u00fd\u010das.png",
+      "label": "Vo\u013en\u00fd \u010das",
+      "load_board": {
+        "path": "boards/vo\u013en\u00fd\u010das.obf"
+      }
+    },
+    {
+      "action": ":deleteword",
+      "background_color": "rgb(204,255,204)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S0X4Y4vymaza\u0165slovo.png",
+      "label": "Vymaza\u0165 slovo"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "prv\u00e1str\u00e1nka",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X0Y0\u00e1no.png",
+      "path": "images/S0X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X4Y0nie.png",
+      "path": "images/S0X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X0Y1ahoj.png",
+      "path": "images/S0X0Y1ahoj.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X1Y1chcemsastebourozpr\u00e1va\u0165.png",
+      "path": "images/S0X1Y1chcemsastebourozpr\u00e1va\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X2Y1rozhovor.png",
+      "path": "images/S0X2Y1rozhovor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X3Y1ot\u00e1zky.png",
+      "path": "images/S0X3Y1ot\u00e1zky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X4Y1jedlo.png",
+      "path": "images/S0X4Y1jedlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X0Y2ja.png",
+      "path": "images/S0X0Y2ja.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X1Y2\u013eudia.png",
+      "path": "images/S0X1Y2\u013eudia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X2Y2osobn\u00e1hygiena.png",
+      "path": "images/S0X2Y2osobn\u00e1hygiena.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X3Y2kr\u00e1tkeslov\u00e1.png",
+      "path": "images/S0X3Y2kr\u00e1tkeslov\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X4Y2m\u00f4jde\u0148.png",
+      "path": "images/S0X4Y2m\u00f4jde\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X0Y3\u010dinnosti.png",
+      "path": "images/S0X0Y3\u010dinnosti.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X1Y3\u00eds\u0165.png",
+      "path": "images/S0X1Y3\u00eds\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X2Y3chcie\u0165.png",
+      "path": "images/S0X2Y3chcie\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X3Y3opisovanie.png",
+      "path": "images/S0X3Y3opisovanie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X4Y3veci.png",
+      "path": "images/S0X4Y3veci.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X0Y4unknown.png",
+      "path": "images/S0X0Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X1Y4\u010das.png",
+      "path": "images/S0X1Y4\u010das.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X2Y4miesta.png",
+      "path": "images/S0X2Y4miesta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X3Y4vo\u013en\u00fd\u010das.png",
+      "path": "images/S0X3Y4vo\u013en\u00fd\u010das.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X4Y4vymaza\u0165slovo.png",
+      "path": "images/S0X4Y4vymaza\u0165slovo.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate prv\u00e1str\u00e1nka",
+  "sounds": []
+}

@@ -1,0 +1,232 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S0X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "PlaceTest"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S0X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S0X1Y1phello.png",
+      "label": "phello",
+      "vocalization": "hello world"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S0X2Y1p.png",
+      "label": "P\u201d \u201c",
+      "vocalization": " "
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "",
+      "label": "Pspace()",
+      "vocalization": "space("
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "",
+      "label": "p3",
+      "vocalization": "3"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "",
+      "label": "P'3'",
+      "vocalization": "3"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "",
+      "label": "ok"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "",
+      "label": "I'm not so good"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "",
+      "label": "please"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "",
+      "label": "thank you"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "",
+      "label": "sorry"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "",
+      "label": "excuse me"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "",
+      "label": "maybe"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "",
+      "label": "really"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "",
+      "label": "I don't know"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "",
+      "label": "I love you"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "",
+      "label": "but"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "",
+      "label": "Ouch"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "so"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        null,
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        null,
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "placetest",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X0Y0yes.png",
+      "path": "images/S0X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X4Y0no.png",
+      "path": "images/S0X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X1Y1phello.png",
+      "path": "images/S0X1Y1phello.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S0X2Y1p.png",
+      "path": "images/S0X2Y1p.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate placetest",
+  "sounds": []
+}

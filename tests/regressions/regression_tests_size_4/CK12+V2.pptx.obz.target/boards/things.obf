@@ -1,0 +1,323 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S13X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "things"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S13X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S13X0Y1toppage.png",
+      "label": "Top Page",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S13X1Y1methings.png",
+      "label": "Me things",
+      "load_board": {
+        "path": "boards/methings.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S13X3Y1fooddrink.png",
+      "label": "Food & drink",
+      "load_board": {
+        "path": "boards/fooddrink.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S13X4Y1kitchenthings.png",
+      "label": "Kitchen things",
+      "load_board": {
+        "path": "boards/kitchenthings.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "",
+      "label": "Clothes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "",
+      "label": "Furniture"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "",
+      "label": "Things that help"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "",
+      "label": "Toiletries"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S13X0Y3money.png",
+      "label": "Money",
+      "load_board": {
+        "path": "boards/clothes.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S13X1Y3transport.png",
+      "label": "Transport",
+      "load_board": {
+        "path": "boards/furniture.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S13X3Y3nature.png",
+      "label": "Nature",
+      "load_board": {
+        "path": "boards/thingsthathelp.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S13X4Y3unknown.png",
+      "label": "43",
+      "load_board": {
+        "path": "boards/toiletries.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S13X0Y4unknown.png",
+      "label": "04",
+      "load_board": {
+        "path": "boards/money.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S13X1Y4unknown.png",
+      "label": "14",
+      "load_board": {
+        "path": "boards/transport.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S13X3Y4unknown.png",
+      "label": "34",
+      "load_board": {
+        "path": "boards/nature.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        null,
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        null,
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        null,
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        null,
+        "34",
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "things",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y0yes.png",
+      "path": "images/S13X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X4Y0no.png",
+      "path": "images/S13X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y1toppage.png",
+      "path": "images/S13X0Y1toppage.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X1Y1methings.png",
+      "path": "images/S13X1Y1methings.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X3Y1fooddrink.png",
+      "path": "images/S13X3Y1fooddrink.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X4Y1kitchenthings.png",
+      "path": "images/S13X4Y1kitchenthings.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X2Y2unknown.png",
+      "path": "images/S13X2Y2unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y3money.png",
+      "path": "images/S13X0Y3money.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X1Y3transport.png",
+      "path": "images/S13X1Y3transport.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X2Y3unknown.png",
+      "path": "images/S13X2Y3unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X3Y3nature.png",
+      "path": "images/S13X3Y3nature.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X4Y3unknown.png",
+      "path": "images/S13X4Y3unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y4unknown.png",
+      "path": "images/S13X0Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X1Y4unknown.png",
+      "path": "images/S13X1Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X2Y4unknown.png",
+      "path": "images/S13X2Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X3Y4unknown.png",
+      "path": "images/S13X3Y4unknown.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate things",
+  "sounds": []
+}

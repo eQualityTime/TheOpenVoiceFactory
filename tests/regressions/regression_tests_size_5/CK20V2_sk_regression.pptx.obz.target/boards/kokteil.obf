@@ -1,0 +1,160 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S15X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "kokteil"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S15X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S15X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S15X1Y1kokteil.png",
+      "label": "kokteil"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S15X2Y1ban\u00e1nov\u00fdkokteil.png",
+      "label": "ban\u00e1nov\u00fd kokteil"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S15X3Y1jahodov\u00fdkokteil.png",
+      "label": "jahodov\u00fd kokteil"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S15X4Y1\u010dokol\u00e1dov\u00fdkokteil.png",
+      "label": "\u010dokol\u00e1dov\u00fd kokteil"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "kokteil",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S15X0Y0\u00e1no.png",
+      "path": "images/S15X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S15X4Y0nie.png",
+      "path": "images/S15X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S15X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S15X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S15X1Y1kokteil.png",
+      "path": "images/S15X1Y1kokteil.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S15X2Y1ban\u00e1nov\u00fdkokteil.png",
+      "path": "images/S15X2Y1ban\u00e1nov\u00fdkokteil.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S15X3Y1jahodov\u00fdkokteil.png",
+      "path": "images/S15X3Y1jahodov\u00fdkokteil.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S15X4Y1\u010dokol\u00e1dov\u00fdkokteil.png",
+      "path": "images/S15X4Y1\u010dokol\u00e1dov\u00fdkokteil.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate kokteil",
+  "sounds": []
+}

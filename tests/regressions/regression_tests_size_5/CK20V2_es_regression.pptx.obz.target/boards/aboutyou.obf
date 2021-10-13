@@ -1,0 +1,314 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S4X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "About you"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S4X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S4X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S4X1Y1c\u00f3motellamas.png",
+      "label": "\u00bfC\u00f3mo te llamas?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S4X2Y1d\u00f3ndevives.png",
+      "label": "\u00bfD\u00f3nde vives?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S4X3Y1cuandoestucumplea\u00f1os.png",
+      "label": "\u00bfCuando es tu cumplea\u00f1os?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S4X4Y1cu\u00e1ntosa\u00f1ostienes.png",
+      "label": "\u00bfCu\u00e1ntos a\u00f1os tienes?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S4X0Y2conqui\u00e9nvives.png",
+      "label": "\u00bfCon qui\u00e9n vives?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S4X1Y2tienesunamascota.png",
+      "label": "\u00bfTienes una mascota?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S4X2Y2cu\u00e9ntameacercadetud\u00edayourday.png",
+      "label": "\u00bfCu\u00e9ntame acerca de tu d\u00eda? your day?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S4X3Y2cu\u00e1lestuemail.png",
+      "label": "\u00bfCu\u00e1l es tu email?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S4X4Y2d\u00f3ndetrabajas.png",
+      "label": "\u00bfD\u00f3nde trabajas?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S4X0Y3cu\u00e1lestun\u00famerodem\u00f3vil.png",
+      "label": "\u00bfCu\u00e1l es tu n\u00famero de m\u00f3vil?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S4X1Y3qu\u00e9m\u00fasicategusta.png",
+      "label": "\u00bfQu\u00e9 m\u00fasica te gusta?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S4X2Y3qu\u00e9pel\u00edculastegustan.png",
+      "label": "\u00bfQu\u00e9 pel\u00edculas te gustan?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S4X3Y3cu\u00e1lestupasatiempo.png",
+      "label": "\u00bfCu\u00e1l es tu pasatiempo?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S4X4Y3qu\u00e9programasdetelevisi\u00f3ntegustan.png",
+      "label": "\u00bfQu\u00e9 programas de televisi\u00f3n te gustan?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S4X0Y4tienesunadiscapacidad.png",
+      "label": "\u00bfTienes una discapacidad?"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "aboutyou",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y0yes.png",
+      "path": "images/S4X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y0no.png",
+      "path": "images/S4X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S4X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X1Y1c\u00f3motellamas.png",
+      "path": "images/S4X1Y1c\u00f3motellamas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X2Y1d\u00f3ndevives.png",
+      "path": "images/S4X2Y1d\u00f3ndevives.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X3Y1cuandoestucumplea\u00f1os.png",
+      "path": "images/S4X3Y1cuandoestucumplea\u00f1os.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y1cu\u00e1ntosa\u00f1ostienes.png",
+      "path": "images/S4X4Y1cu\u00e1ntosa\u00f1ostienes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y2conqui\u00e9nvives.png",
+      "path": "images/S4X0Y2conqui\u00e9nvives.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X1Y2tienesunamascota.png",
+      "path": "images/S4X1Y2tienesunamascota.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X2Y2cu\u00e9ntameacercadetud\u00edayourday.png",
+      "path": "images/S4X2Y2cu\u00e9ntameacercadetud\u00edayourday.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X3Y2cu\u00e1lestuemail.png",
+      "path": "images/S4X3Y2cu\u00e1lestuemail.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y2d\u00f3ndetrabajas.png",
+      "path": "images/S4X4Y2d\u00f3ndetrabajas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y3cu\u00e1lestun\u00famerodem\u00f3vil.png",
+      "path": "images/S4X0Y3cu\u00e1lestun\u00famerodem\u00f3vil.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X1Y3qu\u00e9m\u00fasicategusta.png",
+      "path": "images/S4X1Y3qu\u00e9m\u00fasicategusta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X2Y3qu\u00e9pel\u00edculastegustan.png",
+      "path": "images/S4X2Y3qu\u00e9pel\u00edculastegustan.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X3Y3cu\u00e1lestupasatiempo.png",
+      "path": "images/S4X3Y3cu\u00e1lestupasatiempo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y3qu\u00e9programasdetelevisi\u00f3ntegustan.png",
+      "path": "images/S4X4Y3qu\u00e9programasdetelevisi\u00f3ntegustan.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y4tienesunadiscapacidad.png",
+      "path": "images/S4X0Y4tienesunadiscapacidad.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate aboutyou",
+  "sounds": []
+}

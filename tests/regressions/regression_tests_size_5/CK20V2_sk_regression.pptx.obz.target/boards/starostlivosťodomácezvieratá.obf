@@ -1,0 +1,370 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S65X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Starostlivos\u0165 o dom\u00e1ce zvierat\u00e1"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S65X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S65X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S65X1Y1starostlivos\u0165odom\u00e1cezvierat\u00e1.png",
+      "label": "starostlivos\u0165 o dom\u00e1ce zvierat\u00e1"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S65X2Y1krmivoprepsi.png",
+      "label": "krmivo pre psi"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S65X3Y1krmivoprema\u010dky.png",
+      "label": "krmivo pre ma\u010dky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S65X4Y1krmivopreryby.png",
+      "label": "krmivo pre ryby"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S65X0Y2obojok.png",
+      "label": "obojok"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S65X1Y2hrebe\u0148prepsy.png",
+      "label": "hrebe\u0148 pre psy"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S65X2Y2uter\u00e1kprepsy.png",
+      "label": "uter\u00e1k pre psy"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S65X3Y2ps\u00edpelech.png",
+      "label": "ps\u00ed pelech"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S65X4Y2akv\u00e1rium.png",
+      "label": "akv\u00e1rium"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S65X0Y3poch\u00fa\u0165ka.png",
+      "label": "poch\u00fa\u0165ka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S65X1Y3v\u00f4dzka.png",
+      "label": "v\u00f4dzka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S65X2Y3b\u00fada.png",
+      "label": "b\u00fada"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S65X3Y3prepravkaprepsa.png",
+      "label": "prepravka pre psa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S65X4Y3krmivoprepsi.png",
+      "label": "krmivo pre psi"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S65X0Y4vt\u00e1\u010diab\u00fadka.png",
+      "label": "vt\u00e1\u010dia b\u00fadka"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S65X1Y4starostlivos\u0165odom\u00e1cezviera.png",
+      "label": "starostlivos\u0165 o dom\u00e1ce zviera"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S65X2Y4k\u0155mi\u0165dom\u00e1cezviera.png",
+      "label": "k\u0155mi\u0165 dom\u00e1ce zviera"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S65X3Y4von\u010di\u0165psa.png",
+      "label": "von\u010di\u0165 psa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S65X4Y4klietka.png",
+      "label": "klietka"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "starostlivos\u0165odom\u00e1cezvierat\u00e1",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X0Y0\u00e1no.png",
+      "path": "images/S65X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X4Y0nie.png",
+      "path": "images/S65X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S65X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X1Y1starostlivos\u0165odom\u00e1cezvierat\u00e1.png",
+      "path": "images/S65X1Y1starostlivos\u0165odom\u00e1cezvierat\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X2Y1krmivoprepsi.png",
+      "path": "images/S65X2Y1krmivoprepsi.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X3Y1krmivoprema\u010dky.png",
+      "path": "images/S65X3Y1krmivoprema\u010dky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X4Y1krmivopreryby.png",
+      "path": "images/S65X4Y1krmivopreryby.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X0Y2obojok.png",
+      "path": "images/S65X0Y2obojok.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X1Y2hrebe\u0148prepsy.png",
+      "path": "images/S65X1Y2hrebe\u0148prepsy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X2Y2uter\u00e1kprepsy.png",
+      "path": "images/S65X2Y2uter\u00e1kprepsy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X3Y2ps\u00edpelech.png",
+      "path": "images/S65X3Y2ps\u00edpelech.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X4Y2akv\u00e1rium.png",
+      "path": "images/S65X4Y2akv\u00e1rium.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X0Y3poch\u00fa\u0165ka.png",
+      "path": "images/S65X0Y3poch\u00fa\u0165ka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X1Y3v\u00f4dzka.png",
+      "path": "images/S65X1Y3v\u00f4dzka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X2Y3b\u00fada.png",
+      "path": "images/S65X2Y3b\u00fada.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X3Y3prepravkaprepsa.png",
+      "path": "images/S65X3Y3prepravkaprepsa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X4Y3krmivoprepsi.png",
+      "path": "images/S65X4Y3krmivoprepsi.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X0Y4vt\u00e1\u010diab\u00fadka.png",
+      "path": "images/S65X0Y4vt\u00e1\u010diab\u00fadka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X1Y4starostlivos\u0165odom\u00e1cezviera.png",
+      "path": "images/S65X1Y4starostlivos\u0165odom\u00e1cezviera.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X2Y4k\u0155mi\u0165dom\u00e1cezviera.png",
+      "path": "images/S65X2Y4k\u0155mi\u0165dom\u00e1cezviera.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X3Y4von\u010di\u0165psa.png",
+      "path": "images/S65X3Y4von\u010di\u0165psa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S65X4Y4klietka.png",
+      "path": "images/S65X4Y4klietka.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate starostlivos\u0165odom\u00e1cezvierat\u00e1",
+  "sounds": []
+}

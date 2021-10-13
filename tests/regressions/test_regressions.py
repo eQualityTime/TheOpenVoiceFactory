@@ -1,5 +1,7 @@
 from unittest import TestCase
+import filecmp
 import unittest
+from tests.regressions.generate_regressions import generate_obz
 #import mock
 import urllib.request, urllib.parse, urllib.error
 import json
@@ -28,16 +30,28 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 class ovfTest(TestCase):
 
 
-    def test_all_regressions(self): 
-         for file in glob.glob("tests/regressions/regression_tests_size_5/*.pptx"):
-            with self.subTest(file):
-                print(file)
-                regress(file,5) 
-         for file in glob.glob("tests/regressions/regression_tests_size_4/*.pptx"):
-            with self.subTest(file):
-                print(file)
-                regress(file,4) 
+    def test_obz_pages(self):
+        compare_boards("tests/regressions/regression_tests_size_5/CK20V2_bg_regression.pptx",5)
+        compare_boards("tests/regressions/regression_tests_size_5/CK20V2_ara_regession.pptx",5)
+        compare_boards("tests/regressions/regression_tests_size_5/CK20_slo_regession.pptx",5)
+        compare_boards("tests/regressions/regression_tests_size_5/CK20V2_gr_regression.pptx",5)
+        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2_es_regression.pptx",5))
+        compare_boards("tests/regressions/regression_tests_size_5/CK20V2-place.pptx",5)
+        compare_boards("tests/regressions/regression_tests_size_5/CK20V2_sk_regression.pptx",5)
+        compare_boards("tests/regressions/regression_tests_size_5/CK20V2.pptx",5)
+        compare_boards("tests/regressions/regression_tests_size_4/CK12+V2.pptx",4)
+    
 
+def compare_boards(directory_name, page_size):
+        generate_obz(directory_name,page_size)
+        print(directory_name) 
+        for file in glob.glob(directory_name+".obz.attempt/boards/*.obf"):
+            print(file)  
+            print("XXXXXXXXXX") 
+            target=file.replace('attempt','target')
+            if not filecmp.cmp(file,target):
+                return False
+        return True
 
 
 

@@ -1,0 +1,155 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S81X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "pr\u00edroda"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S81X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S81X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S81X1Y1po\u010dasie.png",
+      "label": "po\u010dasie",
+      "load_board": {
+        "path": "boards/po\u010dasie.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S81X2Y1zvierat\u00e1.png",
+      "label": "zvierat\u00e1",
+      "load_board": {
+        "path": "boards/zvierat\u00e1.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S81X3Y1z\u00e1hradn\u00ed\u010denie.png",
+      "label": "z\u00e1hradn\u00ed\u010denie",
+      "load_board": {
+        "path": "boards/z\u00e1hradn\u00ed\u010denie.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "pr\u00edroda",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X0Y0\u00e1no.png",
+      "path": "images/S81X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X4Y0nie.png",
+      "path": "images/S81X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S81X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X1Y1po\u010dasie.png",
+      "path": "images/S81X1Y1po\u010dasie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X2Y1zvierat\u00e1.png",
+      "path": "images/S81X2Y1zvierat\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X3Y1z\u00e1hradn\u00ed\u010denie.png",
+      "path": "images/S81X3Y1z\u00e1hradn\u00ed\u010denie.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate pr\u00edroda",
+  "sounds": []
+}

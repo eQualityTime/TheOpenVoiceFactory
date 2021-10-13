@@ -1,0 +1,274 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S52X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "People"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S52X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S52X0Y1toppage.png",
+      "label": "Top Page",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(196,131,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S52X1Y1people.png",
+      "label": "People"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "",
+      "label": "Friends",
+      "load_board": {
+        "path": "boards/friends.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S52X4Y1peoplewhohelp.png",
+      "label": "People who help",
+      "load_board": {
+        "path": "boards/peoplewhohelp.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "",
+      "label": "I"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "",
+      "label": "my"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S52X3Y2mine.png",
+      "label": "mine"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "",
+      "label": "family"
+    },
+    {
+      "background_color": "rgb(196,131,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S52X0Y3it.png",
+      "label": "it"
+    },
+    {
+      "background_color": "rgb(196,131,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S52X1Y3you.png",
+      "label": "you"
+    },
+    {
+      "background_color": "rgb(196,131,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S52X3Y3boy.png",
+      "label": "boy"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S52X4Y3girl.png",
+      "label": "girl",
+      "load_board": {
+        "path": "boards/family.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        null,
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        null,
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        null,
+        "33",
+        "43"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "people",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X0Y0yes.png",
+      "path": "images/S52X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X4Y0no.png",
+      "path": "images/S52X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X0Y1toppage.png",
+      "path": "images/S52X0Y1toppage.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X1Y1people.png",
+      "path": "images/S52X1Y1people.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X4Y1peoplewhohelp.png",
+      "path": "images/S52X4Y1peoplewhohelp.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X3Y2mine.png",
+      "path": "images/S52X3Y2mine.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X0Y3it.png",
+      "path": "images/S52X0Y3it.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X1Y3you.png",
+      "path": "images/S52X1Y3you.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X2Y3unknown.png",
+      "path": "images/S52X2Y3unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X3Y3boy.png",
+      "path": "images/S52X3Y3boy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X4Y3girl.png",
+      "path": "images/S52X4Y3girl.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X0Y4unknown.png",
+      "path": "images/S52X0Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X1Y4unknown.png",
+      "path": "images/S52X1Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X3Y4unknown.png",
+      "path": "images/S52X3Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S52X4Y4unknown.png",
+      "path": "images/S52X4Y4unknown.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate people",
+  "sounds": []
+}

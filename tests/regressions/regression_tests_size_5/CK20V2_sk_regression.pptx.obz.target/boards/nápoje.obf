@@ -1,0 +1,319 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S13X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "n\u00e1poje"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S13X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S13X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S13X1Y1n\u00e1poj.png",
+      "label": "n\u00e1poj"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S13X2Y1k\u00e1va.png",
+      "label": "k\u00e1va"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S13X3Y1\u010daj.png",
+      "label": "\u010daj"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S13X4Y1hor\u00faca\u010dokol\u00e1da.png",
+      "label": "hor\u00faca \u010dokol\u00e1da"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S13X0Y2opisovanien\u00e1pojov.png",
+      "label": "Opisovanie n\u00e1pojov",
+      "load_board": {
+        "path": "boards/opisovanien\u00e1pojov.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S13X1Y2mlieko.png",
+      "label": "mlieko"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S13X2Y2voda.png",
+      "label": "voda"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S13X0Y3d\u017e\u00fas.png",
+      "label": "d\u017e\u00fas",
+      "load_board": {
+        "path": "boards/d\u017e\u00fas.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S13X1Y3smoothie.png",
+      "label": "smoothie",
+      "load_board": {
+        "path": "boards/flavour.obf"
+      },
+      "vocalization": "smoothi"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S13X2Y3kokteil.png",
+      "label": "kokteil",
+      "load_board": {
+        "path": "boards/kokteil.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S13X3Y3bublinkov\u00fdn\u00e1poj.png",
+      "label": "Bublinkov\u00fd n\u00e1poj",
+      "load_board": {
+        "path": "boards/bublinkov\u00e9n\u00e1poje.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S13X4Y3alkohol.png",
+      "label": "alkohol",
+      "load_board": {
+        "path": "boards/alkohol.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S13X1Y4s.png",
+      "label": "s"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S13X2Y4a.png",
+      "label": "a"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        null,
+        null
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        null,
+        "14",
+        "24",
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "n\u00e1poje",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y0\u00e1no.png",
+      "path": "images/S13X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X4Y0nie.png",
+      "path": "images/S13X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S13X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X1Y1n\u00e1poj.png",
+      "path": "images/S13X1Y1n\u00e1poj.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X2Y1k\u00e1va.png",
+      "path": "images/S13X2Y1k\u00e1va.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X3Y1\u010daj.png",
+      "path": "images/S13X3Y1\u010daj.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X4Y1hor\u00faca\u010dokol\u00e1da.png",
+      "path": "images/S13X4Y1hor\u00faca\u010dokol\u00e1da.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y2opisovanien\u00e1pojov.png",
+      "path": "images/S13X0Y2opisovanien\u00e1pojov.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X1Y2mlieko.png",
+      "path": "images/S13X1Y2mlieko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X2Y2voda.png",
+      "path": "images/S13X2Y2voda.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X0Y3d\u017e\u00fas.png",
+      "path": "images/S13X0Y3d\u017e\u00fas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X1Y3smoothie.png",
+      "path": "images/S13X1Y3smoothie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X2Y3kokteil.png",
+      "path": "images/S13X2Y3kokteil.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X3Y3bublinkov\u00fdn\u00e1poj.png",
+      "path": "images/S13X3Y3bublinkov\u00fdn\u00e1poj.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X4Y3alkohol.png",
+      "path": "images/S13X4Y3alkohol.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X1Y4s.png",
+      "path": "images/S13X1Y4s.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S13X2Y4a.png",
+      "path": "images/S13X2Y4a.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate n\u00e1poje",
+  "sounds": []
+}

@@ -1,0 +1,265 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S21X0Y0\u0434\u0430.png",
+      "label": "\u0414\u0430"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "\u041e\u043f\u0438\u0441\u0432\u0430\u043d\u0435 \u043d\u0430\u043f\u0438\u0442\u043a\u0438"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S21X4Y0\u043d\u0435.png",
+      "label": "\u041d\u0435"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S21X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "label": "\u0412\u0441\u0438\u0447\u043a\u0438 \u0434\u0443\u043c\u0438",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S21X1Y1\u0433\u043e\u043b\u044f\u043c\u0430\u0447\u0430\u0448\u0430.png",
+      "label": "\u0413\u043e\u043b\u044f\u043c\u0430 \u0447\u0430\u0448\u0430"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S21X2Y1\u043c\u0430\u043b\u043a\u0430\u0447\u0430\u0448\u0430.png",
+      "label": "\u041c\u0430\u043b\u043a\u0430 \u0447\u0430\u0448\u0430"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S21X3Y1\u0441\u043b\u0430\u043c\u043a\u0430.png",
+      "label": "\u0421\u043b\u0430\u043c\u043a\u0430"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S21X0Y2\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u043d\u0430\u0447\u0430\u0448\u0430.png",
+      "label": "\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u043d\u0430 \u0447\u0430\u0448\u0430"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S21X1Y2\u0434\u0438\u0435\u0442\u0438\u0447\u043d\u043e.png",
+      "label": "\u0414\u0438\u0435\u0442\u0438\u0447\u043d\u043e"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S21X2Y2\u0437\u0430\u0445\u0430\u0440.png",
+      "label": "\u0417\u0430\u0445\u0430\u0440"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S21X0Y3\u0433\u043e\u043b\u044f\u043c\u043e.png",
+      "label": "\u0413\u043e\u043b\u044f\u043c\u043e"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S21X1Y3\u0441\u0440\u0435\u0434\u043d\u043e.png",
+      "label": "\u0421\u0440\u0435\u0434\u043d\u043e"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S21X2Y3\u043c\u0430\u043b\u043a\u043e.png",
+      "label": "\u041c\u0430\u043b\u043a\u043e"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S21X0Y4\u0433\u043e\u0440\u0435\u0449\u043e.png",
+      "label": "\u0413\u043e\u0440\u0435\u0449\u043e"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S21X1Y4\u0441\u0442\u0443\u0434\u0435\u043d\u043e.png",
+      "label": "\u0421\u0442\u0443\u0434\u0435\u043d\u043e"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "Delete Word"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        null
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        null,
+        null
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        null,
+        null
+      ],
+      [
+        "04",
+        "14",
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "\u043e\u043f\u0438\u0441\u0432\u0430\u043d\u0435\u043d\u0430\u043f\u0438\u0442\u043a\u0438",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y0\u0434\u0430.png",
+      "path": "images/S21X0Y0\u0434\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X4Y0\u043d\u0435.png",
+      "path": "images/S21X4Y0\u043d\u0435.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "path": "images/S21X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y1\u0433\u043e\u043b\u044f\u043c\u0430\u0447\u0430\u0448\u0430.png",
+      "path": "images/S21X1Y1\u0433\u043e\u043b\u044f\u043c\u0430\u0447\u0430\u0448\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y1\u043c\u0430\u043b\u043a\u0430\u0447\u0430\u0448\u0430.png",
+      "path": "images/S21X2Y1\u043c\u0430\u043b\u043a\u0430\u0447\u0430\u0448\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X3Y1\u0441\u043b\u0430\u043c\u043a\u0430.png",
+      "path": "images/S21X3Y1\u0441\u043b\u0430\u043c\u043a\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y2\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u043d\u0430\u0447\u0430\u0448\u0430.png",
+      "path": "images/S21X0Y2\u0441\u043f\u0435\u0446\u0438\u0430\u043b\u043d\u0430\u0447\u0430\u0448\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y2\u0434\u0438\u0435\u0442\u0438\u0447\u043d\u043e.png",
+      "path": "images/S21X1Y2\u0434\u0438\u0435\u0442\u0438\u0447\u043d\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y2\u0437\u0430\u0445\u0430\u0440.png",
+      "path": "images/S21X2Y2\u0437\u0430\u0445\u0430\u0440.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y3\u0433\u043e\u043b\u044f\u043c\u043e.png",
+      "path": "images/S21X0Y3\u0433\u043e\u043b\u044f\u043c\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y3\u0441\u0440\u0435\u0434\u043d\u043e.png",
+      "path": "images/S21X1Y3\u0441\u0440\u0435\u0434\u043d\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y3\u043c\u0430\u043b\u043a\u043e.png",
+      "path": "images/S21X2Y3\u043c\u0430\u043b\u043a\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y4\u0433\u043e\u0440\u0435\u0449\u043e.png",
+      "path": "images/S21X0Y4\u0433\u043e\u0440\u0435\u0449\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y4\u0441\u0442\u0443\u0434\u0435\u043d\u043e.png",
+      "path": "images/S21X1Y4\u0441\u0442\u0443\u0434\u0435\u043d\u043e.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate \u043e\u043f\u0438\u0441\u0432\u0430\u043d\u0435\u043d\u0430\u043f\u0438\u0442\u043a\u0438",
+  "sounds": []
+}

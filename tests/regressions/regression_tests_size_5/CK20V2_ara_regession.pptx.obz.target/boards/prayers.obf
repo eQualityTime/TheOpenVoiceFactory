@@ -1,0 +1,370 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S90X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "label": "\u0646\u064e\u0639\u064e\u0645"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Prayers"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S90X4Y0\u0644\u0627.png",
+      "label": "\u0644\u0627"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S90X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "label": "\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629 \u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S90X1Y1prayers.png",
+      "label": "prayers"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S90X2Y1fajrprayer.png",
+      "label": "Fajr prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S90X3Y1dhuhrprayer.png",
+      "label": "Dhuhr prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S90X4Y1asrprayer.png",
+      "label": "Asr prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S90X0Y2ishaprayer.png",
+      "label": "Isha prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S90X1Y2prayer.png",
+      "label": "prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S90X2Y2allahuakbar.png",
+      "label": "Allahu Akbar"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S90X3Y2prayer.png",
+      "label": "prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S90X4Y2prayer.png",
+      "label": "prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S90X0Y3allahuakbar.png",
+      "label": "Allahu Akbar"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S90X1Y3samiallahuimanhamidah.png",
+      "label": "Sami'Allahu iman hamidah"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S90X2Y3allahuakbar.png",
+      "label": "Allahu Akbar"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S90X3Y3prayer.png",
+      "label": "prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S90X4Y3allahuakbar.png",
+      "label": "Allahu Akbar"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S90X0Y4prayer.png",
+      "label": "prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S90X1Y4prayer.png",
+      "label": "prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S90X2Y4prayer.png",
+      "label": "prayer"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S90X3Y4assalamualaikumwarahmatullah.png",
+      "label": "Assalamu alaikum wa rahmatullah"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S90X4Y4assalamualaikumwarahmatullah.png",
+      "label": "Assalamu alaikum wa rahmatullah"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "prayers",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "path": "images/S90X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X4Y0\u0644\u0627.png",
+      "path": "images/S90X4Y0\u0644\u0627.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "path": "images/S90X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X1Y1prayers.png",
+      "path": "images/S90X1Y1prayers.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X2Y1fajrprayer.png",
+      "path": "images/S90X2Y1fajrprayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X3Y1dhuhrprayer.png",
+      "path": "images/S90X3Y1dhuhrprayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X4Y1asrprayer.png",
+      "path": "images/S90X4Y1asrprayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X0Y2ishaprayer.png",
+      "path": "images/S90X0Y2ishaprayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X1Y2prayer.png",
+      "path": "images/S90X1Y2prayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X2Y2allahuakbar.png",
+      "path": "images/S90X2Y2allahuakbar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X3Y2prayer.png",
+      "path": "images/S90X3Y2prayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X4Y2prayer.png",
+      "path": "images/S90X4Y2prayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X0Y3allahuakbar.png",
+      "path": "images/S90X0Y3allahuakbar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X1Y3samiallahuimanhamidah.png",
+      "path": "images/S90X1Y3samiallahuimanhamidah.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X2Y3allahuakbar.png",
+      "path": "images/S90X2Y3allahuakbar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X3Y3prayer.png",
+      "path": "images/S90X3Y3prayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X4Y3allahuakbar.png",
+      "path": "images/S90X4Y3allahuakbar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X0Y4prayer.png",
+      "path": "images/S90X0Y4prayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X1Y4prayer.png",
+      "path": "images/S90X1Y4prayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X2Y4prayer.png",
+      "path": "images/S90X2Y4prayer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X3Y4assalamualaikumwarahmatullah.png",
+      "path": "images/S90X3Y4assalamualaikumwarahmatullah.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S90X4Y4assalamualaikumwarahmatullah.png",
+      "path": "images/S90X4Y4assalamualaikumwarahmatullah.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate prayers",
+  "sounds": []
+}

@@ -1,0 +1,258 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S21X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Describing drinks"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S21X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S21X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S21X1Y1pinta.png",
+      "label": "pinta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S21X2Y1mediapinta.png",
+      "label": "Media pinta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S21X3Y1paja.png",
+      "label": "paja"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S21X0Y2copaespecial.png",
+      "label": "Copa especial"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S21X1Y2diet.png",
+      "label": "diet"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S21X2Y2az\u00facar.png",
+      "label": "az\u00facar"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S21X0Y3largo.png",
+      "label": "largo"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S21X1Y3mediano.png",
+      "label": "mediano"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S21X2Y3peque\u00f1o.png",
+      "label": "peque\u00f1o"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S21X0Y4caliente.png",
+      "label": "caliente"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S21X1Y4fr\u00edo.png",
+      "label": "fr\u00edo"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        null
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        null,
+        null
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        null,
+        null
+      ],
+      [
+        "04",
+        "14",
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "describingdrinks",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y0yes.png",
+      "path": "images/S21X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X4Y0no.png",
+      "path": "images/S21X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S21X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y1pinta.png",
+      "path": "images/S21X1Y1pinta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y1mediapinta.png",
+      "path": "images/S21X2Y1mediapinta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X3Y1paja.png",
+      "path": "images/S21X3Y1paja.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y2copaespecial.png",
+      "path": "images/S21X0Y2copaespecial.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y2diet.png",
+      "path": "images/S21X1Y2diet.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y2az\u00facar.png",
+      "path": "images/S21X2Y2az\u00facar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y3largo.png",
+      "path": "images/S21X0Y3largo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y3mediano.png",
+      "path": "images/S21X1Y3mediano.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y3peque\u00f1o.png",
+      "path": "images/S21X2Y3peque\u00f1o.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y4caliente.png",
+      "path": "images/S21X0Y4caliente.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y4fr\u00edo.png",
+      "path": "images/S21X1Y4fr\u00edo.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate describingdrinks",
+  "sounds": []
+}

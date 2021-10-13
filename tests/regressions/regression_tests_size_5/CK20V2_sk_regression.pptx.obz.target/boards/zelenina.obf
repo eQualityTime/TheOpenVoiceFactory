@@ -1,0 +1,359 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S11X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "zelenina"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S11X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S11X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S11X1Y1zelenina.png",
+      "label": "zelenina"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S11X2Y1zemiak.png",
+      "label": "zemiak",
+      "load_board": {
+        "path": "boards/zemiak.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S11X3Y1bakla\u017e\u00e1n.png",
+      "label": "bakla\u017e\u00e1n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S11X4Y1brokolica.png",
+      "label": "brokolica"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S11X0Y2tekvicamu\u0161k\u00e1tov\u00e1.png",
+      "label": "tekvica mu\u0161k\u00e1tov\u00e1"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S11X1Y2kapusta.png",
+      "label": "kapusta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S11X2Y2karfiol.png",
+      "label": "karfiol"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S11X3Y2cuketa.png",
+      "label": "cuketa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S11X4Y2mrkva.png",
+      "label": "mrkva"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S11X0Y3p\u00f3r.png",
+      "label": "p\u00f3r"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S11X1Y3\u0161parg\u013ea.png",
+      "label": "\u0161parg\u013ea"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S11X2Y3hrach.png",
+      "label": "hrach"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S11X3Y3cibu\u013ea.png",
+      "label": "cibu\u013ea"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S11X4Y3zelen\u00e1fazu\u013ea.png",
+      "label": "zelen\u00e1 fazu\u013ea"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S11X0Y4tekvica.png",
+      "label": "tekvica"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S11X1Y4huba.png",
+      "label": "huba"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S11X2Y4okr\u00fahlica.png",
+      "label": "okr\u00fahlica"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S11X3Y4kukurica.png",
+      "label": "kukurica"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "zelenina",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y0\u00e1no.png",
+      "path": "images/S11X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y0nie.png",
+      "path": "images/S11X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S11X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y1zelenina.png",
+      "path": "images/S11X1Y1zelenina.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y1zemiak.png",
+      "path": "images/S11X2Y1zemiak.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y1bakla\u017e\u00e1n.png",
+      "path": "images/S11X3Y1bakla\u017e\u00e1n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y1brokolica.png",
+      "path": "images/S11X4Y1brokolica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y2tekvicamu\u0161k\u00e1tov\u00e1.png",
+      "path": "images/S11X0Y2tekvicamu\u0161k\u00e1tov\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y2kapusta.png",
+      "path": "images/S11X1Y2kapusta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y2karfiol.png",
+      "path": "images/S11X2Y2karfiol.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y2cuketa.png",
+      "path": "images/S11X3Y2cuketa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y2mrkva.png",
+      "path": "images/S11X4Y2mrkva.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y3p\u00f3r.png",
+      "path": "images/S11X0Y3p\u00f3r.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y3\u0161parg\u013ea.png",
+      "path": "images/S11X1Y3\u0161parg\u013ea.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y3hrach.png",
+      "path": "images/S11X2Y3hrach.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y3cibu\u013ea.png",
+      "path": "images/S11X3Y3cibu\u013ea.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y3zelen\u00e1fazu\u013ea.png",
+      "path": "images/S11X4Y3zelen\u00e1fazu\u013ea.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y4tekvica.png",
+      "path": "images/S11X0Y4tekvica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y4huba.png",
+      "path": "images/S11X1Y4huba.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y4okr\u00fahlica.png",
+      "path": "images/S11X2Y4okr\u00fahlica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y4kukurica.png",
+      "path": "images/S11X3Y4kukurica.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate zelenina",
+  "sounds": []
+}

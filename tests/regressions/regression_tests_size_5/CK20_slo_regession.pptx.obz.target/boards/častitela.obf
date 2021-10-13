@@ -1,0 +1,373 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S66X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "\u010casti tela"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S66X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S66X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S66X1Y1telo.png",
+      "label": "telo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S66X2Y1dla\u0148.png",
+      "label": "dla\u0148"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S66X3Y1hlava.png",
+      "label": "hlava"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S66X4Y1prst.png",
+      "label": "prst"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S66X0Y2hru\u010f.png",
+      "label": "hru\u010f"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S66X1Y2ucho.png",
+      "label": "ucho"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S66X2Y2tv\u00e1r.png",
+      "label": "tv\u00e1r"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S66X3Y2vlasy.png",
+      "label": "vlasy"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S66X4Y2\u00fasta.png",
+      "label": "\u00fasta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S66X0Y3chrb\u00e1t.png",
+      "label": "chrb\u00e1t"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S66X1Y3nos.png",
+      "label": "nos"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S66X2Y3ruka.png",
+      "label": "ruka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S66X3Y3chodidlo.png",
+      "label": "chodidlo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S66X4Y3oko.png",
+      "label": "oko"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S66X0Y4brucho.png",
+      "label": "brucho"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S66X1Y4krk.png",
+      "label": "krk"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S66X2Y4noha.png",
+      "label": "noha"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S66X3Y4prstnanohe.png",
+      "label": "prst na nohe"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S66X4Y4pohlavn\u00e9org\u00e1ny.png",
+      "label": "pohlavn\u00e9 org\u00e1ny",
+      "load_board": {
+        "path": "boards/pohlavn\u00e9org\u00e1ny.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "\u010dastitela",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X0Y0\u00e1no.png",
+      "path": "images/S66X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X4Y0nie.png",
+      "path": "images/S66X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S66X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X1Y1telo.png",
+      "path": "images/S66X1Y1telo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X2Y1dla\u0148.png",
+      "path": "images/S66X2Y1dla\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X3Y1hlava.png",
+      "path": "images/S66X3Y1hlava.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X4Y1prst.png",
+      "path": "images/S66X4Y1prst.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X0Y2hru\u010f.png",
+      "path": "images/S66X0Y2hru\u010f.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X1Y2ucho.png",
+      "path": "images/S66X1Y2ucho.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X2Y2tv\u00e1r.png",
+      "path": "images/S66X2Y2tv\u00e1r.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X3Y2vlasy.png",
+      "path": "images/S66X3Y2vlasy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X4Y2\u00fasta.png",
+      "path": "images/S66X4Y2\u00fasta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X0Y3chrb\u00e1t.png",
+      "path": "images/S66X0Y3chrb\u00e1t.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X1Y3nos.png",
+      "path": "images/S66X1Y3nos.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X2Y3ruka.png",
+      "path": "images/S66X2Y3ruka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X3Y3chodidlo.png",
+      "path": "images/S66X3Y3chodidlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X4Y3oko.png",
+      "path": "images/S66X4Y3oko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X0Y4brucho.png",
+      "path": "images/S66X0Y4brucho.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X1Y4krk.png",
+      "path": "images/S66X1Y4krk.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X2Y4noha.png",
+      "path": "images/S66X2Y4noha.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X3Y4prstnanohe.png",
+      "path": "images/S66X3Y4prstnanohe.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S66X4Y4pohlavn\u00e9org\u00e1ny.png",
+      "path": "images/S66X4Y4pohlavn\u00e9org\u00e1ny.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate \u010dastitela",
+  "sounds": []
+}

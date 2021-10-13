@@ -1,0 +1,304 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S37X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Nie je mi dobre"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S37X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S37X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S37X1Y1bol\u00edma.png",
+      "label": "Bol\u00ed ma",
+      "load_board": {
+        "path": "boards/\u010dastitel.obf"
+      },
+      "vocalization": "Bol\u00ed ma "
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S37X2Y1c\u00edtim.png",
+      "label": "C\u00edtim"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S37X3Y1hlava.png",
+      "label": "hlava"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S37X4Y1au.png",
+      "label": "au"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S37X0Y2hrudn\u00edk.png",
+      "label": "hrudn\u00edk"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S37X1Y2ucho.png",
+      "label": "ucho"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S37X3Y2jemizle.png",
+      "label": "Je mi zle"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S37X4Y2zuby.png",
+      "label": "zuby"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S37X1Y3m\u00e1mn\u00e1dchu.png",
+      "label": "M\u00e1m n\u00e1dchu"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S37X3Y3svrb\u00edma.png",
+      "label": "Svrb\u00ed ma"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S37X0Y4brucho.png",
+      "label": "brucho"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S37X1Y4hrdlo.png",
+      "label": "hrdlo"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S37X2Y4k\u0155\u010d.png",
+      "label": "k\u0155\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "C"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        null,
+        "32",
+        "42"
+      ],
+      [
+        null,
+        "13",
+        null,
+        "33",
+        null
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "niejemidobre",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y0\u00e1no.png",
+      "path": "images/S37X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X4Y0nie.png",
+      "path": "images/S37X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S37X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y1bol\u00edma.png",
+      "path": "images/S37X1Y1bol\u00edma.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X2Y1c\u00edtim.png",
+      "path": "images/S37X2Y1c\u00edtim.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X3Y1hlava.png",
+      "path": "images/S37X3Y1hlava.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X4Y1au.png",
+      "path": "images/S37X4Y1au.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y2hrudn\u00edk.png",
+      "path": "images/S37X0Y2hrudn\u00edk.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y2ucho.png",
+      "path": "images/S37X1Y2ucho.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X3Y2jemizle.png",
+      "path": "images/S37X3Y2jemizle.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X4Y2zuby.png",
+      "path": "images/S37X4Y2zuby.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y3unknown.png",
+      "path": "images/S37X0Y3unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y3m\u00e1mn\u00e1dchu.png",
+      "path": "images/S37X1Y3m\u00e1mn\u00e1dchu.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X3Y3svrb\u00edma.png",
+      "path": "images/S37X3Y3svrb\u00edma.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y4brucho.png",
+      "path": "images/S37X0Y4brucho.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y4hrdlo.png",
+      "path": "images/S37X1Y4hrdlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X2Y4k\u0155\u010d.png",
+      "path": "images/S37X2Y4k\u0155\u010d.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate niejemidobre",
+  "sounds": []
+}

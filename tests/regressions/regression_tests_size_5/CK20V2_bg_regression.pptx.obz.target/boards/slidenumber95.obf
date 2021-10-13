@@ -1,0 +1,146 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S94X0Y0\u0434\u0430.png",
+      "label": "\u0414\u0430"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "30",
+      "image_id": "",
+      "label": "\u0413\u043e\u0432\u043e\u0440\u0438"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S94X4Y0\u043d\u0435.png",
+      "label": "\u041d\u0435"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S94X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "label": "\u0412\u0441\u0438\u0447\u043a\u0438 \u0434\u0443\u043c\u0438",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "",
+      "label": "2"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "",
+      "label": "3"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "",
+      "label": "\u041e\u0442\u043d\u043e\u0441\u043d\u043e \u0442\u0430\u0437\u0438 \u0441\u043d\u0438\u043c\u043a\u0430"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "",
+      "label": "4"
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "",
+      "label": "\u041f\u0440\u0435\u0434\u0438\u0448\u043d\u0430 \u0441\u043d\u0438\u043c\u043a\u0430"
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "",
+      "label": "\u0421\u043b\u0435\u0434\u0432\u0430\u0449\u0430 \u0441\u043d\u0438\u043c\u043a\u0430"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        null,
+        "30",
+        "40"
+      ],
+      [
+        "01",
+        null,
+        "21",
+        "31",
+        null
+      ],
+      [
+        "02",
+        "12",
+        null,
+        null,
+        null
+      ],
+      [
+        "03",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "slidenumber95",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X0Y0\u0434\u0430.png",
+      "path": "images/S94X0Y0\u0434\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X4Y0\u043d\u0435.png",
+      "path": "images/S94X4Y0\u043d\u0435.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "path": "images/S94X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate slidenumber95",
+  "sounds": []
+}

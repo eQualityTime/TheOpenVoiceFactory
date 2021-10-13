@@ -1,0 +1,304 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S37X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "I dont feel well"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S37X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S37X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S37X1Y1tengodolorenmi.png",
+      "label": "tengo dolor en mi",
+      "load_board": {
+        "path": "boards/bodypart.obf"
+      },
+      "vocalization": "I have a pain in my"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S37X2Y1mesiento.png",
+      "label": "Me siento"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S37X3Y1dolordecabeza.png",
+      "label": "dolor de cabeza"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S37X4Y1ay.png",
+      "label": "ay"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S37X0Y2dolordepecho.png",
+      "label": "dolor de pecho"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S37X1Y2dolordeo\u00eddo.png",
+      "label": "dolor de o\u00eddo"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S37X3Y2enfermo.png",
+      "label": "enfermo"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S37X4Y2dolordedientes.png",
+      "label": "dolor de dientes"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S37X1Y3resfriado.png",
+      "label": "resfriado"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S37X3Y3picar.png",
+      "label": "picar"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S37X0Y4dolordeest\u00f3mago.png",
+      "label": "dolor de est\u00f3mago"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S37X1Y4dolordegarganta.png",
+      "label": "dolor de garganta"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S37X2Y4calambre.png",
+      "label": "calambre"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "C"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        null,
+        "32",
+        "42"
+      ],
+      [
+        null,
+        "13",
+        null,
+        "33",
+        null
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "idontfeelwell",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y0yes.png",
+      "path": "images/S37X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X4Y0no.png",
+      "path": "images/S37X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S37X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y1tengodolorenmi.png",
+      "path": "images/S37X1Y1tengodolorenmi.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X2Y1mesiento.png",
+      "path": "images/S37X2Y1mesiento.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X3Y1dolordecabeza.png",
+      "path": "images/S37X3Y1dolordecabeza.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X4Y1ay.png",
+      "path": "images/S37X4Y1ay.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y2dolordepecho.png",
+      "path": "images/S37X0Y2dolordepecho.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y2dolordeo\u00eddo.png",
+      "path": "images/S37X1Y2dolordeo\u00eddo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X3Y2enfermo.png",
+      "path": "images/S37X3Y2enfermo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X4Y2dolordedientes.png",
+      "path": "images/S37X4Y2dolordedientes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y3unknown.png",
+      "path": "images/S37X0Y3unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y3resfriado.png",
+      "path": "images/S37X1Y3resfriado.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X3Y3picar.png",
+      "path": "images/S37X3Y3picar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X0Y4dolordeest\u00f3mago.png",
+      "path": "images/S37X0Y4dolordeest\u00f3mago.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X1Y4dolordegarganta.png",
+      "path": "images/S37X1Y4dolordegarganta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S37X2Y4calambre.png",
+      "path": "images/S37X2Y4calambre.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate idontfeelwell",
+  "sounds": []
+}

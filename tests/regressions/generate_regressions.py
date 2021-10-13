@@ -25,24 +25,18 @@ from pagesetparser.pageset import Pageset
 
 
 
-def sha256sum(filename):
-    h  = hashlib.sha256()
-    b  = bytearray(128*1024)
-    mv = memoryview(b)
-    with open(filename, 'rb', buffering=0) as f:
-        for n in iter(lambda : f.readinto(mv), 0):
-            h.update(mv[:n])
-    return h.hexdigest()
 
-def generate_hash(filename,gridSize): 
+def generate_obz(filename,gridSize): 
         gridSize = 5
         parser.gridSize=gridSize
-        obf_dest='../obf/data/'
+        obf_dest=filename+".obz.attempt/"
+        if not os.path.exists(obf_dest):
+            os.makedirs(obf_dest)
+        if not os.path.exists(obf_dest+"boards/"):
+            os.makedirs(obf_dest+"boards/")
         pageset = Pageset(filename,obf_dest, gridSize)
         pageset.extract_and_label_images(obf_dest)
         parser.write_to_obf(pageset.grids, obf_dest)
-        hashis=sha256sum(obf_dest+'pageset.obz')
-        print(f"{hashis} is the hash value for {filename}")
 
 def generate(filename, gridSize):
         prs = Presentation(filename)

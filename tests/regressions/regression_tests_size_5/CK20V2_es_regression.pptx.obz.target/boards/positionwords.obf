@@ -1,0 +1,345 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S38X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Position words"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S38X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S38X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S38X1Y1posici\u00f3ndelaspalabras.png",
+      "label": "posici\u00f3n de las palabras",
+      "load_board": {
+        "path": "boards/littlewords.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S38X2Y1diversi\u00f3n.png",
+      "label": "diversi\u00f3n"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S38X3Y1fuera.png",
+      "label": "fuera"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S38X0Y2todo.png",
+      "label": "todo"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S38X1Y2esto.png",
+      "label": "esto"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S38X2Y2eso.png",
+      "label": "eso"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "",
+      "label": "es"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "",
+      "label": "soy"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S38X0Y3nada.png",
+      "label": "nada"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S38X1Y3para.png",
+      "label": "para"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S38X2Y3de.png",
+      "label": "de"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S38X3Y3cerca.png",
+      "label": "cerca"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "",
+      "label": "ser"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S38X0Y4algunos.png",
+      "label": "algunos"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S38X1Y4con.png",
+      "label": "con"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S38X2Y4y.png",
+      "label": "y"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S38X3Y4arroba.png",
+      "label": "arroba"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S38X4Y4ella.png",
+      "label": "El/la"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        null
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "positionwords",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X0Y0yes.png",
+      "path": "images/S38X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X4Y0no.png",
+      "path": "images/S38X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S38X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X1Y1posici\u00f3ndelaspalabras.png",
+      "path": "images/S38X1Y1posici\u00f3ndelaspalabras.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X2Y1diversi\u00f3n.png",
+      "path": "images/S38X2Y1diversi\u00f3n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X3Y1fuera.png",
+      "path": "images/S38X3Y1fuera.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X4Y1unknown.png",
+      "path": "images/S38X4Y1unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X0Y2todo.png",
+      "path": "images/S38X0Y2todo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X1Y2esto.png",
+      "path": "images/S38X1Y2esto.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X2Y2eso.png",
+      "path": "images/S38X2Y2eso.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X0Y3nada.png",
+      "path": "images/S38X0Y3nada.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X1Y3para.png",
+      "path": "images/S38X1Y3para.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X2Y3de.png",
+      "path": "images/S38X2Y3de.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X3Y3cerca.png",
+      "path": "images/S38X3Y3cerca.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X0Y4algunos.png",
+      "path": "images/S38X0Y4algunos.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X1Y4con.png",
+      "path": "images/S38X1Y4con.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X2Y4y.png",
+      "path": "images/S38X2Y4y.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X3Y4arroba.png",
+      "path": "images/S38X3Y4arroba.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S38X4Y4ella.png",
+      "path": "images/S38X4Y4ella.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate positionwords",
+  "sounds": []
+}

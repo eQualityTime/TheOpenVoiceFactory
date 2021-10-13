@@ -1,0 +1,359 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S11X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "vegetables"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S11X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S11X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S11X1Y1verduras.png",
+      "label": "verduras"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S11X2Y1patata.png",
+      "label": "patata",
+      "load_board": {
+        "path": "boards/potato.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S11X3Y1berenjena.png",
+      "label": "berenjena"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S11X4Y1broccoli.png",
+      "label": "broccoli"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S11X0Y2calabaza.png",
+      "label": "calabaza"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S11X1Y2repollo.png",
+      "label": "repollo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S11X2Y2coliflor.png",
+      "label": "coliflor"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S11X3Y2calabac\u00edn.png",
+      "label": "calabac\u00edn"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S11X4Y2zanahoria.png",
+      "label": "zanahoria"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S11X0Y3puerro.png",
+      "label": "puerro"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S11X1Y3esp\u00e1rragos.png",
+      "label": "esp\u00e1rragos"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S11X2Y3guisantes.png",
+      "label": "guisantes"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S11X3Y3cebolla.png",
+      "label": "cebolla"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S11X4Y3jud\u00edasverdes.png",
+      "label": "jud\u00edas verdes"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S11X0Y4calabaza.png",
+      "label": "calabaza"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S11X1Y4hongos.png",
+      "label": "hongos"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S11X2Y4nabo.png",
+      "label": "nabo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S11X3Y4ma\u00edzdulce.png",
+      "label": "ma\u00edz dulce"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "vegetables",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y0yes.png",
+      "path": "images/S11X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y0no.png",
+      "path": "images/S11X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S11X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y1verduras.png",
+      "path": "images/S11X1Y1verduras.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y1patata.png",
+      "path": "images/S11X2Y1patata.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y1berenjena.png",
+      "path": "images/S11X3Y1berenjena.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y1broccoli.png",
+      "path": "images/S11X4Y1broccoli.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y2calabaza.png",
+      "path": "images/S11X0Y2calabaza.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y2repollo.png",
+      "path": "images/S11X1Y2repollo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y2coliflor.png",
+      "path": "images/S11X2Y2coliflor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y2calabac\u00edn.png",
+      "path": "images/S11X3Y2calabac\u00edn.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y2zanahoria.png",
+      "path": "images/S11X4Y2zanahoria.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y3puerro.png",
+      "path": "images/S11X0Y3puerro.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y3esp\u00e1rragos.png",
+      "path": "images/S11X1Y3esp\u00e1rragos.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y3guisantes.png",
+      "path": "images/S11X2Y3guisantes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y3cebolla.png",
+      "path": "images/S11X3Y3cebolla.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X4Y3jud\u00edasverdes.png",
+      "path": "images/S11X4Y3jud\u00edasverdes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X0Y4calabaza.png",
+      "path": "images/S11X0Y4calabaza.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X1Y4hongos.png",
+      "path": "images/S11X1Y4hongos.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X2Y4nabo.png",
+      "path": "images/S11X2Y4nabo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S11X3Y4ma\u00edzdulce.png",
+      "path": "images/S11X3Y4ma\u00edzdulce.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate vegetables",
+  "sounds": []
+}

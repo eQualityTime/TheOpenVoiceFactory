@@ -1,0 +1,258 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S21X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Opisovanie n\u00e1pojov"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S21X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S21X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S21X1Y1poh\u00e1r.png",
+      "label": "poh\u00e1r"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S21X2Y1polpoh\u00e1ra.png",
+      "label": "pol poh\u00e1ra"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S21X3Y1slamka.png",
+      "label": "slamka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S21X0Y2\u0161peci\u00e1lna\u0161\u00e1lka.png",
+      "label": "\u0161peci\u00e1lna \u0161\u00e1lka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S21X1Y2bezcukru.png",
+      "label": "bez cukru"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S21X2Y2scukrom.png",
+      "label": "s cukrom"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S21X0Y3ve\u013ek\u00fd.png",
+      "label": "ve\u013ek\u00fd"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S21X1Y3stredneve\u013ek\u00fd.png",
+      "label": "stredne ve\u013ek\u00fd"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S21X2Y3mal\u00fd.png",
+      "label": "mal\u00fd"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S21X0Y4hor\u00faci.png",
+      "label": "hor\u00faci"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S21X1Y4studen\u00fd.png",
+      "label": "studen\u00fd"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        null
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        null,
+        null
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        null,
+        null
+      ],
+      [
+        "04",
+        "14",
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "opisovanien\u00e1pojov",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y0\u00e1no.png",
+      "path": "images/S21X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X4Y0nie.png",
+      "path": "images/S21X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S21X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y1poh\u00e1r.png",
+      "path": "images/S21X1Y1poh\u00e1r.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y1polpoh\u00e1ra.png",
+      "path": "images/S21X2Y1polpoh\u00e1ra.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X3Y1slamka.png",
+      "path": "images/S21X3Y1slamka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y2\u0161peci\u00e1lna\u0161\u00e1lka.png",
+      "path": "images/S21X0Y2\u0161peci\u00e1lna\u0161\u00e1lka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y2bezcukru.png",
+      "path": "images/S21X1Y2bezcukru.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y2scukrom.png",
+      "path": "images/S21X2Y2scukrom.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y3ve\u013ek\u00fd.png",
+      "path": "images/S21X0Y3ve\u013ek\u00fd.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y3stredneve\u013ek\u00fd.png",
+      "path": "images/S21X1Y3stredneve\u013ek\u00fd.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X2Y3mal\u00fd.png",
+      "path": "images/S21X2Y3mal\u00fd.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X0Y4hor\u00faci.png",
+      "path": "images/S21X0Y4hor\u00faci.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S21X1Y4studen\u00fd.png",
+      "path": "images/S21X1Y4studen\u00fd.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate opisovanien\u00e1pojov",
+  "sounds": []
+}

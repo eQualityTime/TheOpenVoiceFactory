@@ -1,0 +1,272 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S35X0Y0\u0434\u0430.png",
+      "label": "\u0414\u0430"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "\u0421\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S35X4Y0\u043d\u0435.png",
+      "label": "\u041d\u0435"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S35X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "label": "\u0412\u0441\u0438\u0447\u043a\u0438 \u0434\u0443\u043c\u0438",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S35X1Y1\u0442\u0430\u0442\u043a\u043e.png",
+      "label": "\u0422\u0430\u0442\u043a\u043e"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S35X2Y1\u043c\u0430\u0439\u043a\u0430.png",
+      "label": "\u041c\u0430\u0439\u043a\u0430"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S35X3Y1\u0436\u0435\u043d\u0430.png",
+      "label": "\u0436\u0435\u043d\u0430"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S35X4Y1\u0431\u0430\u0449\u0430.png",
+      "label": "\u0431\u0430\u0449\u0430"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S35X0Y2\u0441\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e.png",
+      "label": "\u0421\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S35X1Y2\u0431\u0440\u0430\u0442.png",
+      "label": "\u0411\u0440\u0430\u0442"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S35X2Y2\u0441\u0435\u0441\u0442\u0440\u0430.png",
+      "label": "\u0421\u0435\u0441\u0442\u0440\u0430"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S35X3Y2\u0431\u0435\u0431\u0435.png",
+      "label": "\u0431\u0435\u0431\u0435"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S35X4Y2\u0434\u0435\u0442\u0435.png",
+      "label": "\u0434\u0435\u0442\u0435"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S35X1Y3\u0434\u044f\u0434\u043e.png",
+      "label": "\u0414\u044f\u0434\u043e"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S35X2Y3\u0431\u0430\u0431\u0430.png",
+      "label": "\u0411\u0430\u0431\u0430"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "",
+      "label": "Job"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "Family"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        null,
+        "13",
+        "23",
+        null,
+        "43"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "\u0441\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y0\u0434\u0430.png",
+      "path": "images/S35X0Y0\u0434\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y0\u043d\u0435.png",
+      "path": "images/S35X4Y0\u043d\u0435.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "path": "images/S35X0Y1\u0432\u0441\u0438\u0447\u043a\u0438\u0434\u0443\u043c\u0438.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y1\u0442\u0430\u0442\u043a\u043e.png",
+      "path": "images/S35X1Y1\u0442\u0430\u0442\u043a\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y1\u043c\u0430\u0439\u043a\u0430.png",
+      "path": "images/S35X2Y1\u043c\u0430\u0439\u043a\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X3Y1\u0436\u0435\u043d\u0430.png",
+      "path": "images/S35X3Y1\u0436\u0435\u043d\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y1\u0431\u0430\u0449\u0430.png",
+      "path": "images/S35X4Y1\u0431\u0430\u0449\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y2\u0441\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e.png",
+      "path": "images/S35X0Y2\u0441\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y2\u0431\u0440\u0430\u0442.png",
+      "path": "images/S35X1Y2\u0431\u0440\u0430\u0442.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y2\u0441\u0435\u0441\u0442\u0440\u0430.png",
+      "path": "images/S35X2Y2\u0441\u0435\u0441\u0442\u0440\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X3Y2\u0431\u0435\u0431\u0435.png",
+      "path": "images/S35X3Y2\u0431\u0435\u0431\u0435.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y2\u0434\u0435\u0442\u0435.png",
+      "path": "images/S35X4Y2\u0434\u0435\u0442\u0435.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y3\u0434\u044f\u0434\u043e.png",
+      "path": "images/S35X1Y3\u0434\u044f\u0434\u043e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y3\u0431\u0430\u0431\u0430.png",
+      "path": "images/S35X2Y3\u0431\u0430\u0431\u0430.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate \u0441\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e",
+  "sounds": []
+}

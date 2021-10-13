@@ -1,0 +1,267 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S83X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "label": "\u0646\u064e\u0639\u064e\u0645"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "leisure"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S83X4Y0\u0644\u0627.png",
+      "label": "\u0644\u0627"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S83X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "label": "\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629 \u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S83X1Y1mypictures.png",
+      "label": "My pictures",
+      "load_board": {
+        "path": "boards/showpictures.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S83X2Y1phone.png",
+      "label": "phone"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S83X3Y1mp3player.png",
+      "label": "MP3 player"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S83X4Y1computercontrol.png",
+      "label": "Computer control"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S83X0Y2iwant.png",
+      "label": "I want",
+      "load_board": {
+        "path": "boards/iwant.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S83X1Y2dvd.png",
+      "label": "DVD"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S83X2Y2tv.png",
+      "label": "TV"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S83X4Y2turnvolumeup.png",
+      "label": "Turn volume up"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S83X0Y3myremotecontrol.png",
+      "label": "my remote control"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S83X4Y3turnvolumedown.png",
+      "label": "Turn volume down"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S83X0Y4mystories.png",
+      "label": "My stories",
+      "load_board": {
+        "path": "boards/mystories.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        null,
+        "42"
+      ],
+      [
+        "03",
+        null,
+        null,
+        null,
+        "43"
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "leisure",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "path": "images/S83X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X4Y0\u0644\u0627.png",
+      "path": "images/S83X4Y0\u0644\u0627.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "path": "images/S83X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X1Y1mypictures.png",
+      "path": "images/S83X1Y1mypictures.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X2Y1phone.png",
+      "path": "images/S83X2Y1phone.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X3Y1mp3player.png",
+      "path": "images/S83X3Y1mp3player.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X4Y1computercontrol.png",
+      "path": "images/S83X4Y1computercontrol.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X0Y2iwant.png",
+      "path": "images/S83X0Y2iwant.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X1Y2dvd.png",
+      "path": "images/S83X1Y2dvd.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X2Y2tv.png",
+      "path": "images/S83X2Y2tv.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X4Y2turnvolumeup.png",
+      "path": "images/S83X4Y2turnvolumeup.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X0Y3myremotecontrol.png",
+      "path": "images/S83X0Y3myremotecontrol.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X4Y3turnvolumedown.png",
+      "path": "images/S83X4Y3turnvolumedown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S83X0Y4mystories.png",
+      "path": "images/S83X0Y4mystories.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate leisure",
+  "sounds": []
+}

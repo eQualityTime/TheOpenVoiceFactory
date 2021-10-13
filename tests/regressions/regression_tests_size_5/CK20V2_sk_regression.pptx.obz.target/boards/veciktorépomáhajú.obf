@@ -1,0 +1,342 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S73X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Veci, ktor\u00e9 pom\u00e1haj\u00fa"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S73X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S73X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S73X1Y1znev\u00fdhodnenia.png",
+      "label": "znev\u00fdhodnenia"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S73X2Y1komunika\u010dn\u00e1kniha.png",
+      "label": "komunika\u010dn\u00e1 kniha"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S73X3Y1komunika\u010dn\u00e1pom\u00f4cka.png",
+      "label": "komunika\u010dn\u00e1 pom\u00f4cka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S73X4Y1dotykov\u00e1obrazovka.png",
+      "label": "dotykov\u00e1 obrazovka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S73X0Y2voz\u00edk.png",
+      "label": "voz\u00edk"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S73X1Y2elektrick\u00fdvoz\u00edk.png",
+      "label": "elektrick\u00fd voz\u00edk"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S73X2Y2dr\u017eiaknakomunika\u010dn\u00fapom\u00f4cku.png",
+      "label": "dr\u017eiak na komunika\u010dn\u00fa pom\u00f4cku"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S73X3Y2dr\u017eiaknasp\u00edna\u010d.png",
+      "label": "dr\u017eiak na sp\u00edna\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S73X4Y2sp\u00edna\u010d.png",
+      "label": "sp\u00edna\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S73X0Y3zdvih\u00e1k.png",
+      "label": "zdvih\u00e1k"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S73X1Y3na\u010d\u00favadlo.png",
+      "label": "na\u010d\u00favadlo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S73X2Y3okuliare.png",
+      "label": "okuliare"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S73X3Y3liek.png",
+      "label": "liek"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S73X4Y3term\u00edn.png",
+      "label": "term\u00edn"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S73X0Y4toaletn\u00e1stoli\u010dka.png",
+      "label": "toaletn\u00e1 stoli\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S73X1Y4ovl\u00e1da\u010d.png",
+      "label": "ovl\u00e1da\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S73X4Y4nab\u00edja\u010dka.png",
+      "label": "nab\u00edja\u010dka"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "veciktor\u00e9pom\u00e1haj\u00fa",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X0Y0\u00e1no.png",
+      "path": "images/S73X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X4Y0nie.png",
+      "path": "images/S73X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S73X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X1Y1znev\u00fdhodnenia.png",
+      "path": "images/S73X1Y1znev\u00fdhodnenia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X2Y1komunika\u010dn\u00e1kniha.png",
+      "path": "images/S73X2Y1komunika\u010dn\u00e1kniha.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X3Y1komunika\u010dn\u00e1pom\u00f4cka.png",
+      "path": "images/S73X3Y1komunika\u010dn\u00e1pom\u00f4cka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X4Y1dotykov\u00e1obrazovka.png",
+      "path": "images/S73X4Y1dotykov\u00e1obrazovka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X0Y2voz\u00edk.png",
+      "path": "images/S73X0Y2voz\u00edk.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X1Y2elektrick\u00fdvoz\u00edk.png",
+      "path": "images/S73X1Y2elektrick\u00fdvoz\u00edk.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X2Y2dr\u017eiaknakomunika\u010dn\u00fapom\u00f4cku.png",
+      "path": "images/S73X2Y2dr\u017eiaknakomunika\u010dn\u00fapom\u00f4cku.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X3Y2dr\u017eiaknasp\u00edna\u010d.png",
+      "path": "images/S73X3Y2dr\u017eiaknasp\u00edna\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X4Y2sp\u00edna\u010d.png",
+      "path": "images/S73X4Y2sp\u00edna\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X0Y3zdvih\u00e1k.png",
+      "path": "images/S73X0Y3zdvih\u00e1k.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X1Y3na\u010d\u00favadlo.png",
+      "path": "images/S73X1Y3na\u010d\u00favadlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X2Y3okuliare.png",
+      "path": "images/S73X2Y3okuliare.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X3Y3liek.png",
+      "path": "images/S73X3Y3liek.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X4Y3term\u00edn.png",
+      "path": "images/S73X4Y3term\u00edn.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X0Y4toaletn\u00e1stoli\u010dka.png",
+      "path": "images/S73X0Y4toaletn\u00e1stoli\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X1Y4ovl\u00e1da\u010d.png",
+      "path": "images/S73X1Y4ovl\u00e1da\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S73X4Y4nab\u00edja\u010dka.png",
+      "path": "images/S73X4Y4nab\u00edja\u010dka.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate veciktor\u00e9pom\u00e1haj\u00fa",
+  "sounds": []
+}

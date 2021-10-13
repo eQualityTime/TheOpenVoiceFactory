@@ -1,0 +1,370 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S10X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "ovocie"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S10X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S10X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S10X1Y1ovocie.png",
+      "label": "ovocie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S10X2Y1jablko.png",
+      "label": "jablko"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S10X3Y1ban\u00e1n.png",
+      "label": "ban\u00e1n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S10X4Y1avok\u00e1do.png",
+      "label": "avok\u00e1do"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S10X0Y2brusnice.png",
+      "label": "brusnice"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S10X1Y2grapefruit.png",
+      "label": "grapefruit"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S10X2Y2hrozno.png",
+      "label": "hrozno"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S10X3Y2limetka.png",
+      "label": "limetka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S10X4Y2citr\u00f3n.png",
+      "label": "citr\u00f3n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S10X0Y3\u017elt\u00fdmel\u00f3n.png",
+      "label": "\u017elt\u00fd mel\u00f3n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S10X1Y3mango.png",
+      "label": "mango"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S10X2Y3pomaran\u010d.png",
+      "label": "pomaran\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S10X3Y3slivka.png",
+      "label": "slivka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S10X4Y3anan\u00e1s.png",
+      "label": "anan\u00e1s"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S10X0Y4hru\u0161ka.png",
+      "label": "hru\u0161ka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S10X1Y4jahoda.png",
+      "label": "jahoda"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S10X2Y4kiwi.png",
+      "label": "kiwi"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S10X3Y4\u010dere\u0161\u0148a.png",
+      "label": "\u010dere\u0161\u0148a"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S10X4Y4\u010dernica.png",
+      "label": "\u010dernica"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "ovocie",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X0Y0\u00e1no.png",
+      "path": "images/S10X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X4Y0nie.png",
+      "path": "images/S10X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S10X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X1Y1ovocie.png",
+      "path": "images/S10X1Y1ovocie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X2Y1jablko.png",
+      "path": "images/S10X2Y1jablko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X3Y1ban\u00e1n.png",
+      "path": "images/S10X3Y1ban\u00e1n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X4Y1avok\u00e1do.png",
+      "path": "images/S10X4Y1avok\u00e1do.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X0Y2brusnice.png",
+      "path": "images/S10X0Y2brusnice.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X1Y2grapefruit.png",
+      "path": "images/S10X1Y2grapefruit.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X2Y2hrozno.png",
+      "path": "images/S10X2Y2hrozno.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X3Y2limetka.png",
+      "path": "images/S10X3Y2limetka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X4Y2citr\u00f3n.png",
+      "path": "images/S10X4Y2citr\u00f3n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X0Y3\u017elt\u00fdmel\u00f3n.png",
+      "path": "images/S10X0Y3\u017elt\u00fdmel\u00f3n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X1Y3mango.png",
+      "path": "images/S10X1Y3mango.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X2Y3pomaran\u010d.png",
+      "path": "images/S10X2Y3pomaran\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X3Y3slivka.png",
+      "path": "images/S10X3Y3slivka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X4Y3anan\u00e1s.png",
+      "path": "images/S10X4Y3anan\u00e1s.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X0Y4hru\u0161ka.png",
+      "path": "images/S10X0Y4hru\u0161ka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X1Y4jahoda.png",
+      "path": "images/S10X1Y4jahoda.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X2Y4kiwi.png",
+      "path": "images/S10X2Y4kiwi.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X3Y4\u010dere\u0161\u0148a.png",
+      "path": "images/S10X3Y4\u010dere\u0161\u0148a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S10X4Y4\u010dernica.png",
+      "path": "images/S10X4Y4\u010dernica.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate ovocie",
+  "sounds": []
+}

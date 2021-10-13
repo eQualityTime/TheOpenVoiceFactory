@@ -85,24 +85,17 @@ def create_obf_button(grid,col,row):
     return button
 
 def process_commandstring(commandstring,button): 
-    print("    The link is a special command")
-    print("    The original line is : {}".format(commandstring))
     commandstring=commandstring[4:-1] #removes "ovf(" and ")" TODO, do proper replace
-    print("    We strip to the command to get: {}".format(commandstring))
-    commandstring=urllib.parse.unquote(commandstring)
-    print("    We decode the link to get: {}".format(commandstring))
+    commandstring=urllib.parse.unquote(commandstring)  #For decoding %20 ect 
     import re 
     commands=re.split("\)\s*,",commandstring)
     #TODO use a proper parser https://stackoverflow.com/a/59995928/170243 
-    print("    There are {} subcommands".format(len(commands)))
     for command in commands:
         process_single_command(command,button)  
 
 def process_single_command(command,button): 
     command_name= command.split("(",1)[0]
     argument=command.split("(",1)[1][0:-1]
-    print("        command name is {}".format(command_name))
-    print("        argument is {}".format(argument))
     if command_name == "deleteword":
         #should find out what we do there...
         button["action"]=":deleteword"
@@ -111,7 +104,6 @@ def process_single_command(command,button):
     elif command_name == "clear":
         button["action"]=":clear"
     elif command_name == "place":
-        print(argument)
         button["vocalization"] = button.setdefault("vocalization","")+argument.strip('"\'') #If there are multiple place commands, keep appending them.  
     elif command_name == "open":
         button["load_board"]= { "path": "boards/"+make_title(argument)+".obf" }

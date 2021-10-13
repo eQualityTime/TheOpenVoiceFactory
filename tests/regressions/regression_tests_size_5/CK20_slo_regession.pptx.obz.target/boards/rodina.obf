@@ -1,0 +1,258 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S35X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "rodina"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S35X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S35X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S35X1Y1ocko.png",
+      "label": "ocko"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S35X2Y1mamka.png",
+      "label": "mamka"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S35X3Y1\u017eena.png",
+      "label": "\u017eena"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S35X4Y1mu\u017e.png",
+      "label": "mu\u017e"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S35X0Y2rodina.png",
+      "label": "rodina"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S35X1Y2brat.png",
+      "label": "brat"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S35X2Y2sestra.png",
+      "label": "sestra"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S35X3Y2b\u00e1b\u00e4tko.png",
+      "label": "b\u00e1b\u00e4tko"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S35X4Y2die\u0165a.png",
+      "label": "die\u0165a"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S35X1Y3dedko.png",
+      "label": "dedko"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S35X2Y3babka.png",
+      "label": "babka"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        null,
+        "13",
+        "23",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "rodina",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y0\u00e1no.png",
+      "path": "images/S35X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y0nie.png",
+      "path": "images/S35X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S35X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y1ocko.png",
+      "path": "images/S35X1Y1ocko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y1mamka.png",
+      "path": "images/S35X2Y1mamka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X3Y1\u017eena.png",
+      "path": "images/S35X3Y1\u017eena.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y1mu\u017e.png",
+      "path": "images/S35X4Y1mu\u017e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y2rodina.png",
+      "path": "images/S35X0Y2rodina.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y2brat.png",
+      "path": "images/S35X1Y2brat.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y2sestra.png",
+      "path": "images/S35X2Y2sestra.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X3Y2b\u00e1b\u00e4tko.png",
+      "path": "images/S35X3Y2b\u00e1b\u00e4tko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y2die\u0165a.png",
+      "path": "images/S35X4Y2die\u0165a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y3dedko.png",
+      "path": "images/S35X1Y3dedko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y3babka.png",
+      "path": "images/S35X2Y3babka.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate rodina",
+  "sounds": []
+}

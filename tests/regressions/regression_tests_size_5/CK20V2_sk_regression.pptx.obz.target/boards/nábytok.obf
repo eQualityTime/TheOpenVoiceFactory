@@ -1,0 +1,370 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S75X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "n\u00e1bytok"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S75X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S75X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S75X1Y1n\u00e1bytok.png",
+      "label": "n\u00e1bytok"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S75X2Y1sedac\u00edvak.png",
+      "label": "sedac\u00ed vak"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S75X3Y1st\u00f4l.png",
+      "label": "st\u00f4l"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S75X4Y1vank\u00fa\u0161.png",
+      "label": "vank\u00fa\u0161"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S75X0Y2skri\u0148a.png",
+      "label": "skri\u0148a"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S75X1Y2z\u00e1chod.png",
+      "label": "z\u00e1chod"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S75X2Y2telev\u00edzor.png",
+      "label": "telev\u00edzor"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S75X3Y2poli\u010dka.png",
+      "label": "poli\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S75X4Y2poste\u013e.png",
+      "label": "poste\u013e"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S75X0Y3skrinka.png",
+      "label": "skrinka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S75X1Y3um\u00fdvadlo.png",
+      "label": "um\u00fdvadlo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S75X2Y3z\u00e1suvka.png",
+      "label": "z\u00e1suvka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S75X3Y3gau\u010d.png",
+      "label": "gau\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S75X4Y3obraz.png",
+      "label": "obraz"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S75X0Y4deka.png",
+      "label": "deka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S75X1Y4va\u0148a.png",
+      "label": "va\u0148a"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S75X2Y4lampa.png",
+      "label": "lampa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S75X3Y4stoli\u010dka.png",
+      "label": "stoli\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S75X4Y4plachta.png",
+      "label": "plachta"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "n\u00e1bytok",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X0Y0\u00e1no.png",
+      "path": "images/S75X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X4Y0nie.png",
+      "path": "images/S75X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S75X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X1Y1n\u00e1bytok.png",
+      "path": "images/S75X1Y1n\u00e1bytok.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X2Y1sedac\u00edvak.png",
+      "path": "images/S75X2Y1sedac\u00edvak.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X3Y1st\u00f4l.png",
+      "path": "images/S75X3Y1st\u00f4l.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X4Y1vank\u00fa\u0161.png",
+      "path": "images/S75X4Y1vank\u00fa\u0161.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X0Y2skri\u0148a.png",
+      "path": "images/S75X0Y2skri\u0148a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X1Y2z\u00e1chod.png",
+      "path": "images/S75X1Y2z\u00e1chod.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X2Y2telev\u00edzor.png",
+      "path": "images/S75X2Y2telev\u00edzor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X3Y2poli\u010dka.png",
+      "path": "images/S75X3Y2poli\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X4Y2poste\u013e.png",
+      "path": "images/S75X4Y2poste\u013e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X0Y3skrinka.png",
+      "path": "images/S75X0Y3skrinka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X1Y3um\u00fdvadlo.png",
+      "path": "images/S75X1Y3um\u00fdvadlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X2Y3z\u00e1suvka.png",
+      "path": "images/S75X2Y3z\u00e1suvka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X3Y3gau\u010d.png",
+      "path": "images/S75X3Y3gau\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X4Y3obraz.png",
+      "path": "images/S75X4Y3obraz.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X0Y4deka.png",
+      "path": "images/S75X0Y4deka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X1Y4va\u0148a.png",
+      "path": "images/S75X1Y4va\u0148a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X2Y4lampa.png",
+      "path": "images/S75X2Y4lampa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X3Y4stoli\u010dka.png",
+      "path": "images/S75X3Y4stoli\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S75X4Y4plachta.png",
+      "path": "images/S75X4Y4plachta.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate n\u00e1bytok",
+  "sounds": []
+}

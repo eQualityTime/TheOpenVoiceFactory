@@ -1,0 +1,286 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S39X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "Kr\u00e1tke slov\u00e1"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S39X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S39X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S39X1Y1hore.png",
+      "label": "hore"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S39X2Y1dole.png",
+      "label": "dole"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S39X3Y1vo.png",
+      "label": "v(o)"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S39X4Y1von.png",
+      "label": "von"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S39X1Y2tu.png",
+      "label": "tu"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S39X2Y2tam.png",
+      "label": "tam"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S39X3Y2na.png",
+      "label": "na"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S39X4Y2mimo.png",
+      "label": "mimo"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S39X0Y3vstrede.png",
+      "label": "v strede"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S39X1Y3navrchu.png",
+      "label": "navrchu"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S39X2Y3naspodku.png",
+      "label": "na spodku"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S39X3Y3popod.png",
+      "label": "popod"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S39X4Y3ponad.png",
+      "label": "ponad"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        null,
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "kr\u00e1tkeslov\u00e1",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X0Y0\u00e1no.png",
+      "path": "images/S39X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X4Y0nie.png",
+      "path": "images/S39X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S39X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X1Y1hore.png",
+      "path": "images/S39X1Y1hore.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X2Y1dole.png",
+      "path": "images/S39X2Y1dole.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X3Y1vo.png",
+      "path": "images/S39X3Y1vo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X4Y1von.png",
+      "path": "images/S39X4Y1von.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X1Y2tu.png",
+      "path": "images/S39X1Y2tu.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X2Y2tam.png",
+      "path": "images/S39X2Y2tam.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X3Y2na.png",
+      "path": "images/S39X3Y2na.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X4Y2mimo.png",
+      "path": "images/S39X4Y2mimo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X0Y3vstrede.png",
+      "path": "images/S39X0Y3vstrede.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X1Y3navrchu.png",
+      "path": "images/S39X1Y3navrchu.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X2Y3naspodku.png",
+      "path": "images/S39X2Y3naspodku.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X3Y3popod.png",
+      "path": "images/S39X3Y3popod.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S39X4Y3ponad.png",
+      "path": "images/S39X4Y3ponad.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate kr\u00e1tkeslov\u00e1",
+  "sounds": []
+}

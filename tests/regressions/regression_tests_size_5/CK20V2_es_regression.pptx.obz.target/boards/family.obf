@@ -1,0 +1,258 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S35X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "family"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S35X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S35X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S35X1Y1padre.png",
+      "label": "Padre"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S35X2Y1madre.png",
+      "label": "Madre"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S35X3Y1se\u00f1ora.png",
+      "label": "se\u00f1ora"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S35X4Y1hombre.png",
+      "label": "hombre"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S35X0Y2familia.png",
+      "label": "familia"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S35X1Y2hermano.png",
+      "label": "hermano"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S35X2Y2hermana.png",
+      "label": "hermana"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S35X3Y2beb\u00e9.png",
+      "label": "beb\u00e9"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S35X4Y2ni\u00f1oni\u00f1a.png",
+      "label": "ni\u00f1o/ni\u00f1a"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S35X1Y3abuelo.png",
+      "label": "Abuelo"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S35X2Y3abuela.png",
+      "label": "Abuela"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        null,
+        "13",
+        "23",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "family",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y0yes.png",
+      "path": "images/S35X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y0no.png",
+      "path": "images/S35X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S35X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y1padre.png",
+      "path": "images/S35X1Y1padre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y1madre.png",
+      "path": "images/S35X2Y1madre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X3Y1se\u00f1ora.png",
+      "path": "images/S35X3Y1se\u00f1ora.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y1hombre.png",
+      "path": "images/S35X4Y1hombre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X0Y2familia.png",
+      "path": "images/S35X0Y2familia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y2hermano.png",
+      "path": "images/S35X1Y2hermano.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y2hermana.png",
+      "path": "images/S35X2Y2hermana.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X3Y2beb\u00e9.png",
+      "path": "images/S35X3Y2beb\u00e9.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X4Y2ni\u00f1oni\u00f1a.png",
+      "path": "images/S35X4Y2ni\u00f1oni\u00f1a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X1Y3abuelo.png",
+      "path": "images/S35X1Y3abuelo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S35X2Y3abuela.png",
+      "path": "images/S35X2Y3abuela.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate family",
+  "sounds": []
+}

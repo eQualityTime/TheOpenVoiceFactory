@@ -1,0 +1,202 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S81X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "label": "\u0646\u064e\u0639\u064e\u0645"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Outside places"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S81X4Y0\u0644\u0627.png",
+      "label": "\u0644\u0627"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S81X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "label": "\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629 \u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S81X1Y1outsideplace.png",
+      "label": "outside place"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S81X2Y1park.png",
+      "label": "park"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S81X3Y1street.png",
+      "label": "street"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S81X4Y1desert.png",
+      "label": "desert"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S81X1Y2sea.png",
+      "label": "sea"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S81X4Y2hajj.png",
+      "label": "Hajj"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "",
+      "label": "Clear"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "Delete Word"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        null,
+        "12",
+        null,
+        null,
+        "42"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "outsideplaces",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "path": "images/S81X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X4Y0\u0644\u0627.png",
+      "path": "images/S81X4Y0\u0644\u0627.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "path": "images/S81X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X1Y1outsideplace.png",
+      "path": "images/S81X1Y1outsideplace.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X2Y1park.png",
+      "path": "images/S81X2Y1park.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X3Y1street.png",
+      "path": "images/S81X3Y1street.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X4Y1desert.png",
+      "path": "images/S81X4Y1desert.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X1Y2sea.png",
+      "path": "images/S81X1Y2sea.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S81X4Y2hajj.png",
+      "path": "images/S81X4Y2hajj.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate outsideplaces",
+  "sounds": []
+}

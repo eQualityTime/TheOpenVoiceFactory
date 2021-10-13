@@ -1,0 +1,181 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S78X0Y0\u0434\u0430.png",
+      "label": "\u0414\u0430"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "\u041f\u0430\u0440\u0438"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "30",
+      "image_id": "",
+      "label": "Speak"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S78X4Y0\u043d\u0435.png",
+      "label": "\u041d\u0435"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S78X0Y1toppage.png",
+      "label": "Top Page",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S78X1Y1\u043f\u0430\u0440\u0438.png",
+      "label": "\u041f\u0430\u0440\u0438"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S78X3Y1\u043f\u043e\u0440\u0442\u0444\u0435\u0439\u043b.png",
+      "label": "\u041f\u043e\u0440\u0442\u0444\u0435\u0439\u043b"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S78X4Y1\u043f\u043e\u0440\u0442\u043c\u043e\u043d\u0435.png",
+      "label": "\u041f\u043e\u0440\u0442\u043c\u043e\u043d\u0435"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "",
+      "label": "\u0411\u0430\u043d\u043a\u043d\u043e\u0442\u0438"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "",
+      "label": "\u041c\u043e\u043d\u0435\u0442\u0438"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "",
+      "label": "Clear"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "Delete Word"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        "30",
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        null,
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "\u043f\u0430\u0440\u0438",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S78X0Y0\u0434\u0430.png",
+      "path": "images/S78X0Y0\u0434\u0430.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S78X4Y0\u043d\u0435.png",
+      "path": "images/S78X4Y0\u043d\u0435.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S78X0Y1toppage.png",
+      "path": "images/S78X0Y1toppage.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S78X1Y1\u043f\u0430\u0440\u0438.png",
+      "path": "images/S78X1Y1\u043f\u0430\u0440\u0438.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S78X3Y1\u043f\u043e\u0440\u0442\u0444\u0435\u0439\u043b.png",
+      "path": "images/S78X3Y1\u043f\u043e\u0440\u0442\u0444\u0435\u0439\u043b.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S78X4Y1\u043f\u043e\u0440\u0442\u043c\u043e\u043d\u0435.png",
+      "path": "images/S78X4Y1\u043f\u043e\u0440\u0442\u043c\u043e\u043d\u0435.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate \u043f\u0430\u0440\u0438",
+  "sounds": []
+}

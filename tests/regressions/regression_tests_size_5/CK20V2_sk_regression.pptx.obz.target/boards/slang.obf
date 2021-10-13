@@ -1,0 +1,372 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S5X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "Slang"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S5X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S5X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S5X1Y1hust\u00e9.png",
+      "label": "hust\u00e9"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S5X2Y1ignoruje\u0161ma.png",
+      "label": "Ignoruje\u0161 ma?"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S5X3Y1dajmipokoj.png",
+      "label": "Daj mi pokoj"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S5X4Y1\u0161\u0165astie.png",
+      "label": "\u0161\u0165astie"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S5X0Y2veget.png",
+      "label": "veget"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S5X1Y2odp\u00e1\u013ete.png",
+      "label": "odp\u00e1\u013ete"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S5X2Y2smoliar.png",
+      "label": "smoliar"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S5X3Y2f\u00edha.png",
+      "label": "f\u00edha"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S5X4Y2humus.png",
+      "label": "humus"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S5X0Y3lezie\u0161minanervy.png",
+      "label": "Lezie\u0161 mi na nervy."
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S5X1Y3jemitojedno.png",
+      "label": "Je mi to jedno"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S5X2Y3anin\u00e1hodou.png",
+      "label": "ani n\u00e1hodou"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S5X3Y3st\u00edchni.png",
+      "label": "st\u00edchni"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S5X4Y3situlenpretoabysima\u0161tval.png",
+      "label": "Si tu len preto, aby si ma \u0161tval?"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S5X0Y4nerob.png",
+      "label": "nerob"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S5X1Y4nie.png",
+      "label": "nie"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S5X2Y4no.png",
+      "label": "no,"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S5X3Y4unknown.png",
+      "label": "34",
+      "vocalization": "Grg!"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S5X4Y4unknown.png",
+      "label": "44",
+      "vocalization": "Prd!"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "slang",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X0Y0\u00e1no.png",
+      "path": "images/S5X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X4Y0nie.png",
+      "path": "images/S5X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S5X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X1Y1hust\u00e9.png",
+      "path": "images/S5X1Y1hust\u00e9.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X2Y1ignoruje\u0161ma.png",
+      "path": "images/S5X2Y1ignoruje\u0161ma.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X3Y1dajmipokoj.png",
+      "path": "images/S5X3Y1dajmipokoj.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X4Y1\u0161\u0165astie.png",
+      "path": "images/S5X4Y1\u0161\u0165astie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X0Y2veget.png",
+      "path": "images/S5X0Y2veget.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X1Y2odp\u00e1\u013ete.png",
+      "path": "images/S5X1Y2odp\u00e1\u013ete.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X2Y2smoliar.png",
+      "path": "images/S5X2Y2smoliar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X3Y2f\u00edha.png",
+      "path": "images/S5X3Y2f\u00edha.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X4Y2humus.png",
+      "path": "images/S5X4Y2humus.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X0Y3lezie\u0161minanervy.png",
+      "path": "images/S5X0Y3lezie\u0161minanervy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X1Y3jemitojedno.png",
+      "path": "images/S5X1Y3jemitojedno.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X2Y3anin\u00e1hodou.png",
+      "path": "images/S5X2Y3anin\u00e1hodou.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X3Y3st\u00edchni.png",
+      "path": "images/S5X3Y3st\u00edchni.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X4Y3situlenpretoabysima\u0161tval.png",
+      "path": "images/S5X4Y3situlenpretoabysima\u0161tval.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X0Y4nerob.png",
+      "path": "images/S5X0Y4nerob.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X1Y4nie.png",
+      "path": "images/S5X1Y4nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X2Y4no.png",
+      "path": "images/S5X2Y4no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X3Y4unknown.png",
+      "path": "images/S5X3Y4unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S5X4Y4unknown.png",
+      "path": "images/S5X4Y4unknown.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate slang",
+  "sounds": []
+}

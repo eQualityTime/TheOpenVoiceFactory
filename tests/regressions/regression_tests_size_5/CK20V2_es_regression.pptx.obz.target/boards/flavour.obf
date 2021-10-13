@@ -1,0 +1,286 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S14X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "flavour"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S14X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S14X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S14X1Y1sabor.png",
+      "label": "sabor"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S14X2Y1pasa.png",
+      "label": "pasa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S14X3Y1banana.png",
+      "label": "banana"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S14X0Y2fruta.png",
+      "label": "fruta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S14X1Y2menta.png",
+      "label": "menta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S14X2Y2caramelo.png",
+      "label": "caramelo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S14X3Y2lime.png",
+      "label": "lime"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S14X4Y2lim\u00f3n.png",
+      "label": "lim\u00f3n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S14X3Y3chocolate.png",
+      "label": "chocolate"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S14X4Y3pi\u00f1a.png",
+      "label": "pi\u00f1a"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S14X1Y4fresa.png",
+      "label": "fresa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S14X3Y4cereza.png",
+      "label": "cereza"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S14X4Y4zarzamora.png",
+      "label": "zarzamora"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        null
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        null,
+        null,
+        null,
+        "33",
+        "43"
+      ],
+      [
+        null,
+        "14",
+        null,
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "flavour",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X0Y0yes.png",
+      "path": "images/S14X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y0no.png",
+      "path": "images/S14X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S14X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X1Y1sabor.png",
+      "path": "images/S14X1Y1sabor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X2Y1pasa.png",
+      "path": "images/S14X2Y1pasa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y1banana.png",
+      "path": "images/S14X3Y1banana.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X0Y2fruta.png",
+      "path": "images/S14X0Y2fruta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X1Y2menta.png",
+      "path": "images/S14X1Y2menta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X2Y2caramelo.png",
+      "path": "images/S14X2Y2caramelo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y2lime.png",
+      "path": "images/S14X3Y2lime.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y2lim\u00f3n.png",
+      "path": "images/S14X4Y2lim\u00f3n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y3chocolate.png",
+      "path": "images/S14X3Y3chocolate.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y3pi\u00f1a.png",
+      "path": "images/S14X4Y3pi\u00f1a.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X1Y4fresa.png",
+      "path": "images/S14X1Y4fresa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X3Y4cereza.png",
+      "path": "images/S14X3Y4cereza.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S14X4Y4zarzamora.png",
+      "path": "images/S14X4Y4zarzamora.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate flavour",
+  "sounds": []
+}

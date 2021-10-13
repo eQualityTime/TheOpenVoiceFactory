@@ -1,0 +1,409 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S8X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "Food"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S8X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S8X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S8X1Y1desayuno.png",
+      "label": "desayuno",
+      "load_board": {
+        "path": "boards/breakfast.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S8X2Y1almuerzo.png",
+      "label": "almuerzo",
+      "load_board": {
+        "path": "boards/lunch.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S8X3Y1comidas.png",
+      "label": "comidas",
+      "load_board": {
+        "path": "boards/meal.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S8X4Y1carneypescado.png",
+      "label": "Carne y pescado",
+      "load_board": {
+        "path": "boards/meatandfish.obf"
+      }
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S8X0Y2tengohambre.png",
+      "label": "Tengo Hambre"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S8X1Y2verduras.png",
+      "label": "verduras",
+      "load_board": {
+        "path": "boards/vegetables.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S8X2Y2frutas.png",
+      "label": "frutas",
+      "load_board": {
+        "path": "boards/fruit.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S8X3Y2bebidas.png",
+      "label": "bebidas",
+      "load_board": {
+        "path": "boards/drinks.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S8X4Y2comidar\u00e1pida.png",
+      "label": "comida r\u00e1pida",
+      "load_board": {
+        "path": "boards/fastfood.obf"
+      }
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S8X0Y3tengosed.png",
+      "label": "Tengo sed"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S8X1Y3bocadillopostre.png",
+      "label": "bocadillo/postre",
+      "load_board": {
+        "path": "boards/snackspudding.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S8X2Y3salsasingredientes.png",
+      "label": "Salsas/ingredientes",
+      "load_board": {
+        "path": "boards/sauces.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S8X3Y3ensalada.png",
+      "label": "ensalada",
+      "load_board": {
+        "path": "boards/salad.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S8X4Y3palabrasdecocinar.png",
+      "label": "palabras de cocinar",
+      "load_board": {
+        "path": "boards/cookingwords.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S8X0Y4algunos.png",
+      "label": "algunos"
+    },
+    {
+      "background_color": "rgb(0,128,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S8X1Y4con.png",
+      "label": "con"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S8X2Y4y.png",
+      "label": "y"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S8X3Y4conversardecomida.png",
+      "label": "Conversar de comida",
+      "load_board": {
+        "path": "boards/foodchat.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S8X4Y4comidafavorita.png",
+      "label": "Comida favorita"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "food",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X0Y0yes.png",
+      "path": "images/S8X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X4Y0no.png",
+      "path": "images/S8X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S8X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X1Y1desayuno.png",
+      "path": "images/S8X1Y1desayuno.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X2Y1almuerzo.png",
+      "path": "images/S8X2Y1almuerzo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X3Y1comidas.png",
+      "path": "images/S8X3Y1comidas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X4Y1carneypescado.png",
+      "path": "images/S8X4Y1carneypescado.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X0Y2tengohambre.png",
+      "path": "images/S8X0Y2tengohambre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X1Y2verduras.png",
+      "path": "images/S8X1Y2verduras.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X2Y2frutas.png",
+      "path": "images/S8X2Y2frutas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X3Y2bebidas.png",
+      "path": "images/S8X3Y2bebidas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X4Y2comidar\u00e1pida.png",
+      "path": "images/S8X4Y2comidar\u00e1pida.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X0Y3tengosed.png",
+      "path": "images/S8X0Y3tengosed.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X1Y3bocadillopostre.png",
+      "path": "images/S8X1Y3bocadillopostre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X2Y3salsasingredientes.png",
+      "path": "images/S8X2Y3salsasingredientes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X3Y3ensalada.png",
+      "path": "images/S8X3Y3ensalada.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X4Y3palabrasdecocinar.png",
+      "path": "images/S8X4Y3palabrasdecocinar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X0Y4algunos.png",
+      "path": "images/S8X0Y4algunos.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X1Y4con.png",
+      "path": "images/S8X1Y4con.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X2Y4y.png",
+      "path": "images/S8X2Y4y.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X3Y4conversardecomida.png",
+      "path": "images/S8X3Y4conversardecomida.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S8X4Y4comidafavorita.png",
+      "path": "images/S8X4Y4comidafavorita.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate food",
+  "sounds": []
+}

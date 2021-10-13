@@ -1,0 +1,356 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S28X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Vybavenie kuchyne"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S28X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S28X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S28X1Y1ly\u017eica.png",
+      "label": "ly\u017eica"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S28X2Y1n\u00f4\u017e.png",
+      "label": "n\u00f4\u017e"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S28X3Y1vidli\u010dka.png",
+      "label": "vidli\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S28X4Y1kastr\u00f3l.png",
+      "label": "kastr\u00f3l"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S28X0Y2misa.png",
+      "label": "misa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S28X1Y2utierka.png",
+      "label": "utierka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S28X2Y2handranariad.png",
+      "label": "handra na riad"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S28X3Y2z\u00e1stera.png",
+      "label": "z\u00e1stera"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S28X4Y2um\u00fdvadlo.png",
+      "label": "um\u00fdvadlo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S28X0Y3chladni\u010dka.png",
+      "label": "chladni\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S28X1Y3panvica.png",
+      "label": "panvica"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S28X2Y3tanier.png",
+      "label": "tanier"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S28X3Y3spor\u00e1k.png",
+      "label": "spor\u00e1k"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S28X4Y3odmerka.png",
+      "label": "odmerka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S28X0Y4\u0161\u00e1lka.png",
+      "label": "\u0161\u00e1lka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S28X1Y4doskanakr\u00e1janie.png",
+      "label": "doska na kr\u00e1janie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S28X2Y4cedidlo.png",
+      "label": "cedidlo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S28X3Y4str\u00fahadlo.png",
+      "label": "str\u00fahadlo"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "vybaveniekuchyne",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X0Y0\u00e1no.png",
+      "path": "images/S28X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X4Y0nie.png",
+      "path": "images/S28X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S28X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X1Y1ly\u017eica.png",
+      "path": "images/S28X1Y1ly\u017eica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X2Y1n\u00f4\u017e.png",
+      "path": "images/S28X2Y1n\u00f4\u017e.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X3Y1vidli\u010dka.png",
+      "path": "images/S28X3Y1vidli\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X4Y1kastr\u00f3l.png",
+      "path": "images/S28X4Y1kastr\u00f3l.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X0Y2misa.png",
+      "path": "images/S28X0Y2misa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X1Y2utierka.png",
+      "path": "images/S28X1Y2utierka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X2Y2handranariad.png",
+      "path": "images/S28X2Y2handranariad.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X3Y2z\u00e1stera.png",
+      "path": "images/S28X3Y2z\u00e1stera.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X4Y2um\u00fdvadlo.png",
+      "path": "images/S28X4Y2um\u00fdvadlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X0Y3chladni\u010dka.png",
+      "path": "images/S28X0Y3chladni\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X1Y3panvica.png",
+      "path": "images/S28X1Y3panvica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X2Y3tanier.png",
+      "path": "images/S28X2Y3tanier.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X3Y3spor\u00e1k.png",
+      "path": "images/S28X3Y3spor\u00e1k.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X4Y3odmerka.png",
+      "path": "images/S28X4Y3odmerka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X0Y4\u0161\u00e1lka.png",
+      "path": "images/S28X0Y4\u0161\u00e1lka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X1Y4doskanakr\u00e1janie.png",
+      "path": "images/S28X1Y4doskanakr\u00e1janie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X2Y4cedidlo.png",
+      "path": "images/S28X2Y4cedidlo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S28X3Y4str\u00fahadlo.png",
+      "path": "images/S28X3Y4str\u00fahadlo.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate vybaveniekuchyne",
+  "sounds": []
+}

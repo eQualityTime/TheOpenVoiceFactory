@@ -1,0 +1,202 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S94X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "dvd"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S94X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S94X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S94X0Y2mojedvd\u010dka.png",
+      "label": "Moje DVD-\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S94X0Y3prida\u0165hlasitos\u0165.png",
+      "label": "Prida\u0165 hlasitos\u0165"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S94X0Y4st\u00ed\u0161i\u0165hlasitos\u0165.png",
+      "label": "St\u00ed\u0161i\u0165 hlasitos\u0165"
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S94X1Y4stlmi\u0165.png",
+      "label": "stlmi\u0165"
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S94X2Y4pauzaprehra\u0165.png",
+      "label": "pauza/prehra\u0165"
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S94X3Y4predo\u0161l\u00e1stopa.png",
+      "label": "Predo\u0161l\u00e1 stopa"
+    },
+    {
+      "background_color": "rgb(51,102,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S94X4Y4\u010fal\u0161iastopa.png",
+      "label": "\u010eal\u0161ia stopa"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "02",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "03",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "dvd",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X0Y0\u00e1no.png",
+      "path": "images/S94X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X4Y0nie.png",
+      "path": "images/S94X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S94X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X0Y2mojedvd\u010dka.png",
+      "path": "images/S94X0Y2mojedvd\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X0Y3prida\u0165hlasitos\u0165.png",
+      "path": "images/S94X0Y3prida\u0165hlasitos\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X0Y4st\u00ed\u0161i\u0165hlasitos\u0165.png",
+      "path": "images/S94X0Y4st\u00ed\u0161i\u0165hlasitos\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X1Y4stlmi\u0165.png",
+      "path": "images/S94X1Y4stlmi\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X2Y4pauzaprehra\u0165.png",
+      "path": "images/S94X2Y4pauzaprehra\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X3Y4predo\u0161l\u00e1stopa.png",
+      "path": "images/S94X3Y4predo\u0161l\u00e1stopa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S94X4Y4\u010fal\u0161iastopa.png",
+      "path": "images/S94X4Y4\u010fal\u0161iastopa.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate dvd",
+  "sounds": []
+}

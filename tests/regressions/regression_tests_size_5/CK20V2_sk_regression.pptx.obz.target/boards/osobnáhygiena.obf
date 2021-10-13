@@ -1,0 +1,340 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S36X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Osobn\u00e1 hygiena"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S36X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S36X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S36X1Y1potrebujem\u00eds\u0165nawc.png",
+      "label": "Potrebujem \u00eds\u0165 na WC"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S36X2Y1potrebujemtrochupom\u00f4c\u0165.png",
+      "label": "Potrebujem trochu pom\u00f4c\u0165"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S36X3Y1niejemidobre.png",
+      "label": "Nie je mi dobre",
+      "load_board": {
+        "path": "boards/niejemidobre.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S36X4Y1\u010dastitela.png",
+      "label": "\u010dasti tela",
+      "load_board": {
+        "path": "boards/\u010dastitela.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S36X0Y2oble\u010denie.png",
+      "label": "oble\u010denie",
+      "load_board": {
+        "path": "boards/oble\u010denie.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S36X1Y2chcemsiodd\u00fdchnu\u0165vposteli.png",
+      "label": "Chcem si odd\u00fdchnu\u0165 v posteli"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S36X2Y2r\u00e1dbysomsaoholil.png",
+      "label": "R\u00e1d by som sa oholil"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S36X3Y2potrebujemsvojelieky.png",
+      "label": "Potrebujem svoje lieky"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S36X4Y2m\u00f4\u017ee\u0161mipros\u00edmvy\u010disti\u0165okuliare.png",
+      "label": "M\u00f4\u017ee\u0161 mi, pros\u00edm,  vy\u010disti\u0165 okuliare?"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S36X0Y3m\u00f4\u017ee\u0161mipros\u00edmostriha\u0165nechty.png",
+      "label": "M\u00f4\u017ee\u0161 mi, pros\u00edm, ostriha\u0165 nechty?"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S36X1Y3r\u00e1dbysomsaosprchoval.png",
+      "label": "R\u00e1d by som sa osprchoval"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S36X2Y3r\u00e1dbysomsaok\u00fapal.png",
+      "label": "R\u00e1d by som sa ok\u00fapal"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S36X3Y3m\u00e1mprobl\u00e9mso.png",
+      "label": "M\u00e1m probl\u00e9m s(o)"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S36X4Y3drog\u00e9ria.png",
+      "label": "drog\u00e9ria",
+      "load_board": {
+        "path": "boards/drog\u00e9ria.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S36X0Y4potrebujemsaprezliec\u0165.png",
+      "label": "Potrebujem sa prezliec\u0165"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S36X2Y4m\u00f4\u017ee\u0161mipros\u00edmupravi\u0165vlasy.png",
+      "label": "M\u00f4\u017ee\u0161 mi, pros\u00edm, upravi\u0165 vlasy?"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        null,
+        "24",
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "osobn\u00e1hygiena",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y0\u00e1no.png",
+      "path": "images/S36X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y0nie.png",
+      "path": "images/S36X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S36X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X1Y1potrebujem\u00eds\u0165nawc.png",
+      "path": "images/S36X1Y1potrebujem\u00eds\u0165nawc.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y1potrebujemtrochupom\u00f4c\u0165.png",
+      "path": "images/S36X2Y1potrebujemtrochupom\u00f4c\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X3Y1niejemidobre.png",
+      "path": "images/S36X3Y1niejemidobre.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y1\u010dastitela.png",
+      "path": "images/S36X4Y1\u010dastitela.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y2oble\u010denie.png",
+      "path": "images/S36X0Y2oble\u010denie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X1Y2chcemsiodd\u00fdchnu\u0165vposteli.png",
+      "path": "images/S36X1Y2chcemsiodd\u00fdchnu\u0165vposteli.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y2r\u00e1dbysomsaoholil.png",
+      "path": "images/S36X2Y2r\u00e1dbysomsaoholil.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X3Y2potrebujemsvojelieky.png",
+      "path": "images/S36X3Y2potrebujemsvojelieky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y2m\u00f4\u017ee\u0161mipros\u00edmvy\u010disti\u0165okuliare.png",
+      "path": "images/S36X4Y2m\u00f4\u017ee\u0161mipros\u00edmvy\u010disti\u0165okuliare.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y3m\u00f4\u017ee\u0161mipros\u00edmostriha\u0165nechty.png",
+      "path": "images/S36X0Y3m\u00f4\u017ee\u0161mipros\u00edmostriha\u0165nechty.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X1Y3r\u00e1dbysomsaosprchoval.png",
+      "path": "images/S36X1Y3r\u00e1dbysomsaosprchoval.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y3r\u00e1dbysomsaok\u00fapal.png",
+      "path": "images/S36X2Y3r\u00e1dbysomsaok\u00fapal.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X3Y3m\u00e1mprobl\u00e9mso.png",
+      "path": "images/S36X3Y3m\u00e1mprobl\u00e9mso.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y3drog\u00e9ria.png",
+      "path": "images/S36X4Y3drog\u00e9ria.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y4potrebujemsaprezliec\u0165.png",
+      "path": "images/S36X0Y4potrebujemsaprezliec\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y4m\u00f4\u017ee\u0161mipros\u00edmupravi\u0165vlasy.png",
+      "path": "images/S36X2Y4m\u00f4\u017ee\u0161mipros\u00edmupravi\u0165vlasy.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate osobn\u00e1hygiena",
+  "sounds": []
+}

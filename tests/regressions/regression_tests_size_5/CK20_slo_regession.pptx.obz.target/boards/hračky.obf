@@ -1,0 +1,349 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S71X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "hra\u010dky"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S71X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S71X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S71X1Y1hra\u010dky.png",
+      "label": "hra\u010dky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S71X2Y1vl\u00e1\u010dik.png",
+      "label": "vl\u00e1\u010dik"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S71X3Y1auto.png",
+      "label": "auto"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S71X4Y1b\u00e1bika.png",
+      "label": "b\u00e1bika"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S71X0Y2tehly.png",
+      "label": "tehly"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S71X1Y2lego.png",
+      "label": "Lego"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S71X2Y2farba.png",
+      "label": "farba"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S71X3Y2farebn\u00e1pyram\u00edda.png",
+      "label": "farebn\u00e1 pyram\u00edda"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S71X4Y2ma\u013eovanka.png",
+      "label": "ma\u013eovanka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S71X0Y3kniha.png",
+      "label": "kniha"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S71X1Y3knihasosamolepkami.png",
+      "label": "kniha so samolepkami"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S71X2Y3\u0161arkan.png",
+      "label": "\u0161arkan"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S71X3Y3macko.png",
+      "label": "macko"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S71X4Y3b\u00e1bka.png",
+      "label": "b\u00e1bka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S71X0Y4sklada\u010dkasgeometrick\u00fdmi\u00fatvarmi.png",
+      "label": "sklada\u010dka s geometrick\u00fdmi \u00fatvarmi"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S71X1Y4puzzle.png",
+      "label": "puzzle"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S71X2Y4\u0161katu\u013eanahra\u010dky.png",
+      "label": "\u0161katu\u013ea na hra\u010dky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "C"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "hra\u010dky",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X0Y0\u00e1no.png",
+      "path": "images/S71X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X4Y0nie.png",
+      "path": "images/S71X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S71X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X1Y1hra\u010dky.png",
+      "path": "images/S71X1Y1hra\u010dky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X2Y1vl\u00e1\u010dik.png",
+      "path": "images/S71X2Y1vl\u00e1\u010dik.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X3Y1auto.png",
+      "path": "images/S71X3Y1auto.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X4Y1b\u00e1bika.png",
+      "path": "images/S71X4Y1b\u00e1bika.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X0Y2tehly.png",
+      "path": "images/S71X0Y2tehly.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X1Y2lego.png",
+      "path": "images/S71X1Y2lego.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X2Y2farba.png",
+      "path": "images/S71X2Y2farba.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X3Y2farebn\u00e1pyram\u00edda.png",
+      "path": "images/S71X3Y2farebn\u00e1pyram\u00edda.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X4Y2ma\u013eovanka.png",
+      "path": "images/S71X4Y2ma\u013eovanka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X0Y3kniha.png",
+      "path": "images/S71X0Y3kniha.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X1Y3knihasosamolepkami.png",
+      "path": "images/S71X1Y3knihasosamolepkami.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X2Y3\u0161arkan.png",
+      "path": "images/S71X2Y3\u0161arkan.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X3Y3macko.png",
+      "path": "images/S71X3Y3macko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X4Y3b\u00e1bka.png",
+      "path": "images/S71X4Y3b\u00e1bka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X0Y4sklada\u010dkasgeometrick\u00fdmi\u00fatvarmi.png",
+      "path": "images/S71X0Y4sklada\u010dkasgeometrick\u00fdmi\u00fatvarmi.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X1Y4puzzle.png",
+      "path": "images/S71X1Y4puzzle.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S71X2Y4\u0161katu\u013eanahra\u010dky.png",
+      "path": "images/S71X2Y4\u0161katu\u013eanahra\u010dky.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate hra\u010dky",
+  "sounds": []
+}

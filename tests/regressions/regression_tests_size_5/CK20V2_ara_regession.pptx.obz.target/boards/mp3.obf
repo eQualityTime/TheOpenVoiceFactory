@@ -1,0 +1,212 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S85X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "label": "\u0646\u064e\u0639\u064e\u0645"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Mp3"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S85X4Y0\u0644\u0627.png",
+      "label": "\u0644\u0627"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S85X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "label": "\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629 \u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "",
+      "label": "2"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "",
+      "label": "3"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "",
+      "label": "Pause/play"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S85X0Y2myalbums.png",
+      "label": "My Albums",
+      "load_board": {
+        "path": "boards/music.obf"
+      }
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "",
+      "label": "4"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S85X0Y3mp3volumeup.png",
+      "label": "MP3 volume up"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S85X0Y4mp3volumedown.png",
+      "label": "MP3 volume down"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S85X1Y4mute.png",
+      "label": "mute"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "",
+      "label": "shuffle"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "",
+      "label": "Previous track"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "",
+      "label": "Next track"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        null,
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        null,
+        null,
+        null
+      ],
+      [
+        "03",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "mp3",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S85X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "path": "images/S85X0Y0\u0646\u064e\u0639\u064e\u0645.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S85X4Y0\u0644\u0627.png",
+      "path": "images/S85X4Y0\u0644\u0627.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S85X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "path": "images/S85X0Y1\u0627\u0644\u0635\u064e\u0641\u062d\u064e\u0629\u0627\u0644\u0631\u064e\u0626\u064a\u0633\u064a\u064e\u0629.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S85X0Y2myalbums.png",
+      "path": "images/S85X0Y2myalbums.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S85X0Y3mp3volumeup.png",
+      "path": "images/S85X0Y3mp3volumeup.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S85X0Y4mp3volumedown.png",
+      "path": "images/S85X0Y4mp3volumedown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S85X1Y4mute.png",
+      "path": "images/S85X1Y4mute.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate mp3",
+  "sounds": []
+}

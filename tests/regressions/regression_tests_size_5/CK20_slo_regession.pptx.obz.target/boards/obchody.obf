@@ -1,0 +1,286 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S88X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "obchody"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S88X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S88X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S88X1Y1obchod.png",
+      "label": "obchod"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S88X2Y1supermarket.png",
+      "label": "supermarket"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S88X3Y1m\u00e4siarstvo.png",
+      "label": "m\u00e4siarstvo"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S88X4Y1n\u00e1kupn\u00e9centrum.png",
+      "label": "n\u00e1kupn\u00e9 centrum"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S88X0Y2pek\u00e1re\u0148.png",
+      "label": "pek\u00e1re\u0148"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S88X1Y2zelovoc.png",
+      "label": "zelovoc"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S88X2Y2obchodn\u00fddom.png",
+      "label": "obchodn\u00fd dom"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S88X3Y2odevy.png",
+      "label": "odevy"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S88X4Y2hudobniny.png",
+      "label": "hudobniny"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S88X0Y3trh.png",
+      "label": "trh"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S88X1Y3kaviare\u0148.png",
+      "label": "kaviare\u0148"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S88X2Y3re\u0161taur\u00e1ciasobsluhoudoauta.png",
+      "label": "re\u0161taur\u00e1cia s obsluhou do auta"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S88X3Y3lek\u00e1re\u0148.png",
+      "label": "lek\u00e1re\u0148"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "obchody",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X0Y0\u00e1no.png",
+      "path": "images/S88X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X4Y0nie.png",
+      "path": "images/S88X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S88X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X1Y1obchod.png",
+      "path": "images/S88X1Y1obchod.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X2Y1supermarket.png",
+      "path": "images/S88X2Y1supermarket.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X3Y1m\u00e4siarstvo.png",
+      "path": "images/S88X3Y1m\u00e4siarstvo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X4Y1n\u00e1kupn\u00e9centrum.png",
+      "path": "images/S88X4Y1n\u00e1kupn\u00e9centrum.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X0Y2pek\u00e1re\u0148.png",
+      "path": "images/S88X0Y2pek\u00e1re\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X1Y2zelovoc.png",
+      "path": "images/S88X1Y2zelovoc.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X2Y2obchodn\u00fddom.png",
+      "path": "images/S88X2Y2obchodn\u00fddom.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X3Y2odevy.png",
+      "path": "images/S88X3Y2odevy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X4Y2hudobniny.png",
+      "path": "images/S88X4Y2hudobniny.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X0Y3trh.png",
+      "path": "images/S88X0Y3trh.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X1Y3kaviare\u0148.png",
+      "path": "images/S88X1Y3kaviare\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X2Y3re\u0161taur\u00e1ciasobsluhoudoauta.png",
+      "path": "images/S88X2Y3re\u0161taur\u00e1ciasobsluhoudoauta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S88X3Y3lek\u00e1re\u0148.png",
+      "path": "images/S88X3Y3lek\u00e1re\u0148.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate obchody",
+  "sounds": []
+}

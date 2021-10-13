@@ -1,0 +1,314 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S4X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "O tebe"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S4X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S4X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S4X1Y1akosavol\u00e1\u0161.png",
+      "label": "Ako sa vol\u00e1\u0161?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S4X2Y1kdeb\u00fdva\u0161.png",
+      "label": "Kde b\u00fdva\u0161?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S4X3Y1kedym\u00e1\u0161narodeniny.png",
+      "label": "Kedy m\u00e1\u0161 narodeniny?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S4X4Y1ko\u013ekom\u00e1\u0161rokov.png",
+      "label": "Ko\u013eko m\u00e1\u0161 rokov?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S4X0Y2sk\u00fdmb\u00fdva\u0161.png",
+      "label": "S k\u00fdm b\u00fdva\u0161?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S4X1Y2m\u00e1\u0161nejak\u00e9dom\u00e1cezviera.png",
+      "label": "M\u00e1\u0161 nejak\u00e9 dom\u00e1ce zviera?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S4X2Y2povedzmiakotr\u00e1vi\u0161de\u0148.png",
+      "label": "Povedz mi, ako tr\u00e1vi\u0161 de\u0148"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S4X3Y2ak\u00fam\u00e1\u0161emailov\u00faadresu.png",
+      "label": "Ak\u00fa m\u00e1\u0161 emailov\u00fa adresu?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S4X4Y2kdepracuje\u0161.png",
+      "label": "Kde pracuje\u0161?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S4X0Y3ak\u00e9m\u00e1\u0161telef\u00f3nne\u010d\u00edslo.png",
+      "label": "Ak\u00e9 m\u00e1\u0161 telef\u00f3nne \u010d\u00edslo?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S4X1Y3ak\u00fahudbum\u00e1\u0161r\u00e1d.png",
+      "label": "Ak\u00fa hudbu m\u00e1\u0161 r\u00e1d?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S4X2Y3ak\u00e9filmym\u00e1\u0161r\u00e1d.png",
+      "label": "Ak\u00e9 filmy m\u00e1\u0161 r\u00e1d?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S4X3Y3ak\u00e9m\u00e1\u0161z\u00e1\u013euby.png",
+      "label": "Ak\u00e9 m\u00e1\u0161 z\u00e1\u013euby?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S4X4Y3\u010dor\u00e1dpozer\u00e1\u0161vtelev\u00edzii.png",
+      "label": "\u010co r\u00e1d pozer\u00e1\u0161 v telev\u00edzii?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S4X0Y4m\u00e1\u0161nejak\u00e9znev\u00fdhodnenie.png",
+      "label": "M\u00e1\u0161 nejak\u00e9 znev\u00fdhodnenie?"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "otebe",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y0\u00e1no.png",
+      "path": "images/S4X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y0nie.png",
+      "path": "images/S4X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S4X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X1Y1akosavol\u00e1\u0161.png",
+      "path": "images/S4X1Y1akosavol\u00e1\u0161.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X2Y1kdeb\u00fdva\u0161.png",
+      "path": "images/S4X2Y1kdeb\u00fdva\u0161.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X3Y1kedym\u00e1\u0161narodeniny.png",
+      "path": "images/S4X3Y1kedym\u00e1\u0161narodeniny.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y1ko\u013ekom\u00e1\u0161rokov.png",
+      "path": "images/S4X4Y1ko\u013ekom\u00e1\u0161rokov.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y2sk\u00fdmb\u00fdva\u0161.png",
+      "path": "images/S4X0Y2sk\u00fdmb\u00fdva\u0161.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X1Y2m\u00e1\u0161nejak\u00e9dom\u00e1cezviera.png",
+      "path": "images/S4X1Y2m\u00e1\u0161nejak\u00e9dom\u00e1cezviera.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X2Y2povedzmiakotr\u00e1vi\u0161de\u0148.png",
+      "path": "images/S4X2Y2povedzmiakotr\u00e1vi\u0161de\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X3Y2ak\u00fam\u00e1\u0161emailov\u00faadresu.png",
+      "path": "images/S4X3Y2ak\u00fam\u00e1\u0161emailov\u00faadresu.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y2kdepracuje\u0161.png",
+      "path": "images/S4X4Y2kdepracuje\u0161.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y3ak\u00e9m\u00e1\u0161telef\u00f3nne\u010d\u00edslo.png",
+      "path": "images/S4X0Y3ak\u00e9m\u00e1\u0161telef\u00f3nne\u010d\u00edslo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X1Y3ak\u00fahudbum\u00e1\u0161r\u00e1d.png",
+      "path": "images/S4X1Y3ak\u00fahudbum\u00e1\u0161r\u00e1d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X2Y3ak\u00e9filmym\u00e1\u0161r\u00e1d.png",
+      "path": "images/S4X2Y3ak\u00e9filmym\u00e1\u0161r\u00e1d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X3Y3ak\u00e9m\u00e1\u0161z\u00e1\u013euby.png",
+      "path": "images/S4X3Y3ak\u00e9m\u00e1\u0161z\u00e1\u013euby.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X4Y3\u010dor\u00e1dpozer\u00e1\u0161vtelev\u00edzii.png",
+      "path": "images/S4X4Y3\u010dor\u00e1dpozer\u00e1\u0161vtelev\u00edzii.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S4X0Y4m\u00e1\u0161nejak\u00e9znev\u00fdhodnenie.png",
+      "path": "images/S4X0Y4m\u00e1\u0161nejak\u00e9znev\u00fdhodnenie.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate otebe",
+  "sounds": []
+}

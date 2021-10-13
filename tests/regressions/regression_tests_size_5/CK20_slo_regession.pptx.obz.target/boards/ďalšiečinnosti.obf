@@ -1,0 +1,373 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S47X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "\u010fal\u0161ie \u010dinnosti"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S47X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S47X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S47X1Y1c\u00edti\u0165.png",
+      "label": "c\u00edti\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S47X2Y1\u010d\u00edta\u0165.png",
+      "label": "\u010d\u00edta\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S47X3Y1sedie\u0165.png",
+      "label": "sedie\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S47X4Y1st\u00e1\u0165.png",
+      "label": "st\u00e1\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S47X0Y2po\u010dka\u0165.png",
+      "label": "po\u010dka\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S47X1Y2sledova\u0165.png",
+      "label": "sledova\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S47X2Y2pracova\u0165.png",
+      "label": "pracova\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S47X3Y2ma\u0165.png",
+      "label": "ma\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S47X4Y2vedie\u0165.png",
+      "label": "vedie\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S47X0Y3hra\u0165.png",
+      "label": "hra\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S47X1Y3spieva\u0165.png",
+      "label": "spieva\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S47X2Y3spa\u0165.png",
+      "label": "spa\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S47X3Y3rozpr\u00e1va\u0165.png",
+      "label": "rozpr\u00e1va\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S47X4Y3sk\u00fasi\u0165.png",
+      "label": "sk\u00fasi\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S47X0Y4vyhra\u0165.png",
+      "label": "vyhra\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S47X1Y4prehra\u0165.png",
+      "label": "prehra\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S47X2Y4dokon\u010di\u0165.png",
+      "label": "dokon\u010di\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S47X3Y4potrebova\u0165.png",
+      "label": "potrebova\u0165"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S47X4Y4\u010fal\u0161ie\u010dinnosti.png",
+      "label": "\u010eal\u0161ie \u010dinnosti",
+      "load_board": {
+        "path": "boards/e\u0161teviac\u010dinnost\u00ed.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "\u010fal\u0161ie\u010dinnosti",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X0Y0\u00e1no.png",
+      "path": "images/S47X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X4Y0nie.png",
+      "path": "images/S47X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S47X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X1Y1c\u00edti\u0165.png",
+      "path": "images/S47X1Y1c\u00edti\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X2Y1\u010d\u00edta\u0165.png",
+      "path": "images/S47X2Y1\u010d\u00edta\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X3Y1sedie\u0165.png",
+      "path": "images/S47X3Y1sedie\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X4Y1st\u00e1\u0165.png",
+      "path": "images/S47X4Y1st\u00e1\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X0Y2po\u010dka\u0165.png",
+      "path": "images/S47X0Y2po\u010dka\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X1Y2sledova\u0165.png",
+      "path": "images/S47X1Y2sledova\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X2Y2pracova\u0165.png",
+      "path": "images/S47X2Y2pracova\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X3Y2ma\u0165.png",
+      "path": "images/S47X3Y2ma\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X4Y2vedie\u0165.png",
+      "path": "images/S47X4Y2vedie\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X0Y3hra\u0165.png",
+      "path": "images/S47X0Y3hra\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X1Y3spieva\u0165.png",
+      "path": "images/S47X1Y3spieva\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X2Y3spa\u0165.png",
+      "path": "images/S47X2Y3spa\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X3Y3rozpr\u00e1va\u0165.png",
+      "path": "images/S47X3Y3rozpr\u00e1va\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X4Y3sk\u00fasi\u0165.png",
+      "path": "images/S47X4Y3sk\u00fasi\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X0Y4vyhra\u0165.png",
+      "path": "images/S47X0Y4vyhra\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X1Y4prehra\u0165.png",
+      "path": "images/S47X1Y4prehra\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X2Y4dokon\u010di\u0165.png",
+      "path": "images/S47X2Y4dokon\u010di\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X3Y4potrebova\u0165.png",
+      "path": "images/S47X3Y4potrebova\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S47X4Y4\u010fal\u0161ie\u010dinnosti.png",
+      "path": "images/S47X4Y4\u010fal\u0161ie\u010dinnosti.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate \u010fal\u0161ie\u010dinnosti",
+  "sounds": []
+}

@@ -1,0 +1,258 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S24X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "\u0161al\u00e1t"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S24X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S24X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S24X1Y1\u0161al\u00e1t.png",
+      "label": "\u0161al\u00e1t"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S24X2Y1olivy.png",
+      "label": "olivy"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S24X3Y1paradajka.png",
+      "label": "paradajka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S24X4Y1jarn\u00e1cibu\u013eka.png",
+      "label": "jarn\u00e1 cibu\u013eka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S24X0Y2zeler.png",
+      "label": "zeler"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S24X1Y2uhorka.png",
+      "label": "uhorka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S24X2Y2paprika.png",
+      "label": "paprika"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S24X3Y2redkvi\u010dka.png",
+      "label": "redkvi\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S24X4Y2hl\u00e1vkov\u00fd\u0161al\u00e1t.png",
+      "label": "hl\u00e1vkov\u00fd \u0161al\u00e1t"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S24X0Y3cvikla.png",
+      "label": "cvikla"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S24X1Y3\u010dilipaprika.png",
+      "label": "\u010dili paprika"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "\u0161al\u00e1t",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X0Y0\u00e1no.png",
+      "path": "images/S24X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X4Y0nie.png",
+      "path": "images/S24X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S24X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X1Y1\u0161al\u00e1t.png",
+      "path": "images/S24X1Y1\u0161al\u00e1t.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X2Y1olivy.png",
+      "path": "images/S24X2Y1olivy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X3Y1paradajka.png",
+      "path": "images/S24X3Y1paradajka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X4Y1jarn\u00e1cibu\u013eka.png",
+      "path": "images/S24X4Y1jarn\u00e1cibu\u013eka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X0Y2zeler.png",
+      "path": "images/S24X0Y2zeler.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X1Y2uhorka.png",
+      "path": "images/S24X1Y2uhorka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X2Y2paprika.png",
+      "path": "images/S24X2Y2paprika.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X3Y2redkvi\u010dka.png",
+      "path": "images/S24X3Y2redkvi\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X4Y2hl\u00e1vkov\u00fd\u0161al\u00e1t.png",
+      "path": "images/S24X4Y2hl\u00e1vkov\u00fd\u0161al\u00e1t.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X0Y3cvikla.png",
+      "path": "images/S24X0Y3cvikla.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S24X1Y3\u010dilipaprika.png",
+      "path": "images/S24X1Y3\u010dilipaprika.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate \u0161al\u00e1t",
+  "sounds": []
+}

@@ -1,0 +1,223 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S57X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "zvierat\u00e1"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S57X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S57X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S57X1Y1dom\u00e1cezvierat\u00e1.png",
+      "label": "Dom\u00e1ce zvierat\u00e1",
+      "load_board": {
+        "path": "boards/dom\u00e1cezvierat\u00e1.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S57X2Y1hospod\u00e1rskezvierat\u00e1.png",
+      "label": "Hospod\u00e1rske zvierat\u00e1",
+      "load_board": {
+        "path": "boards/hospod\u00e1rskezvierat\u00e1.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S57X3Y1div\u00e9zvierat\u00e1.png",
+      "label": "Div\u00e9 zvierat\u00e1",
+      "load_board": {
+        "path": "boards/div\u00e9zvierat\u00e1.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S57X4Y1vodn\u00e9\u017eivo\u010d\u00edchy.png",
+      "label": "Vodn\u00e9 \u017eivo\u010d\u00edchy",
+      "load_board": {
+        "path": "boards/vodn\u00e9\u017eivo\u010d\u00edchy.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S57X1Y2vt\u00e1ky.png",
+      "label": "Vt\u00e1ky",
+      "load_board": {
+        "path": "boards/vt\u00e1ky.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S57X2Y2hmyz.png",
+      "label": "Hmyz",
+      "load_board": {
+        "path": "boards/hmyz.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S57X3Y2starostlivos\u0165odom\u00e1cezvierat\u00e1.png",
+      "label": "Starostlivos\u0165 o dom\u00e1ce zvierat\u00e1",
+      "load_board": {
+        "path": "boards/starostlivos\u0165odom\u00e1cezvierat\u00e1.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        null,
+        "12",
+        "22",
+        "32",
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "zvierat\u00e1",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X0Y0\u00e1no.png",
+      "path": "images/S57X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X4Y0nie.png",
+      "path": "images/S57X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S57X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X1Y1dom\u00e1cezvierat\u00e1.png",
+      "path": "images/S57X1Y1dom\u00e1cezvierat\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X2Y1hospod\u00e1rskezvierat\u00e1.png",
+      "path": "images/S57X2Y1hospod\u00e1rskezvierat\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X3Y1div\u00e9zvierat\u00e1.png",
+      "path": "images/S57X3Y1div\u00e9zvierat\u00e1.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X4Y1vodn\u00e9\u017eivo\u010d\u00edchy.png",
+      "path": "images/S57X4Y1vodn\u00e9\u017eivo\u010d\u00edchy.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X1Y2vt\u00e1ky.png",
+      "path": "images/S57X1Y2vt\u00e1ky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X2Y2hmyz.png",
+      "path": "images/S57X2Y2hmyz.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S57X3Y2starostlivos\u0165odom\u00e1cezvierat\u00e1.png",
+      "path": "images/S57X3Y2starostlivos\u0165odom\u00e1cezvierat\u00e1.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate zvierat\u00e1",
+  "sounds": []
+}

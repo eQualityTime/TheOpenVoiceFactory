@@ -1,0 +1,328 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S17X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "lunch"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S17X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S17X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S17X1Y1almuerzo.png",
+      "label": "almuerzo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S17X2Y1sandwich.png",
+      "label": "sandwich"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S17X3Y1galletas.png",
+      "label": "galletas"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S17X4Y1at\u00fan.png",
+      "label": "at\u00fan"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S17X0Y2queso.png",
+      "label": "queso"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S17X1Y2jam\u00f3n.png",
+      "label": "jam\u00f3n"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S17X2Y2pollo.png",
+      "label": "pollo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S17X3Y2tostadoconqueso.png",
+      "label": "tostado con queso"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S17X4Y2tostadasconjud\u00edas.png",
+      "label": "tostadas con jud\u00edas"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S17X0Y3sopa.png",
+      "label": "sopa"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S17X1Y3sopadepollo.png",
+      "label": "sopa de pollo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S17X2Y3sopadetomate.png",
+      "label": "sopa de tomate"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S17X3Y3ensalada.png",
+      "label": "ensalada"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S17X0Y4sopadezanahoria.png",
+      "label": "sopa de zanahoria"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S17X1Y4sopadehongos.png",
+      "label": "sopa de hongos"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S17X2Y4sopadeverduras.png",
+      "label": "sopa de verduras"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        null
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "lunch",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y0yes.png",
+      "path": "images/S17X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X4Y0no.png",
+      "path": "images/S17X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S17X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y1almuerzo.png",
+      "path": "images/S17X1Y1almuerzo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y1sandwich.png",
+      "path": "images/S17X2Y1sandwich.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X3Y1galletas.png",
+      "path": "images/S17X3Y1galletas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X4Y1at\u00fan.png",
+      "path": "images/S17X4Y1at\u00fan.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y2queso.png",
+      "path": "images/S17X0Y2queso.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y2jam\u00f3n.png",
+      "path": "images/S17X1Y2jam\u00f3n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y2pollo.png",
+      "path": "images/S17X2Y2pollo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X3Y2tostadoconqueso.png",
+      "path": "images/S17X3Y2tostadoconqueso.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X4Y2tostadasconjud\u00edas.png",
+      "path": "images/S17X4Y2tostadasconjud\u00edas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y3sopa.png",
+      "path": "images/S17X0Y3sopa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y3sopadepollo.png",
+      "path": "images/S17X1Y3sopadepollo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y3sopadetomate.png",
+      "path": "images/S17X2Y3sopadetomate.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X3Y3ensalada.png",
+      "path": "images/S17X3Y3ensalada.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y4sopadezanahoria.png",
+      "path": "images/S17X0Y4sopadezanahoria.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y4sopadehongos.png",
+      "path": "images/S17X1Y4sopadehongos.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y4sopadeverduras.png",
+      "path": "images/S17X2Y4sopadeverduras.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate lunch",
+  "sounds": []
+}

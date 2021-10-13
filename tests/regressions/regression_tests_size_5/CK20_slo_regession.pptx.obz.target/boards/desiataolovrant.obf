@@ -1,0 +1,332 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S22X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Desiata/olovrant"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S22X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S22X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S22X1Y1ob\u010derstvenie.png",
+      "label": "ob\u010derstvenie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S22X2Y1hrozienka.png",
+      "label": "hrozienka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S22X3Y1nanuk.png",
+      "label": "nanuk"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S22X4Y1torta.png",
+      "label": "torta"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S22X0Y2puding.png",
+      "label": "puding"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S22X1Y2smotana.png",
+      "label": "smotana"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S22X2Y2ovocie.png",
+      "label": "ovocie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S22X3Y2jogurt.png",
+      "label": "jogurt"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S22X4Y2lupienky.png",
+      "label": "lupienky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S22X0Y3cukr\u00edky.png",
+      "label": "cukr\u00edky"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S22X1Y3cukrov\u00e1vata.png",
+      "label": "cukrov\u00e1 vata"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S22X2Y3kol\u00e1\u010d.png",
+      "label": "kol\u00e1\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S22X3Y3\u010dokol\u00e1da.png",
+      "label": "\u010dokol\u00e1da"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S22X4Y3unknown.png",
+      "label": "43",
+      "load_board": {
+        "path": "boards/flavour.obf"
+      },
+      "vocalization": "Ice crea"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S22X0Y4cupcake.png",
+      "label": "cup cake"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S22X1Y4ry\u017eov\u00fdchleb\u00ed\u010dek.png",
+      "label": "ry\u017eov\u00fd chleb\u00ed\u010dek"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        null,
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "desiataolovrant",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X0Y0\u00e1no.png",
+      "path": "images/S22X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X4Y0nie.png",
+      "path": "images/S22X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S22X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X1Y1ob\u010derstvenie.png",
+      "path": "images/S22X1Y1ob\u010derstvenie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X2Y1hrozienka.png",
+      "path": "images/S22X2Y1hrozienka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X3Y1nanuk.png",
+      "path": "images/S22X3Y1nanuk.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X4Y1torta.png",
+      "path": "images/S22X4Y1torta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X0Y2puding.png",
+      "path": "images/S22X0Y2puding.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X1Y2smotana.png",
+      "path": "images/S22X1Y2smotana.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X2Y2ovocie.png",
+      "path": "images/S22X2Y2ovocie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X3Y2jogurt.png",
+      "path": "images/S22X3Y2jogurt.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X4Y2lupienky.png",
+      "path": "images/S22X4Y2lupienky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X0Y3cukr\u00edky.png",
+      "path": "images/S22X0Y3cukr\u00edky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X1Y3cukrov\u00e1vata.png",
+      "path": "images/S22X1Y3cukrov\u00e1vata.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X2Y3kol\u00e1\u010d.png",
+      "path": "images/S22X2Y3kol\u00e1\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X3Y3\u010dokol\u00e1da.png",
+      "path": "images/S22X3Y3\u010dokol\u00e1da.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X4Y3unknown.png",
+      "path": "images/S22X4Y3unknown.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X0Y4cupcake.png",
+      "path": "images/S22X0Y4cupcake.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S22X1Y4ry\u017eov\u00fdchleb\u00ed\u010dek.png",
+      "path": "images/S22X1Y4ry\u017eov\u00fdchleb\u00ed\u010dek.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate desiataolovrant",
+  "sounds": []
+}

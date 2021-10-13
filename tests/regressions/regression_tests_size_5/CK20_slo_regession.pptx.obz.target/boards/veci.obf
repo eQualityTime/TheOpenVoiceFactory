@@ -1,0 +1,387 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S55X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "veci"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S55X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S55X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S55X1Y1veci.png",
+      "label": "Veci"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S55X2Y1umeleck\u00e9potreby.png",
+      "label": "umeleck\u00e9 potreby",
+      "load_board": {
+        "path": "boards/umeleck\u00e9potreby.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S55X3Y1zdravie.png",
+      "label": "zdravie"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S55X4Y1\u010dastitela.png",
+      "label": "\u010dasti tela",
+      "load_board": {
+        "path": "boards/\u010dastitela.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S55X0Y2oble\u010denie.png",
+      "label": "oble\u010denie",
+      "load_board": {
+        "path": "boards/oble\u010denie.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S55X1Y2po\u010d\u00edta\u010d.png",
+      "label": "po\u010d\u00edta\u010d",
+      "load_board": {
+        "path": "boards/po\u010d\u00edta\u010d.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S55X2Y2n\u00e1bytok.png",
+      "label": "n\u00e1bytok",
+      "load_board": {
+        "path": "boards/n\u00e1bytok.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S55X3Y2hra\u010dky.png",
+      "label": "hra\u010dky",
+      "load_board": {
+        "path": "boards/hra\u010dky.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S55X4Y2vybaveniekuchyne.png",
+      "label": "vybavenie kuchyne",
+      "load_board": {
+        "path": "boards/vybaveniekuchyne.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S55X0Y3peniaze.png",
+      "label": "peniaze",
+      "load_board": {
+        "path": "boards/peniaze.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S55X1Y3kancel\u00e1ria.png",
+      "label": "kancel\u00e1ria",
+      "load_board": {
+        "path": "boards/vecivpr\u00e1ci.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S55X2Y3\u0161porty.png",
+      "label": "\u0161porty",
+      "load_board": {
+        "path": "boards/\u0161porty.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S55X3Y3veciktor\u00e9pom\u00e1haj\u00fa.png",
+      "label": "Veci, ktor\u00e9 pom\u00e1haj\u00fa",
+      "load_board": {
+        "path": "boards/veciktor\u00e9pom\u00e1haj\u00fa.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S55X4Y3drog\u00e9ria.png",
+      "label": "drog\u00e9ria",
+      "load_board": {
+        "path": "boards/drog\u00e9ria.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S55X0Y4n\u00e1radie.png",
+      "label": "n\u00e1radie",
+      "load_board": {
+        "path": "boards/n\u00e1radie.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S55X1Y4doprava.png",
+      "label": "doprava",
+      "load_board": {
+        "path": "boards/doprava.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S55X2Y4pr\u00edroda.png",
+      "label": "pr\u00edroda",
+      "load_board": {
+        "path": "boards/pr\u00edroda.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "veci",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X0Y0\u00e1no.png",
+      "path": "images/S55X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X4Y0nie.png",
+      "path": "images/S55X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S55X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X1Y1veci.png",
+      "path": "images/S55X1Y1veci.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X2Y1umeleck\u00e9potreby.png",
+      "path": "images/S55X2Y1umeleck\u00e9potreby.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X3Y1zdravie.png",
+      "path": "images/S55X3Y1zdravie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X4Y1\u010dastitela.png",
+      "path": "images/S55X4Y1\u010dastitela.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X0Y2oble\u010denie.png",
+      "path": "images/S55X0Y2oble\u010denie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X1Y2po\u010d\u00edta\u010d.png",
+      "path": "images/S55X1Y2po\u010d\u00edta\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X2Y2n\u00e1bytok.png",
+      "path": "images/S55X2Y2n\u00e1bytok.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X3Y2hra\u010dky.png",
+      "path": "images/S55X3Y2hra\u010dky.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X4Y2vybaveniekuchyne.png",
+      "path": "images/S55X4Y2vybaveniekuchyne.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X0Y3peniaze.png",
+      "path": "images/S55X0Y3peniaze.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X1Y3kancel\u00e1ria.png",
+      "path": "images/S55X1Y3kancel\u00e1ria.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X2Y3\u0161porty.png",
+      "path": "images/S55X2Y3\u0161porty.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X3Y3veciktor\u00e9pom\u00e1haj\u00fa.png",
+      "path": "images/S55X3Y3veciktor\u00e9pom\u00e1haj\u00fa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X4Y3drog\u00e9ria.png",
+      "path": "images/S55X4Y3drog\u00e9ria.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X0Y4n\u00e1radie.png",
+      "path": "images/S55X0Y4n\u00e1radie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X1Y4doprava.png",
+      "path": "images/S55X1Y4doprava.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S55X2Y4pr\u00edroda.png",
+      "path": "images/S55X2Y4pr\u00edroda.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate veci",
+  "sounds": []
+}

@@ -1,0 +1,338 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S7X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "Questions"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S7X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S7X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S7X1Y1preguntas.png",
+      "label": "Preguntas"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S7X2Y1porqu\u00e9.png",
+      "label": "Por qu\u00e9"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S7X3Y1cu\u00e1ndo.png",
+      "label": "Cu\u00e1ndo"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "",
+      "label": "Podr\u00eda",
+      "vocalization": "could"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S7X0Y2qu\u00e9.png",
+      "label": "Qu\u00e9"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S7X1Y2qui\u00e9n.png",
+      "label": "Qui\u00e9n"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S7X2Y2d\u00f3nde.png",
+      "label": "D\u00f3nde"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S7X3Y2cu\u00e1l.png",
+      "label": "Cu\u00e1l"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "",
+      "label": "quisiera",
+      "vocalization": "would"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S7X0Y3c\u00f3mo.png",
+      "label": "C\u00f3mo"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S7X1Y3puedovereso.png",
+      "label": "\u00bfPuedo ver eso?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S7X2Y3cu\u00e1ntocuesta.png",
+      "label": "\u00bfCu\u00e1nto cuesta?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "",
+      "label": "deber\u00eda",
+      "vocalization": "should"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S7X0Y4c\u00f3moest\u00e1s.png",
+      "label": "\u00bfC\u00f3mo est\u00e1s?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S7X1Y4qu\u00e9hasestadohaciendo.png",
+      "label": "\u00bfQu\u00e9 has estado haciendo?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S7X2Y4qu\u00e9piensas.png",
+      "label": "\u00bfQu\u00e9 piensas?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S7X3Y4qu\u00e9vienedespu\u00e9s.png",
+      "label": "\u00bfQu\u00e9 viene despu\u00e9s?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S7X4Y4qu\u00e9eseso.png",
+      "label": "\u00bfQu\u00e9 es eso?"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        null,
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "questions",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X0Y0yes.png",
+      "path": "images/S7X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X4Y0no.png",
+      "path": "images/S7X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S7X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X1Y1preguntas.png",
+      "path": "images/S7X1Y1preguntas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X2Y1porqu\u00e9.png",
+      "path": "images/S7X2Y1porqu\u00e9.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X3Y1cu\u00e1ndo.png",
+      "path": "images/S7X3Y1cu\u00e1ndo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X0Y2qu\u00e9.png",
+      "path": "images/S7X0Y2qu\u00e9.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X1Y2qui\u00e9n.png",
+      "path": "images/S7X1Y2qui\u00e9n.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X2Y2d\u00f3nde.png",
+      "path": "images/S7X2Y2d\u00f3nde.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X3Y2cu\u00e1l.png",
+      "path": "images/S7X3Y2cu\u00e1l.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X0Y3c\u00f3mo.png",
+      "path": "images/S7X0Y3c\u00f3mo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X1Y3puedovereso.png",
+      "path": "images/S7X1Y3puedovereso.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X2Y3cu\u00e1ntocuesta.png",
+      "path": "images/S7X2Y3cu\u00e1ntocuesta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X0Y4c\u00f3moest\u00e1s.png",
+      "path": "images/S7X0Y4c\u00f3moest\u00e1s.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X1Y4qu\u00e9hasestadohaciendo.png",
+      "path": "images/S7X1Y4qu\u00e9hasestadohaciendo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X2Y4qu\u00e9piensas.png",
+      "path": "images/S7X2Y4qu\u00e9piensas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X3Y4qu\u00e9vienedespu\u00e9s.png",
+      "path": "images/S7X3Y4qu\u00e9vienedespu\u00e9s.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S7X4Y4qu\u00e9eseso.png",
+      "path": "images/S7X4Y4qu\u00e9eseso.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate questions",
+  "sounds": []
+}

@@ -1,0 +1,328 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S17X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "obed"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S17X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S17X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S17X1Y1obed.png",
+      "label": "obed"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S17X2Y1sendvi\u010d.png",
+      "label": "sendvi\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S17X3Y1slan\u00e9pe\u010divo.png",
+      "label": "slan\u00e9 pe\u010divo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S17X4Y1tuniak.png",
+      "label": "tuniak"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S17X0Y2syr.png",
+      "label": "syr"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S17X1Y2\u0161unka.png",
+      "label": "\u0161unka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S17X2Y2kur\u010da.png",
+      "label": "kur\u010da"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S17X3Y2hriankasosyrom.png",
+      "label": "hrianka so syrom"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S17X4Y2hriankasfazu\u013eou.png",
+      "label": "hrianka s fazu\u013eou"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S17X0Y3polievka.png",
+      "label": "polievka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S17X1Y3kuraciapolievka.png",
+      "label": "kuracia polievka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S17X2Y3paradajkov\u00e1polievka.png",
+      "label": "paradajkov\u00e1 polievka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S17X3Y3\u0161al\u00e1t.png",
+      "label": "\u0161al\u00e1t"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S17X0Y4mrkvov\u00e1polievka.png",
+      "label": "mrkvov\u00e1 polievka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S17X1Y4hubov\u00e1polievka.png",
+      "label": "hubov\u00e1 polievka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S17X2Y4zeleninov\u00e1polievka.png",
+      "label": "zeleninov\u00e1 polievka"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        null
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "obed",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y0\u00e1no.png",
+      "path": "images/S17X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X4Y0nie.png",
+      "path": "images/S17X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S17X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y1obed.png",
+      "path": "images/S17X1Y1obed.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y1sendvi\u010d.png",
+      "path": "images/S17X2Y1sendvi\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X3Y1slan\u00e9pe\u010divo.png",
+      "path": "images/S17X3Y1slan\u00e9pe\u010divo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X4Y1tuniak.png",
+      "path": "images/S17X4Y1tuniak.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y2syr.png",
+      "path": "images/S17X0Y2syr.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y2\u0161unka.png",
+      "path": "images/S17X1Y2\u0161unka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y2kur\u010da.png",
+      "path": "images/S17X2Y2kur\u010da.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X3Y2hriankasosyrom.png",
+      "path": "images/S17X3Y2hriankasosyrom.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X4Y2hriankasfazu\u013eou.png",
+      "path": "images/S17X4Y2hriankasfazu\u013eou.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y3polievka.png",
+      "path": "images/S17X0Y3polievka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y3kuraciapolievka.png",
+      "path": "images/S17X1Y3kuraciapolievka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y3paradajkov\u00e1polievka.png",
+      "path": "images/S17X2Y3paradajkov\u00e1polievka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X3Y3\u0161al\u00e1t.png",
+      "path": "images/S17X3Y3\u0161al\u00e1t.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X0Y4mrkvov\u00e1polievka.png",
+      "path": "images/S17X0Y4mrkvov\u00e1polievka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X1Y4hubov\u00e1polievka.png",
+      "path": "images/S17X1Y4hubov\u00e1polievka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S17X2Y4zeleninov\u00e1polievka.png",
+      "path": "images/S17X2Y4zeleninov\u00e1polievka.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate obed",
+  "sounds": []
+}

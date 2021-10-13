@@ -1,0 +1,340 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S36X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "Personal care"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S36X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S36X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S36X1Y1ineedthetoilet.png",
+      "label": "I need the toilet"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S36X2Y1necesitoalgodeayuda.png",
+      "label": "Necesito algo de ayuda"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S36X3Y1nomesientobien.png",
+      "label": "No me siento bien",
+      "load_board": {
+        "path": "boards/idontfeelwell.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S36X4Y1partesdelcuerpo.png",
+      "label": "partes del cuerpo",
+      "load_board": {
+        "path": "boards/bodyparts.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S36X0Y2ropa.png",
+      "label": "ropa",
+      "load_board": {
+        "path": "boards/clothes.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S36X1Y2quierodescansarenmicama.png",
+      "label": "Quiero descansar en mi cama"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S36X2Y2megustariaafeitarme.png",
+      "label": "Me gustaria afeitarme"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S36X3Y2necesitomismedicinas.png",
+      "label": "necesito mis medicinas"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S36X4Y2porfavorpuedeslimpiarmisgafas.png",
+      "label": "por favor puedes limpiar mis gafas"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S36X0Y3mepuedeshacerlasu\u00f1asporfavor.png",
+      "label": "me puedes hacer las u\u00f1as, por favor"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S36X1Y3megustar\u00edaunaducha.png",
+      "label": "me gustar\u00eda una ducha"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S36X2Y3meencantar\u00edatomarunba\u00f1o.png",
+      "label": "me encantar\u00eda tomar un ba\u00f1o"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S36X3Y3tengounproblemaconmi.png",
+      "label": "tengo un problema con mi"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S36X4Y3art\u00edculosdeaseo.png",
+      "label": "art\u00edculos de aseo",
+      "load_board": {
+        "path": "boards/toiletries.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S36X0Y4necesitocambiarme.png",
+      "label": "necesito cambiarme"
+    },
+    {
+      "background_color": "rgb(255,125,236)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S36X2Y4mepuedespeinarporfavor.png",
+      "label": "me puedes peinar por favor"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        null,
+        "24",
+        null,
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "personalcare",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y0yes.png",
+      "path": "images/S36X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y0no.png",
+      "path": "images/S36X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S36X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X1Y1ineedthetoilet.png",
+      "path": "images/S36X1Y1ineedthetoilet.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y1necesitoalgodeayuda.png",
+      "path": "images/S36X2Y1necesitoalgodeayuda.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X3Y1nomesientobien.png",
+      "path": "images/S36X3Y1nomesientobien.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y1partesdelcuerpo.png",
+      "path": "images/S36X4Y1partesdelcuerpo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y2ropa.png",
+      "path": "images/S36X0Y2ropa.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X1Y2quierodescansarenmicama.png",
+      "path": "images/S36X1Y2quierodescansarenmicama.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y2megustariaafeitarme.png",
+      "path": "images/S36X2Y2megustariaafeitarme.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X3Y2necesitomismedicinas.png",
+      "path": "images/S36X3Y2necesitomismedicinas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y2porfavorpuedeslimpiarmisgafas.png",
+      "path": "images/S36X4Y2porfavorpuedeslimpiarmisgafas.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y3mepuedeshacerlasu\u00f1asporfavor.png",
+      "path": "images/S36X0Y3mepuedeshacerlasu\u00f1asporfavor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X1Y3megustar\u00edaunaducha.png",
+      "path": "images/S36X1Y3megustar\u00edaunaducha.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y3meencantar\u00edatomarunba\u00f1o.png",
+      "path": "images/S36X2Y3meencantar\u00edatomarunba\u00f1o.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X3Y3tengounproblemaconmi.png",
+      "path": "images/S36X3Y3tengounproblemaconmi.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X4Y3art\u00edculosdeaseo.png",
+      "path": "images/S36X4Y3art\u00edculosdeaseo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X0Y4necesitocambiarme.png",
+      "path": "images/S36X0Y4necesitocambiarme.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S36X2Y4mepuedespeinarporfavor.png",
+      "path": "images/S36X2Y4mepuedespeinarporfavor.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate personalcare",
+  "sounds": []
+}

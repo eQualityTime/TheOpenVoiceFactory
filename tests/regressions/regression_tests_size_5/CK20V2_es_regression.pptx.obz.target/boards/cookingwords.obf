@@ -1,0 +1,289 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S27X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "cooking words"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S27X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S27X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S27X1Y1hornear.png",
+      "label": "hornear"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S27X2Y1cocinar.png",
+      "label": "cocinar"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S27X3Y1cortar.png",
+      "label": "cortar"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S27X4Y1rallar.png",
+      "label": "rallar"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S27X0Y2revolver.png",
+      "label": "revolver"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S27X1Y2pelar.png",
+      "label": "pelar"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S27X2Y2derramar.png",
+      "label": "derramar"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S27X3Y2mezclar.png",
+      "label": "mezclar"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S27X4Y2freir.png",
+      "label": "freir"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S27X0Y3measure.png",
+      "label": "measure"
+    },
+    {
+      "background_color": "rgb(178,123,6)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S27X0Y4eso.png",
+      "label": "eso"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S27X3Y4utenziliosdecocina.png",
+      "label": "utenzilios  de cocina",
+      "load_board": {
+        "path": "boards/kitchenequipment.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S27X4Y4noloquemes.png",
+      "label": "No lo quemes"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        "04",
+        null,
+        null,
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "cookingwords",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X0Y0yes.png",
+      "path": "images/S27X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X4Y0no.png",
+      "path": "images/S27X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S27X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X1Y1hornear.png",
+      "path": "images/S27X1Y1hornear.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X2Y1cocinar.png",
+      "path": "images/S27X2Y1cocinar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X3Y1cortar.png",
+      "path": "images/S27X3Y1cortar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X4Y1rallar.png",
+      "path": "images/S27X4Y1rallar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X0Y2revolver.png",
+      "path": "images/S27X0Y2revolver.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X1Y2pelar.png",
+      "path": "images/S27X1Y2pelar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X2Y2derramar.png",
+      "path": "images/S27X2Y2derramar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X3Y2mezclar.png",
+      "path": "images/S27X3Y2mezclar.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X4Y2freir.png",
+      "path": "images/S27X4Y2freir.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X0Y3measure.png",
+      "path": "images/S27X0Y3measure.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X0Y4eso.png",
+      "path": "images/S27X0Y4eso.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X3Y4utenziliosdecocina.png",
+      "path": "images/S27X3Y4utenziliosdecocina.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S27X4Y4noloquemes.png",
+      "path": "images/S27X4Y4noloquemes.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate cookingwords",
+  "sounds": []
+}

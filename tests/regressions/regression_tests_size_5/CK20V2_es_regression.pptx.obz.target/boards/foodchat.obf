@@ -1,0 +1,356 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S3X0Y0yes.png",
+      "label": "Yes"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "Food chat"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S3X4Y0no.png",
+      "label": "No"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S3X0Y1p\u00e1ginadeinicio.png",
+      "label": "P\u00e1gina de inicio",
+      "load_board": {
+        "path": "boards/toppage.obf"
+      }
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S3X1Y1megusta.png",
+      "label": "Me gusta"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S3X2Y1esasqueroso.png",
+      "label": "Es asqueroso"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S3X3Y1espicante.png",
+      "label": "Es picante"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S3X4Y1cortalacomida.png",
+      "label": "Corta la comida"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S3X0Y2puedesdarmem\u00e1s.png",
+      "label": "\u00bfPuedes darme m\u00e1s"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S3X1Y2puedotomaralgo.png",
+      "label": "\u00bfPuedo tomar algo?"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S3X2Y2limpiarmicara.png",
+      "label": "Limpiar mi cara"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S3X3Y2porfavor.png",
+      "label": "Por favor"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S3X4Y2gracias.png",
+      "label": "Gracias"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S3X0Y3quehayparalacena.png",
+      "label": "\u00bfQue hay para la cena?"
+    },
+    {
+      "background_color": "rgb(255,102,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S3X1Y3quehasestadohaciendo.png",
+      "label": "\u00bfQue has estado haciendo?"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S3X2Y3essuficiente.png",
+      "label": "Es suficiente"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S3X3Y3comer.png",
+      "label": "comer"
+    },
+    {
+      "background_color": "rgb(255,3,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S3X4Y3beber.png",
+      "label": "beber"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S3X0Y4est\u00e1muycaliente.png",
+      "label": "Est\u00e1 muy caliente"
+    },
+    {
+      "background_color": "rgb(191,191,191)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S3X1Y4est\u00e1muyfr\u00edo.png",
+      "label": "Est\u00e1 muy fr\u00edo"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S3X2Y4lleno.png",
+      "label": "lleno"
+    },
+    {
+      "background_color": "rgb(1,231,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S3X3Y4vac\u00edo.png",
+      "label": "Vac\u00edo"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        null
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "foodchat",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X0Y0yes.png",
+      "path": "images/S3X0Y0yes.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X4Y0no.png",
+      "path": "images/S3X4Y0no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X0Y1p\u00e1ginadeinicio.png",
+      "path": "images/S3X0Y1p\u00e1ginadeinicio.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X1Y1megusta.png",
+      "path": "images/S3X1Y1megusta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X2Y1esasqueroso.png",
+      "path": "images/S3X2Y1esasqueroso.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X3Y1espicante.png",
+      "path": "images/S3X3Y1espicante.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X4Y1cortalacomida.png",
+      "path": "images/S3X4Y1cortalacomida.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X0Y2puedesdarmem\u00e1s.png",
+      "path": "images/S3X0Y2puedesdarmem\u00e1s.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X1Y2puedotomaralgo.png",
+      "path": "images/S3X1Y2puedotomaralgo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X2Y2limpiarmicara.png",
+      "path": "images/S3X2Y2limpiarmicara.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X3Y2porfavor.png",
+      "path": "images/S3X3Y2porfavor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X4Y2gracias.png",
+      "path": "images/S3X4Y2gracias.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X0Y3quehayparalacena.png",
+      "path": "images/S3X0Y3quehayparalacena.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X1Y3quehasestadohaciendo.png",
+      "path": "images/S3X1Y3quehasestadohaciendo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X2Y3essuficiente.png",
+      "path": "images/S3X2Y3essuficiente.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X3Y3comer.png",
+      "path": "images/S3X3Y3comer.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X4Y3beber.png",
+      "path": "images/S3X4Y3beber.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X0Y4est\u00e1muycaliente.png",
+      "path": "images/S3X0Y4est\u00e1muycaliente.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X1Y4est\u00e1muyfr\u00edo.png",
+      "path": "images/S3X1Y4est\u00e1muyfr\u00edo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X2Y4lleno.png",
+      "path": "images/S3X2Y4lleno.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S3X3Y4vac\u00edo.png",
+      "path": "images/S3X3Y4vac\u00edo.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate foodchat",
+  "sounds": []
+}

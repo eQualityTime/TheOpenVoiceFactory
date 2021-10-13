@@ -1,0 +1,300 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S60X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "20",
+      "image_id": "",
+      "label": "Be\u017en\u00e9 veci"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S60X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S60X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S60X1Y1vec.png",
+      "label": "vec"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S60X2Y1ta\u0161ka.png",
+      "label": "ta\u0161ka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S60X3Y1bat\u00e9ria.png",
+      "label": "bat\u00e9ria"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S60X4Y1svie\u010dka.png",
+      "label": "svie\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S60X0Y2ohe\u0148.png",
+      "label": "ohe\u0148"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S60X1Y2kniha.png",
+      "label": "kniha"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S60X2Y2ipad.png",
+      "label": "ipad"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S60X3Y2fotoapar\u00e1t.png",
+      "label": "fotoapar\u00e1t"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S60X0Y3veci.png",
+      "label": "veci"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S60X1Y3\u010das\u0165.png",
+      "label": "\u010das\u0165"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S60X2Y3mno\u017estvo.png",
+      "label": "mno\u017estvo"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S60X3Y3n\u00e1pad.png",
+      "label": "n\u00e1pad"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S60X4Y3probl\u00e9m.png",
+      "label": "probl\u00e9m"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S60X4Y4nab\u00edja\u010dka.png",
+      "label": "nab\u00edja\u010dka"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        null,
+        "20",
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        null
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "be\u017en\u00e9veci",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X0Y0\u00e1no.png",
+      "path": "images/S60X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X4Y0nie.png",
+      "path": "images/S60X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S60X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X1Y1vec.png",
+      "path": "images/S60X1Y1vec.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X2Y1ta\u0161ka.png",
+      "path": "images/S60X2Y1ta\u0161ka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X3Y1bat\u00e9ria.png",
+      "path": "images/S60X3Y1bat\u00e9ria.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X4Y1svie\u010dka.png",
+      "path": "images/S60X4Y1svie\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X0Y2ohe\u0148.png",
+      "path": "images/S60X0Y2ohe\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X1Y2kniha.png",
+      "path": "images/S60X1Y2kniha.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X2Y2ipad.png",
+      "path": "images/S60X2Y2ipad.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X3Y2fotoapar\u00e1t.png",
+      "path": "images/S60X3Y2fotoapar\u00e1t.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X0Y3veci.png",
+      "path": "images/S60X0Y3veci.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X1Y3\u010das\u0165.png",
+      "path": "images/S60X1Y3\u010das\u0165.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X2Y3mno\u017estvo.png",
+      "path": "images/S60X2Y3mno\u017estvo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X3Y3n\u00e1pad.png",
+      "path": "images/S60X3Y3n\u00e1pad.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X4Y3probl\u00e9m.png",
+      "path": "images/S60X4Y3probl\u00e9m.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S60X4Y4nab\u00edja\u010dka.png",
+      "path": "images/S60X4Y4nab\u00edja\u010dka.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate be\u017en\u00e9veci",
+  "sounds": []
+}

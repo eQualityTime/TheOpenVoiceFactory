@@ -1,0 +1,379 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S87X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "miesta"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S87X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S87X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S87X1Y1miesto.png",
+      "label": "miesto"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S87X2Y1ka\u017edodenn\u00e9miesta.png",
+      "label": "Ka\u017edodenn\u00e9 miesta"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S87X3Y1obchody.png",
+      "label": "obchody",
+      "load_board": {
+        "path": "boards/obchody.obf"
+      }
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S87X4Y1miestavonku.png",
+      "label": "miesta vonku",
+      "load_board": {
+        "path": "boards/miestavonku.obf"
+      }
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S87X0Y2pr\u00e1ca.png",
+      "label": "pr\u00e1ca"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S87X1Y2\u0161kola.png",
+      "label": "\u0161kola"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S87X2Y2mesto.png",
+      "label": "mesto"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S87X3Y2nemocnica.png",
+      "label": "nemocnica"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S87X4Y2letisko.png",
+      "label": "letisko"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S87X0Y3zub\u00e1r.png",
+      "label": "zub\u00e1r"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S87X1Y3banka.png",
+      "label": "banka"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S87X2Y3lek\u00e1ri.png",
+      "label": "lek\u00e1ri"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S87X3Y3plav\u00e1re\u0148.png",
+      "label": "plav\u00e1re\u0148"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S87X4Y3re\u0161taur\u00e1cia.png",
+      "label": "re\u0161taur\u00e1cia"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "04",
+      "image_id": "images/S87X0Y4kni\u017enica.png",
+      "label": "kni\u017enica"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "14",
+      "image_id": "images/S87X1Y4pohostinstvo.png",
+      "label": "pohostinstvo"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "24",
+      "image_id": "images/S87X2Y4po\u0161ta.png",
+      "label": "po\u0161ta"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "34",
+      "image_id": "images/S87X3Y4kino.png",
+      "label": "kino"
+    },
+    {
+      "background_color": "rgb(102,0,102)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S87X4Y4domov.png",
+      "label": "domov",
+      "load_board": {
+        "path": "boards/domov.obf"
+      }
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        "04",
+        "14",
+        "24",
+        "34",
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "miesta",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X0Y0\u00e1no.png",
+      "path": "images/S87X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X4Y0nie.png",
+      "path": "images/S87X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S87X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X1Y1miesto.png",
+      "path": "images/S87X1Y1miesto.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X2Y1ka\u017edodenn\u00e9miesta.png",
+      "path": "images/S87X2Y1ka\u017edodenn\u00e9miesta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X3Y1obchody.png",
+      "path": "images/S87X3Y1obchody.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X4Y1miestavonku.png",
+      "path": "images/S87X4Y1miestavonku.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X0Y2pr\u00e1ca.png",
+      "path": "images/S87X0Y2pr\u00e1ca.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X1Y2\u0161kola.png",
+      "path": "images/S87X1Y2\u0161kola.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X2Y2mesto.png",
+      "path": "images/S87X2Y2mesto.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X3Y2nemocnica.png",
+      "path": "images/S87X3Y2nemocnica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X4Y2letisko.png",
+      "path": "images/S87X4Y2letisko.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X0Y3zub\u00e1r.png",
+      "path": "images/S87X0Y3zub\u00e1r.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X1Y3banka.png",
+      "path": "images/S87X1Y3banka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X2Y3lek\u00e1ri.png",
+      "path": "images/S87X2Y3lek\u00e1ri.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X3Y3plav\u00e1re\u0148.png",
+      "path": "images/S87X3Y3plav\u00e1re\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X4Y3re\u0161taur\u00e1cia.png",
+      "path": "images/S87X4Y3re\u0161taur\u00e1cia.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X0Y4kni\u017enica.png",
+      "path": "images/S87X0Y4kni\u017enica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X1Y4pohostinstvo.png",
+      "path": "images/S87X1Y4pohostinstvo.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X2Y4po\u0161ta.png",
+      "path": "images/S87X2Y4po\u0161ta.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X3Y4kino.png",
+      "path": "images/S87X3Y4kino.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S87X4Y4domov.png",
+      "path": "images/S87X4Y4domov.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate miesta",
+  "sounds": []
+}

@@ -1,0 +1,314 @@
+{
+  "buttons": [
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "00",
+      "image_id": "images/S69X0Y0\u00e1no.png",
+      "label": "\u00c1no"
+    },
+    {
+      "background_color": "rgb(0,0,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "10",
+      "image_id": "",
+      "label": "po\u010d\u00edta\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,255)",
+      "border_color": "rgb(68,68,68)",
+      "id": "40",
+      "image_id": "images/S69X4Y0nie.png",
+      "label": "Nie"
+    },
+    {
+      "background_color": "rgb(255,239,7)",
+      "border_color": "rgb(68,68,68)",
+      "id": "01",
+      "image_id": "images/S69X0Y1prv\u00e1str\u00e1nka.png",
+      "label": "Prv\u00e1 str\u00e1nka",
+      "load_board": {
+        "path": "boards/prv\u00e1str\u00e1nka.obf"
+      }
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "11",
+      "image_id": "images/S69X1Y1po\u010d\u00edta\u010d.png",
+      "label": "po\u010d\u00edta\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "21",
+      "image_id": "images/S69X2Y1my\u0161.png",
+      "label": "my\u0161"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "31",
+      "image_id": "images/S69X3Y1kl\u00e1vesnica.png",
+      "label": "kl\u00e1vesnica"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "41",
+      "image_id": "images/S69X4Y1usbk\u013e\u00fa\u010d.png",
+      "label": "USB k\u013e\u00fa\u010d"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "02",
+      "image_id": "images/S69X0Y2tla\u010diare\u0148.png",
+      "label": "tla\u010diare\u0148"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "12",
+      "image_id": "images/S69X1Y2email.png",
+      "label": "e-mail"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "22",
+      "image_id": "images/S69X2Y2iphone.png",
+      "label": "iphone"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "32",
+      "image_id": "images/S69X3Y2monitor.png",
+      "label": "monitor"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "42",
+      "image_id": "images/S69X4Y2webstr\u00e1nka.png",
+      "label": "webstr\u00e1nka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "03",
+      "image_id": "images/S69X0Y3ipad.png",
+      "label": "ipad"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "13",
+      "image_id": "images/S69X1Y3reproduktory.png",
+      "label": "reproduktory"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "23",
+      "image_id": "images/S69X2Y3joystick.png",
+      "label": "joystick"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "33",
+      "image_id": "images/S69X3Y3dotykov\u00e1obrazovka.png",
+      "label": "dotykov\u00e1 obrazovka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "43",
+      "image_id": "images/S69X4Y3predl\u017eova\u010dka.png",
+      "label": "predl\u017eova\u010dka"
+    },
+    {
+      "background_color": "rgb(255,255,0)",
+      "border_color": "rgb(68,68,68)",
+      "id": "44",
+      "image_id": "images/S69X4Y4nab\u00edja\u010dka.png",
+      "label": "nab\u00edja\u010dka"
+    }
+  ],
+  "format": "open-board-0.1",
+  "grid": {
+    "columns": 5,
+    "order": [
+      [
+        "00",
+        "10",
+        null,
+        null,
+        "40"
+      ],
+      [
+        "01",
+        "11",
+        "21",
+        "31",
+        "41"
+      ],
+      [
+        "02",
+        "12",
+        "22",
+        "32",
+        "42"
+      ],
+      [
+        "03",
+        "13",
+        "23",
+        "33",
+        "43"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "44"
+      ]
+    ],
+    "rows": 5
+  },
+  "id": "po\u010d\u00edta\u010d",
+  "images": [
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X0Y0\u00e1no.png",
+      "path": "images/S69X0Y0\u00e1no.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X4Y0nie.png",
+      "path": "images/S69X4Y0nie.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X0Y1prv\u00e1str\u00e1nka.png",
+      "path": "images/S69X0Y1prv\u00e1str\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X1Y1po\u010d\u00edta\u010d.png",
+      "path": "images/S69X1Y1po\u010d\u00edta\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X2Y1my\u0161.png",
+      "path": "images/S69X2Y1my\u0161.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X3Y1kl\u00e1vesnica.png",
+      "path": "images/S69X3Y1kl\u00e1vesnica.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X4Y1usbk\u013e\u00fa\u010d.png",
+      "path": "images/S69X4Y1usbk\u013e\u00fa\u010d.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X0Y2tla\u010diare\u0148.png",
+      "path": "images/S69X0Y2tla\u010diare\u0148.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X1Y2email.png",
+      "path": "images/S69X1Y2email.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X2Y2iphone.png",
+      "path": "images/S69X2Y2iphone.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X3Y2monitor.png",
+      "path": "images/S69X3Y2monitor.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X4Y2webstr\u00e1nka.png",
+      "path": "images/S69X4Y2webstr\u00e1nka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X0Y3ipad.png",
+      "path": "images/S69X0Y3ipad.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X1Y3reproduktory.png",
+      "path": "images/S69X1Y3reproduktory.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X2Y3joystick.png",
+      "path": "images/S69X2Y3joystick.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X3Y3dotykov\u00e1obrazovka.png",
+      "path": "images/S69X3Y3dotykov\u00e1obrazovka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X4Y3predl\u017eova\u010dka.png",
+      "path": "images/S69X4Y3predl\u017eova\u010dka.png",
+      "width": 300
+    },
+    {
+      "content_type": "image/png",
+      "height": 300,
+      "id": "images/S69X4Y4nab\u00edja\u010dka.png",
+      "path": "images/S69X4Y4nab\u00edja\u010dka.png",
+      "width": 300
+    }
+  ],
+  "locale": "en",
+  "name": "CommuniKate po\u010d\u00edta\u010d",
+  "sounds": []
+}
