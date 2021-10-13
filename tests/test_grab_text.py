@@ -477,6 +477,12 @@ class ovfTest(TestCase):
         grids = self.get_singleton_CK20().grids
         self.assertNotEqual(grids[0].links[4][1],"")
 
+    
+    def test_process_commandstring(self):
+        button={}
+        commandstring='ovf(place("hello")'
+        pagesetparser.process_commandstring(commandstring,button)
+        self.assertEqual(button["vocalization"],"hello")
 
 
 
@@ -495,6 +501,7 @@ class ovfTest(TestCase):
     def test_make_title_3(self):
         tag = pagesetparser.make_title("Sysbols#")
         self.assertEqual(tag,"sysbols")
+
 
 
 #    def test_warning_for_missinglink(self):
