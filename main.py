@@ -16,12 +16,12 @@ if __name__ == "__main__": #TODO proper arg parse
         gridSize = int(sys.argv[3])
     parser.gridSize=gridSize #TODO: what is this shit? 
     obf_dest=dest+'/data/'
-    pageset = Pageset(filename, ovf_dest, gridSize) #TODO: dest shouldn't appear here
-    pageset.extract_and_label_images(ovf_dest) #TODO - shouldn't be here at all. 
+    pageset = Pageset(filename, obf_dest, gridSize) #TODO: dest shouldn't appear here
+    pageset.extract_and_label_images(obf_dest) #TODO - shouldn't be here at all. 
 
     #TODO put these two lines into one function 
     pageset.write_json(dest+'/pageset.json')
 
     # TODO - this should surely be pageset.write_to_obz(dest) (NOT obf) 
-    parser.write_to_obf(pageset.grids, ovf_dest)
+    parser.write_to_obf(pageset.grids, obf_dest)
 
