@@ -39,23 +39,17 @@ def generate_obz(filename,gridSize):
         parser.write_to_obf(pageset.grids, obf_dest)
 
 def generate(filename, gridSize):
-        prs = Presentation(filename)
-        grids = pagesetparser.Pageset(filename,"",gridSize,False).grids
-        internal = pagesetparser.create_json_object(grids)
-        internal = json.dumps(internal)
-        pagesetparser.write_to_JSON(grids, filename+".json")
+        Pageset(filename,"",gridSize,False).write_json(filename+".json")
 
 
 if __name__=="__main__":
 
  for file in glob.glob("regression_tests_size_5/*.pptx"):
         print(file)
-        generate_hash(file,5)
+        generate(file,5)
  for file in glob.glob("regression_tests_size_4/*.pptx"):
         print(file)
-        generate_hash(file,4)
-
-
+        generate(file,4)
 
 
 

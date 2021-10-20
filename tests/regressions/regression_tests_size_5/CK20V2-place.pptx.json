@@ -78,7 +78,7 @@
             ],
             [
                 [
-                    "icons/S0X0Y0yes.png",
+                    "images/S0X0Y0yes.png",
                     "",
                     "",
                     "",
@@ -86,14 +86,14 @@
                 ],
                 [
                     "",
-                    "icons/S0X1Y1phello.png",
+                    "images/S0X1Y1phello.png",
                     "",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S0X2Y1p.png",
+                    "images/S0X2Y1p.png",
                     "",
                     "",
                     ""
@@ -106,7 +106,7 @@
                     ""
                 ],
                 [
-                    "icons/S0X4Y0no.png",
+                    "images/S0X4Y0no.png",
                     "",
                     "",
                     "",

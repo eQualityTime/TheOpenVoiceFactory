@@ -56,28 +56,28 @@
             ],
             [
                 [
-                    "icons/S0X0Y0yes.png",
-                    "icons/S0X0Y1chatting.png",
-                    "icons/S0X0Y2actionwords.png",
-                    "icons/S0X0Y3unknown.png"
+                    "images/S0X0Y0yes.png",
+                    "images/S0X0Y1chatting.png",
+                    "images/S0X0Y2actionwords.png",
+                    "images/S0X0Y3unknown.png"
                 ],
                 [
                     "",
-                    "icons/S0X1Y1questions.png",
-                    "icons/S0X1Y2people.png",
-                    "icons/S0X1Y3places.png"
+                    "images/S0X1Y1questions.png",
+                    "images/S0X1Y2people.png",
+                    "images/S0X1Y3places.png"
                 ],
                 [
                     "",
-                    "icons/S0X2Y1personalcare.png",
-                    "icons/S0X2Y2describing.png",
-                    "icons/S0X2Y3leisure.png"
+                    "images/S0X2Y1personalcare.png",
+                    "images/S0X2Y2describing.png",
+                    "images/S0X2Y3leisure.png"
                 ],
                 [
-                    "icons/S0X3Y0no.png",
-                    "icons/S0X3Y1things.png",
-                    "icons/S0X3Y2myday.png",
-                    "icons/S0X3Y3littlewords.png"
+                    "images/S0X3Y0no.png",
+                    "images/S0X3Y1things.png",
+                    "images/S0X3Y2myday.png",
+                    "images/S0X3Y3littlewords.png"
                 ]
             ],
             [
@@ -220,28 +220,28 @@
             ],
             [
                 [
-                    "icons/S1X0Y0yes.png",
-                    "icons/S1X0Y1toppage.png",
-                    "icons/S1X0Y2hello.png",
-                    "icons/S1X0Y3mystories.png"
+                    "images/S1X0Y0yes.png",
+                    "images/S1X0Y1toppage.png",
+                    "images/S1X0Y2hello.png",
+                    "images/S1X0Y3mystories.png"
                 ],
                 [
                     "",
-                    "icons/S1X1Y1aboutme.png",
-                    "icons/S1X1Y2imfine.png",
-                    "icons/S1X1Y3sorry.png"
+                    "images/S1X1Y1aboutme.png",
+                    "images/S1X1Y2imfine.png",
+                    "images/S1X1Y3sorry.png"
                 ],
                 [
                     "",
-                    "icons/S1X2Y1wml.png",
-                    "icons/S1X2Y2ok.png",
-                    "icons/S1X2Y3idontknow.png"
+                    "images/S1X2Y1wml.png",
+                    "images/S1X2Y2ok.png",
+                    "images/S1X2Y3idontknow.png"
                 ],
                 [
-                    "icons/S1X3Y0no.png",
-                    "icons/S1X3Y1icantfindwhatiwanttosay.png",
-                    "icons/S1X3Y2imnotsogood.png",
-                    "icons/S1X3Y3bye.png"
+                    "images/S1X3Y0no.png",
+                    "images/S1X3Y1icantfindwhatiwanttosay.png",
+                    "images/S1X3Y2imnotsogood.png",
+                    "images/S1X3Y3bye.png"
                 ]
             ],
             [
@@ -384,27 +384,27 @@
             ],
             [
                 [
-                    "icons/S2X0Y0yes.png",
-                    "icons/S2X0Y1toppage.png",
-                    "icons/S2X0Y2unknown.png",
-                    "icons/S2X0Y3ilike.png"
+                    "images/S2X0Y0yes.png",
+                    "images/S2X0Y1toppage.png",
+                    "images/S2X0Y2unknown.png",
+                    "images/S2X0Y3ilike.png"
                 ],
                 [
                     "",
-                    "icons/S2X1Y1unknown.png",
-                    "icons/S2X1Y2unknown.png",
-                    "icons/S2X1Y3unknown.png"
+                    "images/S2X1Y1unknown.png",
+                    "images/S2X1Y2unknown.png",
+                    "images/S2X1Y3unknown.png"
                 ],
                 [
                     "",
-                    "icons/S2X2Y1unknown.png",
-                    "icons/S2X2Y2unknown.png",
-                    "icons/S2X2Y3tellmeaboutyou.png"
+                    "images/S2X2Y1unknown.png",
+                    "images/S2X2Y2unknown.png",
+                    "images/S2X2Y3tellmeaboutyou.png"
                 ],
                 [
-                    "icons/S2X3Y0no.png",
-                    "icons/S2X3Y1birthday.png",
-                    "icons/S2X3Y2tv.png",
+                    "images/S2X3Y0no.png",
+                    "images/S2X3Y1birthday.png",
+                    "images/S2X3Y2tv.png",
                     ""
                 ]
             ],
@@ -548,14 +548,14 @@
             ],
             [
                 [
-                    "icons/S3X0Y0yes.png",
-                    "icons/S3X0Y1toppage.png",
+                    "images/S3X0Y0yes.png",
+                    "images/S3X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S3X1Y1ilike.png",
+                    "images/S3X1Y1ilike.png",
                     "",
                     ""
                 ],
@@ -566,7 +566,7 @@
                     ""
                 ],
                 [
-                    "icons/S3X3Y0no.png",
+                    "images/S3X3Y0no.png",
                     "",
                     "",
                     ""
@@ -712,14 +712,14 @@
             ],
             [
                 [
-                    "icons/S4X0Y0yes.png",
-                    "icons/S4X0Y1toppage.png",
+                    "images/S4X0Y0yes.png",
+                    "images/S4X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S4X1Y1idontlike.png",
+                    "images/S4X1Y1idontlike.png",
                     "",
                     ""
                 ],
@@ -730,7 +730,7 @@
                     ""
                 ],
                 [
-                    "icons/S4X3Y0no.png",
+                    "images/S4X3Y0no.png",
                     "",
                     "",
                     ""
@@ -876,27 +876,27 @@
             ],
             [
                 [
-                    "icons/S5X0Y0yes.png",
-                    "icons/S5X0Y1toppage.png",
-                    "icons/S5X0Y2unknown.png",
-                    "icons/S5X0Y3unknown.png"
+                    "images/S5X0Y0yes.png",
+                    "images/S5X0Y1toppage.png",
+                    "images/S5X0Y2unknown.png",
+                    "images/S5X0Y3unknown.png"
                 ],
                 [
                     "",
-                    "icons/S5X1Y1unknown.png",
-                    "icons/S5X1Y2unknown.png",
-                    "icons/S5X1Y3unknown.png"
+                    "images/S5X1Y1unknown.png",
+                    "images/S5X1Y2unknown.png",
+                    "images/S5X1Y3unknown.png"
                 ],
                 [
                     "",
-                    "icons/S5X2Y1unknown.png",
-                    "icons/S5X2Y2unknown.png",
-                    "icons/S5X2Y3doyouhave.png"
+                    "images/S5X2Y1unknown.png",
+                    "images/S5X2Y2unknown.png",
+                    "images/S5X2Y3doyouhave.png"
                 ],
                 [
-                    "icons/S5X3Y0no.png",
-                    "icons/S5X3Y1birthday.png",
-                    "icons/S5X3Y2howold.png",
+                    "images/S5X3Y0no.png",
+                    "images/S5X3Y1birthday.png",
+                    "images/S5X3Y2howold.png",
                     ""
                 ]
             ],
@@ -1040,28 +1040,28 @@
             ],
             [
                 [
-                    "icons/S6X0Y0yes.png",
-                    "icons/S6X0Y1toppage.png",
-                    "icons/S6X0Y2iloveyou.png",
-                    "icons/S6X0Y3dont.png"
+                    "images/S6X0Y0yes.png",
+                    "images/S6X0Y1toppage.png",
+                    "images/S6X0Y2iloveyou.png",
+                    "images/S6X0Y3dont.png"
                 ],
                 [
                     "",
-                    "icons/S6X1Y1chillout.png",
-                    "icons/S6X1Y2whatever.png",
-                    "icons/S6X1Y3not.png"
+                    "images/S6X1Y1chillout.png",
+                    "images/S6X1Y2whatever.png",
+                    "images/S6X1Y3not.png"
                 ],
                 [
                     "",
-                    "icons/S6X2Y1goaway.png",
-                    "icons/S6X2Y2noway.png",
-                    "icons/S6X2Y3well.png"
+                    "images/S6X2Y1goaway.png",
+                    "images/S6X2Y2noway.png",
+                    "images/S6X2Y3well.png"
                 ],
                 [
-                    "icons/S6X3Y0no.png",
-                    "icons/S6X3Y1wow.png",
-                    "icons/S6X3Y2shutup.png",
-                    "icons/S6X3Y3cool.png"
+                    "images/S6X3Y0no.png",
+                    "images/S6X3Y1wow.png",
+                    "images/S6X3Y2shutup.png",
+                    "images/S6X3Y3cool.png"
                 ]
             ],
             [
@@ -1204,14 +1204,14 @@
             ],
             [
                 [
-                    "icons/S7X0Y0yes.png",
-                    "icons/S7X0Y1toppage.png",
+                    "images/S7X0Y0yes.png",
+                    "images/S7X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S7X1Y1letmetellyousomething.png",
+                    "images/S7X1Y1letmetellyousomething.png",
                     "",
                     ""
                 ],
@@ -1222,7 +1222,7 @@
                     ""
                 ],
                 [
-                    "icons/S7X3Y0no.png",
+                    "images/S7X3Y0no.png",
                     "",
                     "",
                     ""
@@ -1368,27 +1368,27 @@
             ],
             [
                 [
-                    "icons/S8X0Y0yes.png",
-                    "icons/S8X0Y1toppage.png",
-                    "icons/S8X0Y2where.png",
-                    "icons/S8X0Y3howareyou.png"
+                    "images/S8X0Y0yes.png",
+                    "images/S8X0Y1toppage.png",
+                    "images/S8X0Y2where.png",
+                    "images/S8X0Y3howareyou.png"
                 ],
                 [
                     "",
-                    "icons/S8X1Y1caniseethat.png",
-                    "icons/S8X1Y2what.png",
-                    "icons/S8X1Y3who.png"
+                    "images/S8X1Y1caniseethat.png",
+                    "images/S8X1Y2what.png",
+                    "images/S8X1Y3who.png"
                 ],
                 [
                     "",
-                    "icons/S8X2Y1whatsnext.png",
-                    "icons/S8X2Y2where.png",
-                    "icons/S8X2Y3why.png"
+                    "images/S8X2Y1whatsnext.png",
+                    "images/S8X2Y2where.png",
+                    "images/S8X2Y3why.png"
                 ],
                 [
-                    "icons/S8X3Y0no.png",
-                    "icons/S8X3Y1when.png",
-                    "icons/S8X3Y2whatdoyouthink.png",
+                    "images/S8X3Y0no.png",
+                    "images/S8X3Y1when.png",
+                    "images/S8X3Y2whatdoyouthink.png",
                     ""
                 ]
             ],
@@ -1532,27 +1532,27 @@
             ],
             [
                 [
-                    "icons/S9X0Y0yes.png",
-                    "icons/S9X0Y1toppage.png",
-                    "icons/S9X0Y2ineedsomehelp.png",
-                    "icons/S9X0Y3ineedtogetchanged.png"
+                    "images/S9X0Y0yes.png",
+                    "images/S9X0Y1toppage.png",
+                    "images/S9X0Y2ineedsomehelp.png",
+                    "images/S9X0Y3ineedtogetchanged.png"
                 ],
                 [
                     "",
-                    "icons/S9X1Y1ineedthetoilet.png",
-                    "icons/S9X1Y2idlikeashower.png",
-                    "icons/S9X1Y3canyoudomyhair.png"
+                    "images/S9X1Y1ineedthetoilet.png",
+                    "images/S9X1Y2idlikeashower.png",
+                    "images/S9X1Y3canyoudomyhair.png"
                 ],
                 [
                     "",
-                    "icons/S9X2Y1idontfeelwell.png",
-                    "icons/S9X2Y2idloveabath.png",
+                    "images/S9X2Y1idontfeelwell.png",
+                    "images/S9X2Y2idloveabath.png",
                     ""
                 ],
                 [
-                    "icons/S9X3Y0no.png",
-                    "icons/S9X3Y1bodyparts.png",
-                    "icons/S9X3Y2canyoucutmynails.png",
+                    "images/S9X3Y0no.png",
+                    "images/S9X3Y1bodyparts.png",
+                    "images/S9X3Y2canyoucutmynails.png",
                     ""
                 ]
             ],
@@ -1696,28 +1696,28 @@
             ],
             [
                 [
-                    "icons/S10X0Y0yes.png",
-                    "icons/S10X0Y1toppage.png",
-                    "icons/S10X0Y2arm.png",
-                    "icons/S10X0Y3leg.png"
+                    "images/S10X0Y0yes.png",
+                    "images/S10X0Y1toppage.png",
+                    "images/S10X0Y2arm.png",
+                    "images/S10X0Y3leg.png"
                 ],
                 [
                     "",
-                    "icons/S10X1Y1body.png",
-                    "icons/S10X1Y2stomach.png",
-                    "icons/S10X1Y3back.png"
+                    "images/S10X1Y1body.png",
+                    "images/S10X1Y2stomach.png",
+                    "images/S10X1Y3back.png"
                 ],
                 [
                     "",
-                    "icons/S10X2Y1head.png",
-                    "icons/S10X2Y2hand.png",
-                    "icons/S10X2Y3foot.png"
+                    "images/S10X2Y1head.png",
+                    "images/S10X2Y2hand.png",
+                    "images/S10X2Y3foot.png"
                 ],
                 [
-                    "icons/S10X3Y0no.png",
-                    "icons/S10X3Y1face.png",
-                    "icons/S10X3Y2chest.png",
-                    "icons/S10X3Y3privateparts.png"
+                    "images/S10X3Y0no.png",
+                    "images/S10X3Y1face.png",
+                    "images/S10X3Y2chest.png",
+                    "images/S10X3Y3privateparts.png"
                 ]
             ],
             [
@@ -1860,26 +1860,26 @@
             ],
             [
                 [
-                    "icons/S11X0Y0yes.png",
-                    "icons/S11X0Y1toppage.png",
-                    "icons/S11X0Y2penis.png",
-                    "icons/S11X0Y3love.png"
+                    "images/S11X0Y0yes.png",
+                    "images/S11X0Y1toppage.png",
+                    "images/S11X0Y2penis.png",
+                    "images/S11X0Y3love.png"
                 ],
                 [
                     "",
-                    "icons/S11X1Y1privateparts.png",
-                    "icons/S11X1Y2underarmhair.png",
-                    "icons/S11X1Y3kiss.png"
+                    "images/S11X1Y1privateparts.png",
+                    "images/S11X1Y2underarmhair.png",
+                    "images/S11X1Y3kiss.png"
                 ],
                 [
                     "",
-                    "icons/S11X2Y1bottom.png",
-                    "icons/S11X2Y2vagina.png",
+                    "images/S11X2Y1bottom.png",
+                    "images/S11X2Y2vagina.png",
                     ""
                 ],
                 [
-                    "icons/S11X3Y0no.png",
-                    "icons/S11X3Y1breasts.png",
+                    "images/S11X3Y0no.png",
+                    "images/S11X3Y1breasts.png",
                     "",
                     ""
                 ]
@@ -2024,28 +2024,28 @@
             ],
             [
                 [
-                    "icons/S12X0Y0yes.png",
-                    "icons/S12X0Y1toppage.png",
-                    "icons/S12X0Y2cold.png",
-                    "icons/S12X0Y3cramp.png"
+                    "images/S12X0Y0yes.png",
+                    "images/S12X0Y1toppage.png",
+                    "images/S12X0Y2cold.png",
+                    "images/S12X0Y3cramp.png"
                 ],
                 [
                     "",
-                    "icons/S12X1Y1ihaveapaininmy.png",
-                    "icons/S12X1Y2stomachache.png",
-                    "icons/S12X1Y3backpain.png"
+                    "images/S12X1Y1ihaveapaininmy.png",
+                    "images/S12X1Y2stomachache.png",
+                    "images/S12X1Y3backpain.png"
                 ],
                 [
                     "",
-                    "icons/S12X2Y1headache.png",
-                    "icons/S12X2Y2sick.png",
-                    "icons/S12X2Y3sorethroat.png"
+                    "images/S12X2Y1headache.png",
+                    "images/S12X2Y2sick.png",
+                    "images/S12X2Y3sorethroat.png"
                 ],
                 [
-                    "icons/S12X3Y0no.png",
-                    "icons/S12X3Y1ouch.png",
-                    "icons/S12X3Y2chestpain.png",
-                    "icons/S12X3Y3itch.png"
+                    "images/S12X3Y0no.png",
+                    "images/S12X3Y1ouch.png",
+                    "images/S12X3Y2chestpain.png",
+                    "images/S12X3Y3itch.png"
                 ]
             ],
             [
@@ -2188,27 +2188,27 @@
             ],
             [
                 [
-                    "icons/S13X0Y0yes.png",
-                    "icons/S13X0Y1toppage.png",
-                    "icons/S13X0Y2clothes.png",
-                    "icons/S13X0Y3money.png"
+                    "images/S13X0Y0yes.png",
+                    "images/S13X0Y1toppage.png",
+                    "images/S13X0Y2clothes.png",
+                    "images/S13X0Y3money.png"
                 ],
                 [
                     "",
-                    "icons/S13X1Y1methings.png",
-                    "icons/S13X1Y2furniture.png",
-                    "icons/S13X1Y3transport.png"
+                    "images/S13X1Y1methings.png",
+                    "images/S13X1Y2furniture.png",
+                    "images/S13X1Y3transport.png"
                 ],
                 [
                     "",
-                    "icons/S13X2Y1fooddrink.png",
-                    "icons/S13X2Y2thingsthathelp.png",
-                    "icons/S13X2Y3nature.png"
+                    "images/S13X2Y1fooddrink.png",
+                    "images/S13X2Y2thingsthathelp.png",
+                    "images/S13X2Y3nature.png"
                 ],
                 [
-                    "icons/S13X3Y0no.png",
-                    "icons/S13X3Y1kitchenthings.png",
-                    "icons/S13X3Y2toiletries.png",
+                    "images/S13X3Y0no.png",
+                    "images/S13X3Y1kitchenthings.png",
+                    "images/S13X3Y2toiletries.png",
                     ""
                 ]
             ],
@@ -2352,28 +2352,28 @@
             ],
             [
                 [
-                    "icons/S14X0Y0yes.png",
-                    "icons/S14X0Y1toppage.png",
-                    "icons/S14X0Y2fire.png",
-                    "icons/S14X0Y3stuff.png"
+                    "images/S14X0Y0yes.png",
+                    "images/S14X0Y1toppage.png",
+                    "images/S14X0Y2fire.png",
+                    "images/S14X0Y3stuff.png"
                 ],
                 [
                     "",
-                    "icons/S14X1Y1thing.png",
-                    "icons/S14X1Y2book.png",
+                    "images/S14X1Y1thing.png",
+                    "images/S14X1Y2book.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S14X2Y1bag.png",
-                    "icons/S14X2Y2ipad.png",
+                    "images/S14X2Y1bag.png",
+                    "images/S14X2Y2ipad.png",
                     ""
                 ],
                 [
-                    "icons/S14X3Y0no.png",
-                    "icons/S14X3Y1battery.png",
-                    "icons/S14X3Y2camera.png",
-                    "icons/S14X3Y3charger.png"
+                    "images/S14X3Y0no.png",
+                    "images/S14X3Y1battery.png",
+                    "images/S14X3Y2camera.png",
+                    "images/S14X3Y3charger.png"
                 ]
             ],
             [
@@ -2516,28 +2516,28 @@
             ],
             [
                 [
-                    "icons/S15X0Y0yes.png",
-                    "icons/S15X0Y1toppage.png",
-                    "icons/S15X0Y2imhungry.png",
-                    "icons/S15X0Y3imthirsty.png"
+                    "images/S15X0Y0yes.png",
+                    "images/S15X0Y1toppage.png",
+                    "images/S15X0Y2imhungry.png",
+                    "images/S15X0Y3imthirsty.png"
                 ],
                 [
                     "",
-                    "icons/S15X1Y1breakfast.png",
-                    "icons/S15X1Y2vegsalad.png",
-                    "icons/S15X1Y3snackspud.png"
+                    "images/S15X1Y1breakfast.png",
+                    "images/S15X1Y2vegsalad.png",
+                    "images/S15X1Y3snackspud.png"
                 ],
                 [
                     "",
-                    "icons/S15X2Y1lunch.png",
-                    "icons/S15X2Y2fruit.png",
-                    "icons/S15X2Y3saucesingredients.png"
+                    "images/S15X2Y1lunch.png",
+                    "images/S15X2Y2fruit.png",
+                    "images/S15X2Y3saucesingredients.png"
                 ],
                 [
-                    "icons/S15X3Y0no.png",
-                    "icons/S15X3Y1meals.png",
-                    "icons/S15X3Y2drinks.png",
-                    "icons/S15X3Y3foodchat.png"
+                    "images/S15X3Y0no.png",
+                    "images/S15X3Y1meals.png",
+                    "images/S15X3Y2drinks.png",
+                    "images/S15X3Y3foodchat.png"
                 ]
             ],
             [
@@ -2680,26 +2680,26 @@
             ],
             [
                 [
-                    "icons/S16X0Y0yes.png",
-                    "icons/S16X0Y1toppage.png",
-                    "icons/S16X0Y2toast.png",
-                    "icons/S16X0Y3fruit.png"
+                    "images/S16X0Y0yes.png",
+                    "images/S16X0Y1toppage.png",
+                    "images/S16X0Y2toast.png",
+                    "images/S16X0Y3fruit.png"
                 ],
                 [
                     "",
-                    "icons/S16X1Y1breakfast.png",
-                    "icons/S16X1Y2butter.png",
-                    "icons/S16X1Y3pancake.png"
+                    "images/S16X1Y1breakfast.png",
+                    "images/S16X1Y2butter.png",
+                    "images/S16X1Y3pancake.png"
                 ],
                 [
                     "",
-                    "icons/S16X2Y1cereal.png",
-                    "icons/S16X2Y2jam.png",
+                    "images/S16X2Y1cereal.png",
+                    "images/S16X2Y2jam.png",
                     ""
                 ],
                 [
-                    "icons/S16X3Y0no.png",
-                    "icons/S16X3Y1egg.png",
+                    "images/S16X3Y0no.png",
+                    "images/S16X3Y1egg.png",
                     "",
                     ""
                 ]
@@ -2844,28 +2844,28 @@
             ],
             [
                 [
-                    "icons/S17X0Y0yes.png",
-                    "icons/S17X0Y1toppage.png",
-                    "icons/S17X0Y2cheese.png",
-                    "icons/S17X0Y3soup.png"
+                    "images/S17X0Y0yes.png",
+                    "images/S17X0Y1toppage.png",
+                    "images/S17X0Y2cheese.png",
+                    "images/S17X0Y3soup.png"
                 ],
                 [
                     "",
-                    "icons/S17X1Y1lunch.png",
-                    "icons/S17X1Y2ham.png",
-                    "icons/S17X1Y3salad.png"
+                    "images/S17X1Y1lunch.png",
+                    "images/S17X1Y2ham.png",
+                    "images/S17X1Y3salad.png"
                 ],
                 [
                     "",
-                    "icons/S17X2Y1sandwich.png",
-                    "icons/S17X2Y2chicken.png",
-                    "icons/S17X2Y3cheeseontoast.png"
+                    "images/S17X2Y1sandwich.png",
+                    "images/S17X2Y2chicken.png",
+                    "images/S17X2Y3cheeseontoast.png"
                 ],
                 [
-                    "icons/S17X3Y0no.png",
-                    "icons/S17X3Y1crackers.png",
-                    "icons/S17X3Y2tuna.png",
-                    "icons/S17X3Y3beansontoast.png"
+                    "images/S17X3Y0no.png",
+                    "images/S17X3Y1crackers.png",
+                    "images/S17X3Y2tuna.png",
+                    "images/S17X3Y3beansontoast.png"
                 ]
             ],
             [
@@ -3008,28 +3008,28 @@
             ],
             [
                 [
-                    "icons/S18X0Y0yes.png",
-                    "icons/S18X0Y1toppage.png",
-                    "icons/S18X0Y2stew.png",
-                    "icons/S18X0Y3curry.png"
+                    "images/S18X0Y0yes.png",
+                    "images/S18X0Y1toppage.png",
+                    "images/S18X0Y2stew.png",
+                    "images/S18X0Y3curry.png"
                 ],
                 [
                     "",
-                    "icons/S18X1Y1meal.png",
-                    "icons/S18X1Y2roastdinner.png",
-                    "icons/S18X1Y3pie.png"
+                    "images/S18X1Y1meal.png",
+                    "images/S18X1Y2roastdinner.png",
+                    "images/S18X1Y3pie.png"
                 ],
                 [
                     "",
-                    "icons/S18X2Y1pasta.png",
-                    "icons/S18X2Y2chinesefood.png",
-                    "icons/S18X2Y3lasagna.png"
+                    "images/S18X2Y1pasta.png",
+                    "images/S18X2Y2chinesefood.png",
+                    "images/S18X2Y3lasagna.png"
                 ],
                 [
-                    "icons/S18X3Y0no.png",
-                    "icons/S18X3Y1meatfish.png",
-                    "icons/S18X3Y2fastfood.png",
-                    "icons/S18X3Y3rice.png"
+                    "images/S18X3Y0no.png",
+                    "images/S18X3Y1meatfish.png",
+                    "images/S18X3Y2fastfood.png",
+                    "images/S18X3Y3rice.png"
                 ]
             ],
             [
@@ -3172,28 +3172,28 @@
             ],
             [
                 [
-                    "icons/S19X0Y0yes.png",
-                    "icons/S19X0Y1toppage.png",
-                    "icons/S19X0Y2lamb.png",
-                    "icons/S19X0Y3fish.png"
+                    "images/S19X0Y0yes.png",
+                    "images/S19X0Y1toppage.png",
+                    "images/S19X0Y2lamb.png",
+                    "images/S19X0Y3fish.png"
                 ],
                 [
                     "",
-                    "icons/S19X1Y1meat.png",
-                    "icons/S19X1Y2ham.png",
-                    "icons/S19X1Y3mince.png"
+                    "images/S19X1Y1meat.png",
+                    "images/S19X1Y2ham.png",
+                    "images/S19X1Y3mince.png"
                 ],
                 [
                     "",
-                    "icons/S19X2Y1bacon.png",
-                    "icons/S19X2Y2chicken.png",
-                    "icons/S19X2Y3pork.png"
+                    "images/S19X2Y1bacon.png",
+                    "images/S19X2Y2chicken.png",
+                    "images/S19X2Y3pork.png"
                 ],
                 [
-                    "icons/S19X3Y0no.png",
-                    "icons/S19X3Y1beef.png",
-                    "icons/S19X3Y2tuna.png",
-                    "icons/S19X3Y3sausages.png"
+                    "images/S19X3Y0no.png",
+                    "images/S19X3Y1beef.png",
+                    "images/S19X3Y2tuna.png",
+                    "images/S19X3Y3sausages.png"
                 ]
             ],
             [
@@ -3336,28 +3336,28 @@
             ],
             [
                 [
-                    "icons/S20X0Y0yes.png",
-                    "icons/S20X0Y1toppage.png",
-                    "icons/S20X0Y2fishandchips.png",
-                    "icons/S20X0Y3sweets.png"
+                    "images/S20X0Y0yes.png",
+                    "images/S20X0Y1toppage.png",
+                    "images/S20X0Y2fishandchips.png",
+                    "images/S20X0Y3sweets.png"
                 ],
                 [
                     "",
-                    "icons/S20X1Y1fastfood.png",
-                    "icons/S20X1Y2fishburger.png",
-                    "icons/S20X1Y3candyfloss.png"
+                    "images/S20X1Y1fastfood.png",
+                    "images/S20X1Y2fishburger.png",
+                    "images/S20X1Y3candyfloss.png"
                 ],
                 [
                     "",
-                    "icons/S20X2Y1chips.png",
-                    "icons/S20X2Y2cheeseburger.png",
-                    "icons/S20X2Y3pizza.png"
+                    "images/S20X2Y1chips.png",
+                    "images/S20X2Y2cheeseburger.png",
+                    "images/S20X2Y3pizza.png"
                 ],
                 [
-                    "icons/S20X3Y0no.png",
-                    "icons/S20X3Y1chickennugget.png",
-                    "icons/S20X3Y2burger.png",
-                    "icons/S20X3Y3hotdog.png"
+                    "images/S20X3Y0no.png",
+                    "images/S20X3Y1chickennugget.png",
+                    "images/S20X3Y2burger.png",
+                    "images/S20X3Y3hotdog.png"
                 ]
             ],
             [
@@ -3500,28 +3500,28 @@
             ],
             [
                 [
-                    "icons/S21X0Y0yes.png",
-                    "icons/S21X0Y1toppage.png",
-                    "icons/S21X0Y2broccoli.png",
-                    "icons/S21X0Y3sweeetcorn.png"
+                    "images/S21X0Y0yes.png",
+                    "images/S21X0Y1toppage.png",
+                    "images/S21X0Y2broccoli.png",
+                    "images/S21X0Y3sweeetcorn.png"
                 ],
                 [
                     "",
-                    "icons/S21X1Y1vegetables.png",
-                    "icons/S21X1Y2cabbage.png",
-                    "icons/S21X1Y3peas.png"
+                    "images/S21X1Y1vegetables.png",
+                    "images/S21X1Y2cabbage.png",
+                    "images/S21X1Y3peas.png"
                 ],
                 [
                     "",
-                    "icons/S21X2Y1potato.png",
-                    "icons/S21X2Y2carrot.png",
-                    "icons/S21X2Y3onion.png"
+                    "images/S21X2Y1potato.png",
+                    "images/S21X2Y2carrot.png",
+                    "images/S21X2Y3onion.png"
                 ],
                 [
-                    "icons/S21X3Y0no.png",
-                    "icons/S21X3Y1tomato.png",
-                    "icons/S21X3Y2cucumber.png",
-                    "icons/S21X3Y3lettuce.png"
+                    "images/S21X3Y0no.png",
+                    "images/S21X3Y1tomato.png",
+                    "images/S21X3Y2cucumber.png",
+                    "images/S21X3Y3lettuce.png"
                 ]
             ],
             [
@@ -3664,28 +3664,28 @@
             ],
             [
                 [
-                    "icons/S22X0Y0yes.png",
-                    "icons/S22X0Y1toppage.png",
-                    "icons/S22X0Y2grapefruit.png",
-                    "icons/S22X0Y3pear.png"
+                    "images/S22X0Y0yes.png",
+                    "images/S22X0Y1toppage.png",
+                    "images/S22X0Y2grapefruit.png",
+                    "images/S22X0Y3pear.png"
                 ],
                 [
                     "",
-                    "icons/S22X1Y1fruit.png",
-                    "icons/S22X1Y2mango.png",
-                    "icons/S22X1Y3strawberry.png"
+                    "images/S22X1Y1fruit.png",
+                    "images/S22X1Y2mango.png",
+                    "images/S22X1Y3strawberry.png"
                 ],
                 [
                     "",
-                    "icons/S22X2Y1apple.png",
-                    "icons/S22X2Y2grapes.png",
-                    "icons/S22X2Y3orange.png"
+                    "images/S22X2Y1apple.png",
+                    "images/S22X2Y2grapes.png",
+                    "images/S22X2Y3orange.png"
                 ],
                 [
-                    "icons/S22X3Y0no.png",
-                    "icons/S22X3Y1banana.png",
-                    "icons/S22X3Y2lemon.png",
-                    "icons/S22X3Y3plum.png"
+                    "images/S22X3Y0no.png",
+                    "images/S22X3Y1banana.png",
+                    "images/S22X3Y2lemon.png",
+                    "images/S22X3Y3plum.png"
                 ]
             ],
             [
@@ -3828,28 +3828,28 @@
             ],
             [
                 [
-                    "icons/S23X0Y0yes.png",
-                    "icons/S23X0Y1toppage.png",
-                    "icons/S23X0Y2drinkdescribe.png",
-                    "icons/S23X0Y3juice.png"
+                    "images/S23X0Y0yes.png",
+                    "images/S23X0Y1toppage.png",
+                    "images/S23X0Y2drinkdescribe.png",
+                    "images/S23X0Y3juice.png"
                 ],
                 [
                     "",
-                    "icons/S23X1Y1drink.png",
-                    "icons/S23X1Y2milk.png",
-                    "icons/S23X1Y3milkshake.png"
+                    "images/S23X1Y1drink.png",
+                    "images/S23X1Y2milk.png",
+                    "images/S23X1Y3milkshake.png"
                 ],
                 [
                     "",
-                    "icons/S23X2Y1coffee.png",
-                    "icons/S23X2Y2water.png",
-                    "icons/S23X2Y3fizzydrink.png"
+                    "images/S23X2Y1coffee.png",
+                    "images/S23X2Y2water.png",
+                    "images/S23X2Y3fizzydrink.png"
                 ],
                 [
-                    "icons/S23X3Y0no.png",
-                    "icons/S23X3Y1tea.png",
-                    "icons/S23X3Y2hotchocolate.png",
-                    "icons/S23X3Y3alcohol.png"
+                    "images/S23X3Y0no.png",
+                    "images/S23X3Y1tea.png",
+                    "images/S23X3Y2hotchocolate.png",
+                    "images/S23X3Y3alcohol.png"
                 ]
             ],
             [
@@ -3992,26 +3992,26 @@
             ],
             [
                 [
-                    "icons/S24X0Y0yes.png",
-                    "icons/S24X0Y1toppage.png",
-                    "icons/S24X0Y2specialcup.png",
-                    "icons/S24X0Y3hot.png"
+                    "images/S24X0Y0yes.png",
+                    "images/S24X0Y1toppage.png",
+                    "images/S24X0Y2specialcup.png",
+                    "images/S24X0Y3hot.png"
                 ],
                 [
                     "",
-                    "icons/S24X1Y1large.png",
-                    "icons/S24X1Y2diet.png",
-                    "icons/S24X1Y3cold.png"
+                    "images/S24X1Y1large.png",
+                    "images/S24X1Y2diet.png",
+                    "images/S24X1Y3cold.png"
                 ],
                 [
                     "",
-                    "icons/S24X2Y1medium.png",
-                    "icons/S24X2Y2sugar.png",
-                    "icons/S24X2Y3straw.png"
+                    "images/S24X2Y1medium.png",
+                    "images/S24X2Y2sugar.png",
+                    "images/S24X2Y3straw.png"
                 ],
                 [
-                    "icons/S24X3Y0no.png",
-                    "icons/S24X3Y1small.png",
+                    "images/S24X3Y0no.png",
+                    "images/S24X3Y1small.png",
                     "",
                     ""
                 ]
@@ -4156,27 +4156,27 @@
             ],
             [
                 [
-                    "icons/S25X0Y0yes.png",
-                    "icons/S25X0Y1toppage.png",
-                    "icons/S25X0Y2blackcurrant.png",
-                    "icons/S25X0Y3cranberryjuice.png"
+                    "images/S25X0Y0yes.png",
+                    "images/S25X0Y1toppage.png",
+                    "images/S25X0Y2blackcurrant.png",
+                    "images/S25X0Y3cranberryjuice.png"
                 ],
                 [
                     "",
-                    "icons/S25X1Y1juice.png",
-                    "icons/S25X1Y2pineapplejuice.png",
-                    "icons/S25X1Y3tomatojuice.png"
+                    "images/S25X1Y1juice.png",
+                    "images/S25X1Y2pineapplejuice.png",
+                    "images/S25X1Y3tomatojuice.png"
                 ],
                 [
                     "",
-                    "icons/S25X2Y1applejuice.png",
-                    "icons/S25X2Y2grapejuice.png",
+                    "images/S25X2Y1applejuice.png",
+                    "images/S25X2Y2grapejuice.png",
                     ""
                 ],
                 [
-                    "icons/S25X3Y0no.png",
-                    "icons/S25X3Y1orangejuice.png",
-                    "icons/S25X3Y2grapefruitjuice.png",
+                    "images/S25X3Y0no.png",
+                    "images/S25X3Y1orangejuice.png",
+                    "images/S25X3Y2grapefruitjuice.png",
                     ""
                 ]
             ],
@@ -4320,26 +4320,26 @@
             ],
             [
                 [
-                    "icons/S26X0Y0yes.png",
-                    "icons/S26X0Y1toppage.png",
-                    "icons/S26X0Y2chocolatemilkshake.png",
+                    "images/S26X0Y0yes.png",
+                    "images/S26X0Y1toppage.png",
+                    "images/S26X0Y2chocolatemilkshake.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S26X1Y1milkshake.png",
+                    "images/S26X1Y1milkshake.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S26X2Y1bananamilkshake.png",
+                    "images/S26X2Y1bananamilkshake.png",
                     "",
                     ""
                 ],
                 [
-                    "icons/S26X3Y0no.png",
-                    "icons/S26X3Y1strawberrymilkshake.png",
+                    "images/S26X3Y0no.png",
+                    "images/S26X3Y1strawberrymilkshake.png",
                     "",
                     ""
                 ]
@@ -4484,26 +4484,26 @@
             ],
             [
                 [
-                    "icons/S27X0Y0yes.png",
-                    "icons/S27X0Y1toppage.png",
-                    "icons/S27X0Y2unknown.png",
+                    "images/S27X0Y0yes.png",
+                    "images/S27X0Y1toppage.png",
+                    "images/S27X0Y2unknown.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S27X1Y1fizzydrink.png",
+                    "images/S27X1Y1fizzydrink.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S27X2Y1orangeade.png",
+                    "images/S27X2Y1orangeade.png",
                     "",
                     ""
                 ],
                 [
-                    "icons/S27X3Y0no.png",
-                    "icons/S27X3Y1lemonade.png",
+                    "images/S27X3Y0no.png",
+                    "images/S27X3Y1lemonade.png",
                     "",
                     ""
                 ]
@@ -4648,26 +4648,26 @@
             ],
             [
                 [
-                    "icons/S28X0Y0yes.png",
-                    "icons/S28X0Y1toppage.png",
-                    "icons/S28X0Y2redwine.png",
+                    "images/S28X0Y0yes.png",
+                    "images/S28X0Y1toppage.png",
+                    "images/S28X0Y2redwine.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S28X1Y1alcohol.png",
+                    "images/S28X1Y1alcohol.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S28X2Y1beer.png",
+                    "images/S28X2Y1beer.png",
                     "",
                     ""
                 ],
                 [
-                    "icons/S28X3Y0no.png",
-                    "icons/S28X3Y1whitewine.png",
+                    "images/S28X3Y0no.png",
+                    "images/S28X3Y1whitewine.png",
                     "",
                     ""
                 ]
@@ -4812,28 +4812,28 @@
             ],
             [
                 [
-                    "icons/S29X0Y0yes.png",
-                    "icons/S29X0Y1toppage.png",
-                    "icons/S29X0Y2custard.png",
-                    "icons/S29X0Y3sweets.png"
+                    "images/S29X0Y0yes.png",
+                    "images/S29X0Y1toppage.png",
+                    "images/S29X0Y2custard.png",
+                    "images/S29X0Y3sweets.png"
                 ],
                 [
                     "",
-                    "icons/S29X1Y1snack.png",
-                    "icons/S29X1Y2icecream.png",
-                    "icons/S29X1Y3crisps.png"
+                    "images/S29X1Y1snack.png",
+                    "images/S29X1Y2icecream.png",
+                    "images/S29X1Y3crisps.png"
                 ],
                 [
                     "",
-                    "icons/S29X2Y1raison.png",
-                    "icons/S29X2Y2fruit.png",
-                    "icons/S29X2Y3biscuits.png"
+                    "images/S29X2Y1raison.png",
+                    "images/S29X2Y2fruit.png",
+                    "images/S29X2Y3biscuits.png"
                 ],
                 [
-                    "icons/S29X3Y0no.png",
-                    "icons/S29X3Y1cake.png",
-                    "icons/S29X3Y2yoghurt.png",
-                    "icons/S29X3Y3chocolate.png"
+                    "images/S29X3Y0no.png",
+                    "images/S29X3Y1cake.png",
+                    "images/S29X3Y2yoghurt.png",
+                    "images/S29X3Y3chocolate.png"
                 ]
             ],
             [
@@ -4976,28 +4976,28 @@
             ],
             [
                 [
-                    "icons/S30X0Y0yes.png",
-                    "icons/S30X0Y1toppage.png",
+                    "images/S30X0Y0yes.png",
+                    "images/S30X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S30X1Y1flavors.png",
-                    "icons/S30X1Y2mint.png",
+                    "images/S30X1Y1flavors.png",
+                    "images/S30X1Y2mint.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S30X2Y1raison.png",
-                    "icons/S30X2Y2fruit.png",
+                    "images/S30X2Y1raison.png",
+                    "images/S30X2Y2fruit.png",
                     ""
                 ],
                 [
-                    "icons/S30X3Y0no.png",
-                    "icons/S30X3Y1toffee.png",
+                    "images/S30X3Y0no.png",
+                    "images/S30X3Y1toffee.png",
                     "",
-                    "icons/S30X3Y3chocolate.png"
+                    "images/S30X3Y3chocolate.png"
                 ]
             ],
             [
@@ -5140,28 +5140,28 @@
             ],
             [
                 [
-                    "icons/S31X0Y0yes.png",
-                    "icons/S31X0Y1toppage.png",
-                    "icons/S31X0Y2some.png",
-                    "icons/S31X0Y3hot.png"
+                    "images/S31X0Y0yes.png",
+                    "images/S31X0Y1toppage.png",
+                    "images/S31X0Y2some.png",
+                    "images/S31X0Y3hot.png"
                 ],
                 [
                     "",
-                    "icons/S31X1Y1itsgross.png",
-                    "icons/S31X1Y2with.png",
-                    "icons/S31X1Y3cold.png"
+                    "images/S31X1Y1itsgross.png",
+                    "images/S31X1Y2with.png",
+                    "images/S31X1Y3cold.png"
                 ],
                 [
                     "",
-                    "icons/S31X2Y1ilikeit.png",
-                    "icons/S31X2Y2please.png",
-                    "icons/S31X2Y3eat.png"
+                    "images/S31X2Y1ilikeit.png",
+                    "images/S31X2Y2please.png",
+                    "images/S31X2Y3eat.png"
                 ],
                 [
-                    "icons/S31X3Y0no.png",
-                    "icons/S31X3Y1ivehadenough.png",
-                    "icons/S31X3Y2thankyou.png",
-                    "icons/S31X3Y3drink.png"
+                    "images/S31X3Y0no.png",
+                    "images/S31X3Y1ivehadenough.png",
+                    "images/S31X3Y2thankyou.png",
+                    "images/S31X3Y3drink.png"
                 ]
             ],
             [
@@ -5304,27 +5304,27 @@
             ],
             [
                 [
-                    "icons/S32X0Y0yes.png",
-                    "icons/S32X0Y1toppage.png",
-                    "icons/S32X0Y2bowl.png",
-                    "icons/S32X0Y3cheesegreater.png"
+                    "images/S32X0Y0yes.png",
+                    "images/S32X0Y1toppage.png",
+                    "images/S32X0Y2bowl.png",
+                    "images/S32X0Y3cheesegreater.png"
                 ],
                 [
                     "",
-                    "icons/S32X1Y1spoon.png",
-                    "icons/S32X1Y2plate.png",
-                    "icons/S32X1Y3pan.png"
+                    "images/S32X1Y1spoon.png",
+                    "images/S32X1Y2plate.png",
+                    "images/S32X1Y3pan.png"
                 ],
                 [
                     "",
-                    "icons/S32X2Y1knife.png",
-                    "icons/S32X2Y2cup.png",
-                    "icons/S32X2Y3dishcloth.png"
+                    "images/S32X2Y1knife.png",
+                    "images/S32X2Y2cup.png",
+                    "images/S32X2Y3dishcloth.png"
                 ],
                 [
-                    "icons/S32X3Y0no.png",
-                    "icons/S32X3Y1fork.png",
-                    "icons/S32X3Y2choppingboard.png",
+                    "images/S32X3Y0no.png",
+                    "images/S32X3Y1fork.png",
+                    "images/S32X3Y2choppingboard.png",
                     ""
                 ]
             ],
@@ -5468,28 +5468,28 @@
             ],
             [
                 [
-                    "icons/S33X0Y0yes.png",
-                    "icons/S33X0Y1toppage.png",
-                    "icons/S33X0Y2shapecolour.png",
-                    "icons/S33X0Y3underwear.png"
+                    "images/S33X0Y0yes.png",
+                    "images/S33X0Y1toppage.png",
+                    "images/S33X0Y2shapecolour.png",
+                    "images/S33X0Y3underwear.png"
                 ],
                 [
                     "",
-                    "icons/S33X1Y1jeans.png",
-                    "icons/S33X1Y2skirt.png",
-                    "icons/S33X1Y3coat.png"
+                    "images/S33X1Y1jeans.png",
+                    "images/S33X1Y2skirt.png",
+                    "images/S33X1Y3coat.png"
                 ],
                 [
                     "",
-                    "icons/S33X2Y1tshirt.png",
-                    "icons/S33X2Y2pjs.png",
-                    "icons/S33X2Y3shoes.png"
+                    "images/S33X2Y1tshirt.png",
+                    "images/S33X2Y2pjs.png",
+                    "images/S33X2Y3shoes.png"
                 ],
                 [
-                    "icons/S33X3Y0no.png",
-                    "icons/S33X3Y1jumper.png",
-                    "icons/S33X3Y2swimmingcostume.png",
-                    "icons/S33X3Y3socks.png"
+                    "images/S33X3Y0no.png",
+                    "images/S33X3Y1jumper.png",
+                    "images/S33X3Y2swimmingcostume.png",
+                    "images/S33X3Y3socks.png"
                 ]
             ],
             [
@@ -5632,28 +5632,28 @@
             ],
             [
                 [
-                    "icons/S34X0Y0yes.png",
-                    "icons/S34X0Y1toppage.png",
-                    "icons/S34X0Y2bed.png",
-                    "icons/S34X0Y3tv.png"
+                    "images/S34X0Y0yes.png",
+                    "images/S34X0Y1toppage.png",
+                    "images/S34X0Y2bed.png",
+                    "images/S34X0Y3tv.png"
                 ],
                 [
                     "",
-                    "icons/S34X1Y1furniture.png",
-                    "icons/S34X1Y2toilet.png",
-                    "icons/S34X1Y3sink.png"
+                    "images/S34X1Y1furniture.png",
+                    "images/S34X1Y2toilet.png",
+                    "images/S34X1Y3sink.png"
                 ],
                 [
                     "",
-                    "icons/S34X2Y1chair.png",
-                    "icons/S34X2Y2cupboard.png",
-                    "icons/S34X2Y3draw.png"
+                    "images/S34X2Y1chair.png",
+                    "images/S34X2Y2cupboard.png",
+                    "images/S34X2Y3draw.png"
                 ],
                 [
-                    "icons/S34X3Y0no.png",
-                    "icons/S34X3Y1table.png",
-                    "icons/S34X3Y2lamp.png",
-                    "icons/S34X3Y3couch.png"
+                    "images/S34X3Y0no.png",
+                    "images/S34X3Y1table.png",
+                    "images/S34X3Y2lamp.png",
+                    "images/S34X3Y3couch.png"
                 ]
             ],
             [
@@ -5796,28 +5796,28 @@
             ],
             [
                 [
-                    "icons/S35X0Y0yes.png",
-                    "icons/S35X0Y1toppage.png",
-                    "icons/S35X0Y2wheelchair.png",
-                    "icons/S35X0Y3lift.png"
+                    "images/S35X0Y0yes.png",
+                    "images/S35X0Y1toppage.png",
+                    "images/S35X0Y2wheelchair.png",
+                    "images/S35X0Y3lift.png"
                 ],
                 [
                     "",
-                    "icons/S35X1Y1disability.png",
-                    "icons/S35X1Y2hearingaid.png",
-                    "icons/S35X1Y3ecu.png"
+                    "images/S35X1Y1disability.png",
+                    "images/S35X1Y2hearingaid.png",
+                    "images/S35X1Y3ecu.png"
                 ],
                 [
                     "",
-                    "icons/S35X2Y1commbook.png",
-                    "icons/S35X2Y2glasses.png",
-                    "icons/S35X2Y3appointment.png"
+                    "images/S35X2Y1commbook.png",
+                    "images/S35X2Y2glasses.png",
+                    "images/S35X2Y3appointment.png"
                 ],
                 [
-                    "icons/S35X3Y0no.png",
-                    "icons/S35X3Y1commaid.png",
-                    "icons/S35X3Y2medication.png",
-                    "icons/S35X3Y3charger.png"
+                    "images/S35X3Y0no.png",
+                    "images/S35X3Y1commaid.png",
+                    "images/S35X3Y2medication.png",
+                    "images/S35X3Y3charger.png"
                 ]
             ],
             [
@@ -5960,28 +5960,28 @@
             ],
             [
                 [
-                    "icons/S36X0Y0yes.png",
-                    "icons/S36X0Y1toppage.png",
-                    "icons/S36X0Y2razor.png",
-                    "icons/S36X0Y3hairdryer.png"
+                    "images/S36X0Y0yes.png",
+                    "images/S36X0Y1toppage.png",
+                    "images/S36X0Y2razor.png",
+                    "images/S36X0Y3hairdryer.png"
                 ],
                 [
                     "",
-                    "icons/S36X1Y1soap.png",
-                    "icons/S36X1Y2deodorant.png",
-                    "icons/S36X1Y3brush.png"
+                    "images/S36X1Y1soap.png",
+                    "images/S36X1Y2deodorant.png",
+                    "images/S36X1Y3brush.png"
                 ],
                 [
                     "",
-                    "icons/S36X2Y1toothbrush.png",
-                    "icons/S36X2Y2shampoo.png",
-                    "icons/S36X2Y3toiletroll.png"
+                    "images/S36X2Y1toothbrush.png",
+                    "images/S36X2Y2shampoo.png",
+                    "images/S36X2Y3toiletroll.png"
                 ],
                 [
-                    "icons/S36X3Y0no.png",
-                    "icons/S36X3Y1toothpaste.png",
-                    "icons/S36X3Y2makeup.png",
-                    "icons/S36X3Y3sanitaryitems.png"
+                    "images/S36X3Y0no.png",
+                    "images/S36X3Y1toothpaste.png",
+                    "images/S36X3Y2makeup.png",
+                    "images/S36X3Y3sanitaryitems.png"
                 ]
             ],
             [
@@ -6124,26 +6124,26 @@
             ],
             [
                 [
-                    "icons/S37X0Y0yes.png",
-                    "icons/S37X0Y1toppage.png",
-                    "icons/S37X0Y2purse.png",
+                    "images/S37X0Y0yes.png",
+                    "images/S37X0Y1toppage.png",
+                    "images/S37X0Y2purse.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S37X1Y1money.png",
+                    "images/S37X1Y1money.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S37X2Y1chequebook.png",
+                    "images/S37X2Y1chequebook.png",
                     "",
                     ""
                 ],
                 [
-                    "icons/S37X3Y0no.png",
-                    "icons/S37X3Y1wallet.png",
+                    "images/S37X3Y0no.png",
+                    "images/S37X3Y1wallet.png",
                     "",
                     ""
                 ]
@@ -6288,27 +6288,27 @@
             ],
             [
                 [
-                    "icons/S38X0Y0yes.png",
-                    "icons/S38X0Y1toppage.png",
-                    "icons/S38X0Y2bus.png",
-                    "icons/S38X0Y3taxi.png"
+                    "images/S38X0Y0yes.png",
+                    "images/S38X0Y1toppage.png",
+                    "images/S38X0Y2bus.png",
+                    "images/S38X0Y3taxi.png"
                 ],
                 [
                     "",
-                    "icons/S38X1Y1transport.png",
-                    "icons/S38X1Y2car.png",
-                    "icons/S38X1Y3train.png"
+                    "images/S38X1Y1transport.png",
+                    "images/S38X1Y2car.png",
+                    "images/S38X1Y3train.png"
                 ],
                 [
                     "",
-                    "icons/S38X2Y1airplane.png",
-                    "icons/S38X2Y2boat.png",
-                    "icons/S38X2Y3lorry.png"
+                    "images/S38X2Y1airplane.png",
+                    "images/S38X2Y2boat.png",
+                    "images/S38X2Y3lorry.png"
                 ],
                 [
-                    "icons/S38X3Y0no.png",
-                    "icons/S38X3Y1ambulance.png",
-                    "icons/S38X3Y2bike.png",
+                    "images/S38X3Y0no.png",
+                    "images/S38X3Y1ambulance.png",
+                    "images/S38X3Y2bike.png",
                     ""
                 ]
             ],
@@ -6452,26 +6452,26 @@
             ],
             [
                 [
-                    "icons/S39X0Y0yes.png",
-                    "icons/S39X0Y1toppage.png",
+                    "images/S39X0Y0yes.png",
+                    "images/S39X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S39X1Y1weather.png",
+                    "images/S39X1Y1weather.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S39X2Y1animals.png",
+                    "images/S39X2Y1animals.png",
                     "",
                     ""
                 ],
                 [
-                    "icons/S39X3Y0no.png",
-                    "icons/S39X3Y1gardening.png",
+                    "images/S39X3Y0no.png",
+                    "images/S39X3Y1gardening.png",
                     "",
                     ""
                 ]
@@ -6616,27 +6616,27 @@
             ],
             [
                 [
-                    "icons/S40X0Y0yes.png",
-                    "icons/S40X0Y1toppage.png",
-                    "icons/S40X0Y2icy.png",
-                    "icons/S40X0Y3snow.png"
+                    "images/S40X0Y0yes.png",
+                    "images/S40X0Y1toppage.png",
+                    "images/S40X0Y2icy.png",
+                    "images/S40X0Y3snow.png"
                 ],
                 [
                     "",
-                    "icons/S40X1Y1weather.png",
-                    "icons/S40X1Y2stormy.png",
-                    "icons/S40X1Y3freezing.png"
+                    "images/S40X1Y1weather.png",
+                    "images/S40X1Y2stormy.png",
+                    "images/S40X1Y3freezing.png"
                 ],
                 [
                     "",
-                    "icons/S40X2Y1rain.png",
-                    "icons/S40X2Y2cloudy.png",
-                    "icons/S40X2Y3wind.png"
+                    "images/S40X2Y1rain.png",
+                    "images/S40X2Y2cloudy.png",
+                    "images/S40X2Y3wind.png"
                 ],
                 [
-                    "icons/S40X3Y0no.png",
-                    "icons/S40X3Y1sun.png",
-                    "icons/S40X3Y2foggy.png",
+                    "images/S40X3Y0no.png",
+                    "images/S40X3Y1sun.png",
+                    "images/S40X3Y2foggy.png",
                     ""
                 ]
             ],
@@ -6780,27 +6780,27 @@
             ],
             [
                 [
-                    "icons/S41X0Y0yes.png",
-                    "icons/S41X0Y1toppage.png",
-                    "icons/S41X0Y2wateranimals.png",
+                    "images/S41X0Y0yes.png",
+                    "images/S41X0Y1toppage.png",
+                    "images/S41X0Y2wateranimals.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S41X1Y1pets.png",
-                    "icons/S41X1Y2birds.png",
+                    "images/S41X1Y1pets.png",
+                    "images/S41X1Y2birds.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S41X2Y1farmanimals.png",
-                    "icons/S41X2Y2insects.png",
+                    "images/S41X2Y1farmanimals.png",
+                    "images/S41X2Y2insects.png",
                     ""
                 ],
                 [
-                    "icons/S41X3Y0no.png",
-                    "icons/S41X3Y1wildanimals.png",
-                    "icons/S41X3Y2petcare.png",
+                    "images/S41X3Y0no.png",
+                    "images/S41X3Y1wildanimals.png",
+                    "images/S41X3Y2petcare.png",
                     ""
                 ]
             ],
@@ -6944,27 +6944,27 @@
             ],
             [
                 [
-                    "icons/S42X0Y0yes.png",
-                    "icons/S42X0Y1toppage.png",
-                    "icons/S42X0Y2mouse.png",
-                    "icons/S42X0Y3fish.png"
+                    "images/S42X0Y0yes.png",
+                    "images/S42X0Y1toppage.png",
+                    "images/S42X0Y2mouse.png",
+                    "images/S42X0Y3fish.png"
                 ],
                 [
                     "",
-                    "icons/S42X1Y1pet.png",
-                    "icons/S42X1Y2guineapig.png",
-                    "icons/S42X1Y3rat.png"
+                    "images/S42X1Y1pet.png",
+                    "images/S42X1Y2guineapig.png",
+                    "images/S42X1Y3rat.png"
                 ],
                 [
                     "",
-                    "icons/S42X2Y1cat.png",
-                    "icons/S42X2Y2rabbit.png",
-                    "icons/S42X2Y3dog.png"
+                    "images/S42X2Y1cat.png",
+                    "images/S42X2Y2rabbit.png",
+                    "images/S42X2Y3dog.png"
                 ],
                 [
-                    "icons/S42X3Y0no.png",
-                    "icons/S42X3Y1hamster.png",
-                    "icons/S42X3Y2horse.png",
+                    "images/S42X3Y0no.png",
+                    "images/S42X3Y1hamster.png",
+                    "images/S42X3Y2horse.png",
                     ""
                 ]
             ],
@@ -7108,27 +7108,27 @@
             ],
             [
                 [
-                    "icons/S43X0Y0yes.png",
-                    "icons/S43X0Y1toppage.png",
-                    "icons/S43X0Y2chicken.png",
+                    "images/S43X0Y0yes.png",
+                    "images/S43X0Y1toppage.png",
+                    "images/S43X0Y2chicken.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S43X1Y1farmanimals.png",
-                    "icons/S43X1Y2horse.png",
+                    "images/S43X1Y1farmanimals.png",
+                    "images/S43X1Y2horse.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S43X2Y1pig.png",
-                    "icons/S43X2Y2cow.png",
+                    "images/S43X2Y1pig.png",
+                    "images/S43X2Y2cow.png",
                     ""
                 ],
                 [
-                    "icons/S43X3Y0no.png",
-                    "icons/S43X3Y1sheep.png",
-                    "icons/S43X3Y2chick.png",
+                    "images/S43X3Y0no.png",
+                    "images/S43X3Y1sheep.png",
+                    "images/S43X3Y2chick.png",
                     ""
                 ]
             ],
@@ -7272,28 +7272,28 @@
             ],
             [
                 [
-                    "icons/S44X0Y0yes.png",
-                    "icons/S44X0Y1toppage.png",
-                    "icons/S44X0Y2monkey.png",
-                    "icons/S44X0Y3giraffe.png"
+                    "images/S44X0Y0yes.png",
+                    "images/S44X0Y1toppage.png",
+                    "images/S44X0Y2monkey.png",
+                    "images/S44X0Y3giraffe.png"
                 ],
                 [
                     "",
-                    "icons/S44X1Y1wildanimals.png",
-                    "icons/S44X1Y2elephant.png",
-                    "icons/S44X1Y3rhinoceros.png"
+                    "images/S44X1Y1wildanimals.png",
+                    "images/S44X1Y2elephant.png",
+                    "images/S44X1Y3rhinoceros.png"
                 ],
                 [
                     "",
-                    "icons/S44X2Y1zebra.png",
-                    "icons/S44X2Y2tiger.png",
-                    "icons/S44X2Y3hippo.png"
+                    "images/S44X2Y1zebra.png",
+                    "images/S44X2Y2tiger.png",
+                    "images/S44X2Y3hippo.png"
                 ],
                 [
-                    "icons/S44X3Y0no.png",
-                    "icons/S44X3Y1snake.png",
-                    "icons/S44X3Y2dear.png",
-                    "icons/S44X3Y3lion.png"
+                    "images/S44X3Y0no.png",
+                    "images/S44X3Y1snake.png",
+                    "images/S44X3Y2dear.png",
+                    "images/S44X3Y3lion.png"
                 ]
             ],
             [
@@ -7436,27 +7436,27 @@
             ],
             [
                 [
-                    "icons/S45X0Y0yes.png",
-                    "icons/S45X0Y1toppage.png",
-                    "icons/S45X0Y2crab.png",
+                    "images/S45X0Y0yes.png",
+                    "images/S45X0Y1toppage.png",
+                    "images/S45X0Y2crab.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S45X1Y1wateranimal.png",
-                    "icons/S45X1Y2dolphin.png",
+                    "images/S45X1Y1wateranimal.png",
+                    "images/S45X1Y2dolphin.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S45X2Y1fish.png",
-                    "icons/S45X2Y2jellyfish.png",
+                    "images/S45X2Y1fish.png",
+                    "images/S45X2Y2jellyfish.png",
                     ""
                 ],
                 [
-                    "icons/S45X3Y0no.png",
-                    "icons/S45X3Y1whale.png",
-                    "icons/S45X3Y2tropicalfish.png",
+                    "images/S45X3Y0no.png",
+                    "images/S45X3Y1whale.png",
+                    "images/S45X3Y2tropicalfish.png",
                     ""
                 ]
             ],
@@ -7600,27 +7600,27 @@
             ],
             [
                 [
-                    "icons/S46X0Y0yes.png",
-                    "icons/S46X0Y1toppage.png",
-                    "icons/S46X0Y2turkey.png",
-                    "icons/S46X0Y3penguin.png"
+                    "images/S46X0Y0yes.png",
+                    "images/S46X0Y1toppage.png",
+                    "images/S46X0Y2turkey.png",
+                    "images/S46X0Y3penguin.png"
                 ],
                 [
                     "",
-                    "icons/S46X1Y1bird.png",
-                    "icons/S46X1Y2swan.png",
-                    "icons/S46X1Y3robin.png"
+                    "images/S46X1Y1bird.png",
+                    "images/S46X1Y2swan.png",
+                    "images/S46X1Y3robin.png"
                 ],
                 [
                     "",
-                    "icons/S46X2Y1duck.png",
-                    "icons/S46X2Y2peacock.png",
-                    "icons/S46X2Y3chicken.png"
+                    "images/S46X2Y1duck.png",
+                    "images/S46X2Y2peacock.png",
+                    "images/S46X2Y3chicken.png"
                 ],
                 [
-                    "icons/S46X3Y0no.png",
-                    "icons/S46X3Y1parrot.png",
-                    "icons/S46X3Y2owl.png",
+                    "images/S46X3Y0no.png",
+                    "images/S46X3Y1parrot.png",
+                    "images/S46X3Y2owl.png",
                     ""
                 ]
             ],
@@ -7764,27 +7764,27 @@
             ],
             [
                 [
-                    "icons/S47X0Y0yes.png",
-                    "icons/S47X0Y1toppage.png",
-                    "icons/S47X0Y2snail.png",
+                    "images/S47X0Y0yes.png",
+                    "images/S47X0Y1toppage.png",
+                    "images/S47X0Y2snail.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S47X1Y1insects.png",
-                    "icons/S47X1Y2bee.png",
+                    "images/S47X1Y1insects.png",
+                    "images/S47X1Y2bee.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S47X2Y1caterpillar.png",
-                    "icons/S47X2Y2fly.png",
+                    "images/S47X2Y1caterpillar.png",
+                    "images/S47X2Y2fly.png",
                     ""
                 ],
                 [
-                    "icons/S47X3Y0no.png",
-                    "icons/S47X3Y1slug.png",
-                    "icons/S47X3Y2spider.png",
+                    "images/S47X3Y0no.png",
+                    "images/S47X3Y1slug.png",
+                    "images/S47X3Y2spider.png",
                     ""
                 ]
             ],
@@ -7928,26 +7928,26 @@
             ],
             [
                 [
-                    "icons/S48X0Y0yes.png",
-                    "icons/S48X0Y1toppage.png",
-                    "icons/S48X0Y2petcollar.png",
-                    "icons/S48X0Y3careforpet.png"
+                    "images/S48X0Y0yes.png",
+                    "images/S48X0Y1toppage.png",
+                    "images/S48X0Y2petcollar.png",
+                    "images/S48X0Y3careforpet.png"
                 ],
                 [
                     "",
-                    "icons/S48X1Y1petcare.png",
-                    "icons/S48X1Y2lead.png",
-                    "icons/S48X1Y3feedpet.png"
+                    "images/S48X1Y1petcare.png",
+                    "images/S48X1Y2lead.png",
+                    "images/S48X1Y3feedpet.png"
                 ],
                 [
                     "",
-                    "icons/S48X2Y1petbed.png",
-                    "icons/S48X2Y2cage.png",
-                    "icons/S48X2Y3walkthedog.png"
+                    "images/S48X2Y1petbed.png",
+                    "images/S48X2Y2cage.png",
+                    "images/S48X2Y3walkthedog.png"
                 ],
                 [
-                    "icons/S48X3Y0no.png",
-                    "icons/S48X3Y1petfood.png",
+                    "images/S48X3Y0no.png",
+                    "images/S48X3Y1petfood.png",
                     "",
                     ""
                 ]
@@ -8092,28 +8092,28 @@
             ],
             [
                 [
-                    "icons/S49X0Y0yes.png",
-                    "icons/S49X0Y1toppage.png",
-                    "icons/S49X0Y2lawnmower.png",
-                    "icons/S49X0Y3hose.png"
+                    "images/S49X0Y0yes.png",
+                    "images/S49X0Y1toppage.png",
+                    "images/S49X0Y2lawnmower.png",
+                    "images/S49X0Y3hose.png"
                 ],
                 [
                     "",
-                    "icons/S49X1Y1gardening.png",
-                    "icons/S49X1Y2leaves.png",
-                    "icons/S49X1Y3seeds.png"
+                    "images/S49X1Y1gardening.png",
+                    "images/S49X1Y2leaves.png",
+                    "images/S49X1Y3seeds.png"
                 ],
                 [
                     "",
-                    "icons/S49X2Y1flowers.png",
-                    "icons/S49X2Y2grass.png",
-                    "icons/S49X2Y3clippers.png"
+                    "images/S49X2Y1flowers.png",
+                    "images/S49X2Y2grass.png",
+                    "images/S49X2Y3clippers.png"
                 ],
                 [
-                    "icons/S49X3Y0no.png",
-                    "icons/S49X3Y1tree.png",
-                    "icons/S49X3Y2trowel.png",
-                    "icons/S49X3Y3rake.png"
+                    "images/S49X3Y0no.png",
+                    "images/S49X3Y1tree.png",
+                    "images/S49X3Y2trowel.png",
+                    "images/S49X3Y3rake.png"
                 ]
             ],
             [
@@ -8256,28 +8256,28 @@
             ],
             [
                 [
-                    "icons/S50X0Y0yes.png",
-                    "icons/S50X0Y1toppage.png",
-                    "icons/S50X0Y2do.png",
-                    "icons/S50X0Y3have.png"
+                    "images/S50X0Y0yes.png",
+                    "images/S50X0Y1toppage.png",
+                    "images/S50X0Y2do.png",
+                    "images/S50X0Y3have.png"
                 ],
                 [
                     "",
-                    "icons/S50X1Y1go.png",
-                    "icons/S50X1Y2look.png",
-                    "icons/S50X1Y3turn.png"
+                    "images/S50X1Y1go.png",
+                    "images/S50X1Y2look.png",
+                    "images/S50X1Y3turn.png"
                 ],
                 [
                     "",
-                    "icons/S50X2Y1want.png",
-                    "icons/S50X2Y2stop.png",
-                    "icons/S50X2Y3see.png"
+                    "images/S50X2Y1want.png",
+                    "images/S50X2Y2stop.png",
+                    "images/S50X2Y3see.png"
                 ],
                 [
-                    "icons/S50X3Y0no.png",
-                    "icons/S50X3Y1help.png",
-                    "icons/S50X3Y2get.png",
-                    "icons/S50X3Y3moreactionwords.png"
+                    "images/S50X3Y0no.png",
+                    "images/S50X3Y1help.png",
+                    "images/S50X3Y2get.png",
+                    "images/S50X3Y3moreactionwords.png"
                 ]
             ],
             [
@@ -8420,28 +8420,28 @@
             ],
             [
                 [
-                    "icons/S51X0Y0yes.png",
-                    "icons/S51X0Y1toppage.png",
-                    "icons/S51X0Y2come.png",
-                    "icons/S51X0Y3know.png"
+                    "images/S51X0Y0yes.png",
+                    "images/S51X0Y1toppage.png",
+                    "images/S51X0Y2come.png",
+                    "images/S51X0Y3know.png"
                 ],
                 [
                     "",
-                    "icons/S51X1Y1play.png",
-                    "icons/S51X1Y2say.png",
-                    "icons/S51X1Y3take.png"
+                    "images/S51X1Y1play.png",
+                    "images/S51X1Y2say.png",
+                    "images/S51X1Y3take.png"
                 ],
                 [
                     "",
-                    "icons/S51X2Y1give.png",
-                    "icons/S51X2Y2put.png",
-                    "icons/S51X2Y3tell.png"
+                    "images/S51X2Y1give.png",
+                    "images/S51X2Y2put.png",
+                    "images/S51X2Y3tell.png"
                 ],
                 [
-                    "icons/S51X3Y0no.png",
-                    "icons/S51X3Y1listen.png",
-                    "icons/S51X3Y2make.png",
-                    "icons/S51X3Y3sing.png"
+                    "images/S51X3Y0no.png",
+                    "images/S51X3Y1listen.png",
+                    "images/S51X3Y2make.png",
+                    "images/S51X3Y3sing.png"
                 ]
             ],
             [
@@ -8584,28 +8584,28 @@
             ],
             [
                 [
-                    "icons/S52X0Y0yes.png",
-                    "icons/S52X0Y1toppage.png",
-                    "icons/S52X0Y2i.png",
-                    "icons/S52X0Y3it.png"
+                    "images/S52X0Y0yes.png",
+                    "images/S52X0Y1toppage.png",
+                    "images/S52X0Y2i.png",
+                    "images/S52X0Y3it.png"
                 ],
                 [
                     "",
-                    "icons/S52X1Y1people.png",
-                    "icons/S52X1Y2my.png",
-                    "icons/S52X1Y3you.png"
+                    "images/S52X1Y1people.png",
+                    "images/S52X1Y2my.png",
+                    "images/S52X1Y3you.png"
                 ],
                 [
                     "",
-                    "icons/S52X2Y1friends.png",
-                    "icons/S52X2Y2mine.png",
-                    "icons/S52X2Y3boy.png"
+                    "images/S52X2Y1friends.png",
+                    "images/S52X2Y2mine.png",
+                    "images/S52X2Y3boy.png"
                 ],
                 [
-                    "icons/S52X3Y0no.png",
-                    "icons/S52X3Y1peoplewhohelp.png",
-                    "icons/S52X3Y2family.png",
-                    "icons/S52X3Y3girl.png"
+                    "images/S52X3Y0no.png",
+                    "images/S52X3Y1peoplewhohelp.png",
+                    "images/S52X3Y2family.png",
+                    "images/S52X3Y3girl.png"
                 ]
             ],
             [
@@ -8748,14 +8748,14 @@
             ],
             [
                 [
-                    "icons/S53X0Y0yes.png",
-                    "icons/S53X0Y1toppage.png",
+                    "images/S53X0Y0yes.png",
+                    "images/S53X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S53X1Y1friend.png",
+                    "images/S53X1Y1friend.png",
                     "",
                     ""
                 ],
@@ -8766,7 +8766,7 @@
                     ""
                 ],
                 [
-                    "icons/S53X3Y0no.png",
+                    "images/S53X3Y0no.png",
                     "",
                     "",
                     ""
@@ -8912,14 +8912,14 @@
             ],
             [
                 [
-                    "icons/S54X0Y0yes.png",
-                    "icons/S54X0Y1toppage.png",
+                    "images/S54X0Y0yes.png",
+                    "images/S54X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S54X1Y1peoplewhohelp.png",
+                    "images/S54X1Y1peoplewhohelp.png",
                     "",
                     ""
                 ],
@@ -8930,10 +8930,10 @@
                     ""
                 ],
                 [
-                    "icons/S54X3Y0no.png",
+                    "images/S54X3Y0no.png",
                     "",
                     "",
-                    "icons/S54X3Y3jobs.png"
+                    "images/S54X3Y3jobs.png"
                 ]
             ],
             [
@@ -9076,14 +9076,14 @@
             ],
             [
                 [
-                    "icons/S55X0Y0yes.png",
-                    "icons/S55X0Y1toppage.png",
+                    "images/S55X0Y0yes.png",
+                    "images/S55X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S55X1Y1jobs.png",
+                    "images/S55X1Y1jobs.png",
                     "",
                     ""
                 ],
@@ -9094,7 +9094,7 @@
                     ""
                 ],
                 [
-                    "icons/S55X3Y0no.png",
+                    "images/S55X3Y0no.png",
                     "",
                     "",
                     ""
@@ -9240,27 +9240,27 @@
             ],
             [
                 [
-                    "icons/S56X0Y0yes.png",
-                    "icons/S56X0Y1toppage.png",
+                    "images/S56X0Y0yes.png",
+                    "images/S56X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S56X1Y1family.png",
+                    "images/S56X1Y1family.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S56X2Y1dad.png",
-                    "icons/S56X2Y2brother.png",
+                    "images/S56X2Y1dad.png",
+                    "images/S56X2Y2brother.png",
                     ""
                 ],
                 [
-                    "icons/S56X3Y0no.png",
-                    "icons/S56X3Y1mum.png",
-                    "icons/S56X3Y2sister.png",
+                    "images/S56X3Y0no.png",
+                    "images/S56X3Y1mum.png",
+                    "images/S56X3Y2sister.png",
                     ""
                 ]
             ],
@@ -9404,28 +9404,28 @@
             ],
             [
                 [
-                    "icons/S57X0Y0yes.png",
-                    "icons/S57X0Y1toppage.png",
-                    "icons/S57X0Y2more.png",
-                    "icons/S57X0Y3wrong.png"
+                    "images/S57X0Y0yes.png",
+                    "images/S57X0Y1toppage.png",
+                    "images/S57X0Y2more.png",
+                    "images/S57X0Y3wrong.png"
                 ],
                 [
                     "",
-                    "icons/S57X1Y1feelings.png",
-                    "icons/S57X1Y2nice.png",
-                    "icons/S57X1Y3right.png"
+                    "images/S57X1Y1feelings.png",
+                    "images/S57X1Y2nice.png",
+                    "images/S57X1Y3right.png"
                 ],
                 [
                     "",
-                    "icons/S57X2Y1shapecolour.png",
-                    "icons/S57X2Y2different.png",
-                    "icons/S57X2Y3problem.png"
+                    "images/S57X2Y1shapecolour.png",
+                    "images/S57X2Y2different.png",
+                    "images/S57X2Y3problem.png"
                 ],
                 [
-                    "icons/S57X3Y0no.png",
-                    "icons/S57X3Y1opposites.png",
-                    "icons/S57X3Y2same.png",
-                    "icons/S57X3Y3idea.png"
+                    "images/S57X3Y0no.png",
+                    "images/S57X3Y1opposites.png",
+                    "images/S57X3Y2same.png",
+                    "images/S57X3Y3idea.png"
                 ]
             ],
             [
@@ -9568,28 +9568,28 @@
             ],
             [
                 [
-                    "icons/S58X0Y0yes.png",
-                    "icons/S58X0Y1toppage.png",
-                    "icons/S58X0Y2itis.png",
-                    "icons/S58X0Y3iam.png"
+                    "images/S58X0Y0yes.png",
+                    "images/S58X0Y1toppage.png",
+                    "images/S58X0Y2itis.png",
+                    "images/S58X0Y3iam.png"
                 ],
                 [
                     "",
-                    "icons/S58X1Y1afraid.png",
-                    "icons/S58X1Y2sad.png",
-                    "icons/S58X1Y3tired.png"
+                    "images/S58X1Y1afraid.png",
+                    "images/S58X1Y2sad.png",
+                    "images/S58X1Y3tired.png"
                 ],
                 [
                     "",
-                    "icons/S58X2Y1angry.png",
-                    "icons/S58X2Y2happy.png",
-                    "icons/S58X2Y3bad.png"
+                    "images/S58X2Y1angry.png",
+                    "images/S58X2Y2happy.png",
+                    "images/S58X2Y3bad.png"
                 ],
                 [
-                    "icons/S58X3Y0no.png",
-                    "icons/S58X3Y1safe.png",
-                    "icons/S58X3Y2board.png",
-                    "icons/S58X3Y3happy.png"
+                    "images/S58X3Y0no.png",
+                    "images/S58X3Y1safe.png",
+                    "images/S58X3Y2board.png",
+                    "images/S58X3Y3happy.png"
                 ]
             ],
             [
@@ -9732,28 +9732,28 @@
             ],
             [
                 [
-                    "icons/S59X0Y0yes.png",
-                    "icons/S59X0Y1toppage.png",
-                    "icons/S59X0Y2triangle.png",
-                    "icons/S59X0Y3square.png"
+                    "images/S59X0Y0yes.png",
+                    "images/S59X0Y1toppage.png",
+                    "images/S59X0Y2triangle.png",
+                    "images/S59X0Y3square.png"
                 ],
                 [
                     "",
-                    "icons/S59X1Y1circle.png",
-                    "icons/S59X1Y2star.png",
-                    "icons/S59X1Y3rectangle.png"
+                    "images/S59X1Y1circle.png",
+                    "images/S59X1Y2star.png",
+                    "images/S59X1Y3rectangle.png"
                 ],
                 [
                     "",
-                    "icons/S59X2Y1white.png",
-                    "icons/S59X2Y2black.png",
-                    "icons/S59X2Y3green.png"
+                    "images/S59X2Y1white.png",
+                    "images/S59X2Y2black.png",
+                    "images/S59X2Y3green.png"
                 ],
                 [
-                    "icons/S59X3Y0no.png",
-                    "icons/S59X3Y1yellow.png",
-                    "icons/S59X3Y2red.png",
-                    "icons/S59X3Y3blue.png"
+                    "images/S59X3Y0no.png",
+                    "images/S59X3Y1yellow.png",
+                    "images/S59X3Y2red.png",
+                    "images/S59X3Y3blue.png"
                 ]
             ],
             [
@@ -9896,28 +9896,28 @@
             ],
             [
                 [
-                    "icons/S60X0Y0yes.png",
-                    "icons/S60X0Y1toppage.png",
-                    "icons/S60X0Y2fast.png",
-                    "icons/S60X0Y3easy.png"
+                    "images/S60X0Y0yes.png",
+                    "images/S60X0Y1toppage.png",
+                    "images/S60X0Y2fast.png",
+                    "images/S60X0Y3easy.png"
                 ],
                 [
                     "",
-                    "icons/S60X1Y1alldone.png",
-                    "icons/S60X1Y2slow.png",
-                    "icons/S60X1Y3hard.png"
+                    "images/S60X1Y1alldone.png",
+                    "images/S60X1Y2slow.png",
+                    "images/S60X1Y3hard.png"
                 ],
                 [
                     "",
-                    "icons/S60X2Y1dry.png",
-                    "icons/S60X2Y2big.png",
-                    "icons/S60X2Y3clean.png"
+                    "images/S60X2Y1dry.png",
+                    "images/S60X2Y2big.png",
+                    "images/S60X2Y3clean.png"
                 ],
                 [
-                    "icons/S60X3Y0no.png",
-                    "icons/S60X3Y1wet.png",
-                    "icons/S60X3Y2little.png",
-                    "icons/S60X3Y3dirty.png"
+                    "images/S60X3Y0no.png",
+                    "images/S60X3Y1wet.png",
+                    "images/S60X3Y2little.png",
+                    "images/S60X3Y3dirty.png"
                 ]
             ],
             [
@@ -10060,26 +10060,26 @@
             ],
             [
                 [
-                    "icons/S61X0Y0yes.png",
-                    "icons/S61X0Y1toppage.png",
-                    "icons/S61X0Y2unknown.png",
+                    "images/S61X0Y0yes.png",
+                    "images/S61X0Y1toppage.png",
+                    "images/S61X0Y2unknown.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S61X1Y1numbers.png",
-                    "icons/S61X1Y2unknown.png",
+                    "images/S61X1Y1numbers.png",
+                    "images/S61X1Y2unknown.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S61X2Y1unknown.png",
-                    "icons/S61X2Y2unknown.png",
+                    "images/S61X2Y1unknown.png",
+                    "images/S61X2Y2unknown.png",
                     ""
                 ],
                 [
-                    "icons/S61X3Y0no.png",
-                    "icons/S61X3Y1unknown.png",
+                    "images/S61X3Y0no.png",
+                    "images/S61X3Y1unknown.png",
                     "",
                     ""
                 ]
@@ -10224,26 +10224,26 @@
             ],
             [
                 [
-                    "icons/S62X0Y0yes.png",
-                    "icons/S62X0Y1toppage.png",
-                    "icons/S62X0Y2mydayplaces.png",
+                    "images/S62X0Y0yes.png",
+                    "images/S62X0Y1toppage.png",
+                    "images/S62X0Y2mydayplaces.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S62X1Y1numbers.png",
-                    "icons/S62X1Y2cooking.png",
+                    "images/S62X1Y1numbers.png",
+                    "images/S62X1Y2cooking.png",
                     ""
                 ],
                 [
                     "",
-                    "icons/S62X2Y1timetable.png",
+                    "images/S62X2Y1timetable.png",
                     "",
                     ""
                 ],
                 [
-                    "icons/S62X3Y0no.png",
-                    "icons/S62X3Y1computercontrol.png",
+                    "images/S62X3Y0no.png",
+                    "images/S62X3Y1computercontrol.png",
                     "",
                     ""
                 ]
@@ -10388,14 +10388,14 @@
             ],
             [
                 [
-                    "icons/S63X0Y0yes.png",
-                    "icons/S63X0Y1toppage.png",
+                    "images/S63X0Y0yes.png",
+                    "images/S63X0Y1toppage.png",
                     "",
                     ""
                 ],
                 [
                     "",
-                    "icons/S63X1Y1mydayplaces.png",
+                    "images/S63X1Y1mydayplaces.png",
                     "",
                     ""
                 ],
@@ -10406,7 +10406,7 @@
                     ""
                 ],
                 [
-                    "icons/S63X3Y0no.png",
+                    "images/S63X3Y0no.png",
                     "",
                     "",
                     ""
@@ -10552,28 +10552,28 @@
             ],
             [
                 [
-                    "icons/S64X0Y0yes.png",
-                    "icons/S64X0Y1toppage.png",
-                    "icons/S64X0Y2cinema.png",
-                    "icons/S64X0Y3library.png"
+                    "images/S64X0Y0yes.png",
+                    "images/S64X0Y1toppage.png",
+                    "images/S64X0Y2cinema.png",
+                    "images/S64X0Y3library.png"
                 ],
                 [
                     "",
-                    "icons/S64X1Y1shops.png",
-                    "icons/S64X1Y2schoolcollege.png",
-                    "icons/S64X1Y3pub.png"
+                    "images/S64X1Y1shops.png",
+                    "images/S64X1Y2schoolcollege.png",
+                    "images/S64X1Y3pub.png"
                 ],
                 [
                     "",
-                    "icons/S64X2Y1placesoutside.png",
-                    "icons/S64X2Y2town.png",
-                    "icons/S64X2Y3doctors.png"
+                    "images/S64X2Y1placesoutside.png",
+                    "images/S64X2Y2town.png",
+                    "images/S64X2Y3doctors.png"
                 ],
                 [
-                    "icons/S64X3Y0no.png",
-                    "icons/S64X3Y1restaurant.png",
-                    "icons/S64X3Y2pool.png",
-                    "icons/S64X3Y3placesathome.png"
+                    "images/S64X3Y0no.png",
+                    "images/S64X3Y1restaurant.png",
+                    "images/S64X3Y2pool.png",
+                    "images/S64X3Y3placesathome.png"
                 ]
             ],
             [
@@ -10716,28 +10716,28 @@
             ],
             [
                 [
-                    "icons/S65X0Y0yes.png",
-                    "icons/S65X0Y1toppage.png",
-                    "icons/S65X0Y2bread.png",
-                    "icons/S65X0Y3market.png"
+                    "images/S65X0Y0yes.png",
+                    "images/S65X0Y1toppage.png",
+                    "images/S65X0Y2bread.png",
+                    "images/S65X0Y3market.png"
                 ],
                 [
                     "",
-                    "icons/S65X1Y1shop.png",
-                    "icons/S65X1Y2vegshop.png",
-                    "icons/S65X1Y3cafe.png"
+                    "images/S65X1Y1shop.png",
+                    "images/S65X1Y2vegshop.png",
+                    "images/S65X1Y3cafe.png"
                 ],
                 [
                     "",
-                    "icons/S65X2Y1supermarket.png",
-                    "icons/S65X2Y2shoppingcentre.png",
-                    "icons/S65X2Y3musicshop.png"
+                    "images/S65X2Y1supermarket.png",
+                    "images/S65X2Y2shoppingcentre.png",
+                    "images/S65X2Y3musicshop.png"
                 ],
                 [
-                    "icons/S65X3Y0no.png",
-                    "icons/S65X3Y1butcher.png",
-                    "icons/S65X3Y2clothesshop.png",
-                    "icons/S65X3Y3pharmacy.png"
+                    "images/S65X3Y0no.png",
+                    "images/S65X3Y1butcher.png",
+                    "images/S65X3Y2clothesshop.png",
+                    "images/S65X3Y3pharmacy.png"
                 ]
             ],
             [
@@ -10880,27 +10880,27 @@
             ],
             [
                 [
-                    "icons/S66X0Y0yes.png",
-                    "icons/S66X0Y1toppage.png",
-                    "icons/S66X0Y2beach.png",
-                    "icons/S66X0Y3garden.png"
+                    "images/S66X0Y0yes.png",
+                    "images/S66X0Y1toppage.png",
+                    "images/S66X0Y2beach.png",
+                    "images/S66X0Y3garden.png"
                 ],
                 [
                     "",
-                    "icons/S66X1Y1outsideplaces.png",
-                    "icons/S66X1Y2hill.png",
-                    "icons/S66X1Y3lake.png"
+                    "images/S66X1Y1outsideplaces.png",
+                    "images/S66X1Y2hill.png",
+                    "images/S66X1Y3lake.png"
                 ],
                 [
                     "",
-                    "icons/S66X2Y1street.png",
-                    "icons/S66X2Y2woods.png",
+                    "images/S66X2Y1street.png",
+                    "images/S66X2Y2woods.png",
                     ""
                 ],
                 [
-                    "icons/S66X3Y0no.png",
-                    "icons/S66X3Y1carpark.png",
-                    "icons/S66X3Y2field.png",
+                    "images/S66X3Y0no.png",
+                    "images/S66X3Y1carpark.png",
+                    "images/S66X3Y2field.png",
                     ""
                 ]
             ],
@@ -11044,28 +11044,28 @@
             ],
             [
                 [
-                    "icons/S67X0Y0yes.png",
-                    "icons/S67X0Y1toppage.png",
-                    "icons/S67X0Y2kitchen.png",
-                    "icons/S67X0Y3myroom.png"
+                    "images/S67X0Y0yes.png",
+                    "images/S67X0Y1toppage.png",
+                    "images/S67X0Y2kitchen.png",
+                    "images/S67X0Y3myroom.png"
                 ],
                 [
                     "",
-                    "icons/S67X1Y1home.png",
-                    "icons/S67X1Y2toilet.png",
-                    "icons/S67X1Y3upstairs.png"
+                    "images/S67X1Y1home.png",
+                    "images/S67X1Y2toilet.png",
+                    "images/S67X1Y3upstairs.png"
                 ],
                 [
                     "",
-                    "icons/S67X2Y1diningroom.png",
-                    "icons/S67X2Y2lounge.png",
-                    "icons/S67X2Y3downstairs.png"
+                    "images/S67X2Y1diningroom.png",
+                    "images/S67X2Y2lounge.png",
+                    "images/S67X2Y3downstairs.png"
                 ],
                 [
-                    "icons/S67X3Y0no.png",
-                    "icons/S67X3Y1hall.png",
-                    "icons/S67X3Y2bedroom.png",
-                    "icons/S67X3Y3stairs.png"
+                    "images/S67X3Y0no.png",
+                    "images/S67X3Y1hall.png",
+                    "images/S67X3Y2bedroom.png",
+                    "images/S67X3Y3stairs.png"
                 ]
             ],
             [
@@ -11208,28 +11208,28 @@
             ],
             [
                 [
-                    "icons/S68X0Y0yes.png",
-                    "icons/S68X0Y1toppage.png",
-                    "icons/S68X0Y2now.png",
-                    "icons/S68X0Y3again.png"
+                    "images/S68X0Y0yes.png",
+                    "images/S68X0Y1toppage.png",
+                    "images/S68X0Y2now.png",
+                    "images/S68X0Y3again.png"
                 ],
                 [
                     "",
-                    "icons/S68X1Y1time.png",
-                    "icons/S68X1Y2never.png",
-                    "icons/S68X1Y3ready.png"
+                    "images/S68X1Y1time.png",
+                    "images/S68X1Y2never.png",
+                    "images/S68X1Y3ready.png"
                 ],
                 [
                     "",
-                    "icons/S68X2Y1day.png",
-                    "icons/S68X2Y2later.png",
-                    "icons/S68X2Y3before.png"
+                    "images/S68X2Y1day.png",
+                    "images/S68X2Y2later.png",
+                    "images/S68X2Y3before.png"
                 ],
                 [
-                    "icons/S68X3Y0no.png",
-                    "icons/S68X3Y1specialdays.png",
-                    "icons/S68X3Y2late.png",
-                    "icons/S68X3Y3after.png"
+                    "images/S68X3Y0no.png",
+                    "images/S68X3Y1specialdays.png",
+                    "images/S68X3Y2late.png",
+                    "images/S68X3Y3after.png"
                 ]
             ],
             [
@@ -11372,28 +11372,28 @@
             ],
             [
                 [
-                    "icons/S69X0Y0yes.png",
-                    "icons/S69X0Y1toppage.png",
-                    "icons/S69X0Y2monday.png",
-                    "icons/S69X0Y3friday.png"
+                    "images/S69X0Y0yes.png",
+                    "images/S69X0Y1toppage.png",
+                    "images/S69X0Y2monday.png",
+                    "images/S69X0Y3friday.png"
                 ],
                 [
                     "",
-                    "icons/S69X1Y1day.png",
-                    "icons/S69X1Y2tuesday.png",
-                    "icons/S69X1Y3saturday.png"
+                    "images/S69X1Y1day.png",
+                    "images/S69X1Y2tuesday.png",
+                    "images/S69X1Y3saturday.png"
                 ],
                 [
                     "",
-                    "icons/S69X2Y1weekend.png",
-                    "icons/S69X2Y2wednesday.png",
-                    "icons/S69X2Y3sunday.png"
+                    "images/S69X2Y1weekend.png",
+                    "images/S69X2Y2wednesday.png",
+                    "images/S69X2Y3sunday.png"
                 ],
                 [
-                    "icons/S69X3Y0no.png",
-                    "icons/S69X3Y1night.png",
-                    "icons/S69X3Y2thursday.png",
-                    "icons/S69X3Y3week.png"
+                    "images/S69X3Y0no.png",
+                    "images/S69X3Y1night.png",
+                    "images/S69X3Y2thursday.png",
+                    "images/S69X3Y3week.png"
                 ]
             ],
             [
@@ -11536,28 +11536,28 @@
             ],
             [
                 [
-                    "icons/S70X0Y0yes.png",
-                    "icons/S70X0Y1toppage.png",
-                    "icons/S70X0Y2holiday.png",
-                    "icons/S70X0Y3bonfirenight.png"
+                    "images/S70X0Y0yes.png",
+                    "images/S70X0Y1toppage.png",
+                    "images/S70X0Y2holiday.png",
+                    "images/S70X0Y3bonfirenight.png"
                 ],
                 [
                     "",
-                    "icons/S70X1Y1specialday.png",
-                    "icons/S70X1Y2wedding.png",
-                    "icons/S70X1Y3halloween.png"
+                    "images/S70X1Y1specialday.png",
+                    "images/S70X1Y2wedding.png",
+                    "images/S70X1Y3halloween.png"
                 ],
                 [
                     "",
-                    "icons/S70X2Y1newyear.png",
-                    "icons/S70X2Y2easter.png",
-                    "icons/S70X2Y3party.png"
+                    "images/S70X2Y1newyear.png",
+                    "images/S70X2Y2easter.png",
+                    "images/S70X2Y3party.png"
                 ],
                 [
-                    "icons/S70X3Y0no.png",
-                    "icons/S70X3Y1valentines.png",
-                    "icons/S70X3Y2birthday.png",
-                    "icons/S70X3Y3christmas.png"
+                    "images/S70X3Y0no.png",
+                    "images/S70X3Y1valentines.png",
+                    "images/S70X3Y2birthday.png",
+                    "images/S70X3Y3christmas.png"
                 ]
             ],
             [
@@ -11700,26 +11700,26 @@
             ],
             [
                 [
-                    "icons/S71X0Y0yes.png",
-                    "icons/S71X0Y1toppage.png",
-                    "icons/S71X0Y2christmaspudding.png",
-                    "icons/S71X0Y3decorations.png"
+                    "images/S71X0Y0yes.png",
+                    "images/S71X0Y1toppage.png",
+                    "images/S71X0Y2christmaspudding.png",
+                    "images/S71X0Y3decorations.png"
                 ],
                 [
                     "",
-                    "icons/S71X1Y1christmas.png",
-                    "icons/S71X1Y2lights.png",
-                    "icons/S71X1Y3christmastree.png"
+                    "images/S71X1Y1christmas.png",
+                    "images/S71X1Y2lights.png",
+                    "images/S71X1Y3christmastree.png"
                 ],
                 [
                     "",
-                    "icons/S71X2Y1christmasday.png",
-                    "icons/S71X2Y2christmascake.png",
-                    "icons/S71X2Y3gift.png"
+                    "images/S71X2Y1christmasday.png",
+                    "images/S71X2Y2christmascake.png",
+                    "images/S71X2Y3gift.png"
                 ],
                 [
-                    "icons/S71X3Y0no.png",
-                    "icons/S71X3Y1fartherchristmas.png",
+                    "images/S71X3Y0no.png",
+                    "images/S71X3Y1fartherchristmas.png",
                     "",
                     ""
                 ]
@@ -11864,28 +11864,28 @@
             ],
             [
                 [
-                    "icons/S72X0Y0yes.png",
-                    "icons/S72X0Y1toppage.png",
-                    "icons/S72X0Y2iwant.png",
-                    "icons/S72X0Y3computercontrol.png"
+                    "images/S72X0Y0yes.png",
+                    "images/S72X0Y1toppage.png",
+                    "images/S72X0Y2iwant.png",
+                    "images/S72X0Y3computercontrol.png"
                 ],
                 [
                     "",
-                    "icons/S72X1Y1myphotos.png",
-                    "icons/S72X1Y2phone.png",
-                    "icons/S72X1Y3dvd.png"
+                    "images/S72X1Y1myphotos.png",
+                    "images/S72X1Y2phone.png",
+                    "images/S72X1Y3dvd.png"
                 ],
                 [
                     "",
-                    "icons/S72X2Y1mp3.png",
+                    "images/S72X2Y1mp3.png",
                     "",
-                    "icons/S72X2Y3tv.png"
+                    "images/S72X2Y3tv.png"
                 ],
                 [
-                    "icons/S72X3Y0no.png",
-                    "icons/S72X3Y1volumeup.png",
-                    "icons/S72X3Y2volumedown.png",
-                    "icons/S72X3Y3ecu.png"
+                    "images/S72X3Y0no.png",
+                    "images/S72X3Y1volumeup.png",
+                    "images/S72X3Y2volumedown.png",
+                    "images/S72X3Y3ecu.png"
                 ]
             ],
             [
@@ -12028,28 +12028,28 @@
             ],
             [
                 [
-                    "icons/S73X0Y0yes.png",
-                    "icons/S73X0Y1toppage.png",
-                    "icons/S73X0Y2todosomethingelse.png",
-                    "icons/S73X0Y3mystories.png"
+                    "images/S73X0Y0yes.png",
+                    "images/S73X0Y1toppage.png",
+                    "images/S73X0Y2todosomethingelse.png",
+                    "images/S73X0Y3mystories.png"
                 ],
                 [
                     "",
-                    "icons/S73X1Y1togooutside.png",
-                    "icons/S73X1Y2towatchsomething.png",
-                    "icons/S73X1Y3tolistentosomething.png"
+                    "images/S73X1Y1togooutside.png",
+                    "images/S73X1Y2towatchsomething.png",
+                    "images/S73X1Y3tolistentosomething.png"
                 ],
                 [
                     "",
-                    "icons/S73X2Y1tocallsomeone.png",
-                    "icons/S73X2Y2togoonholiday.png",
-                    "icons/S73X2Y3toswim.png"
+                    "images/S73X2Y1tocallsomeone.png",
+                    "images/S73X2Y2togoonholiday.png",
+                    "images/S73X2Y3toswim.png"
                 ],
                 [
-                    "icons/S73X3Y0no.png",
-                    "icons/S73X3Y1tocooksomething.png",
-                    "icons/S73X3Y2tohaveago.png",
-                    "icons/S73X3Y3togohome.png"
+                    "images/S73X3Y0no.png",
+                    "images/S73X3Y1tocooksomething.png",
+                    "images/S73X3Y2tohaveago.png",
+                    "images/S73X3Y3togohome.png"
                 ]
             ],
             [
@@ -12192,28 +12192,28 @@
             ],
             [
                 [
-                    "icons/S74X0Y0yes.png",
-                    "icons/S74X0Y1toppage.png",
-                    "icons/S74X0Y2congratulations.png",
-                    "icons/S74X0Y3tellmeyournews.png"
+                    "images/S74X0Y0yes.png",
+                    "images/S74X0Y1toppage.png",
+                    "images/S74X0Y2congratulations.png",
+                    "images/S74X0Y3tellmeyournews.png"
                 ],
                 [
                     "",
-                    "icons/S74X1Y1helloiuseaac.png",
-                    "icons/S74X1Y2people.png",
-                    "icons/S74X1Y3imissyou.png"
+                    "images/S74X1Y1helloiuseaac.png",
+                    "images/S74X1Y2people.png",
+                    "images/S74X1Y3imissyou.png"
                 ],
                 [
                     "",
                     "",
-                    "icons/S74X2Y2speaksoon.png",
-                    "icons/S74X2Y3happybirthday.png"
+                    "images/S74X2Y2speaksoon.png",
+                    "images/S74X2Y3happybirthday.png"
                 ],
                 [
-                    "icons/S74X3Y0no.png",
-                    "icons/S74X3Y1iwanttotellyou.png",
-                    "icons/S74X3Y2imnotsogood.png",
-                    "icons/S74X3Y3getwellsoon.png"
+                    "images/S74X3Y0no.png",
+                    "images/S74X3Y1iwanttotellyou.png",
+                    "images/S74X3Y2imnotsogood.png",
+                    "images/S74X3Y3getwellsoon.png"
                 ]
             ],
             [
@@ -12356,28 +12356,28 @@
             ],
             [
                 [
-                    "icons/S75X0Y0yes.png",
-                    "icons/S75X0Y1toppage.png",
-                    "icons/S75X0Y2mydvds.png",
+                    "images/S75X0Y0yes.png",
+                    "images/S75X0Y1toppage.png",
+                    "images/S75X0Y2mydvds.png",
                     ""
                 ],
                 [
                     "",
                     "",
                     "",
-                    "icons/S75X1Y3rewind.png"
+                    "images/S75X1Y3rewind.png"
                 ],
                 [
                     "",
                     "",
                     "",
-                    "icons/S75X2Y3playpause.png"
+                    "images/S75X2Y3playpause.png"
                 ],
                 [
-                    "icons/S75X3Y0no.png",
+                    "images/S75X3Y0no.png",
                     "",
                     "",
-                    "icons/S75X3Y3fastforward.png"
+                    "images/S75X3Y3fastforward.png"
                 ]
             ],
             [
@@ -12520,28 +12520,28 @@
             ],
             [
                 [
-                    "icons/S76X0Y0yes.png",
-                    "icons/S76X0Y1toppage.png",
-                    "icons/S76X0Y2myalbums.png",
+                    "images/S76X0Y0yes.png",
+                    "images/S76X0Y1toppage.png",
+                    "images/S76X0Y2myalbums.png",
                     ""
                 ],
                 [
                     "",
                     "",
                     "",
-                    "icons/S76X1Y3rewind.png"
+                    "images/S76X1Y3rewind.png"
                 ],
                 [
                     "",
                     "",
                     "",
-                    "icons/S76X2Y3playpause.png"
+                    "images/S76X2Y3playpause.png"
                 ],
                 [
-                    "icons/S76X3Y0no.png",
+                    "images/S76X3Y0no.png",
                     "",
                     "",
-                    "icons/S76X3Y3fastforward.png"
+                    "images/S76X3Y3fastforward.png"
                 ]
             ],
             [
@@ -12684,28 +12684,28 @@
             ],
             [
                 [
-                    "icons/S77X0Y0yes.png",
-                    "icons/S77X0Y1toppage.png",
-                    "icons/S77X0Y2stir.png",
-                    "icons/S77X0Y3measure.png"
+                    "images/S77X0Y0yes.png",
+                    "images/S77X0Y1toppage.png",
+                    "images/S77X0Y2stir.png",
+                    "images/S77X0Y3measure.png"
                 ],
                 [
                     "",
-                    "icons/S77X1Y1cook.png",
-                    "icons/S77X1Y2fry.png",
-                    "icons/S77X1Y3peal.png"
+                    "images/S77X1Y1cook.png",
+                    "images/S77X1Y2fry.png",
+                    "images/S77X1Y3peal.png"
                 ],
                 [
                     "",
-                    "icons/S77X2Y1chop.png",
-                    "icons/S77X2Y2poor.png",
+                    "images/S77X2Y1chop.png",
+                    "images/S77X2Y2poor.png",
                     ""
                 ],
                 [
-                    "icons/S77X3Y0no.png",
-                    "icons/S77X3Y1grate.png",
-                    "icons/S77X3Y2blend.png",
-                    "icons/S77X3Y3dontburnit.png"
+                    "images/S77X3Y0no.png",
+                    "images/S77X3Y1grate.png",
+                    "images/S77X3Y2blend.png",
+                    "images/S77X3Y3dontburnit.png"
                 ]
             ],
             [
@@ -12848,28 +12848,28 @@
             ],
             [
                 [
-                    "icons/S78X0Y0yes.png",
-                    "icons/S78X0Y1toppage.png",
-                    "icons/S78X0Y2here.png",
-                    "icons/S78X0Y3there.png"
+                    "images/S78X0Y0yes.png",
+                    "images/S78X0Y1toppage.png",
+                    "images/S78X0Y2here.png",
+                    "images/S78X0Y3there.png"
                 ],
                 [
                     "",
-                    "icons/S78X1Y1up.png",
-                    "icons/S78X1Y2on.png",
-                    "icons/S78X1Y3and.png"
+                    "images/S78X1Y1up.png",
+                    "images/S78X1Y2on.png",
+                    "images/S78X1Y3and.png"
                 ],
                 [
                     "",
-                    "icons/S78X2Y1down.png",
-                    "icons/S78X2Y2off.png",
-                    "icons/S78X2Y3over.png"
+                    "images/S78X2Y1down.png",
+                    "images/S78X2Y2off.png",
+                    "images/S78X2Y3over.png"
                 ],
                 [
-                    "icons/S78X3Y0no.png",
-                    "icons/S78X3Y1in.png",
-                    "icons/S78X3Y2out.png",
-                    "icons/S78X3Y3under.png"
+                    "images/S78X3Y0no.png",
+                    "images/S78X3Y1in.png",
+                    "images/S78X3Y2out.png",
+                    "images/S78X3Y3under.png"
                 ]
             ],
             [
@@ -13012,27 +13012,27 @@
             ],
             [
                 [
-                    "icons/S79X0Y0yes.png",
-                    "icons/S79X0Y1toppage.png",
-                    "icons/S79X0Y2bricks.png",
-                    "icons/S79X0Y3book.png"
+                    "images/S79X0Y0yes.png",
+                    "images/S79X0Y1toppage.png",
+                    "images/S79X0Y2bricks.png",
+                    "images/S79X0Y3book.png"
                 ],
                 [
                     "",
-                    "icons/S79X1Y1toy.png",
-                    "icons/S79X1Y2lego.png",
-                    "icons/S79X1Y3jigsaw.png"
+                    "images/S79X1Y1toy.png",
+                    "images/S79X1Y2lego.png",
+                    "images/S79X1Y3jigsaw.png"
                 ],
                 [
                     "",
-                    "icons/S79X2Y1train.png",
-                    "icons/S79X2Y2yes.png",
-                    "icons/S79X2Y3doll.png"
+                    "images/S79X2Y1train.png",
+                    "images/S79X2Y2yes.png",
+                    "images/S79X2Y3doll.png"
                 ],
                 [
-                    "icons/S79X3Y0no.png",
-                    "icons/S79X3Y1car.png",
-                    "icons/S79X3Y2coloringbook.png",
+                    "images/S79X3Y0no.png",
+                    "images/S79X3Y1car.png",
+                    "images/S79X3Y2coloringbook.png",
                     ""
                 ]
             ],
@@ -13176,28 +13176,28 @@
             ],
             [
                 [
-                    "icons/S80X0Y0yes.png",
-                    "icons/S80X0Y1toppage.png",
-                    "icons/S80X0Y2tape.png",
-                    "icons/S80X0Y3pen.png"
+                    "images/S80X0Y0yes.png",
+                    "images/S80X0Y1toppage.png",
+                    "images/S80X0Y2tape.png",
+                    "images/S80X0Y3pen.png"
                 ],
                 [
                     "",
-                    "icons/S80X1Y1paint.png",
-                    "icons/S80X1Y2pencilcase.png",
-                    "icons/S80X1Y3pencil.png"
+                    "images/S80X1Y1paint.png",
+                    "images/S80X1Y2pencilcase.png",
+                    "images/S80X1Y3pencil.png"
                 ],
                 [
                     "",
-                    "icons/S80X2Y1glitter.png",
-                    "icons/S80X2Y2glue.png",
-                    "icons/S80X2Y3scissors.png"
+                    "images/S80X2Y1glitter.png",
+                    "images/S80X2Y2glue.png",
+                    "images/S80X2Y3scissors.png"
                 ],
                 [
-                    "icons/S80X3Y0no.png",
-                    "icons/S80X3Y1paper.png",
-                    "icons/S80X3Y2paintbrush.png",
-                    "icons/S80X3Y3materials.png"
+                    "images/S80X3Y0no.png",
+                    "images/S80X3Y1paper.png",
+                    "images/S80X3Y2paintbrush.png",
+                    "images/S80X3Y3materials.png"
                 ]
             ],
             [
@@ -13340,27 +13340,27 @@
             ],
             [
                 [
-                    "icons/S81X0Y0yes.png",
-                    "icons/S81X0Y1toppage.png",
-                    "icons/S81X0Y2fabric.png",
-                    "icons/S81X0Y3stone.png"
+                    "images/S81X0Y0yes.png",
+                    "images/S81X0Y1toppage.png",
+                    "images/S81X0Y2fabric.png",
+                    "images/S81X0Y3stone.png"
                 ],
                 [
                     "",
-                    "icons/S81X1Y1materials.png",
-                    "icons/S81X1Y2gold.png",
-                    "icons/S81X1Y3string.png"
+                    "images/S81X1Y1materials.png",
+                    "images/S81X1Y2gold.png",
+                    "images/S81X1Y3string.png"
                 ],
                 [
                     "",
-                    "icons/S81X2Y1wood.png",
-                    "icons/S81X2Y2sponge.png",
-                    "icons/S81X2Y3paper.png"
+                    "images/S81X2Y1wood.png",
+                    "images/S81X2Y2sponge.png",
+                    "images/S81X2Y3paper.png"
                 ],
                 [
-                    "icons/S81X3Y0no.png",
-                    "icons/S81X3Y1plastic.png",
-                    "icons/S81X3Y2glass.png",
+                    "images/S81X3Y0no.png",
+                    "images/S81X3Y1plastic.png",
+                    "images/S81X3Y2glass.png",
                     ""
                 ]
             ],
@@ -13504,27 +13504,27 @@
             ],
             [
                 [
-                    "icons/S82X0Y0yes.png",
-                    "icons/S82X0Y1toppage.png",
-                    "icons/S82X0Y2email.png",
-                    "icons/S82X0Y3printer.png"
+                    "images/S82X0Y0yes.png",
+                    "images/S82X0Y1toppage.png",
+                    "images/S82X0Y2email.png",
+                    "images/S82X0Y3printer.png"
                 ],
                 [
                     "",
-                    "icons/S82X1Y1computer.png",
-                    "icons/S82X1Y2internet.png",
-                    "icons/S82X1Y3adaptedcomputer.png"
+                    "images/S82X1Y1computer.png",
+                    "images/S82X1Y2internet.png",
+                    "images/S82X1Y3adaptedcomputer.png"
                 ],
                 [
                     "",
-                    "icons/S82X2Y1mouse.png",
-                    "icons/S82X2Y2cd.png",
-                    "icons/S82X2Y3speakers.png"
+                    "images/S82X2Y1mouse.png",
+                    "images/S82X2Y2cd.png",
+                    "images/S82X2Y3speakers.png"
                 ],
                 [
-                    "icons/S82X3Y0no.png",
-                    "icons/S82X3Y1keyboard.png",
-                    "icons/S82X3Y2monitor.png",
+                    "images/S82X3Y0no.png",
+                    "images/S82X3Y1keyboard.png",
+                    "images/S82X3Y2monitor.png",
                     ""
                 ]
             ],
@@ -13668,8 +13668,8 @@
             ],
             [
                 [
-                    "icons/S83X0Y0yes.png",
-                    "icons/S83X0Y1toppage.png",
+                    "images/S83X0Y0yes.png",
+                    "images/S83X0Y1toppage.png",
                     "",
                     ""
                 ],
@@ -13686,7 +13686,7 @@
                     ""
                 ],
                 [
-                    "icons/S83X3Y0no.png",
+                    "images/S83X3Y0no.png",
                     "",
                     "",
                     ""
