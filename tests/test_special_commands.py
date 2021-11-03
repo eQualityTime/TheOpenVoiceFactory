@@ -67,5 +67,11 @@ class ovfTestCommands(TestCase):
         core.process_commandstring(commandstring,button)
         self.assertEqual(button["vocalization"],"jazzgoodbye")
 
+    def test_issue_141(self):
+        button={}
+        commandstring='ovf(place(abc),open(ABC))' #the lack of the speech marks is likely the thing
+        core.process_commandstring(commandstring,button)
+        self.assertEqual(button["vocalization"],"abc")
+
 if __name__=="__main__":
     unittest.main()

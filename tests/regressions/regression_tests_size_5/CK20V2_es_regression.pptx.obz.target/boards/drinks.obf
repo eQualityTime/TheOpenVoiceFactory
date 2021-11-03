@@ -102,7 +102,7 @@
       "load_board": {
         "path": "boards/flavour.obf"
       },
-      "vocalization": "smoothi"
+      "vocalization": "smoothie"
     },
     {
       "background_color": "rgb(255,255,0)",

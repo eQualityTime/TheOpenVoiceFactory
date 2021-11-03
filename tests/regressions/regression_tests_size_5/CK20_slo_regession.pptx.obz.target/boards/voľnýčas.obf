@@ -69,9 +69,9 @@
       "image_id": "images/S91X0Y2chcem.png",
       "label": "Chcem",
       "load_board": {
-        "path": "boards/chce.obf"
+        "path": "boards/chcem.obf"
       },
-      "vocalization": "Chce"
+      "vocalization": "Chcem"
     },
     {
       "background_color": "rgb(51,102,255)",

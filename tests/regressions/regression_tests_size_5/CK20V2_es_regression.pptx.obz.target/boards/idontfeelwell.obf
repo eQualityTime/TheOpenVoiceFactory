@@ -38,7 +38,7 @@
       "image_id": "images/S37X1Y1tengodolorenmi.png",
       "label": "tengo dolor en mi",
       "load_board": {
-        "path": "boards/bodypart.obf"
+        "path": "boards/bodyparts.obf"
       },
       "vocalization": "I have a pain in my"
     },

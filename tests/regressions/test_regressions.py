@@ -34,6 +34,18 @@ class ovfTest(TestCase):
     #TODO: we could speed this up by only looking at each file once - currently we completely process each pptx twice. 
 
     def test_obz_pages(self):
+
+#         generate_obz("tests/regressions/regression_tests_size_4/CK12+V2.pptx",4)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20V2.pptx",5)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20V2_ara_regession.pptx",5)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20V2_bg_regression.pptx",5)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20V2_gr_regression.pptx",5)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20V2_sk_regression.pptx",5)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20_slo_regession.pptx",5)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20V2-place.pptx",5)
+#         generate_obz("tests/regressions/regression_tests_size_5/CK20V2_es_regression.pptx",5)
+
+
         self.assertTrue(compare_boards("tests/regressions/regression_tests_size_4/CK12+V2.pptx",4))
         self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2.pptx",5))
         self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2_ara_regession.pptx",5))

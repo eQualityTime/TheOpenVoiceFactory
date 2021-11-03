@@ -71,7 +71,7 @@
       "load_board": {
         "path": "boards/iwant.obf"
       },
-      "vocalization": "I wan"
+      "vocalization": "I want"
     },
     {
       "background_color": "rgb(51,102,255)",

@@ -38,9 +38,9 @@
       "image_id": "images/S37X1Y1ihavepaininmy.png",
       "label": "I have pain in my",
       "load_board": {
-        "path": "boards/bodypart.obf"
+        "path": "boards/bodyparts.obf"
       },
-      "vocalization": "%2522I have a pain in my%252"
+      "vocalization": "%2522I have a pain in my%2522"
     },
     {
       "background_color": "rgb(1,231,255)",

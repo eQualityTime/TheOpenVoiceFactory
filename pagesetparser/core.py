@@ -56,7 +56,7 @@ def process_commandstring(commandstring,button):
 
 def process_single_command(command,button): 
     command_name= command.split("(",1)[0]
-    argument=command.split("(",1)[1][0:-1]
+    argument=command.split("(",1)[1].replace("\"","").replace(")","").replace("\'","")
     if command_name == "deleteword":
         button["action"]=":deleteword"
     elif command_name == "backspace":

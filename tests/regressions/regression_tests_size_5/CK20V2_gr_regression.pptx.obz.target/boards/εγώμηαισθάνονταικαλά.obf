@@ -40,7 +40,7 @@
       "load_board": {
         "path": "boards/bodyparts.obf"
       },
-      "vocalization": "%2525252522I have a pain in my%252525252"
+      "vocalization": "%2525252522I have a pain in my%2525252522"
     },
     {
       "background_color": "rgb(1,231,255)",

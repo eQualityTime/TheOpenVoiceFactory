@@ -131,7 +131,7 @@
       "load_board": {
         "path": "boards/flavour.obf"
       },
-      "vocalization": "Ice crea"
+      "vocalization": "Ice cream"
     },
     {
       "background_color": "rgb(255,255,0)",
