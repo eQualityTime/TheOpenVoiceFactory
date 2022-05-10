@@ -2,7 +2,6 @@
 <head>
 <style>
 
-
 body,button { 
 box-sizing: border-box;
 color: rgb(51, 51, 51);
@@ -61,22 +60,24 @@ img {margin: auto;
 
 </head>
 <body>
-<img src="http://equalitytime.github.io/TheOpenVoiceFactory-site/img/intro-bg.jpg">
+<img src="intro-bg.jpg">
 <?php
+error_reporting(E_ALL);
 //All code from http://www.w3schools.com/php/php_file_upload.asp with thanks
 $target_dir = "uploads/";
 
 //Using custom function "filenameSlugify" to properly handle spaces (and non-letters/digits). Function is lower in this file.
 $target_file = $target_dir . filenameSlugify( basename( $_FILES["fileToUpload"]["name"]) );
 
+//echo $_FILES["fileToUpload"]["name"]."<br>";
+//echo $target_file."<br>";
 $uploadOk = 1;
 
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-//echo $_post["lang"];
-//echo "hello<br>";
-// Allow certain file formats
+//echo $target_file."<br>";
 if($imageFileType != "pptx"){
     echo "We're afraid we only accept pptx files for the moment.<br>";
+    echo "The filetype uploaded was: ".$imageFileType."<br>";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
@@ -98,7 +99,8 @@ if ($uploadOk == 0) {
 	echo "<li> Please keep the link private - anyone with access to it will be able to acess the aid.";
 	echo "<li> To use the language pack in another speech aid (such as Optikey or Cough Drop) click <a href=". $obzlink . ">here</a> to download the OBZ file.";
 	echo "<li> Please keep your pptx files in a safe place - they will be the only way to modify or recover your aid" ;
-	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";
+	echo "<li> If you a have any problems, please email us on support@equalitytime.co.uk";
+       //	or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";
 	echo "</ul>";
 	echo "<button type=\"button\" class=\"collapsible\">Click for debugging information</button>";
 	echo "<div class=\"content\">";
