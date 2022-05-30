@@ -1,72 +1,13 @@
 <html>
 <head>
-<style>
-
-
-body,button { 
-box-sizing: border-box;
-color: rgb(51, 51, 51);
-font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size: 18px;
-font-weight: 400;
-line-height: 25.2px;
-margin-bottom: 10px;
-margin-left: 0px;
-margin-right: 0px;
-margin-top: 0px;
-  position:relative;
-  width:750px;
-  margin-left:auto;
-  margin-right:auto;
-  top:80px;
-  
-}
-
-/** Images */
-img {margin: auto;
-  display: block; width:100%}
-
-
-
-@media only screen and (max-width: 700px) {
-
- img {width: 100%; height: 100%; margin: 0; padding: 0;}
-}
-
-
-.collapsible {
- display:block;
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: block;
-  outline: none;
-  font-size: 26px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-</style>
-
+ <link rel="stylesheet" href="ovf.css">
 </head>
 <body>
-<img src="http://equalitytime.github.io/TheOpenVoiceFactory-site/img/intro-bg.jpg">
 <?php
 //All code from http://www.w3schools.com/php/php_file_upload.asp with thanks
 $target_dir = "uploads/";
 
-//Using custom function "filenameSlugify" to properly handle spaces (and non-letters/digits). Function is lower in this file.
+//Using custom function "filenameSlugify" to properly handle spaces (and non-letters/digits). 
 $target_file = $target_dir . filenameSlugify( basename( $_FILES["fileToUpload"]["name"]) );
 
 $uploadOk = 1;
@@ -85,10 +26,18 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     echo "Your file has been uploaded.<br>";
-    // echo $target_file."<br>" ; 
+    echo $target_file."<br>" ; 
    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../".$target_file)) {
+	   process_file($target_file);
+    } else {
+        echo "Sorry, there was an error uploading/moving your file.";
+   }
+}
+
+
+function process_file($target_file){
 	$location = hash("md5",time().hash_file("md5",$target_file));
-	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz"; 
+	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . ".obz"; 
 	$command = dirname(__FILE__).'/../create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
   //echo $command. "<br>" ;
 	$temp = shell_exec($command. " 2>&1" );
@@ -104,9 +53,6 @@ if ($uploadOk == 0) {
 	echo "<div class=\"content\">";
 	echo nl2br($temp);
 	echo "</div>";
-    } else {
-        echo "Sorry, there was an error processing your file.";
-   }
 }
 
 //Function to prevent errors cause by spaces in the target filename
