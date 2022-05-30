@@ -88,7 +88,7 @@ if ($uploadOk == 0) {
     // echo $target_file."<br>" ; 
    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../".$target_file)) {
 	$location = hash("md5",time().hash_file("md5",$target_file));
-	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . "/data/pageset.obz"; 
+	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . ".obz"; 
 	$command = dirname(__FILE__).'/../create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
   //echo $command. "<br>" ;
 	$temp = shell_exec($command. " 2>&1" );
