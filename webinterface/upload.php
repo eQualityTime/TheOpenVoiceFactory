@@ -61,10 +61,9 @@ img {margin: auto;
 
 </head>
 <body>
-<img src="http://equalitytime.github.io/TheOpenVoiceFactory-site/img/intro-bg.jpg">
 <?php
 //All code from http://www.w3schools.com/php/php_file_upload.asp with thanks
-$target_dir = "uploads/";
+$target_dir = "../uploads/";
 
 //Using custom function "filenameSlugify" to properly handle spaces (and non-letters/digits). Function is lower in this file.
 $target_file = $target_dir . filenameSlugify( basename( $_FILES["fileToUpload"]["name"]) );
@@ -85,12 +84,12 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     echo "Your file has been uploaded.<br>";
-    // echo $target_file."<br>" ; 
+    echo $target_file."<br>" ; 
    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../".$target_file)) {
 	$location = hash("md5",time().hash_file("md5",$target_file));
 	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . ".obz"; 
 	$command = dirname(__FILE__).'/../create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
-  //echo $command. "<br>" ;
+  echo $command. "<br>" ;
 	$temp = shell_exec($command. " 2>&1" );
 	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
  	echo "<ul>";
