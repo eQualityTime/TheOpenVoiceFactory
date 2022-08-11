@@ -31,5 +31,5 @@ else
 fi
 #Cleanup
 rm templates/data/images/*.png # So we don't remove the readmes.
-rm templates/data/boards/* 
+rm templates/data/boards/*.obf
 rm templates/data/*.*

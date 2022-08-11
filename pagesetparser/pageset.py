@@ -2,6 +2,7 @@ from pagesetparser.grid import Grid
 from pagesetparser.core import make_title
 from pptx import Presentation
 from PIL import Image
+import pptx 
 import json
 import io
 import os
@@ -12,7 +13,11 @@ class Pageset:
     # TODO: should throw error if filename doesn't create a useable pageset
 
     def __init__(self, filename, dest, grid_size, saveimages=True):  #TODO: dest needs to go, it's needed for output NOT input
-        self.prs = Presentation(filename)
+        try: 
+            self.prs = Presentation(filename)
+        except:
+            print("Presentation file missing ({})".format(filename)) 
+            return None
         self.grids = []
         self.grid_size=grid_size #TODO: we might NOT need to store this internally
         self.feedback = []

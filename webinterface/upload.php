@@ -4,8 +4,9 @@
 </head>
 <body>
 <?php
-//All code from http://www.w3schools.com/php/php_file_upload.asp with thanks
-$target_dir = "../uploads/";
+//Basic code from http://www.w3schools.com/php/php_file_upload.asp with thanks
+//echo getcwd() . "\n"; //Used for debugging directory
+$target_dir = "uploads/";
 
 //Using custom function "filenameSlugify" to properly handle spaces (and non-letters/digits). 
 $target_file = $target_dir . filenameSlugify( basename( $_FILES["fileToUpload"]["name"]) );
@@ -27,7 +28,7 @@ if ($uploadOk == 0) {
 } else {
     echo "Your file has been uploaded.<br>";
     echo $target_file."<br>" ; 
-   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../".$target_file)) {
+   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],  "../".$target_file)){
 	   process_file($target_file);
     } else {
         echo "Sorry, there was an error uploading/moving your file.";
