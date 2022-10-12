@@ -37,7 +37,7 @@ def get_obf_manifest(root,boards_names_dic, image_names_dic):
 }}""".format(root, string_of_board_names, string_of_image_names)
 
 
-def write_to_obf(grids, dest): #TODO  these three files should definately be moved into pageset.py
+def write_to_obz(grids, dest): #TODO  these three files should definately be moved into pageset.py
     owd = os.getcwd()
     image_names_dic = {}
     for grid in grids: 
@@ -48,10 +48,13 @@ def write_to_obf(grids, dest): #TODO  these three files should definately be mov
     write_obf_manifest(grids[0].title,boards_names_dic,image_names_dic, dest) 
     boards_names_dic['manifest']='manifest.json'  #TODO: this is a hack, put it two lines below, but check by properly uploading it. 
     os.chdir(dest)
-    with zipfile.ZipFile('pageset.obz', "w") as w:
-        for x in list(boards_names_dic.values()):
-            w.write(x)
-        for y in list(image_names_dic.keys()): 
-            x=y.replace("../data/","")
-            w.write(x) 
+    try:
+        with zipfile.ZipFile('pageset.obz', "w") as w:
+            for x in list(boards_names_dic.values()):
+                w.write(x)
+            for y in list(image_names_dic.keys()): 
+                x=y.replace("../data/","")
+                w.write(x) 
+    except FileNotFoundError: #The try-except block is here so that we always change back to the right directly if there is an error. 
+        print("Error 23024982342 on file {}".format(x))
     os.chdir(owd)

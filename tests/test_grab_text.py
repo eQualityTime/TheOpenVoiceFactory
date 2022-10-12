@@ -38,6 +38,7 @@ class ovfTest(TestCase):
            # prs = Presentation("tests/CK20V2cutdown.pptx")
             pagesetparser.gridSize=5
             self.CK20 = pagesetparser.Pageset("tests/testinputs/CK20V2cutdown.pptx","",pagesetparser.gridSize, False)
+            
         return self.CK20
 
     def test_first(self):

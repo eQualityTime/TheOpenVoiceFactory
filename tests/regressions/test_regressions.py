@@ -46,58 +46,36 @@ class ovfTest(TestCase):
 #         generate_obz("tests/regressions/regression_tests_size_5/CK20V2_es_regression.pptx",5)
 
 
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_4/CK12+V2.pptx",4))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2.pptx",5))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2_ara_regession.pptx",5))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2_bg_regression.pptx",5))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2_gr_regression.pptx",5))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2_sk_regression.pptx",5))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20_slo_regession.pptx",5))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2-place.pptx",5))
-        self.assertTrue(compare_boards("tests/regressions/regression_tests_size_5/CK20V2_es_regression.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_4/CK12+V2.pptx",4))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20V2.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20V2_ara_regession.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20V2_bg_regression.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20V2_gr_regression.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20V2_sk_regression.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20_slo_regession.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20V2-place.pptx",5))
+        self.assertTrue(generate_obz_and_compare_to_records("tests/regressions/regression_tests_size_5/CK20V2_es_regression.pptx",5))
     
-    def test_all_regressions(self): 
-         for file in glob.glob("tests/regressions/regression_tests_size_5/*.pptx"):
-            print("CXXXXXCCCCC")
-            print(file)
-            with self.subTest(file):
-                print(file)
-                regress(file,5) 
-         for file in glob.glob("tests/regressions/regression_tests_size_4/*.pptx"):
-            print("AAAAAAAAAACXXXXXCCCCC")
-            print(file)
-            with self.subTest(file):
-                print(file)
-                regress(file,4) 
 
-def compare_boards(directory_name, page_size):
-        generate_obz(directory_name,page_size)
-        print("We are in directory {}".format(directory_name))
-        if not compare(directory_name+".obz.attempt/manifest.json"):
+def generate_obz_and_compare_to_records(filename, page_size):
+        generate_obz(filename,page_size)
+        print("We are in directory {}".format(filename))
+        if not compare(filename+".obz.attempt/manifest.json"):
+            print("Regression Test error on file manifest")
+            print("try vimdiff "+ filename+".obz.attempt/manifest.json "+ filename+".obz.target/manifest.json")
             return False
         print("Now we start the comparisons") 
-        for file in glob.glob(directory_name+".obz.attempt/boards/*.obf"):
+        for file in glob.glob(filename+".obz.attempt/boards/*.obf"):
             if not compare(file):
+                print("Regression Test error on file {}".format(file))
+                print("try vimdiff {}.obz.attempt/{} {}.obz.attempt/{}".format(filename, file, filename, file))
                 return False
         return True
 
 def compare(file):
-    print(file)  
-    print("XXXXXXXXXX") 
     target=file.replace('attempt','target')
     return filecmp.cmp(file,target)
 
-def regress(filename,size,bordercolor=False):
-        compare_json_files(filename,filename+".json", size,bordercolor)
-
-def compare_json_files(pres_loc, target_loc, grid_size,bordercolor=False):
-        Pageset(pres_loc,"",grid_size,False).write_json('temp.json')
-        local = 0
-        with open('temp.json', 'r') as f:
-                local = json.load(f)
-        with open(target_loc, 'r') as f:
-                real = json.load(f)
-                assert real == local
 
 
 if __name__=="__main__":

@@ -36,7 +36,7 @@ def generate_obz(filename,gridSize):
             os.makedirs(obf_dest+"boards/")
         pageset = Pageset(filename,obf_dest, gridSize)
         pageset.extract_and_label_images(obf_dest)
-        parser.write_to_obf(pageset.grids, obf_dest)
+        parser.write_to_obz(pageset.grids, obf_dest)
 
 def generate(filename, gridSize):
         Pageset(filename,"",gridSize,False).write_json(filename+".json")

@@ -1,8 +1,11 @@
 import math
+import os
+import io
 import json
 import urllib
 import pagesetparser.core as core
 import string
+from PIL import Image
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pptx.enum.dml import MSO_FILL
@@ -15,9 +18,10 @@ class Grid:
     """Class representing on n by n grid, complete with utterances, links
     colours, and so on. """
 
-    def __init__(self, pres, slide, grid_size, owningPageset,tag="unknown"):
+    def __init__(self, pres, slide, grid_size, owningPageset,slide_number):
         self.button_order=[(i, j) for i in range(grid_size) for j in range(grid_size)]
         self.slide=slide
+        self.slide_number=slide_number
         self.pageset = owningPageset
         self.grid_size = grid_size
         self.labels = [
@@ -29,10 +33,10 @@ class Grid:
         self.colors = [
             ["" for x in range(self.grid_size)]
             for x in range(self.grid_size)]
-        self.icons = [
+        self.imagepaths = [
             ["" for x in range(self.grid_size)]
             for x in range(self.grid_size)]
-        self.tag = tag #"Unknown"
+        self.tag = "Slide number "+str(slide_number+1) #TODO here for regression testing. 
         self.slide_width = pres.slide_width
         self.slide_height = pres.slide_height
         for shape in slide.shapes:
@@ -107,7 +111,7 @@ class Grid:
         return images
 
 
-    def update_links(self, grids):  #TODO: the whole set of grids is passed in, that feels wrong - I want some way of looking up tag from slidenumber. 
+    def update_links(self, grids):  #TODO: the whole set of grids is passed in, that feels wrong - I want some way of looking up tag from number 
         """the pptx file saves links to files 'slide1.xml', but we want them to point to the name of the boards."""
         for (col,row) in self.button_order:
             current = self.links[row][col]
@@ -120,16 +124,15 @@ class Grid:
 
 
     def write_obf_file(self,dest):
-        for_json = self.create_obf_object()  #TODO: inline this line
         filename = 'boards/'+self.title+'.obf'
         with open(dest+filename, 'w') as outfile:
-            json.dump(for_json, outfile, sort_keys=True, indent=2)
+            json.dump(self.create_obf_object(), outfile, sort_keys=True, indent=2)
 
 
     def create_obf_object(self):
         for_json = {}
         for_json["format"] = "open-board-0.1"
-        for_json["name"] = "CommuniKate "+self.title #TODO: i don't think communikate should be hardcoded
+        for_json["name"] = "CommuniKate "+self.title #TODO: i don't think communikate should be hardcoded (regression) 
         for_json["locale"] = "en"
         for_json["id"] = self.title
         for_json["grid"] = {}
@@ -165,24 +168,21 @@ class Grid:
         image_paths=[]
         for row in range(self.grid_size):
             for col in range(self.grid_size):
-#        for (col,row) in self.button_order: #TODO - put this back and regenerate the obz files
-                if (len(self.icons[col][row])>2):
-                    image_paths.append(self.icons[col][row])
+#        for (col,row) in self.button_order: #TODO - put this back and regenerate the obz files (regression)
+                if (len(self.imagepaths[col][row])>2):
+                    image_paths.append(self.imagepaths[col][row])
         return image_paths
 
 
     def create_obf_button(self,col,row): 
-        def get_button_colour(colour): #TODO: inline this
-            if("pptx" in str(type(colour))):
-                return "rgb({},{},{})".format( colour[0], colour[1], colour[2])
-            else:
-                return "rgb(0,0,0)"
         button = {}
         button["id"] = "{}{}".format(col, row)
         button["label"] = self.labels[col][row]
         button["border_color"]= "rgb(68,68,68)"
-        button["background_color"] = get_button_colour(self.colors[col][row])
-        button["image_id"] = self.icons[col][row]
+        button["background_color"]="rgb(0,0,0)"
+        if("pptx" in str(type(self.colors[col][row]))):
+            button["background_color"] = "rgb({},{},{})".format( self.colors[col][row][0], self.colors[col][row][1], self.colors[col][row][2])
+        button["image_id"] = self.imagepaths[col][row]
         if len(self.links[col][row]) > 1:
             if "special::" not in self.links[col][row]:  #TODO: I feel like we literally never use this. Drop it
                 if not self.links[col][row].startswith("ovf("):
@@ -196,3 +196,89 @@ class Grid:
 
 
 
+    def export_images(self, dest_folder, SAVE=True): 
+        if SAVE:  
+            folder = dest_folder+"/images/"
+            if not os.path.exists(folder):
+                os.makedirs(folder)
+        images = self.create_image_grid()
+        for (x, y) in images: 
+            # Go through all the images, compute bounding box.
+            left = min([shape.left for shape in images[x, y]]) 
+            top = min([shape.top for shape in images[x, y]])
+            right = max([shape.left + shape.width for shape in images[x, y]])
+            bottom = max([shape.top + shape.height for shape in images[x, y]])
+            # Scale gives us the mapping from image pixels to powerpoint distance units. This depends on the resolution of the images.
+            scale = min([shape.width/shape.image.size[0] for shape in images[x, y]])
+            # Size of combined image, in actual pixels (not PPTX units)
+            # If scales differ between objects, we resize them next
+            width = int((right-left)/scale)
+            height = int((bottom-top)/scale)
+            try:
+                composite = Image.new('RGBA', (width, height))
+                # Add all the images together.
+                for shape in images[x, y]:
+                    partBox=ready_for_composite(shape,scale,width,height,left,top)
+                    composite=Image.alpha_composite(composite,partBox)
+                # Crop final image.
+                bbox = composite.getbbox()
+                composite = composite.crop(bbox)
+                # Save!
+                self.imagepaths[x][y] = "images/" + create_icon_name(x, y, self.labels, self.links, self.slide_number)
+                if SAVE:  
+                    composite.save(dest_folder +"/"+ self.imagepaths[x][y])
+            except IOError as e:
+                print("Error reading image for {} {} (Code 121)".format(x, y))
+                if ("cannot find loader for this WMF file" in str(e)):
+                    print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, self.slide_number))
+                if ("cannot identify image file" in str(e)):
+                    print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, self.slide_number))
+            except ValueError:
+                print("Error reading image for {} {} (Code 127)".format(x, y))
+            except IndexError:
+                print("Error reading image for {} {}- it is outside the grid".format(x, y))
+
+
+ #TODO: work out where these functions should be
+def ready_for_composite(shape,scale,w,h,l,t):
+
+    part = Image.open(
+        io.BytesIO(
+            shape.image.blob))
+    part.load()
+    part = part.crop(crop_to_shape(shape,part))
+    partScale = (shape.width / part.size[0])
+    # part.size because it might have been cropped
+    part = resizeImage(part, partScale / scale)
+    partBox = Image.new('RGBA', (w, h))
+    partBox.paste( part, (int((shape.left - l)/scale),int( (shape.top - t)/scale)))
+    return partBox
+
+def crop_to_shape(shape,part):
+    width = part.size[0]
+    height = part.size[1]
+    left = shape.crop_left*width
+    right = (1-shape.crop_right)*width
+    top = shape.crop_top*height
+    bottom = (1-shape.crop_bottom)*height
+    box = (int(left),
+           int(top),
+           int(right),
+           int(bottom))
+    return box
+
+
+def resizeImage(image, scaleFactor):
+    oldSize = image.size
+    newSize = (int(scaleFactor*oldSize[0]),
+               int(scaleFactor*oldSize[1]))
+    return image.resize(newSize, Image.ANTIALIAS)
+
+def create_icon_name(x, y, labels, links, slide_number): #TODO: don't have the string twice. 
+    name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+".png" #TODO: this is a format
+    try:
+        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+core.make_title(
+                labels[x][y])+".png" 
+    except IndexError:
+        print("Create_icon_name was given an x y that was outside the possible ranges")  #TODO: this isn't the right error message
+    return name
