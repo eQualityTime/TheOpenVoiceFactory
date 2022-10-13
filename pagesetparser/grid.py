@@ -179,7 +179,7 @@ class Grid:
         button["id"] = "{}{}".format(col, row)
         button["label"] = self.labels[col][row]
         button["border_color"]= "rgb(68,68,68)"
-        button["background_color"]="rgb(0,0,0)"
+        button["background_color"]="rgb(250,250,250)"
         if("pptx" in str(type(self.colors[col][row]))):
             button["background_color"] = "rgb({},{},{})".format( self.colors[col][row][0], self.colors[col][row][1], self.colors[col][row][2])
         button["image_id"] = self.imagepaths[col][row]
