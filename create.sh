@@ -1,8 +1,7 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-exec 3>&1 4>&2
 trap 'exec 2>&4 1>&3' 0 1 2 3
-exec 1>log.out 2>&1
+exec > >(tee -i script.log)
 #All above from https://serverfault.com/a/103569
 
 # Platform specific code
