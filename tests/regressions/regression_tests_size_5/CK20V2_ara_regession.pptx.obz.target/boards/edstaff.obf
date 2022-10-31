@@ -1,21 +1,21 @@
 {
   "buttons": [
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "00",
       "image_id": "images/S32X0Y0\u0646\u064e\u0639\u064e\u0645.png",
       "label": "\u0646\u064e\u0639\u064e\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "20",
       "image_id": "",
       "label": "edstaff"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "40",
       "image_id": "images/S32X4Y0\u0644\u0627.png",
@@ -32,28 +32,28 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "11",
       "image_id": "images/S32X1Y1\u0641\u0631\u064a\u0642\u0627\u0644\u062a\u0651\u064e\u0631\u0652\u0628\u0650\u064a\u0651\u064e\u0629.png",
       "label": "\u0641\u0631\u064a\u0642 \u0627\u0644\u062a\u0651\u064e\u0631\u0652\u0628\u0650\u064a\u0651\u064e\u0629"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "42",
       "image_id": "",
       "label": "Education staff"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "43",
       "image_id": "",
       "label": "Job"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "44",
       "image_id": "",

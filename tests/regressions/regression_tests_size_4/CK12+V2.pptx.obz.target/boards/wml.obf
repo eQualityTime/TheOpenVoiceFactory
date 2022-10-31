@@ -8,7 +8,7 @@
       "label": "Yes"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "20",
       "image_id": "",
@@ -53,28 +53,28 @@
       "label": "wow"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "02",
       "image_id": "",
       "label": "I love you."
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "12",
       "image_id": "",
       "label": "whatever"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "32",
       "image_id": "images/S6X3Y2noway.png",
       "label": "no way"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "42",
       "image_id": "images/S6X4Y2shutup.png",

@@ -1,21 +1,21 @@
 {
   "buttons": [
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "00",
       "image_id": "images/S51X0Y0\u0646\u064e\u0639\u064e\u0645.png",
       "label": "\u0646\u064e\u0639\u064e\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "20",
       "image_id": "",
       "label": "things"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "40",
       "image_id": "images/S51X4Y0\u0644\u0627.png",
@@ -32,14 +32,14 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "11",
       "image_id": "images/S51X1Y1things.png",
       "label": "Things"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "21",
       "image_id": "images/S51X2Y1artthings.png",
@@ -49,7 +49,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "31",
       "image_id": "images/S51X3Y1health.png",
@@ -59,7 +59,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "41",
       "image_id": "",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "02",
       "image_id": "images/S51X0Y2clothes.png",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "12",
       "image_id": "images/S51X1Y2computer.png",
@@ -89,7 +89,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "22",
       "image_id": "images/S51X2Y2furniture.png",
@@ -99,7 +99,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "32",
       "image_id": "images/S51X3Y2toys.png",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "42",
       "image_id": "images/S51X4Y2kitchenthings.png",
@@ -119,7 +119,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "03",
       "image_id": "images/S51X0Y3money.png",
@@ -129,7 +129,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "13",
       "image_id": "images/S51X1Y3office.png",
@@ -139,7 +139,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "23",
       "image_id": "images/S51X2Y3sports.png",
@@ -149,7 +149,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "33",
       "image_id": "",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "43",
       "image_id": "images/S51X4Y3toiletries.png",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "04",
       "image_id": "images/S51X0Y4tools.png",
@@ -179,7 +179,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "14",
       "image_id": "",
@@ -189,7 +189,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "24",
       "image_id": "",
@@ -199,7 +199,7 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "34",
       "image_id": "images/S51X3Y4\u0634\u064e\u0643\u0652\u0644.png",

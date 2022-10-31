@@ -1,21 +1,21 @@
 {
   "buttons": [
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "00",
       "image_id": "images/S41X0Y0\u0646\u064e\u0639\u064e\u0645.png",
       "label": "\u0646\u064e\u0639\u064e\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "20",
       "image_id": "",
       "label": "n-z"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "40",
       "image_id": "images/S41X4Y0\u0644\u0627.png",
@@ -60,7 +60,7 @@
       "label": "\u0637"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "02",
       "image_id": "",
@@ -95,7 +95,7 @@
       "label": "\u0641"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "03",
       "image_id": "",
@@ -130,7 +130,7 @@
       "label": "\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "04",
       "image_id": "",

@@ -8,3 +8,5 @@ testSuite/*
 uploads/*
 .*
 *.iml
+tags
+*obz.attempt*

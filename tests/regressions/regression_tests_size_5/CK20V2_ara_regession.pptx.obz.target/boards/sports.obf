@@ -1,21 +1,21 @@
 {
   "buttons": [
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "00",
       "image_id": "images/S71X0Y0\u0646\u064e\u0639\u064e\u0645.png",
       "label": "\u0646\u064e\u0639\u064e\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "20",
       "image_id": "",
       "label": "sports"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "40",
       "image_id": "images/S71X4Y0\u0644\u0627.png",
@@ -32,112 +32,112 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "11",
       "image_id": "images/S71X1Y1sports.png",
       "label": "sports"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "21",
       "image_id": "images/S71X2Y1football.png",
       "label": "football"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "31",
       "image_id": "images/S71X3Y1basketball.png",
       "label": "basketball"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "41",
       "image_id": "images/S71X4Y1cycling.png",
       "label": "cycling"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "02",
       "image_id": "images/S71X0Y2boccia.png",
       "label": "boccia"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "12",
       "image_id": "images/S71X1Y2motorsport.png",
       "label": "motor sport"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "22",
       "image_id": "images/S71X2Y2golf.png",
       "label": "golf"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "32",
       "image_id": "images/S71X3Y2camel\u00a0racing.png",
       "label": "camel\u00a0racing"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "42",
       "image_id": "images/S71X4Y2athletics.png",
       "label": "athletics"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "03",
       "image_id": "images/S71X0Y3tabletennis.png",
       "label": "table tennis"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "13",
       "image_id": "images/S71X1Y3tennis.png",
       "label": "tennis"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "23",
       "image_id": "images/S71X2Y3horseriding.png",
       "label": "horse riding"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "33",
       "image_id": "images/S71X3Y3swimming.png",
       "label": "swimming"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "43",
       "image_id": "images/S71X4Y3volleyball.png",
       "label": "volleyball"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "04",
       "image_id": "",
       "label": "Clear"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "44",
       "image_id": "",

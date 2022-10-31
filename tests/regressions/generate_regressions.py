@@ -25,7 +25,7 @@ from pagesetparser.pageset import Pageset
 
 
 
-
+# switch the 'attempt' to 'target' to actually genearte them 
 def generate_obz(filename,gridSize): 
         gridSize = 5
         parser.gridSize=gridSize
@@ -46,10 +46,10 @@ if __name__=="__main__":
 
  for file in glob.glob("regression_tests_size_5/*.pptx"):
         print(file)
-        generate(file,5)
+        generate_obz(file,5)
  for file in glob.glob("regression_tests_size_4/*.pptx"):
         print(file)
-        generate(file,4)
+        generate_obz(file,4)
 
 
 

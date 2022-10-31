@@ -1,21 +1,21 @@
 {
   "buttons": [
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "00",
       "image_id": "images/S34X0Y0\u0646\u064e\u0639\u064e\u0645.png",
       "label": "\u0646\u064e\u0639\u064e\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "20",
       "image_id": "",
       "label": "family"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "40",
       "image_id": "images/S34X4Y0\u0644\u0627.png",
@@ -32,84 +32,84 @@
       }
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "11",
       "image_id": "images/S34X1Y1\u0623\u064f\u0633\u0652\u0631\u0629.png",
       "label": "\u0623\u064f\u0633\u0652\u0631\u0629"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "21",
       "image_id": "images/S34X2Y1\u0623\u064e\u0628.png",
       "label": "\u0623\u064e\u0628"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "31",
       "image_id": "images/S34X3Y1\u0623\u064f\u0645\u0651.png",
       "label": "\u0623\u064f\u0645\u0651"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "12",
       "image_id": "images/S34X1Y2\u0623\u064f\u062e\u062a.png",
       "label": "\u0623\u064f\u062e\u062a"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "22",
       "image_id": "images/S34X2Y2\u0631\u0636\u064a\u0639.png",
       "label": "\u0631\u0636\u064a\u0639"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "32",
       "image_id": "images/S34X3Y2\u062c\u062f.png",
       "label": "\u062c\u062f"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "42",
       "image_id": "images/S34X4Y2\u062c\u062f\u0629.png",
       "label": "\u062c\u062f\u0629"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "03",
       "image_id": "images/S34X0Y3\u0639\u0645\u0629.png",
       "label": "\u0639\u0645\u0629"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "13",
       "image_id": "images/S34X1Y3\u0639\u0645.png",
       "label": "\u0639\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "23",
       "image_id": "images/S34X2Y3\u0627\u0628\u0646\u0627\u0621\u0639\u0645.png",
       "label": "\u0627\u0628\u0646\u0627\u0621 \u0639\u0645"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "43",
       "image_id": "",
       "label": "Job"
     },
     {
-      "background_color": "rgb(0,0,0)",
+      "background_color": "rgb(250,250,250)",
       "border_color": "rgb(68,68,68)",
       "id": "44",
       "image_id": "",
