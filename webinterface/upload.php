@@ -39,7 +39,7 @@ if ($uploadOk == 0) {
 function process_file($target_file){
 	$location = hash("md5",time().hash_file("md5",$target_file));
 	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . ".obz"; 
-	$command = dirname(__FILE__).'/../create.sh '.$target_file." ". $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
+	$command = dirname(__FILE__).'/../create.sh "'.$target_file.'" '. $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
   echo $command. "<br>" ;
 	$temp = shell_exec($command. " 2>&1" );
 	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";

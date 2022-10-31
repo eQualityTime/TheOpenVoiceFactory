@@ -20,7 +20,7 @@ echo "Starting Script"
 filelocation=$1
 size=$2
 targetname=$3
-if python3 main.py $filelocation $targetname $size; then
+if python3 main.py "$filelocation" $targetname $size; then
 	echo "The python exited normally"
 	mv  templates/data/pageset.obz $targetname.obz
 	mv $targetname.obz $designdirectory
