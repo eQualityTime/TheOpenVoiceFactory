@@ -52,6 +52,8 @@ function process_file($target_file){
 	echo "</ul>";
 	echo "<button type=\"button\" class=\"collapsible\">Click for debugging information</button>";
 	echo "<div class=\"content\">";
+  echo "<br><br><br>"; //This is an ugly hack for the time being
+
 	echo nl2br($temp);
 	echo "</div>";
 }
