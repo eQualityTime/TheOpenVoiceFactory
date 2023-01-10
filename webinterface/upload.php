@@ -45,10 +45,10 @@ function process_file($target_file){
 	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
  	echo "<ul>";
 	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=".$obzlink . " target=\"_blank\">here</a>.";
-	echo "<li> Please keep the link private - anyone with access to it will be able to acess the aid.";
+	echo "<li> Please bookmark the link and keep the it private - anyone with access to it will be able to access a copy of the aid.";
 	echo "<li> To use the language pack in another speech aid (such as Optikey or Cough Drop) click <a href=". $obzlink . ">here</a> to download the OBZ file.";
 	echo "<li> Please keep your pptx files in a safe place - they will be the only way to modify or recover your aid" ;
-	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk or try the older viewer <a href=https://designs.theopenvoicefactory.org/".$location."/ >here</a>.<br><br>";
+	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk.<br><br>";
 	echo "</ul>";
 	echo "<button type=\"button\" class=\"collapsible\">Click for debugging information</button>";
 	echo "<div class=\"content\">";
