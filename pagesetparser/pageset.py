@@ -9,7 +9,7 @@ class Pageset:
 
     # TODO: should throw error if filename doesn't create a useable pageset
 
-    def __init__(self, filename, dest, grid_size, saveimages=True):  #TODO: dest needs to go, it's needed for output NOT input
+    def __init__(self, filename, grid_size, saveimages=True):  #TODO: dest needs to go, it's needed for output NOT input
         try: 
             self.prs = Presentation(filename)
         except:
@@ -19,7 +19,7 @@ class Pageset:
         self.grid_size=grid_size #TODO: we might NOT need to store this internally
         self.feedback = []
         self.split_pageset_into_grids()
-        self.extract_and_label_images(dest, False) #This has to run to get the names right. TODO Call from somewhere else
+        self.get_image_names() #This has to run to get the names right. TODO Call from somewhere else
 
     def addfeedback(self, feedelement):
         self.feedback.append(feedelement)
@@ -34,9 +34,9 @@ class Pageset:
         for grid in self.grids:
             grid.update_links(self.grids) # We can only run this after every other page knows their own tag. 
 
-    def extract_and_label_images(self, dest, SAVE=True):  #TODO: this should only be called from one of the proper export files.
+    def get_image_names(self):  #TODO: this should only be called from one of the proper export files.
         for i in range(len(self.grids)):
-            self.grids[i].export_images(dest, SAVE)
+            self.grids[i].make_imagepaths()
 
     def to_json(self):  #TODO: put in pageset and then put the inner loop in grid 
         # Start the JSON output.

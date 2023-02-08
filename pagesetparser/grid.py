@@ -194,6 +194,12 @@ class Grid:
             button["label"]=button['id']
         return button
 
+    def make_imagepaths(self):
+        images = self.create_image_grid()
+        for (x, y) in images: 
+            self.imagepaths[x][y] = "images/" + create_icon_name(x, y, self.labels, self.links, self.slide_number)
+
+
 
 
     def export_images(self, dest_folder, SAVE=True): 
