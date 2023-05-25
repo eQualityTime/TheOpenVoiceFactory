@@ -14,9 +14,6 @@ $target_file = $target_dir . filenameSlugify( basename( $_FILES["fileToUpload"][
 $uploadOk = 1;
 
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-//echo $_post["lang"];
-//echo "hello<br>";
-// Allow certain file formats
 if($imageFileType != "pptx"){
     echo "We're afraid we only accept pptx files for the moment.<br>";
     $uploadOk = 0;
@@ -42,20 +39,9 @@ function process_file($target_file){
 	$command = dirname(__FILE__).'/../create.sh "'.$target_file.'" '. $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
   echo $command. "<br>" ;
 	$temp = shell_exec($command. " 2>&1" );
-	echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded and processed!";
- 	echo "<ul>";
-	echo "<li> You can access the aid by clicking <a href=https://equalitytime.github.io/ovfplayer/#/config?pagesetURL=".$obzlink . " target=\"_blank\">here</a>.";
-	echo "<li> Please bookmark the link and keep the it private - anyone with access to it will be able to access a copy of the aid.";
-	echo "<li> To use the language pack in another speech aid (such as Optikey or Cough Drop) click <a href=". $obzlink . ">here</a> to download the OBZ file.";
-	echo "<li> Please keep your pptx files in a safe place - they will be the only way to modify or recover your aid" ;
-	echo "<li> If the advanced aid above doesn't work. Please email us on support@equalitytime.co.uk.<br><br>";
-	echo "</ul>";
-	echo "<button type=\"button\" class=\"collapsible\">Click for debugging information</button>";
-	echo "<div class=\"content\">";
-  echo "<br><br><br>"; //This is an ugly hack for the time being
-
-	echo nl2br($temp);
-	echo "</div>";
+  $filename = basename($_FILES["fileToUpload"]["name"]);
+  $url = "https://theopenvoicefactory.org/result.html?hash=$obz&filename=$filename&debugging=$temp";
+  header("Location: $url");
 }
 
 //Function to prevent errors cause by spaces in the target filename
@@ -73,23 +59,6 @@ function filenameSlugify($text) {
 }
 ?>
 
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
 
 </body>
 </html>
