@@ -35,13 +35,13 @@ if ($uploadOk == 0) {
 
 function process_file($target_file){
 	$location = hash("md5",time().hash_file("md5",$target_file));
-	$obzlink = "https://designs.theopenvoicefactory.org/" . $location . ".obz"; 
 	$command = dirname(__FILE__).'/../create.sh "'.$target_file.'" '. $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
   echo $command. "<br>" ;
 	$temp = shell_exec($command. " 2>&1" );
+  $temp = urlencode($temp);
   $filename = basename($_FILES["fileToUpload"]["name"]);
-  $url = "https://theopenvoicefactory.org/result.html?hash=$obz&filename=$filename&debugging=$temp";
-  header("Location: $url");
+  $url = "https://theopenvoicefactory.org/result.html?hash=$location&filename=$filename&debugging=$temp";
+  echo "<script>window.location.href = '$url';</script>";
 }
 
 //Function to prevent errors cause by spaces in the target filename
