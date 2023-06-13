@@ -41,6 +41,12 @@ class ovfTestCommands(TestCase):
         core.process_commandstring(commandstring,button)
         self.assertEqual(button["vocalization"],"hello")
 
+    def test_process_commandstring_single_quotes_with_internal_coma(self):
+        button={}
+        commandstring="ovf(place('hello there, general kenobi'))"
+        core.process_commandstring(commandstring,button)
+        self.assertEqual(button["vocalization"],"hello there, general kenobi")
+
 
     def test_process_commandstring_with_comma(self):
         button={}
@@ -60,6 +66,31 @@ class ovfTestCommands(TestCase):
         core.process_commandstring(commandstring,button)
         self.assertEqual(button["load_board"]["path"], "boards/jazz.obf")
         self.assertEqual(button["vocalization"],"goodbye")
+
+    def test_process_commandstring_with_two_commands_without_quotes(self):
+        button={}
+        commandstring='ovf(open(jazz),place(goodbye))'
+        core.process_commandstring(commandstring,button)
+        self.assertEqual(button["load_board"]["path"], "boards/jazz.obf")
+        self.assertEqual(button["vocalization"],"goodbye")
+
+    def test_what_if_they_forget_the_ovf(self):
+        button={}
+        commandstring='open(jazz),place(goodbye)'
+        core.process_commandstring(commandstring,button)
+        self.assertEqual(button["load_board"]["path"], "boards/jazz.obf")
+        self.assertEqual(button["vocalization"],"goodbye")
+
+#   This commenting is mentioned in the main file - it's for if we end up with commands that don't need parenthesis 
+#    def test_process_commandstring_with_single_wordss(self):
+#        button={}
+#        commandstring='ovf(alpha,bravo)'
+#        core.process_commandstring(commandstring,button)
+#
+#    def test_process_commandstring_with_single_wordss_without_ovf(self):
+#        button={}
+#        commandstring='open,place'
+#        core.process_commandstring(commandstring,button)
 
     def test_process_commandstring_with_double_places(self):
         button={}

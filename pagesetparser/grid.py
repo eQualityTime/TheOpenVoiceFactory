@@ -36,7 +36,7 @@ class Grid:
         self.imagepaths = [
             ["" for x in range(self.grid_size)]
             for x in range(self.grid_size)]
-        self.tag = "Slide number "+str(slide_number+1) #TODO here for regression testing. 
+        self.tag = "Slide number "+str(slide_number+1) #here for regression testing. 
         self.slide_width = pres.slide_width
         self.slide_height = pres.slide_height
         for shape in slide.shapes:
@@ -47,8 +47,7 @@ class Grid:
         return core.make_title(self.tag) 
 
     def get_col_row_by_num(self, top, left):  
-        # It doesn't make sense to use width and height, since often the
-        # midpoint lies outside the cell, particularly in the horizontal directino
+        # It doesn't make sense to use width and height, since often the midpoint lies outside the cell, particularly in the horizontal direction
         # (probably because text boxes have a default minimum width)
         # TODO This method is terrible - it worked fine with python 2.7, and when I upgraded to python3, the division caused problems. I fixed it by putting interger division *back*, which is clearly wrong but... 
      #   print("top: {}, left: {}, height: {}, width: {}".format(top,left,self.slide_height,self.slide_width))
@@ -111,7 +110,7 @@ class Grid:
         return images
 
 
-    def update_links(self, grids):  #TODO: the whole set of grids is passed in, that feels wrong - I want some way of looking up tag from number 
+    def update_links(self, grids):  
         """the pptx file saves links to files 'slide1.xml', but we want them to point to the name of the boards."""
         for (col,row) in self.button_order:
             current = self.links[row][col]
@@ -132,7 +131,7 @@ class Grid:
     def create_obf_object(self):
         for_json = {}
         for_json["format"] = "open-board-0.1"
-        for_json["name"] = "CommuniKate "+self.title #TODO: i don't think communikate should be hardcoded (regression) 
+        for_json["name"] = "CommuniKate "+self.title #TODO: i don't think communikate should be hardcoded (regression)  @design
         for_json["locale"] = "en"
         for_json["id"] = self.title
         for_json["grid"] = {}
@@ -155,7 +154,7 @@ class Grid:
 
         for path in self.get_image_paths():
                     img = {}
-                    img["content_type"] = "image/png" #TODO lookup other ways of defining a dictionary
+                    img["content_type"] = "image/png" #TODO lookup other ways of defining a dictionary @simple
                     img["id"] = path
                     img["width"] = 300
                     img["height"] = 300
@@ -169,6 +168,7 @@ class Grid:
         for row in range(self.grid_size):
             for col in range(self.grid_size):
 #        for (col,row) in self.button_order: #TODO - put this back and regenerate the obz files (regression)
+                                                #TODO - or test it the other way around?  @simple
                 if (len(self.imagepaths[col][row])>2):
                     image_paths.append(self.imagepaths[col][row])
         return image_paths
@@ -184,7 +184,7 @@ class Grid:
             button["background_color"] = "rgb({},{},{})".format( self.colors[col][row][0], self.colors[col][row][1], self.colors[col][row][2])
         button["image_id"] = self.imagepaths[col][row]
         if len(self.links[col][row]) > 1:
-            if "special::" not in self.links[col][row]:  #TODO: I feel like we literally never use this. Drop it
+            if "special::" not in self.links[col][row]:  #TODO: Properly document this part @simple
                 if not self.links[col][row].startswith("ovf("):
                     button["load_board"]= { "path": "boards/"+self.links[col][row]+".obf" }
                 else:
@@ -197,9 +197,21 @@ class Grid:
     def make_imagepaths(self):
         images = self.create_image_grid()
         for (x, y) in images: 
-            self.imagepaths[x][y] = "images/" + create_icon_name(x, y, self.labels, self.links, self.slide_number)
+            self.imagepaths[x][y] = "images/" + self.icon_name(x, y)
 
-
+    def icon_name(self, x, y):
+        if 0 <= x < self.grid_size and 0 <= y < self.grid_size:
+            pass #we've checked the inputs
+        else:
+            print("Create_icon_name was given an x y that was outside the possible ranges")  #TODO: write a test that triggers this
+            return "Create_icon_name was given an x y that was outside the possible ranges"
+            
+        name = f"S{self.slide_number}X{x}Y{y}.png" 
+        try:
+            name = "S"+str(self.slide_number)+"X"+str(x)+"Y"+str(y)+core.make_title(self.labels[x][y])+".png" 
+        except IndexError:
+            print("Create_icon_name was given an x y that was outside the possible ranges")  #TODO: write a test that triggers this
+        return name
 
 
     def export_images(self, dest_folder, SAVE=True): 
@@ -230,7 +242,7 @@ class Grid:
                 bbox = composite.getbbox()
                 composite = composite.crop(bbox)
                 # Save!
-                self.imagepaths[x][y] = "images/" + create_icon_name(x, y, self.labels, self.links, self.slide_number)
+                self.imagepaths[x][y] = "images/" +self.icon_name(x, y)
                 if SAVE:  
                     composite.save(dest_folder +"/"+ self.imagepaths[x][y])
             except IOError as e:
@@ -280,11 +292,6 @@ def resizeImage(image, scaleFactor):
                int(scaleFactor*oldSize[1]))
     return image.resize(newSize, Image.ANTIALIAS)
 
-def create_icon_name(x, y, labels, links, slide_number): #TODO: don't have the string twice. 
-    name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+".png" #TODO: this is a format
-    try:
-        name = "S"+str(slide_number)+"X"+str(x)+"Y"+str(y)+core.make_title(
-                labels[x][y])+".png" 
-    except IndexError:
-        print("Create_icon_name was given an x y that was outside the possible ranges")  #TODO: this isn't the right error message
-    return name
+
+
+

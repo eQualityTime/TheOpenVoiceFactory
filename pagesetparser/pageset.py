@@ -7,12 +7,12 @@ import urllib
 
 class Pageset:
 
-    # TODO: should throw error if filename doesn't create a useable pageset
 
     def __init__(self, filename, grid_size, saveimages=True):  #TODO: dest needs to go, it's needed for output NOT input
         try: 
             self.prs = Presentation(filename)
         except:
+            # TODO: should throw error if filename doesn't create a useable pageset
             print("Presentation file missing ({})".format(filename)) 
             return None
         self.grids = []
@@ -38,7 +38,7 @@ class Pageset:
         for i in range(len(self.grids)):
             self.grids[i].make_imagepaths()
 
-    def to_json(self):  #TODO: put in pageset and then put the inner loop in grid 
+    def to_json(self):  
         # Start the JSON output.
         grid_json = {}
         grids=self.grids

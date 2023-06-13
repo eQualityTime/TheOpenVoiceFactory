@@ -19,7 +19,7 @@ def returnException():
         return '{} EXCEPTION IN ({}, LINE {} "{}"): {}'.format(exc_type,
                 filename, lineno, line.strip(), exc_obj)
 
-def make_title(label): #TODO: except once, this is only used for grid titels - MAYBE a @getter? 
+def make_title(label): #TODO: except once, this is only used for grid titles - MAYBE a @getter? 
     """Given a  string, returns the string in the format we use for
      identifying grids. This is used mostly to build internal link
      structures"""
@@ -30,7 +30,7 @@ def make_title(label): #TODO: except once, this is only used for grid titels - M
 
 
 
-def remove_punctuation(s): #TODO: find out if there is a better way to do this in python3
+def remove_punctuation(s): #TODO: find out if there is a better way to do this in python3 @simple
     """
     >>> strip_punctuation(u'something')
     u'something'
@@ -46,17 +46,21 @@ def remove_punctuation(s): #TODO: find out if there is a better way to do this i
                    if unicodedata.category(x) not in punctutation_cats)
 
 def process_commandstring(commandstring,button): 
+    # this doesn't cope with ovf(hello, there) (which is fine because we don't have any relevent commands. Someday we shall need a proper recursive decent parser 
     commandstring=commandstring.replace("ovf(","")[:-1] # removes trailing ")" 
     commandstring=urllib.parse.unquote(commandstring)  #For decoding %20 ect 
     import re 
-    commands=re.split("\)\s*,",commandstring)
-    #TODO use a proper parser https://stackoverflow.com/a/59995928/170243 
+    commands=re.split("\)\s*,",commandstring) #should split on the comma surely? oh, but there might be commas in the string!
     for command in commands:
+        print("XXX")
+        print(command)
         process_single_command(command,button)  
 
 def process_single_command(command,button): 
     command_name= command.split("(",1)[0]
+    print(f"command name: {command_name}")
     argument=command.split("(",1)[1].replace("\"","").replace(")","").replace("\'","")
+    print(f"argument name: {argument}")
     if command_name == "deleteword":
         button["action"]=":deleteword"
     elif command_name == "backspace":

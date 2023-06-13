@@ -37,7 +37,7 @@ def get_obf_manifest(root,boards_names_dic, image_names_dic):
 }}""".format(root, string_of_board_names, string_of_image_names)
 
 
-def write_to_obz(grids, dest): #TODO  these three files should definately be moved into pageset.py
+def write_to_obz(grids, dest): #TODO  This method should definitely be moved into pageset.py
      
     owd = os.getcwd()
     image_names_dic = {}
@@ -57,7 +57,7 @@ def write_to_obz(grids, dest): #TODO  these three files should definately be mov
             for y in list(image_names_dic.keys()): 
                 x=y.replace("../data/","")
                 w.write(x) 
-    except FileNotFoundError: #The try-except block is here so that we always change back to the right directly if there is an error. 
+    except FileNotFoundError: #The try-except block is here so that we always change back to the right directory if there is an error. 
         print("Error 23024982342 on file {}".format(x))
         print(x)
     os.chdir(owd)
