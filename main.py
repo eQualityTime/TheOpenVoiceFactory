@@ -3,7 +3,7 @@ import sys
 import pagesetparser.pagesetparser as parser
 from pagesetparser.pageset import Pageset
 
-if __name__ == "__main__": #TODO Put in a proper arg parse 
+if __name__ == "__main__": #Put in a proper arg parse when you have more parameters 
     if (len(sys.argv) < 2):
         print("\nUsage: ./pagesetparser.py <inputPptxFile> <gridSize>\n")
         print("inputPptxFile: The powerpoint pageset you want to process.")

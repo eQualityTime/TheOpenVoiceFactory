@@ -46,21 +46,22 @@ class Grid:
     def title(self):
         return core.make_title(self.tag) 
 
-    def get_col_row_by_num(self, top, left):  
-        # It doesn't make sense to use width and height, since often the midpoint lies outside the cell, particularly in the horizontal direction
-        # (probably because text boxes have a default minimum width)
-        # TODO This method is terrible - it worked fine with python 2.7, and when I upgraded to python3, the division caused problems. I fixed it by putting interger division *back*, which is clearly wrong but... 
-     #   print("top: {}, left: {}, height: {}, width: {}".format(top,left,self.slide_height,self.slide_width))
-        numberofrows=self.grid_size #forreadability  
-        numberofcolumns=self.grid_size #forreadability  
-        col = math.floor(
-            (numberofcolumns * left // self.slide_width) + 0.5)
-        row = math.floor(
-            (numberofrows * top // self.slide_height) + 0.5)
+    def get_col_row_by_num(self, top: int, left: int) -> tuple[int, int]:
+        """
+        Converts coordinates to column and row numbers based on grid size.
+        Raises a ValueError if the shape is outside of the page area.
+        """
+        number_of_rows: int = self.grid_size
+        number_of_columns: int = self.grid_size
 
-        if ((col >= self.grid_size) or (row >= self.grid_size)):  
-            raise ValueError("Shape outside of page area on page:{}".format(self.tag))
-        return (int(col), int(row))
+        col: int = math.floor((number_of_columns * left / self.slide_width))
+        row: int = math.floor((number_of_rows * top / self.slide_height))
+
+        if col >= self.grid_size or row >= self.grid_size:
+            raise ValueError("Shape outside of page area on page: {}".format(self.tag))
+
+        return col, row
+
 
     def get_col_row(self,shape):
        return self.get_col_row_by_num(shape.top+shape.height/2, shape.left+shape.width/2)
@@ -131,7 +132,7 @@ class Grid:
     def create_obf_object(self):
         for_json = {}
         for_json["format"] = "open-board-0.1"
-        for_json["name"] = "CommuniKate "+self.title #TODO: i don't think communikate should be hardcoded (regression)  @design
+        for_json["name"] = "CommuniKate "+self.title #For V3 we should have the name be read from the pptx 
         for_json["locale"] = "en"
         for_json["id"] = self.title
         for_json["grid"] = {}
@@ -154,7 +155,7 @@ class Grid:
 
         for path in self.get_image_paths():
                     img = {}
-                    img["content_type"] = "image/png" #TODO lookup other ways of defining a dictionary @simple
+                    img["content_type"] = "image/png" 
                     img["id"] = path
                     img["width"] = 300
                     img["height"] = 300
@@ -167,8 +168,7 @@ class Grid:
         image_paths=[]
         for row in range(self.grid_size):
             for col in range(self.grid_size):
-#        for (col,row) in self.button_order: #TODO - put this back and regenerate the obz files (regression)
-                                                #TODO - or test it the other way around?  @simple
+#        for (col,row) in self.button_order: #TODO - put this back and regenerate the obz files (regression) - needs a full user test
                 if (len(self.imagepaths[col][row])>2):
                     image_paths.append(self.imagepaths[col][row])
         return image_paths
@@ -203,14 +203,14 @@ class Grid:
         if 0 <= x < self.grid_size and 0 <= y < self.grid_size:
             pass #we've checked the inputs
         else:
-            print("Create_icon_name was given an x y that was outside the possible ranges")  #TODO: write a test that triggers this
+            raise ValueError("Create_icon_name was given an x y that was outside the possible ranges")  
             return "Create_icon_name was given an x y that was outside the possible ranges"
             
         name = f"S{self.slide_number}X{x}Y{y}.png" 
         try:
             name = "S"+str(self.slide_number)+"X"+str(x)+"Y"+str(y)+core.make_title(self.labels[x][y])+".png" 
         except IndexError:
-            print("Create_icon_name was given an x y that was outside the possible ranges")  #TODO: write a test that triggers this
+            print("ERROR - Create_icon_name has raised an index Error given an x y that was outside the possible ranges")  #TODO: write a test that triggers this
         return name
 
 

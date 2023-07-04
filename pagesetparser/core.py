@@ -19,7 +19,7 @@ def returnException():
         return '{} EXCEPTION IN ({}, LINE {} "{}"): {}'.format(exc_type,
                 filename, lineno, line.strip(), exc_obj)
 
-def make_title(label): #TODO: except once, this is only used for grid titles - MAYBE a @getter? 
+def make_title(label): #This is used by the Grid a lot, but also for processing special commands and creating links, so it can stay here for a while
     """Given a  string, returns the string in the format we use for
      identifying grids. This is used mostly to build internal link
      structures"""
@@ -29,21 +29,21 @@ def make_title(label): #TODO: except once, this is only used for grid titles - M
     return tag
 
 
+import unicodedata
 
-def remove_punctuation(s): #TODO: find out if there is a better way to do this in python3 @simple
+def remove_punctuation(s):
     """
-    >>> strip_punctuation(u'something')
-    u'something'
+    Removes punctuation from a given string.
+    
+    >>> remove_punctuation('something')
+    'something'
+    
+    >>> remove_punctuation('something.,:else really')
+    'somethingelse really'
+    """
+    return ''.join(char for char in s if not unicodedata.category(char).startswith('P'))
 
-    >>> strip_punctuation(u'something.,:else really')
-    u'somethingelse really'
-    """
-    text = s
-    if not isinstance(s, type("hope")):
-        text = str(s, "utf-8")
-    punctutation_cats = set(['Pc', 'Pd', 'Ps', 'Pe', 'Pi', 'Pf', 'Po'])
-    return ''.join(x for x in text
-                   if unicodedata.category(x) not in punctutation_cats)
+
 
 def process_commandstring(commandstring,button): 
     # this doesn't cope with ovf(hello, there) (which is fine because we don't have any relevent commands. Someday we shall need a proper recursive decent parser 

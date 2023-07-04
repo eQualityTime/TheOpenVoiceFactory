@@ -447,17 +447,22 @@ class gridTest(TestCase):
             self.assertEqual(True,self.check_icon_name(grid,1,2,"S0X1Y2people.png"))
             self.assertEqual(True,self.check_icon_name(grid,1,3,"S0X1Y3go.png"))
             self.assertEqual(True,self.check_icon_name(grid,1,4,"S0X1Y4time.png"))
-            self.assertEqual(True,self.check_icon_name(grid,1,-1,"Create_icon_name was given an x y that was outside the possible ranges"))
+            with self.assertRaises(ValueError):
+                grid.icon_name(1,-1)
             self.assertEqual(True,self.check_icon_name(grid,2,1,"S0X2Y1chatting.png"))
             self.assertEqual(True,self.check_icon_name(grid,2,2,"S0X2Y2personalcare.png"))
             self.assertEqual(True,self.check_icon_name(grid,2,3,"S0X2Y3want.png"))
             self.assertEqual(True,self.check_icon_name(grid,2,4,"S0X2Y4places.png"))
-            self.assertEqual(True,self.check_icon_name(grid,2,9,"Create_icon_name was given an x y that was outside the possible ranges"))
+            with self.assertRaises(ValueError):
+                grid.icon_name(2,9)
             self.assertEqual(True,self.check_icon_name(grid,3,1,"S0X3Y1questions.png"))
             self.assertEqual(True,self.check_icon_name(grid,3,2,"S0X3Y2littlewords.png"))
             self.assertEqual(True,self.check_icon_name(grid,3,3,"S0X3Y3describing.png"))
             self.assertEqual(True,self.check_icon_name(grid,3,4,"S0X3Y4leisure.png"))
-            self.assertEqual(True,self.check_icon_name(grid,3,5,"Create_icon_name was given an x y that was outside the possible ranges"))
+            with self.assertRaises(ValueError):
+                grid.icon_name(3,5)
+            with self.assertRaises(ValueError):
+                grid.icon_name(5,3)
             self.assertEqual(True,self.check_icon_name(grid,4,1,"S0X4Y1food.png"))
             self.assertEqual(True,self.check_icon_name(grid,4,2,"S0X4Y2myday.png"))
             self.assertEqual(True,self.check_icon_name(grid,4,3,"S0X4Y3things.png"))
