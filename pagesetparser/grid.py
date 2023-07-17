@@ -11,7 +11,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pptx.enum.dml import MSO_FILL
 
 warningMissingLinks = True
-bordercolor = False
+bordercolor = False #TODO - need a bordercolor regression test
 
 class Grid:
 
@@ -103,8 +103,8 @@ class Grid:
     def create_image_grid(self):
         images = {}
         for shape in self.slide.shapes:
-            if not hasattr(shape, "shape_type"):
-                continue
+            if not hasattr(shape, "shape_type"): #Regression tests don't trigger this
+                continue 
             if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
                 (co, ro) = self.get_col_row(shape)
                 images.setdefault((co,ro),[]).append(shape)
@@ -209,8 +209,8 @@ class Grid:
         name = f"S{self.slide_number}X{x}Y{y}.png" 
         try:
             name = "S"+str(self.slide_number)+"X"+str(x)+"Y"+str(y)+core.make_title(self.labels[x][y])+".png" 
-        except IndexError:
-            print("ERROR - Create_icon_name has raised an index Error given an x y that was outside the possible ranges")  #TODO: write a test that triggers this
+        except IndexError: #The IF statement at the top should mean this is never triggered (it isn't in the regression tests) 
+            print("ERROR - Create_icon_name has raised an indexError") 
         return name
 
 
@@ -258,6 +258,10 @@ class Grid:
 
 
  #TODO: work out where these functions should be
+# Options: 
+# * A image module 
+# * An image processing class 
+# * The grid class 
 def ready_for_composite(shape,scale,w,h,l,t):
 
     part = Image.open(

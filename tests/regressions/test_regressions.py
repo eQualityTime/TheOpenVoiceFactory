@@ -8,7 +8,6 @@ import json
 import os
 import sys
 sys.path.append('..') #todo - test removal 
-import pagesetparser.pagesetparser as pagesetparser
 from pagesetparser.pageset import Pageset
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE

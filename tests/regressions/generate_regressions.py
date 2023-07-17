@@ -20,7 +20,6 @@ from sys import argv
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 import hashlib
-import pagesetparser.pagesetparser as parser
 from pagesetparser.pageset import Pageset
 
 
@@ -28,14 +27,13 @@ from pagesetparser.pageset import Pageset
 # switch the 'attempt' to 'target' to actually genearte them 
 def generate_obz(filename,gridSize): 
         gridSize = 5
-        parser.gridSize=gridSize
         obf_dest=filename+".obz.attempt/"
         if not os.path.exists(obf_dest):
             os.makedirs(obf_dest)
         if not os.path.exists(obf_dest+"boards/"):
             os.makedirs(obf_dest+"boards/")
         pageset = Pageset(filename, gridSize)
-        parser.write_to_obz(pageset.grids, obf_dest)
+        pageset.write_to_obz(obf_dest)
 
 def generate(filename, gridSize):
         Pageset(filename,"",gridSize,False).write_json(filename+".json")

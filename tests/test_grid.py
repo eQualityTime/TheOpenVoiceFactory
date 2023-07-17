@@ -3,8 +3,9 @@ import json
 import unittest
 import sys
 from unittest import TestCase
+from pagesetparser.pageset import Pageset
+import pagesetparser.core as core
 sys.path.append('..') 
-import pagesetparser.pagesetparser as pagesetparser
 
 
 
@@ -15,9 +16,7 @@ class gridTest(TestCase):
 
     def get_singleton_grid(self):
         if not self.CK20:
-           # prs = Presentation("tests/CK20V2cutdown.pptx")
-            pagesetparser.gridSize=5
-            self.CK20 = pagesetparser.Pageset("tests/testinputs/CK20V2cutdown.pptx",pagesetparser.gridSize, False) #TODO - this makes the file hard to run from outside the base directory 
+            self.CK20 = Pageset("tests/testinputs/CK20V2cutdown.pptx",5, False) #TODO - this makes the file hard to run from outside the base directory 
             
         return self.CK20.grids[0]
 
@@ -417,7 +416,7 @@ class gridTest(TestCase):
 
     def test_read_CK20_and_check_titles(self):
         grid = self.get_singleton_grid()
-        self.assertEqual(grid.tag,pagesetparser.make_title("Top page"))
+        self.assertEqual(grid.tag,core.make_title("Top page"))
 
 
     def test_read_CK20_and_check_color(self):
@@ -476,8 +475,6 @@ class gridTest(TestCase):
             print(result)
             print(grid.icon_name(x,y))
             return False 
-
-
 
 
 if __name__=="__main__":
