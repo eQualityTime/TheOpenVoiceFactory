@@ -110,6 +110,11 @@ class Grid:
                 images.setdefault((co,ro),[]).append(shape)
         return images
 
+    def return_links(self):
+        return_me=[]
+        for (col,row) in self.button_order:
+            return_me.append(self.links[row][col])
+        return return_me
 
     def update_links(self, grids):  
         """the pptx file saves links to files 'slide1.xml', but we want them to point to the name of the boards."""
@@ -294,7 +299,7 @@ def resizeImage(image, scaleFactor):
     oldSize = image.size
     newSize = (int(scaleFactor*oldSize[0]),
                int(scaleFactor*oldSize[1]))
-    return image.resize(newSize, Image.ANTIALIAS)
+    return image.resize(newSize, Image.LANCZOS)
 
 
 

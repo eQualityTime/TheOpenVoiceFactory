@@ -25,6 +25,10 @@ class Pageset:
         self.feedback = []
         self.split_pageset_into_grids(grid_size)
         self.get_image_names() #This has to run to get the names right. (for what?) 
+        self.scan_for_duplicates() #Just to add to the feedback 
+        self.grid_by_titles={}
+        for grid in self.grids:
+            self.grid_by_titles[grid.title]=grid
 
     def addfeedback(self, feedelement):
         self.feedback.append(feedelement)
@@ -83,3 +87,52 @@ class Pageset:
             print("Error in write_to_obf on file {}".format(x))
             print(x)
         os.chdir(owd)
+
+    def scan_for_duplicates(self):
+        title_indices = {}  # Dictionary to store the indices of each title
+        for index, grid in enumerate(self.grids):
+            title = grid.title
+            if title in title_indices:
+                title_indices[title].append(index)
+            else:
+                title_indices[title] = [index]
+
+        # Find and print pairs of grids with the same title
+        for title, indices_with_title in title_indices.items():
+            if len(indices_with_title) > 1:
+                indices_line = ", ".join(str(index) for index in indices_with_title)
+                self.addfeedback(f"Warning: duplicate page label: {title} - Indices: {indices_line}")
+
+    def find_titles_without_links(self):
+        # Slides that aren't reachable but that have the same name as a reachable one, won't be found
+        from collections import deque #don't need this anywhere else 
+        # Create a set of all titles in self.grids
+        seen = deque() 
+        seen.append(self.grids[0].title) 
+        slides_status={} #All values must be one of 'missing','seen', and 'processed'
+        for grid in self.grids:
+            slides_status[grid.title]="missing"
+        slides_status[self.grids[0].title]="seen"
+        while seen: 
+            current_grid=self.return_grid_by_title(seen.popleft())
+            for link in current_grid.return_links():
+                try:
+                    if slides_status[link]!="seen":
+                        slides_status[link]="seen"
+                        print(f"The page {link} is reachable from the page {current_grid.title}")
+                        seen.append(link)
+                        print("We haven't seen it so adding it to the queue") 
+                    else:
+                        print(f"We've seen {link} before so we aren't adding it")
+                except KeyError:
+                    pass #mostly "" because there's NO link, or a special command
+        titles_of_unreachable_grids=[key for key, value in slides_status.items() if value=="missing"]
+        for title in titles_of_unreachable_grids:
+            self.feedback.append(f"Page with title '{title}' is unreachable")
+            print(f"XX{title}XX")
+        return titles_of_unreachable_grids
+
+
+    def return_grid_by_title(self,title):
+        return self.grid_by_titles[title] #TODO expand with some safety
+

@@ -46,7 +46,7 @@ def remove_punctuation(s):
 
 
 def process_commandstring(commandstring,button): 
-    # this doesn't cope with ovf(hello, there) (which is fine because we don't have any relevent commands. Someday we shall need a proper recursive decent parser 
+    # this doesn't cope with ovf(hello, there) (which is fine because we don't have any relevant commands. Someday we shall need a proper recursive decent parser 
     commandstring=commandstring.replace("ovf(","")[:-1] # removes trailing ")" 
     commandstring=urllib.parse.unquote(commandstring)  #For decoding %20 ect 
     import re 
