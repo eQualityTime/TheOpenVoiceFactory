@@ -1,6 +1,5 @@
 import argparse 
 import sys
-import pagesetparser.pagesetparser as parser
 from pagesetparser.pageset import Pageset
 
 if __name__ == "__main__": #Put in a proper arg parse when you have more parameters 
@@ -10,10 +9,10 @@ if __name__ == "__main__": #Put in a proper arg parse when you have more paramet
         print("gridSize: width of square grid, e.g. '4' for a 4x4 grid")
         sys.exit(1)
     filename = sys.argv[1]
-    parser.gridSize=5
+    gridSize=5
     if (len(sys.argv) > 2):
-        parser.gridSize = int(sys.argv[3])
+        gridSize = int(sys.argv[3])
     obf_dest='templates/data/'
-    pageset = Pageset(filename, parser.gridSize) 
-    parser.write_to_obz(pageset.grids, obf_dest)
+    pageset = Pageset(filename, gridSize) 
+    pageset.write_to_obz(obf_dest)
 
