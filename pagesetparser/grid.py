@@ -46,7 +46,7 @@ class Grid:
     def title(self):
         return core.make_title(self.tag) 
 
-    def get_col_row_by_num(self, top: int, left: int) -> tuple[int, int]:
+    def get_col_row_by_num(self, top: int, left: int):
         """
         Converts coordinates to column and row numbers based on grid size.
         Raises a ValueError if the shape is outside of the page area.
