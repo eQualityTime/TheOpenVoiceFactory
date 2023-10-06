@@ -119,17 +119,18 @@ class Pageset:
                 try:
                     if slides_status[link]!="seen":
                         slides_status[link]="seen"
-                        print(f"The page {link} is reachable from the page {current_grid.title}")
+                        #print(f"The page {link} is reachable from the page {current_grid.title}")
                         seen.append(link)
-                        print("We haven't seen it so adding it to the queue") 
+                        #print("We haven't seen it so adding it to the queue") 
                     else:
-                        print(f"We've seen {link} before so we aren't adding it")
+                        #print(f"We've seen {link} before so we aren't adding it")
+                        pass
                 except KeyError:
                     pass #mostly "" because there's NO link, or a special command
         titles_of_unreachable_grids=[key for key, value in slides_status.items() if value=="missing"]
         for title in titles_of_unreachable_grids:
             self.feedback.append(f"Page with title '{title}' is unreachable")
-            print(f"XX{title}XX")
+            #print(f"XX{title}XX")
         return titles_of_unreachable_grids
 
 

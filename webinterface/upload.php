@@ -41,6 +41,7 @@ function process_file($target_file){
   $temp = urlencode($temp);
   $filename = basename($_FILES["fileToUpload"]["name"]);
   $url = "https://theopenvoicefactory.org/result.html?hash=$location&filename=$filename&debugging=$temp";
+  error_log("In process file".$url);
   echo "<script>window.location.href = '$url';</script>";
 }
 
