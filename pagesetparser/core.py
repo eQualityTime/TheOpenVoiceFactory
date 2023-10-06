@@ -52,15 +52,13 @@ def process_commandstring(commandstring,button):
     import re 
     commands=re.split("\)\s*,",commandstring) #should split on the comma surely? oh, but there might be commas in the string!
     for command in commands:
-        print("XXX")
-        print(command)
         process_single_command(command,button)  
 
 def process_single_command(command,button): 
     command_name= command.split("(",1)[0]
-    print(f"command name: {command_name}")
+#    print(f"command name: {command_name}")
     argument=command.split("(",1)[1].replace("\"","").replace(")","").replace("\'","")
-    print(f"argument name: {argument}")
+#    print(f"argument name: {argument}")
     if command_name == "deleteword":
         button["action"]=":deleteword"
     elif command_name == "backspace":
