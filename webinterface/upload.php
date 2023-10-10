@@ -4,17 +4,23 @@
 </head>
 <body>
 <?php
+//Headers should be at the top 
+header("Access-Control-Allow-Origin: https://theopenvoicefactory.org");
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+// Optionally allow credentials (cookies, authentication) to be shared
+header("Access-Control-Allow-Credentials: true");
+
+// Allow certain types of HTTP requests (e.g., GET, POST, etc.)
+header("Access-Control-Allow-Methods: POST, GET");
+
+// Optionally allow certain headers to be received from the requests
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 echo "This page can only be called with post";
 exit();
 }
 
-
-// echo getcwd() . "\n"; //Used for debugging directory
 $target_dir = "uploads/";
 if (!is_dir("../".$target_dir)) {
     die("There isn't an 'uploads' directory to move things to");
