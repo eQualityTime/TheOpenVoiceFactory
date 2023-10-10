@@ -7,7 +7,9 @@ import io
 import os
 import json
 import urllib
+import logging
 
+logger = logging.getLogger(__name__)
 
 
 # TODO Pageset does NOT have a dedicated test file (it's covered by the regressions) 
@@ -19,10 +21,10 @@ class Pageset:
             self.prs = Presentation(filename)
         except:
             # TODO: should throw error if filename doesn't create a useable pageset
-            print("Presentation file missing ({})".format(filename)) 
-            return None
+            logger.error("Presentation file doesn't match expected format ({})".format(filename)) 
+            raise ValueError("Presentation file doesn't match expected format ({})".format(filename)) 
         self.grids = []
-        self.feedback = []
+        self.feedback_raw = []
         self.split_pageset_into_grids(grid_size)
         self.get_image_names() #This has to run to get the names right. (for what?) 
         self.scan_for_duplicates() #Just to add to the feedback 
@@ -32,10 +34,29 @@ class Pageset:
 
     def addfeedback(self, feedelement):
         self.feedback.append(feedelement)
-        print("Feedback added :{}".format(feedelement))
+        logger.warning("Feedback added :{}".format(feedelement))
 
-    def getfeedback(self):
-        return self.feedback
+
+    @property
+    def feedback(self):
+        return self.feedback_raw
+
+
+    @property
+    def feedback_as_html(self):
+        feedback_html = ["<ul>"]
+        for message in self.feedback:
+            color = "black"
+            if "warning" in message.lower():
+                color = "#FFBF00"  # Using amber for warnings
+          
+            elif "error" in message.lower():
+                color = "red"
+            feedback_html.append(f'  <li style="color: {color};">{message}</li>')
+        feedback_html.append("</ul>")
+        return "\n".join(feedback_html)
+
+
 
     def split_pageset_into_grids(self,grid_size):  
         for index,slide in enumerate(self.prs.slides):
@@ -84,8 +105,7 @@ class Pageset:
                     x=y.replace("../data/","")
                     w.write(x) 
         except FileNotFoundError: #The try-except block is here so that we always change back to the right directory if there is an error. 
-            print("Error in write_to_obf on file {}".format(x))
-            print(x)
+            logger.error("Error in write_to_obf on file {}".format(x))
         os.chdir(owd)
 
     def scan_for_duplicates(self):
@@ -119,18 +139,17 @@ class Pageset:
                 try:
                     if slides_status[link]!="seen":
                         slides_status[link]="seen"
-                        #print(f"The page {link} is reachable from the page {current_grid.title}")
+                        logger.debug(f"The page {link} is reachable from the page {current_grid.title}")
                         seen.append(link)
-                        #print("We haven't seen it so adding it to the queue") 
+                        logger.debug("We haven't seen it so adding it to the queue") 
                     else:
-                        #print(f"We've seen {link} before so we aren't adding it")
+                        logger.debug(f"We've seen {link} before so we aren't adding it")
                         pass
                 except KeyError:
                     pass #mostly "" because there's NO link, or a special command
         titles_of_unreachable_grids=[key for key, value in slides_status.items() if value=="missing"]
         for title in titles_of_unreachable_grids:
-            self.feedback.append(f"Page with title '{title}' is unreachable")
-            #print(f"XX{title}XX")
+            self.addfeedback(f"Page with title '{title}' is unreachable")
         return titles_of_unreachable_grids
 
 

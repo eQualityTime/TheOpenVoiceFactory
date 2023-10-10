@@ -21,8 +21,11 @@ from PIL import Image
 from sys import argv
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+import logging
 
 
+logging.basicConfig(level=logging.ERROR)
+logger = logging.getLogger(__name__)
 
 
 class ovfTestCommands(TestCase):

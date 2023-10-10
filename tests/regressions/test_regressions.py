@@ -24,6 +24,9 @@ from sys import argv
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
+import logging
+logging.basicConfig(level=logging.ERROR)
+logger = logging.getLogger(__name__)
 
 
 
@@ -46,21 +49,21 @@ class ovfTest(TestCase):
 
 def generate_obz_and_compare_to_records(filename, page_size):
         generate_obz(filename,page_size)
-        print("We are in directory {}".format(filename))
+        logger.info("We are in directory {}".format(filename))
         is_same=True # We use this boolean so we get a list of the files that fail the match rather than only the first.
         if not compare(filename+".obz.attempt/manifest.json"):
-            print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-            print("Regression Test error on file manifest")
-            print("try vimdiff "+ filename+".obz.attempt/manifest.json "+ filename+".obz.target/manifest.json")
-            print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+            logger.error("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+            logger.error("Regression Test error on file manifest")
+            logger.error("try vimdiff "+ filename+".obz.attempt/manifest.json "+ filename+".obz.target/manifest.json")
+            logger.error("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
             is_same=False
-        print("Now we start the comparisons") 
+        logger.info("Now we start the comparisons") 
         for file in glob.glob(filename+".obz.attempt/boards/*.obf"):
             if not compare(file):
-                print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-                print("Regression Test error on file {}".format(file))
-                print("try vimdiff  {} {}".format(file, file.replace('attempt','target')))
-                print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                logger.error("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                logger.error("Regression Test error on file {}".format(file))
+                logger.error("try vimdiff  {} {}".format(file, file.replace('attempt','target')))
+                logger.error("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                 is_same=False
         return is_same 
 

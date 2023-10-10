@@ -47,16 +47,25 @@ if ($uploadOk == 0) {
 
 
 function process_file($target_file){
-	$location = hash("md5",time().hash_file("md5",$target_file));
-	$command = dirname(__FILE__).'/../create.sh "'.$target_file.'" '. $_POST["size"]." ".$location." ";//.$_POST["lang"] ;
-  echo $command. "<br>" ;
-	$temp = shell_exec($command. " 2>&1" );
-  $temp = urlencode($temp);
-  $filename = basename($_FILES["fileToUpload"]["name"]);
-  $url = "https://theopenvoicefactory.org/result.html?hash=$location&filename=$filename&debugging=$temp";
-  error_log("In process file".$url);
-  echo "<script>window.location.href = '$url';</script>";
+    $location = hash("md5", time().hash_file("md5", $target_file));
+    $command = dirname(__FILE__).'/../create.sh "'.escapeshellarg($target_file).'" '.escapeshellarg($_POST["size"]).' '.escapeshellarg($location).' ';
+    exec($command . " 2>&1", $output, $return_var);
+    $temp = urlencode(implode("\n", $output));
+    $filename = basename($_FILES["fileToUpload"]["name"]);
+    $feedback = file_get_contents("../feedback.html");
+    $feedback = urlencode($feedback);
+    error_log($command);
+    $result="result";
+    // Check the exit code
+    if ($return_var !== 0) {
+        error_log("Script exited with code: ".$return_var.". Error Output: ".$temp);
+        $result="fail";
+    }
+
+    $url = "https://theopenvoicefactory.org/$result.html?hash=$location&filename=$filename&debugging=$feedback";
+    echo "<script>window.location.href = '$url';</script>";
 }
+
 
 //Function to prevent errors cause by spaces in the target filename
 function filenameSlugify($text) {

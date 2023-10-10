@@ -9,9 +9,12 @@ from PIL import Image
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pptx.enum.dml import MSO_FILL
+import logging
 
 warningMissingLinks = True
 bordercolor = False #TODO - need a bordercolor regression test
+
+logger = logging.getLogger(__name__)
 
 class Grid:
 
@@ -58,7 +61,8 @@ class Grid:
         row: int = math.floor((number_of_rows * top / self.slide_height))
 
         if col >= self.grid_size or row >= self.grid_size:
-            raise ValueError("Shape outside of page area on page: {}".format(self.tag))
+            self.pageset.addfeedback("Warning: there is a shape outside of the page area on page: {}".format(self.tag))
+            raise ValueError("Shape outside of page area on: {}".format(self.tag))
 
         return col, row
 
@@ -86,7 +90,7 @@ class Grid:
                     self.links[co][ro] = click_action.hyperlink.address
 
         except (ValueError, AttributeError, KeyError,  NotImplementedError):
-            self.pageset.addfeedback(core.returnException())
+            logger.error(core.returnException())
             return
 
     def process_text_frame(self, shape):  
@@ -195,7 +199,7 @@ class Grid:
                 else:
                     core.process_commandstring(self.links[col][row],button)
         #This is at the end because we might change it during the special commands.
-        if button["label"] is "": 
+        if button["label"] == "": 
             button["label"]=button['id']
         return button
 
@@ -251,15 +255,15 @@ class Grid:
                 if SAVE:  
                     composite.save(dest_folder +"/"+ self.imagepaths[x][y])
             except IOError as e:
-                print("Error reading image for {} {} (Code 121)".format(x, y))
+                logger.error("Error reading image for {} {} (Code 121)".format(x, y))
                 if ("cannot find loader for this WMF file" in str(e)):
-                    print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, self.slide_number))
+                    self.pageset.addfeedback("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, self.slide_number))
                 if ("cannot identify image file" in str(e)):
-                    print("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, self.slide_number))
+                    self.pageset.addfeedback("Error: it appears that the image in column {} row {} of slide {}, is for Windows only, please change the format of that image".format(x, y, self.slide_number))
             except ValueError:
-                print("Error reading image for {} {} (Code 127)".format(x, y))
+                self.pageset.addfeedback("Error reading image for {} {} (Code 127)".format(x, y))
             except IndexError:
-                print("Error reading image for {} {}- it is outside the grid".format(x, y))
+                self.pageset.addfeedback("Error reading image for {} {}- it is outside the grid".format(x, y))
 
 
  #TODO: work out where these functions should be
