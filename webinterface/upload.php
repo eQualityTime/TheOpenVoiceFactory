@@ -4,6 +4,22 @@
 </head>
 <body>
 <?php
+
+// header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Headers: Content-Type");
+
+
+ header("Access-Control-Allow-Origin: https://theopenvoicefactory.org");
+
+ // Optionally allow credentials (cookies, authentication) to be shared
+ header("Access-Control-Allow-Credentials: true");
+
+ // Allow certain types of HTTP requests (e.g., GET, POST, etc.)
+ header("Access-Control-Allow-Methods: POST, GET");
+
+ // Optionally allow certain headers to be received from the requests
+ header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
 //Basic code from http://www.w3schools.com/php/php_file_upload.asp with thanks
 //echo getcwd() . "\n"; //Used for debugging directory
 $target_dir = "uploads/";
