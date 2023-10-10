@@ -1,38 +1,87 @@
 <!DOCTYPE html>
-<!-- original tempalte from http://www.w3schools.com/php/php_file_upload.asp-->
-<html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" type="text/css" href="white.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Open Voice Factory - Grid Generation</title>
+    <link rel="stylesheet" type="text/css" href="ovf.css">
 </head>
+
 <body>
-<!-- hope -->
-<div id="columns">
-<IMG src=eqt_logo.png height=180>
-<h1>The Open Voice Factory</h1>
-<h2> Grid generation</h2>
-<p>To make your own communication aid, there are these simple steps. </p>
-<ol>
-<li> Watch our <a href=guides.html>3 minute getting started video</a></li>
-<li> Make some changes to either our  <a href=https://raw.github.com/joereddington/CommuniKate/master/ck12/CK12%2BV2.pptx>CK12 template</a> or <a href=https://raw.githubusercontent.com/joereddington/CommuniKate/master/ck20/CK20V2.pptx>CK20 template</a>. </li>
-<li> Upload your version using the form below. </li>
-</ol>
-<form action="upload.php" method="post" enctype="multipart/form-data" class="file-submit">
-  <h3>File to upload</h3>
-<p>The Open Voice Factory is simple.  There are NO usernames, NO passwords.  Just upload a template and you’ll be given a special link that you can always use to get back to the communication device you created. </p>
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <br>
-    <h3>Grid size</h3>
-    <input type="radio" name="size" value="5" class="size"> 5 wide and 5 tall<br>
-    <br>
-    <input type="radio" name="size" value="4" class="size"> 4 wide and 4 tall<br>
-    <br>
-    <br>
-    <button class="button" data-tooltip="Please select a file and a gridsize first!" disabled>Process uploaded file</button>
-</form>
+    <div id="columns">
+        <img src="eqt_logo.png" height="180" alt="EQT Logo">
+        <h1>The Open Voice Factory</h1>
+        <h2>Grid Generation</h2>
 
-<p>Please note that the Open Voice Factory is in Beta - it's for testing only right now, we aren't recommending it for deployment with users yet.</p> <p> At  this stage of development, anyone with the correct link will be able to view your files. Please keep this in mind before uploading content that may be private. </p>
-</div>
-  <script src="form-validation.js"></script>
+        <p>To create your own communication aid, follow these steps:</p>
+        <ol>
+            <li>Make some changes to either our 
+                <a href="https://raw.github.com/joereddington/CommuniKate/master/ck12/CK12%2BV2.pptx">CK12 template</a> 
+                or 
+                <a href="https://raw.githubusercontent.com/joereddington/CommuniKate/master/ck20/CK20V2.pptx">CK20 template</a>.
+            </li>
+            <li>Upload your version using the form below.</li>
+        </ol>
 
+        <form action="upload.php" method="post" enctype="multipart/form-data" class="file-submit" id="uploadForm">
+            <fieldset>
+                <legend>Upload Form</legend>
+                <h3>File to upload</h3>
+                <p>The Open Voice Factory is simple. No usernames, no passwords. Just upload a template and you’ll be given a special link to always access the communication device you created.</p>
+                <label for="fileToUpload">Choose a file:</label>
+                <input type="file" name="fileToUpload" id="fileToUpload" required>
+                <br>
+                <h3>Grid size</h3>
+                <label>
+                    <input type="radio" name="size" value="5" class="size" required>
+                    5 wide and 5 tall
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="size" value="4" class="size">
+                    4 wide and 4 tall
+                </label>
+                <br>
+                <progress id="uploadProgress" value="0" max="100"></progress> <!-- Progress bar -->
+                <br>
+                <div id="status"></div>
+                <button class="button" type="submit" data-tooltip="Please select a file and a grid size first!">Process uploaded file</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var form = e.target;
+            var formData = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action, true);
+            document.getElementById('status').textContent="Uploading"; 
+            xhr.upload.addEventListener('progress', function (e) {
+                if (e.lengthComputable) {
+                    var percentComplete = (e.loaded / e.total) * 100;
+                    document.getElementById('uploadProgress').value = percentComplete;
+                }
+            });
+
+            xhr.addEventListener('load', function () {
+                if (xhr.status == 200) {
+                    // Handle success actions here
+                    document.getElementById('status').textContent="Uploaded and processing"; 
+                    document.getElementById('uploadForm').submit();
+                } else {
+                    document.getElementById('status').textContent="Upload failed"; 
+                    // Handle error actions here
+                }
+            });
+
+            xhr.send(formData);
+        });
+    </script>
 </body>
+
 </html>
+

@@ -4,11 +4,24 @@
 </head>
 <body>
 <?php
-//Basic code from http://www.w3schools.com/php/php_file_upload.asp with thanks
-//echo getcwd() . "\n"; //Used for debugging directory
+
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+echo "This page can only be called with post";
+exit();
+}
+
+
+// echo getcwd() . "\n"; //Used for debugging directory
 $target_dir = "uploads/";
+if (!is_dir("../".$target_dir)) {
+    die("There isn't an 'uploads' directory to move things to");
+}
 
 //Using custom function "filenameSlugify" to properly handle spaces (and non-letters/digits). 
+
 $target_file = $target_dir . filenameSlugify( basename( $_FILES["fileToUpload"]["name"]) );
 
 $uploadOk = 1;
