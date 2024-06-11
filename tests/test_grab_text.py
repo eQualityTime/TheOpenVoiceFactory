@@ -490,29 +490,30 @@ class ovfTest(TestCase):
 
 
 
-#    def test_warning_for_missinglink(self):
-#        pageset = self.get_singleton_CK20()
-#        feedback=pageset.getfeedback()
-#        print(feedback)
-#        self.assertEqual(26,len(feedback))
+    def test_warning_for_missinglink(self):
+        pageset = self.get_singleton_CK20()
+        feedback=pageset.getfeedback()
+        print(feedback)
+        self.assertEqual(26,len(feedback))
 
 
-#    def test_warning_for_missingimage(self):
-#        #This test is broken because we CAN'T switch warnings on and off around a singleton
-#        pageset = self.get_singleton_CK20()
-#        feedback=pageset.getfeedback()
+    def test_warning_for_missingimage(self):
+        #This test is broken because we CAN'T switch warnings on and off around a singleton
+        pageset = self.get_singleton_CK20()
+        feedback=pageset.getfeedback()
+        print(feedback)
+        self.assertEqual(26,len(feedback))
 #        pagesetparser.IMAGE_WARNING=True
-#        print feedback
 #        self.assertEqual(90,len(feedback))
 
 
+    def test_correct_warning_for_blank_file(self):
+        pagesetparser.gridSize=5
+        pageset = pagesetparser.Pageset("blank.pptx","",False)
+        feedback= pageset.getfeedback()
+        contains_file_missing = any("file missing" in fb for fb in feedback)
+        self.assertTrue(contains_file_missing, "Feedback should contain 'file missing'")
 
-#    def test_correct_warning_for_blank_file(self):
-#        pagesetparser.gridSize=5
-#        pageset = pagesetparser.Pageset("blank.pptx","",False)
-#        print "################################################################################"
-#        feedback= pageset.getfeedback()
-#        self.assertEqual(21,len(feedback))
 
 
 
