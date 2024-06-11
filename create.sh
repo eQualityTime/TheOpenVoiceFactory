@@ -1,7 +1,9 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-trap 'exec 2>&4 1>&3' 0 1 2 3
-exec > >(tee -i script.log)
+
+# Set up logging to script.log
+exec > >(tee -a script.log) 2>&1
+
 #All above from https://serverfault.com/a/103569
 
 # Platform specific code

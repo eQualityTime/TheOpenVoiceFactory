@@ -13,8 +13,7 @@ if __name__ == "__main__": #TODO proper arg parse
     parser.gridSize=5
     if (len(sys.argv) > 2):
         parser.gridSize = int(sys.argv[3])
+    pageset = Pageset(filename, parser.gridSize) 
     obf_dest='templates/data/'
-    pageset = Pageset(filename, parser.gridSize) #TODO: dest shouldn't appear here
-
     parser.write_to_obz(pageset.grids, obf_dest)
 
